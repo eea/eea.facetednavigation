@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<script type="text/javascript">
+<!--
+function do_load(){
+  var r = document.location.href;
+  var i = r.indexOf("?");
+  var hash = (i >= 0 ? r.substr(i+1) : '');
+  hash = decodeURIComponent(hash);
+  window.parent.jQuery('#faceted-ie-history-hash', document).text(hash);
+  return false;
+}
+//-->
+</script>
+</head>
+<body onload="do_load()">
+  <div id="faceted-ie-history-hash"></div>
+</body>
+</html>

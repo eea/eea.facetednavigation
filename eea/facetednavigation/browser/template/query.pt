@@ -1,0 +1,8 @@
+<tal:main define="
+  batch_base_url here/absolute_url;
+  faceted_query options/query|python:{};
+  folderContents python:view.query(**faceted_query);
+  here python:view.get_context(folderContents)">
+  <metal:block use-macro="here/global_defines/macros/defines" />
+  <metal:block use-macro="view/macros" />
+</tal:main>

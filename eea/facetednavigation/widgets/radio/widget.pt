@@ -1,0 +1,53 @@
+<div class="faceted-widget faceted-radio-widget" tal:define="
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  hidezerocount python:view.hidezerocount;
+  default python:view.default or '';
+  css string:faceted-widget faceted-radio-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  css python:view.countable and css + ' faceted-count' or css;
+  css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
+  maxitems python:int(view.data.get('maxitems', 0)) or 9999;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+  <legend tal:define="title python:view.data.get('title', '')" tal:content="
+    python:view.translate(title)" i18n:translate="">HTML Widget</legend>
+  <form action="." method="get">
+  <ul>
+    <li>
+      <tal:terms define="
+        chbox_id string:${wid}_all;
+        chbox_id python:view.cleanup(chbox_id);">
+        <input type="radio" class="faceted-noborder" checked="checked" tal:attributes="
+          name string:${wid};
+          id chbox_id;
+          value string:" />
+        <label tal:attributes="for chbox_id" title="All"
+          i18n:translate="" i18n:attributes="title">All</label>
+      </tal:terms>
+    </li>
+    <tal:items repeat="term python:view.vocabulary()">
+      <li tal:define="
+        term_id python:term[0];
+        term_label python:term[1];
+        term_label python:view.translate(term_label);
+        wbr_term_label python:view.word_break(term_label);
+        chbox_id string:${wid}_${term_id};
+        chbox_id python:view.cleanup(chbox_id);
+        term_index python:repeat['term'].index();" tal:attributes="
+        class python:(term_index < maxitems) and 'faceted-maxitems-show' or 'faceted-maxitems-hide'">
+        <input type="radio" class="faceted-noborder" tal:attributes="
+          checked python:term_id == default;
+          name string:${wid};
+          id chbox_id;
+          title term_label;
+          value term_id;" />
+        <label tal:attributes="for chbox_id; title term_label"
+          tal:content="structure wbr_term_label">term label</label>
+      </li>
+    </tal:items>
+  </ul>
+  </form>
+</fieldset>
+</div>

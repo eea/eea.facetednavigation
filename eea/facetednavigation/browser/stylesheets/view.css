@@ -1,0 +1,280 @@
+/* Stylesheet for the 'eea facetednavigation' */
+
+/* Update ui images path
+*/
+.ui-icon-show {
+  background-image: url(../../++resource++faceted_images/show.png) ! important;
+}
+
+.ui-icon-hide {
+  background-image: url(../../++resource++faceted_images/hide.png) ! important;
+}
+
+.ui-icon, .ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-icons_222222_256x240.png);
+  cursor: pointer;
+}
+
+.ui-state-default .ui-icon {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-icons_888888_256x240.png);
+  cursor: pointer;
+}
+
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-active .ui-icon {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-icons_454545_256x240.png);
+  cursor: pointer;
+}
+.ui-state-highlight .ui-icon {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-icons_2e83ff_256x240.png);
+  cursor: pointer;
+}
+
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-icons_cd0a0a_256x240.png);
+  cursor: pointer;
+}
+
+.ui-widget-content {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_flat_75_ffffff_40x100.png);
+}
+
+.ui-widget-header {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_highlight-soft_75_cccccc_1x100.png);
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_glass_75_e6e6e6_1x400.png);
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_glass_75_dadada_1x400.png);
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_glass_65_ffffff_1x400.png);
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_glass_55_fbf9ee_1x400.png);
+}
+
+.ui-state-error, .ui-widget-content .ui-state-error {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_glass_95_fef1ec_1x400.png);
+}
+
+.ui-widget-overlay {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_flat_0_aaaaaa_40x100.png);
+}
+
+.ui-widget-shadow {
+  background-image: url(../../++resource++jquery.ui.theme/images/ui-bg_flat_0_aaaaaa_40x100.png);
+}
+
+/*
+*/
+.faceted-noborder {
+  background:transparent none repeat scroll 0 0;
+  border: medium none;
+}
+
+.faceted-form {
+  padding: 1em 0 0 0;
+  margin: 0;
+  width: auto;
+}
+
+.faceted-widget {
+  display: none;
+}
+
+/* Areas
+*/
+#top-area {
+}
+
+#center-and-left-area {
+  float: left;
+  margin-right: -25em;
+  width: 100%;
+}
+
+#right-area {
+  float: right;
+  width: 25em;
+  overflow: hidden;
+}
+
+#center-area {
+  float: right;
+  margin-left: -25em;
+  width: 100%;
+}
+
+#left-area {
+  float: left;
+  width: 25em;
+  overflow: hidden;
+}
+
+#center-top-area {
+}
+
+#center-bottom-area {
+}
+
+#bottom-area {
+  clear: both;
+}
+
+.right-area-js {
+  margin-right: 25em;
+}
+
+.left-area-js {
+  margin-left: 25em;
+}
+
+/* End Areas */
+
+.faceted-clear {
+  clear: both;
+}
+
+.faceted-left-column div.faceted-text-widget input[type=submit] {
+  float: right;
+}
+
+.faceted-right-column div.faceted-text-widget input[type=submit] {
+  float: right;
+}
+
+.faceted-left-column div.faceted-text-widget input[type=text] {
+  width: 99%;
+}
+
+.faceted-right-column div.faceted-text-widget input[type=text] {
+  width: 99%;
+}
+
+.faceted-left-column div.faceted-select-widget select{
+  width: 100%;
+}
+
+.faceted-right-column div.faceted-select-widget select{
+  width: 100%;
+}
+
+.faceted-left-column div.faceted-resultsperpage-widget select{
+  width: 100%;
+}
+
+.faceted-right-column div.faceted-resultsperpage-widget select{
+  width: 100%;
+}
+
+.faceted-left-column div.faceted-sorting-widget select{
+  width: 100%;
+}
+
+.faceted-right-column div.faceted-sorting-widget select{
+  width: 100%;
+}
+
+.faceted-widget fieldset {
+  margin: 0.5em;
+  padding: 1em 0.5em 0.5em 0.5em;
+  border: 1px solid #ccc;
+}
+
+.widget-fieldset legend {
+  font-weight: bold;
+}
+
+
+/* Loading image
+---------------- */
+
+.faceted_loading {
+  text-align: center;
+}
+
+/* Sections
+=========== */
+
+.faceted-section-header {
+  display: none;
+}
+
+.ui-widget {
+  font-size: 1em;
+}
+
+.ui-helper-reset {
+  font-size: 1em;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0px;
+}
+
+.ui-accordion .ui-widget-content {
+  border: none;
+}
+
+/* Inactive state
+*/
+.ui-accordion .ui-state-default {
+  border: none;
+  background: none;
+  background-color: #95b229;
+  margin: 0 0.5em;
+}
+
+.ui-accordion .ui-state-default a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.ui-accordion .ui-state-default a:hover {
+  border: none;
+  color: #e9efcd;
+}
+
+/* Active state
+*/
+.ui-accordion .ui-state-active {
+  border: none;
+  background: none;
+  background-color: #e9efcd;
+  margin: 0 0.5em;
+}
+
+.ui-accordion .ui-state-active a{
+  color: #8e004d;
+  font-weight: bold;
+}
+
+.ui-accordion .ui-state-active a:hover{
+  border: none;
+  cursor: text;
+}
+
+/* Lock - Unlock
+*/
+.faceted-widget-locked legend{
+  color: #CCC;
+}
+
+.faceted-lock-overlay {
+  background: none;
+}
+
+.faceted-widget-loading {
+  background-image:url(../../++resource++faceted_images/ajax-loader-small.gif);
+  background-position:95% 1.5em;
+  background-repeat:no-repeat;
+}
+
+.faceted-widget-loading-msie {
+  background-position: 95% 2.5em;
+}

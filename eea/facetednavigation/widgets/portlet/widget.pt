@@ -1,0 +1,24 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+<div class="faceted-widget faceted-portlet-widget" tal:define="
+  wid python:template.data.getId();
+  hidden python:template.hidden;
+  macro python:template.macro;
+  css string:faceted-widget faceted-portlet-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+  <legend tal:define="title python:template.data.get('title', '')" tal:content="
+    python:template.translate(title)" i18n:translate="">Text Widget</legend>
+  <tal:portlet condition="macro">
+    <metal:portlet use-macro="python:macro" />
+  </tal:portlet>
+  <tal:portlet condition="not:macro">
+    <span i18n:translate="invalid_macro">
+      Invalid macro
+      <span i18n:name="macro_name" tal:content="
+        python:template.data.get('macro', '') or '(empty)'" />
+    </span>
+  </tal:portlet>
+</fieldset>
+</div>

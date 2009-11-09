@@ -1,0 +1,35 @@
+Syndication
+===========
+Syndicate faceted navigable results. To enable syndication you can check eea
+buildout configuration (http://svn.eionet.europa.eu/repositories/Zope/trunk/eea-buildout).
+
+Set up
+------
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(fid)
+    >>> sandbox.setLanguage('en')
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+RSS2
+----
+
+    >>> rss = sandbox.unrestrictedTraverse('@@RSS2', None)
+    >>> if rss:
+    ...     res = rss()
+    ... else:
+    ...     res = u'<?xml version="1.0" ?>\n<rss version="2.0">\n</rss>\n'
+    >>> res
+    u'<?xml version="1.0" ?>...<rss version="2.0">...</rss>...'
+
+SKOS
+----
+
+    >>> skos = sandbox.unrestrictedTraverse('@@skos_syndication', None)
+    >>> if skos:
+    ...     concepts = [c for c in skos.concepts()]

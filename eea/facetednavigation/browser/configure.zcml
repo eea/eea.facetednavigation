@@ -1,0 +1,176 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  i18n_domain="eea.facetednavigation">
+
+  <include package=".resources" />
+  <adapter factory=".displays.ContainerDynamicViews" />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="facetednavigation_view"
+    template="template/view.pt"
+    class=".app.view.FacetedContainerView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_widgets"
+    template="template/widgets.pt"
+    class=".app.view.FacetedContainerView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_macros"
+    template="template/macros.pt"
+    class=".app.view.FacetedContainerView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="configure_faceted.html"
+    template="template/configure.pt"
+    class=".app.configure.FacetedConfigureView"
+    permission="cmf.ModifyPortalContent"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_configure"
+    class=".app.configure.FacetedFormHandler"
+    permission="cmf.ModifyPortalContent"
+    allowed_interface=".interfaces.IFacetedFormHandler"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_update_criteria"
+    class=".app.configure.FacetedCriteriaHandler"
+    permission="cmf.ModifyPortalContent"
+    />
+    <!--allowed_interface=".interfaces.IFacetedCriteriaHandler"-->
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_update_criterion"
+    class=".app.configure.FacetedCriterionHandler"
+    permission="cmf.ModifyPortalContent"
+    />
+    <!--allowed_interface=".interfaces.IFacetedCriterionHandler"-->
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_update_position"
+    class=".app.configure.FacetedPositionHandler"
+    permission="cmf.ModifyPortalContent"
+    />
+    <!--allowed_interface=".interfaces.IFacetedPositionHandler"-->
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_query"
+    class=".app.query.FacetedQueryHandler"
+    template="template/query.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_counter"
+    class=".app.counter.FacetedQueryCounter"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_history"
+    template="template/history.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_exportimport"
+    class=".app.exportimport.FacetedExportImport"
+    permission="cmf.ModifyPortalContent"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_schema"
+    class=".app.schema.FacetedSchemaGetter"
+    permission="cmf.ModifyPortalContent"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="default_widgets.xml"
+    template="template/default.xml"
+    permission="cmf.ModifyPortalContent"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted_sync_translations"
+    class=".app.synchronize.FacetedSynchronizeTranslation"
+    permission="cmf.ModifyPortalContent"
+    />
+
+  <browser:menuItem
+    for="..interfaces.IFacetedNavigable"
+    menu="object"
+    title="Faceted criteria"
+    action="configure_faceted.html"
+    permission="cmf.ModifyPortalContent"
+    />
+
+  <!-- Plone 2.5 support -->
+  <configure zcml:condition="installed Products.LinguaPlone">
+    <configure zcml:condition="installed zope.app.annotation.tests">
+      <browser:menuItem
+        for="..interfaces.IFacetedNavigable"
+        menu="object_buttons"
+        title="Sync faceted translations"
+        action="@@faceted_sync_translations"
+        permission="cmf.ModifyPortalContent"
+        />
+    </configure>
+  </configure>
+
+  <!-- Plone 3.0+ support. See menu.py -->
+
+  <browser:resource
+    name="eea.faceted-navigation.css"
+    file="./stylesheets/view.css"
+   />
+
+  <browser:resource
+      name="eea.faceted-navigation-edit.css"
+      file="./stylesheets/edit.css"
+     />
+
+  <browser:resource
+    name="eea.faceted-navigation.js"
+    file="./javascript/view.js"
+   />
+
+  <browser:resource
+    name="eea.faceted-navigation-edit.js"
+    file="./javascript/edit.js"
+   />
+
+  <browser:resource
+    name="eea.faceted-navigation-expand.js"
+    file="./javascript/expand.js"
+   />
+
+  <browser:resourceDirectory
+    name="faceted_images"
+    directory="./images" />
+
+</configure>

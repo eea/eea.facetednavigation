@@ -1,0 +1,19 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <include package=".alphabetic" />
+  <include package=".checkbox" />
+  <include package=".criteria" />
+  <include package=".date" />
+  <include package=".daterange" />
+  <include package=".portlet" />
+  <include package=".radio" />
+  <include package=".resultsperpage" />
+  <include package=".select" />
+  <include package=".sorting" />
+  <include package=".tagscloud" />
+  <include package=".text" />
+
+  <utility provides=".interfaces.IWidgetsInfo"
+    factory=".widgets.WidgetsInfo" />
+
+</configure>

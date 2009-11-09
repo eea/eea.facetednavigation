@@ -1,0 +1,34 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+<div class="faceted-widget faceted-daterange-widget" tal:define="
+  mode string:search;
+  errors python:{};
+  fieldName python:template.data.getId();
+  wid fieldName;
+  hidden python:template.hidden;
+  css string:faceted-widget faceted-daterange-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  fieldTitle python:template.data.get('title', '');"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+<legend tal:content="python:template.translate(fieldTitle)"
+  i18n:translate="">Date range</legend>
+<form action="." method="get">
+  <div tal:attributes="id string:${wid}_errors"></div>
+  <div tal:define="
+    field python:template.get_field('start');
+    accessor python:template.view_accessor('start');
+    widget python:field.widget"
+    tal:attributes="id string:${wid}_start;">
+    <div metal:use-macro="python:template.get_macro('start')" />
+  </div>
+  <div tal:define="
+    field python:template.get_field('end');
+    accessor python:template.view_accessor('end');
+    widget python:field.widget"
+    tal:attributes="id string:${wid}_end;">
+    <div class="faceted-daterange" metal:use-macro="python:template.get_macro('end')" />
+  </div>
+</form>
+</fieldset>
+</div>

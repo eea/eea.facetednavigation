@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts" meta_type="JavaScripts Registry">
+ <javascript cacheable="True" compression="none" cookable="True"
+    enabled="True"
+    expression="python:'facetednavigation_view' in request.URL0"
+    id="faceted_view.js" inline="False"/>
+ <javascript cacheable="True" compression="none" cookable="True"
+    enabled="True"
+    expression="python:'configure_faceted.html' in request.URL0"
+    id="faceted_edit.js" inline="False"/>
+</object>

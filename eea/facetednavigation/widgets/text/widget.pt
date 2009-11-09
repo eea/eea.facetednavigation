@@ -1,0 +1,36 @@
+<div class="faceted-widget faceted-text-widget" tal:define="
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default python:view.default or '';
+  css string:faceted-widget faceted-text-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+  <legend tal:define="title python:view.data.get('title', '')" tal:content="
+    python:view.translate(title)" i18n:translate="">Text Widget</legend>
+  <form action="." method="get">
+  <input type="text" tal:attributes="
+    name string:${wid};
+    id string:${wid};
+    value python:default;
+  "/>
+  <input type="submit" class="searchButton" value="Search" tal:attributes="
+    name string:${wid}_button;
+    id string:${wid}_button;"
+    i18n:attributes="value" />
+  <input type="radio" checked="checked" tal:attributes="
+    name string:${wid}_place;
+    id string:${wid}_place_all;
+    value string:all" />
+  <label tal:attributes="for string:${wid}_place_all"
+    i18n:translate="">all items</label>
+  <input type="radio" tal:attributes="
+    name string:${wid}_place;
+    id string:${wid}_place_current;
+    value string:current" />
+  <label tal:attributes="for string:${wid}_place_current"
+    i18n:translate="">in current results</label>
+  </form>
+</fieldset>
+</div>

@@ -1,0 +1,25 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <subscriber
+    for="..interfaces.IFacetedNavigable
+         ..interfaces.IFacetedGlobalSettingsChangedEvent"
+    handler=".cache.invalidateFacetedCache"
+    />
+
+  <subscriber
+    for="Products.Archetypes.interfaces.IBaseContent
+         zope.app.container.interfaces.IObjectModifiedEvent"
+    handler=".cache.invalidateFacetedCache"
+    />
+
+  <configure zcml:condition="installed eea.plone3compat">
+    <subscriber
+      for="Products.Archetypes.interfaces.IBaseContent
+           eea.plone3compat.IActionSucceededEvent"
+      handler=".cache.invalidateFacetedCache"
+      />
+  </configure>
+
+</configure>

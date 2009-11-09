@@ -1,0 +1,27 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="eea.facetednavigation"
+   >
+
+  <adapter
+    factory=".faceted.FacetedNavigableXMLAdapter"
+    provides="Products.GenericSetup.interfaces.IBody"
+    for="eea.facetednavigation.interfaces.IFacetedNavigable
+         Products.GenericSetup.interfaces.ISetupEnviron"
+   />
+
+  <adapter
+    factory=".criteria.CriteriaXMLAdapter"
+    provides="Products.GenericSetup.interfaces.IBody"
+    for="eea.facetednavigation.interfaces.ICriteria
+         Products.GenericSetup.interfaces.ISetupEnviron"
+   />
+
+  <adapter
+    factory=".criterion.CriterionXMLAdapter"
+    provides="Products.GenericSetup.interfaces.IBody"
+    for="eea.facetednavigation.widgets.interfaces.ICriterion
+         Products.GenericSetup.interfaces.ISetupEnviron"
+   />
+
+</configure>

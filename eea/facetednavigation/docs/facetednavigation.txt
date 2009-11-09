@@ -1,0 +1,100 @@
+Faceted Navigation
+==================
+
+Imports
+=======
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+Set up
+======
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'folder')
+    >>> folder = portal._getOb(fid)
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(folder, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> folder.setTitle('Faceted navigation folder test')
+    >>> request = folder.REQUEST
+
+    >>> handler = getMultiAdapter((folder, request), name=u'faceted_configure')
+    >>> query_handler = getMultiAdapter((folder, request), name=u'faceted_query')
+    >>> config = getMultiAdapter((folder, request), name=u'configure_faceted.html')
+    >>> view = getMultiAdapter((folder, request), name=u'facetednavigation_view')
+
+Cleanup default widgets
+=======================
+
+    >>> cids = ICriteria(folder).keys()
+
+Default widgets
+
+    >>> cids
+    [...'c1',...]
+
+    >>> for cid in cids:
+    ...     ICriteria(folder).delete(cid)
+    >>> ICriteria(folder).keys()
+    []
+
+Add some criteria
+=================
+
+    >>> _ = handler(wtype='checkbox', addWidget_button=True)
+    >>> criteria = config.get_criteria()
+    >>> criterion_id = criteria[0].getId()
+
+Update criteria properties
+==========================
+
+    >>> form = {
+    ...   criterion_id + '_title': 'Test widget',
+    ...   criterion_id + '_index': 'Title',
+    ...   criterion_id + '_widget': 'checkbox',
+    ...   criterion_id + '_vocabulary': '',
+    ...   criterion_id + '_position': 'top',
+    ...   criterion_id + '_catalog': True,
+    ...   'saveChanges_button': True,
+    ... }
+    >>> _ = handler(**form)
+    >>> criteria = config.get_criteria()
+    >>> criterion = criteria[0]
+    >>> criterion.widget, criterion.title, criterion.index, criterion.position
+    (u'checkbox', u'Test widget', u'Title', u'top')
+    >>> criterion.catalog, criterion.vocabulary
+    (True, u'')
+
+Change criteria order
+=====================
+
+    >>> _ = handler(wtype='text', addWidget_button=True)
+    >>> _ = handler(wtype='alphabetic', addWidget_button=True)
+    >>> _ = handler(wtype='sorting', addWidget_button=True)
+
+    >>> criteria = config.get_criteria()
+    >>> [x.widget for x in criteria]
+    [u'checkbox', u'text', u'alphabetic', u'sorting']
+
+    >>> alphabetic_id = criteria[2].getId()
+    >>> checkbox_id = criteria[0].getId()
+
+    >>> kwargs = {'moveUp_button+++' + alphabetic_id: 'On'}
+    >>> _ = handler(**kwargs)
+    >>> kwargs = {'moveDown_button+++' + checkbox_id: 'On'}
+    >>> _ = handler(**kwargs)
+
+    >>> criteria = config.get_criteria()
+
+Delete criteria
+===============
+
+    >>> _ = handler(
+    ...     deleteWidgets_button=True,
+    ...     paths=[alphabetic_id, checkbox_id]
+    ... )
+    >>> criteria = config.get_criteria()
+    >>> [x.widget for x in criteria]
+    [u'text', u'sorting']

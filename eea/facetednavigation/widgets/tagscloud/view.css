@@ -1,0 +1,27 @@
+.tags-cloud li {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #95B229;
+}
+
+.tags-cloud li:hover{
+  color: orange ! important;
+}
+
+.faceted-tag-disabled {
+  color: #ccc ! important;
+}
+
+li.faceted-tag-disabled:hover {
+  color: #ccc ! important;
+}
+
+.faceted-tag-selected {
+  color: orange ! important;
+  font-size: 110%;
+}
+
+.faceted-zero-count-hidden li.faceted-tag-disabled {
+  display: none ! important;
+}

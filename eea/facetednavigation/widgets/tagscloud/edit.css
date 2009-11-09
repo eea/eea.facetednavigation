@@ -1,0 +1,15 @@
+.tags-cloud li {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #95B229;
+}
+
+.tags-cloud li:hover{
+  color: orange ! important;
+}
+
+.faceted-tag-selected {
+  color: orange ! important;
+  font-size: 110%;
+}

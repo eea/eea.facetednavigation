@@ -1,0 +1,27 @@
+.faceted-top-column .faceted-alphabetic-widget {
+  text-align: center;
+}
+
+.faceted-center-column .faceted-alphabetic-widget {
+  text-align: center;
+}
+
+.faceted_letter {
+  color: #95B229;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0 0.2em 0 0.2em;
+  background-color: transparent;
+}
+
+.faceted_letter:hover{
+  color: orange;
+  background-color: #ccc;
+}
+
+.faceted_letter_selected {
+  background-color: #ccc;
+  color: orange;
+  font-size: 1.7em;
+}

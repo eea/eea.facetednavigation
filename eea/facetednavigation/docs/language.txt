@@ -1,0 +1,155 @@
+Language widget
+===============
+
+There is no specific language widget as you want to get benefits of all
+existing and all the other plugin widgets. But you want to have specific
+behaviour for the Language index, that's why ILanguageWidgetAdapter was added.
+This adapter will try to add the following features to widgets that are using
+Language index to query catalog, even they are Select widgets or TagsCloud ones.
+
+1. If no widget defined for the Language index, query will be made using the
+   container's language or the session's one, in this order.
+
+2. If there is a hidden widget for the Language index:
+
+   a) No default value set, or default value set to "All": catalog will search
+      for all languages;
+   b) Default value set, other than "All": catalog will search for the
+      container's language or the session's one, in this order.
+
+3. If there is a visible widget for the Language index:
+
+   a) No value selected: catalog will search for all languages;
+   b) Value selected: catalog will search for the selected language(s);
+
+
+Set up
+------
+
+Setup sandbox
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(fid)
+    >>> sandbox.setLanguage('en')
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+Let's cleanup default criteria to avoid surprises
+
+    >>> from eea.facetednavigation.interfaces import ICriteria
+    >>> cids = ICriteria(sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Add some translations
+
+    >>> _ = sandbox.addTranslation('fr')
+    >>> sandbox_fr = sandbox.getTranslation('fr')
+
+    >>> config = sandbox.unrestrictedTraverse('@@faceted_configure')
+    >>> sync = sandbox.unrestrictedTraverse('@@faceted_sync_translations')
+    >>> sync()
+
+    >>> search_en = sandbox.unrestrictedTraverse('@@faceted_query')
+    >>> search_fr = sandbox_fr.unrestrictedTraverse('@@faceted_query')
+
+Add some content to search
+
+    >>> uid = sandbox.invokeFactory('Folder', 'english', title='English faceted language')
+    >>> sandbox._getOb(uid).setLanguage('en')
+    >>> uid = sandbox_fr.invokeFactory('Folder', 'french', title='French faceted language')
+    >>> sandbox_fr._getOb(uid).setLanguage('fr')
+
+Configure faceted settings
+
+    >>> _ = config(addPropertiesWidget_button='Add',
+    ...   wtype='text', wposition='left', c0_title='Default search for title',
+    ...   c0_index='Title', c0_default='faceted language', c0_hidden=True)
+    >>> _ = config(addPropertiesWidget_button='Add',
+    ...   wtype='sorting', wposition='left', c0_title='Default sort',
+    ...   c0_default='sortable_title', c0_hidden=True)
+
+
+1. No widget defined
+--------------------
+
+English
+
+    >>> brains = search_en.query()
+    >>> [brain.getId for brain in brains]
+    ['english']
+
+French
+
+    >>> brains = search_fr.query()
+    >>> [brain.getId for brain in brains]
+    ['french']
+
+
+2. Hidden widget
+----------------
+
+  a) No default value set
+
+    >>> _ = config(addPropertiesWidget_button='Add',
+    ...   wtype='select', wposition='left', c0_title='Language',
+    ...   c0_index='Language', c0_default='', c0_hidden=True)
+
+    >>> brains = search_en.query()
+    >>> [brain.getId for brain in brains]
+    ['english', 'french']
+
+  b) Default value set. This means that you want to search only for current
+     language. You'll get the same results if no widget is defined for the
+     Language index (see point 1).
+
+    >>> ICriteria(sandbox).delete('c2')
+    >>> _ = config(addPropertiesWidget_button='Add',
+    ...   wtype='select', wposition='left', c0_title='Language',
+    ...   c0_index='Language', c0_default='fr', c0_hidden=True)
+
+    English
+
+    >>> brains = search_en.query()
+    >>> [brain.getId for brain in brains]
+    ['english']
+
+    French
+
+    >>> brains = search_fr.query()
+    >>> [brain.getId for brain in brains]
+    ['french']
+
+3. Visible widget
+-----------------
+
+  a) No value selected
+
+    >>> ICriteria(sandbox).delete('c2')
+    >>> _ = config(addPropertiesWidget_button='Add',
+    ...   wtype='select', wposition='left', c0_title='Language',
+    ...   c0_index='Language', c0_default='fr', c0_hidden=False)
+
+    >>> brains = search_en.query()
+    >>> [brain.getId for brain in brains]
+    ['english', 'french']
+
+  b) Value selected
+
+    English
+
+    >>> brains = search_en.query(c2='en')
+    >>> [brain.getId for brain in brains]
+    ['english']
+
+    French
+
+    >>> brains = search_en.query(c2='fr')
+    >>> [brain.getId for brain in brains]
+    ['french']

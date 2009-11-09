@@ -1,0 +1,223 @@
+Relative date widget
+====================
+
+Implementation of ATContentTypes date criteria for facted navigation usage.
+
+Imports
+-------
+
+    >>> from DateTime import DateTime
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
+    >>> from Products.CMFCore.utils import getToolByName
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+Set up
+------
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'sandbox-widgets')
+    >>> sandbox = portal._getOb(fid)
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> sandbox.setTitle('Faceted navigation folder test')
+    >>> request = sandbox.REQUEST
+    >>> putils = getToolByName(sandbox, 'plone_utils')
+    >>> handler = getMultiAdapter((sandbox, request), name=u'faceted_configure')
+    >>> query = getMultiAdapter((sandbox, request), name=u'faceted_query')
+
+Cleanup default widgets
+-----------------------
+
+    >>> cids = ICriteria(sandbox).keys()
+
+Default widgets
+
+    >>> cids
+    [...'c1',...]
+
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Add hidden text widget
+----------------------
+
+    >>> _ = handler(addWidget_button=True, wtype='text')
+    >>> _ = handler(updateCriterion_button='Save', cid='c0',
+    ...     c0_default='Relative date', c0_index='Title', c0_hidden=True)
+
+Add test folders
+----------------
+Past
+
+    >>> past = sandbox.invokeFactory('Folder', 'past', title='Relative date widget 1')
+    >>> past = sandbox._getOb(past)
+    >>> past.setLanguage('en')
+    >>> putils.editMetadata(past, effective_date=DateTime() - 365)
+
+3 days old
+
+    >>> past_n = sandbox.invokeFactory('Folder', 'past_n', title='Relative date widget 2')
+    >>> past_n = sandbox._getOb(past_n)
+    >>> past_n.setLanguage('en')
+    >>> putils.editMetadata(past_n, effective_date=DateTime() - 3)
+
+Present
+
+    >>> now = sandbox.invokeFactory('Folder', 'now', title='Relative date widget 3')
+    >>> now = sandbox._getOb(now)
+    >>> now.setLanguage('en')
+    >>> putils.editMetadata(now, effective_date=DateTime())
+
+3 days in the future
+
+    >>> future_n = sandbox.invokeFactory('Folder', 'future_n', title='Relative date widget 4')
+    >>> future_n = sandbox._getOb(future_n)
+    >>> future_n.setLanguage('en')
+    >>> putils.editMetadata(future_n, effective_date=DateTime() + 3)
+
+Future
+
+    >>> future = sandbox.invokeFactory('Folder', 'future', title='Relative date widget 3')
+    >>> future = sandbox._getOb(future)
+    >>> future.setLanguage('en')
+    >>> putils.editMetadata(future, effective_date=DateTime() + 365)
+
+Empty query
+-----------
+
+    >>> brains = query.query(batch=False)
+    >>> len(brains)
+    5
+
+Add widget
+----------
+
+    >>> _ = handler(wtype='date', addWidget_button=True)
+
+
+Get some results (default set)
+------------------------------
+
+All before now
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='less than now')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['now', 'past_n', 'past']
+
+All before last week
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='more than 7 days in the past')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['past']
+
+
+All before yesterday
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='more than 1 days in the past')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['past_n', 'past']
+
+Last week
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='less than 7 days in the past')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['now', 'past_n']
+
+Today
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='equal now')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['now']
+
+Next week
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='less than 7 days in the future')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['future_n', 'now']
+
+All after next week
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='more than 7 days in the future')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['future']
+
+All after now
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
+    ...     c1_index='effective', c1_default='more than now')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['future', 'future_n', 'now']
+
+Get some results (no default)
+------------------------------
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=False,
+    ...     c1_index='effective')
+
+All before now
+
+    >>> brains = query.query(c1=['less', '0', ''])
+    >>> [brain.getId for brain in brains]
+    ['now', 'past_n', 'past']
+
+All before last week
+
+    >>> brains = query.query(c1=['more', '7', 'past'])
+    >>> [brain.getId for brain in brains]
+    ['past']
+
+
+All before yesterday
+
+    >>> brains = query.query(c1=['more', '1', 'past'])
+    >>> [brain.getId for brain in brains]
+    ['past_n', 'past']
+
+Last week
+
+    >>> brains = query.query(c1=['less', '7', 'past'])
+    >>> [brain.getId for brain in brains]
+    ['now', 'past_n']
+
+Today
+
+    >>> brains = query.query(c1=['equal', '0', ''])
+    >>> [brain.getId for brain in brains]
+    ['now']
+
+Next week
+
+    >>> brains = query.query(c1=['less', '7', 'future'])
+    >>> [brain.getId for brain in brains]
+    ['future_n', 'now']
+
+All after next week
+
+    >>> brains = query.query(c1=['more', '7', 'future'])
+    >>> [brain.getId for brain in brains]
+    ['future']
+
+All after now
+
+    >>> brains = query.query(c1=['more', '0', ''])
+    >>> [brain.getId for brain in brains]
+    ['future', 'future_n', 'now']

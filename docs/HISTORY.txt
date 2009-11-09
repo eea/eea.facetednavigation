@@ -1,0 +1,26 @@
+Changelog
+=========
+
+1.2 (2009-11-09)
+----------------
+
+* Remove LinguaPlone and ATVocabularyManager dependencies.
+* Make eea.faceted.tool optional.
+* Fix export/import criteria ids.
+
+1.1 (2009-10-30)
+----------------
+
+* Duplicate release 1.0r1
+
+
+1.0r1 (2009-10-30)
+------------------
+
+* FIX: This package should not be zip_safe.
+
+
+1.0 (2009-10-30)
+----------------
+
+* Initial release

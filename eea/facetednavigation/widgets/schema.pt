@@ -1,0 +1,39 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+<div metal:define-macro="schema" class="faceted-widget-edit" tal:define="
+  mode string:search;
+  errors python:{};
+  criterion python:template.data;
+  cid python:criterion.getId();
+  faceted_widget python:template.widget;
+  edit_schema python:faceted_widget.edit_schema;
+  widgets python:edit_schema.widgets();
+  schematas python:edit_schema.getSchemataNames();" tal:attributes="
+  id string:${cid}_edit_widget;
+">
+
+<ul style="display: none">
+  <tal:schemata repeat="schemata schematas">
+    <li tal:attributes="id string:${cid}-${schemata}-header">
+      <a tal:attributes="href string:#${cid}-${schemata}-tab">
+        <span tal:content="schemata/title" i18n:translate="">Edit fields</span>
+      </a>
+    </li>
+  </tal:schemata>
+</ul>
+
+<tal:schemata repeat="schemata schematas">
+  <div tal:attributes="id string:${cid}-${schemata}-tab" tal:define="
+    fields python:edit_schema.getSchemataFields(schemata)">
+    <tal:field repeat="field fields">
+      <tal:widget define="
+        field_id python:field.getName();
+        fieldName string:${cid}_${field_id};
+        accessor python:faceted_widget.accessor(field_id);
+        widget python:field.widget">
+        <div metal:use-macro="python:faceted_widget.get_macro(field_id, 'edit')" />
+      </tal:widget>
+    </tal:field>
+  </div>
+</tal:schemata>
+
+</div>

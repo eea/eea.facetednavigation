@@ -1,0 +1,311 @@
+Faceted XML Adapter
+===================
+XML Adapter for Faceted Navigable objects to be used within GenericSetup profiles.
+
+Add a faceted navigable object
+
+    >>> self.loginAsPortalOwner()
+
+    >>> fid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(fid)
+    >>> sandbox.setTitle('Faceted navigation sandbox')
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+Let's cleanup default criteria to avoid surprises
+
+    >>> from eea.facetednavigation.interfaces import ICriteria
+    >>> cids = ICriteria(sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Get generic setup xml adapter
+
+    >>> from zope.app import zapi
+    >>> from Products.GenericSetup.interfaces import IBody
+    >>> from Products.GenericSetup.testing import DummySetupEnviron
+    >>> exporter = zapi.queryMultiAdapter((sandbox, DummySetupEnviron()), IBody)
+    >>> exporter
+    <...FacetedNavigableXMLAdapter...>
+
+XML Export
+----------
+
+Export empty criteria
+
+    >>> print exporter.body
+    <?xml version="1.0"?>
+    <object name="sandbox" meta_type="ATFolder">
+     <criteria/>
+    </object>
+
+Let's add some criteria
+
+    >>> handler = sandbox.unrestrictedTraverse('@@faceted_configure')
+
+Checkboxes
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...     wtype='checkbox', wposition='left',
+    ...     c0_title="Type d'element",
+    ...     c0_index='portal_type', c0_default=['Folder', 'Document'],
+    ...     c0_count=True)
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...     wtype='tagscloud', wposition='right',
+    ...     c0_title="Meta-type d'element",
+    ...     c0_index='meta_type', c0_default='ATFolder',
+    ...     c0_cloud='sphere', sizemin=15, sizemax=25,
+    ...     c0_count=False)
+
+    >>> print exporter.body
+    <?xml version="1.0"?>
+    <object name="sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c0">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="count">1</property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
+      <criterion name="c1">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">right</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="sizemin">15</property>
+       <property name="sizemax">25</property>
+       <property name="count">0</property>
+       <property name="default">ATFolder</property>
+      </criterion>
+     </criteria>
+    </object>
+    <BLANKLINE>
+
+XML Import
+----------
+
+Let's add a new folder to import criteria configuration
+
+    >>> fid = portal.invokeFactory('Folder', 'new_sandbox')
+    >>> new_sandbox = portal._getOb(fid)
+    >>> new_sandbox.setTitle('Faceted navigation new sandbox')
+    >>> subtyper.change_type(new_sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+And cleanup default widgets
+
+    >>> cids = ICriteria(new_sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(new_sandbox).delete(cid)
+    >>> ICriteria(new_sandbox).keys()
+    []
+
+Let's check exported
+
+    >>> importer = zapi.queryMultiAdapter((new_sandbox, DummySetupEnviron()), IBody)
+    >>> importer.body = exporter.body
+    >>> print importer.body
+    <?xml version="1.0"?>
+    <object name="new_sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c0">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="count">1</property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
+      <criterion name="c1">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">right</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="sizemin">15</property>
+       <property name="sizemax">25</property>
+       <property name="count">0</property>
+       <property name="default">ATFolder</property>
+      </criterion>
+     </criteria>
+    </object>
+    <BLANKLINE>
+
+Now let's see if it works if there is already confgurated.
+
+Cleanup
+
+    >>> cids = ICriteria(new_sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(new_sandbox).delete(cid)
+    >>> ICriteria(new_sandbox).keys()
+    []
+
+Add one widget
+
+    >>> handler = new_sandbox.unrestrictedTraverse('@@faceted_configure')
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...     wtype='tagscloud', wposition='right',
+    ...     c0_title="Meta-type d'element",
+    ...     c0_index='meta_type', c0_default='ATFolder',
+    ...     c0_cloud='sphere', sizemin=15, sizemax=25,
+    ...     c0_count=False)
+
+Check configuration
+
+    >>> print importer.body
+    <?xml version="1.0"?>
+    <object name="new_sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c0">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">right</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="sizemin">15</property>
+       <property name="sizemax">25</property>
+       <property name="count">0</property>
+       <property name="default">ATFolder</property>
+      </criterion>
+     </criteria>
+    </object>
+    <BLANKLINE>
+
+Now update it
+
+    >>> importer.body = exporter.body
+    >>> print importer.body
+    <?xml version="1.0"?>
+    <object name="new_sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c0">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="count">1</property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
+      <criterion name="c1">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">right</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="sizemin">15</property>
+       <property name="sizemax">25</property>
+       <property name="count">0</property>
+       <property name="default">ATFolder</property>
+      </criterion>
+     </criteria>
+    </object>
+    <BLANKLINE>
+
+Using the browser interface
+---------------------------
+
+Cleanup
+
+    >>> cids = ICriteria(new_sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(new_sandbox).delete(cid)
+    >>> ICriteria(new_sandbox).keys()
+    []
+
+    >>> view = new_sandbox.unrestrictedTraverse('@@faceted_exportimport')
+
+Handle empty or wrong xml files
+
+    >>> query = {
+    ...   'import_button': 'Import',
+    ...   'import_file': None,
+    ...   'redirect': '',
+    ... }
+
+    >>> view(**query)
+    'Please provide a valid xml file'
+
+Import a valid xml file
+
+    >>> query['import_file'] = self.loadfile('data/exportimport.xml')
+    >>> view(**query)
+    'Configuration imported'
+
+Let's see our new configuration
+
+    >>> query = {
+    ...   'export_button': 'Export',
+    ...   'redirect': '',
+    ... }
+    >>> print view(**query)
+    <?xml version="1.0"?>
+    <object name="new_sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c7">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">1</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="count">1</property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
+      <criterion name="c2">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="count">0</property>
+       <property name="default">ATFolder</property>
+      </criterion>
+     </criteria>
+    </object>
+    <BLANKLINE>

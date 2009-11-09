@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="eea.facetednavigation">
+
+  <five:registerPackage package="."/>
+
+  <genericsetup:registerProfile
+      name="default"
+      title="EEA Faceted Navigation"
+      directory="profiles/default"
+      description="Extension profile for EEA Faceted Navigation."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

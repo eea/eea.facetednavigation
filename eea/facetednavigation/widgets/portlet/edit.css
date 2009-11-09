@@ -1,0 +1,8 @@
+.faceted-portlet-widget .ui-widget-header {
+  margin: 0px ! important;
+}
+
+.faceted-portlet-widget fieldset {
+  margin: 0.5em;
+  padding: 0em;
+}

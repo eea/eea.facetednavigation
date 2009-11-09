@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vdex orderSignificant="true">
+  <vocabName>
+    <langstring language="en">Faceted sort order</langstring>
+  </vocabName>
+  <vocabIdentifier>eea.facetednavigation.faceted_sortorder</vocabIdentifier>
+  <term>
+    <termIdentifier>created</termIdentifier>
+    <caption>
+      <langstring language="en">Creation Date</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Creator</termIdentifier>
+    <caption>
+      <langstring language="en">Creator</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>effective</termIdentifier>
+    <caption>
+      <langstring language="en">Effective Date</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>end</termIdentifier>
+    <caption>
+      <langstring language="en">End Date</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>expires</termIdentifier>
+    <caption>
+      <langstring language="en">Expiration Date</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Type</termIdentifier>
+    <caption>
+      <langstring language="en">Item Type</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Subject</termIdentifier>
+    <caption>
+      <langstring language="en">Keywords</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Language</termIdentifier>
+    <caption>
+      <langstring language="en">Language</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>Format</termIdentifier>
+    <caption>
+      <langstring language="en">Mime Types</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>modified</termIdentifier>
+    <caption>
+      <langstring language="en">Modification Date</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>getObjPositionInParent</termIdentifier>
+    <caption>
+      <langstring language="en">Order in folder</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>object_provides</termIdentifier>
+    <caption>
+      <langstring language="en">Provides interface</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>getRawRelatedItems</termIdentifier>
+    <caption>
+      <langstring language="en">Related To</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>getId</termIdentifier>
+    <caption>
+      <langstring language="en">Short Name</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>start</termIdentifier>
+    <caption>
+      <langstring language="en">Start Date</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>review_state</termIdentifier>
+    <caption>
+      <langstring language="en">State</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>getThemes</termIdentifier>
+    <caption>
+      <langstring language="en">Themes</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>sortable_title</termIdentifier>
+    <caption>
+      <langstring language="en">Title</langstring>
+    </caption>
+  </term>
+</vdex>

@@ -1,0 +1,56 @@
+<metal:widgets define-macro="widgets" tal:define="
+  mode mode | string:edit;
+  view_mode python:mode == 'view';
+  edit_mode python:mode == 'edit';
+
+  faceted_query nocall:here/@@faceted_query;
+  faceted_html python:view_mode and faceted_query(ajax=False) or '';
+  visible python:edit_mode or view.language_present or ('listingBar' in faceted_html);
+  positions python:visible and view.positions or [];
+  positions python:dict((x.value, x.title) for x in positions);
+">
+  <div class="faceted-clear"></div>
+
+  <!-- Top -->
+  <div tal:define="position string:top" id="top-area">
+    <metal:position use-macro="here/@@faceted_macros/macros/position" />
+  </div>
+
+  <!-- Left & Center-->
+  <div id="center-and-left-area">
+    <!-- Center -->
+    <div id="center-area">
+      <div id="center-content-area">
+        <!-- Center top -->
+        <div tal:define="position string:center" id="center-top-area">
+          <metal:position use-macro="here/@@faceted_macros/macros/position" />
+        </div>
+
+        <!-- Content -->
+        <metal:results use-macro="here/@@faceted_macros/macros/results" />
+
+        <!-- Center bottom -->
+        <div tal:define="position string:bottomcenter" id="center-bottom-area">
+          <metal:position use-macro="here/@@faceted_macros/macros/position" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Left column -->
+    <div tal:define="position string:left" id="left-area">
+      <metal:position use-macro="here/@@faceted_macros/macros/position" />
+    </div>
+  </div>
+
+  <!-- Right -->
+  <div tal:define="position string:right" id="right-area">
+    <metal:position use-macro="here/@@faceted_macros/macros/position" />
+  </div>
+
+  <!-- Bottom -->
+  <div tal:define="position string:bottom" id="bottom-area">
+    <metal:position use-macro="here/@@faceted_macros/macros/position" />
+  </div>
+
+  <div class="faceted-clear"></div>
+</metal:widgets>

@@ -1,0 +1,32 @@
+<configure xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="eea.facetednavigation">
+
+  <browser:page
+    for="*"
+    name="faceted_view.js"
+    class=".javascript.ViewJavascript"
+    permission="zope.Public"
+    />
+
+  <browser:page
+    for="*"
+    name="faceted_edit.js"
+    class=".javascript.EditJavascript"
+    permission="zope.Public"
+    />
+
+  <browser:page
+    for="*"
+    name="faceted_view.css"
+    class=".css.ViewCSS"
+    permission="zope.Public"
+    />
+
+  <browser:page
+    for="*"
+    name="faceted_edit.css"
+    class=".css.EditCSS"
+    permission="zope.Public"
+    />
+
+</configure>

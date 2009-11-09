@@ -1,0 +1,28 @@
+<configure
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  xmlns:meta="http://namespaces.zope.org/meta">
+
+  <include package="Products.GenericSetup" file="meta.zcml" />
+  <include package="p4a.subtyper" file="meta.zcml" />
+
+  <!-- Plone 2.5 -->
+  <configure zcml:condition="installed zope.app.annotation.tests">
+    <include package="Products.CMFonFive" file="meta.zcml" />
+  </configure>
+
+  <!-- Plone 3.0+ -->
+  <configure zcml:condition="installed zope.annotation">
+    <include package="Products.CMFCore" file="meta.zcml" />
+  </configure>
+
+  <meta:directives namespace="http://namespaces.zope.org/faceted">
+
+    <meta:directive
+      name="widget"
+      schema=".widgets.interfaces.IWidgetDirective"
+      handler=".widgets.widgets.WidgetDirective"
+      />
+
+  </meta:directives>
+
+</configure>

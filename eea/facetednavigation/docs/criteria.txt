@@ -1,0 +1,117 @@
+Handle criteria
+===============
+
+Imports
+-------
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+Set up
+------
+
+    >>> self.loginAsPortalOwner()
+    >>> sid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(sid)
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> subtyper.existing_type(sandbox).name
+    'eea.facetednavigation.FolderFacetedNavigable'
+
+Cleanup default widgets
+-----------------------
+
+    >>> cids = ICriteria(sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Add criteria
+------------
+
+    >>> _ = ICriteria(sandbox).add('alphabetic', 'left')
+    >>> _ = ICriteria(sandbox).add('checkbox', 'left')
+    >>> _ = ICriteria(sandbox).add('criteria', 'right')
+    >>> _ = ICriteria(sandbox).add('daterange', 'right')
+    >>> _ = ICriteria(sandbox).add('radio', 'top')
+    >>> _ = ICriteria(sandbox).add('select', 'top')
+    >>> _ = ICriteria(sandbox).add('sorting', 'center')
+    >>> _ = ICriteria(sandbox).add('text', 'center')
+
+Get criteria
+------------
+
+    >>> ICriteria(sandbox).keys()
+    ['c0', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7']
+
+    >>> ICriteria(sandbox).values()
+    [<eea.facetednavigation.widgets.storage.Criterion object at...>, ...]
+
+    >>> ICriteria(sandbox).items()
+    [('c0', <eea.facetednavigation.widgets.storage.Criterion object at...>), ...]
+
+    >>> ICriteria(sandbox).get('c0')
+    <eea.facetednavigation.widgets.storage.Criterion object at...>
+
+Edit criterion
+--------------
+
+  Alphabetic criterion
+
+    >>> ICriteria(sandbox).edit('c0', title='Alphabetic', index='Title', hidden='0')
+    >>> criterion = ICriteria(sandbox).get('c0')
+    >>> criterion.get('title')
+    u'Alphabetic'
+    >>> criterion.hidden
+    False
+    >>> criterion.get('index')
+    u'Title'
+
+  Checkbox criterion
+
+    >>> ICriteria(sandbox).edit('c1',
+    ...    title='Check boxes',
+    ...    index='portal_type',
+    ...    vocabulary='eea.faceted.vocabularies.FacetedPortalTypes',
+    ...    catalog='portal_catalog',
+    ...    maxitems=4, hidden='1'
+    ... )
+    >>> criterion = ICriteria(sandbox).get('c1')
+    >>> criterion.get('title')
+    u'Check boxes'
+    >>> criterion.hidden
+    True
+    >>> criterion.get('maxitems')
+    4
+
+Delete criteria
+---------------
+
+    >>> ICriteria(sandbox).delete('c0')
+    >>> ICriteria(sandbox).delete('c1')
+    >>> ICriteria(sandbox).delete('c2')
+    >>> ICriteria(sandbox).keys()
+    ['c3', 'c4', 'c5', 'c6', 'c7']
+
+Move up/down
+------------
+
+    >>> ICriteria(sandbox).down('c4')
+    >>> ICriteria(sandbox).up('c5')
+    >>> ICriteria(sandbox).keys()
+    ['c5', 'c3', 'c4', 'c6', 'c7']
+
+Change position
+---------------
+
+    >>> ICriteria(sandbox).position(
+    ...     top=['c7', 'c6'],
+    ...     left=['c5', 'c4'],
+    ...     center=['c3'],
+    ...     right=[]
+    ... )
+    >>> ICriteria(sandbox).keys()
+    ['c7', 'c6', 'c5', 'c4', 'c3']
+    >>> ICriteria(sandbox).get('c4').get('position')
+    u'left'

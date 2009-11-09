@@ -1,0 +1,61 @@
+<metal:position define-macro="position" tal:define="
+  positions positions | python: {};
+  position position | string:top;
+  mode mode | string:view;" tal:condition="positions">
+  <div tal:define="
+    position_title python:positions.get(position).title;
+    sections python:view.get_sections(position=position, mode=mode)"
+    tal:attributes="
+    id string:faceted-${position}-column;
+    class string:faceted-column faceted-${position}-column visualNoPrint;">
+
+    <metal:widgets use-macro="here/@@faceted_macros/macros/sections" />
+  </div>
+
+</metal:position>
+
+<metal:sections define-macro="sections" tal:define="
+  sections sections | python:[]
+">
+
+  <tal:section repeat="section sections">
+    <tal:sectionattrs define="
+      section_value python:section.value;
+      section_title python:section.title;
+      widgets python:view_mode and view.get_view_widgets or view.get_widgets;
+      widgets python:widgets(position=position, section=section_value)">
+      <div tal:attributes="
+        title section_title;
+        class string:faceted-section-header;
+        id string:${position}---${section_value}---section;
+        " i18n:attributes="title"
+        tal:condition="python:len(sections) > 1">
+        <a href="#" tal:content="python:section.title" i18n:translate="" />
+      </div>
+      <div tal:attributes="
+        id string:${position}---${section_value}---widgets;
+        title section_title;
+        class string:faceted-drag-drop faceted-widgets faceted-${section_value}-widgets faceted-${position}-widgets;">
+        <tal:widget repeat="widget widgets">
+          <div tal:replace="structure widget"> Widget </div>
+        </tal:widget>
+      </div>
+    </tal:sectionattrs>
+  </tal:section>
+
+</metal:sections>
+
+<!-- Results -->
+<metal:results define-macro="results" tal:define="
+  mode mode | string:edit;
+  view_mode python:mode == 'view';
+  edit_mode python:mode == 'edit';
+  faceted_html faceted_html | string:;
+">
+  <div id="faceted-results" class="faceted-results"
+    metal:define-slot="content">
+    <noscript tal:condition="not:edit_mode">
+      <tal:results replace="structure python:faceted_html" />
+    </noscript>
+  </div>
+</metal:results>

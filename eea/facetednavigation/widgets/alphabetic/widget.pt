@@ -1,0 +1,38 @@
+<div class="faceted-widget faceted-alphabetic-widget" tal:define="
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  hidezerocount python:view.hidezerocount;
+  default python:view.default or '';
+  css string:faceted-widget faceted-alphabetic-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  css python:view.countable and css + ' faceted-count' or css;
+  css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+  <fieldset class="widget-fieldset">
+    <legend tal:define="title python:view.data.get('title', '')" tal:content="
+      python:view.translate(title)" i18n:translate="">Alphabetic widget</legend>
+    <p tal:define="
+      lang python:view.request.get('LANGUAGE', 'en');
+      alph python:view.getAlphabet(lang);"
+      tal:attributes="id wid">
+      <span class="faceted_letter" tal:define="
+          letter_css python:default == '' and 'faceted_letter faceted_letter_selected' or 'faceted_letter'"
+          tal:attributes="
+            class letter_css;
+            title string:All;
+            id string:${wid}-all" i18n:translate="" i18n:attributes="title">All</span>
+      <tal:letters repeat="letter alph">
+        <span class="faceted_letter" tal:define="
+          letter_id python:letter[0];
+          capital_letter python:letter[1];
+          letter_css string:faceted_letter;
+          letter_css python:capital_letter == default and letter_css + ' faceted_letter_selected' or letter_css;"
+          tal:content="capital_letter"
+          tal:attributes="
+            class letter_css;
+            title capital_letter;
+            id string:${wid}-${capital_letter}"/>
+      </tal:letters>
+    </p>
+  </fieldset>
+</div>

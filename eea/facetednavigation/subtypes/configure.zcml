@@ -1,0 +1,68 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="eea.facetednavigation">
+
+  <class class="Products.ATContentTypes.content.folder.ATFolder">
+    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
+  </class>
+
+  <class class="Products.ATContentTypes.content.topic.ATTopic">
+    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
+  </class>
+
+  <utility
+        name="eea.facetednavigation.FolderFacetedNavigable"
+        factory=".descriptors.FolderFacetedNavigableDescriptor" />
+
+  <utility
+        name="eea.facetednavigation.TopicFacetedNavigable"
+        factory=".descriptors.TopicFacetedNavigableDescriptor" />
+
+  <utility
+        name="eea.facetednavigation.RichTopicNavigableDescriptor"
+        factory=".descriptors.RichTopicNavigableDescriptor" />
+
+  <adapter
+    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+    provides=".interfaces.IAnnotations"
+    factory=".interfaces.AttributeAnnotations"
+    />
+
+  <adapter
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    provides=".interfaces.IFacetedWrapper"
+    factory=".wrapper.FacetedWrapper"
+    />
+
+  <!-- Plone 2.5 support -->
+  <configure zcml:condition="installed zope.app.annotation.tests">
+    <browser:menuItem
+      for="..interfaces.IFacetedNavigable"
+      menu="object_buttons"
+      title="Disable faceted navigation"
+      action="@@faceted_subtyper/disable"
+      filter="object/@@faceted_subtyper/can_disable"
+      permission="cmf.ModifyPortalContent"
+      />
+
+    <browser:menuItem
+      for="..interfaces.IPossibleFacetedNavigable"
+      menu="object_buttons"
+      title="Enable faceted navigation"
+      action="@@faceted_subtyper/enable"
+      filter="object/@@faceted_subtyper/can_enable"
+      permission="cmf.ModifyPortalContent"
+      />
+
+    <browser:page
+      name="faceted_subtyper"
+      for="..interfaces.IPossibleFacetedNavigable"
+      class=".subtyper.FacetedSubtyper"
+      permission="zope.Public"
+      allowed_interface=".interfaces.IFacetedSubtyper"
+      />
+  </configure>
+
+  <!-- Plone 3.0+ support. No need as Sub-types menu is visible by default -->
+</configure>

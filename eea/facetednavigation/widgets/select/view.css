@@ -1,0 +1,7 @@
+.faceted-select-item-disabled {
+  color: gray;
+}
+
+.faceted-zero-count-hidden .faceted-select-item-disabled {
+  display: none;
+}

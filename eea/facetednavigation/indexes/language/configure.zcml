@@ -1,0 +1,13 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="eea.facetednavigation"
+   >
+
+  <adapter
+    factory=".adapter.LanguageWidgetAdapter"
+    provides="eea.facetednavigation.interfaces.ILanguageWidgetAdapter"
+    for="eea.facetednavigation.interfaces.IWidget
+         eea.facetednavigation.interfaces.IFacetedNavigable"
+    />
+
+</configure>

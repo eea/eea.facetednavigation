@@ -1,0 +1,86 @@
+Syncronize across translations
+==============================
+Faceted navigation is a multilingual package and all the faceted settings are
+keept in the canonical portal object. All you need to do to syncronize across
+translations is to subtype all translations as faceted navigable. For this
+a syncronize action was added within object_buttons menu items.
+
+Set up
+------
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(fid)
+    >>> sandbox.setLanguage('en')
+
+Add some translations
+
+    >>> _ = sandbox.addTranslation('fr')
+    >>> _ = sandbox.addTranslation('ro')
+
+Subtype canonical as faceted navigable
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+Let's cleanup default criteria to avoid surprises
+
+    >>> from eea.facetednavigation.interfaces import ICriteria
+    >>> cids = ICriteria(sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Let's add some configuration
+
+    >>> handler = sandbox.unrestrictedTraverse('@@faceted_configure')
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...   wtype='text', wposition='left', c0_title='Text widget',
+    ...   c0_index='Title', c0_default='water')
+
+Now let's try to get faceted navigation configuration from french
+
+    >>> fr = sandbox.getTranslation('fr')
+    >>> fr.unrestrictedTraverse('@@facetednavigation_view', 'Ops, AttributeError')
+    'Ops, AttributeError'
+
+Syncronize
+----------
+
+    >>> sync = sandbox.unrestrictedTraverse('@@faceted_sync_translations')
+    >>> _ = sync()
+
+Let's check again the french translation
+
+    >>> fr_view = fr.unrestrictedTraverse('@@facetednavigation_view')
+    >>> [widget for widget in fr_view.get_widgets()]
+    [<eea.facetednavigation.widgets.text.widget.Widget object at...>]
+
+What about the romanian one?
+
+    >>> ro = sandbox.getTranslation('ro')
+    >>> ro_view = ro.unrestrictedTraverse('@@facetednavigation_view')
+    >>> [widget for widget in ro_view.get_widgets()]
+    [<eea.facetednavigation.widgets.text.widget.Widget object at...>]
+
+Ok, what if I edit or add a widget elsewhere than the canonical?
+
+    >>> ro_handler = ro.unrestrictedTraverse('@@faceted_configure')
+    >>> _ = ro_handler(addPropertiesWidget_button='Add',
+    ...   wtype='select', wposition='right', c0_title='Select widget',
+    ...   c0_index='portal_types', c0_default='Folder')
+    >>> [widget for widget in ro_view.get_widgets()]
+    [<eea.facetednavigation.widgets.text.widget.Widget object at...>, <eea.facetednavigation.widgets.select.widget.Widget object at...>]
+
+Let's check if the changes are available for the other languages
+
+    >>> [widget for widget in fr_view.get_widgets()]
+    [<eea.facetednavigation.widgets.text.widget.Widget object at...>, <eea.facetednavigation.widgets.select.widget.Widget object at...>]
+
+    >>> en_view = sandbox.unrestrictedTraverse('@@facetednavigation_view')
+    >>> [widget for widget in en_view.get_widgets()]
+    [<eea.facetednavigation.widgets.text.widget.Widget object at...>, <eea.facetednavigation.widgets.select.widget.Widget object at...>]

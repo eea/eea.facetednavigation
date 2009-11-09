@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+  lang="en-US"
+  metal:use-macro="here/main_template/macros/master"
+  i18n:domain="eea.facetednavigation">
+
+<metal:jsslot fill-slot="javascript_head_slot">
+  <script language="javascript" type="text/javascript"
+    tal:content="string:jQuery(document).ready(Faceted.Load);"></script>
+  <script language="javascript" type="text/javascript"
+    tal:content="string:jQuery(window).unload(Faceted.Unload);"></script>
+</metal:jsslot>
+
+<body>
+
+<div metal:fill-slot="main">
+
+ <div metal:use-macro="here/document_actions/macros/document_actions">
+    Document actions (print, sendto etc)
+  </div>
+
+  <h1 tal:content="object_title" class="documentFirstHeading">
+    Title or id
+  </h1>
+
+  <p class="documentDescription"
+     tal:content="here/Description"
+     tal:condition="here/Description">
+    News summary
+  </p>
+
+<!-- Folder contents -->
+<div class="faceted-form" metal:define-macro="widgets" id="faceted-form"
+  tal:define="mode string:view;">
+  <metal:widgets use-macro="here/@@faceted_widgets/macros/widgets" />
+</div>
+
+</div>
+</body>
+</html>

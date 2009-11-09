@@ -1,0 +1,18 @@
+<div class="faceted-widget faceted-criteria-widget" tal:define="
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  css string:faceted-widget faceted-criteria-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset faceted-criteria">
+  <legend  tal:define="title python:view.data.get('title', '')" tal:content="
+    python:view.translate(title)" i18n:translate="">Text Widget</legend>
+  <dl tal:attributes="id wid"><dt></dt></dl>
+  <div class="faceted-criteria-reset">
+    <a href="#" tal:attributes="id string:${wid}_reset"
+      title="Remove all filters"
+      i18n:translate="criteria_view_remove_all">[X] Remove all</a>
+  </div>
+</fieldset>
+</div>

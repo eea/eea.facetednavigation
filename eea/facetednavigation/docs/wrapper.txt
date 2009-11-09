@@ -1,0 +1,81 @@
+Faceted wrapper
+===============
+Wrap faceted navigable objects to define new methods or overwrite existing ones,
+even Zope Python scripts.
+
+Setup
+-----
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'folder')
+    >>> sandbox = portal._getOb(fid)
+    >>> sandbox.setLanguage('en')
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+Get wrapper
+-----------
+This wrapper defines overwrite some methods and python scripts, let's check it
+works
+
+    >>> from zope.component import queryAdapter
+    >>> from eea.facetednavigation.interfaces import IFacetedWrapper
+
+Ensure this apply only for faceted navigable objects
+
+    >>> wrapper = queryAdapter(folder, IFacetedWrapper)
+    >>> print wrapper
+    None
+
+Ok now let's get our wrapper
+
+    >>> wrapper = queryAdapter(sandbox, IFacetedWrapper)
+    >>> print wrapper
+    <eea.facetednavigation.subtypes.wrapper.FacetedWrapper object at ...>
+
+Let's check overwritten methods
+
+    >>> print sandbox.getFolderContents
+    <FSPythonScript at ...>
+
+    >>> print sandbox.queryCatalog
+    <FSPythonScript at ...>
+
+    >>> print wrapper.getFolderContents
+    <bound method FacetedWrapper.getFolderContents of <eea.facetednavigation.subtypes.wrapper.FacetedWrapper object at ...>
+
+    >>> print wrapper.queryCatalog
+    <bound method FacetedWrapper.getFolderContents of <eea.facetednavigation.subtypes.wrapper.FacetedWrapper object at ...>
+
+Right now our wrapper doesn't inherit our object methods as it's a simple adapter.
+
+    >>> print wrapper.index_html
+    Traceback (most recent call last):
+    ...
+    AttributeError: index_html
+
+So to have all sandbox methods and attributes available in our wrapper we have to
+call it. Optionally you can pass some keywords to be used within overwritten methods.
+
+    >>> wrapper = wrapper(content='Some content to be returned')
+
+Now our wrapper has everything from sandbox
+
+    >>> print wrapper.index_html
+    <FSPageTemplate at ...>
+
+And it still overwrite python scripts and methods
+
+    >>> print wrapper.getFolderContents
+    <bound method FacetedWrapper.getFolderContents of <eea.facetednavigation.subtypes.wrapper.FacetedWrapper object at ...>
+
+So let's see our content
+
+    >>> wrapper.getFolderContents(contentFilter='No mather', batch=True)
+    'Some content to be returned'
+
+    >>> wrapper.queryCatalog(showAll=False, logic=1)
+    'Some content to be returned'

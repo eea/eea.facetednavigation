@@ -1,0 +1,55 @@
+<div class="faceted-widget faceted-tagscloud-widget" tal:define="
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  hidezerocount python:view.hidezerocount;
+  default python:view.default or '';
+  css string:faceted-widget faceted-tagscloud-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  css python:view.countable and css + ' faceted-count' or css;
+  css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
+  cloud python:view.data.get('cloud', 'list');
+  sizemin python:view.data.get('sizemin', 10);
+  sizemax python:view.data.get('sizemax', 20);
+  height python:view.data.get('height', 200);
+  maxitems python:int(view.data.get('maxitems', 0)) or 0;
+  kwargs options/kwargs|python:{};
+  vocabulary python:kwargs.get('vocabulary', view.vocabulary());
+  all python:vocabulary.next();
+" tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+  <legend tal:define="title python:view.data.get('title', '')" tal:content="
+    python:view.translate(title)" i18n:translate="">HTML Widget</legend>
+  <ul tal:attributes="id string:${wid}" class="tags-cloud">
+      <li tal:attributes="
+       class python:default == '' and 'faceted-tag-selected' or '';
+       value python:(all[2] == -1) and view.randint or all[2];
+       title string:All;
+       id string:${wid}all;" i18n:attributes="title"
+       i18n:translate="">All</li>
+    <tal:tag repeat="tag python:vocabulary">
+      <li tal:define="
+        tag_id python:tag[0];
+        tag_id python:tag_id.replace(' ', '_-_');
+        tag_label python:tag[1];
+        tag_label python:view.translate(tag_label);
+        tag_count python:(tag[2] == -1) and view.randint or tag[2]+1;"
+        tal:attributes="
+        class python:tag_id == default and 'faceted-tag-selected' or '';
+        value python:tag_count;
+        title tag_label;
+        id string:${wid}${tag_id}"
+        tal:content="
+        python:view.cut_text(tag_label)"
+        tal:condition="python:not hidezerocount or (hidezerocount and tag_count != 1)"
+      />
+    </tal:tag>
+  </ul>
+  <div style="display:none">
+    <span tal:attributes="id string:${wid}-cloud" tal:content="cloud" />
+    <span tal:attributes="id string:${wid}-sizemin" tal:content="sizemin" />
+    <span tal:attributes="id string:${wid}-sizemax" tal:content="sizemax" />
+    <span tal:attributes="id string:${wid}-height" tal:content="height" />
+  </div>
+</fieldset>
+</div>

@@ -1,0 +1,41 @@
+<metal:block use-macro="here/global_defines/macros/defines" />
+<div class="faceted-widget faceted-date-widget" tal:define="
+  mode string:search;
+  errors python:{};
+  fieldName python:template.data.getId();
+  wid fieldName;
+  hidden python:template.hidden;
+  css string:faceted-widget faceted-date-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  fieldTitle python:template.data.get('title', '');"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+<legend tal:content="python:template.translate(fieldTitle)"
+  i18n:translate="">Relative date</legend>
+<form action="." method="get">
+  <div tal:attributes="id string:${wid}_errors"></div>
+  <tal:operation define="
+    field python:template.get_field('operation');
+    accessor python:template.view_accessor('operation');
+    fieldName string:${wid}_operation;
+    widget python:field.widget">
+    <div metal:use-macro="python:template.get_macro('operation')" />
+  </tal:operation>
+  <tal:value define="
+    field python:template.get_field('value');
+    accessor python:template.view_accessor('value');
+    fieldName string:${wid}_value;
+    widget python:field.widget">
+    <div metal:use-macro="python:template.get_macro('value')" />
+  </tal:value>
+  <tal:daterange define="
+    field python:template.get_field('daterange');
+    accessor python:template.view_accessor('daterange');
+    fieldName string:${wid}_daterange;
+    widget python:field.widget">
+    <div metal:use-macro="python:template.get_macro('daterange')" />
+  </tal:daterange>
+</form>
+</fieldset>
+</div>

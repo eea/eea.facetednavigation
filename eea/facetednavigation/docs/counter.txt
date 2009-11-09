@@ -1,0 +1,78 @@
+Count results per item
+======================
+
+When searching with faceted navigation some widgets have ability to dynamicaly
+update and display results per page.
+
+Imports
+-------
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+
+Set up
+------
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'folder')
+    >>> counter_sandbox = portal._getOb(fid)
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(counter_sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> counter_sandbox.setTitle('Faceted navigation counter test')
+    >>> request = counter_sandbox.REQUEST
+
+    >>> view    = counter_sandbox.unrestrictedTraverse('@@facetednavigation_view')
+    >>> handler = counter_sandbox.unrestrictedTraverse('@@faceted_configure')
+    >>> counter = counter_sandbox.unrestrictedTraverse('@@faceted_counter')
+
+    >>> default = [widget for widget in view.get_widgets()]
+    >>> cids = [widget.data.getId() for widget in default]
+    >>> _ = handler(deleteWidgets_button='Delete', paths=cids)
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...         wtype='select', wposition='left', c0_title='Language',
+    ...         c0_index='Language', c0_default='', c0_hidden=1)
+
+Alphabetic
+----------
+Calling counter for alphabetic widget will return a json object with all
+starting letters as keys and number of results per each.
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...         wtype='alphabetic', wposition='top', c0_title='Alphabetic',
+    ...         c0_index='Title', c0_default='A')
+    >>> counter(cid='c1')
+    '{..."W":...}'
+
+Checkbox
+--------
+Counting on checkbox widget will return a json object with keys from
+widget.vocabulary and number of cataloged objects per each
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...         wtype='checkbox', wposition='left', c0_title='Checkbox',
+    ...         c0_catalog='portal_catalog',
+    ...         c0_index='portal_type', c0_default='Folder')
+    >>> counter(cid='c2')
+    '{..."Document": 1...}'
+
+Radio
+-----
+Same as for checkbox
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...         wtype='radio', wposition='right', c0_title='Radio',
+    ...         c0_catalog='portal_catalog',
+    ...         c0_index='portal_type')
+    >>> counter(cid='c3')
+    '{..."Folder": 2...}'
+
+Select
+------
+Same as for checkbox.
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...         wtype='select', wposition='center', c0_title='Select',
+    ...         c0_catalog='portal_catalog',
+    ...         c0_index='portal_type')
+    >>> counter(cid='c4')
+    '{..."Folder": 2...}'

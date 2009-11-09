@@ -1,0 +1,53 @@
+<div class="faceted-widget faceted-sorting-widget" tal:define="
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default python:view.default;
+  default_index python:len(default) > 0 and default[0] or '';
+  default_reverse python:len(default) > 1 and default[1] or None;
+  css string:faceted-widget faceted-sorting-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  vocabulary python:view.vocabulary()"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+<legend tal:define="title python:view.data.get('title', '')" tal:content="
+  python:view.translate(title)" i18n:translate="">HTML Widget</legend>
+<form action="." method="get">
+
+<div tal:condition="not:vocabulary" class="portalMessage"
+  i18n:translate="">
+  Invalid or empty vocabulary provided for this widget. Leave empty for default
+  sorting criteria.
+</div>
+
+<tal:sorting condition="vocabulary">
+  <select tal:attributes="name wid; id wid">
+    <option value=""></option>
+    <tal:option repeat="term vocabulary">
+      <option tal:define="
+        term_id python:term[0];
+        term_label python:term[1];
+        term_label python:view.translate(term_label);
+        term_description python:term[2];
+        chbox_id string:${wid}_${term_id};
+        chbox_id python:view.cleanup(chbox_id);"
+        tal:attributes="
+        value term_id;
+        selected python:term_id == default_index;
+        title term_description;"
+        tal:content="term_label" />
+    </tal:option>
+  </select>
+  <div class="field">
+    <input type="checkbox" class="faceted-noborder" tal:attributes="
+      id string:${wid}_reversed;
+      checked python:default_reverse and 'checked'"
+      name="reversed" value="reversed" />
+    <label tal:attributes="for string:${wid}_reversed"
+      i18n:translate="">Reverse</label>
+  </div>
+</tal:sorting>
+
+</form>
+</fieldset>
+</div>

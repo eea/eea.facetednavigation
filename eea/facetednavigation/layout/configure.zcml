@@ -1,0 +1,55 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="eea.facetednavigation">
+
+  <subscriber
+      for="p4a.subtyper.interfaces.ISubtypeAddedEvent"
+      handler=".events.subtype_added"
+  />
+
+  <subscriber
+      for="p4a.subtyper.interfaces.ISubtypeRemovedEvent"
+      handler=".events.subtype_removed"
+  />
+
+  <browser:menu
+    id="layout"
+    title="Layout"
+    class=".menu.LayoutMenu"
+    />
+
+  <!-- Plone 2.5 support -->
+  <configure zcml:condition="installed zope.app.annotation.tests">
+    <browser:subMenuItem
+      menu="contentmenu_extra"
+      submenu="layout"
+      title="Layout"
+      permission="zope.Public"
+      for="..interfaces.IFacetedNavigable"
+      />
+  </configure>
+
+  <!-- Plone 3.0+ support -->
+  <configure zcml:condition="installed zope.annotation">
+    <adapter for="..interfaces.IFacetedNavigable zope.interface.Interface"
+             name="layout"
+             factory=".submenu.LayoutSubMenuItem"
+             provides="plone.app.contentmenu.interfaces.IContentMenuItem" />
+  </configure>
+
+  <browser:page
+    name="faceted_layout"
+    for="..interfaces.IFacetedNavigable"
+    permission="cmf.ModifyPortalContent"
+    class=".menu.LayoutMenuHandler"
+    allowed_interface=".menu.ILayoutMenuHandler"
+    />
+
+  <adapter
+    factory=".layout.FacetedLayout"
+    for="..interfaces.IPossibleFacetedNavigable"
+    />
+
+</configure>

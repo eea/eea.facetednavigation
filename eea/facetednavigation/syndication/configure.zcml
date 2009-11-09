@@ -1,0 +1,35 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="eea.facetednavigation">
+
+<configure zcml:condition="installed Products.basesyndication">
+<configure zcml:condition="installed Products.fatsyndication">
+
+  <adapter factory=".feed.FacetedFeedSource" />
+  <adapter
+    factory=".feed.FacetedFeed"
+    provides="Products.basesyndication.interfaces.IFeed"
+    />
+
+  <!-- skos syndication -->
+  <browser:page
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    name="skos_syndication"
+    class=".skos.SKOS"
+    allowed_attributes="concepts"
+    permission="zope.Public"
+    />
+
+  <browser:menuItem
+    for="..interfaces.IFacetedNavigable"
+    menu="object"
+    title="Syndication"
+    action="synPropertiesForm"
+    permission="cmf.ModifyPortalContent"
+    />
+
+</configure>
+</configure>
+</configure>

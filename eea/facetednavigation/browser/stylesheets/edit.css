@@ -1,0 +1,227 @@
+/* jquery ui overrides
+====================== */
+.ui-widget-header:hover {
+  cursor: move;
+}
+
+.ui-sortable-helper {
+  width: 20em ! important;
+}
+
+.ui-dialog {
+  width: 50em ! important;
+}
+
+/* Archetypes
+============= */
+.formHelp {
+  display: block;
+}
+
+#archetypes-fieldname-title input{
+  width: auto;
+}
+
+#archetypes-fieldname-vocabulary select {
+  width: 25em;
+}
+
+/* Common
+========= */
+.faceted-results {
+  border: 1px dotted green;
+}
+
+dd {
+  margin-left: 0px;
+  padding-bottom: 1em;
+}
+
+table.listing {
+  width: 100%;
+}
+
+/* Loading
+========== */
+.faceted_loading {
+  text-align: center;
+}
+
+.faceted-loading-overlay {
+  background: none ! important;
+  border: none ! important;
+  width: 120px ! important;
+}
+
+.faceted-loading-overlay .ui-dialog-titlebar {
+  display: none ! important;
+}
+
+.faceted-loading-overlay .ui-resizable-handle {
+  display: none ! important;
+}
+
+/* Widgets
+========== */
+.faceted-widget legend {
+  width: 100%;
+}
+
+.ui-widget-header {
+  background: #CDE2A7;
+  margin-bottom: 1em;
+  margin-top: -0.5em;
+  margin-right: -0.5em;
+  margin-left: -0.5em;
+  text-align: left;
+  padding-left: 0.5em;
+  padding-bottom: 0.3em;
+}
+
+div.faceted-widget-edit ul.ui-widget-header {
+  background: #FFFFFF;
+  border-color: #CCCCCC;
+  border-style: none none solid;
+  border-width: medium medium 1px;
+  margin-left: -6px;
+}
+
+.faceted-widget .ui-widget-header {
+  margin-top: -1em;
+}
+
+.faceted-widget-hidden div.ui-widget-header {
+  background: #eee ! important;
+}
+
+.faceted-widget-hidden fieldset {
+  border: 1px solid #ccc;
+}
+
+#faceted-edit-widgets-ajax {
+  text-align: right;
+  clear: both;
+  margin-top: 1em;
+}
+
+#faceted-page-title {
+  padding-right: 0px;
+}
+
+/* Areas
+*/
+#center-content-area {
+  margin: 0 25em 0 25em;
+}
+
+/* Columns
+========== */
+.faceted-column {
+  border-color: green;
+  border-style: dotted;
+  border-width: 1px;
+}
+
+.faceted-empty-column {
+  font-size: 200%;
+  opacity: 0.8;
+  color: #CDE2A7;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+/* Top
+*/
+#faceted-top-column {
+  background: transparent url(../../++resource++faceted_images/top-widgets.png) no-repeat;
+  background-position: center top;
+  border-width: 0px 1px 1px 1px;
+  padding-left': 2px;
+}
+
+/* Left
+*/
+#faceted-left-column {
+  background: transparent url(../../++resource++faceted_images/left-widgets.png) no-repeat;
+  background-position: center top;
+}
+
+/* Right
+*/
+#faceted-right-column {
+  background: transparent url(../../++resource++faceted_images/right-widgets.png) no-repeat;
+  background-position: center top;
+}
+
+/* Center top
+*/
+#faceted-center-column {
+  background: transparent url(../../++resource++faceted_images/center-widgets.png) no-repeat;
+  background-position: center top;
+}
+
+/* Center bottom
+*/
+#faceted-bottomcenter-column {
+  background: transparent url(../../++resource++faceted_images/bottomcenter-widgets.png) no-repeat;
+  background-position: center top;
+}
+
+/* Bottom
+*/
+#faceted-bottom-column {
+  background: transparent url(../../++resource++faceted_images/bottom-widgets.png) no-repeat;
+  background-position: center top;
+  clear: both;
+}
+
+/* Sections
+=========== */
+
+/* Default
+*/
+.faceted-default-widgets {
+}
+
+/* Advanced
+*/
+.faceted-advanced-widgets {
+}
+
+/* Tabs
+*/
+.faceted-section-tabs {
+  margin-top: 1em;
+  padding: 0px;
+  border-bottom: 1px dotted green;
+}
+
+.faceted-section-tabs .ui-tabs-nav {
+  padding: 0px;
+}
+
+.faceted-section-tabs ul li a {
+  border-bottom: 0px ! important;
+}
+
+.faceted-section-tabs .ui-state-highlight {
+  height: 2em ! important;
+  border: none ! important;
+}
+
+/* Buttons
+========== */
+
+.faceted-add-button {
+  padding: 1em;
+}
+
+.faceted-add-button span {
+  border-color: #95b229;
+  border-style: solid;
+  border-width: 1px 2px 2px 1px;
+}
+
+.faceted-add-button .ui-icon {
+  background-image: url(../../++resource++faceted_images/ui-icons_222222_256x240-green.png) ! important;
+}

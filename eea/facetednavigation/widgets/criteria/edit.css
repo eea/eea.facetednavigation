@@ -1,0 +1,31 @@
+.faceted-criteria {
+  text-align: left;
+}
+
+.faceted-criteria a {
+  color: #95B229 !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.faceted-criteria a:visited {
+  color: #95B229 !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.faceted-criteria span {
+  padding-left: 0.2em;
+  padding-right: 0.5em;
+}
+
+.faceted-criteria dt{
+  font-weight: bold;
+}
+.faceted-criteria dd{
+  margin-left: 1.5em;
+  font-weight: normal;
+}
+
+.faceted-criteria-reset {
+}

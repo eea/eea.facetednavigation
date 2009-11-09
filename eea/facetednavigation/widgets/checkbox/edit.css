@@ -1,0 +1,25 @@
+.widget-fieldset {
+}
+
+.widget-fieldset ul {
+  margin: 0px;
+  list-style: none;
+}
+
+.widget-fieldset ul li input {
+  clear: both;
+  float: left;
+}
+
+.widget-fieldset ul li label {
+  font-weight: normal;
+  padding-left: 0.5em;
+}
+
+.faceted-checkbox-more {
+  text-align: right;
+}
+
+.faceted-checkbox-less {
+  text-align: right;
+}
