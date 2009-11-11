@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.3 (Unreleased)
+----------------
+
+ * Fixed document actions position too high #2792. [thuliper]
+
 1.2 (2009-11-09)
 ----------------
 
