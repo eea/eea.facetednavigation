@@ -34,6 +34,7 @@ FacetedExpand.ExpandColapse = function(wid, container){
     hideitems.hide();
     less.hide();
     more.show();
+    scroll(0, 0);
     return false;
   });
 

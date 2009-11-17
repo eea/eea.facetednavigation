@@ -4,7 +4,8 @@ Changelog
 1.3 (Unreleased)
 ----------------
 
- * Fixed document actions position too high #2792. [thuliper]
+ * #2792 Fixed document actions position too high. [thuliper]
+ * #2799 Scroll window to top when Less button is clicked. [voineali]
 
 1.2 (2009-11-09)
 ----------------
