@@ -1,9 +1,12 @@
 from setuptools import setup, find_packages
 import os
+from os.path import join
 
-version = '1.3 svn'
+NAME = 'eea.facetednavigation'
+PATH = NAME.split('.') + ['version.txt']
+version = open(join(*PATH)).read().strip()
 
-setup(name='eea.facetednavigation',
+setup(name=NAME,
       version=version,
       description="EEA Faced navigation",
       long_description=open("README.txt").read() + "\n" +
