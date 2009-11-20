@@ -54,6 +54,7 @@ class TagsCloudCounter(BrowserView):
         for item in res:
             yield item
 
+    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
     def __call__(self, **kwargs):
         if self.request:
             kwargs.update(self.request.form)

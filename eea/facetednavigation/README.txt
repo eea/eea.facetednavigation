@@ -64,6 +64,8 @@ EEA Faceted Navigation
 
       - "lovely.memcached", http://pypi.python.org/pypi/lovely.memcached
 
+      - 'eea.cache', http://eggrepo.eea.europa.eu/simple
+
     * Extended functionality
 
       - "eea.faceted.tool", http://eggrepo.eea.europa.eu/simple

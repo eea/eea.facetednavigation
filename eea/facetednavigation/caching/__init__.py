@@ -1,7 +1,7 @@
 """ Caching module
 """
 try:
-    from plone.memoize.ram import cache as ramcache
+    from eea.cache import cache as ramcache
     from lovely.memcached.event import InvalidateCacheEvent
 except ImportError:
     # Fail quiet if required cache packages are not installed in order to use
