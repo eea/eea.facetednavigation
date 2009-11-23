@@ -129,9 +129,9 @@ class FacetedCriterionHandler(FacetedBasicHandler):
             update[prop] = new_value
 
         if update:
+            criteria.edit(cid, **update)
             if widget.hidden or 'hidden' in update.keys():
                 notify(FacetedGlobalSettingsChangedEvent(self.context))
-            criteria.edit(cid, **update)
 
         return self._redirect('Changes saved')
 

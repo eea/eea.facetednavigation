@@ -9,6 +9,13 @@ Faceted.AlphabeticalWidget = function(wid){
   this.letters = jQuery('#' + wid + ' span');
   this.selected = [];
 
+  // Faceted version
+  this.version = '';
+  var version = jQuery('#faceted-version');
+  if(version){
+    this.version = version.text();
+  }
+
   // Set default value
   var selected = jQuery('.faceted_letter_selected');
   if(selected.length){
@@ -151,11 +158,11 @@ Faceted.AlphabeticalWidget.prototype = {
   },
 
   count: function(){
-    var query = {};
-    jQuery.each(Faceted.Query, function(key){
-      query[key] = Faceted.Query[key];
-    });
+    var query = jQuery.extend(true, {}, Faceted.Query);
     query.cid = this.wid;
+    if(this.version){
+      query.version = this.version;
+    }
 
     var context = this;
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});

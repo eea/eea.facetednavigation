@@ -25,6 +25,9 @@ from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
 # Language
 from eea.facetednavigation.indexes.language.interfaces import ILanguageWidgetAdapter
 
+# Versioning
+from eea.facetednavigation.versions.interfaces import IFacetedVersion
+
 # Wrapper
 from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
 

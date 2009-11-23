@@ -6,6 +6,14 @@ Faceted.TagsCloudWidget = function(wid){
   this.tags = jQuery('li', this.widget);
   this.faceted_count = this.widget.hasClass('faceted-count');
   this.selected = [];
+
+  // Faceted version
+  this.version = '';
+  var version = jQuery('#faceted-version');
+  if(version){
+    this.version = version.text();
+  }
+
   this.config = {};
   this.initialize();
 
@@ -188,11 +196,11 @@ Faceted.TagsCloudWidget.prototype = {
   },
 
   count: function(){
-    var query = {};
-    jQuery.each(Faceted.Query, function(key){
-      query[key] = Faceted.Query[key];
-    });
+    var query = jQuery.extend(true, {}, Faceted.Query);
     query.cid = this.wid;
+    if(this.version){
+      query.version = this.version;
+    }
     var context = this;
 
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});

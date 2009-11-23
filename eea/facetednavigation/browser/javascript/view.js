@@ -82,6 +82,13 @@ Faceted.Form = {
     // Handle form submit event
     this.area = jQuery('#faceted-results');
 
+    // Faceted version
+    this.version = '';
+    var version = jQuery('#faceted-version', this.form);
+    if(version){
+      this.version = version.text();
+    }
+
     // Handle errors
     this.area.ajaxError(function(event, request, settings){
       jQuery(this).html('<h3>This site encountered an error trying to fulfill your request</h3><p>If the error persists please contact the site maintainer. Thank you for your patience.</p>');
@@ -143,7 +150,12 @@ Faceted.Form = {
       var loading = '<div class="faceted_loading"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
       context.area.html(loading);
       context.area.fadeIn('slow');
-      jQuery.get('@@faceted_query', Faceted.Query, function(data){
+
+      var query = jQuery.extend(true, {}, Faceted.Query);
+      if(context.version){
+        query.version = context.version;
+      }
+      jQuery.get('@@faceted_query', query, function(data){
         context.area.fadeOut('fast', function(){
           context.area.html(data);
           context.area.fadeIn('slow');
@@ -206,9 +218,10 @@ Faceted.URLHandler = {
   },
 
   ie_hash_changed: function(){
+    var ie_hash = '';
     try{
       var history = jQuery('#faceted-ie-history-hash', this.iframe[0].contentWindow.document);
-      var ie_hash = history.text();
+      ie_hash = history.text();
     }catch(exception){
       // IE 7 history not initialized yet, do nothing.
       return;

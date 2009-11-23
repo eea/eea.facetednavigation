@@ -1,0 +1,93 @@
+Faceted versions
+================
+in order to invalidate proxy cache (squid, etc) a versioning was implemented
+in order to have different URLs if when hidden faceted criteria is modified.
+
+Set up
+------
+
+Setup sandbox
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(fid)
+    >>> sandbox.setLanguage('en')
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+
+Let's cleanup default criteria to avoid surprises
+
+    >>> from eea.facetednavigation.interfaces import ICriteria
+    >>> cids = ICriteria(sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Add some criteria
+
+    >>> from zope.component import getMultiAdapter
+    >>> request = sandbox.REQUEST
+    >>> handler = getMultiAdapter((sandbox, request), name=u'faceted_configure')
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...   wtype='text', wposition='left', title='Text widget',
+    ...   index='Title', default='water')
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...   wtype='radio', wposition='right', title='Radio widget',
+    ...   index='portal_type', catalog='portal_catalog', default='Folder')
+
+Versions
+--------
+
+If there is no hidden widget there is no version
+
+    >>> version = getMultiAdapter((sandbox, request), name=u'faceted_version')
+    >>> version.key
+    ''
+
+Let's hide/unhide widgets
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c1', hidden=1)
+    >>> version.key
+    '89f6018fbb8f5926acea2139621744cc'
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c0', hidden=1)
+    >>> version.key
+    '7cf3781dbb4527d35ecf23fac66922bc'
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c0', hidden=False)
+    >>> version.key
+    '89f6018fbb8f5926acea2139621744cc'
+
+Version key is computed by widget visibility and default value. So let's check
+version remain the same if we change other widget properties:
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c1', title='Another title')
+    >>> version.key
+    '89f6018fbb8f5926acea2139621744cc'
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c1', catalog='')
+    >>> version.key
+    '89f6018fbb8f5926acea2139621744cc'
+
+Ok, now let's change the default value
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c1', default='Document')
+    >>> version.key
+    '107f7c650d8e638bba3f3ef5120379fd'
+
+Also, if there is no default value for hidden widgets there is no version
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c1', default='')
+    >>> version.key
+    ''
+
+Same for 'all' value for default
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c1', default='all')
+    >>> version.key
+    ''

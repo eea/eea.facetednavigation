@@ -9,6 +9,13 @@ Faceted.SelectWidget = function(wid){
   this.select = jQuery('#' + this.wid);
   this.selected = [];
 
+  // Faceted version
+  this.version = '';
+  var version = jQuery('#faceted-version');
+  if(version){
+    this.version = version.text();
+  }
+
   // Handle change
   jQuery('form', this.widget).submit(function(){
     return false;
@@ -152,11 +159,11 @@ Faceted.SelectWidget.prototype = {
   },
 
   count: function(){
-    var query = {};
-    jQuery.each(Faceted.Query, function(key){
-      query[key] = Faceted.Query[key];
-    });
+    var query = jQuery.extend(true, {}, Faceted.Query);
     query.cid = this.wid;
+    if(this.version){
+      query.version = this.version;
+    }
 
     var context = this;
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});

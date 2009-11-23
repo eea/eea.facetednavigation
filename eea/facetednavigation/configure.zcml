@@ -32,5 +32,6 @@
   <include package=".syndication" />
   <include package=".widgets" />
   <include package=".indexes" />
+  <include package=".versions" />
 
 </configure>

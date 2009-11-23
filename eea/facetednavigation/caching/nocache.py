@@ -1,6 +1,6 @@
 """
 """
-def ramcache(get_key):
+def ramcache(get_key, dependencies=None):
     def decorator(method):
         def replacement(*args, **kwargs):
             return method(*args, **kwargs)
