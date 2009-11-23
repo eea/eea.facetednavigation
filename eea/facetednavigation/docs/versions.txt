@@ -1,7 +1,21 @@
-Faceted versions
-================
-in order to invalidate proxy cache (squid, etc) a versioning was implemented
-in order to have different URLs if when hidden faceted criteria is modified.
+Faceted versions (invalidate squid cache)
+=========================================
+As there is practical impossible to generate all combinations of parameters
+for faceted_query, faceted_counter and tagscloud_counter and you can not
+invalidate squid cache by regular expressions a version control system was
+implemented. This way a version string like an eTag is added to query.
+Squid or any other proxy cache system will see this as a new request and will
+return it from memcache or zope and then will cache it with the new key.
+This is invisible for end users and even for managers.
+
+Other advantage of this solution is that it is ''proxy cache system'' independent
+and, let's say that, by mistake, you edit a hidden widget, for example you hit
+'''Unhide''' button. In the '''Purging''' implementation you would lose all
+squid cache just because your mouse jumps from time to time :).
+With this versioning system, you can just '''Hide''' the widget back and
+everyting is like before. Why? Because this version eTag is generated from
+hidden widgets default values, so you'll always be able to return to a
+previous version without loosing proxy cache.
 
 Set up
 ------

@@ -1,1 +1,2 @@
-# Module
+""" See ../docs/criteria.txt
+"""
