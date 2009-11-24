@@ -23,6 +23,29 @@ Faceted.Widgets = {};
 */
 Faceted.Query = {};
 
+/* Return minimal and sorted query
+*/
+Faceted.SortedQuery = function(query){
+  if(!query){
+    query = Faceted.Query;
+  }
+
+  var keys = [];
+  jQuery.each(query, function(key){
+    if(!this || this == 'all'){
+      return;
+    }
+    keys.push(key);
+  });
+
+  keys.sort();
+  var res = {};
+  jQuery.each(keys, function(index){
+    res[this] = query[this];
+  });
+  return res;
+};
+
 Faceted.Window = {
   initialize: function(){
     this.width = jQuery(window).width();
@@ -151,7 +174,7 @@ Faceted.Form = {
       context.area.html(loading);
       context.area.fadeIn('slow');
 
-      var query = jQuery.extend(true, {}, Faceted.Query);
+      var query = Faceted.SortedQuery();
       if(context.version){
         query.version = context.version;
       }

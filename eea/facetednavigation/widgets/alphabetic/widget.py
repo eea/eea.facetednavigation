@@ -92,8 +92,9 @@ class Widget(CountableWidget):
                 yield brain
                 continue
 
-            if letter.lower() == u'all':
+            if letter.lower() in [u'all', 'all']:
                 yield brain
+                continue
 
             xval = getattr(brain, index, None)
             if xval is None:

@@ -166,7 +166,7 @@ Faceted.RadioWidget.prototype = {
   },
 
   count: function(){
-    var query = jQuery.extend(true, {}, Faceted.Query);
+    var query = Faceted.SortedQuery();
     query.cid = this.wid;
     if(this.version){
       query.version = this.version;

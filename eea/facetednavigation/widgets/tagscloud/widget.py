@@ -247,7 +247,7 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-        if value.lower() == 'all':
+        if value.lower() in ['all', u'all']:
             return query
 
         query[index] = value
