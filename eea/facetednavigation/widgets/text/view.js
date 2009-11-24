@@ -9,13 +9,10 @@ Faceted.TextWidget = function(wid){
   this.button = jQuery('input[type=submit]', this.widget);
 
   // Handle text change
-  jQuery('form', this.widget).submit(function(){
-    return false;
-  });
-
   var js_widget = this;
-  this.button.click(function(evt){
-    js_widget.text_change(this, evt);
+  jQuery('form', this.widget).submit(function(){
+    js_widget.text_change(js_widget.button);
+    return false;
   });
 
   // Default value
@@ -149,7 +146,7 @@ Faceted.TextWidget.prototype = {
     jQuery('#' + this.wid + '_place_current', this.widget).attr('checked', true);
     var element = jQuery('input[type=text]', this.widget);
     var current = Faceted.Query[this.wid];
-    var index = current.indexOf(value);
+    var index = jQuery.inArray(value, current);
     if(index == -1){
       return;
     }

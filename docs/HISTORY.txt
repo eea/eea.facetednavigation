@@ -8,6 +8,7 @@ Changelog
   to dynamically set and invalidate memcache dependencies. [voineali]
 * #2783 Implemented a version control system for faceted configuration in order to
   invalidate proxy cache systems like squid by requesting a new URL. [voineali]
+* #2825 Fix IE submit form when return is pressed in search field [voineali]
 
 1.3 (2009-11-18)
 ----------------
