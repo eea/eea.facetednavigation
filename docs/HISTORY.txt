@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4 (Unreleased)
+1.4 (2009-11-27)
 ----------------
 
 * #2801 Memcache tagscloud_counter results. Also use eea.cache in order
