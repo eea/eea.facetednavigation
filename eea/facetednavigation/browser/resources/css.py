@@ -100,8 +100,12 @@ class ViewCSS(CSS):
         res = self.helper_css
         res.extend(self.css_libs)
         info = getUtility(IWidgetsInfo).widgets
-        res.extend(widget.view_css for widget in info.values())
-
+        for widget in info.values():
+            view_css = widget.view_css
+            if isinstance(view_css, tuple):
+                res.extend(view_css)
+            else:
+                res.append(view_css)
         return res
 
     def __call__(self, *args, **kwargs):
@@ -144,8 +148,12 @@ class EditCSS(CSS):
         res.extend(self.css_libs)
 
         info = getUtility(IWidgetsInfo).widgets
-        res.extend(widget.edit_css for widget in info.values())
-
+        for widget in info.values():
+            edit_css = widget.edit_css
+            if isinstance(edit_css, tuple):
+                res.extend(edit_css)
+            else:
+                res.append(edit_css)
         return res
 
     def __call__(self, *args, **kwargs):

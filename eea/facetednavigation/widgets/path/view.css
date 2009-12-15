@@ -1,0 +1,11 @@
+.faceted-path-widget input {
+  width: 99%;
+}
+
+.tree > .ltr > li {
+  display: block ! important;
+}
+
+.tree li a {
+  border: none ! important;
+}

@@ -1,0 +1,20 @@
+<div class="faceted-widget faceted-path-widget" tal:define="
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default python:view.default or '';
+  css string:faceted-widget faceted-path-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+  <legend tal:define="title python:view.data.get('title', '')" tal:content="
+    python:view.translate(title)" i18n:translate="">Widget title</legend>
+  <form action="." method="get">
+  <input type="text" tal:attributes="
+    name string:${wid};
+    id string:${wid};
+    value python:default;
+  "/>
+  </form>
+</fieldset>
+</div>

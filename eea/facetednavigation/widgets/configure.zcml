@@ -12,6 +12,7 @@
   <include package=".sorting" />
   <include package=".tagscloud" />
   <include package=".text" />
+  <include package=".path" />
 
   <utility provides=".interfaces.IWidgetsInfo"
     factory=".widgets.WidgetsInfo" />

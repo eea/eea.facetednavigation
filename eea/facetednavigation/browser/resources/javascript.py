@@ -109,8 +109,12 @@ class ViewJavascript(Javascript):
         res = self.helper_js
         res.extend(self.js_libs)
         info = getUtility(IWidgetsInfo).widgets
-        res.extend(widget.view_js for widget in info.values())
-
+        for widget in info.values():
+            view_js = widget.view_js
+            if isinstance(view_js, tuple):
+                res.extend(view_js)
+            else:
+                res.append(view_js)
         return res
 
     def __call__(self, *args, **kwargs):
@@ -174,8 +178,12 @@ class EditJavascript(Javascript):
         res.extend(self.js_libs)
 
         info = getUtility(IWidgetsInfo).widgets
-        res.extend(widget.edit_js for widget in info.values())
-
+        for widget in info.values():
+            edit_js = widget.edit_js
+            if isinstance(edit_js, tuple):
+                res.extend(edit_js)
+            else:
+                res.append(edit_js)
         return res
 
     def __call__(self, *args, **kwargs):
