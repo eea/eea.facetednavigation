@@ -1,5 +1,8 @@
 <div class="faceted-widget faceted-path-widget" tal:define="
   wid python:view.data.getId();
+  site_url python:context.portal_url();
+  theme python:view.data.get('theme', 'green');
+  theme_url string:${site_url}/++resource++jquery.jstree/themes/${theme}/style.css;
   hidden python:view.hidden;
   default python:view.default or '';
   css string:faceted-widget faceted-path-widget;
@@ -10,11 +13,15 @@
   <legend tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">Widget title</legend>
   <form action="." method="get">
-  <input type="text" tal:attributes="
-    name string:${wid};
-    id string:${wid};
-    value python:default;
-  "/>
+    <input type="text" tal:attributes="
+      name string:${wid};
+      id string:${wid};
+      value python:default;" />
+    <span style="display: none"
+      tal:attributes="
+      id string:${wid}-theme;
+      title theme;"
+      tal:content="theme_url" />
   </form>
 </fieldset>
 </div>

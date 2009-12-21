@@ -8,27 +8,29 @@ FacetedTree.JsTree = function(wid, container){
   this.input = jQuery('#' + wid, container);
   this.input.attr('readonly', 'readonly');
 
+  this.theme = jQuery('#' + wid + '-theme', container);
+
   this.area = jQuery('<div>');
   this.area.addClass('tree');
+  this.area.text('Loading...');
   this.area.hide();
   this.area.width(this.input.width());
-  //this.area.height(400);
   this.input.after(this.area);
 
   var js_tree = this;
   this.area.tree({
     ui: {
-      theme_name: 'apple',
-      theme_path: '/++resource++jquery.jstree/themes/apple/style.css'
+      theme_name: js_tree.theme.attr('title'),
+      theme_path: js_tree.theme.text()
     },
 
     types   : {
       "default" : {
-        clickable       : true,
-        renameable      : false,
-        deletable       : false,
-        creatable       : false,
-        draggable       : false,
+        clickable  : true,
+        renameable : false,
+        deletable  : false,
+        creatable  : false,
+        draggable  : false,
       }
     },
 
@@ -57,10 +59,17 @@ FacetedTree.JsTree = function(wid, container){
   this.input.click(function(evt){
     js_tree.show();
   });
+
+  jQuery(document).keydown(function(e){
+    if(e.keyCode == 27){
+      js_tree.hide();
+    }
+  });
 };
 
 FacetedTree.JsTree.prototype = {
   show: function(){
+    var js_tree = this;
     this.area.show();
   },
 
@@ -73,9 +82,11 @@ FacetedTree.JsTree.prototype = {
     node = jQuery(node);
     var value = node.attr('path');
     if(this.input.val() == value){
-      return;
+      value = '';
     }
     this.input.val(value);
-    jQuery(FacetedTree.Events).trigger(FacetedTree.Events.CHANGED, {path: value})
+    jQuery(FacetedTree.Events).trigger(
+      FacetedTree.Events.CHANGED, {path: value}
+    );
   }
 };

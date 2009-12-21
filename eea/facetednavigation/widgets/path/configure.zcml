@@ -34,6 +34,15 @@
     for="eea.facetednavigation.interfaces.IFacetedNavigable"
     name="faceted.path.tree.json"
     class=".tree.FacetedTree"
+    attribute="json_tree"
+    permission="zope2.View"
+   />
+
+  <browser:page
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    name="faceted.path.breadcrumbs.json"
+    class=".tree.FacetedTree"
+    attribute="json_breadcrumbs"
     permission="zope2.View"
    />
 

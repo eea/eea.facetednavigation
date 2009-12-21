@@ -46,6 +46,19 @@ EditSchema = Schema((
             i18n_domain="eea.facetednavigation"
         )
     ),
+    StringField('theme',
+        schemata="display",
+        default='green',
+        vocabulary_factory='eea.faceted.vocabularies.JsTreeThemes',
+        widget=SelectionWidget(
+            format='select',
+            label='Navigation tree theme',
+            label_msgid='faceted_criteria_path_theme',
+            description='Theme to be used with this widget',
+            description_msgid='help_faceted_criteria_path_theme',
+            i18n_domain="eea.facetednavigation"
+        )
+    ),
 ))
 
 class Widget(AbstractWidget):

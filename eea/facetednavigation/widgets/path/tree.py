@@ -6,6 +6,7 @@ from zope.component import queryAdapter
 from Products.Five.browser import BrowserView
 from Products.CMFPlone.browser.navtree import buildFolderTree
 from Products.CMFPlone.browser.navtree import DefaultNavtreeStrategy
+from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.interfaces import ICriteria
 
@@ -17,6 +18,8 @@ class FacetedTree(BrowserView):
         self.rootPath = ''
 
     def navigationTreeRootPath(self):
+        """ Used by NavigationStrategy
+        """
         return self.rootPath
 
     def get_root(self, cid):
@@ -31,7 +34,7 @@ class FacetedTree(BrowserView):
         widget = widget(self.context, self.request, criterion)
         return widget.root[:]
 
-    def query(self, **kwargs):
+    def tree(self, **kwargs):
         """ Get nodes
         """
         cid = kwargs.get('cid', None)
@@ -92,10 +95,60 @@ class FacetedTree(BrowserView):
             })
         return nodes
 
-    def __call__(self, **kwargs):
+    def breadcrumbs(self, **kwargs):
+        """ Create custom breadcrumbs
+        """
+        cid = kwargs.get('cid', None)
+        if not cid:
+            return []
+
+        root = self.get_root(cid)
+        if not root:
+            return []
+
+        path = kwargs.get('path', '').strip().strip('/')
+        if path:
+            path = path.split('/')
+        else:
+            path = []
+        if not path:
+            return []
+
+        ctool = getToolByName(self.context, 'portal_catalog')
+        res = []
+        url = root[:]
+        breadcrumb_path = ['']
+        for breadcrumb in path:
+            url.append(breadcrumb)
+            breadcrumb_path.append(breadcrumb)
+
+            breadcrumb_url = '/'.join(url)
+            query = {'query': breadcrumb_url, 'depth': 0}
+            brains = ctool(path=query)
+            if not brains:
+                continue
+            brain = brains[0]
+            res.append({
+                'url': '/'.join(breadcrumb_path),
+                'title': brain.Title
+            })
+        return res
+    #
+    # JSON
+    #
+    def json_tree(self, **kwargs):
+        """ Get navigation tree as json
+        """
         if self.request:
             kwargs.update(self.request.form)
-        return json.dumps(self.query(**kwargs))
+        return json.dumps(self.tree(**kwargs))
+
+    def json_breadcrumbs(self, **kwargs):
+        """ Get breadcrumbs as json
+        """
+        if self.request:
+            kwargs.update(self.request.form)
+        return json.dumps(self.breadcrumbs(**kwargs))
 
 class FacetedTreeStrategy(DefaultNavtreeStrategy):
     """ Custom strategy
