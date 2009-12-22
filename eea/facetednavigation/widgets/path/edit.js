@@ -12,7 +12,7 @@ FacetedEdit.PathWidget = function(wid){
   });
 
   // Navigation Tree
-  var tree = new FacetedTree.JsTree(this.wid, this.widget);
+  var tree = new FacetedTree.JsTree(this.wid, this.widget, 'edit');
   jQuery(FacetedTree.Events).bind(FacetedTree.Events.CHANGED, function(data){
     js_widget.set_default(js_widget.input);
   });

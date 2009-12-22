@@ -1,0 +1,264 @@
+Tree module
+===========
+  @view faceted.path.tree.json
+  @view faceted.path.breadcrumbs.json
+
+This module defines browser views to be used with AJAX interface.
+
+There are some rules that this widget should follow:
+ - In order to not mess up faceted query in edit mode root and default value
+   should by filled up from canonical language (no language independent).
+ - In view mode root should be language dependent if it has a translation for
+   current language or, it should return nothing if there is no translation
+   for root.
+
+Set up
+------
+
+  Imports
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+  Add english folder
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'english')
+    >>> english = portal._getOb(fid)
+    >>> english.processForm(values={'title': 'English'}, data=1, metadata=1)
+    >>> english.setLanguage('en')
+
+  Add translations
+
+    >>> _ = english.addTranslation('fr')
+    >>> french = english.getTranslation('fr')
+    >>> french.processForm(values={'title': 'French'}, data=1, metadata=1)
+    >>> french.absolute_url(1)
+    'plone/french'
+
+    >>> _ = english.addTranslation('it')
+    >>> italian = english.getTranslation('it')
+    >>> italian.processForm(values={'title': 'Italian'}, data=1, metadata=1)
+    >>> italian.absolute_url(1)
+    'plone/italian'
+
+  Make them faceted navigable
+
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(english, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> request = english.REQUEST
+    >>> sync = getMultiAdapter((english, request), name=u'faceted_sync_translations')
+    >>> _ = sync()
+
+  Cleanup default widgets to avoid surprises
+
+    >>> criteria = ICriteria(english)
+    >>> cids = criteria.keys()
+    >>> for cid in cids:
+    ...     criteria.delete(cid)
+    >>> criteria.keys()
+    []
+
+  Add some children
+
+    >>> fid = english.invokeFactory('Folder', 'english-child')
+    >>> child = english._getOb(fid)
+    >>> child.processForm(values={'title': 'English child'}, data=1, metadata=1)
+    >>> child.setLanguage('en')
+    >>> fid = child.invokeFactory('Folder', 'english-nephew')
+    >>> nephew = child._getOb(fid)
+    >>> nephew.processForm(values={'title': 'English nephew'}, data=1, metadata=1)
+    >>> nephew.setLanguage('en')
+
+  Add french translations but no Italian
+
+    >>> _ = child.addTranslation('fr')
+    >>> french_child = child.getTranslation('fr')
+    >>> french_child.processForm(values={'title': 'French child'}, data=1, metadata=1)
+    >>> french_child.absolute_url(1)
+    'plone/french/french-child'
+
+    >>> _ = nephew.addTranslation('fr')
+    >>> french_nephew = nephew.getTranslation('fr')
+    >>> french_nephew.processForm(values={'title': 'French nephew'}, data=1, metadata=1)
+    >>> french_nephew.absolute_url(1)
+    'plone/french/french-child/french-nephew'
+
+  Now that our sandbox is set up, let's see how it works
+
+    >>> handler = getMultiAdapter((english, request), name=u'faceted_configure')
+
+
+@@faceted.path.tree.json
+------------------------
+  @param cid = faceted path widget id (criterion id)
+  @param path = search in path
+  @param mode = tell if you are in view or edit mode
+  @return JsTree JSON object. See http://jstree.com/documentation#json
+
+  Used to display navigation tree in view and edit mode.
+
+    >>> tree_en = getMultiAdapter((english, request), name=u'faceted.path.tree.json')
+    >>> tree_fr = getMultiAdapter((french, request), name=u'faceted.path.tree.json')
+    >>> tree_it = getMultiAdapter((italian, request), name=u'faceted.path.tree.json')
+
+  Edit mode
+  ~~~~~~~~~
+  In edit mode all languages should return the same tree as it is used only to
+  set default value.
+
+    >>> _ = handler(addPropertiesWidget_button=True, wtype='path', hidden=True,
+    ...             index='path', root='/english/english-child', default='/english-nephew')
+
+  English
+    '[
+       {"attributes": {"path": "/english-child", "id": "c0-english-child"},
+         "state": "closed",
+         "data": {"title": "english-child"}
+       }
+    ]'
+
+    >>> tree_en(cid='c0', path='', mode='edit')
+    '[{..."path": "/english-nephew"...}]'
+
+  French
+    '[
+       {"attributes": {"path": "/english-child", "id": "c0-english-child"},
+         "state": "closed",
+         "data": {"title": "english-child"}
+       }
+    ]'
+
+    >>> tree_fr(cid='c0', path='', mode='edit')
+    '[{..."path": "/english-nephew"...}]'
+
+  Italian
+    '[
+       {"attributes": {"path": "/english-child", "id": "c0-english-child"},
+         "state": "closed",
+         "data": {"title": "english-child"}
+       }
+    ]'
+
+    >>> tree_it(cid='c0', path='', mode='edit')
+    '[{..."path": "/english-nephew"...}]'
+
+
+  View mode
+  ~~~~~~~~~
+
+  In view mode navigation tree is language dependent
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=0,
+    ...             root='/english', default='/english-child')
+
+    English
+      '[
+         {"attributes": {"path": "/english-child", "id": "c0-english-child"},
+           "state": "closed",
+           "data": {"title": "english-child"}
+         }
+      ]'
+    >>> tree_en(cid='c0', path='', mode='view')
+    '[{..."path": "/english-child"...}]'
+    >>> tree_en(cid='c0', path='/english-child', mode='view')
+    '[{..."path": "/english-child/english-nephew"...}]'
+
+
+
+  French
+    '[
+       {"attributes": {"path": "/french-child", "id": "c0-french-child"},
+         "state": "closed",
+         "data": {"title": "french-child"}
+       }
+    ]'
+
+    >>> tree_fr(cid='c0', path='', mode='view')
+    '[{..."path": "/french-child"...}]'
+    >>> tree_fr(cid='c0', path='/french-child', mode='view')
+    '[{..."path": "/french-child/french-nephew"...}]'
+
+  Italian has no children so return nothing
+    '[]'
+
+    >>> tree_it(cid='c0', path='', mode='view')
+    '[]'
+    >>> tree_it(cid='c0', path='/english-child', mode='view')
+    '[]'
+
+  Let's get deeper
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=0,
+    ...             root='/english/english-child', default='/english-nephew')
+
+  English
+    '[
+       {"attributes": {"path": "/english-nephew", "id": "c0-english-nephew"},
+         "state": "closed",
+         "data": {"title": "english-nephew"}
+       }
+    ]'
+    >>> tree_en(cid='c0', path='', mode='view')
+    '[{..."path": "/english-nephew"...}]'
+    >>> tree_en(cid='c0', path='/english-nephew', mode='view')
+    '[]'
+
+
+  French
+    '[
+       {"attributes": {"path": "/french-nephew", "id": "c0-french-nephew"},
+         "state": "closed",
+         "data": {"title": "french-nephew"}
+       }
+    ]'
+
+    >>> tree_fr(cid='c0', path='', mode='view')
+    '[{..."path": "/french-nephew"...}]'
+    >>> tree_fr(cid='c0', path='/french-nephew', mode='view')
+    '[]'
+
+
+  There is no root for Italian translation so return nothing
+    '[]'
+
+    >>> tree_it(cid='c0', path='', mode='view')
+    '[]'
+    >>> tree_it(cid='c0', path='/english-child', mode='view')
+    '[]'
+
+
+@@faceted.path.breadcrumbs.json
+-------------------------------
+  @param cid = faceted path widget id (criterion id)
+  @param path = search in path to be converted to breadcrumbs
+  @return a breadcrumbs JSON object like:
+  [
+    {'url': '/publications', 'title': 'Publications'},
+    {'url': '/publications/a-publication', 'title': 'A publication'},
+  ]
+
+  Used to display 'Current filters' in criteria widget. View only
+
+    >>> breadcrumbs_en = getMultiAdapter((english, request), name=u'faceted.path.breadcrumbs.json')
+    >>> breadcrumbs_fr = getMultiAdapter((french, request), name=u'faceted.path.breadcrumbs.json')
+    >>> breadcrumbs_it = getMultiAdapter((italian, request), name=u'faceted.path.breadcrumbs.json')
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=0,
+    ...             root='/english', default='/english-child')
+
+    English
+
+    >>> breadcrumbs_en(cid='c0', path='/english-child/english-nephew')
+    '[{"url": "/english-child", "title": "English child"}, {"url": "/english-child/english-nephew", "title": "English nephew"}]'
+
+    French
+
+    >>> breadcrumbs_fr(cid='c0', path='/french-child/french-nephew')
+    '[{"url": "/french-child", "title": "French child"}, {"url": "/french-child/french-nephew", "title": "French nephew"}]'
+
+    Italian
+    >>> breadcrumbs_it(cid='c0', path='/english-child/english-nephew')
+    '[]'

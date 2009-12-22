@@ -15,3 +15,8 @@
 .tree li a {
   border: none ! important;
 }
+
+.faceted-path-widget .faceted-errors{
+  color: red;
+  text-align: center;
+}

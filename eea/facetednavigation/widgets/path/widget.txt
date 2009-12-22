@@ -1,0 +1,225 @@
+Path widget
+===========
+  @param index = catalog index
+  @param default = value to fill in by default
+  @param root = the root folder to start navigation tree
+  @param theme = navigation tree color theme
+
+Faceted widget PathIndex. This widget is language dependent, so if you set:
+  root = /a-folder/english-folder
+  default = /english-child
+
+and then someone browse your site in French, she will see a widget with these values:
+  root = /a-folder/french-folder
+  default = /french-child
+
+If you set as root a folder that doesn't have a French translation then the root
+will fallback to English value. Same for default value:
+  root = /a-folder/english-folder
+  default = /english-child
+
+Imports
+-------
+
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+Set up
+------
+
+Add english folder
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'english')
+    >>> english = portal._getOb(fid)
+    >>> english.setLanguage('en')
+
+Add translations
+
+    >>> _ = english.addTranslation('fr')
+    >>> french = english.getTranslation('fr')
+
+    >>> _ = english.addTranslation('it')
+    >>> italian = english.getTranslation('it')
+
+Make them faceted navigable
+
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(english, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> request = english.REQUEST
+    >>> sync = getMultiAdapter((english, request), name=u'faceted_sync_translations')
+    >>> _ = sync()
+
+Cleanup default widgets to avoid surprises
+
+    >>> criteria = ICriteria(english)
+    >>> cids = criteria.keys()
+    >>> for cid in cids:
+    ...     criteria.delete(cid)
+    >>> criteria.keys()
+    []
+
+Add some children
+
+    >>> fid = english.invokeFactory('Folder', 'child')
+    >>> child = english._getOb(fid)
+    >>> fid = child.invokeFactory('Folder', 'newphew')
+    >>> nephew = child._getOb(fid)
+
+Add french translations but no Italian
+
+    >>> _ = child.addTranslation('fr')
+    >>> _ = nephew.addTranslation('fr')
+
+Now let's see how it works
+
+    >>> handler = getMultiAdapter((english, request), name=u'faceted_configure')
+
+1. No root and no default value set
+-----------------------------------
+If there is no root and no default value set then there should be no query
+
+    >>> _ = handler(addPropertiesWidget_button=True, wtype='path',
+    ...             index='path', root='', default='', hidden=True)
+    >>> criterion = criteria.get('c0')
+    >>> widget = criteria.widget(cid='c0')
+    >>> widget_en = widget(english, request, criterion)
+    >>> widget_fr = widget(french, request, criterion)
+    >>> widget_it = widget(italian, request, criterion)
+    >>> widget_en.query(form={})
+    {}
+
+As you can see provided form was returned unmodified. Now let's set our widget's
+root property.
+
+2. Root set but no default value
+--------------------------------
+Root is only for display, only default value will update query, and only if
+widget is hidden
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', root='english')
+    >>> form = widget_en.query(form={})
+
+Our form should be unchanged
+
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+
+But we can check the root property for widget
+
+    >>> widget_en.root
+    ['', 'plone', 'english']
+
+What if I am a French guy.
+
+    >>> form = widget_fr.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+    >>> widget_fr.root
+    ['', 'plone', 'english-fr']
+
+Now let's get deeper and see what happend if there is no translation for root
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', root='english/child')
+    >>> form = widget_en.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+    >>> widget_en.root
+    ['', 'plone', 'english', 'child']
+
+For italian it will fallback to english
+
+    >>> form = widget_it.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+    >>> widget_it.root
+    ['', 'plone', 'english', 'child']
+
+3. No root set and default value set
+------------------------------------
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0',
+    ...             root='', default='/english/child')
+
+    >>> form = widget_en.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    '/plone/english/child'
+
+Also check for French
+
+    >>> form = widget_fr.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    '/plone/english-fr/child'
+
+And, as there is no Italian translation for child
+
+    >>> form = widget_it.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    '/plone/english/child'
+
+Invalid default value set
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0',
+    ...             root='', default='/invalid-path')
+
+No query should be set
+
+    >>> form = widget_en.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+
+  French
+
+    >>> form = widget_fr.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+
+
+4. Root set and default value set
+---------------------------------
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0',
+    ...             root='/english/child', default='/newphew')
+
+  English
+
+    >>> form = widget_en.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    '/plone/english/child/newphew'
+
+  French
+
+    >>> form = widget_fr.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    '/plone/english-fr/child/newphew'
+
+  Italian
+
+    >>> form = widget_it.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    '/plone/english/child/newphew'
+
+Let's see what if we set root to an invalid folder
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0',
+    ...             root='/english/invalid-child', default='/newphew')
+
+  English
+
+    >>> form = widget_en.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+
+  French
+
+    >>> form = widget_fr.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'
+
+  Italian
+
+    >>> form = widget_it.query(form={})
+    >>> form.get('path', {}).get('query', 'NOT SET')
+    'NOT SET'

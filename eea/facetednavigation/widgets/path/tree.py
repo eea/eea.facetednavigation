@@ -17,12 +17,21 @@ class FacetedTree(BrowserView):
         super(FacetedTree, self).__init__(context, request)
         self.rootPath = ''
 
+    @property
+    def language(self):
+        if self.request:
+            lang = self.request.get('LANGUAGE', '')
+        getLanguage = getattr(self.context, 'getLanguage', None)
+        if getLanguage:
+            return getLanguage() or lang
+        return lang
+
     def navigationTreeRootPath(self):
         """ Used by NavigationStrategy
         """
         return self.rootPath
 
-    def get_root(self, cid):
+    def get_root(self, cid, mode='view'):
         """ Get root from faceted widget
         """
         criteria = queryAdapter(self.context, ICriteria)
@@ -32,7 +41,9 @@ class FacetedTree(BrowserView):
         criterion = criteria.get(cid)
         widget = criteria.widget(cid=cid)
         widget = widget(self.context, self.request, criterion)
-        return widget.root[:]
+        if mode == 'view':
+            return widget.root[:]
+        return widget.data_root[:]
 
     def tree(self, **kwargs):
         """ Get nodes
@@ -41,7 +52,8 @@ class FacetedTree(BrowserView):
         if not cid:
             return []
 
-        root = self.get_root(cid)
+        mode = kwargs.get('mode', 'view')
+        root = self.get_root(cid, mode)
         if not root:
             return []
 
@@ -57,17 +69,18 @@ class FacetedTree(BrowserView):
 
         query = {
             'path': {'query': url, 'depth': 2},
-            # TODO
-            #'portal_type': ['Folder'],
-            #'Language': 'en',
-            # 'review_state': 'published'
         }
+        language = self.language
+        if language and mode == 'view':
+            query['Language'] = language
 
         self.rootPath = url
-
         if isinstance(url, unicode):
             url = url.encode('utf-8')
-        obj = self.context.unrestrictedTraverse(url.strip('/'), self.context)
+        obj = self.context.unrestrictedTraverse(url.strip('/'), None)
+        if not obj:
+            return []
+
         strategy = FacetedTreeStrategy(obj, self)
         data = buildFolderTree(self.context, obj=obj, query=query,
                                strategy=strategy)
@@ -118,13 +131,18 @@ class FacetedTree(BrowserView):
         res = []
         url = root[:]
         breadcrumb_path = ['']
+        search = {}
+        languge = self.language
+        if languge:
+            search['Language'] = languge
+
         for breadcrumb in path:
             url.append(breadcrumb)
             breadcrumb_path.append(breadcrumb)
 
             breadcrumb_url = '/'.join(url)
-            query = {'query': breadcrumb_url, 'depth': 0}
-            brains = ctool(path=query)
+            search['path'] = {'query': breadcrumb_url, 'depth': 0}
+            brains = ctool(**search)
             if not brains:
                 continue
             brain = brains[0]

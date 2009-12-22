@@ -1,5 +1,6 @@
 """ Path widget
 """
+import logging
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
@@ -7,6 +8,7 @@ from eea.facetednavigation.widgets.field import StringField
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+logger = logging.getLogger('eea.facetednavigation.widgets.path')
 
 EditSchema = Schema((
     StringField('index',
@@ -85,11 +87,13 @@ class Widget(AbstractWidget):
     edit_schema['title'].default = 'Search in'
 
     @property
-    def root(self):
+    def data_root(self):
         """ Get navigation root
         """
         site_url = self.context.portal_url(1)
         data_root = self.data.get('root', '').strip().strip('/')
+        if isinstance(data_root, unicode):
+            data_root = data_root.encode('utf-8')
         if data_root.startswith(site_url):
             data_root = '/' + data_root
             return data_root.split('/')
@@ -102,6 +106,69 @@ class Widget(AbstractWidget):
         site_url.extend(data_root)
         site_url.insert(0, '')
         return site_url
+
+    @property
+    def root(self):
+        """ Get navigation root language dependent
+        """
+        getLanguage = getattr(self.context, 'getLanguage')
+        if not getLanguage:
+            return self.data_root
+
+        lang = getLanguage() or self.request.get('LANGUAGE', '')
+        if not lang:
+            return self.data_root
+
+        root = '/'.join(self.data_root)
+        root = self.context.unrestrictedTraverse(root, None)
+        getTranslation = getattr(root, 'getTranslation', None)
+        if not getTranslation:
+            return self.data_root
+
+        translation = getTranslation(lang)
+        if not translation:
+            return self.data_root
+
+        url = translation.absolute_url(1).strip('/').split('/')
+        url.insert(0, '')
+        return url
+
+    @property
+    def default(self):
+        data_default = self.data.get('default', '')
+        if not data_default:
+            return ''
+        if isinstance(data_default, unicode):
+            data_default = data_default.encode('utf-8')
+
+        data_list = data_default.strip().strip('/').split('/')
+        root = self.data_root[:]
+        root.extend(data_list)
+
+        url = '/'.join(root)
+        folder = self.context.unrestrictedTraverse(url, None)
+        if not folder:
+            return ''
+
+        getTranslation = getattr(folder, 'getTranslation', None)
+        if not getTranslation:
+            return default_data
+
+        getLanguage = getattr(self.context, 'getLanguage', None)
+        if not getLanguage:
+            return data_default
+
+        lang = getLanguage() or self.request.get('LANGUAGE', '')
+        if not lang:
+            return data_default
+
+        translation = getTranslation(lang)
+        if not translation:
+            return data_default
+
+        url = '/' + translation.absolute_url(1).strip('/')
+        root = '/'.join(self.root)
+        return url.replace(root, '', 1)
 
     def query(self, form):
         """ Get value from form and return a catalog dict query
@@ -116,15 +183,17 @@ class Widget(AbstractWidget):
             value = self.default
         else:
             value = form.get(self.data.getId(), '')
-
-        value = value.strip().strip('/').split('/')
-
-        url = self.root[:]
-        url.extend(value)
-
-        value = '/'.join(url)
+        value = value.strip().strip('/')
         if not value:
             return query
 
+        url = self.root[:]
+        if not url:
+            return query
+
+        url.extend(value.split('/'))
+        value = '/'.join(url).rstrip('/')
         query[index] = {"query": value, 'level': 0}
+
+        logger.info(query)
         return query
