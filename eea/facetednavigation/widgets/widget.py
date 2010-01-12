@@ -178,7 +178,8 @@ class Widget(ATWidget):
             return ''
 
         tool = getToolByName(self.context, 'translation_service')
-        for domain in ['eea.facetednavigation', 'eea.translations', 'plone']:
+        for domain in ['eea.facetednavigation', 'eea.faceted',
+                       'eea.translations', 'plone']:
             try:
                 value = tool.utranslate(domain, msgid, {}, context=self.context,
                             target_language=self.request.get('LANGUAGE', 'en'),
@@ -186,6 +187,16 @@ class Widget(ATWidget):
             except Exception, err:
                 logger.exception(err)
                 continue
+
+            try:
+                if not isinstance(value, unicode):
+                    value = value.decode('utf-8')
+                if not isinstance(msgid, unicode):
+                    msgid = msgid.decode('utf-8')
+            except Exception, err:
+                logger.exception(err)
+                continue
+
             if value != msgid:
                 return value
         return msgid
