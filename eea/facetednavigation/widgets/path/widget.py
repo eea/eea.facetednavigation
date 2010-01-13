@@ -195,5 +195,5 @@ class Widget(AbstractWidget):
         value = '/'.join(url).rstrip('/')
         query[index] = {"query": value, 'level': 0}
 
-        logger.info(query)
+        logger.debug(query)
         return query

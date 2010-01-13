@@ -7,6 +7,8 @@ from Products.Five.browser import BrowserView
 from Products.CMFPlone.browser.navtree import buildFolderTree
 from Products.CMFPlone.browser.navtree import DefaultNavtreeStrategy
 from Products.CMFCore.utils import getToolByName
+from eea.facetednavigation.caching import ramcache
+from eea.facetednavigation.caching import cacheCounterKeyFacetedNavigation
 
 from eea.facetednavigation.interfaces import ICriteria
 
@@ -154,6 +156,7 @@ class FacetedTree(BrowserView):
     #
     # JSON
     #
+    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
     def json_tree(self, **kwargs):
         """ Get navigation tree as json
         """
@@ -161,6 +164,7 @@ class FacetedTree(BrowserView):
             kwargs.update(self.request.form)
         return json.dumps(self.tree(**kwargs))
 
+    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
     def json_breadcrumbs(self, **kwargs):
         """ Get breadcrumbs as json
         """

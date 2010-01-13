@@ -22,6 +22,18 @@ FacetedTree.JsTree = function(wid, container, mode){
     js_tree.show();
   });
 
+  jQuery(document).click(function(e){
+    var target = jQuery(e.target);
+    if(target.is('#' + js_tree.input.attr('id'))){
+      return;
+    }
+    var parent = target.parents('#' + js_tree.area.attr('id'));
+    if(parent.length){
+      return;
+    }
+    js_tree.hide();
+  });
+
   jQuery(document).keydown(function(e){
     if(e.keyCode == 27){
       js_tree.hide();
@@ -74,7 +86,7 @@ FacetedTree.JsTree.prototype = {
       },
       callback: {
         beforedata: function(node, tree){
-          if(node==false){
+          if(node===false){
             tree.settings.data.opts.static = static_tree;
             return;
           }
