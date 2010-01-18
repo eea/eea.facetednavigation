@@ -2,81 +2,50 @@ FacetedEdit.DateWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
 
-  this.operation = jQuery('#' + this.wid + '_operation', this.widget);
-  this.value = jQuery('#' + this.wid + '_value', this.widget);
-  this.daterange = jQuery('#' + this.wid + '_daterange', this.widget);
+  this.select_from = jQuery('select[name=from]', this.widget);
+  this.select_to = jQuery('select[name=to]', this.widget);
+
+  this.select_from.hide();
+  this.select_to.hide();
 
   var js_widget = this;
-  this.operation.change(function(evt){
-    js_widget.set_default(this);
+  jQuery('select', this.widget).selectToUISlider({
+    labels: 2,
+    labelSrc: 'text',
+    sliderOptions: {
+      change: function(){
+        js_widget.set_default(js_widget.select_from, js_widget.select_to);
+      }
+    }
   });
 
-  this.value.change(function(evt){
-    js_widget.set_default(this);
+  jQuery('span.ui-slider-label', this.widget).each(function(index){
+    if(index!==11){
+      return;
+    }
+    var span = jQuery(this);
+    span.addClass('ui-slider-label-show');
   });
 
-  this.daterange.change(function(evt){
-    js_widget.set_default(this);
-  });
+  this.selected = [];
 };
 
 FacetedEdit.DateWidget.prototype = {
-  set_default: function(element){
-    if(!jQuery(element).val()){
-      this.reset_default(element);
-      return;
-    }
-
-    var res = '';
-    var operation = this.operation.val();
-    var value = this.value.val();
-    var daterange = this.daterange.val();
-
-    if(operation == 'more' || operation == 'less'){
-      operation += ' than';
-    }
-    res += operation + ' ';
-
-    if(value == '0'){
-      value = 'now';
-    }
-    else if(value == '1'){
-      value += ' day';
+  set_default: function(from, to){
+    var from_val = from.val();
+    var to_val = to.val();
+    var value = '';
+    if((from_val === 'now-past') && (to_val === 'now_future')){
+      value = '';
     }else{
-      value += ' days';
+      value = from_val + '=>' + to_val;
     }
-    res += value;
-
-    if(daterange == 'past'){
-      daterange = ' in the past';
-    }else{
-      daterange = ' in the future';
-    }
-    res += daterange;
 
     var query = {};
     query.redirect = '';
     query.updateCriterion_button = 'Save';
     query.cid = this.wid;
-    query[this.wid + '_default'] = res;
-
-    jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
-    jQuery.post('@@faceted_configure', query, function(data){
-      jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: data});
-    });
-  },
-
-  reset_default: function(element){
-
-    this.operation.val('');
-    this.value.val('');
-    this.daterange.val('');
-
-    var query = {};
-    query.redirect = '';
-    query.updateCriterion_button = 'Save';
-    query.cid = this.wid;
-    query[this.wid + '_default'] = '';
+    query[this.wid + '_default'] = value;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post('@@faceted_configure', query, function(data){

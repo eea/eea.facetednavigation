@@ -1,41 +1,36 @@
-<metal:block use-macro="here/global_defines/macros/defines" />
 <div class="faceted-widget faceted-date-widget" tal:define="
-  mode string:search;
-  errors python:{};
-  fieldName python:template.data.getId();
-  wid fieldName;
-  hidden python:template.hidden;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default python:view.default;
+  default_from python:default[0];
+  default_to python:default[1];
+  vocabulary python:view.select_vocabulary;
   css string:faceted-widget faceted-date-widget;
-  css python:hidden and css + ' faceted-widget-hidden' or css;
-  fieldTitle python:template.data.get('title', '');"
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
 
 <fieldset class="widget-fieldset">
-<legend tal:content="python:template.translate(fieldTitle)"
-  i18n:translate="">Relative date</legend>
-<form action="." method="get">
-  <div tal:attributes="id string:${wid}_errors"></div>
-  <tal:operation define="
-    field python:template.get_field('operation');
-    accessor python:template.view_accessor('operation');
-    fieldName string:${wid}_operation;
-    widget python:field.widget">
-    <div metal:use-macro="python:template.get_macro('operation')" />
-  </tal:operation>
-  <tal:value define="
-    field python:template.get_field('value');
-    accessor python:template.view_accessor('value');
-    fieldName string:${wid}_value;
-    widget python:field.widget">
-    <div metal:use-macro="python:template.get_macro('value')" />
-  </tal:value>
-  <tal:daterange define="
-    field python:template.get_field('daterange');
-    accessor python:template.view_accessor('daterange');
-    fieldName string:${wid}_daterange;
-    widget python:field.widget">
-    <div metal:use-macro="python:template.get_macro('daterange')" />
-  </tal:daterange>
+<legend tal:define="title python:view.data.get('title', '')" tal:content="
+  python:view.translate(title)" i18n:translate="">Date Widget</legend>
+
+<form action="." method="get" class="faceted-date-widget-form">
+  <select name="from" tal:attributes="id string:$wid-from" style="display: none">
+    <tal:option repeat="item vocabulary">
+      <option tal:attributes="
+        value python:item[0];
+        selected python:item[0] == default_from and 'selected' or None"
+        tal:content="python:item[1]" />
+    </tal:option>
+  </select>
+  <select name="to" tal:attributes="id string:$wid-to" style="display: none">
+    <tal:option repeat="item vocabulary">
+      <option tal:attributes="
+        value python:item[0];
+        selected python:item[0] == default_to and 'selected' or None"
+        tal:content="python:item[1]" />
+    </tal:option>
+  </select>
 </form>
+
 </fieldset>
 </div>

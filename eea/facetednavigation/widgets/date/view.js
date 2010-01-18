@@ -5,19 +5,39 @@ Faceted.DateWidget = function(wid){
   this.widget = jQuery('#' + wid + '_widget');
   this.widget.show();
   this.title = jQuery('legend', this.widget).html();
-  this.operation = jQuery('#' + this.wid + '_operation', this.widget);
-  this.value = jQuery('#' + this.wid + '_value', this.widget);
-  this.daterange = jQuery('#' + this.wid + '_daterange', this.widget);
+  this.select_from = jQuery('select[name=from]', this.widget);
+  this.select_to = jQuery('select[name=to]', this.widget);
+
+  this.select_from.hide();
+  this.select_to.hide();
+
+  var js_widget = this;
+  this.slider = jQuery('select', this.widget).selectToUISlider({
+    labels: 2,
+    labelSrc: 'text',
+    sliderOptions: {
+      change: function(){
+        js_widget.change();
+      }
+    }
+  });
+
+  jQuery('span.ui-slider-label', this.widget).each(function(i){
+    if(i!==11){
+      return;
+    }
+    var span = jQuery(this);
+    span.addClass('ui-slider-label-show');
+  });
+
   this.selected = [];
 
   // Default value
-  var operation = this.operation.val();
-  var daterange = this.daterange.val();
-  var value = this.value.val();
-
-  if(operation !== '' && daterange !== '' && value !== ''){
-    this.selected = [this.operation, this.value, this.daterange];
-    Faceted.Query[this.wid] = [operation, value, daterange];
+  var from = this.select_from.val();
+  var to = this.select_to.val();
+  if((from !== 'now-past') || (to !== 'now_future')){
+    this.selected = [this.select_from, this.select_to];
+    Faceted.Query[this.wid] = [from, to];
   }
 
   // Handle clicks
@@ -25,78 +45,62 @@ Faceted.DateWidget = function(wid){
     return false;
   });
 
-  var js_widget = this;
-  this.operation.change(function(evt){
-    js_widget.select_change(this, evt);
-  });
-
-  this.value.change(function(evt){
-    js_widget.select_change(this, evt);
-  });
-
-  this.daterange.change(function(evt){
-    js_widget.select_change(this, evt);
-  });
-
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
     js_widget.synchronize();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
-    js_widget.reset();
+    js_widget.reset_ui();
   });
 };
 
 Faceted.DateWidget.prototype = {
-  select_change: function(element, evt){
-    if(!jQuery(element).val()){
+  change: function(){
+    var from = this.select_from.val();
+    var to = this.select_to.val();
+    if(from === 'now-past' && to === 'now_future'){
       this.reset();
       Faceted.Form.do_query(this.wid, []);
-      return;
-    }
-    if(this.value.val() == '0' && this.operation.val()){
-      if(this.operation.val() == 'more'){
-        this.daterange.val('future');
-      }else{
-        this.daterange.val('past');
-      }
-      this.do_query(element);
-    }else if(this.operation.val() && this.value.val() && this.daterange.val()){
-      this.do_query(element);
+    }else{
+      this.do_query();
     }
   },
 
-  do_query: function(element){
-      var value = [this.operation.val(), this.value.val(), this.daterange.val()];
-      this.selected = [this.operation, this.value, this.daterange];
-      Faceted.Form.do_query(this.wid, value);
+  do_query: function(){
+    var value = [this.select_from.val(), this.select_to.val()];
+    this.selected = [this.select_from, this.select_to];
+    Faceted.Form.do_query(this.wid, value);
   },
 
   reset: function(){
     this.selected = [];
-    this.operation.val('');
-    this.value.val('');
-    this.daterange.val('');
+    this.select_from.val('now-past');
+    this.select_to.val('now_future');
+  },
+
+  reset_ui: function(){
+    this.reset();
+    this.select_from.trigger('change');
+    this.select_to.trigger('change');
   },
 
   synchronize: function(){
     var q_value = Faceted.Query[this.wid];
     if(!q_value){
-      this.reset();
+      this.reset_ui();
       return;
     }
     if(!q_value.length){
-      this.reset();
+      this.reset_ui();
       return;
     }
-    if(q_value.length<3){
-      this.reset();
+    if(q_value.length<2){
+      this.reset_ui();
       return;
     }
 
-    this.operation.val(q_value[0]);
-    this.value.val(q_value[1]);
-    this.daterange.val(q_value[2]);
+    this.select_from.val(q_value[0]);
+    this.select_to.val(q_value[1]);
   },
 
   criteria: function(){
@@ -137,57 +141,12 @@ Faceted.DateWidget.prototype = {
       return '';
     }
 
-    var operation = this.operation.val();
-    var value = this.value.val();
-    value = parseInt(value, 10);
-    var daterange = this.daterange.val();
-    var start = new Date('01/01/1970');
-    var end = new Date('12/31/2030');
-    var now = new Date();
-    var day = 24 * 3600 * 1000;
-
-    if(operation == 'less'){
-      if(value === 0){
-        end = new Date();
-      }else{
-        if(daterange == 'past'){
-          start = new Date(now.getTime() - value * day);
-          end = new Date();
-        }else{
-          start = new Date();
-          end = new Date(now.getTime() + value * day);
-        }
-      }
-    }
-    else if(operation == 'more'){
-      if(value === 0){
-        start = new Date();
-      }else{
-        if(daterange == 'past'){
-          end = new Date(now.getTime() - value * day);
-        }else{
-          start = new Date(now.getTime() + value * day);
-        }
-      }
-    }
-    else if(operation == 'equal'){
-      if(value === 0){
-        start = new Date();
-        end = new Date();
-      }else{
-        if(daterange == 'past'){
-          start = new Date(now.getTime() - value * day);
-          end = new Date(now.getTime() - value * day);
-        }else{
-          start = new Date(now.getTime() + value * day);
-          end = new Date(now.getTime() + value * day);
-        }
-      }
-    }
+    var from = jQuery('option:selected', this.select_from).text();
+    var to = jQuery('option:selected', this.select_to).text();
+    var label = from + ' - ' + to;
 
     var widget = this;
     var html = jQuery('<dd>');
-    var label = start.toDateString() + ' - ' + end.toDateString();
     var link = jQuery('<a href="#">[X]</a>');
 
     link.attr('id', 'criteria_' + this.wid + '_');
@@ -196,6 +155,7 @@ Faceted.DateWidget.prototype = {
       widget.criteria_remove();
       return false;
     });
+
     html.append(link);
     html.append('<span>' + label + '</span>');
 
@@ -203,10 +163,7 @@ Faceted.DateWidget.prototype = {
   },
 
   criteria_remove: function(){
-    this.selected = [];
-    this.operation.val('');
-    this.daterange.val('');
-    this.value.val('');
+    this.reset_ui();
     return Faceted.Form.do_query(this.wid, []);
   }
 };

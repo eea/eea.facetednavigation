@@ -1,79 +1,41 @@
 """ Text widget
 """
 import logging
-import re
 from DateTime import DateTime
-from Products.Archetypes.public import DisplayList
 from Products.Archetypes.public import Schema
-from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from eea.facetednavigation.widgets.field import StringField
-
-from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
 
-DateOptionsVocabulary = DisplayList((
-    ('', 'All'),
-    (0, 'Now'),
-    (1, '1 Day'),
-    (2, '2 Days'),
-    (5, '5 Days'),
-    (7, '1 Week'),
-    (14, '2 Weeks'),
-    (31, '1 Month'),
-    (31*3, '3 Months'),
-    (31*6, '6 Months'),
-    (365, '1 Year'),
-    (365*2, '2 Years'),
-))
+PAST = (
+    (730, '2 years ago'),
+    (365, '1 year ago'),
+    (186, '6 months ago'),
+    (93,  '3 months ago'),
+    (31,  '1 month ago'),
+    (14,  '2 weeks ago'),
+    (7,   '1 week ago'),
+    (5,   '5 days ago'),
+    (2,   '2 days ago'),
+    (1,   'Yesterday')
+)
 
-CompareOperationsVocabulary = DisplayList((
-    ('', 'All'),
-    ('more', 'More than'),
-    ('less', 'Less than'),
-    ('equal', 'On the day'),
-))
-
-RangeOperationsVocabulary = DisplayList((
-    ('', 'All'),
-    ('past', 'in the past'),
-    ('future', 'in the future'),
-))
-
-ViewSchema = Schema((
-    StringField('operation',
-        vocabulary=CompareOperationsVocabulary,
-        widget=SelectionWidget(
-            label="More or less",
-            label_msgid="label_date_criteria_operation",
-            description="Select the date criteria operation.",
-            description_msgid="help_date_criteria_operation",
-            i18n_domain="atcontenttypes",
-            format="select"),
-    ),
-    IntegerField('value',
-        vocabulary=DateOptionsVocabulary,
-        widget=SelectionWidget(
-            label="Which day",
-            label_msgid="label_date_criteria_value",
-            description="Select the date criteria value.",
-            description_msgid="help_date_criteria_value",
-            i18n_domain="atcontenttypes"),
-    ),
-    StringField('daterange',
-        vocabulary=RangeOperationsVocabulary,
-        widget=SelectionWidget(
-            label="In the past or future",
-            label_msgid="label_date_criteria_range",
-            description="Select the date criteria range. Ignore this if you selected 'Now' above.",
-            description_msgid="help_date_criteria_range",
-            i18n_domain="atcontenttypes",
-            format="select"),
-    ),
-))
+FUTURE = (
+    (1,   'Tomorrow'),
+    (2,   'Next 2 days'),
+    (5,   'Next 5 days'),
+    (7,   'Next week'),
+    (14,  'Next 2 weeks'),
+    (31,  'Next month'),
+    (93,  'Next 3 months'),
+    (186, 'Next 6 months'),
+    (365, 'Next year'),
+    (730, 'Next 2 years'),
+)
 
 EditSchema = Schema((
     StringField('index',
@@ -95,41 +57,12 @@ EditSchema = Schema((
             size=25,
             label='Default value',
             label_msgid='faceted_criteria_default',
-            description='Default daterange (e.g. "more than 3 days in the past" or "equal 1 day in the future")',
+            description='Default daterange (e.g. "now-365=>now+1" which means "Starting one year ago until tomorrow")',
             description_msgid='help_faceted_criteria_date_default',
             i18n_domain="eea.facetednavigation"
         )
     ),
 ))
-
-class ViewAccessor(object):
-    """ Return default start/end date
-    """
-    def __init__(self, data, key):
-        self.data = data
-        self.key = key
-
-    def __call__(self):
-        default = self.data.get('default', '')
-        if not default:
-            return ''
-
-        if self.key == 'operation':
-            if 'less' in default:
-                return 'less'
-            if 'more' in default:
-                return 'more'
-            return 'equal'
-        if self.key == 'daterange':
-            if 'past' in default:
-                return 'past'
-            return 'future'
-        if self.key == 'value':
-            res = re.search(r'\d+', default)
-            if not res:
-                return 0
-            return int(res.group(0))
-        return ''
 
 class Widget(AbstractWidget):
     """ Widget
@@ -137,13 +70,24 @@ class Widget(AbstractWidget):
     # Widget properties
     widget_type = 'date'
     widget_label = 'Date'
-    view_js = '++resource++eea.facetednavigation.widgets.date.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.date.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.date.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.date.edit.css'
+    view_js = (
+        '++resource++jquery.select2uislider/selectToUISlider.jQuery.js',
+        '++resource++eea.facetednavigation.widgets.date.view.js',
+    )
+    edit_js = (
+        '++resource++jquery.select2uislider/selectToUISlider.jQuery.js',
+        '++resource++eea.facetednavigation.widgets.date.edit.js',
+    )
+    view_css = (
+    '++resource++jquery.select2uislider/ui.slider.extras.css',
+    '++resource++eea.facetednavigation.widgets.date.view.css',
+    )
+    edit_css = (
+        '++resource++jquery.select2uislider/ui.slider.extras.css',
+        '++resource++eea.facetednavigation.widgets.date.edit.css',
+    )
 
-    index = ZopeTwoPageTemplateFile('widget.pt', globals())
-    view_schema = ViewSchema
+    index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema + EditSchema
 
     def __init__(self, context, request, data=None):
@@ -151,18 +95,44 @@ class Widget(AbstractWidget):
 
     @property
     def default(self):
-        """ Return default
+        """ Return default value
         """
-        return (
-            self.view_accessor('operation'),
-            self.view_accessor('value'),
-            self.view_accessor('daterange'),
-        )
+        default = self.data.get('default', '')
+        if not default:
+            return ('now-past', 'now_future')
 
-    def view_accessor(self, key):
-        """ Accessor used in view mode
-        """
-        return ViewAccessor(self.data, key)
+        default = default.split('=>')
+        if len(default) == 1:
+            return ('now-past', 'now_future')
+        elif len(default) == 2:
+            date_from = default[0].strip()
+            if not date_from.startswith('now'):
+                return ('now-past', 'now_future')
+            date_to = default[1].strip()
+            if not date_to.startswith('now'):
+                return ('now-past', 'now_future')
+            return (date_from, date_to)
+        return ('now-past', 'now_future')
+
+    @property
+    def select_vocabulary(self):
+        # Past
+        res = [
+            ('now-past', self.translate('Past')),
+        ]
+        for key, value in PAST:
+            key = 'now-%d' % key
+            res.append((key, self.translate(value)))
+
+        # Present
+        res.append(('now-0', self.translate('Today')))
+
+        #Future
+        for key, value in FUTURE:
+            key = 'now_%d' % key
+            res.append((key, self.translate(value)))
+        res.append(('now_future', self.translate('Future')))
+        return res
 
     def query(self, form):
         """ Get value from form and return a catalog dict query
@@ -175,48 +145,68 @@ class Widget(AbstractWidget):
 
         if self.hidden:
             value = self.default
-            operation, value, daterange = value
-            operation = operation()
-            value = value()
-            daterange = daterange()
         else:
-            form_value = form.get(self.data.getId(), ())
-            if not form_value or len(form_value)!=3:
-                return query
-            operation, value, daterange = form_value
+            value = form.get(self.data.getId(), ())
 
-        try:
-            operation = operation.lower()
-            assert(operation in ['', 'equal', 'more', 'less'])
-            value = int(value or 0)
-            daterange = str(daterange)
-            assert(daterange in ['', 'past', 'future'])
-        except Exception, err:
-            logger.exception(err)
+        if len(value) != 2:
             return query
 
-        # Negate the value for 'old' days
-        if daterange == 'past':
-            value = -value
+        from_val, to_val = value
 
-        date = DateTime() + value
-        current_date = DateTime()
+        from_val = from_val.replace('now', '', 1)
+        if from_val.startswith('+') or from_val.startswith('_'):
+            from_val = from_val[1:]
 
-        if operation == 'equal':
-            date_range = (date.earliestTime(), date.latestTime())
+        to_val = to_val.replace('now', '', 1)
+        if to_val.startswith('+') or to_val.startswith('_'):
+            to_val = to_val[1:]
+
+        # Empty query
+        if from_val == '-past' and to_val == 'future':
+            return query
+
+        now = DateTime()
+        from_date = DateTime('1970/01/01')
+        to_date = DateTime('2030/12/31')
+
+        query_range = 'min:max'
+
+        if from_val == '-past':
+            query_range = 'max'
+        elif from_val == 'future':
+            from_date = DateTime('2030/12/31')
+            query_range = 'max'
+        else:
+            try:
+                from_delta = int(from_val)
+            except (ValueError, TypeError), err:
+                logger.exception(err)
+            else:
+                from_date = now + from_delta
+
+        if to_val == '-past':
+            query_range = 'min'
+            to_date = DateTime('1970/01/01')
+        elif to_val == 'future':
+            query_range = 'min'
+        else:
+            try:
+                to_delta = int(to_val)
+            except (ValueError, TypeError), err:
+                logger.exception(err)
+            else:
+                to_date = now + to_delta
+
+        if from_date == to_date:
+            date_range = (from_date.earliestTime(), from_date.latestTime())
             query[index] = {'query': date_range, 'range': 'min:max'}
-        elif operation == 'more':
-            if value != 0:
-                range_op = (daterange == 'past' and 'max') or 'min'
-                query[index] = {'query': date.earliestTime(), 'range': range_op}
-            else:
-                query[index] = {'query': date, 'range': 'min'}
-        elif operation == 'less':
-            if value != 0:
-                date_range = (daterange == 'past' and (date.earliestTime(), current_date)
-                              ) or (current_date, date.latestTime())
+            return query
 
-                query[index] = {'query': date_range, 'range': 'min:max'}
-            else:
-                query[index] = {'query': date, 'range': 'max'}
+        if query_range == 'min':
+            query[index] = {'query': from_date, 'range': 'min'}
+        elif query_range == 'max':
+            query[index] = {'query': to_date, 'range': 'max'}
+        else:
+            query[index] = {'query': (from_date, to_date), 'range': 'min:max'}
+
         return query

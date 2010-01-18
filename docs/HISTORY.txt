@@ -4,6 +4,8 @@ Changelog
 1.6 (Unreleased)
 ----------------
 
+* #2871 Make date widget more user friendly using jQuery slider plugin [voineali]
+
 1.5 (2010-01-18)
 ----------------
 

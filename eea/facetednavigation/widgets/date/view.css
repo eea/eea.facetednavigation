@@ -1,0 +1,19 @@
+.faceted-date-widget form {
+  margin: 2em;
+  margin-top: 0;
+}
+
+.faceted-date-widget .ui-slider span.ui-slider-label {
+  position:relative;
+}
+
+.faceted-date-widget .ui-state-default, .ui-widget-content .ui-state-default {
+  background-image: none;
+  background-color: #e9efcd;
+  border-color: #95b229;
+}
+
+.faceted-date-widget .ui-widget-header {
+  background-image: none;
+  background-color: #e9efcd;
+}
