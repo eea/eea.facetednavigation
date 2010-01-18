@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5 (Unreleased)
+1.5 (2010-01-18)
 ----------------
 
 * #2625 Add path (location) widget [voineali]
