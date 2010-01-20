@@ -81,13 +81,12 @@ class ViewJavascript(Javascript):
             if not js.getEnabled():
                 continue
             js_id = js.getId()
-            if 'jquery.ui' in js_id.lower():
+            if 'jquery.ui-1.7.js' in js_id.lower():
                 ui_installed = True
-            elif 'jquery.tagcloud' in js_id.lower():
+            elif 'jquery.tagcloud.js' in js_id.lower():
                 jtagcloud_installed = True
-            #XXX This conflicts with Plone3 default jquery 1.2.x version
-            #elif 'jquery' in js_id.lower():
-                #jquery_installed = True
+            elif 'jquery-1.3.2.js' in js_id.lower():
+                jquery_installed = True
             if jquery_installed and jtagcloud_installed and ui_installed:
                 break
 
@@ -139,17 +138,16 @@ class EditJavascript(Javascript):
             if not js.getEnabled():
                 continue
             js_id = js.getId()
-            if 'jquery.ui' in js_id.lower():
+            if 'jquery.ui-1.7.js' in js_id.lower():
                 ui_installed = True
-            elif 'jquery.cookie' in js_id.lower():
+            elif 'jquery.cookie.js' in js_id.lower():
                 cookie_installed = True
-            elif 'jquery.tagcloud' in js_id.lower():
+            elif 'jquery.tagcloud.js' in js_id.lower():
                 jtagcloud_installed = True
-            elif 'jquery.ajaxfileupload' in js_id.lower():
+            elif 'jquery.ajaxfileupload.js' in js_id.lower():
                 jfileupload_installed = True
-            #XXX This conflicts with Plone3 default jquery 1.2.x version
-            #elif 'jquery' in js_id.lower():
-                #jquery_installed = True
+            elif 'jquery-1.3.2.js' in js_id.lower():
+                jquery_installed = True
             if jquery_installed and ui_installed and \
                jfileupload_installed and \
                cookie_installed and jtagcloud_installed:

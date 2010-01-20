@@ -5,6 +5,8 @@ Changelog
 ----------------
 
 * #2871 Make date widget more user friendly using jQuery slider plugin [voineali]
+* FIX: If jquery is present in portal_javascirpts do not reload it in
+  faceted_view.js / faceted_edit.js [voineali]
 
 1.5 (2010-01-18)
 ----------------
