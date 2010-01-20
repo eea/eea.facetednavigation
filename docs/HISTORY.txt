@@ -4,6 +4,8 @@ Changelog
 1.6 (Unreleased)
 ----------------
 
+* #2625 Fix relative path problems for path widget when using
+  in production [voineali]
 * #2871 Make date widget more user friendly using jQuery slider plugin [voineali]
 * FIX: If jquery is present in portal_javascirpts do not reload it in
   faceted_view.js / faceted_edit.js [voineali]

@@ -2,6 +2,8 @@ var FacetedTree = {version: '1.0.0'};
 
 FacetedTree.Events = {};
 FacetedTree.Events.CHANGED = 'FACETEDTREE-CHANGED';
+FacetedTree.Events.AJAX_START = 'FACETEDTREE-AJAX-START';
+FacetedTree.Events.AJAX_STOP = 'FACETEDTREE-AJAX-STOP';
 
 FacetedTree.JsTree = function(wid, container, mode){
   this.wid = wid;
@@ -43,6 +45,8 @@ FacetedTree.JsTree = function(wid, container, mode){
   var query = {};
   query.cid = this.wid;
   query.mode = this.mode;
+
+  jQuery(FacetedTree.Events).trigger(FacetedTree.Events.AJAX_START, {msg: 'Loading ...'});
   jQuery.getJSON('@@faceted.path.tree.json', query, function(data){
     if(data.length){
       js_tree.initialize(data);
@@ -54,6 +58,7 @@ FacetedTree.JsTree = function(wid, container, mode){
         container.remove();
       }
     }
+    jQuery(FacetedTree.Events).trigger(FacetedTree.Events.AJAX_STOP, {msg: data});
   });
 };
 

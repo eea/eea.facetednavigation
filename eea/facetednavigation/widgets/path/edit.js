@@ -1,24 +1,39 @@
 FacetedEdit.PathWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
-  this.form = jQuery('form', this.widget);
-  this.input = jQuery('input', this.widget);
-  this.selected = this.input;
+  var tree = new FacetedTree.JsTree(this.wid, this.widget, 'edit');
 
   var js_widget = this;
-  this.form.submit(function(evt){
-    js_widget.set_default(js_widget.input);
-    return false;
-  });
-
-  // Navigation Tree
-  var tree = new FacetedTree.JsTree(this.wid, this.widget, 'edit');
-  jQuery(FacetedTree.Events).bind(FacetedTree.Events.CHANGED, function(data){
-    js_widget.set_default(js_widget.input);
+  jQuery(FacetedTree.Events).bind(FacetedTree.Events.AJAX_STOP, function(evt, data){
+    js_widget.initialize(data.msg);
+    jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: 'Done'});
   });
 };
 
 FacetedEdit.PathWidget.prototype = {
+  initialize: function(data){
+    if(!data.length){
+      return;
+    }
+
+    this.form = jQuery('form', this.widget);
+    this.input = jQuery('input', this.widget);
+    this.selected = this.input;
+
+    var js_widget = this;
+    this.form.submit(function(evt){
+      js_widget.set_default(js_widget.input);
+      return false;
+    });
+
+    // Navigation Tree
+
+  jQuery(FacetedTree.Events).bind(FacetedTree.Events.CHANGED, function(data){
+    js_widget.set_default(js_widget.input);
+  });
+
+  },
+
   set_default: function(element){
     this.selected = this.input;
     var value = this.selected.val();

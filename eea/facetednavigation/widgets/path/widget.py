@@ -90,7 +90,9 @@ class Widget(AbstractWidget):
     def data_root(self):
         """ Get navigation root
         """
-        site_url = self.context.portal_url(1)
+        site = self.context.portal_url.getPortalObject()
+        site_url = '/'.join(site.getPhysicalPath())
+        site_url = site_url.strip('/')
         data_root = self.data.get('root', '').strip().strip('/')
         if isinstance(data_root, unicode):
             data_root = data_root.encode('utf-8')
@@ -129,9 +131,8 @@ class Widget(AbstractWidget):
         if not translation:
             return self.data_root
 
-        url = translation.absolute_url(1).strip('/').split('/')
-        url.insert(0, '')
-        return url
+        url = translation.getPhysicalPath()
+        return list(url)
 
     @property
     def default(self):
@@ -152,7 +153,7 @@ class Widget(AbstractWidget):
 
         getTranslation = getattr(folder, 'getTranslation', None)
         if not getTranslation:
-            return default_data
+            return data_default
 
         getLanguage = getattr(self.context, 'getLanguage', None)
         if not getLanguage:
@@ -166,7 +167,7 @@ class Widget(AbstractWidget):
         if not translation:
             return data_default
 
-        url = '/' + translation.absolute_url(1).strip('/')
+        url = '/'.join(translation.getPhysicalPath())
         root = '/'.join(self.root)
         return url.replace(root, '', 1)
 
