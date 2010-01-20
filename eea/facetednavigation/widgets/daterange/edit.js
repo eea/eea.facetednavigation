@@ -2,52 +2,54 @@ FacetedEdit.DateRangeWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
 
-  this.years = jQuery('select[name=' + wid + '_year]', this.widget);
-  this.months = jQuery('select[name=' + wid + '_month]', this.widget);
-  this.days = jQuery('select[name=' + wid + '_day]', this.widget);
-  this.start = jQuery('input[name=' + wid + ']', this.widget)[0];
-  this.end = jQuery('input[name=' + wid + ']', this.widget)[1];
-  this.selected = [this.start, this.end];
+  this.start = jQuery('input[name=start]', this.widget);
+  this.end = jQuery('input[name=end]', this.widget);
 
   var js_widget = this;
-  this.years.change(function(evt){
+  this.start.datepicker({
+    changeMonth: true,
+    changeYear: true,
+    onSelect: function(date, cal){
+      js_widget.set_default(date);
+    }
+  });
+
+  this.end.datepicker({
+    changeMonth: true,
+    changeYear: true,
+    onSelect: function(date, cal){
+      js_widget.set_default(date);
+    }
+  });
+
+  this.start.change(function(){
     js_widget.set_default(this);
   });
 
-  this.months.change(function(evt){
+  this.end.change(function(){
     js_widget.set_default(this);
   });
-
-  this.days.change(function(evt){
-    js_widget.set_default(this);
-  });
-
 };
 
 FacetedEdit.DateRangeWidget.prototype = {
   set_default: function(element){
-    if(jQuery(this.years[0]).val()=='0000' || jQuery(this.years[1]).val() == '0000'){
-      return;
-    }
-    if(jQuery(this.months[0]).val()=='00' || jQuery(this.months[1]).val() == '00'){
-      return;
-    }
-    if(jQuery(this.days[0]).val()=='00' || jQuery(this.days[1]).val()=='00'){
-      return;
-    }
-    var start = jQuery(this.start).val();
-    var end = jQuery(this.end).val();
-    start = new Date(start.replace(/-/g, '/'));
-    end = new Date(end.replace(/-/g, '/'));
-    if(end<start){
-      var msg = 'End Date should be greater than Start date';
-      jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: msg});
+    var start = this.start.val();
+    var end = this.end.val();
+    if((!start && end) || (start && !end)){
       return;
     }
 
-    var start_str = start.getFullYear() + '/' + (start.getMonth() + 1) + '/' + start.getDate();
-    var end_str = end.getFullYear() + '/' + (end.getMonth() + 1) + '/' + end.getDate();
-    var value = start_str + '=>' + end_str;
+    var value = '';
+    if(start && end){
+      var start_date = new Date(start);
+      var end_date = new Date(end);
+      if(end_date<start_date){
+        var msg = 'End Date should be greater than Start date';
+        jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: msg});
+        return;
+      }
+      value = start + '=>' + end;
+    }
     var query = {};
     query.redirect = '';
     query.updateCriterion_button = 'Save';

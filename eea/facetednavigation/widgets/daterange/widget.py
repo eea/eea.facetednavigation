@@ -3,32 +3,13 @@
 import logging
 from DateTime import DateTime
 from Products.Archetypes.public import Schema
-from Products.Archetypes.public import DateTimeField
-from Products.Archetypes.public import CalendarWidget
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from eea.facetednavigation.widgets.field import StringField
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 
-from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
-
-ViewSchema = Schema((
-    DateTimeField('start',
-        widget=CalendarWidget(
-            label="Start Date",
-            show_hm=False,
-            label_msgid="label_date_range_criteria_start",
-            i18n_domain="plone"),
-    ),
-    DateTimeField('end',
-        widget=CalendarWidget(
-            label="End Date",
-            show_hm=False,
-            label_msgid="label_date_range_criteria_end",
-            i18n_domain="plone"),
-    ),
-))
 
 EditSchema = Schema((
     StringField('index',
@@ -57,42 +38,6 @@ EditSchema = Schema((
     ),
 ))
 
-class ViewAccessor(object):
-    """ Return default start/end date
-    """
-    def __init__(self, data, key):
-        self.data = data
-        self.key = key
-
-    def __call__(self):
-        default = self.data.get('default', '')
-        if not default:
-            return None
-
-        default = default.split('=>')
-        if len(default) != 2:
-            return None
-
-        if self.key == 'start':
-            start = default[0]
-            try:
-                start = DateTime(start.strip())
-            except Exception, err:
-                logger.exception('%s => Start date: %s', err, start)
-                return None
-            else:
-                return start
-        elif self.key == 'end':
-            end = default[1]
-            try:
-                end = DateTime(end.strip())
-            except Exception, err:
-                logger.exception('%s => End date: %s', err, end)
-                return None
-            else:
-                return end
-        return None
-
 class Widget(AbstractWidget):
     """ Widget
     """
@@ -104,23 +49,36 @@ class Widget(AbstractWidget):
     view_css = '++resource++eea.facetednavigation.widgets.daterange.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.daterange.edit.css'
 
-    index = ZopeTwoPageTemplateFile('widget.pt', globals())
-    view_schema = ViewSchema
+    index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema + EditSchema
-
-    def __init__(self, context, request, data=None):
-        AbstractWidget.__init__(self, context, request, data)
 
     @property
     def default(self):
         """ Return default
         """
-        return (self.view_accessor('start'), self.view_accessor('end'))
+        default = self.data.get('default', '')
+        if not default:
+            return ('', '')
 
-    def view_accessor(self, key):
-        """ Accessor used in view mode
-        """
-        return ViewAccessor(self.data, key)
+        default = default.split('=>')
+        if len(default) != 2:
+            return ('', '')
+
+        start, end = default
+        try:
+            start = DateTime(start.strip())
+            start = start.strftime('%Y/%m/%d')
+        except Exception, err:
+            logger.exception('%s => Start date: %s', err, start)
+            start = ''
+
+        try:
+            end = DateTime(end.strip())
+            end = end.strftime('%Y/%m/%d')
+        except Exception, err:
+            logger.exception('%s => End date: %s', err, end)
+            end = ''
+        return (start, end)
 
     def query(self, form):
         """ Get value from form and return a catalog dict query
@@ -132,15 +90,15 @@ class Widget(AbstractWidget):
             return query
 
         if self.hidden:
-            value = self.default
-            start, end = value
-            start = start()
-            end = end()
+            start, end = self.default
         else:
             value = form.get(self.data.getId(), ())
             if not value or len(value)!=2:
                 return query
             start, end = value
+
+        if not (start and end):
+            return query
 
         try:
             start = DateTime(start)
@@ -148,6 +106,9 @@ class Widget(AbstractWidget):
         except Exception, err:
             logger.exception(err)
             return query
+
+        start = start.earliestTime()
+        end = end.latestTime()
 
         query[index] = {
             'query': (start, end),
