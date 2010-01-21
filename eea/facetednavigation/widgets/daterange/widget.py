@@ -67,14 +67,14 @@ class Widget(AbstractWidget):
         start, end = default
         try:
             start = DateTime(start.strip())
-            start = start.strftime('%Y/%m/%d')
+            start = start.strftime('%Y-%m-%d')
         except Exception, err:
             logger.exception('%s => Start date: %s', err, start)
             start = ''
 
         try:
             end = DateTime(end.strip())
-            end = end.strftime('%Y/%m/%d')
+            end = end.strftime('%Y-%m-%d')
         except Exception, err:
             logger.exception('%s => End date: %s', err, end)
             end = ''

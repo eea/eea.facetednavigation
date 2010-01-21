@@ -9,6 +9,7 @@ FacetedEdit.DateRangeWidget = function(wid){
   this.start.datepicker({
     changeMonth: true,
     changeYear: true,
+    dateFormat: 'yy-mm-dd',
     onSelect: function(date, cal){
       js_widget.set_default(date);
     }
@@ -17,6 +18,7 @@ FacetedEdit.DateRangeWidget = function(wid){
   this.end.datepicker({
     changeMonth: true,
     changeYear: true,
+    dateFormat: 'yy-mm-dd',
     onSelect: function(date, cal){
       js_widget.set_default(date);
     }
@@ -41,8 +43,8 @@ FacetedEdit.DateRangeWidget.prototype = {
 
     var value = '';
     if(start && end){
-      var start_date = new Date(start);
-      var end_date = new Date(end);
+      var start_date = new Date(start.replace(/-/g, '/'));
+      var end_date = new Date(end.replace(/-/g, '/'));
       if(end_date<start_date){
         var msg = 'End Date should be greater than Start date';
         jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: msg});
