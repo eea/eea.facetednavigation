@@ -36,6 +36,11 @@ class FacetedVersion(BrowserView):
         query = {}
         criteria = config.values()
         for criterion in criteria:
+            cid = criterion.getId()
+            operator = criterion.get('operator', '')
+            if operator:
+                query['%s-operator' % cid] = operator
+
             if not criterion.hidden:
                 continue
 
@@ -43,7 +48,7 @@ class FacetedVersion(BrowserView):
             if not value or value in ['All', 'all', u'All', u'all']:
                 continue
 
-            query[criterion.getId()] = value
+            query[cid] = value
 
         if not query:
             return ''

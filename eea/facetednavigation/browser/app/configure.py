@@ -130,7 +130,9 @@ class FacetedCriterionHandler(FacetedBasicHandler):
 
         if update:
             criteria.edit(cid, **update)
-            if widget.hidden or 'hidden' in update.keys():
+            if widget.hidden:
+                notify(FacetedGlobalSettingsChangedEvent(self.context))
+            elif set(['hidden', 'operator']).intersection(update.keys()):
                 notify(FacetedGlobalSettingsChangedEvent(self.context))
 
         return self._redirect('Changes saved')

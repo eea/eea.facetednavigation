@@ -1,4 +1,4 @@
-var FacetedEdit = {version: '1.0.0'};
+var FacetedEdit = {version: '1.6.0'};
 FacetedEdit.loading = '<div class="faceted_loading"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
 
 // Widgets
@@ -13,6 +13,7 @@ FacetedEdit.Events.WINDOW_WIDTH_CHANGED = 'FACETEDEDIT-WINDOW-WIDTH-CHANGED';
 FacetedEdit.Events.WINDOW_HEIGHT_CHANGED = 'FACETEDEDIT-WINDOW-HEIGHT-CHANGED';
 FacetedEdit.Events.AJAX_START = 'FACETEDEDIT-AJAX-START';
 FacetedEdit.Events.AJAX_STOP = 'FACETEDEDIT-AJAX-STOP';
+FacetedEdit.Events.CATALOG_CHANGED = 'FACETEDEDIT-CATALOG-CHANGED';
 
 FacetedEdit.Window = {
   initialize: function(){
@@ -488,6 +489,21 @@ FacetedEdit.FormEditWidget = {
     jQuery.get('@@faceted_schema', query, function(data) {
       context.form.html(data);
       jQuery('#archetypes-fieldname-default').remove();
+      var catalog = jQuery('#archetypes-fieldname-index select');
+      var operator = jQuery('#archetypes-fieldname-operator select');
+      if(catalog.length && operator.length){
+        operator = operator.clone();
+        jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.CATALOG_CHANGED, {
+          catalog: catalog,
+          operator: operator
+        });
+        catalog.change(function(){
+          jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.CATALOG_CHANGED, {
+            catalog: catalog,
+            operator: operator
+          });
+        });
+      }
       var widget = jQuery('.faceted-widget-edit', context.form);
       jQuery('ul', widget).show();
       widget.tabs();
@@ -576,6 +592,17 @@ FacetedEdit.FormAddWidgets = {
       FacetedEdit.FormMessage.custom_message('Loading...', 'faceted-widget-type');
       context.details.html(data);
       jQuery('#archetypes-fieldname-default').hide();
+      var catalog = jQuery('#archetypes-fieldname-index select');
+      var operator = jQuery('#archetypes-fieldname-operator select');
+      if(catalog.length && operator.length){
+        operator = operator.clone();
+        catalog.change(function(){
+          jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.CATALOG_CHANGED, {
+            catalog: catalog,
+            operator: operator
+          });
+        });
+      }
       jQuery('#c0-layout-header').remove();
       jQuery('#c0-layout-tab').remove();
       var widget = jQuery('.faceted-widget-edit', context.details);
@@ -893,6 +920,39 @@ FacetedEdit.FormSections = {
   }
 };
 
+FacetedEdit.Catalog = {
+  initialize: function(){
+    this.types = {};
+    var context = this;
+    jQuery.getJSON('@@faceted.catalog.types.json', {}, function(data){
+      context.types = data;
+    });
+
+    jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.CATALOG_CHANGED, function(evt, data){
+      context.handle_change(data.catalog, data.operator);
+    });
+  },
+
+  get: function(key){
+    return this.types[key];
+  },
+
+  handle_change: function(catalog, operator){
+    var select = jQuery('#archetypes-fieldname-operator select');
+    var index = catalog.val();
+    var mapping = this.get(index);
+    var values = mapping ? mapping.operator : ['or'];
+
+    select.empty();
+    jQuery('option', operator).each(function(){
+      var option = jQuery(this).attr('value');
+      if(jQuery.inArray(option, values) != -1){
+        select.append(jQuery(this).clone());
+      }
+    });
+  }
+};
+
 FacetedEdit.FormPage = {
   initialize: function(){
     this.cookie_id = 'faceted-config-disable-ajax';
@@ -917,6 +977,7 @@ FacetedEdit.FormPage = {
       FacetedEdit.FormEditWidget.initialize();
       FacetedEdit.Window.initialize();
       FacetedEdit.FormSections.initialize();
+      FacetedEdit.Catalog.initialize();
     }else{
       jQuery('#faceted-edit-select-all-items').css('display', 'inline');
     }

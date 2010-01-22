@@ -9,10 +9,12 @@ from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import LinesWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
+from Products.Archetypes.utils import DisplayList
 from eea.facetednavigation.widgets.field import StringField
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
+
 
 EditSchema = Schema((
     StringField('index',
@@ -24,6 +26,20 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_index',
             description='Catalog index to use for search',
             description_msgid='help_faceted_criteria_index',
+            i18n_domain="eea.facetednavigation"
+        )
+    ),
+    StringField('operator',
+        schemata='default',
+        required=True,
+        vocabulary=DisplayList([('or', 'OR'), ('and', 'AND')]),
+        default='or',
+        widget=SelectionWidget(
+            format='select',
+            label='Operator',
+            label_msgid='faceted_criteria_operator',
+            description='Search with AND/OR between elements',
+            description_msgid='help_faceted_criteria_operator',
             i18n_domain="eea.facetednavigation"
         )
     ),
@@ -123,6 +139,11 @@ class Widget(CountableWidget):
         query = {}
         index = self.data.get('index', '')
         index = index.encode('utf-8', 'replace')
+
+        # Use 'and' by default in order to be backward compatible
+        operator = self.data.get('operator', 'and')
+        operator = operator.encode('utf-8', 'replace')
+
         if not index:
             return query
 
@@ -134,6 +155,6 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-        query[index] = {'query': value, 'operator': 'and'}
+        query[index] = {'query': value, 'operator': operator}
         return query
 

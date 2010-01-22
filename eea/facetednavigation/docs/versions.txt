@@ -105,3 +105,21 @@ Same for 'all' value for default
     >>> _ = handler(updateCriterion_button='Update', cid='c1', default='all')
     >>> version.key
     ''
+
+Some widgets use operator (AND/OR) in their query and this can affect results
+even if they are visible widgets
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...   wtype='checkbox', wposition='left', title='Checkbox widget',
+    ...   index='object_provides', operator='and',
+    ...   catalog='portal_catalog', default='')
+    >>> version.key
+    '354a959cafede303b6c0557b4ddbcfa5'
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c2', operator='or')
+    >>> version.key
+    'ce44ef2db1e18aa150d87ef70e0d2b5d'
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c2', operator='')
+    >>> version.key
+    ''

@@ -129,6 +129,14 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted.catalog.types.json"
+    class=".app.catalog.FacetedCatalog"
+    attribute="json_types"
+    permission="zope2.View"
+    />
+
   <browser:menuItem
     for="..interfaces.IFacetedNavigable"
     menu="object"

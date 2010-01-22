@@ -4,6 +4,7 @@ Changelog
 1.6 (Unreleased)
 ----------------
 
+* #2940 Enable and/or search operator on faceted checkbox widget [voineali]
 * Added an error layer in order to easily see widgets with confiugration
   problems and fix them without disabling JavaScript in browser
   and then trying to figure out which one is causing the problem and remove it.
