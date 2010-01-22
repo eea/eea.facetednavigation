@@ -193,6 +193,7 @@ FacetedEdit.FormWidgets = {
     this.form = jQuery('#faceted-edit-widgets');
     this.form.ajaxError(function(event, request, settings){
       jQuery(this).html('<h3>This site encountered an error trying to fulfill your request</h3><p>If the error persists please contact the site maintainer. Thank you for your patience.</p>');
+      jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: 'Error'});
     });
     jQuery('.faceted-edit-fieldset').hide();
     this.action = this.form.attr('action');

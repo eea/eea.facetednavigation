@@ -10,6 +10,13 @@ Faceted.SortingWidget = function(wid){
   this.selected = [];
   this.select = jQuery('#' + this.wid);
 
+  var error = jQuery('.faceted-widget:has(div.faceted-sorting-errors)');
+  if(error.length){
+    error.remove();
+    jQuery(Faceted.Events).trigger(Faceted.Events.REDRAW);
+    return;
+  }
+
   // Handle select change
   jQuery('form', this.widget).submit(function(){
     return false;

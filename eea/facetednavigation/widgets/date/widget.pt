@@ -1,4 +1,5 @@
 <div class="faceted-widget faceted-date-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   default python:view.default;
@@ -13,7 +14,8 @@
 <legend tal:define="title python:view.data.get('title', '')" tal:content="
   python:view.translate(title)" i18n:translate="">Date Widget</legend>
 
-<form action="." method="get" class="faceted-date-widget-form">
+<form action="." method="get" class="faceted-date-widget-form"
+  tal:on-error="structure python:error_view(error=error, cid=wid)">
   <select name="from" tal:attributes="id string:$wid-from" style="display: none">
     <tal:option repeat="item vocabulary">
       <option tal:attributes="

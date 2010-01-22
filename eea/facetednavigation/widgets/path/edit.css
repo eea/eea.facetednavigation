@@ -16,7 +16,7 @@
   border: none ! important;
 }
 
-.faceted-path-widget .faceted-errors{
+.faceted-path-widget .faceted-path-errors{
   color: red;
   text-align: center;
 }

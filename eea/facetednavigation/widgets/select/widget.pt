@@ -1,4 +1,5 @@
 <div class="faceted-widget faceted-select-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
@@ -6,16 +7,17 @@
   css string:faceted-widget faceted-select-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
-  css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
-  vocabulary python:view.vocabulary()"
+  css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
 
 <fieldset class="widget-fieldset">
 <legend tal:define="title python:view.data.get('title', '')" tal:content="
   python:view.translate(title)" i18n:translate="">HTML Widget</legend>
-<form action="." method="get">
+<form action="." method="get"
+  tal:on-error="structure python:error_view(error=error, cid=wid)">
 
-<tal:select condition="vocabulary">
+<tal:select define="vocabulary python:view.vocabulary()"
+  condition="vocabulary">
   <select tal:attributes="name wid; id wid" class="faceted_select">
     <option title="All" value=""
       i18n:attributes="title" i18n:translate="">All</option>

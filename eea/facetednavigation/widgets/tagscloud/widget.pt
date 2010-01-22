@@ -1,4 +1,5 @@
 <div class="faceted-widget faceted-tagscloud-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
@@ -13,13 +14,15 @@
   height python:view.data.get('height', 200);
   maxitems python:int(view.data.get('maxitems', 0)) or 0;
   kwargs options/kwargs|python:{};
-  vocabulary python:kwargs.get('vocabulary', view.vocabulary());
-  all python:vocabulary.next();
 " tal:attributes="id string:${wid}_widget; class css">
 
 <fieldset class="widget-fieldset">
   <legend tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">HTML Widget</legend>
+
+<tal:widget tal:on-error="structure python:error_view(error=error, cid=wid)" define="
+  vocabulary python:kwargs.get('vocabulary', view.vocabulary());
+  all python:vocabulary.next();">
   <ul tal:attributes="id string:${wid}" class="tags-cloud">
       <li tal:attributes="
        class python:default == '' and 'faceted-tag-selected' or '';
@@ -51,5 +54,7 @@
     <span tal:attributes="id string:${wid}-sizemax" tal:content="sizemax" />
     <span tal:attributes="id string:${wid}-height" tal:content="height" />
   </div>
+</tal:widget>
+
 </fieldset>
 </div>

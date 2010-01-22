@@ -1,4 +1,5 @@
 <div class="faceted-widget faceted-path-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   site_url python:context.portal_url();
   theme python:view.data.get('theme', 'green');
@@ -12,7 +13,8 @@
 <fieldset class="widget-fieldset">
   <legend tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">Widget title</legend>
-  <form action="." method="get">
+  <form action="." method="get"
+    tal:on-error="structure python:error_view(error=error, cid=wid)">
     <input type="text" tal:attributes="
       name string:${wid};
       id string:${wid};
@@ -23,7 +25,7 @@
       title theme;"
       tal:content="theme_url" />
   </form>
-  <div class='faceted-errors' style="display: none"
+  <div class='faceted-path-errors' style="display: none"
     i18n:translate="faceted_path_widget_errors">
     This widget will be ignored as provided root is unreachable or it has no
     folderish children.

@@ -1,21 +1,24 @@
 <div class="faceted-widget faceted-sorting-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   default python:view.default;
   default_index python:len(default) > 0 and default[0] or '';
   default_reverse python:len(default) > 1 and default[1] or None;
   css string:faceted-widget faceted-sorting-widget;
-  css python:hidden and css + ' faceted-widget-hidden' or css;
-  vocabulary python:view.vocabulary()"
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
 
 <fieldset class="widget-fieldset">
 <legend tal:define="title python:view.data.get('title', '')" tal:content="
   python:view.translate(title)" i18n:translate="">HTML Widget</legend>
-<form action="." method="get">
+<form action="." method="get"
+  tal:on-error="structure python:error_view(error=error, cid=wid)">
 
-<div tal:condition="not:vocabulary" class="portalMessage"
-  i18n:translate="">
+<tal:widget define="vocabulary python:view.vocabulary()">
+
+<div tal:condition="not:vocabulary"
+  class="portalMessage faceted-sorting-errors" i18n:translate="">
   Invalid or empty vocabulary provided for this widget. Leave empty for default
   sorting criteria.
 </div>
@@ -48,6 +51,7 @@
   </div>
 </tal:sorting>
 
+</tal:widget>
 </form>
 </fieldset>
 </div>

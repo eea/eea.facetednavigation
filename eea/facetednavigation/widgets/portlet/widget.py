@@ -43,14 +43,14 @@ class Widget(AbstractWidget):
         """
         macro = self.data.get('macro', '')
         if not macro:
-            return ''
+            raise ValueError('Empty macro %s' % macro)
 
-        macro = macro.replace('here/', '', 1)
-        macro = macro.split('/macros/')
-        if len(macro) != 2:
-            return ''
+        macro_list = macro.replace('here/', '', 1)
+        macro_list = macro_list.split('/macros/')
+        if len(macro_list) != 2:
+            raise ValueError('Invalid macro: %s' % macro)
 
-        path, mode = macro
+        path, mode = macro_list
         path = path.split('/')
         try:
             template = self.context.restrictedTraverse(path)
@@ -58,7 +58,5 @@ class Widget(AbstractWidget):
                 return template.macros[mode]
         except Exception, err:
             # This means we didn't have access or it doesn't exist
-            logger.exception('macro: %s, error: %s', macro, err)
-            return ''
-        logger.exception("Macro %s does not exist", macro)
-        return ''
+            raise
+        raise ValueError("Invalid macro: %s" % macro)

@@ -1,4 +1,5 @@
 <div class="faceted-widget faceted-alphabetic-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
@@ -14,6 +15,7 @@
     <p tal:define="
       lang python:view.request.get('LANGUAGE', 'en');
       alph python:view.getAlphabet(lang);"
+      tal:on-error="structure python:error_view(error=error, cid=wid)"
       tal:attributes="id wid">
       <span class="faceted_letter" tal:define="
           letter_css python:default == '' and 'faceted_letter faceted_letter_selected' or 'faceted_letter'"

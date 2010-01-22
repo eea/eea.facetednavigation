@@ -14,6 +14,7 @@ Faceted.Events.WINDOW_HEIGHT_CHANGED = 'FACETED-WINDOW-HEIGHT-CHANGED';
 Faceted.Events.AJAX_START = 'FACETED-AJAX-START';
 Faceted.Events.AJAX_STOP = 'FACETED-AJAX-STOP';
 Faceted.Events.AJAX_ERROR = 'FACETED-AJAX-ERROR';
+Faceted.Events.REDRAW = 'FACETED-REDRAW';
 
 /* Widgets
 */
@@ -445,13 +446,23 @@ Faceted.AjaxLook = {
 /* Document ready
 */
 Faceted.Load = function(){
-  if(jQuery('#faceted-left-column:has(div)').length){
-    jQuery('#center-content-area').addClass('left-area-js');
-  }
+  // Remove widgets with errors
+  jQuery('.faceted-widget:has(div.faceted-widget-error)').remove();
 
-  if(jQuery('#faceted-right-column:has(div)').length){
-    jQuery('#center-content-area').addClass('right-area-js');
-  }
+  jQuery(Faceted.Events).bind(Faceted.Events.REDRAW, function(){
+    if(jQuery('#faceted-left-column:has(div.faceted-widget)').length){
+      jQuery('#center-content-area').addClass('left-area-js');
+    }else{
+      jQuery('#center-content-area').removeClass('left-area-js');
+    }
+
+    if(jQuery('#faceted-right-column:has(div.faceted-widget)').length){
+      jQuery('#center-content-area').addClass('right-area-js');
+    }else{
+      jQuery('#center-content-area').removeClass('right-area-js');
+    }
+  });
+  jQuery(Faceted.Events).trigger(Faceted.Events.REDRAW);
 
   // Init widgets UI
   jQuery(Faceted.Events).trigger(Faceted.Events.INITIALIZE);

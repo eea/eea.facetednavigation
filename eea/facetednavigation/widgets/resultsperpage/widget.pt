@@ -1,4 +1,5 @@
 <div class="faceted-widget faceted-resultsperpage-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   default python:view.default or 0;
@@ -10,7 +11,8 @@
 <fieldset class="widget-fieldset">
 <legend tal:define="title python:view.data.get('title', '')" tal:content="
   python:view.translate(title)" i18n:translate="">HTML Widget</legend>
-<form action="." method="get">
+<form action="." method="get"
+  tal:on-error="structure python:error_view(error=error, cid=wid)">
 
 <tal:select condition="vocabulary">
   <select tal:attributes="name wid; id wid" class="faceted_select">

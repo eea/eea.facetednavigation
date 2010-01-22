@@ -53,9 +53,10 @@ FacetedTree.JsTree = function(wid, container, mode){
     }else{
       if(mode=='edit'){
         jQuery('form', container).hide();
-        jQuery('div.faceted-errors', container).show();
+        jQuery('div.faceted-path-errors', container).show();
       }else{
-        container.remove();
+        jQuery('.faceted-widget:has(div.faceted-path-errors)').remove();
+        jQuery(Faceted.Events).trigger(Faceted.Events.REDRAW);
       }
     }
     jQuery(FacetedTree.Events).trigger(FacetedTree.Events.AJAX_STOP, {msg: data});

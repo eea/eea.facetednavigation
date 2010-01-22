@@ -225,3 +225,19 @@ div.faceted-widget-edit ul.ui-widget-header {
 .faceted-add-button .ui-icon {
   background-image: url(../../++resource++faceted_images/ui-icons_222222_256x240-green.png) ! important;
 }
+
+/* Errors
+=========  */
+.faceted-widget-error {
+  display: block;
+}
+
+.faceted-widget-error div {
+  text-align: center;
+  color: red;
+}
+
+.faceted-widget-error dd {
+  margin-left: 2em;
+  padding-bottom:0;
+}

@@ -121,6 +121,14 @@
     permission="cmf.ModifyPortalContent"
     />
 
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
+    name="faceted.widget.error"
+    class=".app.error.FacetedError"
+    template="template/error.pt"
+    permission="zope2.View"
+    />
+
   <browser:menuItem
     for="..interfaces.IFacetedNavigable"
     menu="object"
