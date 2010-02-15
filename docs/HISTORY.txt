@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.6 (Unreleased)
+1.6 (2010-02-15)
 ----------------
 
 * #2940 Enable and/or search operator on faceted checkbox widget [voineali]
