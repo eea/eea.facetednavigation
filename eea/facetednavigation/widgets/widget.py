@@ -238,7 +238,18 @@ class Widget(ATWidget):
         if not index:
             return []
 
-        res = [str(x).strip() for x in index.uniqueValues() if x and x.strip()]
+        res = []
+        for val in index.uniqueValues():
+            if not isinstance(val, unicode):
+                try:
+                    val = unicode(val, 'utf-8')
+                except Exception, err:
+                    continue
+
+            var = val.strip()
+            if not val:
+                continue
+            res.append(val)
         return res
 
     def portal_vocabulary(self):
@@ -347,6 +358,11 @@ class CountableWidget(Widget):
             if not value:
                 res[value] = len(brains)
                 continue
+            if isinstance(value, unicode):
+                try:
+                    value = value.encode('utf-8')
+                except Exception, err:
+                    continue
             rset = apply_index({index_id: value})
             if not rset:
                 continue
@@ -354,6 +370,9 @@ class CountableWidget(Widget):
             rset = IISet(rset)
             u, rset = weightedIntersection(brains, rset)
             if isinstance(value, str):
-                value = value.decode('utf-8', 'replace')
+                try:
+                    value = value.decode('utf-8')
+                except Exception, err:
+                    continue
             res[value] = len(rset)
         return res

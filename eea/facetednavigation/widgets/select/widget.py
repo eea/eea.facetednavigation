@@ -120,5 +120,8 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-        query[index] = value
+        if not isinstance(value, unicode):
+            value = value.decode('utf-8')
+
+        query[index] = value.encode('utf-8')
         return query

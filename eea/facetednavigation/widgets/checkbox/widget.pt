@@ -3,7 +3,6 @@
   wid python:view.data.getId();
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
-  default python:view.default or [];
   css string:faceted-widget faceted-checkboxes-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
@@ -29,7 +28,7 @@
         term_index python:repeat['term'].index();" tal:attributes="
         class python:(term_index < maxitems) and 'faceted-maxitems-show' or 'faceted-maxitems-hide'">
         <input type="checkbox" class="faceted-noborder" tal:attributes="
-          checked python:term_id in default;
+          checked python:view.selected(term_id);
           name string:${wid};
           id chbox_id;
           title term_label;

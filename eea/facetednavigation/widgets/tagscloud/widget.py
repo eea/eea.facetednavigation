@@ -10,6 +10,7 @@ from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 from eea.facetednavigation.widgets.field import StringField
+from eea.faceted.vocabularies.utils import compare
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
@@ -247,10 +248,13 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-        if value.lower() in ['all', u'all']:
+        if compare(value, 'all') == 0:
             return query
 
-        query[index] = value
+        if not isinstance(value, unicode):
+            value = value.decode('utf-8')
+
+        query[index] = value.encode('utf-8')
         return query
 
     def __call__(self, **kwargs):

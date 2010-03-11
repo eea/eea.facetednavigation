@@ -13,6 +13,7 @@ from Products.Archetypes.utils import DisplayList
 from eea.facetednavigation.widgets.field import StringField
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from eea.faceted.vocabularies.utils import compare
 from eea.facetednavigation.widgets.widget import CountableWidget
 
 
@@ -132,6 +133,14 @@ class Widget(CountableWidget):
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema + EditSchema
+
+    def selected(self, key):
+        """ Return True if key in self.default
+        """
+        for item in self.default:
+            if compare(key, item) == 0:
+                return True
+        return False
 
     def query(self, form):
         """ Get value from form and return a catalog dict query

@@ -1,0 +1,219 @@
+Unicode support
+===============
+Support for NON-ASCII queries
+
+Imports
+-------
+    >>> from zope.component import getMultiAdapter, getUtility
+    >>> from p4a.subtyper.interfaces import ISubtyper
+    >>> from zope.component import getUtility
+    >>> from eea.facetednavigation.interfaces import ICriteria
+    >>> from eea.facetednavigation.interfaces import IWidgetsInfo
+    >>> from Products.CMFCore.utils import getToolByName
+    >>> from Products.Archetypes.public import StringWidget, LinesWidget
+
+Set up
+------
+
+    >>> self.loginAsPortalOwner()
+    >>> sid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(sid)
+    >>> subtyper = getUtility(ISubtyper)
+    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> subtyper.existing_type(sandbox).name
+    'eea.facetednavigation.FolderFacetedNavigable'
+    >>> request = sandbox.REQUEST
+    >>> putils = getToolByName(sandbox, 'plone_utils')
+
+Cleanup default widgets
+-----------------------
+
+    >>> cids = ICriteria(sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Add some content
+----------------
+
+    >>> doc = sandbox.invokeFactory('News Item', 'non-ascii-folder', title='NON-ASCII Folder')
+    >>> doc = sandbox._getOb(doc)
+    >>> doc.setLanguage('en')
+    >>> doc.setSubject((u'\u015etire',))
+    >>> doc.reindexObject()
+
+Let's do some search
+--------------------
+
+    >>> configure = getMultiAdapter((sandbox, request), name=u'faceted_configure')
+    >>> query = getMultiAdapter((sandbox, request), name=u'faceted_query')
+    >>> widgets = sandbox.unrestrictedTraverse('@@faceted_widgets')
+
+Checkbox widget
+
+  Hidden
+
+    >>> _ = configure(addPropertiesWidget_button='Add', wtype='checkbox',
+    ...               wposition='top', title='Checkbox', catalog='portal_catalog',
+    ...               index='Subject', default=['\xc5\x9etire'], hidden=True)
+    >>> brains = query.query(batch=False)
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Visible
+
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=0)
+    >>> brains = query.query(batch=False, c0=['\xc5\x9etire'])
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Render
+
+    >>> print widgets()
+    <BLANKLINE>
+    ...<legend>Checkbox</legend>
+    ...
+    ...<input type="checkbox"...
+    ...
+
+  Cleanup
+
+    >>> ICriteria(sandbox).delete('c0')
+
+
+Radio widget
+
+  Hidden
+
+    >>> _ = configure(addPropertiesWidget_button='Add', wtype='radio',
+    ...               wposition='top', title='Radio', catalog='portal_catalog',
+    ...               index='Subject', default='\xc5\x9etire', hidden=True)
+    >>> brains = query.query(batch=False)
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Visible
+
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=0)
+    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Render
+
+    >>> print widgets()
+    <BLANKLINE>
+    ...<legend>Radio</legend>
+    ...
+    ...<input type="radio"...
+    ...
+
+  Cleanup
+
+    >>> ICriteria(sandbox).delete('c0')
+
+Select widget
+
+  Hidden
+
+    >>> _ = configure(addPropertiesWidget_button='Add', wtype='select',
+    ...               wposition='top', title='Select', catalog='portal_catalog',
+    ...               index='Subject', default='\xc5\x9etire', hidden=True)
+    >>> brains = query.query(batch=False)
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Visible
+
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=0)
+    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Render
+
+    >>> print widgets()
+    <BLANKLINE>
+    ...<legend>Select</legend>
+    ...
+    ...<option...
+    ...
+
+  Cleanup
+
+    >>> ICriteria(sandbox).delete('c0')
+
+
+TagsCloud widget
+
+  Hidden
+
+    >>> _ = configure(addPropertiesWidget_button='Add', wtype='tagscloud',
+    ...               wposition='top', title='Tags', catalog='portal_catalog',
+    ...               index='Subject', default='\xc5\x9etire', hidden=True)
+    >>> brains = query.query(batch=False)
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Visible
+
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=0)
+    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Render
+
+    >>> print widgets()
+    <BLANKLINE>
+    ...<legend>Tags</legend>
+    ...
+    ...<li...
+    ...
+
+  Cleanup
+
+    >>> ICriteria(sandbox).delete('c0')
+
+
+Text widget
+
+  Hidden
+
+    >>> _ = configure(addPropertiesWidget_button='Add', wtype='text',
+    ...               wposition='top', title='Text',
+    ...               index='Subject', default='\xc5\x9etire', hidden=True)
+    >>> brains = query.query(batch=False)
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Visible
+
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=0)
+    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> for brain in brains:
+    ...     print brain.Title
+    NON-ASCII Folder
+
+  Render
+
+    >>> print widgets()
+    <BLANKLINE>
+    ...<legend>Text</legend>
+    ...
+    ...<input type="text"...
+    ...
+
+  Cleanup
+
+    >>> ICriteria(sandbox).delete('c0')
