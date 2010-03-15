@@ -10,6 +10,13 @@ class IWidget(Interface):
     """ Basic widget
     """
 
+class IWidgetFilterBrains(Interface):
+    """ Adapter to filter brains after catalog query.
+    """
+    def __call__(brains, form):
+        """ Filter brains.
+        """
+
 class IWidgetsInfo(Interface):
     """ Utility to get available widgets
     """

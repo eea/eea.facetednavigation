@@ -4,6 +4,7 @@ Changelog
 1.7 (Unreleased)
 ----------------
 
+* #3141 Replaced after_query method with IWidgetFilterBrains adapter [voineali]
 * #3100 Support non-ascii keywords vocabulary [voineali]
 
 1.6 (2010-02-15)

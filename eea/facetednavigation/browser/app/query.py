@@ -13,6 +13,7 @@ from eea.facetednavigation.interfaces import IFacetedCatalog
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.interfaces import IFacetedWrapper
+from eea.facetednavigation.interfaces import IWidgetFilterBrains
 
 logger = logging.getLogger('eea.facetednavigation.browser.app.query')
 
@@ -45,33 +46,25 @@ class FacetedQueryHandler(object):
             return self.context
         return wrapper(content)
 
-    def query(self, batch=True, sort=True, **kwargs):
-        """ Search using given criteria
+    def criteria(self, sort=True, **kwargs):
+        """ Process catalog query
         """
         kwargs.update(self.request.form)
         logger.debug(kwargs)
 
         # Generate the catalog query
-        catalog = getUtility(IFacetedCatalog)
         mtool = getToolByName(self.context, 'portal_membership', None)
         criteria = ICriteria(self.context)
 
         query = {}
-        after_queries = []
         if mtool.isAnonymousUser():
             query['review_state'] = 'published'
 
-        num_per_page = 20
         for cid, criterion in criteria.items():
             widget = criteria.widget(cid=cid)
             widget = widget(self.context, self.request, criterion)
 
             query.update(widget.query(kwargs))
-            after_queries.append(widget.after_query)
-
-            # Results per page
-            if widget.widget_type == 'resultsperpage':
-                num_per_page = widget.results_per_page(kwargs)
 
             # Handle language widgets
             if criterion.get('index', '') == 'Language':
@@ -90,6 +83,13 @@ class FacetedQueryHandler(object):
         query.setdefault('Language', self.language)
 
         logger.debug(query)
+        return query
+
+    def query(self, batch=True, sort=True, **kwargs):
+        """ Search using given criteria
+        """
+        query = self.criteria(sort=sort, **kwargs)
+        catalog = getUtility(IFacetedCatalog)
         try:
             brains = catalog(self.context, **query)
         except Exception, err:
@@ -97,8 +97,18 @@ class FacetedQueryHandler(object):
             return Batch([], 20, 0)
 
         # Apply after query on brains
-        for aquery in after_queries:
-            brains = aquery(brains, kwargs)
+        num_per_page = 20
+        criteria = ICriteria(self.context)
+        for cid, criterion in criteria.items():
+            widget = criteria.widget(cid=cid)
+            widget = widget(self.context, self.request, criterion)
+
+            if widget.widget_type == 'resultsperpage':
+                num_per_page = widget.results_per_page(kwargs)
+
+            aquery = queryAdapter(widget, IWidgetFilterBrains)
+            if aquery:
+                brains = aquery(brains, kwargs)
 
         # Render results
         b_start = int(kwargs.get('b_start', 0))

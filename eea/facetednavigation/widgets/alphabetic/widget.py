@@ -1,5 +1,6 @@
 """ Alphabet widget
 """
+from zope.interface import implements
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import BooleanField
 from Products.Archetypes.public import StringWidget
@@ -10,6 +11,8 @@ from eea.facetednavigation.widgets.field import StringField
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from alphabets import unicode_character_map
 from eea.facetednavigation.widgets.widget import CountableWidget
+
+from interfaces import IAlphabeticWidget
 
 EditSchema = Schema((
     StringField('index',
@@ -62,6 +65,8 @@ EditSchema = Schema((
 class Widget(CountableWidget):
     """ Widget
     """
+    implements(IAlphabeticWidget)
+
     # Widget properties
     widget_type = 'alphabetic'
     widget_label = 'Alphabetic'
@@ -72,43 +77,6 @@ class Widget(CountableWidget):
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema + EditSchema
-
-    def after_query(self, brains, form):
-        """ Filter brains
-        """
-        wid = self.data.getId()
-        index = self.data.get('index', '')
-
-        if self.hidden:
-            letter = self.default
-        else:
-            letter = form.get(wid, '')
-
-        if isinstance(letter, str):
-            letter = letter.decode('utf-8', 'replace')
-
-        for brain in brains:
-            if not (index and letter):
-                yield brain
-                continue
-
-            if letter.lower() in [u'all', 'all']:
-                yield brain
-                continue
-
-            xval = getattr(brain, index, None)
-            if xval is None:
-                continue
-
-            if type(xval) not in (str, unicode):
-                continue
-
-            if isinstance(xval, str):
-                xval = xval.decode('utf-8', 'replace')
-
-            if not xval.lower().startswith(letter.lower()):
-                continue
-            yield brain
 
     # Widget custom API
     def getAlphabet(self, lang):

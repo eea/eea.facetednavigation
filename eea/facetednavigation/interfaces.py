@@ -22,6 +22,9 @@ from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.widgets.interfaces import IWidget
 from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
 
+# After query adapter
+from eea.facetednavigation.widgets.interfaces import IWidgetFilterBrains
+
 # Language
 from eea.facetednavigation.indexes.language.interfaces import ILanguageWidgetAdapter
 

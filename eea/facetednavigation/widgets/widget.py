@@ -166,11 +166,6 @@ class Widget(ATWidget):
         """
         return {}
 
-    def after_query(self, brains, form):
-        """ Filter brains
-        """
-        return brains
-
     def translate(self, msgid):
         """ Use PloneMessageFactory to translate msgid
         """

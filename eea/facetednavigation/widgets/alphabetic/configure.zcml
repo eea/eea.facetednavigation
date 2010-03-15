@@ -1,9 +1,13 @@
-<configure
+<configure xmlns="http://namespaces.zope.org/zope"
   xmlns:browser="http://namespaces.zope.org/browser"
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="eea.facetednavigation">
 
   <faceted:widget factory=".widget.Widget" />
+  <adapter
+    for=".interfaces.IAlphabeticWidget"
+    provides="..interfaces.IWidgetFilterBrains"
+    factory=".adapters.WidgetFilterBrains" />
 
   <browser:resource
     name="eea.facetednavigation.widgets.alphabets.view.js"
