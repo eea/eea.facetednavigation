@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.7 (Unreleased)
+1.7 (2010-03-16)
 ----------------
 
 * #3141 Replaced after_query method with IWidgetFilterBrains adapter [voineali]
