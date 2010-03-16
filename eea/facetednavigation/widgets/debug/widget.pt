@@ -1,0 +1,42 @@
+<div class="faceted-widget faceted-debug-widget" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  css string:faceted-widget faceted-debug-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  visible nocall:context/@@faceted.widget.debug.visible"
+  tal:attributes="id string:${wid}_widget; class css"
+  tal:condition="python:visible(debugger=wid)">
+
+<fieldset class="widget-fieldset">
+  <legend tal:define="title python:view.data.get('title', '')" tal:content="
+    python:view.translate(title)" i18n:translate="">Debug Widget</legend>
+  <form action="." method="get"
+    tal:on-error="structure python:error_view(error=error, cid=wid)">
+    <dl>
+    <dt class="debug-query">
+      <span i18n:translate="">Catalog query</span>
+    </dt>
+    <dd class="debug-query"
+      tal:define="query nocall:context/@@faceted.widget.debug.query">
+      <pre tal:content="python:query(debugger=wid)" />
+    </dd>
+    <dt class="debug-after" i18n:translate="">After query filters</dt>
+    <dd class="debug-after"
+      tal:define="query nocall:context/@@faceted.widget.debug.after">
+      <pre tal:content="structure python:query(debugger=wid)" />
+    </dd>
+    <dt class="debug-count" i18n:translate="">Counters</dt>
+    <dd class="debug-count"
+      tal:define="query nocall:context/@@faceted.widget.debug.counters">
+      <pre tal:content="structure python:query(debugger=wid)" />
+    </dd>
+    <dt class="debug-config" i18n:translate="">Current configuration</dt>
+    <dd class="debug-config"
+      tal:define="query nocall:context/@@faceted.widget.debug.criteria">
+      <pre tal:content="structure python:query(debugger=wid)" />
+    </dd>
+    </dl>
+  </form>
+</fieldset>
+</div>

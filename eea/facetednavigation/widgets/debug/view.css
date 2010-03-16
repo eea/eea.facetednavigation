@@ -1,0 +1,7 @@
+.faceted-debug-widget pre {
+  max-height: 200px;
+}
+
+.faceted-debug-widget dt {
+  clear: both;
+}

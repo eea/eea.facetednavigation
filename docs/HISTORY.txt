@@ -4,6 +4,7 @@ Changelog
 1.8 (Unreleased)
 ----------------
 
+* #3141 Added debug widget [voineali]
 
 1.7 (2010-03-16)
 ----------------

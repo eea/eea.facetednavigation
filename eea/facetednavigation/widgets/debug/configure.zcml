@@ -1,0 +1,73 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:faceted="http://namespaces.zope.org/faceted"
+  i18n_domain="eea.facetednavigation">
+
+  <faceted:widget factory=".widget.Widget" />
+
+  <browser:page
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    name="faceted.widget.debug.visible"
+    class=".browser.Debug"
+    attribute="visible"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    name="faceted.widget.debug.query"
+    class=".browser.Debug"
+    attribute="query"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    name="faceted.widget.debug.after"
+    class=".browser.Debug"
+    attribute="after"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    name="faceted.widget.debug.counters"
+    class=".browser.Debug"
+    attribute="counters"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    name="faceted.widget.debug.criteria"
+    class=".browser.Debug"
+    attribute="criteria"
+    permission="zope2.View"
+    />
+
+  <browser:resource
+    name="eea.facetednavigation.widgets.debug.edit.js"
+    file="./edit.js"
+   />
+
+  <browser:resource
+    name="eea.facetednavigation.widgets.debug.view.js"
+    file="./view.js"
+   />
+
+  <browser:resource
+    name="eea.facetednavigation.widgets.debug.view.css"
+    file="./view.css"
+   />
+
+  <browser:resource
+    name="eea.facetednavigation.widgets.debug.edit.css"
+    file="./edit.css"
+   />
+
+  <utility
+    component=".vocabulary.CurrentUserVocabularyFactory"
+    name="eea.faceted.vocabularies.CurrentUser"
+    />
+
+</configure>

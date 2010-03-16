@@ -1,0 +1,2 @@
+""" Query Debugger Widget
+"""
