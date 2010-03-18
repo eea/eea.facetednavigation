@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.8 (Unreleased)
+1.8 (2010-03-18)
 ----------------
 
 * #3157 Fixed: After last update faceted widgets not responding [voineali]
