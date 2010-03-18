@@ -4,6 +4,7 @@ Changelog
 1.8 (Unreleased)
 ----------------
 
+* #3157 Fixed: After last update faceted widgets not responding [voineali]
 * #3141 Added debug widget [voineali]
 
 1.7 (2010-03-16)

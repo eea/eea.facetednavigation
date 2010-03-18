@@ -49,7 +49,8 @@ class FacetedQueryHandler(object):
     def criteria(self, sort=True, **kwargs):
         """ Process catalog query
         """
-        kwargs.update(self.request.form)
+        if self.request:
+            kwargs.update(self.request.form)
         logger.debug(kwargs)
 
         # Generate the catalog query
@@ -88,6 +89,9 @@ class FacetedQueryHandler(object):
     def query(self, batch=True, sort=True, **kwargs):
         """ Search using given criteria
         """
+        if self.request:
+            kwargs.update(self.request.form)
+
         query = self.criteria(sort=sort, **kwargs)
         catalog = getUtility(IFacetedCatalog)
         try:
