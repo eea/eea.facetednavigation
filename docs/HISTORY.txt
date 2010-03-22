@@ -4,6 +4,8 @@ Changelog
 1.9 (Unreleased)
 ----------------
 
+* #3162 Fixed: Faceted text widget error [voineali]
+
 
 1.8 (2010-03-18)
 ----------------

@@ -61,3 +61,12 @@ Query
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['a-folder']
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=False)
+    >>> brains = query.query(c0='X')
+    >>> [brain.getId for brain in brains]
+    []
+
+    >>> brains = query.query(c0='Z')
+    >>> [brain.getId for brain in brains]
+    ['a-folder']

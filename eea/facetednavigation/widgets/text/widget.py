@@ -65,8 +65,11 @@ class Widget(AbstractWidget):
         if not value:
             return query
 
-        if not isinstance(value, unicode):
+        if isinstance(value, str):
             value = value.decode('utf-8')
 
-        query[index] = {'query': value.encode('utf-8'), 'operator': 'and'}
+        if isinstance(value, unicode):
+            value = value.encode('utf-8')
+
+        query[index] = {'query': value, 'operator': 'and'}
         return query
