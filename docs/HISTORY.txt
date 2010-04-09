@@ -4,6 +4,9 @@ Changelog
 2.0 (unreleased)
 ----------------
 
+* #3239 Fixed: z3 vocabularies are not updated at runtime [voineali]
+
+
 1.9 (2010-03-26)
 ----------------
 

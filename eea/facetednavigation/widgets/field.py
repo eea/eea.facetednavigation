@@ -11,11 +11,6 @@ class StringField(ArchStringField):
     def Vocabulary(self, content_instance=None):
         """ Override Vocabulary method (copied from plone 3)
         """
-        value = self.vocabulary
-
-        if value:
-            return ArchStringField.Vocabulary(self, content_instance)
-
         factory_name = getattr(self, 'vocabulary_factory', None)
         if not factory_name:
             return ArchStringField.Vocabulary(self, content_instance)
