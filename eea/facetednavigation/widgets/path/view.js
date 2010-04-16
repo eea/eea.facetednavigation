@@ -108,7 +108,7 @@ Faceted.PathWidget.prototype = {
     var query = {};
     query.path = js_widget.input.val();
     query.cid = js_widget.wid;
-    jQuery.getJSON('@@faceted.path.breadcrumbs.json', query, function(data){
+    jQuery.getJSON(Faceted.BASEURL + '@@faceted.path.breadcrumbs.json', query, function(data){
       js_widget.breadcrumbs.empty();
       jQuery.each(data, function(){
         js_widget.breadcrumbs.append(jQuery('<span>').html('&raquo;'));

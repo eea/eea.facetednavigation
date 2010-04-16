@@ -1,4 +1,4 @@
-var FacetedEdit = {version: '1.6.0'};
+var FacetedEdit = {version: '2.0'};
 FacetedEdit.loading = '<div class="faceted_loading"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
 
 // Widgets

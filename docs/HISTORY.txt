@@ -4,6 +4,10 @@ Changelog
 2.0 (unreleased)
 ----------------
 
+* #3198 Adjust faceted navigation JavaScript to work outside faceted navigable
+  contexts using a previously defined faceted navigable configuration. This way,
+  by providing faceted navigable URL it can be used in pop-ups,
+  dialogs, etc [voineali]
 * #3239 Fixed: z3 vocabularies are not updated at runtime [voineali]
 
 

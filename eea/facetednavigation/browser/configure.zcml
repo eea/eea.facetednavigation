@@ -17,6 +17,14 @@
 
   <browser:page
     for="..interfaces.IFacetedNavigable"
+    name="facetednavigation_simple_view"
+    template="template/simple_view.pt"
+    class=".app.view.FacetedContainerView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
     name="faceted_widgets"
     template="template/widgets.pt"
     class=".app.view.FacetedContainerView"

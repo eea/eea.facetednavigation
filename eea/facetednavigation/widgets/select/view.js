@@ -167,7 +167,7 @@ Faceted.SelectWidget.prototype = {
 
     var context = this;
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});
-    jQuery.getJSON('@@faceted_counter', query, function(data){
+    jQuery.getJSON(Faceted.BASEURL + '@@faceted_counter', query, function(data){
       context.count_update(data);
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_STOP, {wid: context.wid});
     });

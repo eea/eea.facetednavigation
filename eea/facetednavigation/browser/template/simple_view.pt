@@ -1,0 +1,9 @@
+<!-- Folder contents -->
+<div class="faceted-form" metal:define-macro="widgets" id="faceted-form"
+  tal:define="mode string:view;">
+  <metal:widgets use-macro="here/@@faceted_widgets/macros/widgets" />
+
+  <!-- Faceted version -->
+  <div style="display: none" id="faceted-version"
+    tal:content="here/@@faceted_version|string:" />
+</div>

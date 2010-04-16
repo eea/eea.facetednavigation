@@ -1,4 +1,4 @@
-var Faceted = {version: '1.0.0'};
+var Faceted = {version: '2.0'};
 /* Events
 */
 Faceted.Events = {};
@@ -16,6 +16,25 @@ Faceted.Events.AJAX_STOP = 'FACETED-AJAX-STOP';
 Faceted.Events.AJAX_ERROR = 'FACETED-AJAX-ERROR';
 Faceted.Events.REDRAW = 'FACETED-REDRAW';
 
+/* Unbind events
+*/
+Faceted.Events.cleanup = function(){
+  //Faceted.Events.INITIALIZE
+  jQuery(Faceted.Events).unbind(Faceted.Events.REDRAW);
+  jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_START);
+  jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_SUCCESS);
+  jQuery(Faceted.Events).unbind(Faceted.Events.QUERY_INITIALIZED);
+  jQuery(Faceted.Events).unbind(Faceted.Events.QUERY_CHANGED);
+  jQuery(Faceted.Events).unbind(Faceted.Events.RESET);
+  jQuery(Faceted.Events).unbind(Faceted.Events.FORM_DO_QUERY);
+  jQuery(Faceted.Events).unbind(Faceted.Events.WINDOW_WIDTH_CHANGED);
+  jQuery(Faceted.Events).unbind(Faceted.Events.WINDOW_HEIGHT_CHANGED);
+  jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_START);
+  jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_STOP);
+  jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_ERROR);
+  jQuery(Faceted.Events).unbind(Faceted.Events.REDRAW);
+};
+
 /* Widgets
 */
 Faceted.Widgets = {};
@@ -23,6 +42,15 @@ Faceted.Widgets = {};
 /* Query
 */
 Faceted.Query = {};
+
+/* Context url.
+Default: (context related)
+*/
+Faceted.BASEURL = '';
+
+/* URL watch for setInterval
+*/
+Faceted.setIntervalId = 0;
 
 /* Return minimal and sorted query
 */
@@ -171,7 +199,7 @@ Faceted.Form = {
 
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_START);
     context.area.fadeOut('fast', function(){
-      var loading = '<div class="faceted_loading"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
+      var loading = '<div class="faceted_loading"><img src="' + Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
       context.area.html(loading);
       context.area.fadeIn('slow');
 
@@ -179,7 +207,7 @@ Faceted.Form = {
       if(context.version){
         query.version = context.version;
       }
-      jQuery.get('@@faceted_query', query, function(data){
+      jQuery.get(Faceted.BASEURL + '@@faceted_query', query, function(data){
         context.area.fadeOut('fast', function(){
           context.area.html(data);
           context.area.fadeIn('slow');
@@ -229,7 +257,7 @@ Faceted.URLHandler = {
       jQuery('#faceted-form').append(iediv);
       this.iframe = jQuery('#faceted-iehistory');
       var ie_hash = this.query2hash(Faceted.Query);
-      this.iframe.attr('src', '@@faceted_history?' + ie_hash.replace('#', ''));
+      this.iframe.attr('src', Faceted.BASEURL + '@@faceted_history?' + ie_hash.replace('#', ''));
     }
   },
 
@@ -292,7 +320,7 @@ Faceted.URLHandler = {
       document.location.hash = hash;
     }else{
       hash = hash.replace('#', '');
-      this.iframe.attr('src', '@@faceted_history?' + hash);
+      this.iframe.attr('src', Faceted.BASEURL + '@@faceted_history?' + hash);
     }
   },
 
@@ -443,9 +471,13 @@ Faceted.AjaxLook = {
   }
 };
 
-/* Document ready
+/* Load facetednavigation
 */
-Faceted.Load = function(){
+Faceted.Load = function(evt, baseurl){
+  if(baseurl){
+    Faceted.BASEURL = baseurl;
+  }
+
   // Remove widgets with errors
   jQuery('.faceted-widget:has(div.faceted-widget-error)').remove();
 
@@ -481,7 +513,7 @@ Faceted.Load = function(){
     Faceted.Form.reset();
   });
 
-  setInterval("Faceted.URLHandler.hash_changed()", 300);
+  Faceted.setIntervalId = setInterval("Faceted.URLHandler.hash_changed()", 300);
   // Override calendar close handler method in order to raise custom events
   if(window.Calendar){
     Calendar.prototype.callCloseHandler = function () {
@@ -505,4 +537,21 @@ Faceted.Load = function(){
 };
 
 Faceted.Unload = function(){
+};
+
+/* Cleanup
+*/
+Faceted.Cleanup = function(){
+  // Clear setInterval
+  clearInterval(Faceted.setIntervalId);
+
+  // Unbind events
+  Faceted.Events.cleanup();
+
+  // Reset
+  Faceted.Widgets = {};
+  Faceted.Query = {};
+
+  // Reset URL hash
+  Faceted.URLHandler.set();
 };

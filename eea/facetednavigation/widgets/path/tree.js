@@ -1,4 +1,4 @@
-var FacetedTree = {version: '1.0.0'};
+var FacetedTree = {version: '2.0'};
 
 FacetedTree.Events = {};
 FacetedTree.Events.CHANGED = 'FACETEDTREE-CHANGED';
@@ -6,6 +6,10 @@ FacetedTree.Events.AJAX_START = 'FACETEDTREE-AJAX-START';
 FacetedTree.Events.AJAX_STOP = 'FACETEDTREE-AJAX-STOP';
 
 FacetedTree.JsTree = function(wid, container, mode){
+  this.BASEURL = '';
+  if(window.Faceted){
+    this.BASEURL = Faceted.BASEURL;
+  }
   this.wid = wid;
   this.mode = mode || 'view';
   this.input = jQuery('#' + wid, container);
@@ -47,7 +51,7 @@ FacetedTree.JsTree = function(wid, container, mode){
   query.mode = this.mode;
 
   jQuery(FacetedTree.Events).trigger(FacetedTree.Events.AJAX_START, {msg: 'Loading ...'});
-  jQuery.getJSON('@@faceted.path.tree.json', query, function(data){
+  jQuery.getJSON(js_tree.BASEURL + '@@faceted.path.tree.json', query, function(data){
     if(data.length){
       js_tree.initialize(data);
     }else{
@@ -87,7 +91,7 @@ FacetedTree.JsTree.prototype = {
         async: true,
         opts: {
           method: 'POST',
-          url: '@@faceted.path.tree.json'
+          url: js_tree.BASEURL  + '@@faceted.path.tree.json'
         }
       },
       callback: {

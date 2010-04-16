@@ -1,4 +1,4 @@
-var FacetedExpand = {version: '1.0.0'};
+var FacetedExpand = {version: '2.0'};
 
 FacetedExpand.ExpandColapse = function(wid, container){
   var hideitems = jQuery('li.faceted-maxitems-hide', container);

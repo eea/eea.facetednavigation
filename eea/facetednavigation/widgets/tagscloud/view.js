@@ -204,7 +204,7 @@ Faceted.TagsCloudWidget.prototype = {
     var context = this;
 
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});
-    jQuery.get('@@tagscloud_counter', query, function(data){
+    jQuery.get(Faceted.BASEURL + '@@tagscloud_counter', query, function(data){
       context.count_update(data);
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_STOP, {wid: context.wid});
     });
