@@ -85,7 +85,7 @@ Faceted.Window = {
       js_window.height_change();
     });
 
-    // Full screen icon cliked
+    // Full screen icon clicked
     var fullscreen = jQuery('a:has(img#icon-full_screen)');
     if(fullscreen.length){
       js_window.toggle_fullscreen(fullscreen);
