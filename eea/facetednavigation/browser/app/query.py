@@ -38,6 +38,21 @@ class FacetedQueryHandler(object):
             return lang()
         return self.request.get('LANGUAGE', '')
 
+    @property
+    def default_criteria(self):
+        """ Return default criteria
+        """
+        query = {}
+        criteria = queryAdapter(self.context, ICriteria)
+        for cid, criterion in criteria.items():
+            widget = criteria.widget(cid=cid)
+            widget = widget(self.context, self.request, criterion)
+            default = widget.default
+            if not default:
+                continue
+            query[cid.encode('utf-8')] = default
+        return query
+
     def get_context(self, content=None):
         """ Return context
         """

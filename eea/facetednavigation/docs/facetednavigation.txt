@@ -98,3 +98,13 @@ Delete criteria
     >>> criteria = config.get_criteria()
     >>> [x.widget for x in criteria]
     [u'text', u'sorting']
+
+Default criteria
+================
+
+    >>> query_handler.default_criteria
+    {}
+
+    >>> _ = handler(wtype='text', addPropertiesWidget_button=True, default='Water')
+    >>> query_handler.default_criteria
+    {'c2': u'Water'}

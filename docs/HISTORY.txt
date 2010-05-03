@@ -4,6 +4,7 @@ Changelog
 2.0 (unreleased)
 ----------------
 
+* #2939 Update API to easily access default criteria [voineali]
 * #3198 Adjust faceted navigation JavaScript to work outside faceted navigable
   contexts using a previously defined faceted navigable configuration. This way,
   by providing faceted navigable URL it can be used in pop-ups,
