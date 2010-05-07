@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0 (unreleased)
+2.0 (2010-05-07)
 ----------------
 
 * #2939 Update API to easily access default criteria [voineali]
