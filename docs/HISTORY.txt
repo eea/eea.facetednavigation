@@ -4,6 +4,9 @@ Changelog
 2.1 (Unreleased)
 ----------------
 
+* Refactored field.Vocabulary to be reused also with other fields
+  than StringField [voineali]
+
 
 2.0 (2010-05-07)
 ----------------
