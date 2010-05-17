@@ -4,5 +4,10 @@
   folderContents python:view.query(**faceted_query);
   here python:view.get_context(folderContents)">
   <metal:block use-macro="here/global_defines/macros/defines" />
-  <metal:block use-macro="view/macros" />
+  <tal:def define="
+    kssClassesView context/@@kss_field_decorator_view | nothing;
+    getKssClasses nocall:kssClassesView/getKssClassesInlineEditable | nothing;
+    templateId template/getId | nothing">
+    <metal:block use-macro="view/macros" />
+  </tal:def>
 </tal:main>

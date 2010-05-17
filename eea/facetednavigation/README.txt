@@ -135,3 +135,12 @@ Authors and contributors
   * "Antonio De Marinis", mailto:antonio.de.marinis@eea.europa.eu
 
   * "Alec Ghica", mailto:alec.ghica@eaudeweb.ro
+
+Credits
+
+  "Izhar Firdaus", mailto:kagesenshi.87@gmail.com for:
+
+      * making faceted navigation aware of collection's query;
+
+      * replacing portal_fiveactions with portal_actions as it caused
+        conflict with p4a.plonecalendar and p4a.video

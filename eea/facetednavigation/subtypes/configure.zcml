@@ -35,34 +35,12 @@
     factory=".wrapper.FacetedWrapper"
     />
 
-  <!-- Plone 2.5 support -->
-  <configure zcml:condition="installed zope.app.annotation.tests">
-    <browser:menuItem
-      for="..interfaces.IFacetedNavigable"
-      menu="object_buttons"
-      title="Disable faceted navigation"
-      action="@@faceted_subtyper/disable"
-      filter="object/@@faceted_subtyper/can_disable"
-      permission="cmf.ModifyPortalContent"
-      />
+  <browser:page
+    name="faceted_subtyper"
+    for="zope.interface.Interface"
+    class=".subtyper.FacetedSubtyper"
+    permission="zope.Public"
+    allowed_interface=".interfaces.IFacetedSubtyper"
+    />
 
-    <browser:menuItem
-      for="..interfaces.IPossibleFacetedNavigable"
-      menu="object_buttons"
-      title="Enable faceted navigation"
-      action="@@faceted_subtyper/enable"
-      filter="object/@@faceted_subtyper/can_enable"
-      permission="cmf.ModifyPortalContent"
-      />
-
-    <browser:page
-      name="faceted_subtyper"
-      for="..interfaces.IPossibleFacetedNavigable"
-      class=".subtyper.FacetedSubtyper"
-      permission="zope.Public"
-      allowed_interface=".interfaces.IFacetedSubtyper"
-      />
-  </configure>
-
-  <!-- Plone 3.0+ support. No need as Sub-types menu is visible by default -->
 </configure>

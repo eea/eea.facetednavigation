@@ -4,6 +4,17 @@ Changelog
 2.1 (Unreleased)
 ----------------
 
+Upgade steps
+~~~~~~~~~~~~
+* Within portal_setup import all steps using 'EEA Faceted Navigation' profile.
+
+Issues and enhancements
+~~~~~~~~~~~~~~~~~~~~~~~
+* #3275 Make faceted navigation aware of collection's query.
+  [Thanks to Izhar Firdaus]
+* #3275 Moved faceted actions from portal_fiveactions to portal_actions
+  as as it caused conflicts with p4a.plonecalendar and p4a.video.
+  [Thanks to Izhar Firdaus]
 * Refactored field.Vocabulary to be reused also with other fields
   than StringField [voineali]
 

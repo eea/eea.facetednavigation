@@ -145,29 +145,6 @@
     permission="zope2.View"
     />
 
-  <browser:menuItem
-    for="..interfaces.IFacetedNavigable"
-    menu="object"
-    title="Faceted criteria"
-    action="configure_faceted.html"
-    permission="cmf.ModifyPortalContent"
-    />
-
-  <!-- Plone 2.5 support -->
-  <configure zcml:condition="installed Products.LinguaPlone">
-    <configure zcml:condition="installed zope.app.annotation.tests">
-      <browser:menuItem
-        for="..interfaces.IFacetedNavigable"
-        menu="object_buttons"
-        title="Sync faceted translations"
-        action="@@faceted_sync_translations"
-        permission="cmf.ModifyPortalContent"
-        />
-    </configure>
-  </configure>
-
-  <!-- Plone 3.0+ support. See menu.py -->
-
   <browser:resource
     name="eea.faceted-navigation.css"
     file="./stylesheets/view.css"

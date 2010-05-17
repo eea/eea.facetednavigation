@@ -6,7 +6,11 @@ from zope.component import getUtility
 from p4a.subtyper.interfaces import ISubtyper
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser import BrowserView
+from Products.CMFCore.utils import getToolByName
 from interfaces import IFacetedSubtyper
+from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
+from eea.facetednavigation.interfaces import IFacetedNavigable
+
 
 class FacetedSubtyper(BrowserView):
     """ Support for subtyping objects
@@ -32,6 +36,9 @@ class FacetedSubtyper(BrowserView):
     def can_enable(self):
         """ See IFacetedSubtyper
         """
+        if not IPossibleFacetedNavigable.providedBy(self.context):
+            return False
+
         existing = self.subtyper.existing_type(self.context)
         if existing and existing.name.startswith('eea.facetednavigation.'):
             return False
@@ -41,10 +48,33 @@ class FacetedSubtyper(BrowserView):
     def can_disable(self):
         """ See IFacetedSubtyper
         """
+        if not IPossibleFacetedNavigable.providedBy(self.context):
+            return False
+
         existing = self.subtyper.existing_type(self.context)
         if existing and existing.name.startswith('eea.facetednavigation.'):
             return True
         return False
+
+    @property
+    def is_faceted(self):
+        """ Is faceted navigable?
+        """
+        if IFacetedNavigable.providedBy(self.context):
+            return True
+        return False
+
+    @property
+    def is_lingua_faceted(self):
+        """ Is LinguaPlone installed and context is faceted navigable?
+        """
+        if not self.is_faceted:
+            return False
+        qtool = getToolByName(self.context, 'portal_quickinstaller')
+        installed = [package['id'] for package in qtool.listInstalledProducts()]
+        if 'LinguaPlone' not in installed:
+            return False
+        return True
 
     def enable(self):
         """ See IFacetedSubtyper
