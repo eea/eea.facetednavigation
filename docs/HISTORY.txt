@@ -10,6 +10,7 @@ Upgade steps
 
 Issues and enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~
+* Cleanup old css/js profile by removing duplicated items (@@ ones) [voineali]
 * #3275 Make faceted navigation aware of collection's query.
   [Thanks to Izhar Firdaus]
 * #3275 Moved faceted actions from portal_fiveactions to portal_actions

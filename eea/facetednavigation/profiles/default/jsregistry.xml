@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
+ <javascript id="@@faceted_view.js" remove="True" />
+ <javascript id="@@faceted_edit.js" remove="True" />
  <javascript cacheable="True" compression="none" cookable="True"
     enabled="True"
     expression="python: request.get('jsdisable','') != 'jquery'"
