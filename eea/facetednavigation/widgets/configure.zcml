@@ -6,6 +6,7 @@
   <include package=".date" />
   <include package=".daterange" />
   <include package=".debug" />
+  <include package=".etag" />
   <include package=".portlet" />
   <include package=".radio" />
   <include package=".resultsperpage" />

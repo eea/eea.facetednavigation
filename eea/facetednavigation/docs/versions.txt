@@ -17,6 +17,10 @@ everyting is like before. Why? Because this version eTag is generated from
 hidden widgets default values, so you'll always be able to return to a
 previous version without loosing proxy cache.
 
+What if I want to generate another version id even if faceted configuration
+didn't change?
+You can do that by adding an ETag widget. See ETag section in this document.
+
 Set up
 ------
 
@@ -123,3 +127,31 @@ even if they are visible widgets
     >>> _ = handler(updateCriterion_button='Update', cid='c2', operator='')
     >>> version.key
     ''
+
+ETag widget
+-----------
+There is a special faceted widget called ETag that you can use in order to
+generate another version id.
+
+    >>> _ = handler(addPropertiesWidget_button='Add',
+    ...   wtype='etag', wposition='left', title='ETag',
+    ...   default='1.0', hidden=1)
+    >>> version.key
+    '5160e24ff850c88f366f31e36572c528'
+
+It is not displayed in view mode even if it's not hidden but in order to be
+used by versioning generator it has to be hidden.
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c3', hidden=0)
+    >>> version.key
+    ''
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c3', hidden=1)
+    >>> version.key
+    '5160e24ff850c88f366f31e36572c528'
+
+Changing it's default value will generate another version id, of course
+
+    >>> _ = handler(updateCriterion_button='Update', cid='c3', default='1.1')
+    >>> version.key
+    '5a4eb6b31c9d4f08af3df7ac689d9ef1'
