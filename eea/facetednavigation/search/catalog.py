@@ -23,5 +23,7 @@ class FacetedCatalog(object):
         newquery = buildQuery and buildQuery() or {}
         if not isinstance(newquery, dict):
             newquery = {}
+        if 'sort_on'in query and 'sort_order' not in query:
+            newquery.pop('sort_order', None)
         newquery.update(query)
         return search(**newquery)
