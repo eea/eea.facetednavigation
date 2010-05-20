@@ -11,6 +11,7 @@ Upgrade steps
 
 Issues and enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~
+* #3059 Made Large Folder faceted navigable [voineali]
 * #3338 Added special faceted widget ETag in order to easily generate another
   faceted version id which is used by squid or
   other proxy caching systems. See docs/versions.txt [voineali]

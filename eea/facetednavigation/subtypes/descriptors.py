@@ -15,6 +15,11 @@ class FolderFacetedNavigableDescriptor(FacetedNavigableDescriptor):
     """
     for_portal_type = 'Folder'
 
+class LargeFolderFacetedNavigableDescriptor(FacetedNavigableDescriptor):
+    """ Large Folder descriptor
+    """
+    for_portal_type = 'Large Plone Folder'
+
 class TopicFacetedNavigableDescriptor(FacetedNavigableDescriptor):
     """ Folder descriptor
     """

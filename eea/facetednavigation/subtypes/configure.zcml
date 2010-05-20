@@ -7,6 +7,10 @@
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 
+  <class class="Products.ATContentTypes.content.folder.ATBTreeFolder">
+    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
+  </class>
+
   <class class="Products.ATContentTypes.content.topic.ATTopic">
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
@@ -14,6 +18,10 @@
   <utility
         name="eea.facetednavigation.FolderFacetedNavigable"
         factory=".descriptors.FolderFacetedNavigableDescriptor" />
+
+  <utility
+        name="eea.facetednavigation.LargeFolderFacetedNavigable"
+        factory=".descriptors.LargeFolderFacetedNavigableDescriptor" />
 
   <utility
         name="eea.facetednavigation.TopicFacetedNavigable"
