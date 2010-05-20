@@ -47,7 +47,8 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.sorting.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema + EditSchema
+    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    edit_schema['title'].default = 'Sort on'
 
     @property
     def default(self):

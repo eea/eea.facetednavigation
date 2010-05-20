@@ -15,4 +15,5 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.criteria.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema
+    edit_schema = AbstractWidget.edit_schema.copy()
+    edit_schema['title'].default = 'Current search'
