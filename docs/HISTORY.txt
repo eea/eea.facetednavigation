@@ -4,12 +4,16 @@ Changelog
 2.1 (Unreleased)
 ----------------
 
-Upgade steps
-~~~~~~~~~~~~
-* Within portal_setup import all steps using 'EEA Faceted Navigation' profile.
+Upgrade steps
+~~~~~~~~~~~~~
+* Within portal_setup import all steps using 'EEA Faceted Navigation' profile
+  or reinstall it from portal_quickinstaller.
 
 Issues and enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~
+* #3338 Added special faceted widget ETag in order to easily generate another
+  faceted version id which is used by squid or
+  other proxy caching systems. See docs/versions.txt [voineali]
 * Cleanup old css/js profile by removing duplicated items (@@ ones) [voineali]
 * #3275 Make faceted navigation aware of collection's query.
   [Thanks to Izhar Firdaus]
