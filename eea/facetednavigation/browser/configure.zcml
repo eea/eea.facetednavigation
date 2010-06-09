@@ -151,9 +151,14 @@
    />
 
   <browser:resource
-      name="eea.faceted-navigation-edit.css"
-      file="./stylesheets/edit.css"
-     />
+    name="eea.faceted-navigation-edit.css"
+    file="./stylesheets/edit.css"
+    />
+
+  <browser:resource
+    name="eea.faceted.jquery.ui.fix.css"
+    file="./stylesheets/ui.fix.css"
+   />
 
   <browser:resource
     name="eea.faceted-navigation.js"

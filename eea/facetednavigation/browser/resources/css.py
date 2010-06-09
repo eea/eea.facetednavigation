@@ -90,7 +90,10 @@ class ViewCSS(CSS):
         if not jquery_ui:
             res.append('++resource++jquery.ui.theme/jquery-ui-1.7.custom.css')
 
-        res.extend(('++resource++eea.faceted-navigation.css',))
+        res.extend((
+            '++resource++eea.faceted.jquery.ui.fix.css',
+            '++resource++eea.faceted-navigation.css'
+        ))
         return res
 
     @property
@@ -135,7 +138,11 @@ class EditCSS(CSS):
 
         if not jquery_ui:
             res.append('++resource++jquery.ui.theme/jquery-ui-1.7.custom.css')
-        res.append('++resource++eea.faceted-navigation-edit.css')
+
+        res.extend((
+            '++resource++eea.faceted.jquery.ui.fix.css',
+            '++resource++eea.faceted-navigation-edit.css'
+        ))
         return res
 
     @property
