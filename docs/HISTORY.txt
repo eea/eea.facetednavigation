@@ -11,6 +11,8 @@ Upgrade steps
 
 Issues and enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~
+* #3409 faceted_view.css has no condition anymore in portal_css profile. Removed
+  duplicate from faceted_edit.css [voineali]
 * #3059 Made Large Folder faceted navigable [voineali]
 * #3338 Added special faceted widget ETag in order to easily generate another
   faceted version id which is used by squid or

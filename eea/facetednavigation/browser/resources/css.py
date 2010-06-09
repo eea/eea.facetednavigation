@@ -135,8 +135,6 @@ class EditCSS(CSS):
 
         if not jquery_ui:
             res.append('++resource++jquery.ui.theme/jquery-ui-1.7.custom.css')
-
-        res.append('++resource++eea.faceted-navigation.css')
         res.append('++resource++eea.faceted-navigation-edit.css')
         return res
 
