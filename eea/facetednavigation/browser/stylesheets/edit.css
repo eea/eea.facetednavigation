@@ -1,5 +1,13 @@
 /* jquery ui overrides
 ====================== */
+.ui-icon-show {
+  background-image: url(../../++resource++faceted_images/show.png) ! important;
+}
+
+.ui-icon-hide {
+  background-image: url(../../++resource++faceted_images/hide.png) ! important;
+}
+
 .ui-widget-header:hover {
   cursor: move;
 }

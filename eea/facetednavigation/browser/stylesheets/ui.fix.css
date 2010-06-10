@@ -1,13 +1,5 @@
 /* Fix jQuery.ui images path
 */
-.ui-icon-show {
-  background-image: url(../../++resource++faceted_images/show.png) ! important;
-}
-
-.ui-icon-hide {
-  background-image: url(../../++resource++faceted_images/hide.png) ! important;
-}
-
 .ui-icon, .ui-widget-content .ui-icon, .ui-widget-header .ui-icon {
   background-image: url(../../++resource++jquery.ui.theme/images/ui-icons_222222_256x240.png);
   cursor: pointer;
