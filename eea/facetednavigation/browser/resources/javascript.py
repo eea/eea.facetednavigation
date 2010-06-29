@@ -76,7 +76,8 @@ class ViewJavascript(Javascript):
     def js_libs(self):
         res = []
         ui_installed = jquery_installed = False
-        jtagcloud_installed = False
+        jtagcloud_installed = jbbq_installed = False
+
         for js in self.jstool.getResources():
             if not js.getEnabled():
                 continue
@@ -87,7 +88,10 @@ class ViewJavascript(Javascript):
                 jtagcloud_installed = True
             elif 'jquery-1.3.2.js' in js_id.lower():
                 jquery_installed = True
-            if jquery_installed and jtagcloud_installed and ui_installed:
+            elif 'jquery.bbq.js' in js_id.lower():
+                jbbq_installed = True
+
+            if jquery_installed and jtagcloud_installed and ui_installed and jbbq_installed:
                 break
 
         if not jquery_installed:
@@ -96,6 +100,8 @@ class ViewJavascript(Javascript):
             res.append('++resource++jquery.ui-1.7.js')
         if not jtagcloud_installed:
             res.append('++resource++jquery.tagcloud.js')
+        if not jbbq_installed:
+            res.append('++resource++jquery.bbq.js')
 
         res.extend(('++resource++eea.faceted-navigation.js',
                     '++resource++eea.faceted-navigation-expand.js'))

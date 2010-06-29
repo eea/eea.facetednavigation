@@ -24,7 +24,7 @@
       section_title python:section.title;
       widgets python:view_mode and view.get_view_widgets or view.get_widgets;
       widgets python:widgets(position=position, section=section_value)">
-      <div tal:attributes="
+      <div style="display: none" tal:attributes="
         title section_title;
         class string:faceted-section-header;
         id string:${position}---${section_value}---section;

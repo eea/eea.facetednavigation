@@ -3,6 +3,9 @@ Changelog
 
 3.1 (unreleased)
 ----------------
+* #3371 Fixed: facets not appearing in google chrome [voineali]
+* #3371 Use jquery.bbq plugin for browsing history [voineali]
+
 
 3.0 (2010-06-16)
 ----------------

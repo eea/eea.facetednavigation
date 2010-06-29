@@ -1,4 +1,4 @@
-<div class="faceted-widget faceted-sorting-widget" tal:define="
+<div class="faceted-widget faceted-sorting-widget" style="display: none" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;

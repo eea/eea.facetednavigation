@@ -1,4 +1,4 @@
-<div class="faceted-widget faceted-criteria-widget" tal:define="
+<div class="faceted-widget faceted-criteria-widget" style="display: none" tal:define="
   wid python:view.data.getId();
   hidden python:view.hidden;
   css string:faceted-widget faceted-criteria-widget;

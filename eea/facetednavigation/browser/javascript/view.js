@@ -20,7 +20,6 @@ Faceted.Events.REDRAW = 'FACETED-REDRAW';
 */
 Faceted.Events.cleanup = function(){
   //Faceted.Events.INITIALIZE
-  jQuery(Faceted.Events).unbind(Faceted.Events.REDRAW);
   jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_START);
   jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_SUCCESS);
   jQuery(Faceted.Events).unbind(Faceted.Events.QUERY_INITIALIZED);
@@ -47,10 +46,6 @@ Faceted.Query = {};
 Default: (context related)
 */
 Faceted.BASEURL = '';
-
-/* URL watch for setInterval
-*/
-Faceted.setIntervalId = 0;
 
 /* Return minimal and sorted query
 */
@@ -143,18 +138,30 @@ Faceted.Form = {
 
     // Handle errors
     this.area.ajaxError(function(event, request, settings){
-      jQuery(this).html('<h3>This site encountered an error trying to fulfill your request</h3><p>If the error persists please contact the site maintainer. Thank you for your patience.</p>');
+      jQuery(this).html('' +
+      '<h3>This site encountered an error trying to fulfill your request</h3>' +
+      '<p>' +
+        'If the error persists please contact the site maintainer. ' +
+        'Thank you for your patience.' +
+      '</p>');
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_ERROR);
     });
 
-    var query = Faceted.URLHandler.get();
-    // if(!query) -> false always
-    for(var name in query){
-      Faceted.Query = query;
-      break;
-    }
+    var has_hash = false;
+    var hashquery = Faceted.URLHandler.get();
+    jQuery.each(hashquery, function(){
+      has_hash = true;
+      Faceted.Query = hashquery;
+      return false;
+    });
+
     jQuery(Faceted.Events).trigger(Faceted.Events.QUERY_INITIALIZED);
-    Faceted.URLHandler.set();
+
+    if(!has_hash){
+      Faceted.URLHandler.set();
+    }else{
+      Faceted.URLHandler.hash_changed();
+    }
   },
 
   initialize_paginator: function() {
@@ -199,7 +206,8 @@ Faceted.Form = {
 
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_START);
     context.area.fadeOut('fast', function(){
-      var loading = '<div class="faceted_loading"><img src="' + Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
+      var loading = '<div class="faceted_loading"><img src="' +
+       Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
       context.area.html(loading);
       context.area.fadeIn('slow');
 
@@ -245,58 +253,12 @@ Faceted.Form = {
 
 Faceted.URLHandler = {
   initialize: function(){
-    this.hash = null;
-    this.iframe = null;
-
-    if (jQuery.browser.msie && jQuery.browser.version < 8){
-      var iframe = jQuery('<iframe>');
-      iframe.attr('id', 'faceted-iehistory');
-      var iediv = jQuery('<div>');
-      iediv.css('display', 'none');
-      iediv.html(iframe);
-      jQuery('#faceted-form').append(iediv);
-      this.iframe = jQuery('#faceted-iehistory');
-      var ie_hash = this.query2hash(Faceted.Query);
-      this.iframe.attr('src', Faceted.BASEURL + '@@faceted_history?' + ie_hash.replace('#', ''));
-    }
   },
 
   hash_changed: function(){
-    if(this.iframe){
-      return this.ie_hash_changed();
-    }else{
-      return this.other_hash_changed();
-    }
-  },
-
-  ie_hash_changed: function(){
-    var ie_hash = '';
-    try{
-      var history = jQuery('#faceted-ie-history-hash', this.iframe[0].contentWindow.document);
-      ie_hash = history.text();
-    }catch(exception){
-      // IE 7 history not initialized yet, do nothing.
-      return;
-    }
-
-    if(this.hash != ie_hash){
-      this.hash = ie_hash;
-      document.location.hash = this.hash;
-
-      Faceted.Query = this.hash2query(this.hash);
-      jQuery(Faceted.Events).trigger(Faceted.Events.QUERY_CHANGED);
-      Faceted.Form.do_form_query();
-    }
-  },
-
-  other_hash_changed: function(){
-    if(document.location.hash != this.hash){
-      this.hash = document.location.hash;
-
-      Faceted.Query = this.hash2query(this.hash);
-      jQuery(Faceted.Events).trigger(Faceted.Events.QUERY_CHANGED);
-      Faceted.Form.do_form_query();
-    }
+    Faceted.Query = this.get();
+    jQuery(Faceted.Events).trigger(Faceted.Events.QUERY_CHANGED);
+    Faceted.Form.do_form_query();
   },
 
   document_hash: function(){
@@ -306,51 +268,24 @@ Faceted.URLHandler = {
   },
 
   get: function(){
-    var hash = document.location.hash;
-    hash = hash.replace('#', '');
-    return this.hash2query(hash);
+    var hash = jQuery.bbq.getState();
+    var query = {};
+    var types = ["number", "boolean", "string"];
+    jQuery.each(hash, function(key, value){
+      var value_type = typeof(value);
+      if(jQuery.inArray(value_type, types) !== -1){
+        value = [value];
+      }
+      query[key] = value;
+    });
+    return query;
   },
 
   set: function(query){
     if(!query){
       query = Faceted.Query;
     }
-    var hash = this.query2hash(query);
-    if(!this.iframe){
-      document.location.hash = hash;
-    }else{
-      hash = hash.replace('#', '');
-      this.iframe.attr('src', Faceted.BASEURL + '@@faceted_history?' + hash);
-    }
-  },
-
-  hash2query: function(hash){
-    hash = hash.replace('#', '');
-    var items = hash.split('&');
-    var query = {};
-    jQuery.each(items, function(i){
-      var item = this.split('=');
-      var key = item[0];
-      var value = item[1];
-      if(!value){
-        return;
-      }
-      if(value.indexOf('+')!=-1){
-        value = value.replace(/\+/g, ' ');
-      }
-      if(!query[key]){
-        query[key] = [value];
-      }else{
-        query[key].push(value);
-      }
-    });
-    return query;
-  },
-
-  query2hash: function(query){
-    var hash = '#';
-    hash += jQuery.param(query);
-    return hash;
+    jQuery.bbq.pushState(query, 2);
   }
 };
 
@@ -499,13 +434,10 @@ Faceted.Load = function(evt, baseurl){
   // Init widgets UI
   jQuery(Faceted.Events).trigger(Faceted.Events.INITIALIZE);
 
-  Faceted.Form.initialize();
-  Faceted.URLHandler.initialize();
-  Faceted.Window.initialize();
-  Faceted.Sections.initialize();
-  Faceted.AjaxLook.initialize();
-
   // Bind events
+  jQuery(window).bind('hashchange', function(evt){
+    Faceted.URLHandler.hash_changed();
+  });
   jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){
     Faceted.Form.initialize_paginator();
   });
@@ -513,7 +445,11 @@ Faceted.Load = function(evt, baseurl){
     Faceted.Form.reset();
   });
 
-  Faceted.setIntervalId = setInterval("Faceted.URLHandler.hash_changed()", 300);
+  Faceted.Window.initialize();
+  Faceted.Sections.initialize();
+  Faceted.AjaxLook.initialize();
+  Faceted.Form.initialize();
+
   // Override calendar close handler method in order to raise custom events
   if(window.Calendar){
     Calendar.prototype.callCloseHandler = function () {
@@ -542,9 +478,6 @@ Faceted.Unload = function(){
 /* Cleanup
 */
 Faceted.Cleanup = function(){
-  // Clear setInterval
-  clearInterval(Faceted.setIntervalId);
-
   // Unbind events
   Faceted.Events.cleanup();
 
