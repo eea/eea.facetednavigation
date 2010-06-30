@@ -115,6 +115,7 @@
 }
 
 .widget-fieldset legend {
+  margin-bottom: 0.5em;
   font-weight: bold;
 }
 
@@ -143,7 +144,8 @@
 .ui-accordion .ui-accordion-content {
   padding: 0px;
   overflow: hidden;
-  border: none;
+  border-width: 0;
+  border-style: none;
 }
 
 /* Inactive state
