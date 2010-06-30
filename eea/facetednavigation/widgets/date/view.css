@@ -12,6 +12,21 @@
   background-image: none;
   background-color: #e9efcd;
   border-color: #95b229;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+}
+
+.faceted-date-widget-form .ui-slider {
+  border: 1px solid #95b229;
+}
+
+.faceted-date-widget-form .ui-slider-tooltip {
+  border: 1px solid #aaa;
+}
+
+.faceted-date-widget-form .ui-slider-horizontal {
+  margin-left:-0.6em;
 }
 
 .faceted-date-widget-form .ui-widget-header {

@@ -1,4 +1,4 @@
-.faceted-date-widget-form {
+.faceted-date-widget form {
   margin: 2em;
   margin-top: 0;
 }
@@ -7,7 +7,8 @@
   position:relative;
 }
 
-.faceted-date-widget-form .ui-state-default, .faceted-date-widget-form .ui-widget-content .ui-state-default {
+.faceted-date-widget-form .ui-state-default,
+.faceted-date-widget-form .ui-widget-content .ui-state-default {
   background-image: none;
   background-color: #e9efcd;
   border-color: #95b229;

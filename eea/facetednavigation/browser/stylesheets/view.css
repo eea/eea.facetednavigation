@@ -142,9 +142,7 @@
 
 .ui-accordion .ui-accordion-content {
   padding: 0px;
-}
-
-.ui-accordion .ui-widget-content {
+  overflow: hidden;
   border: none;
 }
 
