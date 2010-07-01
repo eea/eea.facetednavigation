@@ -1,6 +1,9 @@
 Changelog
 =========
 
+3.2 (Unreleased)
+----------------
+
 3.1 (2010-07-01)
 ----------------
 * #3371 Fixed: facets not appearing in google chrome [voineali]
