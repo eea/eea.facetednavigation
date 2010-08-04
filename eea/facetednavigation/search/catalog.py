@@ -5,7 +5,7 @@ from interfaces import IFacetedCatalog
 logger = logging.getLogger('eea.facetednavigation.search.catalog')
 
 class FacetedCatalog(object):
-    """ Get adapted catalog if eea.reports installed
+    """ Custom faceted adapter for portal_catalog
     """
     implements(IFacetedCatalog)
 

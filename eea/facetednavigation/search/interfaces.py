@@ -1,8 +1,7 @@
 from zope.interface import Interface
 
 class IFacetedCatalog(Interface):
-    """ Return portal catalog adapted with IReportCatalog depending if eea.reports
-    is present or not.
+    """ Faceted adapter for portal_catalog
     """
     def __call__(context, query):
         """ Call appropriate catalog
