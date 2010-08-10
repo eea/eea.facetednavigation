@@ -1,0 +1,14 @@
+.faceted-tal-widget input[type=text] {
+  width: 99%;
+}
+
+.faceted-tal-widget dl {
+  margin-top: 0.5em;
+  border: 1px dotted green;
+}
+
+.faceted-tal-widget dt {
+  clear: both;
+  float: left;
+  margin-right: 0.5em;
+}

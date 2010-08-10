@@ -1,0 +1,104 @@
+TAL Expression widget
+=====================
+This widget allows you to define dynamic faceted criteria using tal expressions
+
+The following contexts can be used within tal expressions:
+
+    - context -- faceted navigable context
+    - referer -- request.HTTP_REFERER object. Use this if you load faceted from another place (like: portal_relations)
+    - request -- faceted navigable REQUEST object
+    - widget -- Tal Expression Widget instance
+    - criterion -- Tal Expression Criterion instance
+
+
+Setup
+-----
+
+    >>> self.loginAsPortalOwner()
+    >>> from eea.facetednavigation.widgets.tal.widget import Widget
+    >>> from eea.facetednavigation.widgets.storage import Criterion
+    >>> sid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(sid)
+    >>> criterion = Criterion(index='path', title='A Title')
+
+    >>> request = folder.REQUEST
+    >>> widget = Widget(folder, request, criterion)
+
+
+Simple expressions
+-------------------
+
+String
+~~~~~~
+
+    >>> widget.data.update(default=u'string:a/path')
+    >>> widget.query(form={})
+    {'path': u'a/path'}
+
+Python
+~~~~~~
+
+    >>> widget.data.update(default=u'python: (100+10)/2')
+    >>> widget.query(form={})
+    {'path': 55}
+
+
+Dynamic expressions using available contexts
+---------------------------------------------
+
+context
+~~~~~~~
+
+    >>> widget.data.update(default=u'string:${context/absolute_url}')
+    >>> widget.query(form={})
+    {'path': u'http://nohost/plone/Members/test_user_1_'}
+
+    >>> widget.data.update(default=u'python:context.absolute_url(1)')
+    >>> widget.query(form={})
+    {'path': 'plone/Members/test_user_1_'}
+
+referer
+~~~~~~~
+
+    >>> widget.data.update(default=u'string:${referer/absolute_url}')
+    >>> widget.query(form={})
+    {'path': u'http://nohost/plone/Members/test_user_1_'}
+
+    >>> widget.data.update(default=u'python:referer.absolute_url(1)')
+    >>> widget.query(form={})
+    {'path': 'plone/Members/test_user_1_'}
+
+    This is the same as context, let's see what happends if faceted is loaded
+    from another place
+
+    >>> request.HTTP_REFERER = sandbox.absolute_url()
+    >>> widget = Widget(folder, request, criterion)
+
+    >>> widget.data.update(default=u'string:${referer/absolute_url}')
+    >>> widget.query(form={})
+    {'path': u'http://nohost/plone/sandbox'}
+
+    >>> widget.data.update(default=u'python:referer.absolute_url(1)')
+    >>> widget.query(form={})
+    {'path': 'plone/sandbox'}
+
+request
+~~~~~~~
+
+    >>> widget.data.update(default=u'python:request.LANGUAGE', index='Language')
+    >>> widget.query(form={})
+    {'Language': 'en'}
+
+widget
+~~~~~~
+
+    >>> widget.data.update(default=u'python:widget.widget_type', index='type')
+    >>> widget.query(form={})
+    {'type': 'tal'}
+
+criterion
+~~~~~~~~~
+
+    >>> widget.data.update(default=u'python:criterion.title', index='sortable_title')
+    >>> widget.query(form={})
+    {'sortable_title': u'A Title'}

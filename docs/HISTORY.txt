@@ -3,6 +3,8 @@ Changelog
 
 3.2 (Unreleased)
 ----------------
+* Added TAL Expression Widget to allow one to define dynamic queries
+  (e.g. limit faceted query to context path) [voineali #3538]
 
 3.1.1 (2010-07-07)
 ------------------

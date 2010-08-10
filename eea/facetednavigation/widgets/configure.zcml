@@ -13,6 +13,7 @@
   <include package=".select" />
   <include package=".sorting" />
   <include package=".tagscloud" />
+  <include package=".tal" />
   <include package=".text" />
   <include package=".path" />
 
