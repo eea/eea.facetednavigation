@@ -20,9 +20,4 @@
     file="./view.css"
    />
 
-  <browser:resource
-    name="eea.facetednavigation.widgets.radio.edit.css"
-    file="./edit.css"
-   />
-
 </configure>

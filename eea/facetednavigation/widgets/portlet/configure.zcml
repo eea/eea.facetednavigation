@@ -11,11 +11,6 @@
    />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.portlet.edit.js"
-    file="./edit.js"
-   />
-
-  <browser:resource
     name="eea.facetednavigation.widgets.portlet.view.css"
     file="./view.css"
    />

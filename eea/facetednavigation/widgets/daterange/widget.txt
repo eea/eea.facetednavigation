@@ -130,7 +130,7 @@ All before last week
 All before yesterday
 
     >>> start = DateTime('1970/01/01')
-    >>> end = DateTime() - 1
+    >>> end = DateTime() - 2
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,

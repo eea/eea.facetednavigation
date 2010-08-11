@@ -11,6 +11,13 @@ from zope.app.component.hooks import setSite
 from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import onsetup
 
+try:
+    import Products.LinguaPlone
+except ImportError, err:
+    LINGUAPLONE = False
+else:
+    LINGUAPLONE = True
+
 # Needed when running in EEA context, not mandatory otherwise
 try: import Products.eeawebapplication
 except ImportError: pass

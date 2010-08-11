@@ -15,14 +15,4 @@
     file="./edit.js"
    />
 
-  <browser:resource
-    name="eea.facetednavigation.widgets.text.view.css"
-    file="./view.css"
-   />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.text.edit.css"
-    file="./edit.css"
-   />
-
 </configure>

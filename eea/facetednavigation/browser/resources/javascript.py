@@ -74,38 +74,10 @@ class ViewJavascript(Javascript):
     """
     @property
     def js_libs(self):
-        res = []
-        ui_installed = jquery_installed = False
-        jtagcloud_installed = jbbq_installed = False
-
-        for js in self.jstool.getResources():
-            if not js.getEnabled():
-                continue
-            js_id = js.getId()
-            if 'jquery.ui-1.7.js' in js_id.lower():
-                ui_installed = True
-            elif 'jquery.tagcloud.js' in js_id.lower():
-                jtagcloud_installed = True
-            elif 'jquery-1.3.2.js' in js_id.lower():
-                jquery_installed = True
-            elif 'jquery.bbq.js' in js_id.lower():
-                jbbq_installed = True
-
-            if jquery_installed and jtagcloud_installed and ui_installed and jbbq_installed:
-                break
-
-        if not jquery_installed:
-            res.append('++resource++jquery-1.3.2.js')
-        if not ui_installed:
-            res.append('++resource++jquery.ui-1.7.js')
-        if not jtagcloud_installed:
-            res.append('++resource++jquery.tagcloud.js')
-        if not jbbq_installed:
-            res.append('++resource++jquery.bbq.js')
-
-        res.extend(('++resource++eea.faceted-navigation.js',
-                    '++resource++eea.faceted-navigation-expand.js'))
-        return res
+        """ JS Libs
+        """
+        return ['++resource++eea.faceted-navigation.js',
+                '++resource++eea.faceted-navigation-expand.js']
 
     @property
     def resources(self):
@@ -136,43 +108,10 @@ class EditJavascript(Javascript):
     """
     @property
     def js_libs(self):
-        res = []
-        jquery_installed = ui_installed = False
-        cookie_installed = jtagcloud_installed = False
-        jfileupload_installed = False
-        for js in self.jstool.getResources():
-            if not js.getEnabled():
-                continue
-            js_id = js.getId()
-            if 'jquery.ui-1.7.js' in js_id.lower():
-                ui_installed = True
-            elif 'jquery.cookie.js' in js_id.lower():
-                cookie_installed = True
-            elif 'jquery.tagcloud.js' in js_id.lower():
-                jtagcloud_installed = True
-            elif 'jquery.ajaxfileupload.js' in js_id.lower():
-                jfileupload_installed = True
-            elif 'jquery-1.3.2.js' in js_id.lower():
-                jquery_installed = True
-            if jquery_installed and ui_installed and \
-               jfileupload_installed and \
-               cookie_installed and jtagcloud_installed:
-                break
-
-        if not jquery_installed:
-            res.append('++resource++jquery-1.3.2.js')
-        if not ui_installed:
-            res.append('++resource++jquery.ui-1.7.js')
-        if not cookie_installed:
-            res.append('++resource++jquery.cookie.js')
-        if not jtagcloud_installed:
-            res.append('++resource++jquery.tagcloud.js')
-        if not jfileupload_installed:
-            res.append('++resource++jquery.ajaxfileupload.js')
-
-        res.append('++resource++eea.faceted-navigation-edit.js')
-        res.append('++resource++eea.faceted-navigation-expand.js')
-        return res
+        return [
+            '++resource++eea.faceted-navigation-edit.js',
+            '++resource++eea.faceted-navigation-expand.js'
+        ]
 
     @property
     def resources(self):

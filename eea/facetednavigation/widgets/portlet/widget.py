@@ -30,7 +30,6 @@ class Widget(AbstractWidget):
     widget_type = 'portlet'
     widget_label = 'Plone portlet'
     view_js = '++resource++eea.facetednavigation.widgets.portlet.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.portlet.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.portlet.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.portlet.edit.css'
 

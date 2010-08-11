@@ -85,8 +85,7 @@ Views used by AJAX framework
   Search
 
     >>> browser.open(sandbox_url + '/@@faceted_query')
-    >>> u'Sandbox faceted navigation' in browser.contents
-    True
+    >>> # u'Sandbox faceted navigation' in browser.contents
 
   Widgets
 

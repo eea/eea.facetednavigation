@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<metadata>
+ <dependencies>
+  <dependency>profile-eea.jquery:01-jquery</dependency>
+  <dependency>profile-eea.jquery:02-ui</dependency>
+  <dependency>profile-eea.jquery:03-ajaxfileupload</dependency>
+  <dependency>profile-eea.jquery:04-bbq</dependency>
+  <dependency>profile-eea.jquery:05-cookie</dependency>
+  <dependency>profile-eea.jquery:10-jstree</dependency>
+  <dependency>profile-eea.jquery:12-select2uislider</dependency>
+  <dependency>profile-eea.jquery:14-tagcloud</dependency>
+  <dependency>profile-eea.facetednavigation:default</dependency>
+ </dependencies>
+</metadata>

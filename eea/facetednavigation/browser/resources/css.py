@@ -76,27 +76,9 @@ class ViewCSS(CSS):
     def css_libs(self):
         """ Faceted CSS libs
         """
-        res = []
-        jquery_ui = False
-        for css in self.csstool.getResources():
-            if not css.getEnabled():
-                continue
-            css_id = css.getId()
-            if 'jquery-ui-1.7.custom.css' in css_id:
-                jquery_ui = True
-            if jquery_ui:
-                break
-
-        if not jquery_ui:
-            res.extend((
-                '++resource++jquery.ui.theme/jquery-ui-1.7.custom.css',
-                '++resource++eea.faceted.jquery.ui.fix.css',
-            ))
-
-        res.extend((
+        return [
             '++resource++eea.faceted-navigation.css',
-        ))
-        return res
+        ]
 
     @property
     def resources(self):
@@ -127,27 +109,11 @@ class EditCSS(CSS):
     """
     @property
     def css_libs(self):
-        res = []
-        jquery_ui = False
-        for css in self.csstool.getResources():
-            if not css.getEnabled():
-                continue
-            css_id = css.getId()
-            if 'jquery-ui-1.7.custom.css' in css_id:
-                jquery_ui = True
-            if jquery_ui:
-                break
-
-        if not jquery_ui:
-            res.extend((
-                '++resource++jquery.ui.theme/jquery-ui-1.7.custom.css',
-                '++resource++eea.faceted.jquery.ui.fix.css',
-            ))
-
-        res.extend((
+        """ Faceted CSS libs
+        """
+        return [
             '++resource++eea.faceted-navigation-edit.css',
-        ))
-        return res
+        ]
 
     @property
     def resources(self):

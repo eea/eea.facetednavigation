@@ -70,12 +70,10 @@ class Widget(AbstractWidget):
     widget_type = 'path'
     widget_label = 'Path'
     view_js = (
-        '++resource++jquery.jstree/jquery.tree.js',
         '++resource++eea.facetednavigation.widgets.path.tree.js',
         '++resource++eea.facetednavigation.widgets.path.view.js',
     )
     edit_js = (
-        '++resource++jquery.jstree/jquery.tree.js',
         '++resource++eea.facetednavigation.widgets.path.tree.js',
         '++resource++eea.facetednavigation.widgets.path.edit.js',
     )
@@ -113,7 +111,7 @@ class Widget(AbstractWidget):
     def root(self):
         """ Get navigation root language dependent
         """
-        getLanguage = getattr(self.context, 'getLanguage')
+        getLanguage = getattr(self.context, 'getLanguage', None)
         if not getLanguage:
             return self.data_root
 

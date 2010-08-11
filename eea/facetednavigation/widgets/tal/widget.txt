@@ -20,6 +20,7 @@ Setup
     >>> sid = portal.invokeFactory('Folder', 'sandbox')
     >>> sandbox = portal._getOb(sid)
     >>> criterion = Criterion(index='path', title='A Title')
+    >>> folder.setLanguage('en')
 
     >>> request = folder.REQUEST
     >>> widget = Widget(folder, request, criterion)
@@ -85,9 +86,9 @@ referer
 request
 ~~~~~~~
 
-    >>> widget.data.update(default=u'python:request.LANGUAGE', index='Language')
+    >>> widget.data.update(default=u'python:request.URL', index='path')
     >>> widget.query(form={})
-    {'Language': 'en'}
+    {'path': 'http://nohost'}
 
 widget
 ~~~~~~

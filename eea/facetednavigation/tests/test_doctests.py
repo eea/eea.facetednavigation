@@ -3,18 +3,13 @@
 import unittest
 from zope.testing import doctest
 from Testing.ZopeTestCase import FunctionalDocFileSuite as Suite
-from base import FacetedFunctionalTestCase
+from base import FacetedFunctionalTestCase, LINGUAPLONE
 
 OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
                doctest.ELLIPSIS |
                doctest.NORMALIZE_WHITESPACE)
 
-try:
-    import Products.LinguaPlone
-except ImportError, err:
-    LINGUAPLONE = False
-else:
-    LINGUAPLONE = True
+
 
 def test_suite():
     """ Suite

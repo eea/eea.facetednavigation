@@ -10,7 +10,6 @@ class Widget(AbstractWidget):
     widget_type = 'criteria'
     widget_label = 'Filters'
     view_js = '++resource++eea.facetednavigation.widgets.criteria.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.criteria.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.criteria.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.criteria.edit.css'
 

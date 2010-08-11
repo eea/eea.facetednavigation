@@ -42,8 +42,6 @@ class Widget(AbstractWidget):
     widget_label = 'Text field'
     view_js = '++resource++eea.facetednavigation.widgets.text.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.text.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.text.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.text.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema + EditSchema

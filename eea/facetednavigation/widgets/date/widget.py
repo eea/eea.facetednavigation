@@ -70,22 +70,10 @@ class Widget(AbstractWidget):
     # Widget properties
     widget_type = 'date'
     widget_label = 'Date'
-    view_js = (
-        '++resource++jquery.select2uislider/selectToUISlider.jQuery.js',
-        '++resource++eea.facetednavigation.widgets.date.view.js',
-    )
-    edit_js = (
-        '++resource++jquery.select2uislider/selectToUISlider.jQuery.js',
-        '++resource++eea.facetednavigation.widgets.date.edit.js',
-    )
-    view_css = (
-    '++resource++jquery.select2uislider/ui.slider.extras.css',
-    '++resource++eea.facetednavigation.widgets.date.view.css',
-    )
-    edit_css = (
-        '++resource++jquery.select2uislider/ui.slider.extras.css',
-        '++resource++eea.facetednavigation.widgets.date.edit.css',
-    )
+    view_js = '++resource++eea.facetednavigation.widgets.date.view.js'
+    edit_js = '++resource++eea.facetednavigation.widgets.date.edit.js'
+    view_css = '++resource++eea.facetednavigation.widgets.date.view.css'
+    edit_css = '++resource++eea.facetednavigation.widgets.date.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema + EditSchema

@@ -111,7 +111,6 @@ class Widget(CountableWidget):
     view_js = '++resource++eea.facetednavigation.widgets.radio.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.radio.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.radio.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.radio.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema + EditSchema

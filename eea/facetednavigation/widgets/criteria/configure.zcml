@@ -11,11 +11,6 @@
    />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.criteria.edit.js"
-    file="./edit.js"
-   />
-
-  <browser:resource
     name="eea.facetednavigation.widgets.criteria.view.css"
     file="./view.css"
    />
