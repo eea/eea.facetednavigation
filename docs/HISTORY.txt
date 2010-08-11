@@ -3,6 +3,8 @@ Changelog
 
 3.2 (Unreleased)
 ----------------
+
+* Better small loader animation for facets, as the previous was not visible enough [demarant] 
 * Added TAL Expression Widget to allow one to define dynamic queries
   (e.g. limit faceted query to context path) [voineali #3538]
 * Cleanup faceted js/css computing mechanism and use
