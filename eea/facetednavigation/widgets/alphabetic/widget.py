@@ -1,5 +1,6 @@
 """ Alphabet widget
 """
+import logging
 from zope.interface import implements
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import BooleanField
@@ -13,6 +14,8 @@ from alphabets import unicode_character_map
 from eea.facetednavigation.widgets.widget import CountableWidget
 
 from interfaces import IAlphabeticWidget
+
+logger = logging.getLogger('eea.facetednavigation.widgets.alphabetic')
 
 EditSchema = Schema((
     StringField('index',
@@ -83,7 +86,13 @@ class Widget(CountableWidget):
         """ Get language alphabet
         """
         #TODO: also to implement 0-9 and Other on the alphabet listing
-        return unicode_character_map[lang]
+        try:
+            lang = lang.split('-')[0].lower()
+        except Exception, err:
+            logger.exception(err)
+            lang = 'en'
+        return unicode_character_map.get(lang,
+                    unicode_character_map.get('en'))
 
     def count(self, brains):
         """ Intersect results
