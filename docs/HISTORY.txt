@@ -1,7 +1,7 @@
 Changelog
 =========
 
-3.2 (Unreleased)
+3.2 (2010-08-16)
 ----------------
 * Fixed alphabetic widget crash when REQUEST.LANGUAGE like 'it-it' [voineali #3499]
 * Better small loader animation for facets, as the previous was not visible enough [demarant]
