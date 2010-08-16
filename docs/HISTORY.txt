@@ -1,6 +1,9 @@
 Changelog
 =========
 
+3.3 (unreleased)
+----------------
+
 3.2 (2010-08-16)
 ----------------
 * Fixed alphabetic widget crash when REQUEST.LANGUAGE like 'it-it' [voineali #3499]
