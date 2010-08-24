@@ -1,141 +1,122 @@
 Changelog
 =========
+[Alexandru Ghica - alec.ghica@eaudeweb.ro]
+[Alin Voinea - alin.voinea@eaudeweb.ro]
+[Antonio De Marinis - demarinis@eea.europa.eu]
 
 3.3 (unreleased)
 ----------------
 
 3.2 (2010-08-16)
 ----------------
-* Fixed alphabetic widget crash when REQUEST.LANGUAGE like 'it-it' [voineali #3499]
-* Better small loader animation for facets, as the previous was not visible enough [demarant]
-* Added TAL Expression Widget to allow one to define dynamic queries
-  (e.g. limit faceted query to context path) [voineali #3538]
-* Cleanup faceted js/css computing mechanism and use
-  portal_javascripts/portal_css instead as eea.jquery provides profiles for
-  each jQuery plugin [voineali #3553, #3487]
+ * Bug fix: Fixed alphabetic widget crash when REQUEST.LANGUAGE like 'it-it' [voineali #3499]
+ * Change: Better small loader animation for facets, as the previous was not visible enough [demarant]
+ * Feature: Added TAL Expression Widget to allow one to define dynamic queries
+     (e.g. limit faceted query to context path) [voineali #3538]
+ * Change: Cleanup faceted js/css computing mechanism and use
+     portal_javascripts/portal_css instead as eea.jquery provides profiles for
+     each jQuery plugin [voineali #3553, #3487]
 
 3.1.1 (2010-07-07)
 ------------------
-* Fixed: failing tests [voineali]
+ * Bug fix: Fixed failing tests [voineali]
 
 3.1 (2010-07-01)
 ----------------
-* #3371 Fixed: facets not appearing in google chrome [voineali]
-* #3371 Use jquery.bbq plugin for browsing history [voineali]
+ * Bug fix: Fixed facets not appearing in google chrome [voineali #3371]
+ * Feature: Use jquery.bbq plugin for browsing history [voineali #3371]
 
 3.0 (2010-06-16)
 ----------------
-
-Upgrade steps
-~~~~~~~~~~~~~
-* Within portal_setup import all steps using 'EEA Faceted Navigation' profile
-  or reinstall it from portal_quickinstaller.
-
-Issues and enhancements
-~~~~~~~~~~~~~~~~~~~~~~~
-* #3409 faceted_view.css has no condition anymore in portal_css profile. Removed
-  duplicate from faceted_edit.css [voineali]
-* #3059 Made Large Folder faceted navigable [voineali]
-* #3338 Added special faceted widget ETag in order to easily generate another
-  faceted version id which is used by squid or
-  other proxy caching systems. See docs/versions.txt [voineali]
-* Cleanup old css/js profile by removing duplicated items (@@ ones) [voineali]
-* #3275 Make faceted navigation aware of collection's query.
-  [Thanks to Izhar Firdaus]
-* #3275 Moved faceted actions from portal_fiveactions to portal_actions
-  as as it caused conflicts with p4a.plonecalendar and p4a.video.
-  [Thanks to Izhar Firdaus]
-* Refactored field.Vocabulary to be reused also with other fields
-  than StringField [voineali]
-
+ * Change: faceted_view.css has no condition anymore in portal_css profile. Removed
+     duplicate from faceted_edit.css [voineali #3409]
+ * Feature: Made Large Folder faceted navigable [voineali #3059]
+ * Feature: Added special faceted widget ETag in order to easily generate another
+     faceted version id which is used by squid or other proxy caching systems.
+     See docs/versions.txt [voineali #3338]
+ * Change: Cleanup old css/js profile by removing duplicated items (@@ ones) [voineali]
+ * Feature: Make faceted navigation aware of collection's query. [#3275]
+     [Thanks to Izhar Firdaus]
+ * Bug fix: Moved faceted actions from portal_fiveactions to portal_actions
+     as as it caused conflicts with p4a.plonecalendar and p4a.video. [#3275]
+     [Thanks to Izhar Firdaus]
+ * Change: Refactored field.Vocabulary to be reused also with other fields
+     than StringField [voineali]
+ * Upgrade step:
+     * Within portal_setup import all steps using 'EEA Faceted Navigation' profile
+         or reinstall it from portal_quickinstaller.
 
 2.0 (2010-05-07)
 ----------------
-
-* #2939 Update API to easily access default criteria [voineali]
-* #3198 Adjust faceted navigation JavaScript to work outside faceted navigable
-  contexts using a previously defined faceted navigable configuration. This way,
-  by providing faceted navigable URL it can be used in pop-ups,
-  dialogs, etc [voineali]
-* #3239 Fixed: z3 vocabularies are not updated at runtime [voineali]
-
+ * Change: Update API to easily access default criteria [voineali #2939]
+ * Feature: Adjust faceted navigation JavaScript to work outside faceted navigable
+     contexts using a previously defined faceted navigable configuration. This way,
+     by providing faceted navigable URL it can be used in pop-ups,
+     dialogs, etc [voineali #3198]
+ * Bug fix: Fixed that z3 vocabularies are not updated at runtime [voineali #3239]
 
 1.9 (2010-03-26)
 ----------------
-
-* #3162 Fixed: Faceted text widget error [voineali]
-
+ * Bug fix: Fixed faceted text widget error [voineali #3162]
 
 1.8 (2010-03-18)
 ----------------
-
-* #3157 Fixed: After last update faceted widgets not responding [voineali]
-* #3141 Added debug widget [voineali]
+ * Bug fix: Fixed that after last update faceted widgets not responding [voineali #3157]
+ * Feature: Added debug widget [voineali #3141]
 
 1.7 (2010-03-16)
 ----------------
-
-* #3141 Replaced after_query method with IWidgetFilterBrains adapter [voineali]
-* #3100 Support non-ascii keywords vocabulary [voineali]
+ * Change: Replaced after_query method with IWidgetFilterBrains adapter [voineali #3141]
+ * Feature: Support non-ascii keywords vocabulary [voineali #3100]
 
 1.6 (2010-02-15)
 ----------------
-
-* #2940 Enable and/or search operator on faceted checkbox widget [voineali]
-* Added an error layer in order to easily see widgets with confiugration
-  problems and fix them without disabling JavaScript in browser
-  and then trying to figure out which one is causing the problem and remove it.
-* #2625 Fix relative path problems for path widget when using
-  in production [voineali]
-* #2871 Make date range widget more user friendly using
-  jquery ui datepicker [voineali]
-* #2871 Make date widget more user friendly using jQuery slider plugin [voineali]
-* FIX: If jquery is present in portal_javascirpts do not reload it in
-  faceted_view.js / faceted_edit.js [voineali]
+ * Feature: Enable and/or search operator on faceted checkbox widget [voineali #2940]
+ * Feature: Added an error layer in order to easily see widgets with configuration
+     problems and fix them without disabling JavaScript in browser
+     and then trying to figure out which one is causing the problem and remove it.
+ * Bug fix: Fixed relative path problems for path widget when using
+     in production [voineali #2625]
+ * Change: Make date range widget more user friendly using
+     jquery ui datepicker [voineali #2871]
+ * Change: Make date widget more user friendly using jQuery slider plugin [voineali #2871]
+ * Bug fix: Fixed that if jquery is present in portal_javascirpts do not reload it in
+     faceted_view.js / faceted_edit.js [voineali]
 
 1.5 (2010-01-18)
 ----------------
-
-* #2625 Add path (location) widget [voineali]
-* #2907 Fix translate UnicodeDecodeError [voineali]
+ * Feature: Add path (location) widget [voineali #2625]
+ * Bug fix: Fixed translate UnicodeDecodeError [voineali #2907]
 
 1.4 (2009-11-27)
 ----------------
-
-* #2801 Memcache tagscloud_counter results. Also use eea.cache in order
-  to dynamically set and invalidate memcache dependencies. [voineali]
-* #2783 Implemented a version control system for faceted configuration in order to
-  invalidate proxy cache systems like squid by requesting a new URL. [voineali]
-* #2825 Fix IE submit form when return is pressed in search field [voineali]
-* #2596 Keep minimum of distinct URLs for same queries in order to
-  cache efficiently [voineali]
+ * Feature: Memcache tagscloud_counter results. Also use eea.cache in order
+     to dynamically set and invalidate memcache dependencies. [voineali #2801]
+ * Feature: Implemented a version control system for faceted configuration in order to
+    invalidate proxy cache systems like squid by requesting a new URL. [voineali #2783]
+ * Bug fix: Fixed IE submit form when return is pressed in search field [voineali #2825]
+ * Feature: Keep minimum of distinct URLs for same queries in order to
+     cache efficiently [voineali #2596]
 
 1.3 (2009-11-18)
 ----------------
-
-* #2792 Fixed document actions position too high. [thuliper]
-* #2799 Scroll window to top when Less button is clicked. [voineali]
+ * Bug fix: Fixed document actions position too high. [thuliper #2792]
+ * Bug fix: Scroll window to top when Less button is clicked. [voineali #2799]
 
 1.2 (2009-11-09)
 ----------------
-
-* Remove LinguaPlone and ATVocabularyManager dependencies.
-* Make eea.faceted.tool optional.
-* Fix export/import criteria ids.
+ * Change: Remove LinguaPlone and ATVocabularyManager dependencies. [voineali]
+ * Change: Make eea.faceted.tool optional. [voineali]
+ * Bug fix: Fixed export/import criteria ids. [voineali]
 
 1.1 (2009-10-30)
 ----------------
-
-* Duplicate release 1.0r1
-
+ * Duplicate release 1.0r1
 
 1.0r1 (2009-10-30)
 ------------------
-
-* FIX: This package should not be zip_safe.
-
+ * Bug fix: This package should not be zip_safe. [voineali]
 
 1.0 (2009-10-30)
 ----------------
-
-* Initial release
+ * Initial release
