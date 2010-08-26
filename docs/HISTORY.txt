@@ -6,6 +6,8 @@ Changelog
 
 3.3 (unreleased)
 ----------------
+ * Fix faceted counter for custom portal types defined by
+   portal_faceted tool [voineali #3139]
 
 3.2 (2010-08-16)
 ----------------

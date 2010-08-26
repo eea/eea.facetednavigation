@@ -18,6 +18,8 @@ from Products.Archetypes.public import BooleanWidget
 from Products.Archetypes.public import SelectionWidget
 from eea.facetednavigation.widgets.field import StringField
 
+from eea.facetednavigation.interfaces import IFacetedCatalog
+
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.widgets.interfaces import IWidget
 
@@ -78,6 +80,8 @@ CommonEditSchema = Schema((
 ))
 
 class SimpleATAccessor(object):
+    """ Simple AT Accessor
+    """
     def __init__(self, widget, key):
         self.widget = widget
         self.data = widget.data
@@ -245,7 +249,7 @@ class Widget(ATWidget):
                 except Exception, err:
                     continue
 
-            var = val.strip()
+            val = val.strip()
             if not val:
                 continue
             res.append(val)
@@ -347,8 +351,8 @@ class CountableWidget(Widget):
 
         ctool = getToolByName(self.context, 'portal_catalog')
         index = ctool._catalog.getIndex(index_id)
-        apply_index = getattr(index, "_apply_index", None)
-        if not apply_index:
+        ctool = queryUtility(IFacetedCatalog)
+        if not ctool:
             return res
 
         brains = IISet(brain.getRID() for brain in brains)
@@ -362,10 +366,7 @@ class CountableWidget(Widget):
                     value = value.encode('utf-8')
                 except Exception, err:
                     continue
-            rset = apply_index({index_id: value})
-            if not rset:
-                continue
-            rset, u = rset
+            rset, u = ctool.apply_index(self.context, index, value)
             rset = IISet(rset)
             u, rset = weightedIntersection(brains, rset)
             if isinstance(value, str):
