@@ -4,8 +4,10 @@ Faceted.RadioWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
   this.widget.show();
+  this.fieldset = jQuery('.widget-fieldset', this.widget);
   this.title = jQuery('legend', this.widget).html();
   this.elements = jQuery('input[type=radio]', this.widget);
+  this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
   this.selected = [];
 
   // Faceted version
@@ -15,9 +17,6 @@ Faceted.RadioWidget = function(wid){
     this.version = version.text();
   }
 
-  this.hideitems = jQuery('li.faceted-maxitems-hide', this.widget);
-
-  // Handle checkbox click
   jQuery('form', this.widget).submit(function(){
     return false;
   });
@@ -52,7 +51,13 @@ Faceted.RadioWidget = function(wid){
       js_widget.count();
     });
   }
-  FacetedExpand.ExpandColapse(this.wid, jQuery('.widget-fieldset', this.widget));
+
+  if(this.maxitems){
+    this.fieldset.collapsible({
+      maxitems: this.maxitems,
+      elements: 'li:not(.faceted-radio-item-zerocount)'
+    });
+  }
 };
 
 Faceted.RadioWidget.prototype = {
@@ -186,6 +191,7 @@ Faceted.RadioWidget.prototype = {
     jQuery(lis).each(function(){
       var li = jQuery(this);
       li.removeClass('faceted-radio-item-disabled');
+      li.removeClass('faceted-radio-item-zerocount');
       var input = jQuery('input', li);
       input.unbind();
       var key = input.val();
@@ -201,6 +207,9 @@ Faceted.RadioWidget.prototype = {
       span.text('(' + value + ')');
       if(!value){
         li.addClass('faceted-radio-item-disabled');
+        if(context.widget.hasClass('faceted-zero-count-hidden')){
+          li.addClass('faceted-radio-item-zerocount');
+        }
         input.attr('disabled', 'disabled');
       }else{
         input.attr('disabled', false);
@@ -209,6 +218,8 @@ Faceted.RadioWidget.prototype = {
         });
       }
     });
+    // Update expand/colapse
+    context.fieldset.trigger('widget-refresh');
   }
 };
 

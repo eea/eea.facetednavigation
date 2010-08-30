@@ -8,7 +8,7 @@
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
   css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
-  maxitems python:int(view.data.get('maxitems', 0)) or 9999;"
+  maxitems python:view.data.get('maxitems', 0) or 0;"
   tal:attributes="id string:${wid}_widget; class css">
 
 <fieldset class="widget-fieldset">
@@ -36,9 +36,7 @@
         term_label python:view.translate(term_label);
         wbr_term_label python:view.word_break(term_label);
         chbox_id string:${wid}_${term_id};
-        chbox_id python:view.cleanup(chbox_id);
-        term_index python:repeat['term'].index();" tal:attributes="
-        class python:(term_index < maxitems) and 'faceted-maxitems-show' or 'faceted-maxitems-hide'">
+        chbox_id python:view.cleanup(chbox_id);">
         <input type="radio" class="faceted-noborder" tal:attributes="
           checked python:term_id == default;
           name string:${wid};
@@ -51,5 +49,6 @@
     </tal:items>
   </ul>
   </form>
+  <span style="display:none" tal:content="maxitems" />
 </fieldset>
 </div>

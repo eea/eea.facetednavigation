@@ -4,8 +4,10 @@ Faceted.CheckboxesWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
   this.widget.show();
+  this.fieldset = jQuery('.widget-fieldset', this.widget);
   this.title = jQuery('legend', this.widget).html();
   this.elements = jQuery('input[type=checkbox]', this.widget);
+  this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
   this.selected = [];
 
   // Faceted version
@@ -14,8 +16,6 @@ Faceted.CheckboxesWidget = function(wid){
   if(version){
     this.version = version.text();
   }
-
-  this.hideitems = jQuery('li.faceted-maxitems-hide', this.widget);
 
   jQuery('form', this.widget).submit(function(){
     return false;
@@ -38,7 +38,12 @@ Faceted.CheckboxesWidget = function(wid){
   }
 
   // Handle More/Less buttons click
-  FacetedExpand.ExpandColapse(this.wid, jQuery('.widget-fieldset', this.widget));
+  if(this.maxitems){
+    this.fieldset.collapsible({
+      maxitems: this.maxitems,
+      elements: 'li:not(.faceted-checkbox-item-zerocount)'
+    });
+  }
 
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
@@ -186,6 +191,7 @@ Faceted.CheckboxesWidget.prototype = {
     jQuery(lis).each(function(){
       var li = jQuery(this);
       li.removeClass('faceted-checkbox-item-disabled');
+      li.removeClass('faceted-checkbox-item-zerocount');
       var input = jQuery('input', li);
       input.unbind();
       var key = input.val();
@@ -201,6 +207,9 @@ Faceted.CheckboxesWidget.prototype = {
       span.text('(' + data[key] + ')');
       if(!value){
         li.addClass('faceted-checkbox-item-disabled');
+        if(context.widget.hasClass('faceted-zero-count-hidden')){
+          li.addClass('faceted-checkbox-item-zerocount');
+        }
         input.attr('disabled', 'disabled');
       }else{
         input.attr('disabled', false);
@@ -209,6 +218,8 @@ Faceted.CheckboxesWidget.prototype = {
         });
       }
     });
+    // Update expand/colapse
+    context.fieldset.trigger('widget-refresh');
   }
 };
 

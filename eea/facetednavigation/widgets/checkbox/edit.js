@@ -1,9 +1,15 @@
 FacetedEdit.CheckboxesWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
+  this.fieldset = jQuery('.widget-fieldset', this.widget);
   this.elements = jQuery('input[type=checkbox]', this.widget);
   this.selected = jQuery('input[type=checkbox]:checked', this.widget);
-  FacetedExpand.ExpandColapse(this.wid, jQuery('.widget-fieldset', this.widget));
+  this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
+  if(this.maxitems){
+    this.fieldset.collapsible({
+      maxitems: this.maxitems
+    });
+  }
 
   var js_widget = this;
   this.elements.click(function(evt){

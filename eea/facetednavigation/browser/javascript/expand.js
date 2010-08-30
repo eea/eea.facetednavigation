@@ -1,44 +1,106 @@
-var FacetedExpand = {version: '2.0'};
+(function(jQuery) {
+jQuery.fn.collapsible = function(settings){
+  var self = this;
+  self.colapsed = false;
 
-FacetedExpand.ExpandColapse = function(wid, container){
-  var hideitems = jQuery('li.faceted-maxitems-hide', container);
+  var options = {
+    maxitems: 0,
+    elements: 'li',
 
-  // More
-  var more = jQuery('<div>');
-  more.addClass('faceted-checkbox-more');
-  var mlink = jQuery('<a>');
-  mlink.attr('href', '#');
-  mlink.html('More');
-  more.html(mlink);
-  more.hide();
-  container.append(more);
+    events: {
+      refresh: 'widget-refresh',
+      expand: 'widget-expand',
+      colapse: 'widget-colapse'
+    },
 
-  // Less
-  var less = jQuery('<div>');
-  less.addClass('faceted-checkbox-less');
-  var llink = jQuery('<a>');
-  llink.attr('href', '#');
-  llink.html('Less');
-  less.html(llink);
-  less.hide();
-  container.append(less);
+    // Event handlers
+    handle_refresh: function(evt, data){
+      jQuery(options.elements, self).show();
+      self.button.hide();
 
-  more.click(function(){
-    hideitems.show();
-    more.hide();
-    less.show();
-    return false;
-  });
+      if(!options.maxitems){
+        return;
+      }
 
-  less.click(function(){
-    hideitems.hide();
-    less.hide();
-    more.show();
-    scroll(0, 0);
-    return false;
-  });
+      var elements = jQuery(options.elements, self);
+      if(elements.length < options.maxitems){
+        return;
+      }
 
-  if(hideitems.length){
-    less.click();
+      if(self.colapsed){
+        jQuery('a', self.button).text('More');
+      }else{
+        jQuery('a', self.button).text('Less');
+      }
+      self.button.show();
+
+      if(!self.colapsed){
+        return;
+      }
+
+      elements.each(function(index){
+        if(index < options.maxitems){
+          jQuery(this).show();
+        }else{
+          jQuery(this).hide();
+        }
+      });
+    },
+
+    handle_expand: function(evt, data){
+      self.colapsed = false;
+      self.trigger(options.events.refresh);
+    },
+
+    handle_colapse: function(evt, data){
+      self.colapsed = true;
+      self.trigger(options.events.refresh);
+    },
+
+    // Init
+    initialize: function(){
+      // Handle events
+      self.bind(options.events.refresh, function(evt, data){
+        options.handle_refresh(evt, data);
+      });
+
+      self.bind(options.events.expand, function(evt, data){
+        options.handle_expand(evt, data);
+      });
+
+      self.bind(options.events.colapse, function(evt, data){
+        options.handle_colapse(evt, data);
+      });
+
+      // More/Less button
+      var link = jQuery('<a>').attr('href', '#').text('More');
+      self.button = jQuery('<div>')
+        .addClass('faceted-checkbox-more')
+        .append(link)
+        .hide();
+      self.append(self.button);
+
+      link.click(function(){
+        if(self.colapsed){
+          self.trigger(options.events.expand);
+        }else{
+          self.trigger(options.events.colapse);
+        }
+        return false;
+      });
+
+      if(options.maxitems){
+        link.click();
+      }
+    }
+  };
+
+  if(settings){
+    jQuery.extend(options, settings);
   }
+
+  options.initialize();
+  return this;
+
 };
+})(jQuery);
