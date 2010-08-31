@@ -6,10 +6,10 @@ Changelog
 
 3.3 (unreleased)
 ----------------
- * Fixed expandable and collapsible widgets when used in combination with
-   hide zero count items [voineali #3457]
- * Fixed faceted counter for custom portal types defined by
-   portal_faceted tool [voineali #3139]
+ * Bug fix: Fixed expandable and collapsible widgets when used in combination with
+     hide zero count items [voineali #3457]
+ * Bug fix: Fixed faceted counter for custom portal types defined by
+     portal_faceted tool [voineali #3139]
 
 3.2 (2010-08-16)
 ----------------
