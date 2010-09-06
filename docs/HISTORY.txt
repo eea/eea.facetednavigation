@@ -4,7 +4,7 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
-3.3 (unreleased)
+3.3 (2010-09-06)
 ----------------
  * Bug fix: Fixed expandable and collapsible widgets when used in combination with
      hide zero count items [voineali #3457]
