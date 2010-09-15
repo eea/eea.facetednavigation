@@ -4,7 +4,7 @@
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import StringWidget
-from Products.PluginIndexes.TextIndex.Splitter import UnicodeSplitter 
+from Products.PluginIndexes.TextIndex.Splitter import UnicodeSplitter
 from eea.facetednavigation.widgets.field import StringField
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
@@ -67,9 +67,11 @@ class Widget(AbstractWidget):
 
         if isinstance(value, str):
             value = value.decode('utf-8')
-        #if isinstance(value, unicode):
-        #    value = value.decode('utf-8')
 
-        words = UnicodeSplitter.Splitter(value).split() 
-        query[index] = {'query': value, 'operator': 'and'}
+#        if isinstance(value, unicode):
+#            value = value.encode('utf-8')
+
+        words = UnicodeSplitter.Splitter(value).split()
+        query[index] = {'query': words, 'operator': 'and'}
+
         return query
