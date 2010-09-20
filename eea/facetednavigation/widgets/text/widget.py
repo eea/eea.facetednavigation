@@ -48,6 +48,34 @@ class Widget(AbstractWidget):
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema + EditSchema
 
+    def tokenize_string(self, value):
+        """ Process string values to be used in catalog
+        """
+        return UnicodeSplitter.Splitter(value,
+                encoding='utf-8', casefolding=False).split()
+
+    def tokenize_list(self, value):
+        words = []
+        for word in value:
+            words.extend(self.tokenize_string(word))
+        return words
+
+    def tokenize(self, value):
+        """ Process value to be used in catalog query
+        """
+        if isinstance(value, (tuple, list)):
+            value = self.tokenize_list(value)
+        elif isinstance(value, (str, unicode)):
+            value = self.tokenize_string(value)
+
+        # Ensure words are string instances as ZCatalog requires string
+        words = []
+        for word in value:
+            if isinstance(word, unicode):
+                word = word.encode('utf-8')
+            words.append(word)
+        return words
+
     def query(self, form):
         """ Get value from form and return a catalog dict query
         """
@@ -65,13 +93,6 @@ class Widget(AbstractWidget):
         if not value:
             return query
 
-        if isinstance(value, str):
-            value = value.decode('utf-8')
-
-#        if isinstance(value, unicode):
-#            value = value.encode('utf-8')
-
-        words = UnicodeSplitter.Splitter(value).split()
-        query[index] = {'query': words, 'operator': 'and'}
-
+        value = self.tokenize(value)
+        query[index] = {'query': value, 'operator': 'and'}
         return query
