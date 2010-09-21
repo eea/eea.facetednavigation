@@ -4,7 +4,7 @@ import re
 import logging
 import operator
 from zope import interface
-from zope.app import zapi
+from zope.component import queryMultiAdapter
 from zope.app.schema.vocabulary import IVocabularyFactory
 from zope.component import queryUtility
 from BTrees.IIBTree import weightedIntersection, IISet
@@ -163,8 +163,8 @@ class Widget(ATWidget):
         # Language widget has custom behaviour so be sure you keep
         # this in your widget
         if self.data.get('index', None) == 'Language':
-            language_widget = zapi.queryMultiAdapter((self, self.context),
-                                                     ILanguageWidgetAdapter)
+            language_widget = queryMultiAdapter((self, self.context),
+                                                ILanguageWidgetAdapter)
             if language_widget:
                 return language_widget.default
         return self.data.get('default', None)

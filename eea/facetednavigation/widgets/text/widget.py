@@ -1,14 +1,19 @@
 """ Text widget
 """
 
+try:
+    # Zope 2.10
+    from Products.PluginIndexes.TextIndex.Splitter import UnicodeSplitter
+except ImportError:
+    # Zope 2.12
+    UnicodeSplitter = None
+
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import StringWidget
-from Products.PluginIndexes.TextIndex.Splitter import UnicodeSplitter
 from eea.facetednavigation.widgets.field import StringField
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
-
 
 EditSchema = Schema((
     StringField('index',
@@ -51,8 +56,10 @@ class Widget(AbstractWidget):
     def tokenize_string(self, value):
         """ Process string values to be used in catalog
         """
-        return UnicodeSplitter.Splitter(value,
-                encoding='utf-8', casefolding=False).split()
+        if UnicodeSplitter:
+            return UnicodeSplitter.Splitter(value,
+                        encoding='utf-8', casefolding=False).split()
+        return value.split()
 
     def tokenize_list(self, value):
         words = []

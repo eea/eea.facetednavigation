@@ -9,5 +9,13 @@ except ImportError:
     from nocache import ramcache
     from nocache import InvalidateCacheEvent
 
+try:
+    # Plone 4+
+    from zope.lifecycleevent.interfaces import IObjectModifiedEvent
+except ImportError:
+    #BBB Plone < 4
+    from zope.app.container.interfaces import IObjectModifiedEvent
+
 from cache import cacheKeyFacetedNavigation
 from cache import cacheCounterKeyFacetedNavigation
+

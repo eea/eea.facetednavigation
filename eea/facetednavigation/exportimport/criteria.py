@@ -1,7 +1,7 @@
 import logging
 from Acquisition import aq_inner
 from Acquisition import aq_parent
-from zope.app import zapi
+from zope.component import queryMultiAdapter
 from zope.interface import implements
 from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.utils import XMLAdapterBase
@@ -34,7 +34,7 @@ class CriteriaXMLAdapter(XMLAdapterBase):
         env = CriteriaContext(self.context)
         node = self._doc.createElement('criteria')
         for criterion in self.context.values():
-            exporter = zapi.queryMultiAdapter((criterion, env), IBody)
+            exporter = queryMultiAdapter((criterion, env), IBody)
             node.appendChild(exporter.node)
         return node
 
@@ -57,7 +57,7 @@ class CriteriaXMLAdapter(XMLAdapterBase):
             cid = self.context.add('text', 'top', _cid_=name)
             criterion = self.context.get(cid)
 
-            importer = zapi.queryMultiAdapter((criterion, env), IBody)
+            importer = queryMultiAdapter((criterion, env), IBody)
             importer.node = child
 
     node = property(_exportNode, _importNode)

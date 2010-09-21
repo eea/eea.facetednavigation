@@ -1,5 +1,5 @@
 import logging
-from zope.app import zapi
+from zope.component import queryMultiAdapter
 from zope.component import getUtility
 from zope.component import queryAdapter
 
@@ -84,8 +84,8 @@ class FacetedQueryHandler(object):
 
             # Handle language widgets
             if criterion.get('index', '') == 'Language':
-                language_widget = zapi.queryMultiAdapter((widget, self.context),
-                                                         ILanguageWidgetAdapter)
+                language_widget = queryMultiAdapter((widget, self.context),
+                                                    ILanguageWidgetAdapter)
                 if not language_widget:
                     continue
                 query.update(language_widget(kwargs))

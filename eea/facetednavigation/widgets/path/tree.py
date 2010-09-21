@@ -1,10 +1,15 @@
 """ JsTree views
 """
+try:
+    # Plone 4
+    from plone.app.layout.navigation.navtree import buildFolderTree
+except ImportError:
+    #BBB Plone < 4
+    from Products.CMFPlone.browser.navtree import buildFolderTree
+
 import simplejson as json
 from zope.component import queryAdapter
-
 from Products.Five.browser import BrowserView
-from Products.CMFPlone.browser.navtree import buildFolderTree
 from Products.CMFPlone.browser.navtree import DefaultNavtreeStrategy
 from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.caching import ramcache

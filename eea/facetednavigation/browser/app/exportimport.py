@@ -1,4 +1,4 @@
-from zope.app import zapi
+from zope.component import queryMultiAdapter
 from Products.GenericSetup.interfaces import IBody
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.GenericSetup.context import SnapshotExportContext
@@ -31,7 +31,7 @@ class FacetedExportImport(object):
                 kwargs.get('redirect', 'configure_faceted.html'))
 
         environ = SnapshotImportContext(self.context, 'utf-8')
-        importer = zapi.queryMultiAdapter((self.context, environ), IBody)
+        importer = queryMultiAdapter((self.context, environ), IBody)
         if not importer:
             return self._redirect('No adapter found',
                 kwargs.get('redirect', 'configure_faceted.html'))
@@ -43,7 +43,7 @@ class FacetedExportImport(object):
         """ Export config as xml
         """
         environ = SnapshotExportContext(self.context, 'utf-8')
-        exporter = zapi.queryMultiAdapter((self.context, environ), IBody)
+        exporter = queryMultiAdapter((self.context, environ), IBody)
         if not exporter:
             return self._redirect('No adapter found',
                 kwargs.get('redirect', 'configure_faceted.html'))

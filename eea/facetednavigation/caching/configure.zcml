@@ -10,7 +10,7 @@
 
   <subscriber
     for="Products.Archetypes.interfaces.IBaseContent
-         zope.app.container.interfaces.IObjectModifiedEvent"
+         ..caching.IObjectModifiedEvent"
     handler=".cache.invalidateFacetedCache"
     />
 
