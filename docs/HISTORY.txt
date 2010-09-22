@@ -7,6 +7,7 @@ Changelog
 3.4 (unreleased)
 ----------------
  * Bug fix: Fixed search by words containing "(", "-" etc [ghicaale #3639]
+ * Bug fix: Fixed random failure of daterange doctests [voineali #3664]
 
 3.3 (2010-09-06)
 ----------------
