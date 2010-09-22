@@ -27,6 +27,8 @@ Set up
     >>> handler = getMultiAdapter((sandbox, request), name=u'faceted_configure')
     >>> query = getMultiAdapter((sandbox, request), name=u'faceted_query')
 
+    >>> today = DateTime()
+
 Cleanup default widgets
 -----------------------
 
@@ -56,35 +58,35 @@ Past
     >>> past = sandbox.invokeFactory('Folder', 'past', title='Relative date widget 1')
     >>> past = sandbox._getOb(past)
     >>> past.setLanguage('en')
-    >>> putils.editMetadata(past, effective_date=DateTime() - 365)
+    >>> putils.editMetadata(past, effective_date=today - 365)
 
 3 days old
 
     >>> past_n = sandbox.invokeFactory('Folder', 'past_n', title='Relative date widget 2')
     >>> past_n = sandbox._getOb(past_n)
     >>> past_n.setLanguage('en')
-    >>> putils.editMetadata(past_n, effective_date=DateTime() - 3)
+    >>> putils.editMetadata(past_n, effective_date=today - 3)
 
 Present
 
     >>> now = sandbox.invokeFactory('Folder', 'now', title='Relative date widget 3')
     >>> now = sandbox._getOb(now)
     >>> now.setLanguage('en')
-    >>> putils.editMetadata(now, effective_date=DateTime())
+    >>> putils.editMetadata(now, effective_date=today)
 
 3 days in the future
 
     >>> future_n = sandbox.invokeFactory('Folder', 'future_n', title='Relative date widget 4')
     >>> future_n = sandbox._getOb(future_n)
     >>> future_n.setLanguage('en')
-    >>> putils.editMetadata(future_n, effective_date=DateTime() + 3)
+    >>> putils.editMetadata(future_n, effective_date=today + 3)
 
 Future
 
     >>> future = sandbox.invokeFactory('Folder', 'future', title='Relative date widget 3')
     >>> future = sandbox._getOb(future)
     >>> future.setLanguage('en')
-    >>> putils.editMetadata(future, effective_date=DateTime() + 365)
+    >>> putils.editMetadata(future, effective_date=today + 365)
 
 Empty query
 -----------

@@ -27,6 +27,10 @@ Set up
     >>> handler = getMultiAdapter((sandbox, request), name=u'faceted_configure')
     >>> query = getMultiAdapter((sandbox, request), name=u'faceted_query')
 
+    >>> in_the_past = DateTime('1970/01/01')
+    >>> today = DateTime()
+    >>> in_the_future = DateTime('2030/12/31')
+
 Cleanup default widgets
 -----------------------
 
@@ -56,35 +60,35 @@ Past
     >>> past = sandbox.invokeFactory('Folder', 'past', title='Relative date widget 1')
     >>> past = sandbox._getOb(past)
     >>> past.setLanguage('en')
-    >>> putils.editMetadata(past, effective_date=DateTime() - 365)
+    >>> putils.editMetadata(past, effective_date=today - 365)
 
 3 days old
 
     >>> past_n = sandbox.invokeFactory('Folder', 'past_n', title='Relative date widget 2')
     >>> past_n = sandbox._getOb(past_n)
     >>> past_n.setLanguage('en')
-    >>> putils.editMetadata(past_n, effective_date=DateTime() - 3)
+    >>> putils.editMetadata(past_n, effective_date=today - 3)
 
 Present
 
     >>> now = sandbox.invokeFactory('Folder', 'now', title='Relative date widget 3')
     >>> now = sandbox._getOb(now)
     >>> now.setLanguage('en')
-    >>> putils.editMetadata(now, effective_date=DateTime())
+    >>> putils.editMetadata(now, effective_date=today)
 
 3 days in the future
 
     >>> future_n = sandbox.invokeFactory('Folder', 'future_n', title='Relative date widget 4')
     >>> future_n = sandbox._getOb(future_n)
     >>> future_n.setLanguage('en')
-    >>> putils.editMetadata(future_n, effective_date=DateTime() + 3)
+    >>> putils.editMetadata(future_n, effective_date=today + 3)
 
 Future
 
     >>> future = sandbox.invokeFactory('Folder', 'future', title='Relative date widget 3')
     >>> future = sandbox._getOb(future)
     >>> future.setLanguage('en')
-    >>> putils.editMetadata(future, effective_date=DateTime() + 365)
+    >>> putils.editMetadata(future, effective_date=today + 365)
 
 Empty query
 -----------
@@ -104,8 +108,8 @@ Get some results (default set)
 
 All before now
 
-    >>> start = DateTime('1970/01/01')
-    >>> end = DateTime()
+    >>> start = in_the_past
+    >>> end = today
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -116,8 +120,8 @@ All before now
 
 All before last week
 
-    >>> start = DateTime('1970/01/01')
-    >>> end = DateTime() - 7
+    >>> start = in_the_past
+    >>> end = today - 7
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -129,8 +133,8 @@ All before last week
 
 All before yesterday
 
-    >>> start = DateTime('1970/01/01')
-    >>> end = DateTime() - 2
+    >>> start = in_the_past
+    >>> end = today - 2
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -141,8 +145,8 @@ All before yesterday
 
 Last week
 
-    >>> start = DateTime() - 7
-    >>> end = DateTime()
+    >>> start = today - 7
+    >>> end = today
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -153,7 +157,7 @@ Last week
 
 Today
 
-    >>> start = end = DateTime()
+    >>> start = end = today
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -164,8 +168,8 @@ Today
 
 Next week
 
-    >>> start = DateTime()
-    >>> end = DateTime() + 7
+    >>> start = today
+    >>> end = today + 7
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -176,8 +180,8 @@ Next week
 
 All after next week
 
-    >>> start = DateTime() + 7
-    >>> end = DateTime('2030/12/31')
+    >>> start = today + 7
+    >>> end = in_the_future
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -188,8 +192,8 @@ All after next week
 
 All after now
 
-    >>> start = DateTime()
-    >>> end = DateTime('2030/12/31')
+    >>> start = today
+    >>> end = in_the_future
     >>> date_query = '%s=>%s' % (start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d'))
 
     >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
@@ -206,8 +210,8 @@ Get some results (no default)
 
 All before now
 
-    >>> start = DateTime('1970/01/01')
-    >>> end = DateTime()
+    >>> start = in_the_past
+    >>> end = today
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
@@ -215,8 +219,8 @@ All before now
 
 All before last week
 
-    >>> start = DateTime('1970/01/01')
-    >>> end = DateTime() - 7
+    >>> start = in_the_past
+    >>> end = today - 7
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
@@ -225,8 +229,8 @@ All before last week
 
 All before yesterday
 
-    >>> start = DateTime('1970/01/01')
-    >>> end = DateTime() - 1
+    >>> start = in_the_past
+    >>> end = today - 1
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
@@ -234,8 +238,8 @@ All before yesterday
 
 Last week
 
-    >>> start = DateTime() - 7
-    >>> end = DateTime()
+    >>> start = today - 7
+    >>> end = today
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
@@ -243,7 +247,7 @@ Last week
 
 Today
 
-    >>> start = end = DateTime()
+    >>> start = end = today
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
@@ -251,8 +255,8 @@ Today
 
 Next week
 
-    >>> start = DateTime()
-    >>> end = DateTime() + 7
+    >>> start = today
+    >>> end = today + 7
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
@@ -260,8 +264,8 @@ Next week
 
 All after next week
 
-    >>> start = DateTime() + 7
-    >>> end = DateTime('2030/12/31')
+    >>> start = today + 7
+    >>> end = in_the_future
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
@@ -269,8 +273,8 @@ All after next week
 
 All after now
 
-    >>> start = DateTime()
-    >>> end = DateTime('2030/12/31')
+    >>> start = today
+    >>> end = in_the_future
 
     >>> brains = query.query(c1=[start.strftime('%Y/%m/%d'), end.strftime('%Y/%m/%d')])
     >>> [brain.getId for brain in brains]
