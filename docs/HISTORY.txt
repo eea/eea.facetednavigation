@@ -4,6 +4,9 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
+3.5-dev - (unreleased)
+----------------------
+
 3.4 - (2010-09-30)
 ------------------
  * Bug fix: Fixed search by words containing "(", "-" etc [ghicaale #3639]
