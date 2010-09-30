@@ -4,8 +4,8 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
-3.4-dev (unreleased)
-----------------
+3.4 - (2010-09-30)
+------------------
  * Bug fix: Fixed search by words containing "(", "-" etc [ghicaale #3639]
  * Bug fix: Fixed random failure of daterange doctests [voineali #3664]
 
@@ -129,3 +129,4 @@ Changelog
 1.0 (2009-10-30)
 ----------------
  * Initial release
+
