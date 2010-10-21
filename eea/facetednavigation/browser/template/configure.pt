@@ -14,10 +14,6 @@
 
 <div metal:fill-slot="main">
 
-  <div metal:use-macro="here/document_actions/macros/document_actions">
-      Document actions (print, sendto etc)
-  </div>
-
   <h1 i18n:translate="" id="faceted-page-title" class="documentFirstHeading">
     Configure faceted navigation
   </h1>

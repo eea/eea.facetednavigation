@@ -1,3 +1,4 @@
+import logging
 from zope.interface import implements
 from zope.event import notify
 from zope.component import getUtility
@@ -12,6 +13,8 @@ from eea.facetednavigation.browser import interfaces
 
 from Products.Five.browser import BrowserView
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
+
+logger = logging.getLogger('eea.facetednavigation.browser.app.configure')
 #
 # Controllers
 #
@@ -43,6 +46,13 @@ class FacetedBasicHandler(BrowserView):
         if getattr(self.request, 'form', None):
             form.update(self.request.form)
 
+        # jQuery >= 1.4 adds type to params keys
+        # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
+        # Let's fix this
+        return dict((key.replace('[]', ''), val)
+                    for key, val in form.items())
+
+
 class FacetedCriteriaHandler(FacetedBasicHandler):
     """ Edit criteria
     """
@@ -51,7 +61,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
     def add(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
-        self._request_form(kwargs)
+        kwargs = self._request_form(kwargs)
 
         wid = kwargs.pop('wtype', None)
         position = kwargs.pop('wposition', 'right')
@@ -67,7 +77,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
     def edit(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
-        self._request_form(kwargs)
+        kwargs = self._request_form(kwargs)
 
         criteria = ICriteria(self.context)
         handler = getMultiAdapter((self.context, self.request),
@@ -85,7 +95,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
     def delete(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
-        self._request_form(kwargs)
+        kwargs = self._request_form(kwargs)
 
         to_delete = kwargs.get('paths', kwargs.get('ids', ()))
         handler = getMultiAdapter((self.context, self.request),
@@ -102,7 +112,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
     def add(self, **kwargs):
         """ See IFacetedCriterionHandler
         """
-        self._request_form(kwargs)
+        kwargs = self._request_form(kwargs)
 
         wid = kwargs.pop('wtype', None)
         position = kwargs.pop('wposition', 'right')
@@ -115,7 +125,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
     def edit(self, cid, **kwargs):
         """ See IFacetedCriterionHandler
         """
-        self._request_form(kwargs)
+        kwargs = self._request_form(kwargs)
 
         criteria = ICriteria(self.context)
         widget = criteria.widget(cid=cid)
@@ -153,9 +163,25 @@ class FacetedPositionHandler(FacetedBasicHandler):
     """
     implements(interfaces.IFacetedPositionHandler)
 
+    def _request_form(self, form):
+        """ Fix keys
+        """
+        form = super(FacetedPositionHandler, self)._request_form(form)
+        newform = {}
+        for key, value in form.items():
+            if ':list' in key:
+                key = key.replace(':list', '')
+                if isinstance(value, (str, unicode)):
+                    value = [value]
+                newform[key] = value
+        return newform
+
     def update(self, **kwargs):
         """ Update position by given slots
         """
+        logger.info(kwargs)
+        kwargs = self._request_form(kwargs)
+
         ICriteria(self.context).position(**kwargs)
         return self._redirect('Position changed')
 
@@ -179,7 +205,7 @@ class FacetedFormHandler(FacetedBasicHandler):
     def __call__(self, **kwargs):
         """ This method is called from a form with more than one submit buttons
         """
-        self._request_form(kwargs)
+        kwargs = self._request_form(kwargs)
         #
         # Criteria
         #

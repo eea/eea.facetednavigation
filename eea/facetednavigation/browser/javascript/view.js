@@ -361,10 +361,12 @@ Faceted.AjaxLook = {
 
   remove: function(wid){
     if(this.slaves.length){
-      var index = jQuery(this.slaves).index(wid);
-      if(index != -1){
-        this.slaves.splice(index, 1);
-      }
+      this.slaves = jQuery.map(this.slaves, function(slave, index){
+        if(slave == wid){
+          return null;
+        }
+        return slave;
+      });
     }
 
     var widget = jQuery('#' + wid + '_widget');

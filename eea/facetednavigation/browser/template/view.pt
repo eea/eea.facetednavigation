@@ -12,21 +12,7 @@
 
 <body>
 
-<div metal:fill-slot="main">
-
-  <h1 tal:content="object_title" class="documentFirstHeading">
-    Title or id
-  </h1>
-
- <div metal:use-macro="here/document_actions/macros/document_actions">
-    Document actions (print, sendto etc)
-  </div>
-
-  <p class="documentDescription"
-     tal:content="here/Description"
-     tal:condition="here/Description">
-    News summary
-  </p>
+<div metal:fill-slot="content-core">
 
 <!-- Folder contents -->
 <div class="faceted-form" metal:define-macro="widgets" id="faceted-form"

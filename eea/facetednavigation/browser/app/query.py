@@ -24,7 +24,7 @@ class FacetedQueryHandler(object):
         self.context = context
         self.request = request
 
-    def macros(self, name='listing'):
+    def macros(self, name='content-core'):
         """ Return macro from default layout
         """
         return IFacetedLayout(self.context).get_macro(macro=name)
@@ -66,7 +66,14 @@ class FacetedQueryHandler(object):
         """
         if self.request:
             kwargs.update(self.request.form)
-        logger.debug(kwargs)
+
+        # jQuery >= 1.4 adds type to params keys
+        # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
+        # Let's fix this
+        kwargs = dict((key.replace('[]', ''), val)
+                      for key, val in kwargs.items())
+
+        logger.info("REQUEST: %r", kwargs)
 
         # Generate the catalog query
         mtool = getToolByName(self.context, 'portal_membership', None)
@@ -98,7 +105,7 @@ class FacetedQueryHandler(object):
         # Add default language
         query.setdefault('Language', self.language)
 
-        logger.debug(query)
+        logger.info('QUERY: %s', query)
         return query
 
     def query(self, batch=True, sort=True, **kwargs):

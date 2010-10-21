@@ -2,6 +2,7 @@
 <div metal:define-macro="schema" class="faceted-widget-edit" tal:define="
   mode string:search;
   errors python:{};
+  template nocall:view;
   criterion python:template.data;
   cid python:criterion.getId();
   faceted_widget python:template.widget;

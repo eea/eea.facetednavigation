@@ -31,7 +31,7 @@ class FacetedLayout(object):
     def layout(self):
         """ Current layout
         """
-        return IAnnotations(self.context).get(ANNO_FACETED_LAYOUT, 'folder_summary_view')
+        return IAnnotations(self.context).get(ANNO_FACETED_LAYOUT, 'folder_listing')
 
     @property
     def layouts(self):
