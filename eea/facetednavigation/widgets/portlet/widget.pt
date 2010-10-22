@@ -1,6 +1,7 @@
 <metal:block use-macro="here/global_defines/macros/defines" />
 <div class="faceted-widget faceted-portlet-widget" style="display: none" tal:define="
   error_view nocall:context/@@faceted.widget.error;
+  template nocall:view;
   wid python:template.data.getId();
   hidden python:template.hidden;
   css string:faceted-widget faceted-portlet-widget;

@@ -109,9 +109,9 @@
 }
 
 .faceted-widget fieldset {
-  margin: 0.5em;
-  padding: 1em 0.5em 0.5em 0.5em;
-  border: 1px solid #ccc;
+  margin: 0.5em ! important;
+  padding: 1em 0.5em 0.5em 0.5em ! important;
+  border: 1px solid #ccc ! important;
 }
 
 .widget-fieldset legend {

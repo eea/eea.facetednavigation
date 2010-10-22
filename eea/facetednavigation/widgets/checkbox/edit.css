@@ -3,7 +3,7 @@
 
 .widget-fieldset ul {
   margin: 0px;
-  list-style: none;
+  list-style: none ! important;
 }
 
 .widget-fieldset ul li input {

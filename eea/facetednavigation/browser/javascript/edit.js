@@ -70,29 +70,37 @@ FacetedEdit.FormMessage = {
     var js_obj = this;
     // Add portal status message
     var context = jQuery('#faceted-edit-widgets-ajax');
-    var msg = jQuery('<div>');
-    msg.addClass('portalMessage');
-    msg.attr('id', 'faceted-portal-status-message');
-    msg.css('float', 'left');
-    msg.css('cursor', 'pointer');
-    msg.css('margin', '0px');
-    var msg_area = jQuery('<span>');
-    msg_area.attr('id', 'faceted-portal-status-message-area');
-    var msg_close = jQuery('<span>');
-    msg_close.addClass('ui-icon');
-    msg_close.addClass('ui-icon-close');
-    msg_close.attr('title', 'Close message');
-    msg_close.css('float', 'right');
-    msg_close.css('margin-left', '1em');
-    msg_close.html(' ');
+    var msg = jQuery('<dl>')
+      .addClass('portalMessage')
+      .attr('id', 'faceted-portal-status-message')
+      .css({
+        float: 'left',
+        cursor: 'pointer',
+        margin: '0px',
+        width: '80%',
+        'text-align': 'left'
+      }).append(jQuery('<dt>').text('Info'));
+
+    var msg_area = jQuery('<dd>')
+      .attr('id', 'faceted-portal-status-message-area');
+
+    var msg_close = jQuery('<span>')
+      .addClass('ui-icon')
+      .addClass('ui-icon-close')
+      .attr('title', 'Close message')
+      .html(' ')
+      .css({
+        float: 'right',
+        margin: '0.5em'
+      });
+
     msg.click(function(){
       js_obj.msg.hide();
     });
-    msg.append(msg_close);
-    msg.append(msg_area);
+    msg.append(msg_close).append(msg_area);
     context.prepend(msg);
-    this.msg = jQuery('#faceted-portal-status-message', context);
-    this.msg_area = jQuery('span#faceted-portal-status-message-area', this.msg);
+    this.msg = msg;
+    this.msg_area = msg_area;
     this.msg.hide();
 
     var lock = jQuery('<div>');
@@ -488,7 +496,10 @@ FacetedEdit.FormEditWidget = {
     context.form.dialog('open');
     jQuery.get('@@faceted_schema', query, function(data) {
       context.form.html(data);
+
       jQuery('#archetypes-fieldname-default').remove();
+      jQuery('#archetypes-fieldname-' + context.cid + '_default').remove();
+
       var catalog = jQuery('#archetypes-fieldname-index select');
       var operator = jQuery('#archetypes-fieldname-operator select');
       if(catalog.length && operator.length){
@@ -592,6 +603,7 @@ FacetedEdit.FormAddWidgets = {
       FacetedEdit.FormMessage.custom_message('Loading...', 'faceted-widget-type');
       context.details.html(data);
       jQuery('#archetypes-fieldname-default').hide();
+      jQuery('#archetypes-fieldname-c0_default').hide();
       var catalog = jQuery('#archetypes-fieldname-index select');
       var operator = jQuery('#archetypes-fieldname-operator select');
       if(catalog.length && operator.length){
@@ -739,7 +751,8 @@ FacetedEdit.FormValidator = {
 
   validate_required: function(form){
     var valid = true;
-    var elements = jQuery('#' + jQuery(form).attr('id') + ' div.field:has(span.fieldRequired) :input');
+    var elements = jQuery('div.field:has(span.required) :input', jQuery(form));
+
     var context = this;
     jQuery.each(elements, function(){
       var element = jQuery(this);
