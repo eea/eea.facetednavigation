@@ -64,7 +64,7 @@ Same as for checkbox
     ...         c0_catalog='portal_catalog',
     ...         c0_index='portal_type')
     >>> counter(cid='c3')
-    '{..."Folder": 2...}'
+    '{..."Document": 1...}'
 
 Select
 ------
@@ -75,4 +75,4 @@ Same as for checkbox.
     ...         c0_catalog='portal_catalog',
     ...         c0_index='portal_type')
     >>> counter(cid='c4')
-    '{..."Folder": 2...}'
+    '{..."Document": 1...}'
