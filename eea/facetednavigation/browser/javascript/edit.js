@@ -516,8 +516,9 @@ FacetedEdit.FormEditWidget = {
         });
       }
       var widget = jQuery('.faceted-widget-edit', context.form);
-      jQuery('ul', widget).show();
-      widget.tabs();
+      jQuery('ul', widget).addClass('formTabs').show();
+      jQuery('li', widget).addClass('formTab');
+      jQuery('ul', widget).tabs('div.panes > div');
     });
   },
 
@@ -618,8 +619,9 @@ FacetedEdit.FormAddWidgets = {
       jQuery('#c0-layout-header').remove();
       jQuery('#c0-layout-tab').remove();
       var widget = jQuery('.faceted-widget-edit', context.details);
-      jQuery('ul', widget).show();
-      widget.tabs();
+      jQuery('ul', widget).attr('class', 'formTabs').show();
+      jQuery('li', widget).attr('class', 'formTab');
+      jQuery('ul', widget).tabs('div.panes > div');
     });
   },
 
@@ -833,7 +835,7 @@ FacetedEdit.FormSections = {
 
     var div = jQuery('<div>');
     div.addClass('faceted-section-tabs');
-    var ul = jQuery('<ul>');
+    var ul = jQuery('<ul>').addClass('formTabs');
 
     this.sections.each(function(){
       var section = jQuery(this);
@@ -841,7 +843,7 @@ FacetedEdit.FormSections = {
       var li = jQuery('<li>');
 
       li.attr('id', 'section-tabs-' + section_id);
-      li.attr('class', 'ui-state-default ui-corner-top faceted-drag-drop');
+      li.attr('class', 'faceted-drag-drop formTab');
       li.click(function(){
         context.tab_clicked(this, section_id);
       });
@@ -855,7 +857,6 @@ FacetedEdit.FormSections = {
     });
 
     div.append(ul);
-    div.tabs();
     div.removeClass('ui-widget-content');
     ul.removeClass('ui-widget-header');
 
@@ -893,10 +894,8 @@ FacetedEdit.FormSections = {
     }
     var tabs = jQuery('li', this.context);
 
-    tabs.removeClass('ui-tabs-selected');
-    tabs.removeClass('ui-state-active');
-    this.selected.addClass('ui-tabs-selected');
-    this.selected.addClass('ui-state-active');
+    jQuery('a', tabs).removeClass('selected');
+    jQuery('a', this.selected).addClass('selected');
 
     if(section_id == 'all'){
       jQuery('div.faceted-widgets').show();

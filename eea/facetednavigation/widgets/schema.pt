@@ -22,6 +22,7 @@
   </tal:schemata>
 </ul>
 
+<div class="panes">
 <tal:schemata repeat="schemata schematas">
   <div tal:attributes="id string:${cid}-${schemata}-tab" tal:define="
     fields python:edit_schema.getSchemataFields(schemata)">
@@ -36,5 +37,6 @@
     </tal:field>
   </div>
 </tal:schemata>
+</div>
 
 </div>

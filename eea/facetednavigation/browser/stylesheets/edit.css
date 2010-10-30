@@ -86,12 +86,53 @@ table.listing {
   padding-bottom: 0.3em;
 }
 
-div.faceted-widget-edit ul.ui-widget-header {
-  background: #FFFFFF;
-  border-color: #CCCCCC;
-  border-style: none none solid;
-  border-width: medium medium 1px;
-  margin-left: -6px;
+.faceted-widget-edit ul.formTabs {
+  background-color: #ddd;
+  border: 0.3em solid #ddd;
+}
+
+.faceted-widget-edit ul.formTabs {
+  display: block;
+  border-style: solid solid none solid;
+  margin-left: 0;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+  -webkit-border-top-right-radius: 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  -moz-border-radius-topleft: 0.5em;
+  -moz-border-radius-topright: 0.5em;
+}
+
+.faceted-widget-edit li.formTab {
+    display: inline;
+    margin-right:0.25em;
+}
+
+.faceted-widget-edit li.formTab a {
+    /* this isn't supported by all browsers, so we keep it in a separate rule */
+    display: inline-block;
+}
+
+.faceted-widget-edit li.formTab a {
+    line-height: 2em;
+    padding: 0 0.75em;
+    text-decoration: none;
+    border: none;
+    margin: 0 ;
+}
+
+.faceted-widget-edit li.formTab a.current {
+    font-weight: bold;
+}
+
+.faceted-widget-edit li.formTab a.current,
+.faceted-widget-edit li.formTab a:hover {
+    background: White;
+    color: Black;
+}
+
+.faceted-widget-edit .panes {
+ padding: 1em;
 }
 
 .faceted-widget .ui-widget-header {
@@ -201,7 +242,6 @@ div.faceted-widget-edit ul.ui-widget-header {
 .faceted-section-tabs {
   margin-top: 1em;
   padding: 0px;
-  border-bottom: 1px dotted green;
 }
 
 .faceted-section-tabs .ui-tabs-nav {
@@ -210,6 +250,8 @@ div.faceted-widget-edit ul.ui-widget-header {
 
 .faceted-section-tabs ul li a {
   border-bottom: 0px ! important;
+  cursor: pointer;
+  color: #205C90;
 }
 
 .faceted-section-tabs .ui-state-highlight {
