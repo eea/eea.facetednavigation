@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <metadata>
  <dependencies>
-  <dependency>profile-eea.jquery:01-jquery</dependency>
-  <dependency>profile-eea.jquery:02-ui</dependency>
+  <dependency>profile-collective.js.jqueryui:default</dependency>
   <dependency>profile-eea.jquery:03-ajaxfileupload</dependency>
   <dependency>profile-eea.jquery:04-bbq</dependency>
   <dependency>profile-eea.jquery:05-cookie</dependency>
