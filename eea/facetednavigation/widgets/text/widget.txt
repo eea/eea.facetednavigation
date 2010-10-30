@@ -80,19 +80,12 @@ Faceted navigation
 
     >>> _ = configure(updateCriterion_button='Save', cid='c0', index='Title')
     >>> brains = query.query(batch=False, c0='Kyoto')
-    >>> for brain in brains:
-    ...     print brain.Title
-    Distance-to-target (Kyoto Protocol) for new Member States countries
-
-    >>> brains = query.query(batch=False, c0='(Kyoto')
-    >>> for brain in brains:
-    ...     print brain.Title
-    Distance-to-target (Kyoto Protocol) for new Member States countries
+    >>> [brain.Title for brain in brains]
+    ['Distance-to-target (Kyoto Protocol) for new Member States countries']
 
     >>> brains = query.query(batch=False, c0=['Member States', 'Kyoto'])
-    >>> for brain in brains:
-    ...     print brain.Title
-    Distance-to-target (Kyoto Protocol) for new Member States countries
+    >>> [brain.Title for brain in brains]
+    ['Distance-to-target (Kyoto Protocol) for new Member States countries']
 
   Render facet
 
