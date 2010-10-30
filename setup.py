@@ -39,6 +39,7 @@ setup(name=NAME,
           'collective.js.jqueryui',
           'eea.faceted.vocabularies',
           'eea.jquery',
+          'collective.js.jqueryui',
       ],
       entry_points="""
       # -*- Entry points: -*-
