@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <permission name="EEA Faceted Navigation edit Configuration" acquire="True">
+      <role name="Manager"/>
+      <role name="Owner"/>
+    </permission>
+  </permissions>
+</rolemap>

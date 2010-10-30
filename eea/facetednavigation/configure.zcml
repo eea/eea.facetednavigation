@@ -8,6 +8,7 @@
   <include package="p4a.subtyper" />
 
   <include file="profiles.zcml" />
+  <include file="permissions.zcml" />
 
   <!-- Plone 2.5 -->
   <configure zcml:condition="installed zope.app.annotation.tests">
