@@ -4,12 +4,14 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
-3.5-dev - (unreleased)
+4.0-dev - (unreleased)
 ----------------------
+ * Feature: Moved to Plone collective and start make the package compatible with Plone 4.
+    [voineali, ghicaale, hpeteragitator]
 
 3.4 - (2010-09-30)
 ------------------
- * Bug fix: Fixed search by words containing "(", "-" etc [ghicaale #3639]
+ * Bug fix: Fixed search by words containing "(", "-" etc [ghicaale #3639c
  * Bug fix: Fixed random failure of daterange doctests [voineali #3664]
 
 3.3 (2010-09-06)
