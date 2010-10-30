@@ -2,7 +2,7 @@
 """
 import os
 from StringIO import StringIO
-from Globals import package_home
+from App.Common import package_home
 from cgi import FieldStorage
 from ZPublisher.HTTPRequest import FileUpload
 from Products.Five import zcml
@@ -47,6 +47,7 @@ def setup_eea_facetednavigation():
     except ImportError, err:
         pass
     import eea.facetednavigation
+    zcml.load_config('meta.zcml', eea.facetednavigation)
     zcml.load_config('configure.zcml', eea.facetednavigation)
     fiveconfigure.debug_mode = False
 
