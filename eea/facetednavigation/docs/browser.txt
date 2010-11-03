@@ -248,7 +248,7 @@ we can reproduce the ajax calls.
     >>> 'faceted-column' in browser.contents
     True
 
-  Reorder
+  Reorder (jQuery 1.3.2 style)
 
     >>> browser.open(sandbox_url + ('/@@faceted_configure?'
     ...                             'updatePosition_button=Update'
@@ -257,6 +257,19 @@ we can reproduce the ajax calls.
     ...                             '&left:list=c0&left:list=c4&left:list=c5'
     ...                             '&center:list=c6'
     ...                             '&right:list=c7&right:list=c8&right:list=c9'))
+    >>> browser.open(sandbox_url + '/@@configure_faceted.html')
+    >>> browser.getControl(name='paths:list').options
+    ['c1', 'c2', 'c3', 'c0', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9']
+
+  Reorder (jQuery 1.4.2 style)
+
+    >>> browser.open(sandbox_url + ('/@@faceted_configure?'
+    ...                             'updatePosition_button=Update'
+    ...                             '&redirect='
+    ...                             '&top:list[]=c1&top:list[]=c2&top:list[]=c3'
+    ...                             '&left:list[]=c0&left:list[]=c4&left:list[]=c5'
+    ...                             '&center:list[]=c6'
+    ...                             '&right:list[]=c7&right:list[]=c8&right:list[]=c9'))
     >>> browser.open(sandbox_url + '/@@configure_faceted.html')
     >>> browser.getControl(name='paths:list').options
     ['c1', 'c2', 'c3', 'c0', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9']

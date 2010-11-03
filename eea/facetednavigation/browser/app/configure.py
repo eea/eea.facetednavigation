@@ -174,12 +174,14 @@ class FacetedPositionHandler(FacetedBasicHandler):
                 if isinstance(value, (str, unicode)):
                     value = [value]
                 newform[key] = value
+            else:
+                newform[key] = value
         return newform
 
     def update(self, **kwargs):
         """ Update position by given slots
         """
-        logger.info(kwargs)
+        logger.debug(kwargs)
         kwargs = self._request_form(kwargs)
 
         ICriteria(self.context).position(**kwargs)
