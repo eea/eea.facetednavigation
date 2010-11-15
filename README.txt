@@ -53,7 +53,7 @@ It comes with plenty of configuration options and features like:
 Dependecies
 ===========
 
-  1. Plone 2.5.x or Plone 3.x.
+  1. Plone 4.x
 
 
 Live demo
@@ -67,7 +67,10 @@ Here some live production demos at EEA (European Environment Agency)
 Source code
 ===========
 
-Latest source code in EEA svn:
+Latest source code (Plone 4 compatible):
+   http://svn.plone.org/svn/collective/eea.facetednavigation/trunk
+
+Plone 2 and 3 compatible:
    https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.facetednavigation/
 
 Copyright and license
@@ -87,6 +90,7 @@ Contributor(s): Alin Voinea (Eau de Web),
                 Sasha Vincic (Valentine Web Systems)
 Credits:
                 Izhar Firdaus (Inigo Consulting)
+                Peter Holzer (Agitator)
 
 More details under docs/License.txt
 
