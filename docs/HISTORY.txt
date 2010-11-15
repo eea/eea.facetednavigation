@@ -4,7 +4,7 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
-4.0-dev - (unreleased)
+4.0-rc1 - (2010-11-15)
 ----------------------
  * Feature: Moved to Plone collective and start make the package compatible with Plone 4.
     [voineali, ghicaale, hpeteragitator]
