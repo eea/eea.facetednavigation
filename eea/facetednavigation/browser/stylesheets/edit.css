@@ -257,6 +257,8 @@ table.listing {
 .faceted-section-tabs .ui-state-highlight {
   height: 2em ! important;
   border: none ! important;
+  width: 90%;
+  display: inline;
 }
 
 .faceted-section-tabs ul {

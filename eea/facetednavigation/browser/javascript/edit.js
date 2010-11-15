@@ -857,9 +857,6 @@ FacetedEdit.FormSections = {
     });
 
     div.append(ul);
-    div.removeClass('ui-widget-content');
-    ul.removeClass('ui-widget-header');
-
     jQuery('#faceted-edit-widgets-ajax').after(div);
 
     this.context = div;
@@ -894,6 +891,8 @@ FacetedEdit.FormSections = {
     }
     var tabs = jQuery('li', this.context);
 
+    tabs.removeClass('ui-tabs-selected');
+    this.selected.addClass('ui-tabs-selected');
     jQuery('a', tabs).removeClass('selected');
     jQuery('a', this.selected).addClass('selected');
 

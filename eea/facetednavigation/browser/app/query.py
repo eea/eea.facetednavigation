@@ -73,7 +73,7 @@ class FacetedQueryHandler(object):
         kwargs = dict((key.replace('[]', ''), val)
                       for key, val in kwargs.items())
 
-        logger.info("REQUEST: %r", kwargs)
+        logger.debug("REQUEST: %r", kwargs)
 
         # Generate the catalog query
         mtool = getToolByName(self.context, 'portal_membership', None)
@@ -105,7 +105,7 @@ class FacetedQueryHandler(object):
         # Add default language
         query.setdefault('Language', self.language)
 
-        logger.info('QUERY: %s', query)
+        logger.debug('QUERY: %s', query)
         return query
 
     def query(self, batch=True, sort=True, **kwargs):
