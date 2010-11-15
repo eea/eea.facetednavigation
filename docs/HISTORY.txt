@@ -1,8 +1,5 @@
 Changelog
 =========
-[Alexandru Ghica - alec.ghica@eaudeweb.ro]
-[Alin Voinea - alin.voinea@eaudeweb.ro]
-[Antonio De Marinis - demarinis@eea.europa.eu]
 
 4.0-rc1 - (2010-11-15)
 ----------------------

@@ -10,7 +10,7 @@ VERSION = open(join(*PATH)).read().strip()
 
 setup(name=NAME,
       version=VERSION,
-      description="EEA Faced navigation",
+      description="EEA Faceted Navigation",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
@@ -21,9 +21,9 @@ setup(name=NAME,
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='eea faceted navigation',
-      author='Alin Voinea',
-      author_email='alin.voinea@eaudeweb.ro',
-      url='http://eea.europa.eu',
+      author='Alin Voinea, Alexandru Ghica, Antonio De Marinis',
+      author_email='webadmin@eea europa eu',
+      url='http://plone.org/products/eea.facetednavigation',
       license='MPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['eea'],
