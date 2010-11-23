@@ -39,9 +39,80 @@ String
 Python
 ~~~~~~
 
+  Integer
+
     >>> widget.data.update(default=u'python: (100+10)/2')
     >>> widget.query(form={})
     {'path': 55}
+
+    >>> widget.data.update(default=u'python: 10 - 10')
+    >>> widget.query(form={})
+    {'path': 0}
+
+  Boolean
+
+    >>> widget.data.update(default=u'python:False')
+    >>> widget.query(form={})
+    {'path': False}
+
+    >>> widget.data.update(default=u'python:True')
+    >>> widget.query(form={})
+    {'path': True}
+
+  String
+
+    >>> widget.data.update(default=u"python:'ex'.replace('ex', '')")
+    >>> widget.query(form={})
+    {'path': ''}
+
+    >>> widget.data.update(default=u"python: ' y '.strip()")
+    >>> widget.query(form={})
+    {'path': 'y'}
+
+  Tuple
+
+    >>> widget.data.update(default=u"python:()")
+    >>> widget.query(form={})
+    {'path': ()}
+
+    >>> widget.data.update(default=u"python:(1,)")
+    >>> widget.query(form={})
+    {'path': (1,)}
+
+  List
+
+    >>> widget.data.update(default=u"python:[x for x in range(0, 0)]")
+    >>> widget.query(form={})
+    {'path': []}
+
+    >>> widget.data.update(default=u"python:[x for x in range(0, 1)]")
+    >>> widget.query(form={})
+    {'path': [0]}
+
+  Dictionary
+
+    >>> widget.data.update(default=u"python:{1: 2}")
+    >>> widget.query(form={})
+    {'path': {1: 2}}
+
+    >>> widget.data.update(default=u"python:{}")
+    >>> widget.query(form={})
+    {'path': {}}
+
+
+FACET-EMPTY string
+--------------------
+
+You can force this facet to send no query to catalog. This is useful when you
+want to bypass this facet for empty values
+
+    >>> widget.data.update(default=u"python:(10 - 10) or 'FACET-EMPTY' ")
+    >>> widget.query(form={})
+    {}
+
+    >>> widget.data.update(default=u"python:(10 - 9) or 'FACET-EMPTY' ")
+    >>> widget.query(form={})
+    {'path': 1}
 
 
 Dynamic expressions using available contexts

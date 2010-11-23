@@ -6,6 +6,7 @@ Changelog
 
 3.5-dev - (unreleased)
 ----------------------
+ * Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]
 
 3.4 - (2010-09-30)
 ------------------
