@@ -121,7 +121,9 @@ class Widget(AbstractWidget):
         return context.evaluate(expression)
 
     def query(self, form):
-        """ Update query
+        """ Update query.
+
+        Use 'FACET-EMPTY' string to send no query to catalog
         """
         query = {}
         index = self.data.get('index', '')
@@ -135,7 +137,7 @@ class Widget(AbstractWidget):
             logger.exception(err)
             return query
 
-        if not value:
+        if value == "FACET-EMPTY":
             return query
 
         query[index] = value
