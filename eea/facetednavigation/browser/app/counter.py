@@ -48,6 +48,9 @@ class FacetedQueryCounter(object):
         if self.request:
             kwargs.update(self.request.form)
 
+        # Calling self.index() will set cache headers for varnish
+        index = self.index()
+
         cid = kwargs.pop('cid', None)
         if not cid:
             return {}

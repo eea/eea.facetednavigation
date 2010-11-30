@@ -91,6 +91,7 @@
     for="..interfaces.IFacetedNavigable"
     name="faceted_counter"
     class=".app.counter.FacetedQueryCounter"
+    template="template/counter.pt"
     permission="zope2.View"
     />
 

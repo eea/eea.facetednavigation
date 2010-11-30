@@ -29,6 +29,7 @@
     for="eea.facetednavigation.interfaces.IFacetedNavigable"
     name="tagscloud_counter"
     class=".counter.TagsCloudCounter"
+    template="counter.pt"
     permission="zope2.View"
     />
 

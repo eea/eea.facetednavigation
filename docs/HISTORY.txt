@@ -6,6 +6,7 @@ Changelog
 
 3.6-dev - (unreleased)
 ----------------------
+ * Bug fix: Set cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
 
 3.5 - (2010-11-23)
 ------------------
