@@ -4,8 +4,8 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
-3.6-dev - (unreleased)
-----------------------
+3.6 - (2010-11-30)
+------------------
  * Bug fix: Set cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
 
 3.5 - (2010-11-23)
