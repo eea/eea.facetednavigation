@@ -3,6 +3,7 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Bug fix: Fixed cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
  * Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]
 
 4.0-rc1 - (2010-11-15)
