@@ -22,14 +22,6 @@
     permission="zope.Public"
     />
 
-  <browser:menuItem
-    for="..interfaces.IFacetedNavigable"
-    menu="object"
-    title="Syndication"
-    action="synPropertiesForm"
-    permission="cmf.ModifyPortalContent"
-    />
-
 </configure>
 </configure>
 </configure>
