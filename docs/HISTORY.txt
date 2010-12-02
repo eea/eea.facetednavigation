@@ -3,6 +3,7 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Modified SKOS view so that tests pass without LinguaPlone. [yomatters]
  * Removed unnecessary menu item registration for syndication. [yomatters]
  * Bug fix: Fixed cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
  * Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]

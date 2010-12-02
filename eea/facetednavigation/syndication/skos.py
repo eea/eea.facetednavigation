@@ -15,7 +15,7 @@ class SKOS(object):
         brains = handler.query(ajax=False)
         for brain in brains:
             doc = brain.getObject()
-            if not doc:
+            if not doc or not hasattr(doc, 'getTranslations'):
                 continue
 
             languages = doc.getTranslations()
