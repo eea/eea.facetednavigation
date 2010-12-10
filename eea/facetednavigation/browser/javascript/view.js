@@ -155,6 +155,10 @@ Faceted.Form = {
       return false;
     });
 
+    if(Faceted.Query.b_start === undefined){
+      Faceted.Query.b_start = 0;
+    }
+
     jQuery(Faceted.Events).trigger(Faceted.Events.QUERY_INITIALIZED);
 
     if(!has_hash){
@@ -200,7 +204,7 @@ Faceted.Form = {
 
   do_form_query: function(){
     var context = this;
-    if(!Faceted.Query.b_start){
+    if(Faceted.Query.b_start === undefined){
       Faceted.Query.b_start = 0;
     }
 

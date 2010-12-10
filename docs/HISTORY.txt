@@ -6,6 +6,8 @@ Changelog
 
 3.7-dev - (unreleased)
 ----------------------
+ * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
+   facet is visible [voineali #3970]
 
 3.6 - (2010-11-30)
 ------------------
