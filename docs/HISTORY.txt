@@ -4,6 +4,9 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
+3.8-dev - (unreleased)
+----------------------
+
 3.7 - (2010-12-13)
 ------------------
  * Bug fix: Fixed text widget query for non ZCTextIndex indexes [voineali #3974]
