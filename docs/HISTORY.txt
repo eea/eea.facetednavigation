@@ -4,8 +4,8 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
-3.7-dev - (unreleased)
-----------------------
+3.7 - (2010-12-13)
+------------------
  * Bug fix: Fixed text widget query for non ZCTextIndex indexes [voineali #3974]
  * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
    facet is visible [voineali #3970]
