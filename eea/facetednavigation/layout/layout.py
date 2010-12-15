@@ -45,7 +45,7 @@ class FacetedLayout(object):
             res.append((template_id, title))
         return res
 
-    def get_macro(self, template_id=None, macro='listing'):
+    def get_macro(self, template_id=None, macro='content-core'):
         """ Get macro from layout
         """
         # Get default
