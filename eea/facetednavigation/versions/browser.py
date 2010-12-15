@@ -1,6 +1,6 @@
 """ Proxy caching (squid, etc)
 """
-import md5
+from hashlib import md5
 import cPickle
 import logging
 from zope.component import queryAdapter
@@ -53,7 +53,7 @@ class FacetedVersion(BrowserView):
         if not query:
             return ''
 
-        return md5.new(cPickle.dumps(query)).hexdigest()
+        return md5(cPickle.dumps(query)).hexdigest()
 
     def _set(self, value=None):
         """ Set version key
