@@ -136,8 +136,14 @@ class FacetedQueryHandler(object):
             if aquery:
                 brains = aquery(brains, kwargs)
 
-        # Render results
-        b_start = int(kwargs.get('b_start', 0))
+        # jQuery >= 1.4 adds type to params keys
+        # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
+        b_start = kwargs.get('b_start', kwargs.get('b_start[]', 0))
+        try:
+            b_start = int(b_start)
+        except (ValueError, TypeError):
+            b_start = 0
+
         # orphans = 20% of items per page
         orphans = num_per_page * 20 / 100
 

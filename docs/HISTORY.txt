@@ -3,6 +3,10 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Bug fix: Fixed text widget query for non ZCTextIndex indexes [voineali #3974]
+ * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
+   facet is visible [voineali #3970]
+ * Bug fix: Fixed batch navigation [voineali]
  * Modified SKOS view so that tests pass without LinguaPlone. [yomatters]
  * Removed unnecessary menu item registration for syndication. [yomatters]
  * Bug fix: Fixed cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]

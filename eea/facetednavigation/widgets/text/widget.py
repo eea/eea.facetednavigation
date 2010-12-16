@@ -6,6 +6,7 @@ from Products.Archetypes.public import StringWidget
 from eea.facetednavigation.widgets.field import StringField
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from Products.CMFCore.utils import getToolByName
 
 EditSchema = Schema((
     StringField('index',
@@ -46,11 +47,13 @@ class Widget(AbstractWidget):
     edit_schema = AbstractWidget.edit_schema + EditSchema
 
     def tokenize_string(self, value):
-        """ Process string values to be used in catalog
+        """ Process string values to be used in catalog query
         """
         return value.split()
 
     def tokenize_list(self, value):
+        """ Process list values to be used in catalog query
+        """
         words = []
         for word in value:
             words.extend(self.tokenize_string(word))
@@ -64,7 +67,7 @@ class Widget(AbstractWidget):
         elif isinstance(value, (str, unicode)):
             value = self.tokenize_string(value)
 
-        # Ensure words are string instances as ZCatalog requires string
+        # Ensure words are string instances as ZCatalog requires strings
         words = []
         for word in value:
             if isinstance(word, unicode):
@@ -89,6 +92,16 @@ class Widget(AbstractWidget):
         if not value:
             return query
 
-        value = self.tokenize(value)
+        ctool = getToolByName(self.context, 'portal_catalog')
+        catalog_index = ctool._catalog.getIndex(index)
+        if getattr(catalog_index, 'meta_type', '') == 'ZCTextIndex':
+            value = self.tokenize(value)
+        else:
+            # Ensure words are string instances as ZCatalog requires strings
+            if isinstance(value, str):
+                value = value.decode('utf-8')
+            if isinstance(value, unicode):
+                value = value.encode('utf-8')
+
         query[index] = {'query': value, 'operator': 'and'}
         return query

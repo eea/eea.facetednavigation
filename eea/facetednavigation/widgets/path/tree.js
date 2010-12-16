@@ -97,10 +97,10 @@ FacetedTree.JsTree.prototype = {
       callback: {
         beforedata: function(node, tree){
           if(node===false){
-            tree.settings.data.opts.static = static_tree;
+            tree.settings.data.opts['static'] = static_tree;
             return;
           }
-          tree.settings.data.opts.static = false;
+          tree.settings.data.opts['static'] = false;
           var data = {cid: js_tree.wid};
           data.mode = js_tree.mode;
           if(node){

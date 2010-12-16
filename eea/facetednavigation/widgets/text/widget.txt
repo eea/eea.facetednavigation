@@ -44,7 +44,7 @@ Set up
     ...         title='Distance-to-target (Kyoto Protocol) for new Member States countries')
     >>> doc = sandbox._getOb(doc)
     >>> doc.setLanguage('en')
-    >>> doc.setSubject((u'\u015etire',))
+    >>> doc.setSubject((u'\u015etire', u'\u015etire politica'))
     >>> doc.reindexObject()
 
 Faceted navigation
@@ -71,7 +71,7 @@ Faceted navigation
   As we said before, you can search using multiple queries. This is used in real
   world to search in current query
 
-    >>> brains = query.query(batch=False, c0=['\xc5\x9etire'])
+    >>> brains = query.query(batch=False, c0=['\xc5\x9etire', '\xc5\x9etire politica'])
     >>> for brain in brains:
     ...     print brain.Title
     Distance-to-target (Kyoto Protocol) for new Member States countries
