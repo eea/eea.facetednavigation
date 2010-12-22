@@ -1,7 +1,7 @@
+""" Object menus
+"""
 import logging
 from Products.LinguaPlone.browser.menu import TranslateMenu
-from Products.LinguaPlone import LinguaPloneMessageFactory as _
-from eea.facetednavigation.interfaces import IFacetedNavigable
 
 logger = logging.getLogger('eea.facetednavigation.browser.menu')
 
@@ -10,6 +10,8 @@ class SafeTranslateMenu(TranslateMenu):
     action provider
     """
     def getMenuItems(self, context, request):
+        """ Return menu items for translate menu
+        """
         try:
             res = TranslateMenu.getMenuItems(self, context, request)
         except Exception, err:
