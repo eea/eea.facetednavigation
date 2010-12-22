@@ -4,8 +4,8 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
-3.8-dev - (unreleased)
-----------------------
+3.8 - (2010-12-22)
+------------------
  * Bug fix: Removed UnicodeSplitter from text widget query as it was bugous and
    fixed it to work also with "(", ")" in query [voineali #4018]
 
