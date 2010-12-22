@@ -1,12 +1,13 @@
 """ Text widget
 """
+from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import StringWidget
 from eea.facetednavigation.widgets.field import StringField
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
-from Products.CMFCore.utils import getToolByName
+
 
 EditSchema = Schema((
     StringField('index',
@@ -46,34 +47,43 @@ class Widget(AbstractWidget):
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema + EditSchema
 
-    def tokenize_string(self, value):
+    def quotestring(self, string):
+        """ Quote given string
+        """
+        return '"%s"' % string
+
+    def quote_bad_chars(self, string):
+        """ Quote bad chars in query string
+        """
+        bad_chars = ["(", ")"]
+        for char in bad_chars:
+            string = string.replace(char, self.quotestring(char))
+        return string
+
+    def normalize_string(self, value):
         """ Process string values to be used in catalog query
         """
-        return value.split()
+        # Ensure words are string instances as ZCatalog requires strings
+        if isinstance(value, str):
+            value = value.decode('utf-8')
+        if isinstance(value, unicode):
+            value = value.encode('utf-8')
+        value = self.quote_bad_chars(value)
+        return value
 
-    def tokenize_list(self, value):
+    def normalize_list(self, value):
         """ Process list values to be used in catalog query
         """
-        words = []
-        for word in value:
-            words.extend(self.tokenize_string(word))
-        return words
+        return [self.normalize_string(word) for word in value]
 
-    def tokenize(self, value):
+    def normalize(self, value):
         """ Process value to be used in catalog query
         """
         if isinstance(value, (tuple, list)):
-            value = self.tokenize_list(value)
+            value = self.normalize_list(value)
         elif isinstance(value, (str, unicode)):
-            value = self.tokenize_string(value)
-
-        # Ensure words are string instances as ZCatalog requires strings
-        words = []
-        for word in value:
-            if isinstance(word, unicode):
-                word = word.encode('utf-8')
-            words.append(word)
-        return words
+            value = self.normalize_string(value)
+        return value
 
     def query(self, form):
         """ Get value from form and return a catalog dict query
@@ -92,16 +102,6 @@ class Widget(AbstractWidget):
         if not value:
             return query
 
-        ctool = getToolByName(self.context, 'portal_catalog')
-        catalog_index = ctool._catalog.getIndex(index)
-        if getattr(catalog_index, 'meta_type', '') == 'ZCTextIndex':
-            value = self.tokenize(value)
-        else:
-            # Ensure words are string instances as ZCatalog requires strings
-            if isinstance(value, str):
-                value = value.decode('utf-8')
-            if isinstance(value, unicode):
-                value = value.encode('utf-8')
-
+        value = self.normalize(value)
         query[index] = {'query': value, 'operator': 'and'}
         return query
