@@ -6,10 +6,10 @@ Changelog
  * Bug fix: Fixed alphabetic widget [voineali #3658]
  * Bug fix: Fixed text widget query [voineali #3974, #4018]
  * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
-   facet is visible [voineali #3970]
+     facet is visible [voineali #3970]
  * Bug fix: Fixed batch navigation [voineali]
- * Modified SKOS view so that tests pass without LinguaPlone. [yomatters]
- * Removed unnecessary menu item registration for syndication. [yomatters]
+ * Change: Modified SKOS view so that tests pass without LinguaPlone. [yomatters]
+ * Change: Removed unnecessary menu item registration for syndication. [yomatters]
  * Bug fix: Fixed cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
  * Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]
 
