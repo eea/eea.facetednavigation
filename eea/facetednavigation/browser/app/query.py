@@ -114,6 +114,12 @@ class FacetedQueryHandler(object):
         if self.request:
             kwargs.update(self.request.form)
 
+        # jQuery >= 1.4 adds type to params keys
+        # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
+        # Let's fix this
+        kwargs = dict((key.replace('[]', ''), val)
+                      for key, val in kwargs.items())
+
         query = self.criteria(sort=sort, **kwargs)
         catalog = getUtility(IFacetedCatalog)
         try:
@@ -136,8 +142,6 @@ class FacetedQueryHandler(object):
             if aquery:
                 brains = aquery(brains, kwargs)
 
-        # jQuery >= 1.4 adds type to params keys
-        # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
         b_start = kwargs.get('b_start', kwargs.get('b_start[]', 0))
         try:
             b_start = int(b_start)
