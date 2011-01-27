@@ -3,6 +3,7 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Bug fix: Fixed counting issue caused by jQuery 1.4 params style [voineali #3658]
  * Bug fix: Fixed alphabetic widget [voineali #3658]
  * Bug fix: Fixed text widget query [voineali #3974, #4018]
  * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
