@@ -3,6 +3,8 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Change: Added entry-point for z3c.autoinclude to setup.py and thus make it 
+   simple to install [jensens, 2011-02-22]
  * Bug fix: Fixed counting issue caused by jQuery 1.4 params style [voineali #3658]
  * Bug fix: Fixed alphabetic widget [voineali #3658]
  * Bug fix: Fixed text widget query [voineali #3974, #4018]
