@@ -11,6 +11,7 @@ from BTrees.IIBTree import weightedIntersection, IISet
 
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
+from Products.CMFPlone.utils import safeToInt
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import BooleanField
@@ -256,7 +257,8 @@ class Widget(ATWidget):
         return res
 
     def portal_vocabulary(self):
-        """ Return data vocabulary
+        """Look up selected vocabulary from portal_vocabulary or from ZTK 
+           zope-vocabulary factory. 
         """
         vtool = getToolByName(self.context, 'portal_vocabularies', None)
         voc_id = self.data.get('vocabulary', None)
@@ -278,12 +280,7 @@ class Widget(ATWidget):
     def vocabulary(self):
         """ Return data vocabulary
         """
-        reverse = self.data.get('sortreversed', False)
-        try:
-            reverse = int(reverse)
-        except (ValueError, TypeError):
-            reverse = 0
-
+        reverse = safeToInt(self.data.get('sortreversed', 0))
         mapping = self.portal_vocabulary()
         catalog = self.data.get('catalog', None)
 
@@ -305,36 +302,20 @@ class Widget(ATWidget):
         return self.template
 
 class CountableWidget(Widget):
-    """ Define usefull methods for countable widgets
+    """ Defines useful methods for countable widgets
     """
     @property
     def countable(self):
-        """ Count results ?
+        """ Count results?
         """
-        count = self.data.get('count', False)
-        if not count:
-            return False
-
-        try:
-            count = int(count)
-        except (TypeError, ValueError):
-            return False
-        return not not count
+        return bool(safeToInt(self.data.get('count', 0)))
 
     @property
     def hidezerocount(self):
-        """ Hide items that return no result ?
+        """ Hide items that return no result?
         """
-        hide = self.data.get('hidezerocount', False)
-        if not hide:
-            return False
-
-        try:
-            hide = int(hide)
-        except (TypeError, ValueError):
-            return False
-        return not not hide
-
+        return bool(safeToInt(self.data.get('hidezerocount', 0)))
+    
     def count(self, brains, sequence=None):
         """ Intersect results
         """
