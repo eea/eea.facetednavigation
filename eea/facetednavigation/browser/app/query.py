@@ -4,6 +4,7 @@ from zope.component import getUtility
 from zope.component import queryAdapter
 
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.PloneBatch import Batch
 
 from eea.facetednavigation.caching import ramcache
@@ -126,36 +127,31 @@ class FacetedQueryHandler(object):
             brains = catalog(self.context, **query)
         except Exception, err:
             logger.exception(err)
+            return Batch([], 20, 0)                
+        if not brains: 
             return Batch([], 20, 0)
-
-        # Apply after query on brains
+        
+        # Apply after query (filter) on brains
         num_per_page = 20
         criteria = ICriteria(self.context)
         for cid, criterion in criteria.items():
-            widget = criteria.widget(cid=cid)
-            widget = widget(self.context, self.request, criterion)
+            widgetclass = criteria.widget(cid=cid)
+            widget = widgetclass(self.context, self.request, criterion)
 
             if widget.widget_type == 'resultsperpage':
                 num_per_page = widget.results_per_page(kwargs)
 
-            aquery = queryAdapter(widget, IWidgetFilterBrains)
-            if aquery:
-                brains = aquery(brains, kwargs)
-
-        b_start = kwargs.get('b_start', kwargs.get('b_start[]', 0))
-        try:
-            b_start = int(b_start)
-        except (ValueError, TypeError):
-            b_start = 0
-
-        # orphans = 20% of items per page
-        orphans = num_per_page * 20 / 100
-
-        brains = brains and [brain for brain in brains] or []
-        if batch:
-            return Batch(brains, num_per_page, b_start, orphan=orphans)
-        return brains
-
+            filter = queryAdapter(widget, IWidgetFilterBrains)
+            if filter:
+                brains = filter(brains, kwargs)
+                
+        if not batch:
+            return brains
+        
+        b_start = safeToInt(kwargs.get('b_start', 0))
+        orphans = num_per_page * 20 / 100 # orphans = 20% of items per page
+        return Batch(brains, num_per_page, b_start, orphan=orphans)
+        
     @ramcache(cacheKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
     def __call__(self, *args, **kwargs):
         return self.index(query=kwargs)
