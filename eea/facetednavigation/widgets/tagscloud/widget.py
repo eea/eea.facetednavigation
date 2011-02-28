@@ -213,7 +213,7 @@ class Widget(CountableWidget):
     def vocabulary(self, all=False):
         """ Return a limited number of results
         """
-        voc = super(Widget, self).vocabulary()
+        voc = list(super(Widget, self).vocabulary())
 
         if all:
             maxitems = 0
