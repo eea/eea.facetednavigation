@@ -1,4 +1,4 @@
-""" Checkbox widget
+""" Tag-Cloud widget
 """
 import random
 from Products.Archetypes.public import DisplayList
