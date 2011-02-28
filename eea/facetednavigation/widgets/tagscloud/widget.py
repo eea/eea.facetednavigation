@@ -9,6 +9,7 @@ from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
+from Products.CMFPlone.utils import safeToInt
 from eea.facetednavigation.widgets.field import StringField
 from eea.faceted.vocabularies.utils import compare
 
@@ -183,24 +184,12 @@ class Widget(CountableWidget):
 
     @property
     def maxitems(self):
-        maxitems = self.data.get('maxitems', 0)
-        try:
-            maxitems = int(maxitems)
-        except (ValueError, TypeError), err:
-            maxitems = 0
-        return maxitems
+        return safeToInt(self.data.get('maxitems', 0))
 
     def cut_text(self, text='', maxchars=0):
         """ Cut long text
         """
-        if not maxchars:
-            maxchars = self.data.get('maxchars', 0)
-
-        try:
-            maxchars = int(maxchars)
-        except (ValueError, TypeError):
-            maxchars = 0
-
+        maxchars = safeToInt(self.data.get('maxchars', 0))
         if not maxchars:
             return text
 
