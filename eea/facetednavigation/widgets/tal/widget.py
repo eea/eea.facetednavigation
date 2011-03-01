@@ -22,6 +22,18 @@ from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 logger = logging.getLogger('eea.facetednavigation.widgets.tal')
 
 EditSchema = Schema((
+    StringField('index',
+        schemata="default",
+        required=True,
+        vocabulary_factory='eea.faceted.vocabularies.CatalogIndexes',
+        widget=SelectionWidget(
+            label='Catalog index',
+            label_msgid='faceted_criteria_index',
+            description='Catalog index to use for search',
+            description_msgid='help_faceted_criteria_index',
+            i18n_domain="eea.facetednavigation"
+        )
+    ),
     StringField('expression',
         schemata="default",
         default='string:',
