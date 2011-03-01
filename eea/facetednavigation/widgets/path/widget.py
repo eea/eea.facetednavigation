@@ -199,7 +199,6 @@ class Widget(AbstractWidget):
 
         value = value.strip().strip('/')
         url = self.root[:]
-        print url, value
         if not url:
             return query
         if value:
