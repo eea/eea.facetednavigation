@@ -151,7 +151,8 @@ class Widget(AbstractWidget):
         root = self.data_root[:]
         data_default = self.data.get('defaultpath', '')
         if not data_default:
-            return root
+            return '/'.join(self.root)
+
         if isinstance(data_default, unicode):
             data_default = data_default.encode('utf-8')
 
