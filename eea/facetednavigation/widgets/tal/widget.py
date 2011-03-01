@@ -106,9 +106,9 @@ class Widget(AbstractWidget):
     def talexpr(self):
         """ Compile tal expression
         """
-        talexpr = self.expression
-        if not talexpr:
-            return talexpr
+        talexpr = self.data.get('expression', None)
+        if talexpr is None:
+            return ''
 
         engine = TrustedEngine
         context = TrustedZopeContext(engine, dict(
