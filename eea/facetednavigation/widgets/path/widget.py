@@ -208,5 +208,4 @@ class Widget(AbstractWidget):
         query[index] = {"query": value, 'level': depth}
 
         logger.debug(query)
-        print query
         return query
