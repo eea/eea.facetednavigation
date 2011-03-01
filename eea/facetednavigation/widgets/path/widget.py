@@ -1,11 +1,11 @@
 """ Path widget
 """
 import logging
+from Products.CMFPlone.utils import safeToInt
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from eea.facetednavigation.widgets.field import StringField
-
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 logger = logging.getLogger('eea.facetednavigation.widgets.path')
@@ -25,17 +25,6 @@ EditSchema = Schema((
             i18n_domain="eea.facetednavigation"
         )
     ),
-    StringField('default',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description='Default path to search in',
-            description_msgid='help_faceted_criteria_path_default',
-            i18n_domain="eea.facetednavigation"
-        )
-    ),
     StringField('root',
         schemata="default",
         widget=StringWidget(
@@ -45,6 +34,31 @@ EditSchema = Schema((
             description=('Navigation js-tree starting point '
                          '(relative to plone site. ex: SITE/data-and-maps)'),
             description_msgid='help_faceted_criteria_path_root',
+            i18n_domain="eea.facetednavigation"
+        )
+    ),
+    StringField('defaultpath',
+        schemata="default",
+        widget=StringWidget(
+            size=25,
+            label='Default value',
+            label_msgid='faceted_criteria_default',
+            description='Default path to search in (relative to root folder)',
+            description_msgid='help_faceted_criteria_path_default',
+            i18n_domain="eea.facetednavigation"
+        )
+    ),
+    StringField('depth',
+        schemata="default",
+        default=0,
+        widget=StringWidget(
+            size=25,
+            label='Search Depth',
+            label_msgid='faceted_criteria_depth',
+            description='Depth to search the path. 0=this level, '
+                        '-1=all subfolders recursive, and any other positive '
+                        'integer count the subfolder-levels to search.',
+            description_msgid='help_faceted_criteria_path_depth',
             i18n_domain="eea.facetednavigation"
         )
     ),
@@ -134,14 +148,14 @@ class Widget(AbstractWidget):
 
     @property
     def default(self):
-        data_default = self.data.get('default', '')
+        root = self.data_root[:]
+        data_default = self.data.get('defaultpath', '')
         if not data_default:
-            return ''
+            return root
         if isinstance(data_default, unicode):
             data_default = data_default.encode('utf-8')
 
-        data_list = data_default.strip().strip('/').split('/')
-        root = self.data_root[:]
+        data_list = [_ for _ in data_default.strip().strip('/').split('/') if _]
         root.extend(data_list)
 
         url = '/'.join(root)
@@ -181,18 +195,19 @@ class Widget(AbstractWidget):
         if self.hidden:
             value = self.default
         else:
-            value = form.get(self.data.getId(), '')
-        value = value.strip().strip('/')
-        if not value:
-            return query
+            value = form.get(self.data.getId(), self.default)
 
+        value = value.strip().strip('/')
         url = self.root[:]
+        print url, value
         if not url:
             return query
-
-        url.extend(value.split('/'))
+        if value:
+            url.extend(value.split('/'))
         value = '/'.join(url).rstrip('/')
-        query[index] = {"query": value, 'level': 0}
+        depth = safeToInt(self.data.get('depth', 0))
+        query[index] = {"query": value, 'level': depth}
 
         logger.debug(query)
+        print query
         return query
