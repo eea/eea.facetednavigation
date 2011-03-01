@@ -1,4 +1,4 @@
-""" ETag widget
+""" TAL widget
 """
 # Python
 import logging
@@ -22,19 +22,7 @@ from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 logger = logging.getLogger('eea.facetednavigation.widgets.tal')
 
 EditSchema = Schema((
-    StringField('index',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.CatalogIndexes',
-        widget=SelectionWidget(
-            label='Catalog index',
-            label_msgid='faceted_criteria_index',
-            description='Catalog index to use for search',
-            description_msgid='help_faceted_criteria_index',
-            i18n_domain="eea.facetednavigation"
-        )
-    ),
-    StringField('default',
+    StringField('expression',
         schemata="default",
         default='string:',
         widget=StringWidget(
@@ -70,6 +58,7 @@ class Widget(AbstractWidget):
     edit_schema['title'].default = 'TAL Expression'
     edit_schema['hidden'].default = True
     edit_schema['hidden'].schemata = 'hidden'
+    edit_schema['hidden'].default = True
 
     def referer(self, path=None):
         """ Extract referer from request or return self.context
@@ -105,7 +94,7 @@ class Widget(AbstractWidget):
     def talexpr(self):
         """ Compile tal expression
         """
-        talexpr = self.default
+        talexpr = self.expression
         if not talexpr:
             return talexpr
 
