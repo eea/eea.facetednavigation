@@ -103,7 +103,7 @@ class ATWidget(BrowserView):
     """ Archetypes Widget
     """
     view_schema = Schema()
-    edit_schema = CommonEditSchema
+    edit_schema = CommonEditSchema.copy()
 
     def get_macro(self, field, schema='view'):
         """ Get edit macro from archetypes schema by given field name

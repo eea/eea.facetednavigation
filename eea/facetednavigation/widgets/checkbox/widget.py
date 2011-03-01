@@ -132,7 +132,7 @@ class Widget(CountableWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.checkbox.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = CountableWidget.edit_schema + EditSchema
+    edit_schema = CountableWidget.edit_schema.copy() + EditSchema
 
     def selected(self, key):
         """ Return True if key in self.default

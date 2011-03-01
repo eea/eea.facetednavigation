@@ -113,7 +113,7 @@ class Widget(CountableWidget):
     view_css = '++resource++eea.facetednavigation.widgets.radio.view.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = CountableWidget.edit_schema + EditSchema
+    edit_schema = CountableWidget.edit_schema.copy() + EditSchema
 
     def query(self, form):
         """ Get value from form and return a catalog dict query
