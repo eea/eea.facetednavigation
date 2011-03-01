@@ -12,6 +12,10 @@
   cursor: move;
 }
 
+.ui-icon:hover {
+  cursor: pointer;
+}
+
 .ui-sortable-helper {
   width: 20em ! important
 }
