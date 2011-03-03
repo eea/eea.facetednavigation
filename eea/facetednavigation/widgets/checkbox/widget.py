@@ -134,6 +134,18 @@ class Widget(CountableWidget):
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema.copy() + EditSchema
 
+    @property
+    def default(self):
+        """ Get default values
+        """
+        default = super(Widget, self).default
+        if not default:
+            return []
+
+        if isinstance(default, (str, unicode)):
+            default = [default,]
+        return default
+
     def selected(self, key):
         """ Return True if key in self.default
         """

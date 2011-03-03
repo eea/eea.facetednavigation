@@ -107,7 +107,8 @@ class Widget(AbstractWidget):
             logger.exception(err)
             return query
 
-        start = start.earliestTime()
+        start = start - 1
+        start = start.latestTime()
         end = end.latestTime()
 
         query[index] = {

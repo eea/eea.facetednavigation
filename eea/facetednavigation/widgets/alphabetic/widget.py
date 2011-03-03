@@ -107,7 +107,8 @@ class Widget(CountableWidget):
         if not index_id:
             return res
 
-        for brain in brains:
+        index = 0
+        for index, brain in enumerate(brains):
             xval = getattr(brain, index_id, None)
             if not xval:
                 continue
@@ -118,5 +119,5 @@ class Widget(CountableWidget):
             letter = xval[0].upper()
             count = res.get(letter, 0)
             res[letter] = count + 1
-        res['all'] = len(brains)
+        res['all'] = index
         return res

@@ -212,7 +212,7 @@ class Widget(CountableWidget):
         voc.insert(0, ('all', 'All'))
         for index, item in enumerate(voc):
             if maxitems and (index >= maxitems):
-                raise StopIteration
+                return
             res = (item[0], item[1], -1)
             yield res
 

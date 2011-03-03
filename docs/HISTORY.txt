@@ -3,11 +3,13 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Bug fix: Fix facets position update [voineali]
+ * Bug fix: Fix checkboxes facet set default value [voineali]
  * Feature: Path widget got depth query parameter. [jensens, 2011-03-01]
- * Bug fix: Fixed Widgets: TAL (removed index field, made expression visible), 
+ * Bug fix: Fixed Widgets: TAL (removed index field, made expression visible),
    Path (default handling was broken). Some code-cleanup and simplifications.
-   [jensens, 2011-03-01]  
- * Change: Added entry-point for z3c.autoinclude to setup.py and thus make it 
+   [jensens, 2011-03-01]
+ * Change: Added entry-point for z3c.autoinclude to setup.py and thus make it
    simple to install [jensens, 2011-02-22]
  * Bug fix: Fixed counting issue caused by jQuery 1.4 params style [voineali #3658]
  * Bug fix: Fixed alphabetic widget [voineali #3658]

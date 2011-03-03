@@ -32,7 +32,7 @@ Simple expressions
 String
 ~~~~~~
 
-    >>> widget.data.update(default=u'string:a/path')
+    >>> widget.data.update(expression=u'string:a/path')
     >>> widget.query(form={})
     {'path': u'a/path'}
 
@@ -41,61 +41,61 @@ Python
 
   Integer
 
-    >>> widget.data.update(default=u'python: (100+10)/2')
+    >>> widget.data.update(expression=u'python: (100+10)/2')
     >>> widget.query(form={})
     {'path': 55}
 
-    >>> widget.data.update(default=u'python: 10 - 10')
+    >>> widget.data.update(expression=u'python: 10 - 10')
     >>> widget.query(form={})
     {'path': 0}
 
   Boolean
 
-    >>> widget.data.update(default=u'python:False')
+    >>> widget.data.update(expression=u'python:False')
     >>> widget.query(form={})
     {'path': False}
 
-    >>> widget.data.update(default=u'python:True')
+    >>> widget.data.update(expression=u'python:True')
     >>> widget.query(form={})
     {'path': True}
 
   String
 
-    >>> widget.data.update(default=u"python:'ex'.replace('ex', '')")
+    >>> widget.data.update(expression=u"python:'ex'.replace('ex', '')")
     >>> widget.query(form={})
     {'path': ''}
 
-    >>> widget.data.update(default=u"python: ' y '.strip()")
+    >>> widget.data.update(expression=u"python: ' y '.strip()")
     >>> widget.query(form={})
     {'path': 'y'}
 
   Tuple
 
-    >>> widget.data.update(default=u"python:()")
+    >>> widget.data.update(expression=u"python:()")
     >>> widget.query(form={})
     {'path': ()}
 
-    >>> widget.data.update(default=u"python:(1,)")
+    >>> widget.data.update(expression=u"python:(1,)")
     >>> widget.query(form={})
     {'path': (1,)}
 
   List
 
-    >>> widget.data.update(default=u"python:[x for x in range(0, 0)]")
+    >>> widget.data.update(expression=u"python:[x for x in range(0, 0)]")
     >>> widget.query(form={})
     {'path': []}
 
-    >>> widget.data.update(default=u"python:[x for x in range(0, 1)]")
+    >>> widget.data.update(expression=u"python:[x for x in range(0, 1)]")
     >>> widget.query(form={})
     {'path': [0]}
 
   Dictionary
 
-    >>> widget.data.update(default=u"python:{1: 2}")
+    >>> widget.data.update(expression=u"python:{1: 2}")
     >>> widget.query(form={})
     {'path': {1: 2}}
 
-    >>> widget.data.update(default=u"python:{}")
+    >>> widget.data.update(expression=u"python:{}")
     >>> widget.query(form={})
     {'path': {}}
 
@@ -106,11 +106,11 @@ FACET-EMPTY string
 You can force this facet to send no query to catalog. This is useful when you
 want to bypass this facet for empty values
 
-    >>> widget.data.update(default=u"python:(10 - 10) or 'FACET-EMPTY' ")
+    >>> widget.data.update(expression=u"python:(10 - 10) or 'FACET-EMPTY' ")
     >>> widget.query(form={})
     {}
 
-    >>> widget.data.update(default=u"python:(10 - 9) or 'FACET-EMPTY' ")
+    >>> widget.data.update(expression=u"python:(10 - 9) or 'FACET-EMPTY' ")
     >>> widget.query(form={})
     {'path': 1}
 
@@ -121,22 +121,22 @@ Dynamic expressions using available contexts
 context
 ~~~~~~~
 
-    >>> widget.data.update(default=u'string:${context/absolute_url}')
+    >>> widget.data.update(expression=u'string:${context/absolute_url}')
     >>> widget.query(form={})
     {'path': u'http://nohost/plone/Members/test_user_1_'}
 
-    >>> widget.data.update(default=u'python:context.absolute_url(1)')
+    >>> widget.data.update(expression=u'python:context.absolute_url(1)')
     >>> widget.query(form={})
     {'path': 'plone/Members/test_user_1_'}
 
 referer
 ~~~~~~~
 
-    >>> widget.data.update(default=u'string:${referer/absolute_url}')
+    >>> widget.data.update(expression=u'string:${referer/absolute_url}')
     >>> widget.query(form={})
     {'path': u'http://nohost/plone/Members/test_user_1_'}
 
-    >>> widget.data.update(default=u'python:referer.absolute_url(1)')
+    >>> widget.data.update(expression=u'python:referer.absolute_url(1)')
     >>> widget.query(form={})
     {'path': 'plone/Members/test_user_1_'}
 
@@ -146,31 +146,31 @@ referer
     >>> request.HTTP_REFERER = sandbox.absolute_url()
     >>> widget = Widget(folder, request, criterion)
 
-    >>> widget.data.update(default=u'string:${referer/absolute_url}')
+    >>> widget.data.update(expression=u'string:${referer/absolute_url}')
     >>> widget.query(form={})
     {'path': u'http://nohost/plone/sandbox'}
 
-    >>> widget.data.update(default=u'python:referer.absolute_url(1)')
+    >>> widget.data.update(expression=u'python:referer.absolute_url(1)')
     >>> widget.query(form={})
     {'path': 'plone/sandbox'}
 
 request
 ~~~~~~~
 
-    >>> widget.data.update(default=u'python:request.URL', index='path')
+    >>> widget.data.update(expression=u'python:request.URL', index='path')
     >>> widget.query(form={})
     {'path': 'http://nohost'}
 
 widget
 ~~~~~~
 
-    >>> widget.data.update(default=u'python:widget.widget_type', index='type')
+    >>> widget.data.update(expression=u'python:widget.widget_type', index='type')
     >>> widget.query(form={})
     {'type': 'tal'}
 
 criterion
 ~~~~~~~~~
 
-    >>> widget.data.update(default=u'python:criterion.title', index='sortable_title')
+    >>> widget.data.update(expression=u'python:criterion.title', index='sortable_title')
     >>> widget.query(form={})
     {'sortable_title': u'A Title'}

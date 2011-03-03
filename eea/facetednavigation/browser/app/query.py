@@ -127,10 +127,10 @@ class FacetedQueryHandler(object):
             brains = catalog(self.context, **query)
         except Exception, err:
             logger.exception(err)
-            return Batch([], 20, 0)                
-        if not brains: 
             return Batch([], 20, 0)
-        
+        if not brains:
+            return Batch([], 20, 0)
+
         # Apply after query (filter) on brains
         num_per_page = 20
         criteria = ICriteria(self.context)
@@ -141,17 +141,19 @@ class FacetedQueryHandler(object):
             if widget.widget_type == 'resultsperpage':
                 num_per_page = widget.results_per_page(kwargs)
 
-            filter = queryAdapter(widget, IWidgetFilterBrains)
-            if filter:
-                brains = filter(brains, kwargs)
-                
+            brains_filter = queryAdapter(widget, IWidgetFilterBrains)
+            if brains_filter:
+                brains = brains_filter(brains, kwargs)
+
         if not batch:
             return brains
-        
+
         b_start = safeToInt(kwargs.get('b_start', 0))
         orphans = num_per_page * 20 / 100 # orphans = 20% of items per page
+
+        brains = [brain for brain in brains]
         return Batch(brains, num_per_page, b_start, orphan=orphans)
-        
+
     @ramcache(cacheKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
     def __call__(self, *args, **kwargs):
         return self.index(query=kwargs)

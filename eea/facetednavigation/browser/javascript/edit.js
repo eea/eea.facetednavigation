@@ -186,12 +186,12 @@ FacetedEdit.FormPosition = {
     var positions = jQuery('#wposition option');
     positions.each(function(){
       var pos_val = jQuery(this).val();
-      context.query[pos_val + ':list'] = [];
+      context.query[pos_val] = [];
 
       var widgets = jQuery('#faceted-' + pos_val + '-column div.faceted-widget');
       widgets.each(function(){
         var wid = jQuery(this).attr('id').split('_')[0];
-        context.query[ pos_val + ':list'].push(wid);
+        context.query[pos_val].push(wid);
       });
     });
   }

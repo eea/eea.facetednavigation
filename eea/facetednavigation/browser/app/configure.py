@@ -169,13 +169,11 @@ class FacetedPositionHandler(FacetedBasicHandler):
         form = super(FacetedPositionHandler, self)._request_form(form)
         newform = {}
         for key, value in form.items():
-            if ':list' in key:
-                key = key.replace(':list', '')
-                if isinstance(value, (str, unicode)):
-                    value = [value]
-                newform[key] = value
-            else:
-                newform[key] = value
+            if not value:
+                continue
+            if isinstance(value, (str, unicode)):
+                value = [value]
+            newform[key] = value
         return newform
 
     def update(self, **kwargs):
