@@ -253,10 +253,10 @@ we can reproduce the ajax calls.
     >>> browser.open(sandbox_url + ('/@@faceted_configure?'
     ...                             'updatePosition_button=Update'
     ...                             '&redirect='
-    ...                             '&top:list=c1&top:list=c2&top:list=c3'
-    ...                             '&left:list=c0&left:list=c4&left:list=c5'
-    ...                             '&center:list=c6'
-    ...                             '&right:list=c7&right:list=c8&right:list=c9'))
+    ...                             '&top=c1&top=c2&top=c3'
+    ...                             '&left=c0&left=c4&left=c5'
+    ...                             '&center=c6'
+    ...                             '&right=c7&right=c8&right=c9'))
     >>> browser.open(sandbox_url + '/@@configure_faceted.html')
     >>> browser.getControl(name='paths:list').options
     ['c1', 'c2', 'c3', 'c0', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9']
@@ -266,10 +266,10 @@ we can reproduce the ajax calls.
     >>> browser.open(sandbox_url + ('/@@faceted_configure?'
     ...                             'updatePosition_button=Update'
     ...                             '&redirect='
-    ...                             '&top:list[]=c1&top:list[]=c2&top:list[]=c3'
-    ...                             '&left:list[]=c0&left:list[]=c4&left:list[]=c5'
-    ...                             '&center:list[]=c6'
-    ...                             '&right:list[]=c7&right:list[]=c8&right:list[]=c9'))
+    ...                             '&top[]=c1&top[]=c2&top[]=c3'
+    ...                             '&left[]=c0&left[]=c4&left[]=c5'
+    ...                             '&center[]=c6'
+    ...                             '&right[]=c7&right[]=c8&right[]=c9'))
     >>> browser.open(sandbox_url + '/@@configure_faceted.html')
     >>> browser.getControl(name='paths:list').options
     ['c1', 'c2', 'c3', 'c0', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9']

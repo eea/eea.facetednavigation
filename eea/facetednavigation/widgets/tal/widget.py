@@ -34,7 +34,7 @@ EditSchema = Schema((
             i18n_domain="eea.facetednavigation"
         )
     ),
-    StringField('expression',
+    StringField('default',
         schemata="default",
         default='string:',
         widget=StringWidget(
@@ -105,7 +105,7 @@ class Widget(AbstractWidget):
     def talexpr(self):
         """ Compile tal expression
         """
-        talexpr = self.data.get('expression', None)
+        talexpr = self.default
         if talexpr is None:
             return ''
 
