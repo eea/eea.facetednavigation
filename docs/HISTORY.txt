@@ -3,6 +3,7 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Bug fix: Fix TAL and Text field set default value [voineali]
  * Bug fix: Fix facets position update [voineali]
  * Bug fix: Fix checkboxes facet set default value [voineali]
  * Feature: Path widget got depth query parameter. [jensens, 2011-03-01]

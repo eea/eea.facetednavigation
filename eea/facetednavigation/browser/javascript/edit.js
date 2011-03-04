@@ -274,7 +274,7 @@ FacetedEdit.FormWidgets = {
         }
       });
 
-      jQuery('.faceted-widgets').disableSelection();
+      jQuery('.faceted-widgets .ui-widget-header').disableSelection();
       jQuery('div.faceted-widget').dblclick(function(){
         var wid = jQuery(this).attr('id');
         context.edit_widget(wid);
