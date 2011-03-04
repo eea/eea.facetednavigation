@@ -118,7 +118,10 @@ class Widget(AbstractWidget):
             widget=self
         ))
         expression = engine.compile(talexpr)
-        return context.evaluate(expression)
+        result = context.evaluate(expression)
+        if callable(result):
+            return result()
+        return result
 
     def query(self, form):
         """ Update query.
