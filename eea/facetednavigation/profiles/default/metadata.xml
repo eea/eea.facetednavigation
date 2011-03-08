@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <metadata>
+ <version>1</version> 
+ <!-- Note: version of profile, has not to be in sync with setup.py! Change 
+      only if you provide a generic setup update step -->
  <dependencies>
   <dependency>profile-collective.js.jqueryui:default</dependency>
   <dependency>profile-eea.jquery:03-ajaxfileupload</dependency>
