@@ -37,7 +37,7 @@ EditSchema = Schema((
             i18n_domain="eea.facetednavigation"
         )
     ),
-    StringField('defaultpath',
+    StringField('default',
         schemata="default",
         widget=StringWidget(
             size=25,
@@ -148,15 +148,15 @@ class Widget(AbstractWidget):
 
     @property
     def default(self):
-        root = self.data_root[:]
-        data_default = self.data.get('defaultpath', '')
+        data_default = self.data.get('default', '')
         if not data_default:
-            return '/'.join(self.root)
+            return ''
 
         if isinstance(data_default, unicode):
             data_default = data_default.encode('utf-8')
 
         data_list = [_ for _ in data_default.strip().strip('/').split('/') if _]
+        root = self.data_root[:]
         root.extend(data_list)
 
         url = '/'.join(root)
@@ -196,15 +196,19 @@ class Widget(AbstractWidget):
         if self.hidden:
             value = self.default
         else:
-            value = form.get(self.data.getId(), self.default)
+            value = form.get(self.data.getId(), '')
 
         value = value.strip().strip('/')
+        if not value:
+            return query
+
         url = self.root[:]
         if not url:
             return query
-        if value:
-            url.extend(value.split('/'))
+
+        url.extend(value.split('/'))
         value = '/'.join(url).rstrip('/')
+
         depth = safeToInt(self.data.get('depth', 0))
         query[index] = {"query": value, 'level': depth}
 

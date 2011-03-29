@@ -42,7 +42,6 @@ Faceted.TextWidget.prototype = {
     var input = jQuery('#' + this.wid);
     var value = input.val();
     value = value ? [value] : [];
-    input.val('');
 
     if(!element){
       this.selected = [];
@@ -138,6 +137,7 @@ Faceted.TextWidget.prototype = {
   },
 
   criteria_remove: function(value){
+    jQuery('#' + this.wid).val('');
     if(!value){
       this.selected = [];
       this.do_query();

@@ -26,6 +26,15 @@ Language index to query catalog, even they are Select widgets or TagsCloud ones.
 Set up
 ------
 
+    >>> from Products.LinguaPlone.browser import controlpanel
+    >>> controllang = controlpanel.IMultiLanguageSelectionSchema(self.portal)
+    >>> controllang.available_languages
+    [u'en']
+
+    >>> controllang.available_languages = [u'en', u'fr']
+    >>> controllang.available_languages
+    [u'en', u'fr']
+
 Setup sandbox
 
     >>> self.loginAsPortalOwner()
