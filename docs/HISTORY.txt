@@ -3,6 +3,7 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Bug fix: Plone 4.1 compatible [thomasdesvenain]
  * Feature: Keep input text for Text facet on submit [voineali]
  * Feature: If TAL wigdet returns a callable, call it [jensens]
  * Bug fix: Fix TAL and Text field set default value [voineali]

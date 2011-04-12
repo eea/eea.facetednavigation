@@ -1,7 +1,12 @@
 """ Custom Archetypes fields
 """
 from zope import component
-from zope.app.schema.vocabulary import IVocabularyFactory
+try:
+    from zope.schema.interfaces import IVocabularyFactory
+except ImportError:
+    # < Zope 2.10
+    from zope.app.schema.vocabulary import IVocabularyFactory
+
 from Products.Archetypes import atapi
 from eea.facetednavigation.config import PLONE
 

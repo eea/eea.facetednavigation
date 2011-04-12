@@ -4,7 +4,12 @@ from zope.event import notify
 from zope.component import getUtility
 from zope.component import getMultiAdapter
 
-from zope.app.schema.vocabulary import IVocabularyFactory
+try:
+    from zope.schema.interfaces import IVocabularyFactory
+except ImportError:
+    # < Zope 2.10
+    from zope.app.schema.vocabulary import IVocabularyFactory
+
 from Products.statusmessages.interfaces import IStatusMessage
 
 from eea.facetednavigation.interfaces import IWidgetsInfo

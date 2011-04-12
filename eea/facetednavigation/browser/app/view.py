@@ -1,6 +1,11 @@
 from zope.component import getUtility
 from zope.component import queryAdapter
-from zope.app.schema.vocabulary import IVocabularyFactory
+try:
+    from zope.schema.interfaces import IVocabularyFactory
+except ImportError:
+    # < Zope 2.10
+    from zope.app.schema.vocabulary import IVocabularyFactory
+
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import IFacetedWrapper
 

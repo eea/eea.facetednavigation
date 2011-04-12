@@ -5,7 +5,12 @@ import logging
 import operator
 from zope import interface
 from zope.component import queryMultiAdapter
-from zope.app.schema.vocabulary import IVocabularyFactory
+try:
+    from zope.schema.interfaces import IVocabularyFactory
+except ImportError:
+    # < Zope 2.10
+    from zope.app.schema.vocabulary import IVocabularyFactory
+
 from zope.component import queryUtility
 from BTrees.IIBTree import weightedIntersection, IISet
 
@@ -257,8 +262,8 @@ class Widget(ATWidget):
         return res
 
     def portal_vocabulary(self):
-        """Look up selected vocabulary from portal_vocabulary or from ZTK 
-           zope-vocabulary factory. 
+        """Look up selected vocabulary from portal_vocabulary or from ZTK
+           zope-vocabulary factory.
         """
         vtool = getToolByName(self.context, 'portal_vocabularies', None)
         voc_id = self.data.get('vocabulary', None)
@@ -315,7 +320,7 @@ class CountableWidget(Widget):
         """ Hide items that return no result?
         """
         return bool(safeToInt(self.data.get('hidezerocount', 0)))
-    
+
     def count(self, brains, sequence=None):
         """ Intersect results
         """

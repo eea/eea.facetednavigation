@@ -7,7 +7,11 @@ except ImportError:
     #BBB Plone 2.5
     from zope.app.annotation.interfaces import IAnnotations
 
-from zope.app.schema.vocabulary import IVocabularyFactory
+try:
+    from zope.schema.interfaces import IVocabularyFactory
+except ImportError:
+    # < Zope 2.10
+    from zope.app.schema.vocabulary import IVocabularyFactory
 
 from eea.facetednavigation.config import ANNO_CRITERIA
 from eea.facetednavigation.widgets.storage import Criterion

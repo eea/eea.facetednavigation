@@ -1,7 +1,12 @@
 """ Widget
 """
 from zope.component import getUtility
-from zope.app.schema.vocabulary import IVocabularyFactory
+try:
+    from zope.schema.interfaces import IVocabularyFactory
+except ImportError:
+    # < Zope 2.10
+    from zope.app.schema.vocabulary import IVocabularyFactory
+
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
