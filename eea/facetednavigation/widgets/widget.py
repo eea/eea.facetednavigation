@@ -5,6 +5,7 @@ import logging
 import operator
 from zope import interface
 from zope.component import queryMultiAdapter
+from zope.i18n import translate
 try:
     from zope.schema.interfaces import IVocabularyFactory
 except ImportError:
@@ -186,6 +187,9 @@ class Widget(ATWidget):
         if not msgid:
             return ''
 
+        if hasattr(msgid, 'domain'):
+            return translate(msgid, context=self.request)
+
         tool = getToolByName(self.context, 'translation_service')
         for domain in ['eea.facetednavigation', 'eea.faceted',
                        'eea.translations', 'plone']:
@@ -208,6 +212,7 @@ class Widget(ATWidget):
 
             if value != msgid:
                 return value
+            
         return msgid
 
     def cleanup(self, string):
