@@ -1,7 +1,7 @@
 <configure xmlns="http://namespaces.zope.org/zope"
   xmlns:browser="http://namespaces.zope.org/browser"
   xmlns:faceted="http://namespaces.zope.org/faceted"
-  i18n_domain="eea.facetednavigation">
+  i18n_domain="eea">
 
   <faceted:widget factory=".widget.Widget" />
   <adapter

@@ -28,7 +28,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_index',
             description='Catalog index to use for search',
             description_msgid='help_faceted_criteria_index',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     BooleanField('count',
@@ -38,7 +38,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_count',
             description='Display number of results per letter',
             description_msgid='help_faceted_criteria_alphabetic_count',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     BooleanField('hidezerocount',
@@ -48,7 +48,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_emptycounthide',
             description='This option works only if "count results" is enabled',
             description_msgid='help_faceted_criteria_criteria_emptycounthide',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('default',
@@ -60,7 +60,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_default',
             description='Default letter to be selected',
             description_msgid='help_faceted_criteria_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

@@ -48,7 +48,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_index',
             description='Catalog index to use for search',
             description_msgid='help_faceted_criteria_index',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('default',
@@ -59,7 +59,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_default',
             description='Default daterange (e.g. "now-365=>now+1" which means "Starting one year ago until tomorrow")',
             description_msgid='help_faceted_criteria_date_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

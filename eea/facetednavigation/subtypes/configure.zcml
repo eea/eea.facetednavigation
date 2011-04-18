@@ -1,7 +1,7 @@
 <configure xmlns="http://namespaces.zope.org/zope"
   xmlns:zcml="http://namespaces.zope.org/zcml"
   xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea.facetednavigation">
+  i18n_domain="eea">
 
   <class class="Products.ATContentTypes.content.folder.ATFolder">
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />

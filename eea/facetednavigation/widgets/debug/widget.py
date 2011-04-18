@@ -26,7 +26,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_user',
             description='Widget will be visible only for selected user',
             description_msgid='help_faceted_criteria_user',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

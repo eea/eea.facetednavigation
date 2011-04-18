@@ -1,5 +1,5 @@
 <configure xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea.facetednavigation">
+  i18n_domain="eea">
 
   <browser:page
     for="*"

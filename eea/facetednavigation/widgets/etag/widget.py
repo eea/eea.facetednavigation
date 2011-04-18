@@ -18,7 +18,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_etag_default',
             description='Etag value',
             description_msgid='help_faceted_criteria_etag_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

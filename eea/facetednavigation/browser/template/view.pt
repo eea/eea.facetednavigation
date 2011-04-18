@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
   lang="en-US"
   metal:use-macro="here/main_template/macros/master"
-  i18n:domain="eea.facetednavigation">
+  i18n:domain="eea">
 
 <metal:jsslot fill-slot="javascript_head_slot">
   <script language="javascript" type="text/javascript"

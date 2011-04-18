@@ -27,7 +27,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_index',
             description='Catalog index to use for search',
             description_msgid='help_faceted_criteria_index',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('operator',
@@ -41,7 +41,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_operator',
             description='Search with AND/OR between elements',
             description_msgid='help_faceted_criteria_operator',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('vocabulary',
@@ -52,7 +52,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_vocabulary',
             description='Vocabulary to use to render widget items',
             description_msgid='help_faceted_criteria_vocabulary',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('catalog',
@@ -64,7 +64,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_catalog',
             description='Get unique values from catalog as an alternative for vocabulary',
             description_msgid='help_faceted_criteria_catalog',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     IntegerField('maxitems',
@@ -75,7 +75,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_maxitems',
             description='Number of items visible in widget',
             description_msgid='help_faceted_criteria_maxitems',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     BooleanField('sortreversed',
@@ -85,7 +85,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_reverse_options',
             description='Sort options reversed',
             description_msgid='help_faceted_criteria_reverse_options',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     BooleanField('count',
@@ -95,7 +95,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_count',
             description='Display number of results near each option',
             description_msgid='help_faceted_criteria_count',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     BooleanField('hidezerocount',
@@ -105,7 +105,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_emptycounthide',
             description='This option works only if "count results" is enabled',
             description_msgid='help_faceted_criteria_criteria_emptycounthide',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     LinesField('default',
@@ -115,7 +115,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_default',
             description='Default items (one per line)',
             description_msgid='help_faceted_criteria_checkboxes_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

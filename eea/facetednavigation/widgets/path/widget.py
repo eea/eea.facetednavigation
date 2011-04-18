@@ -22,7 +22,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_index',
             description='Catalog index to use for search',
             description_msgid='help_faceted_criteria_index',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('root',
@@ -34,7 +34,7 @@ EditSchema = Schema((
             description=('Navigation js-tree starting point '
                          '(relative to plone site. ex: SITE/data-and-maps)'),
             description_msgid='help_faceted_criteria_path_root',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('default',
@@ -45,7 +45,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_default',
             description='Default path to search in (relative to root folder)',
             description_msgid='help_faceted_criteria_path_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('depth',
@@ -59,7 +59,7 @@ EditSchema = Schema((
                         '-1=all subfolders recursive, and any other positive '
                         'integer count the subfolder-levels to search.',
             description_msgid='help_faceted_criteria_path_depth',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('theme',
@@ -72,7 +72,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_path_theme',
             description='Theme to be used with this widget',
             description_msgid='help_faceted_criteria_path_theme',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

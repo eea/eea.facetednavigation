@@ -2,7 +2,7 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:five="http://namespaces.zope.org/five"
-    i18n_domain="eea.facetednavigation">
+    i18n_domain="eea">
 
   <five:registerPackage package="."/>
 

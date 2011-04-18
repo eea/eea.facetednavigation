@@ -20,7 +20,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_start',
             description='Results per page starting value',
             description_msgid='help_faceted_criteria_start',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     IntegerField('end',
@@ -31,7 +31,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_end',
             description='Results per page ending value',
             description_msgid='help_faceted_criteria_end',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     IntegerField('step',
@@ -42,7 +42,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_step',
             description='Results per page step',
             description_msgid='help_faceted_criteria_step',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     IntegerField('default',
@@ -53,7 +53,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_default',
             description='Default results per page',
             description_msgid='help_faceted_criteria_resultsperpage_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

@@ -18,7 +18,7 @@ EditSchema = Schema((
             label_msgid='faceted_portlet_macro',
             description='Path to portlet macro',
             description_msgid='help_faceted_portlet_macro',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     )
 ))

@@ -31,7 +31,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_index',
             description='Catalog index to use for search',
             description_msgid='help_faceted_criteria_index',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('default',
@@ -42,7 +42,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_tal_default',
             description='Default tal expression for query value',
             description_msgid='help_faceted_criteria_tal_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

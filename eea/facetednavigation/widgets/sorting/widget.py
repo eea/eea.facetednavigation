@@ -19,7 +19,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_sorting_vocabulary',
             description='Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria.',
             description_msgid='help_faceted_criteria_sorting_vocabulary',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('default',
@@ -30,7 +30,7 @@ EditSchema = Schema((
             label_msgid='faceted_criteria_default',
             description='Default sorting index (e.g. "effective" or "effective(reverse)")',
             description_msgid='help_faceted_criteria_sorting_default',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))

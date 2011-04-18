@@ -47,7 +47,7 @@ CommonEditSchema = Schema((
             label_msgid='faceted_criteria_title',
             description='Title for widget to display in view page',
             description_msgid='help_faceted_criteria_title',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('position',
@@ -59,7 +59,7 @@ CommonEditSchema = Schema((
             label_msgid='faceted_criteria_position',
             description='Widget position in page',
             description_msgid='help_faceted_criteria_position',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     StringField('section',
@@ -71,7 +71,7 @@ CommonEditSchema = Schema((
             label_msgid='faceted_criteria_section',
             description='Display widget in section',
             description_msgid='help_faceted_criteria_section',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
     BooleanField('hidden',
@@ -81,7 +81,7 @@ CommonEditSchema = Schema((
             label_msgid='faceted_criteria_hidden',
             description='Hide widget',
             description_msgid='help_faceted_criteria_hidden',
-            i18n_domain="eea.facetednavigation"
+            i18n_domain="eea"
         )
     ),
 ))
@@ -212,7 +212,7 @@ class Widget(ATWidget):
 
             if value != msgid:
                 return value
-            
+
         return msgid
 
     def cleanup(self, string):
