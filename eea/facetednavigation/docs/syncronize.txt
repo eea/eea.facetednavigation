@@ -12,6 +12,7 @@ Set up
     >>> fid = portal.invokeFactory('Folder', 'sandbox')
     >>> sandbox = portal._getOb(fid)
     >>> sandbox.setLanguage('en')
+    >>> request = sandbox.REQUEST
 
 Add some translations
 
@@ -20,11 +21,10 @@ Add some translations
 
 Subtype canonical as faceted navigable
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
 
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
 
 Let's cleanup default criteria to avoid surprises
 

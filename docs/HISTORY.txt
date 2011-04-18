@@ -3,6 +3,9 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Feature: Simplified "possible faceted navigable" mechanism. Now all you have
+   to do is to implement IPossibleFacetedNavigable interface within your
+   configure.zcml, no more p4a.subtyper descriptors for each portal type [voineali #4254]
  * Cleanup: Fixed all pylint, pyflakes violations [voineali #4254]
  * Cleanup: Use "eea" i18n domain for all EEA packages [voineali #4254]
  * Bug fix: Non eea vocabularies values are translated [thomasdesvenain]

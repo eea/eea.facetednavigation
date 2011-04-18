@@ -10,11 +10,11 @@ Set up
     >>> fid = portal.invokeFactory('Folder', 'sandbox')
     >>> sandbox = portal._getOb(fid)
     >>> sandbox.setLanguage('en')
+    >>> request = sandbox.REQUEST
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> from zope.component import getMultiAdapter
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
 
 RSS2
 ----

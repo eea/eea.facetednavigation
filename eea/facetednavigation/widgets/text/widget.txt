@@ -9,8 +9,6 @@ Set up
   Imports
 
     >>> from zope.component import getMultiAdapter
-    >>> from zope.component import getUtility
-    >>> from p4a.subtyper.interfaces import ISubtyper
     >>> from eea.facetednavigation.interfaces import ICriteria
 
   Add faceted navigable sandbox
@@ -18,11 +16,13 @@ Set up
     >>> self.loginAsPortalOwner()
     >>> sid = portal.invokeFactory('Folder', 'sandbox')
     >>> sandbox = portal._getOb(sid)
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
-    >>> subtyper.existing_type(sandbox).name
-    'eea.facetednavigation.FolderFacetedNavigable'
     >>> request = sandbox.REQUEST
+
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.can_enable
+    True
+
+    >>> subtyper.enable()
 
   Setup faceted components
 

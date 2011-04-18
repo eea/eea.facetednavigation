@@ -9,11 +9,11 @@ Add a faceted navigable object
     >>> fid = portal.invokeFactory('Folder', 'sandbox')
     >>> sandbox = portal._getOb(fid)
     >>> sandbox.setTitle('Faceted navigation sandbox')
+    >>> request = sandbox.REQUEST
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> from zope.component import getMultiAdapter
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
 
 Let's cleanup default criteria to avoid surprises
 
@@ -107,7 +107,8 @@ Let's add a new folder to import criteria configuration
     >>> fid = portal.invokeFactory('Folder', 'new_sandbox')
     >>> new_sandbox = portal._getOb(fid)
     >>> new_sandbox.setTitle('Faceted navigation new sandbox')
-    >>> subtyper.change_type(new_sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> subtyper = getMultiAdapter((new_sandbox, new_sandbox.REQUEST), name=u'faceted_subtyper')
+    >>> subtyper.enable()
 
 And cleanup default widgets
 

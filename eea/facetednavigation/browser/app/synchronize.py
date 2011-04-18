@@ -1,7 +1,6 @@
 """ Sync translations
 """
-from p4a.subtyper.interfaces import ISubtyper
-from zope.component import getUtility
+from zope.component import getMultiAdapter
 from Products.statusmessages.interfaces import IStatusMessage
 
 class FacetedSynchronizeTranslation(object):
@@ -31,10 +30,11 @@ class FacetedSynchronizeTranslation(object):
             return
         canonical = canonical()
 
-        subtyper = getUtility(ISubtyper)
-        subtype = subtyper.existing_type(canonical)
-        subtype = getattr(subtype, 'name', None)
-        if not subtype:
+        subtyper = getMultiAdapter((canonical, self.request),
+                                   name=u'faceted_subtyper')
+
+        # Not a faceted navigable
+        if not subtyper.can_disable:
             self._redirect('Nothing to do')
 
         for lang in canonical.getTranslations().keys():
@@ -42,8 +42,8 @@ class FacetedSynchronizeTranslation(object):
             if not translation:
                 continue
 
-            tr_subtype = subtyper.existing_type(translation)
-            tr_subtype = getattr(tr_subtype, 'name', None)
-            if tr_subtype != subtype:
-                subtyper.change_type(translation, subtype)
+            subtyper = getMultiAdapter((translation, self.request),
+                                       name=u'faceted_subtyper')
+            subtyper.enable()
+
         self._redirect('Faceted settings updated across translations')

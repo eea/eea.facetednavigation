@@ -7,8 +7,6 @@ Imports
 -------
 
     >>> from DateTime import DateTime
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
     >>> from zope.component import getMultiAdapter
     >>> from Products.CMFCore.utils import getToolByName
     >>> from eea.facetednavigation.interfaces import ICriteria
@@ -19,10 +17,12 @@ Set up
     >>> self.loginAsPortalOwner()
     >>> fid = portal.invokeFactory('Folder', 'sandbox-widgets')
     >>> sandbox = portal._getOb(fid)
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
     >>> sandbox.setTitle('Faceted navigation folder test')
     >>> request = sandbox.REQUEST
+
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
+
     >>> putils = getToolByName(sandbox, 'plone_utils')
     >>> handler = getMultiAdapter((sandbox, request), name=u'faceted_configure')
     >>> query = getMultiAdapter((sandbox, request), name=u'faceted_query')

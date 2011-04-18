@@ -7,8 +7,7 @@ update and display results per page.
 Imports
 -------
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
 
 Set up
 ------
@@ -16,10 +15,11 @@ Set up
     >>> self.loginAsPortalOwner()
     >>> fid = portal.invokeFactory('Folder', 'folder')
     >>> counter_sandbox = portal._getOb(fid)
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(counter_sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
     >>> counter_sandbox.setTitle('Faceted navigation counter test')
     >>> request = counter_sandbox.REQUEST
+
+    >>> subtyper = getMultiAdapter((counter_sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
 
     >>> view    = counter_sandbox.unrestrictedTraverse('@@facetednavigation_view')
     >>> handler = counter_sandbox.unrestrictedTraverse('@@faceted_configure')

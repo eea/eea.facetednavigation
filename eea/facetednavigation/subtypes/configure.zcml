@@ -15,22 +15,6 @@
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 
-  <utility
-        name="eea.facetednavigation.FolderFacetedNavigable"
-        factory=".descriptors.FolderFacetedNavigableDescriptor" />
-
-  <utility
-        name="eea.facetednavigation.LargeFolderFacetedNavigable"
-        factory=".descriptors.LargeFolderFacetedNavigableDescriptor" />
-
-  <utility
-        name="eea.facetednavigation.TopicFacetedNavigable"
-        factory=".descriptors.TopicFacetedNavigableDescriptor" />
-
-  <utility
-        name="eea.facetednavigation.RichTopicNavigableDescriptor"
-        factory=".descriptors.RichTopicNavigableDescriptor" />
-
   <adapter
     for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
     provides="zope.annotation.interfaces.IAnnotations"

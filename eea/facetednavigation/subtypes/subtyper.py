@@ -1,16 +1,16 @@
 """ Subtyping support
 """
 from zope.interface import implements
-from zope.component import getUtility
+from zope.interface import alsoProvides, noLongerProvides
+from zope.event import notify
 
-from p4a.subtyper.interfaces import ISubtyper
+from p4a.subtyper.engine import SubtypeAddedEvent, SubtypeRemovedEvent
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
 from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
 from eea.facetednavigation.interfaces import IFacetedNavigable
-
 
 class FacetedSubtyper(BrowserView):
     """ Support for subtyping objects
@@ -20,7 +20,6 @@ class FacetedSubtyper(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.subtyper = getUtility(ISubtyper)
 
     def _redirect(self, msg=''):
         """ Redirect
@@ -39,8 +38,7 @@ class FacetedSubtyper(BrowserView):
         if not IPossibleFacetedNavigable.providedBy(self.context):
             return False
 
-        existing = self.subtyper.existing_type(self.context)
-        if existing and existing.name.startswith('eea.facetednavigation.'):
+        if IFacetedNavigable.providedBy(self.context):
             return False
         return True
 
@@ -51,8 +49,7 @@ class FacetedSubtyper(BrowserView):
         if not IPossibleFacetedNavigable.providedBy(self.context):
             return False
 
-        existing = self.subtyper.existing_type(self.context)
-        if existing and existing.name.startswith('eea.facetednavigation.'):
+        if IFacetedNavigable.providedBy(self.context):
             return True
         return False
 
@@ -79,21 +76,21 @@ class FacetedSubtyper(BrowserView):
     def enable(self):
         """ See IFacetedSubtyper
         """
-        possible_types = [subtype.name for subtype
-                          in self.subtyper.possible_types(self.context) if
-                          subtype.name.startswith('eea.facetednavigation.')]
+        if not self.can_enable:
+            return self._redirect('Faceted navigation not supported')
 
-        if not possible_types:
-            return self._redirect("This object is not faceted navigable")
-
-        subtype = possible_types[0]
-        self.subtyper.change_type(self.context, subtype)
+        if not IFacetedNavigable.providedBy(self.context):
+            alsoProvides(self.context, IFacetedNavigable)
+        notify(SubtypeAddedEvent(self.context, None))
         self._redirect('Faceted navigation enabled')
 
     def disable(self):
         """ See IFacetedSubtyper
         """
-        existing = self.subtyper.existing_type(self.context)
-        if existing and existing.name.startswith('eea.facetednavigation.'):
-            self.subtyper.remove_type(self.context)
+        if not self.can_disable:
+            return self._redirect('Faceted navigation not supported')
+
+        if IFacetedNavigable.providedBy(self.context):
+            noLongerProvides(self.context, IFacetedNavigable)
+        notify(SubtypeRemovedEvent(self.context, None))
         self._redirect('Faceted navigation disabled')

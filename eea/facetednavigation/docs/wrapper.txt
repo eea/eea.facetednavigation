@@ -6,15 +6,15 @@ even Zope Python scripts.
 Setup
 -----
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
 
     >>> self.loginAsPortalOwner()
     >>> fid = portal.invokeFactory('Folder', 'folder')
     >>> sandbox = portal._getOb(fid)
     >>> sandbox.setLanguage('en')
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> request = sandbox.REQUEST
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
 
 Get wrapper
 -----------

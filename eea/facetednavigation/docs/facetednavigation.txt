@@ -4,8 +4,6 @@ Faceted Navigation
 Imports
 =======
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
     >>> from zope.component import getMultiAdapter
     >>> from eea.facetednavigation.interfaces import ICriteria
 
@@ -15,10 +13,14 @@ Set up
     >>> self.loginAsPortalOwner()
     >>> fid = portal.invokeFactory('Folder', 'folder')
     >>> folder = portal._getOb(fid)
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(folder, 'eea.facetednavigation.FolderFacetedNavigable')
     >>> folder.setTitle('Faceted navigation folder test')
     >>> request = folder.REQUEST
+
+    >>> subtyper = getMultiAdapter((folder, request), name=u'faceted_subtyper')
+    >>> subtyper.can_enable
+    True
+
+    >>> subtyper.enable()
 
     >>> handler = getMultiAdapter((folder, request), name=u'faceted_configure')
     >>> query_handler = getMultiAdapter((folder, request), name=u'faceted_query')

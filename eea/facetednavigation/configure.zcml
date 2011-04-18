@@ -1,6 +1,5 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="eea">
 
   <include package="p4a.common" />
@@ -10,16 +9,6 @@
 
   <include file="profiles.zcml" />
   <include file="permissions.zcml" />
-
-  <!-- Plone 2.5 -->
-  <configure zcml:condition="installed zope.app.annotation.tests">
-    <include package="Products.CMFonFive" />
-  </configure>
-
-  <!-- Plone 3.0+ -->
-  <configure zcml:condition="installed zope.annotation">
-    <include package="Products.CMFCore" />
-  </configure>
 
   <include package="eea.faceted.vocabularies" />
   <include package="eea.jquery" />

@@ -4,9 +4,7 @@ Support for NON-ASCII queries
 
 Imports
 -------
-    >>> from zope.component import getMultiAdapter, getUtility
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
     >>> from eea.facetednavigation.interfaces import ICriteria
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
     >>> from Products.CMFCore.utils import getToolByName
@@ -18,11 +16,12 @@ Set up
     >>> self.loginAsPortalOwner()
     >>> sid = portal.invokeFactory('Folder', 'sandbox')
     >>> sandbox = portal._getOb(sid)
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
-    >>> subtyper.existing_type(sandbox).name
-    'eea.facetednavigation.FolderFacetedNavigable'
     >>> request = sandbox.REQUEST
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.can_enable
+    True
+
+    >>> subtyper.enable()
     >>> putils = getToolByName(sandbox, 'plone_utils')
 
 Cleanup default widgets

@@ -21,8 +21,6 @@ will fallback to English value. Same for default value:
 Imports
 -------
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
     >>> from zope.component import getMultiAdapter
     >>> from eea.facetednavigation.interfaces import ICriteria
 
@@ -35,6 +33,7 @@ Add english folder
     >>> fid = portal.invokeFactory('Folder', 'english')
     >>> english = portal._getOb(fid)
     >>> english.setLanguage('en')
+    >>> request = english.REQUEST
 
 Add translations
 
@@ -46,9 +45,9 @@ Add translations
 
 Make them faceted navigable
 
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(english, 'eea.facetednavigation.FolderFacetedNavigable')
-    >>> request = english.REQUEST
+    >>> subtyper = getMultiAdapter((english, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
+
     >>> sync = getMultiAdapter((english, request), name=u'faceted_sync_translations')
     >>> _ = sync()
 

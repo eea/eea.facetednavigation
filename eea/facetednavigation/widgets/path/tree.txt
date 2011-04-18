@@ -17,8 +17,6 @@ Set up
 
   Imports
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
     >>> from zope.component import getMultiAdapter
     >>> from eea.facetednavigation.interfaces import ICriteria
 
@@ -29,6 +27,7 @@ Set up
     >>> english = portal._getOb(fid)
     >>> english.processForm(values={'title': 'English'}, data=1, metadata=1)
     >>> english.setLanguage('en')
+    >>> request = english.REQUEST
 
   Add translations
 
@@ -46,9 +45,9 @@ Set up
 
   Make them faceted navigable
 
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(english, 'eea.facetednavigation.FolderFacetedNavigable')
-    >>> request = english.REQUEST
+    >>> subtyper = getMultiAdapter((english, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
+
     >>> sync = getMultiAdapter((english, request), name=u'faceted_sync_translations')
     >>> _ = sync()
 

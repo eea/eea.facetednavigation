@@ -4,8 +4,7 @@ Browser views
 Imports
 -------
 
-    >>> from p4a.subtyper.interfaces import ISubtyper
-    >>> from zope.component import getUtility
+    >>> from zope.component import getMultiAdapter
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
 
     >>> from Products.Five.testbrowser import Browser
@@ -20,8 +19,9 @@ Set up
     >>> fid = portal.invokeFactory('Folder', 'sandbox', title='Sandbox faceted navigation')
     >>> sandbox = portal._getOb(fid)
     >>> sandbox.setLanguage('en')
-    >>> subtyper = getUtility(ISubtyper)
-    >>> subtyper.change_type(sandbox, 'eea.facetednavigation.FolderFacetedNavigable')
+    >>> request = sandbox.REQUEST
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
     >>> self.logout()
 
   Initialize browser
