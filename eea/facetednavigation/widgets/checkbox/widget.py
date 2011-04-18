@@ -4,12 +4,12 @@ from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import LinesField
 from Products.Archetypes.public import BooleanField
+from Products.Archetypes.public import StringField
 from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import LinesWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 from Products.Archetypes.utils import DisplayList
-from eea.facetednavigation.widgets.field import StringField
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.faceted.vocabularies.utils import compare

@@ -4,10 +4,10 @@ from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from Products.Archetypes.public import Schema
+from Products.Archetypes.public import StringField
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import DisplayList
 
-from eea.facetednavigation.widgets.field import StringField
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
 EditSchema = Schema((

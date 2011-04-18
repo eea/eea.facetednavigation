@@ -14,11 +14,11 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.CMFPlone.utils import safeToInt
 from Products.Archetypes.public import Schema
+from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import BooleanField
 from Products.Archetypes.public import BooleanWidget
 from Products.Archetypes.public import SelectionWidget
-from eea.facetednavigation.widgets.field import StringField
 
 from eea.facetednavigation.interfaces import IFacetedCatalog
 

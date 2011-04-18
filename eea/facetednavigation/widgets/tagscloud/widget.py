@@ -5,12 +5,12 @@ from Products.Archetypes.public import DisplayList
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import BooleanField
+from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 from Products.CMFPlone.utils import safeToInt
-from eea.facetednavigation.widgets.field import StringField
 from eea.faceted.vocabularies.utils import compare
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile

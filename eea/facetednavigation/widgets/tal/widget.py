@@ -5,18 +5,17 @@ import logging
 
 # Zope2
 from Products.Archetypes.public import Schema
+from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.interfaces import IBaseObject
 from Products.CMFCore.utils import getToolByName
-
 
 # Zope3
 from zope.app.pagetemplate.engine import TrustedEngine, TrustedZopeContext
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 
 # Package
-from eea.facetednavigation.widgets.field import StringField
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
 logger = logging.getLogger('eea.facetednavigation.widgets.tal')

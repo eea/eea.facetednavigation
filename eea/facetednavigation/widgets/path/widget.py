@@ -3,9 +3,9 @@
 import logging
 from Products.CMFPlone.utils import safeToInt
 from Products.Archetypes.public import Schema
+from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
-from eea.facetednavigation.widgets.field import StringField
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 logger = logging.getLogger('eea.facetednavigation.widgets.path')

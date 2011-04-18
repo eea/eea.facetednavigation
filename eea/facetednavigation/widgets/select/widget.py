@@ -2,10 +2,10 @@
 """
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import BooleanField
+from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
-from eea.facetednavigation.widgets.field import StringField
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
