@@ -1,9 +1,6 @@
-try:
-    from zope.component.interfaces import IObjectEvent
-except ImportError:
-    #BBB Plone 2.5
-    from zope.app.event.interfaces import IObjectEvent
-
+""" Faceted Navigation public interfaces
+"""
+from zope.component.interfaces import IObjectEvent
 
 # Subtypes
 from eea.facetednavigation.subtypes.interfaces import IPossibleFacetedNavigable
@@ -26,7 +23,9 @@ from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
 from eea.facetednavigation.widgets.interfaces import IWidgetFilterBrains
 
 # Language
-from eea.facetednavigation.indexes.language.interfaces import ILanguageWidgetAdapter
+from eea.facetednavigation.indexes.language.interfaces import (
+    ILanguageWidgetAdapter,
+)
 
 # Versioning
 from eea.facetednavigation.versions.interfaces import IFacetedVersion
@@ -44,3 +43,18 @@ class IFacetedEvent(IObjectEvent):
 class IFacetedGlobalSettingsChangedEvent(IFacetedEvent):
     """ Faceted global settings updated
     """
+
+# pylint, pyflakes
+__all__ = [
+    IPossibleFacetedNavigable.__name__,
+    IFacetedNavigable.__name__,
+    IWidgetsInfo.__name__,
+    IWidgetFilterBrains.__name__,
+    IFacetedCatalog.__name__,
+    IFacetedLayout.__name__,
+    IFacetedVersion.__name__,
+    ILanguageWidgetAdapter.__name__,
+    ICriteria.__name__,
+    IFacetedWrapper.__name__,
+    IWidget.__name__,
+]

@@ -1,1 +1,2 @@
-#Module
+""" JS/CSS Resources
+"""

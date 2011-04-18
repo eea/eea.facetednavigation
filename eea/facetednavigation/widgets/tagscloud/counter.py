@@ -1,3 +1,5 @@
+""" Counter
+"""
 import operator
 from zope.component import getMultiAdapter
 from Products.Five import BrowserView
@@ -32,12 +34,12 @@ class TagsCloudCounter(BrowserView):
         # Get index
         widget = criteria.widget(cid=cid)(self.context, self.request, criterion)
         vocabulary = dict((key, value) for key, value, count
-                          in widget.vocabulary(all=True) if key not in ("", "all"))
+                    in widget.vocabulary(oll=True) if key not in ("", "all"))
 
         # Count
         res = widget.count(brains, sequence=vocabulary.keys())
         res.pop("", 0)
-        all = res.pop('all', 0)
+        oll = res.pop('all', 0)
 
         res = res.items()
         res.sort(key=operator.itemgetter(1), reverse=True)
@@ -50,17 +52,18 @@ class TagsCloudCounter(BrowserView):
         # Return a of list of three items tuples (key, label, count)
         res = [(key, vocabulary.get(key, key), value) for key, value in res]
 
-        res.insert(0, ('all', 'All', all))
+        res.insert(0, ('all', 'All', oll))
         for item in res:
             yield item
 
-    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
+    @ramcache(cacheCounterKeyFacetedNavigation,
+              dependencies=['eea.facetednavigation'])
     def __call__(self, **kwargs):
         if self.request:
             kwargs.update(self.request.form)
 
         # Calling self.index() will set cache headers for varnish
-        index = self.index()
+        self.index()
 
         cid = kwargs.pop('cid', None)
         if not cid:

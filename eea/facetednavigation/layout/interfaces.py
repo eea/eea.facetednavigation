@@ -1,3 +1,5 @@
+""" Layout interfaces
+"""
 from zope import interface
 
 class ILayoutMenuHandler(interface.Interface):

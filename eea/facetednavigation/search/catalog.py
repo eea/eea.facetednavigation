@@ -4,7 +4,7 @@ import logging
 from zope.interface import implements
 from Products.CMFCore.utils import getToolByName
 from BTrees.IIBTree import IIBucket
-from interfaces import IFacetedCatalog
+from eea.facetednavigation.search.interfaces import IFacetedCatalog
 logger = logging.getLogger('eea.facetednavigation.search.catalog')
 
 class FacetedCatalog(object):

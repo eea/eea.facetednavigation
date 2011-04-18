@@ -2,7 +2,6 @@
 """
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringWidget
-from Products.Archetypes.public import SelectionWidget
 from eea.facetednavigation.widgets.field import StringField
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile

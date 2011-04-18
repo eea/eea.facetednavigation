@@ -1,6 +1,5 @@
 """ Text widget
 """
-from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import StringWidget

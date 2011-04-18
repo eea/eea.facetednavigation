@@ -1,5 +1,7 @@
+""" Subtyper descriptors
+"""
 from zope import interface
-from interfaces import IFacetedNavigable
+from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
 from p4a.subtyper.interfaces import IPortalTypedFolderishDescriptor
 
 class FacetedNavigableDescriptor(object):

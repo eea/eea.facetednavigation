@@ -1,8 +1,13 @@
 """ Caching
 """
+try:
+    from lovely.memcached import event
+    InvalidateCacheEvent = event.InvalidateCacheEvent
+except ImportError:
+    from eea.facetednavigation.caching.nocache import InvalidateCacheEvent
+
 from zope.event import notify
 from Products.CMFCore.utils import getToolByName
-from eea.facetednavigation.caching import InvalidateCacheEvent
 from eea.facetednavigation.interfaces import IFacetedLayout
 #
 # Cache query
@@ -26,7 +31,8 @@ def cacheCounterKeyFacetedNavigation(method, self, *args, **kwargs):
             self.request.form, self.request.get('LANGUAGE', 'en'),
             user.getUserName())
 
-def invalidateFacetedCache(obj, event):
+def invalidateFacetedCache(obj, evt):
     """ Invalidate faceted navigation cache
     """
-    notify(InvalidateCacheEvent(raw=True, dependencies=['eea.facetednavigation']))
+    notify(InvalidateCacheEvent(raw=True,
+                                dependencies=['eea.facetednavigation']))

@@ -1,3 +1,5 @@
+""" Browser interfaces
+"""
 from zope.interface import Interface
 
 class IFacetedCriteriaHandler(Interface):

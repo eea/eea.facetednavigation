@@ -4,7 +4,6 @@ from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import LinesField
 from Products.Archetypes.public import BooleanField
-from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import LinesWidget
 from Products.Archetypes.public import SelectionWidget
@@ -62,7 +61,8 @@ EditSchema = Schema((
             format='select',
             label='Catalog',
             label_msgid='faceted_criteria_catalog',
-            description='Get unique values from catalog as an alternative for vocabulary',
+            description=('Get unique values from catalog as an alternative '
+                         'for vocabulary'),
             description_msgid='help_faceted_criteria_catalog',
             i18n_domain="eea"
         )
@@ -143,7 +143,7 @@ class Widget(CountableWidget):
             return []
 
         if isinstance(default, (str, unicode)):
-            default = [default,]
+            default = [default, ]
         return default
 
     def selected(self, key):

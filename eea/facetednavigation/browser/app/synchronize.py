@@ -1,3 +1,5 @@
+""" Sync translations
+"""
 from p4a.subtyper.interfaces import ISubtyper
 from zope.component import getUtility
 from Products.statusmessages.interfaces import IStatusMessage
@@ -10,6 +12,8 @@ class FacetedSynchronizeTranslation(object):
         self.request = request
 
     def _redirect(self, msg=''):
+        """ Set status message and redirect
+        """
         to = self.request.get('redirect', self.context.absolute_url())
         if not to:
             return msg

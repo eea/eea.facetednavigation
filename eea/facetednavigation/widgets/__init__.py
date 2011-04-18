@@ -1,1 +1,2 @@
-# Module
+""" Faceted widgets
+"""

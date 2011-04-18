@@ -1,3 +1,5 @@
+""" Faceted catalog views
+"""
 import logging
 import simplejson as json
 from Products.CMFCore.utils import getToolByName

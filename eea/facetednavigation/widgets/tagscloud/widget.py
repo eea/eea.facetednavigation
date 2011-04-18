@@ -53,7 +53,8 @@ EditSchema = Schema((
             format='select',
             label='Catalog',
             label_msgid='faceted_criteria_catalog',
-            description='Get unique values from catalog as an alternative for vocabulary',
+            description=('Get unique values from catalog as an alternative '
+                         'for vocabulary'),
             description_msgid='help_faceted_criteria_catalog',
             i18n_domain="eea"
         )
@@ -184,6 +185,8 @@ class Widget(CountableWidget):
 
     @property
     def maxitems(self):
+        """ Maximum items
+        """
         return safeToInt(self.data.get('maxitems', 0))
 
     def cut_text(self, text='', maxchars=0):
@@ -199,12 +202,12 @@ class Widget(CountableWidget):
             return text
         return '%s...' % text[0:maxchars]
 
-    def vocabulary(self, all=False):
+    def vocabulary(self, oll=False):
         """ Return a limited number of results
         """
         voc = list(super(Widget, self).vocabulary())
 
-        if all:
+        if oll:
             maxitems = 0
         else:
             maxitems = self.maxitems
@@ -218,6 +221,8 @@ class Widget(CountableWidget):
 
     @property
     def randint(self):
+        """ Random integer
+        """
         maxint = self.maxitems or 100
         return random.randint(0, maxint)
 

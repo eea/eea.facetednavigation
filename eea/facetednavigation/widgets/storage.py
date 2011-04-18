@@ -1,7 +1,7 @@
 """ Criteria storage
 """
 from zope import interface
-from interfaces import ICriterion
+from eea.facetednavigation.widgets.interfaces import ICriterion
 
 class Criterion(object):
     """ Search criteria
@@ -18,23 +18,28 @@ class Criterion(object):
     default = None
     section = 'default'
 
-    def get_hidden(self):
-        hidden = getattr(self, '_hidden', None)
-        if not hidden:
-            return False
-
-        if hidden in ('0', 'False', 'false', 'none', 'None'):
-            return False
-        return True
-
-    def set_hidden(self, value):
-        """ hidden
+    def hidden(self=None):
+        """ Hidden property
         """
-        if value in ('0', 'False', 'false', 'none', 'None'):
-            value = False
-        self._hidden = value and True or False
+        def fget(self):
+            """ Getter
+            """
+            hidden = getattr(self, '_hidden', None)
+            if not hidden:
+                return False
 
-    hidden = property(get_hidden, set_hidden, doc='Hidden property')
+            if hidden in ('0', 'False', 'false', 'none', 'None'):
+                return False
+            return True
+
+        def fset(self, value):
+            """ Setter
+            """
+            if value in ('0', 'False', 'false', 'none', 'None'):
+                value = False
+            self._hidden = value and True or False
+        return property(fget, fset, doc='Hidden property')
+    hidden = hidden()
 
     def __init__(self, **kwargs):
         taken_ids = set(kwargs.pop('_taken_ids_', []))

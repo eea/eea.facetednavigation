@@ -3,7 +3,13 @@
 import unittest
 import doctest
 from Testing.ZopeTestCase import FunctionalDocFileSuite as Suite
-from base import FacetedFunctionalTestCase, LINGUAPLONE
+from eea.facetednavigation.tests.base import FacetedFunctionalTestCase
+
+try:
+    from Products import LinguaPlone
+    LinguaPlone = True if LinguaPlone else False
+except ImportError:
+    LinguaPlone = False
 
 OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
                doctest.ELLIPSIS |
@@ -63,7 +69,7 @@ def test_suite():
     #
     # LinguaPlone releted tests
     #
-    if LINGUAPLONE:
+    if LinguaPlone:
         tests.addTest(Suite('docs/syncronize.txt',
                             optionflags=OPTIONFLAGS,
                             package='eea.facetednavigation',

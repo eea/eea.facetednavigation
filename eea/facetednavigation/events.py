@@ -1,7 +1,7 @@
 """ Faceted events
 """
 from zope.interface import implements
-from interfaces import IFacetedGlobalSettingsChangedEvent
+from eea.facetednavigation.interfaces import IFacetedGlobalSettingsChangedEvent
 
 class FacetedGlobalSettingsChangedEvent(object):
     """ Sent if faceted navigation global settings were changed """

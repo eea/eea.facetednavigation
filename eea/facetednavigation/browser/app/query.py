@@ -1,3 +1,5 @@
+""" Faceted query
+"""
 import logging
 from zope.component import queryMultiAdapter
 from zope.component import getUtility

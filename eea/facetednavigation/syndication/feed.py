@@ -1,3 +1,5 @@
+""" Feed
+"""
 from zope import interface
 from zope import component
 
@@ -6,16 +8,21 @@ from Products.fatsyndication import adapters as fatadapters
 
 from eea.facetednavigation.interfaces import IFacetedNavigable
 try:
-    from bda.feed.interfaces import ILogo
+    from bda.feed import interfaces as bdainterfaces
+    ILogo = bdainterfaces.ILogo
 except ImportError:
     class ILogo(interface.Interface):
         """ No logo """
 
 class FacetedFeedSource(fatadapters.BaseFeedSource):
+    """ Feed source
+    """
     interface.implements(baseinterfaces.IFeedSource)
     component.adapts(IFacetedNavigable)
 
     def getFeedEntries(self):
+        """ Feed entries
+        """
         request = getattr(self.context, 'request', None)
         handler = component.getMultiAdapter((self.context, request),
                                             name=u'faceted_query')
@@ -30,10 +37,14 @@ class FacetedFeedSource(fatadapters.BaseFeedSource):
             yield adapter
 
 class FacetedFeed(fatadapters.BaseFeed):
+    """ Feed
+    """
     interface.implements(baseinterfaces.IFeed)
     component.adapts(IFacetedNavigable)
 
     def getImageURL(self):
+        """ Feed logo
+        """
         logo = component.queryAdapter(self.context, ILogo)
         if logo:
             return logo()

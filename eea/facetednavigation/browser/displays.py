@@ -17,7 +17,7 @@ class ContainerDynamicViews(object):
     def getAvailableViewMethods(self):
         """Get a list of registered view method names
         """
-        return [view for view, name in self.getAvailableLayouts()]
+        return [view[0] for view in self.getAvailableLayouts()]
 
     def getDefaultViewMethod(self):
         """Get the default view method name

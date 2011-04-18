@@ -1,23 +1,15 @@
+""" Low level faceted criteria API
+"""
 from persistent.list import PersistentList
 from zope.component import getUtility
 from zope.interface import implements
-try:
-    from zope.annotation.interfaces import IAnnotations
-except ImportError:
-    #BBB Plone 2.5
-    from zope.app.annotation.interfaces import IAnnotations
-
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from zope.annotation.interfaces import IAnnotations
+from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation.config import ANNO_CRITERIA
 from eea.facetednavigation.widgets.storage import Criterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
 
-from interfaces import ICriteria
+from eea.facetednavigation.criteria.interfaces import ICriteria
 
 class Criteria(object):
     """ Handle criteria
@@ -45,6 +37,8 @@ class Criteria(object):
         return anno[ANNO_CRITERIA]
 
     def _update(self, values):
+        """ Update criteria
+        """
         anno = IAnnotations(self.context)
         anno[ANNO_CRITERIA] = PersistentList(values)
         self.criteria = anno[ANNO_CRITERIA]
@@ -52,21 +46,31 @@ class Criteria(object):
     # Getters
     #
     def newid(self):
+        """ Get new id
+        """
         return Criterion().getId()
 
     def get(self, key, default=None):
+        """ Get criterion
+        """
         for cid, cvalue in self.items():
             if key == cid:
                 return cvalue
         return default
 
     def keys(self):
+        """ Criteria keys
+        """
         return [criterion.getId() for criterion in self.criteria]
 
     def values(self):
+        """ Criteria values
+        """
         return [criterion for criterion in self.criteria]
 
     def items(self):
+        """ Criteria items
+        """
         return [(criterion.getId(), criterion) for criterion in self.criteria]
     #
     # Setters
@@ -118,6 +122,7 @@ class Criteria(object):
         """ Move criterion up
         """
         insert = None
+        index = 0
         for index, criterion in enumerate(self.criteria):
             if criterion.getId() == cid:
                 insert = self.criteria.pop(index)
@@ -133,6 +138,7 @@ class Criteria(object):
         """ Move criterion down
         """
         insert = None
+        index = 0
         for index, criterion in enumerate(self.criteria):
             if criterion.getId() == cid:
                 insert = self.criteria.pop(index)

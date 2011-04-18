@@ -1,3 +1,5 @@
+""" Menu
+"""
 from zope import interface
 import logging
 from zope.component import queryAdapter
@@ -6,15 +8,19 @@ from zope.app.publisher.browser.menu import BrowserMenu
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser import BrowserView
 
-from interfaces import ILayoutMenuHandler, IFacetedLayout
+from eea.facetednavigation.layout.interfaces import ILayoutMenuHandler
+from eea.facetednavigation.layout.interfaces import IFacetedLayout
 
 logger = logging.getLogger('eea.facetednavigation.layout.menu')
 
 class LayoutMenu(BrowserMenu):
-
+    """ Layout menu
+    """
     interface.implements(IBrowserMenu)
 
     def _get_menuitems(self, context):
+        """ Menu items
+        """
         res = []
         faceted_adapter = queryAdapter(context, IFacetedLayout)
         if not faceted_adapter:
@@ -34,9 +40,11 @@ class LayoutMenu(BrowserMenu):
             })
         return res
 
-    def getMenuItems(self, object, request):
+    def getMenuItems(self, obj, request):
+        """ Safely get menu items
+        """
         try:
-            return self._get_menuitems(object)
+            return self._get_menuitems(obj)
         except Exception, err:
             logger.exception(err)
             raise
@@ -47,6 +55,8 @@ class LayoutMenuHandler(BrowserView):
     interface.implements(ILayoutMenuHandler)
 
     def _redirect(self, msg):
+        """ Set status message to msg and redirect to context absolute_url
+        """
         url = self.context.absolute_url()
         IStatusMessage(self.request).addStatusMessage(msg, type='info')
         self.request.response.redirect(url)

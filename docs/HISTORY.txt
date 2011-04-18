@@ -3,6 +3,7 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Cleanup: Fixed all pylint, pyflakes violations [voineali #4254]
  * Cleanup: Use "eea" i18n domain for all EEA packages [voineali #4254]
  * Bug fix: Non eea vocabularies values are translated [thomasdesvenain]
  * Bug fix: Plone 4.1 compatible [thomasdesvenain]

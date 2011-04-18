@@ -17,7 +17,8 @@ EditSchema = Schema((
         widget=SelectionWidget(
             label='Filter from vocabulary',
             label_msgid='faceted_criteria_sorting_vocabulary',
-            description='Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria.',
+            description=('Vocabulary to use to filter sorting criteria. '
+                         'Leave empty for default sorting criteria.'),
             description_msgid='help_faceted_criteria_sorting_vocabulary',
             i18n_domain="eea"
         )
@@ -28,7 +29,8 @@ EditSchema = Schema((
             size=25,
             label='Default value',
             label_msgid='faceted_criteria_default',
-            description='Default sorting index (e.g. "effective" or "effective(reverse)")',
+            description=('Default sorting index '
+                         '(e.g. "effective" or "effective(reverse)")'),
             description_msgid='help_faceted_criteria_sorting_default',
             i18n_domain="eea"
         )
@@ -83,6 +85,8 @@ class Widget(AbstractWidget):
         return query
 
     def criteriaByIndexId(self, indexId):
+        """ Get criteria by index id
+        """
         catalog_tool = getToolByName(self.context, 'portal_catalog')
         indexObj = catalog_tool.Indexes[indexId]
         results = _criterionRegistry.criteriaByIndex(indexObj.meta_type)
@@ -106,7 +110,7 @@ class Widget(AbstractWidget):
                     if self.validateAddCriterion(field[0], 'ATSortCriterion') ]
         return fields
 
-    def vocabulary(self):
+    def vocabulary(self, **kwargs):
         """ Return data vocabulary
         """
         vocab = self.portal_vocabulary()
@@ -115,4 +119,4 @@ class Widget(AbstractWidget):
             return sort_fields
 
         vocab_fields = [field[0].replace('term.', '', 1) for field in vocab]
-        return [field for field in sort_fields if field[0] in vocab_fields]
+        return [f for f in sort_fields if f[0] in vocab_fields]

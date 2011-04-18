@@ -1,3 +1,5 @@
+""" Export / Import faceted configuration
+"""
 from zope.component import queryMultiAdapter
 from Products.GenericSetup.interfaces import IBody
 from Products.statusmessages.interfaces import IStatusMessage
@@ -12,6 +14,8 @@ class FacetedExportImport(object):
         self.request = request
 
     def _redirect(self, msg='', to='configure_faceted.html'):
+        """ Set status message and redirect
+        """
         if not to:
             return msg
 
@@ -37,7 +41,8 @@ class FacetedExportImport(object):
                 kwargs.get('redirect', 'configure_faceted.html'))
 
         importer.body = xml
-        return self._redirect('Configuration imported', kwargs.get('redirect', 'configure_faceted.html'))
+        return self._redirect('Configuration imported', kwargs.get(
+            'redirect', 'configure_faceted.html'))
 
     def export_xml(self, **kwargs):
         """ Export config as xml
@@ -50,7 +55,8 @@ class FacetedExportImport(object):
         self.request.response.setHeader(
             'content-type', 'text/xml; charset=utf-8')
         self.request.response.addHeader(
-            "content-disposition","attachment; filename=%s.xml" % self.context.getId())
+            "content-disposition","attachment; filename=%s.xml" % (
+                self.context.getId(),))
         return exporter.body
 
     def __call__(self, **kwargs):

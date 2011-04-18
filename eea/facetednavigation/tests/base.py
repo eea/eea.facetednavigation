@@ -7,21 +7,8 @@ from cgi import FieldStorage
 from ZPublisher.HTTPRequest import FileUpload
 from Products.Five import zcml
 from Products.Five import fiveconfigure
-from zope.app.component.hooks import setSite
 from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import onsetup
-
-try:
-    import Products.LinguaPlone
-except ImportError, err:
-    LINGUAPLONE = False
-else:
-    LINGUAPLONE = True
-
-# Needed when running in EEA context, not mandatory otherwise
-try: import Products.eeawebapplication
-except ImportError: pass
-else: ptc.installProduct('eeawebapplication')
 
 ptc.installProduct('Five')
 ptc.installProduct('FiveSite')
@@ -39,13 +26,6 @@ def setup_eea_facetednavigation():
     until the setup of the Plone site testing layer.
     """
     fiveconfigure.debug_mode = True
-    import Products.Five
-    zcml.load_config('meta.zcml', Products.Five)
-    try:
-        import Products.FiveSite
-        zcml.load_config('configure.zcml', Products.FiveSite)
-    except ImportError, err:
-        pass
     import eea.facetednavigation
     zcml.load_config('meta.zcml', eea.facetednavigation)
     zcml.load_config('configure.zcml', eea.facetednavigation)
@@ -62,7 +42,8 @@ class FacetedTestCase(ptc.PloneTestCase):
     """
 
 class FacetedFunctionalTestCase(ptc.FunctionalTestCase, FacetedTestCase):
-    """Base class for functional integration tests for the 'FacetedNavigation' product.
+    """Base class for functional integration tests
+    for the 'FacetedNavigation' product.
     """
     def loadfile(self, rel_filename, ctype='text/xml'):
         """ load a file
@@ -78,7 +59,9 @@ class FacetedFunctionalTestCase(ptc.FunctionalTestCase, FacetedTestCase):
         env = {'REQUEST_METHOD':'PUT'}
         headers = {'content-type' : ctype,
                    'content-length': len(data),
-                   'content-disposition':'attachment; filename=%s' % header_filename}
+                   'content-disposition':'attachment; filename=%s' % (
+                       header_filename,
+                   )}
 
         fs = FieldStorage(fp=fp, environ=env, headers=headers)
         return FileUpload(fs)

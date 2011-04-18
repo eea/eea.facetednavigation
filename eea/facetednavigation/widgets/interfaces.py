@@ -1,12 +1,8 @@
+""" Widgets interfaces
+"""
 from zope.interface import Interface
 from zope.configuration.fields import GlobalObject
-
-try:
-    # Plone 4
-    from zope.i18nmessageid import ZopeMessageFactory as _
-except ImportError:
-    # Plone 3
-    from zope.app.i18n import ZopeMessageFactory as _
+from zope.i18nmessageid import ZopeMessageFactory as _
 
 class ICriterion(Interface):
     """ Model to store search criteria

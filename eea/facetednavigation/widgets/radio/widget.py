@@ -43,7 +43,8 @@ EditSchema = Schema((
             format='select',
             label='Catalog',
             label_msgid='faceted_criteria_catalog',
-            description='Get unique values from catalog as an alternative for vocabulary',
+            description=('Get unique values from catalog as an alternative '
+                         'for vocabulary'),
             description_msgid='help_faceted_criteria_catalog',
             i18n_domain="eea"
         )

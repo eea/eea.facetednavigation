@@ -1,11 +1,8 @@
+""" Faceted views
+"""
 from zope.component import getUtility
 from zope.component import queryAdapter
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import IFacetedWrapper
 
@@ -50,7 +47,7 @@ class FacetedContainerView(object):
                          'eea.faceted.vocabularies.WidgetSections')
         voc = voc(self.context)
         if not position or mode != 'view':
-            return [term for term in voc]
+            return [t for t in voc]
 
         widgets = self.get_view_widgets(position=position)
         sections = [widget.data.get('section') for widget in widgets]

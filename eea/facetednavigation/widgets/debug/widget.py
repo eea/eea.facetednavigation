@@ -1,12 +1,7 @@
 """ Widget
 """
 from zope.component import getUtility
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from zope.schema.interfaces import IVocabularyFactory
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
@@ -47,7 +42,8 @@ class Widget(AbstractWidget):
     def __init__(self, context, request, data=None):
         super(Widget, self).__init__(context, request, data)
 
-        voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.CurrentUser')
+        voc = getUtility(IVocabularyFactory,
+                         'eea.faceted.vocabularies.CurrentUser')
         voc = [(term.value, term.title or term.value) for
                term in voc(context) if term.value]
         self.edit_schema['user'].vocabulary = DisplayList(voc)

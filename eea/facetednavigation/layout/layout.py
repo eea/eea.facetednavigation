@@ -4,13 +4,8 @@ from zope import interface
 from zope.component import getUtility
 from persistent.list import PersistentList
 from p4a.subtyper import interfaces as p4aifaces
-try:
-    from zope.annotation.interfaces import IAnnotations
-except ImportError:
-    #BBB Plone 2.5
-    from zope.app.annotation.interfaces import IAnnotations
-
-from interfaces import IFacetedLayout
+from zope.annotation.interfaces import IAnnotations
+from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.config import (
     ANNO_FACETED_LAYOUT,
     ANNO_FACETED_LAYOUTS,
@@ -31,7 +26,8 @@ class FacetedLayout(object):
     def layout(self):
         """ Current layout
         """
-        return IAnnotations(self.context).get(ANNO_FACETED_LAYOUT, 'folder_listing')
+        return IAnnotations(self.context).get(
+            ANNO_FACETED_LAYOUT, 'folder_listing')
 
     @property
     def layouts(self):
@@ -74,7 +70,7 @@ class FacetedLayout(object):
         """
         if not layout:
             return 'Empty layout'
-        if layout not in [x for x, y in self.layouts]:
+        if layout not in [x[0] for x in self.layouts]:
             return 'Invalid layout id'
 
         IAnnotations(self.context)[ANNO_FACETED_LAYOUT] = layout
@@ -86,4 +82,5 @@ class FacetedLayout(object):
         """
         if not layouts:
             layouts = self.default_layouts
-        IAnnotations(self.context)[ANNO_FACETED_LAYOUTS]= PersistentList(layouts)
+        IAnnotations(self.context)[
+            ANNO_FACETED_LAYOUTS] = PersistentList(layouts)

@@ -89,7 +89,7 @@ class Widget(AbstractWidget):
 
         try:
             referer = self.context.restrictedTraverse(path)
-        except Exception, err:
+        except Exception:
             return default
 
         if path == self.context.absolute_url(1):

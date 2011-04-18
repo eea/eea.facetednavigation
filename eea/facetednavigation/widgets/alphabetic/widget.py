@@ -2,18 +2,23 @@
 """
 import logging
 from zope.interface import implements
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import BooleanField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
+
 from eea.facetednavigation.widgets.field import StringField
-
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
-from alphabets import unicode_character_map
 from eea.facetednavigation.widgets.widget import CountableWidget
+from eea.facetednavigation.widgets.alphabetic.alphabets import (
+    unicode_character_map,
+)
+from eea.facetednavigation.widgets.alphabetic.interfaces import (
+    IAlphabeticWidget,
+)
 
-from interfaces import IAlphabeticWidget
 
 logger = logging.getLogger('eea.facetednavigation.widgets.alphabetic')
 
@@ -85,7 +90,6 @@ class Widget(CountableWidget):
     def getAlphabet(self, lang):
         """ Get language alphabet
         """
-        #TODO: also to implement 0-9 and Other on the alphabet listing
         try:
             lang = lang.split('-')[0].lower()
         except Exception, err:
@@ -94,7 +98,7 @@ class Widget(CountableWidget):
         return unicode_character_map.get(lang,
                     unicode_character_map.get('en'))
 
-    def count(self, brains):
+    def count(self, brains, sequence=None):
         """ Intersect results
         """
         res = {}

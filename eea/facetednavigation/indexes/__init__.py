@@ -1,1 +1,2 @@
-# Module
+""" Custom behaviour for indexes
+"""

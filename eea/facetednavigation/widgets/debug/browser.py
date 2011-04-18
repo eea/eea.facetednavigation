@@ -5,7 +5,7 @@ from zope.component import queryAdapter
 from zope.component import queryMultiAdapter
 from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
-from widget import Widget
+from eea.facetednavigation.widgets.debug.widget import Widget
 
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import IWidgetFilterBrains

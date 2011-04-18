@@ -1,15 +1,17 @@
+""" Faceted widgets
+"""
 from zope import interface
-from interfaces import IWidgetsInfo
+from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
 
 class WidgetsInfo(object):
-    """
+    """ Widgets registry
     """
     interface.implements(IWidgetsInfo)
     _widgets = {}
 
     @property
     def widgets(self):
-        """
+        """ Widgets
         """
         return self._widgets
 
@@ -26,6 +28,7 @@ def WidgetDirective(_context, factory=None, **kwargs):
 
     name = getattr(factory, 'widget_type', None)
     if not name:
-        raise TypeError("Invalid factory: widget_type property is empty or not defined")
+        raise TypeError(
+            "Invalid factory: widget_type property is empty or not defined")
 
     WidgetsInfo._widgets[name] = factory

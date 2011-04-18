@@ -1,22 +1,18 @@
+""" Faceted configure
+"""
 import logging
 from zope.interface import implements
 from zope.event import notify
 from zope.component import getUtility
 from zope.component import getMultiAdapter
+from zope.schema.interfaces import IVocabularyFactory
 
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 
 from eea.facetednavigation.interfaces import IWidgetsInfo
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.browser import interfaces
-
-from Products.Five.browser import BrowserView
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 
 logger = logging.getLogger('eea.facetednavigation.browser.app.configure')
@@ -312,12 +308,15 @@ class FacetedConfigureView(object):
         return ICriteria(self.context).widget(wid)
 
     def get_widget_types(self):
-        """
+        """ Widget types
         """
         info = getUtility(IWidgetsInfo)
         res = [x for x in info.widgets.values()]
+
         def compare(x, y):
+            """ Compare """
             return cmp(x.widget_label, y.widget_label)
+
         res.sort(cmp=compare)
         return res
 

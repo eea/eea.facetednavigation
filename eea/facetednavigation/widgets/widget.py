@@ -6,12 +6,7 @@ import operator
 from zope import interface
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
-
+from zope.schema.interfaces import IVocabularyFactory
 from zope.component import queryUtility
 from BTrees.IIBTree import weightedIntersection, IISet
 
@@ -99,7 +94,6 @@ class SimpleATAccessor(object):
         if value:
             return value
 
-        schema = self.widget.edit_schema
         field = self.widget.edit_schema.get(self.key)
         return getattr(field, 'default', None)
 #
@@ -143,7 +137,6 @@ class Widget(ATWidget):
     edit_css = ()
     view_js = ()
     edit_js = ()
-    index = None
 
     def __init__(self, context, request, data=None):
         self.context = context
@@ -257,7 +250,7 @@ class Widget(ATWidget):
             if not isinstance(val, unicode):
                 try:
                     val = unicode(val, 'utf-8')
-                except Exception, err:
+                except Exception:
                     continue
 
             val = val.strip()
@@ -287,7 +280,7 @@ class Widget(ATWidget):
             return terms.items()
         return terms
 
-    def vocabulary(self):
+    def vocabulary(self, **kwargs):
         """ Return data vocabulary
         """
         reverse = safeToInt(self.data.get('sortreversed', 0))
@@ -355,15 +348,15 @@ class CountableWidget(Widget):
             if isinstance(value, unicode):
                 try:
                     value = value.encode('utf-8')
-                except Exception, err:
+                except Exception:
                     continue
-            rset, u = ctool.apply_index(self.context, index, value)
+            rset = ctool.apply_index(self.context, index, value)[0]
             rset = IISet(rset)
-            u, rset = weightedIntersection(brains, rset)
+            rset = weightedIntersection(brains, rset)[1]
             if isinstance(value, str):
                 try:
                     value = value.decode('utf-8')
-                except Exception, err:
+                except Exception:
                     continue
             res[value] = len(rset)
         return res

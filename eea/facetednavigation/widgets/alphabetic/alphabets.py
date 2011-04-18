@@ -1,6 +1,8 @@
-﻿# Unicode character maps
-# Thanks to: http://developer.mimer.com/charts/index.tml
+﻿""" Unicode character maps
 
+Thanks to: http://developer.mimer.com/charts/index.tml
+
+"""
 unicode_character_map = {
     'en':[
         (u'a', u'A'),
@@ -65,7 +67,8 @@ unicode_character_map = {
         (u"\u03B6", u"\u0396"),
         (u"\u03B7", u"\u0397", u"\u03AE", u"\u0389"),
         (u"\u03B8", u"\u0398"),
-        (u"\u03B9", u"\u0399", u"\u03AF", u"\u038A", u"\u03CA", u"\u03AA", u"\u0390"),
+        (u"\u03B9", u"\u0399", u"\u03AF", u"\u038A",
+         u"\u03CA", u"\u03AA", u"\u0390"),
         (u"\u03BA", u"\u039A"),
         (u"\u03BB", u"\u039B"),
         (u"\u03BC", u"\u039C", u"\u00B5"),
@@ -76,7 +79,8 @@ unicode_character_map = {
         (u"\u03C1", u"\u03A1"),
         (u"\u03C3", u"\u03A3", u"\u03C2"),
         (u"\u03C4", u"\u03A4"),
-        (u"\u03C5", u"\u03A5", u"\u03CD", u"\u038E", u"\u03CB", u"\u03AB", u"\u03B0"),
+        (u"\u03C5", u"\u03A5", u"\u03CD",
+         u"\u038E", u"\u03CB", u"\u03AB", u"\u03B0"),
         (u"\u03C6", u"\u03A6"),
         (u"\u03C7", u"\u03A7"),
         (u"\u03C8", u"\u03A8"),
@@ -361,7 +365,8 @@ unicode_character_map = {
         (u"b",      u"B"     ),
         (u"c",      u"\u0043", u"\u00E7", u"\u00C7"),
         (u"d",      u"\u0044"),
-        (u"e",      u"\u0045", u"\u00E9", u"\u00C9", u"\u00E8", u"\u00C8", u"\u00EA", u"\u00CA", u"\u00EB", u"\u00CB"),
+        (u"e",      u"\u0045", u"\u00E9", u"\u00C9",
+         u"\u00E8", u"\u00C8", u"\u00EA", u"\u00CA", u"\u00EB", u"\u00CB"),
         (u"\u0066", u"\u0046"),
         (u"\u0067", u"\u0047"),
         (u"\u0068", u"\u0048"),
@@ -438,7 +443,8 @@ unicode_character_map = {
         (u"\u0079", u"\u0059"),
         (u"\u007A", u"\u005A") ],
     'pt':[
-        (u"a",      u"A",      u"\u00E1", u"\u00C1", u"\u00E0", u"\u00C0", u"\u00E2", u"\u00C2", u"\u00E3", u"\u00C3"),
+        (u"a",      u"A",      u"\u00E1", u"\u00C1", u"\u00E0",
+         u"\u00C0", u"\u00E2", u"\u00C2", u"\u00E3", u"\u00C3"),
         (u"b",      u"B"     ),
         (u"c",      u"\u0043", u"\u00E7", u"\u00C7"),
         (u"d",      u"\u0044"),
@@ -452,7 +458,8 @@ unicode_character_map = {
         (u"\u006C", u"\u004C"),
         (u"\u006D", u"\u004D"),
         (u"\u006E", u"\u004E"),
-        (u"\u006F", u"\u004F", u"\u00F3", u"\u00D3", u"\u00F4", u"\u00D4", u"\u00F5", u"\u00D5"),
+        (u"\u006F", u"\u004F", u"\u00F3", u"\u00D3", u"\u00F4",
+         u"\u00D4", u"\u00F5", u"\u00D5"),
         (u"\u0070", u"\u0050"),
         (u"\u0071", u"\u0051"),
         (u"\u0072", u"\u0052"),
@@ -814,8 +821,10 @@ unicode_character_map = {
         (u'y', u'Y'),
         (u'z', u'Z'),],
     # ro:
-    # A a   Ă ă     Â â     B b     C c     D d     E e     F f     G g     H h     I i     Î î     J j     K k
-    # L l   M m     N n     O o     P p     R r     S s     Ş ş     T t     Ţ ţ     U u     V v     X x     Z z
+    # A a   Ă ă     Â â     B b     C c     D d     E e
+    # F f   G g     H h     I i     Î î     J j     K k
+    # L l   M m     N n     O o     P p     R r     S s
+    # Ş ş   T t     Ţ ţ     U u     V v     X x     Z z
     'ro':[
         (u'a', u'A'),
         (u'ă', u'Ă'),
@@ -849,11 +858,14 @@ unicode_character_map = {
         (u'y', u'Y'),
         (u'z', u'Z'),],
     'ar':[
-        (u"\u0627", u"\uFE8E", u"\uFE8D", u"\uFD3C", u"\uFD3D", u"\u0675", u"\u0623", u"\uFE84", u"\uFE83", u"\u0625", u"\uFE88", u"\uFE87", u"\u0622", u"\uFE82", u"\uFE81"),
+        (u"\u0627", u"\uFE8E", u"\uFE8D", u"\uFD3C", u"\uFD3D",
+         u"\u0675", u"\u0623", u"\uFE84", u"\uFE83", u"\u0625",
+         u"\uFE88", u"\uFE87", u"\u0622", u"\uFE82", u"\uFE81"),
         (u"\u0628", u"\uFE91", u"\uFE92", u"\uFE90", u"\uFE8F"),
         (u"\u062A", u"\uFE97", u"\uFE98", u"\uFE96", u"\uFE95"),
         (u"\u062B", u"\uFE9B", u"\uFE9C", u"\uFE9A", u"\uFE99"),
-        (u"\u062C", u"\uFE9F", u"\uFEA0", u"\uFE9E", u"\uFE9D", u"\u0686", u"\uFB7C", u"\uFB7D", u"\uFB7B", u"\uFB7A"),
+        (u"\u062C", u"\uFE9F", u"\uFEA0", u"\uFE9E", u"\uFE9D",
+         u"\u0686", u"\uFB7C", u"\uFB7D", u"\uFB7B", u"\uFB7A"),
         (u"\u062D", u"\uFEA3", u"\uFEA4", u"\uFEA2", u"\uFEA1"),
         (u"\u062E", u"\uFEA7", u"\uFEA8", u"\uFEA6", u"\uFEA5"),
         (u"\u062F", u"\uFEAA", u"\uFEA9"),
@@ -876,7 +888,8 @@ unicode_character_map = {
         (u"\u0646", u"\uFEE7", u"\uFEE8", u"\uFEE6", u"\uFEE5"),
         (u"\u0647", u"\uFEEB", u"\uFEEC", u"\uFEEA", u"\uFEE9"),
         (u"\u0648", u"\u06E5", u"\uFEEE", u"\uFEED", u"\u0676"),
-        (u"\u0649", u"\uFEF0", u"\uFEEF", u"\u064A", u"\u06E6", u"\uFEF3", u"\uFEF4", u"\uFEF2", u"\uFEF1", u"\u0678") ],
+        (u"\u0649", u"\uFEF0", u"\uFEEF", u"\u064A", u"\u06E6",
+         u"\uFEF3", u"\uFEF4", u"\uFEF2", u"\uFEF1", u"\u0678") ],
     'is':[
         (u'a', u'A'),
         (u'á', u'Á'),

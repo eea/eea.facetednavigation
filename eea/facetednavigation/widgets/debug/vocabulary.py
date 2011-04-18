@@ -1,16 +1,11 @@
 """ Catalog specific vocabularies
 """
-try:
-    from zope.schema.interfaces import IVocabularyFactory
-except ImportError:
-    # < Zope 2.10
-    from zope.app.schema.vocabulary import IVocabularyFactory
 
+from zope.schema.interfaces import IVocabularyFactory
 from zope.interface import implements
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import _getAuthenticatedUser
-from Products.Archetypes.public import DisplayList
 #
 # Object provides
 #

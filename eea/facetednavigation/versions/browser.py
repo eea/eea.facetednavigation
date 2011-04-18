@@ -7,13 +7,9 @@ from zope.component import queryAdapter
 from zope.interface import implements
 from Products.Five.browser import BrowserView
 from eea.facetednavigation.interfaces import ICriteria
-from interfaces import IFacetedVersion
+from eea.facetednavigation.versions.interfaces import IFacetedVersion
 from eea.facetednavigation.config import ANNO_FACETED_VERSION
-try:
-    from zope.annotation.interfaces import IAnnotations
-except ImportError:
-    #BBB Plone 2.5
-    from zope.app.annotation.interfaces import IAnnotations
+from zope.annotation.interfaces import IAnnotations
 
 logger = logging.getLogger('eea.facetednavigation.cache.proxy')
 

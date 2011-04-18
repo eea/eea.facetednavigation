@@ -1,9 +1,11 @@
+""" Wrapper
+"""
 from Acquisition import Implicit
 from AccessControl import ClassSecurityInfo
 from App.class_init import InitializeClass
 
 from zope.interface import implements
-from interfaces import IFacetedWrapper
+from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
 
 class FacetedWrapper(Implicit):
     """ Wrap faceted navigable container

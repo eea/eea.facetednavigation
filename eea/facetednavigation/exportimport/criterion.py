@@ -1,3 +1,5 @@
+""" Criterion
+"""
 import logging
 from zope.component import getUtility
 from Products.GenericSetup.utils import XMLAdapterBase
@@ -7,7 +9,7 @@ from eea.facetednavigation.interfaces import IWidgetsInfo
 logger = logging.getLogger('eea.facetednavigation.exportimport.criterion')
 
 class CriterionXMLAdapter(XMLAdapterBase):
-    """
+    """ GenericSetup XML Adapter for faceted criterion
     """
     __used_for__ = ICriterion
 

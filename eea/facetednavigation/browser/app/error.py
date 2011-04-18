@@ -1,3 +1,5 @@
+""" Errors
+"""
 import logging
 from pprint import pformat
 from zope.component import queryAdapter

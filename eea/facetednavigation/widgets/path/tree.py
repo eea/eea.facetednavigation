@@ -1,20 +1,14 @@
 """ JsTree views
 """
-try:
-    # Plone 4
-    from plone.app.layout.navigation.navtree import buildFolderTree
-except ImportError:
-    #BBB Plone < 4
-    from Products.CMFPlone.browser.navtree import buildFolderTree
-
 import simplejson as json
 from zope.component import queryAdapter
 from Products.Five.browser import BrowserView
 from Products.CMFPlone.browser.navtree import DefaultNavtreeStrategy
 from Products.CMFCore.utils import getToolByName
+from plone.app.layout.navigation.navtree import buildFolderTree
+
 from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import cacheCounterKeyFacetedNavigation
-
 from eea.facetednavigation.interfaces import ICriteria
 
 class FacetedTree(BrowserView):
@@ -26,6 +20,8 @@ class FacetedTree(BrowserView):
 
     @property
     def language(self):
+        """ Language
+        """
         if self.request:
             lang = self.request.get('LANGUAGE', '')
         getLanguage = getattr(self.context, 'getLanguage', None)
@@ -161,7 +157,8 @@ class FacetedTree(BrowserView):
     #
     # JSON
     #
-    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
+    @ramcache(cacheCounterKeyFacetedNavigation,
+              dependencies=['eea.facetednavigation'])
     def json_tree(self, **kwargs):
         """ Get navigation tree as json
         """
@@ -169,7 +166,8 @@ class FacetedTree(BrowserView):
             kwargs.update(self.request.form)
         return json.dumps(self.tree(**kwargs))
 
-    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
+    @ramcache(cacheCounterKeyFacetedNavigation,
+              dependencies=['eea.facetednavigation'])
     def json_breadcrumbs(self, **kwargs):
         """ Get breadcrumbs as json
         """
@@ -181,6 +179,8 @@ class FacetedTreeStrategy(DefaultNavtreeStrategy):
     """ Custom strategy
     """
     def nodeFilter(self, node):
+        """ Filter node
+        """
         if not getattr(node['item'], 'is_folderish', False):
             return False
         return DefaultNavtreeStrategy.nodeFilter(self, node)

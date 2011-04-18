@@ -1,3 +1,5 @@
+""" Javascript
+"""
 from App.Common import rfc1123_date
 from DateTime import DateTime
 from zope.component import getUtility
@@ -66,7 +68,7 @@ class Javascript(object):
                  # We expect the attribute value to be a iterable.
                 if not helper:
                     continue
-                [res.append(item) for item in helper if item not in res]
+                res.extend(item for item in helper if item not in res)
         return res
 
 class ViewJavascript(Javascript):
@@ -100,7 +102,8 @@ class ViewJavascript(Javascript):
         self.request.RESPONSE.setHeader('content-type', 'text/javascript')
         expires = rfc1123_date((DateTime() + 365).timeTime())
         self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader('Cache-Control', 'max-age=%d' % self.duration)
+        self.request.RESPONSE.setHeader(
+            'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()
 
 class EditJavascript(Javascript):
@@ -108,6 +111,8 @@ class EditJavascript(Javascript):
     """
     @property
     def js_libs(self):
+        """ JS libs
+        """
         return [
             '++resource++eea.faceted-navigation-edit.js',
             '++resource++eea.faceted-navigation-expand.js'
@@ -135,5 +140,6 @@ class EditJavascript(Javascript):
         self.request.RESPONSE.setHeader('content-type', 'text/javascript')
         expires = rfc1123_date((DateTime() + 365).timeTime())
         self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader('Cache-Control', 'max-age=%d' % self.duration)
+        self.request.RESPONSE.setHeader(
+            'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()

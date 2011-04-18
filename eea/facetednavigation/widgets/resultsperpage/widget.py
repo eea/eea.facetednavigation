@@ -2,9 +2,7 @@
 """
 import logging
 from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
 from Products.Archetypes.public import IntegerField
-from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import IntegerWidget
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
@@ -101,7 +99,7 @@ class Widget(AbstractWidget):
 
         return value
 
-    def vocabulary(self):
+    def vocabulary(self, **kwargs):
         """ Vocabulary
         """
         try:

@@ -1,3 +1,5 @@
+""" Language index interfaces
+"""
 from zope.interface import Interface
 
 class ILanguageWidgetAdapter(Interface):

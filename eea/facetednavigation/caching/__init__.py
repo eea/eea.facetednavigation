@@ -1,21 +1,21 @@
 """ Caching module
 """
+from eea.facetednavigation.caching.cache import cacheKeyFacetedNavigation
+from eea.facetednavigation.caching.cache import cacheCounterKeyFacetedNavigation
 try:
-    from eea.cache import cache as ramcache
-    from lovely.memcached.event import InvalidateCacheEvent
+    from eea.cache import cache
+    from lovely.memcached import event
+    ramcache = cache
+    InvalidateCacheEvent = event.InvalidateCacheEvent
 except ImportError:
     # Fail quiet if required cache packages are not installed in order to use
     # this package without caching
-    from nocache import ramcache
-    from nocache import InvalidateCacheEvent
+    from eea.facetednavigation.caching.nocache import ramcache
+    from eea.facetednavigation.caching.nocache import InvalidateCacheEvent
 
-try:
-    # Plone 4+
-    from zope.lifecycleevent.interfaces import IObjectModifiedEvent
-except ImportError:
-    #BBB Plone < 4
-    from zope.app.container.interfaces import IObjectModifiedEvent
-
-from cache import cacheKeyFacetedNavigation
-from cache import cacheCounterKeyFacetedNavigation
-
+__all__ = [
+    cacheKeyFacetedNavigation.__name__,
+    cacheCounterKeyFacetedNavigation.__name__,
+    ramcache.__name__,
+    InvalidateCacheEvent.__name__,
+]

@@ -1,1 +1,2 @@
-# Module
+""" Selected filters widget
+"""

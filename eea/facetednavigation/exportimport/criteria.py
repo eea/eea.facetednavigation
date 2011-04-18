@@ -1,3 +1,5 @@
+""" Criteria
+"""
 import logging
 from Acquisition import aq_inner
 from Acquisition import aq_parent
@@ -24,7 +26,7 @@ class CriteriaContext(BaseContext):
         self._should_purge = True
 
 class CriteriaXMLAdapter(XMLAdapterBase):
-    """
+    """ GenericSetup XML Adapter for faceted criteria
     """
     __used_for__ = IFacetedNavigable
 

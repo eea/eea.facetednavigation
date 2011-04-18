@@ -2,7 +2,6 @@
 """
 import logging
 from zope.component import queryMultiAdapter
-from interfaces import IFacetedVersion
 logger = logging.getLogger('eea.faceted.versions')
 
 def updateFacetedVersion(obj, event):

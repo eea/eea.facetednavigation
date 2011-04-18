@@ -1,3 +1,5 @@
+""" Schema
+"""
 from eea.facetednavigation.widgets.storage import Criterion
 from eea.facetednavigation.widgets.schema import Schema
 from eea.facetednavigation.interfaces import ICriteria
@@ -10,9 +12,13 @@ class FacetedSchemaGetter(object):
         self.request = request
 
     def get_criterion(self, cid):
+        """ Criterion
+        """
         return ICriteria(self.context).get(cid)
 
     def get_widget(self, wid):
+        """ Widget
+        """
         if not wid:
             return None
         return ICriteria(self.context).widget(wid=wid)

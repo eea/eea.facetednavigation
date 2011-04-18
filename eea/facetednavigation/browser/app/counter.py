@@ -1,3 +1,5 @@
+""" Counter
+"""
 import logging
 import time
 import simplejson as json
@@ -49,13 +51,14 @@ class FacetedQueryCounter(object):
         logger.debug('Benchmark %s: %s', cid, time.time() - start)
         return res
 
-    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
+    @ramcache(cacheCounterKeyFacetedNavigation,
+              dependencies=['eea.facetednavigation'])
     def __call__(self, *args, **kwargs):
         if self.request:
             kwargs.update(self.request.form)
 
         # Calling self.index() will set cache headers for varnish
-        index = self.index()
+        self.index()
 
         cid = kwargs.pop('cid', None)
         if not cid:

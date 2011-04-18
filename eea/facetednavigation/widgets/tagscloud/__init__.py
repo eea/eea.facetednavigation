@@ -1,1 +1,2 @@
-# Module
+""" Tag cloud
+"""

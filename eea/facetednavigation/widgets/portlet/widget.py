@@ -56,7 +56,7 @@ class Widget(AbstractWidget):
             template = self.context.restrictedTraverse(path)
             if template:
                 return template.macros[mode]
-        except Exception, err:
+        except Exception:
             # This means we didn't have access or it doesn't exist
             raise
         raise ValueError("Invalid macro: %s" % macro)

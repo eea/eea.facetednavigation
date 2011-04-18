@@ -1,3 +1,5 @@
+""" Search interfaces
+"""
 from zope.interface import Interface
 
 class IFacetedCatalog(Interface):

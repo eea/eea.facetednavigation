@@ -1,3 +1,5 @@
+""" Faceted
+"""
 import logging
 from zope.component import queryMultiAdapter
 from Products.GenericSetup.interfaces import IBody
@@ -7,7 +9,7 @@ from eea.facetednavigation.interfaces import ICriteria
 logger = logging.getLogger('eea.facetednavigation.exportimport.faceted')
 
 class FacetedNavigableXMLAdapter(XMLAdapterBase):
-    """
+    """ GenericSetup XML Adapter for faceted navigable context
     """
     __used_for__ = IFacetedNavigable
 

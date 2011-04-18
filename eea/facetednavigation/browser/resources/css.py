@@ -1,3 +1,5 @@
+""" CSS
+"""
 from App.Common import rfc1123_date
 from DateTime import DateTime
 from zope.component import getUtility
@@ -66,7 +68,7 @@ class CSS(object):
                  # We expect the attribute value to be a iterable.
                 if not helper:
                     continue
-                [res.append(item) for item in helper if item not in res]
+                res.extend(item for item in helper if item not in res)
         return res
 
 class ViewCSS(CSS):
@@ -101,7 +103,8 @@ class ViewCSS(CSS):
         self.request.RESPONSE.setHeader('content-type', 'text/css')
         expires = rfc1123_date((DateTime() + 365).timeTime())
         self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader('Cache-Control', 'max-age=%d' % self.duration)
+        self.request.RESPONSE.setHeader(
+            'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()
 
 class EditCSS(CSS):
@@ -137,5 +140,6 @@ class EditCSS(CSS):
         self.request.RESPONSE.setHeader('content-type', 'text/css')
         expires = rfc1123_date((DateTime() + 365).timeTime())
         self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader('Cache-Control', 'max-age=%d' % self.duration)
+        self.request.RESPONSE.setHeader(
+            'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()

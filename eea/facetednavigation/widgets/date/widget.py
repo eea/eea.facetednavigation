@@ -57,7 +57,8 @@ EditSchema = Schema((
             size=25,
             label='Default value',
             label_msgid='faceted_criteria_default',
-            description='Default daterange (e.g. "now-365=>now+1" which means "Starting one year ago until tomorrow")',
+            description=('Default daterange (e.g. "now-365=>now+1" which means '
+                         '"Starting one year ago until tomorrow")'),
             description_msgid='help_faceted_criteria_date_default',
             i18n_domain="eea"
         )
@@ -104,6 +105,8 @@ class Widget(AbstractWidget):
 
     @property
     def select_vocabulary(self):
+        """ Select vocabulary
+        """
         # Past
         res = [
             ('now-past', self.translate('Past')),

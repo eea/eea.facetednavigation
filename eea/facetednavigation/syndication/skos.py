@@ -1,3 +1,5 @@
+""" SKOS
+"""
 from zope.component import getMultiAdapter
 
 class SKOS(object):
@@ -10,6 +12,8 @@ class SKOS(object):
         self.request = request
 
     def concepts(self):
+        """ SKOS concepts
+        """
         handler = getMultiAdapter((self.context, self.request),
                                   name=u'faceted_query')
         brains = handler.query(ajax=False)

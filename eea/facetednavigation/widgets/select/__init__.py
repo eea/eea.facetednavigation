@@ -1,1 +1,2 @@
-# Module
+""" Select widget
+"""

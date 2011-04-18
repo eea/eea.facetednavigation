@@ -1,1 +1,2 @@
-# Module
+""" Sort widget
+"""

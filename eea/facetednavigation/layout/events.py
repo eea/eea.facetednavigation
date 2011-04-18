@@ -1,15 +1,14 @@
 """ Faceted layout event handlers
 """
 from zope.component import queryAdapter, queryMultiAdapter
-from interfaces import IFacetedLayout
-from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
+from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.interfaces import ICriteria
-from Products.CMFCore.utils import getToolByName
 from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.context import SnapshotImportContext
-from eea.facetednavigation.interfaces import IFacetedNavigable
 
 def subtype_added(evt):
+    """ EVENT: subtype added
+    """
     # Layout
     doc = evt.object
     layout_adapter = queryAdapter(doc, IFacetedLayout)
@@ -24,6 +23,8 @@ def subtype_added(evt):
     add_default_widgets(doc)
 
 def subtype_removed(evt):
+    """ EVENT: subtype removed
+    """
     doc = evt.object
     layout_adapter = queryAdapter(doc, IFacetedLayout)
     if not layout_adapter:

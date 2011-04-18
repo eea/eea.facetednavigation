@@ -148,6 +148,8 @@ class Widget(AbstractWidget):
 
     @property
     def default(self):
+        """ Default value
+        """
         data_default = self.data.get('default', '')
         if not data_default:
             return ''
