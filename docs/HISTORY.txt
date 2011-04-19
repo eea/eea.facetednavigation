@@ -4,6 +4,9 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
+3.11-dev - (unreleased)
+-----------------------
+
 3.10 - (2011-04-19)
 -------------------
  * Bug fix: Fixed subtyper access on Plone 2.5 [voineali]
