@@ -4,6 +4,9 @@ Changelog
 [Alin Voinea - alin.voinea@eaudeweb.ro]
 [Antonio De Marinis - demarinis@eea.europa.eu]
 
+3.10-dev - (unreleased)
+-----------------------
+
 3.9 - (2011-04-19)
 ------------------
  * Bug fix: Fixed permission for subtyper [voineali]
