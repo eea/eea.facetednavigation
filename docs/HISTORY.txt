@@ -3,6 +3,8 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+ * Bug fix: Fixed faceted_subtyper permissions [#4254]
+ * Bug fix: Fixed configure faceted permission [#4254]
  * Feature: Simplified "possible faceted navigable" mechanism. Now all you have
    to do is to implement IPossibleFacetedNavigable interface within your
    configure.zcml, no more p4a.subtyper descriptors for each portal type [voineali #4254]
@@ -36,6 +38,34 @@ Changelog
 ----------------------
  * Feature: Moved to Plone collective and start make the package compatible with Plone 4.
     [voineali, ghicaale, hpeteragitator]
+
+3.10 - (2011-04-19)
+-------------------
+ * Bug fix: Fixed subtyper access on Plone 2.5 [voineali]
+   Use this version on Plone 2.x as version 3.9 is broken.
+
+3.9 - (2011-04-19)
+------------------
+ * Bug fix: Fixed permission for subtyper [voineali]
+
+3.8 - (2010-12-22)
+------------------
+ * Bug fix: Removed UnicodeSplitter from text widget query as it was bugous and
+   fixed it to work also with "(", ")" in query [voineali #4018]
+
+3.7 - (2010-12-13)
+------------------
+ * Bug fix: Fixed text widget query for non ZCTextIndex indexes [voineali #3974]
+ * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
+   facet is visible [voineali #3970]
+
+3.6 - (2010-11-30)
+------------------
+ * Bug fix: Set cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
+
+3.5 - (2010-11-23)
+------------------
+ * Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]
 
 3.4 - (2010-09-30)
 ------------------

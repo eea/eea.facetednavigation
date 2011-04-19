@@ -1,12 +1,11 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    i18n_domain="eea">
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="eea">
 
-    <permission
-        id="eea.faceted.configure"
-        title="EEA Faceted Navigation edit Configuration"
-        description=""
-       />
-
+  <permission
+    id="eea.faceted.configure"
+    title="eea.facetednavigation: Configure faceted"
+    description=""
+    />
 
 </configure>

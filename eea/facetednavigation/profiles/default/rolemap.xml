@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <rolemap>
   <permissions>
-    <permission name="EEA Faceted Navigation edit Configuration" acquire="True">
-      <role name="Manager"/>
+    <permission name="eea.facetednavigation: Configure faceted" acquire="True">
       <role name="Owner"/>
+      <role name="Manager"/>
+      <role name="Editor"/>
     </permission>
   </permissions>
 </rolemap>

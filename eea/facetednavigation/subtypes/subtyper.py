@@ -3,6 +3,7 @@
 from zope.interface import implements
 from zope.interface import alsoProvides, noLongerProvides
 from zope.event import notify
+from zope.publisher.interfaces import NotFound
 
 from p4a.subtyper.engine import SubtypeAddedEvent, SubtypeRemovedEvent
 from Products.statusmessages.interfaces import IStatusMessage
@@ -12,8 +13,8 @@ from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
 from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
 from eea.facetednavigation.interfaces import IFacetedNavigable
 
-class FacetedSubtyper(BrowserView):
-    """ Support for subtyping objects
+class FacetedSubtyperPublic(BrowserView):
+    """ Public support for subtyping objects
     """
     implements(IFacetedSubtyper)
 
@@ -73,6 +74,19 @@ class FacetedSubtyper(BrowserView):
             return False
         return True
 
+    def enable(self):
+        """ See IFacetedSubtyper
+        """
+        raise NotFound(self.context, 'enable', self.request)
+
+    def disable(self):
+        """ See IFacetedSubtyper
+        """
+        raise NotFound(self.context, 'disable', self.request)
+
+class FacetedSubtyper(FacetedSubtyperPublic):
+    """ Support for subtyping objects
+    """
     def enable(self):
         """ See IFacetedSubtyper
         """
