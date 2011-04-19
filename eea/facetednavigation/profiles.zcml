@@ -14,4 +14,9 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:importStep
+    name="eea.facetednavigation.various"
+    title="EEA Faceted Navigation setup" description="Setup EEA Faceted Navigation"
+    handler="eea.facetednavigation.setuphandlers.setupVarious" />
+
 </configure>

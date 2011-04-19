@@ -20,7 +20,7 @@ EditSchema = Schema((
             description_msgid='help_faceted_portlet_macro',
             i18n_domain="eea"
         )
-    )
+    ),
 ))
 
 class Widget(AbstractWidget):

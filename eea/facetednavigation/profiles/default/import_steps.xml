@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<import-steps>
- <import-step id="eea.facetednavigation.various" version="20090811-01"
-              handler="eea.facetednavigation.setuphandlers.setupVarious"
-              title="EEA Faceted Navigation setup">
-   <dependency step="actions"/>
-    EEA Faceted Navigation installation step.
- </import-step>
-</import-steps>
