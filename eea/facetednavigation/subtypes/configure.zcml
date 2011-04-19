@@ -30,14 +30,14 @@
   <browser:page
     name="faceted_subtyper_public"
     for="zope.interface.Interface"
-    class=".subtyper.FacetedSubtyperPublic"
+    class=".subtyper.FacetedPublicSubtyper"
     permission="zope.Public"
     allowed_interface=".interfaces.IFacetedSubtyper"
     />
 
   <browser:page
     name="faceted_subtyper"
-    for="zope.interface.Interface"
+    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
     class=".subtyper.FacetedSubtyper"
     permission="cmf.ModifyPortalContent"
     allowed_interface=".interfaces.IFacetedSubtyper"
