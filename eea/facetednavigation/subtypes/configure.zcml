@@ -47,7 +47,7 @@
     name="faceted_subtyper"
     for="zope.interface.Interface"
     class=".subtyper.FacetedSubtyper"
-    permission="zope.Public"
+    permission="cmf.ModifyPortalContent"
     allowed_interface=".interfaces.IFacetedSubtyper"
     />
 

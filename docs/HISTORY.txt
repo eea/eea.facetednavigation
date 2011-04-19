@@ -6,6 +6,7 @@ Changelog
 
 3.9-dev - (unreleased)
 ----------------------
+ * Bug fix: Fixed permission for subtyper [voineali]
 
 3.8 - (2010-12-22)
 ------------------
