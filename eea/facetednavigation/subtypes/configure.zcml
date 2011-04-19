@@ -44,6 +44,14 @@
     />
 
   <browser:page
+    name="faceted_subtyper_public"
+    for="zope.interface.Interface"
+    class=".subtyper.FacetedSubtyperPublic"
+    permission="zope.Public"
+    allowed_interface=".interfaces.IFacetedSubtyper"
+    />
+
+  <browser:page
     name="faceted_subtyper"
     for="zope.interface.Interface"
     class=".subtyper.FacetedSubtyper"

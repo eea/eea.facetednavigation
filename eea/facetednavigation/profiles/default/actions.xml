@@ -3,25 +3,25 @@
  xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <action-provider name="portal_actions">
   <action title="Faceted criteria" action_id="faceted.configure" category="object"
-   condition_expr="object/@@faceted_subtyper/is_faceted"
+   condition_expr="object/@@faceted_subtyper_public/is_faceted"
    url_expr="string:${object/absolute_url}/configure_faceted.html"
    visible="True">
    <permission>eea.facetednavigation : Configure faceted</permission>
   </action>
   <action title="Sync faceted translations" action_id="faceted.sync" category="object_buttons"
-   condition_expr="object/@@faceted_subtyper/is_lingua_faceted"
+   condition_expr="object/@@faceted_subtyper_public/is_lingua_faceted"
    url_expr="string:${object/absolute_url}/@@faceted_sync_translations"
    visible="True">
    <permission>eea.facetednavigation : Configure faceted</permission>
   </action>
   <action title="Disable faceted navigation" action_id="faceted.disable" category="object_buttons"
-   condition_expr="object/@@faceted_subtyper/can_disable"
+   condition_expr="object/@@faceted_subtyper_public/can_disable"
    url_expr="string:${object/absolute_url}/@@faceted_subtyper/disable"
    visible="True">
    <permission>eea.facetednavigation : Configure faceted</permission>
   </action>
   <action title="Enable faceted navigation" action_id="faceted.enable" category="object_buttons"
-   condition_expr="object/@@faceted_subtyper/can_enable"
+   condition_expr="object/@@faceted_subtyper_public/can_enable"
    url_expr="string:${object/absolute_url}/@@faceted_subtyper/enable"
    visible="True">
    <permission>eea.facetednavigation : Configure faceted</permission>

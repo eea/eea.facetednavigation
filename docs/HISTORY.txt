@@ -6,6 +6,8 @@ Changelog
 
 3.10-dev - (unreleased)
 -----------------------
+ * Bug fix: Fixed subtyper access on Plone 2.5 [voineali]
+   Use this version on Plone 2.x as version 3.9 is broken.
 
 3.9 - (2011-04-19)
 ------------------

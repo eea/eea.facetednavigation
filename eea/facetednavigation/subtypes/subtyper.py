@@ -11,9 +11,8 @@ from interfaces import IFacetedSubtyper
 from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
 from eea.facetednavigation.interfaces import IFacetedNavigable
 
-
-class FacetedSubtyper(BrowserView):
-    """ Support for subtyping objects
+class FacetedSubtyperPublic(BrowserView):
+    """ Public support for subtyping objects
     """
     implements(IFacetedSubtyper)
 
@@ -76,6 +75,19 @@ class FacetedSubtyper(BrowserView):
             return False
         return True
 
+    def enable(self):
+        """ Enable faceted navigation
+        """
+        raise NotImplementedError
+
+    def disable(self):
+        """ Disable faceted navigation
+        """
+        raise NotImplementedError
+
+class FacetedSubtyper(FacetedSubtyperPublic):
+    """ Support for subtyping objects
+    """
     def enable(self):
         """ See IFacetedSubtyper
         """
