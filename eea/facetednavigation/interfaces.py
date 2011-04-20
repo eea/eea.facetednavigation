@@ -44,6 +44,22 @@ class IFacetedGlobalSettingsChangedEvent(IFacetedEvent):
     """ Faceted global settings updated
     """
 
+class IFacetedWillBeEnabledEvent(IFacetedEvent):
+    """ Faceted navigation is going to be enabled
+    """
+
+class IFacetedEnabledEvent(IFacetedEvent):
+    """ Faceted navigation enabled
+    """
+
+class IFacetedWillBeDisabledEvent(IFacetedEvent):
+    """ Faceted navigation is going to be disabled
+    """
+
+class IFacetedDisabledEvent(IFacetedEvent):
+    """ Faceted navigation disabled
+    """
+
 # pylint, pyflakes
 __all__ = [
     IPossibleFacetedNavigable.__name__,

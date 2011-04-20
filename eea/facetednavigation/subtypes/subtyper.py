@@ -5,13 +5,20 @@ from zope.interface import alsoProvides, noLongerProvides
 from zope.event import notify
 from zope.publisher.interfaces import NotFound
 
-from p4a.subtyper.engine import SubtypeAddedEvent, SubtypeRemovedEvent
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
+
 from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
 from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
 from eea.facetednavigation.interfaces import IFacetedNavigable
+from eea.facetednavigation.events import (
+    FacetedWillBeDisabledEvent,
+    FacetedWillBeEnabledEvent,
+    FacetedDisabledEvent,
+    FacetedEnabledEvent,
+)
+
 
 class FacetedPublicSubtyper(BrowserView):
     """ Public support for subtyping objects
@@ -93,9 +100,10 @@ class FacetedSubtyper(FacetedPublicSubtyper):
         if not self.can_enable:
             return self._redirect('Faceted navigation not supported')
 
-        if not IFacetedNavigable.providedBy(self.context):
-            alsoProvides(self.context, IFacetedNavigable)
-        notify(SubtypeAddedEvent(self.context, None))
+        notify(FacetedWillBeEnabledEvent(self.context))
+        alsoProvides(self.context, IFacetedNavigable)
+        notify(FacetedEnabledEvent(self.context))
+
         self._redirect('Faceted navigation enabled')
 
     def disable(self):
@@ -104,7 +112,7 @@ class FacetedSubtyper(FacetedPublicSubtyper):
         if not self.can_disable:
             return self._redirect('Faceted navigation not supported')
 
-        if IFacetedNavigable.providedBy(self.context):
-            noLongerProvides(self.context, IFacetedNavigable)
-        notify(SubtypeRemovedEvent(self.context, None))
+        notify(FacetedWillBeDisabledEvent(self.context))
+        noLongerProvides(self.context, IFacetedNavigable)
+        notify(FacetedDisabledEvent(self.context))
         self._redirect('Faceted navigation disabled')

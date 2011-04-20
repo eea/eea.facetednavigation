@@ -5,39 +5,22 @@
   i18n_domain="eea">
 
   <subscriber
-      for="p4a.subtyper.interfaces.ISubtypeAddedEvent"
-      handler=".events.subtype_added"
-  />
-
-  <subscriber
-      for="p4a.subtyper.interfaces.ISubtypeRemovedEvent"
-      handler=".events.subtype_removed"
-  />
-
-  <browser:menu
-    id="layout"
-    title="Layout"
-    class=".menu.LayoutMenu"
+    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
+         eea.facetednavigation.interfaces.IFacetedWillBeEnabledEvent"
+    handler=".events.faceted_will_be_enabled"
     />
 
-  <!-- Plone 2.5 support -->
-  <configure zcml:condition="installed zope.app.annotation.tests">
-    <browser:subMenuItem
-      menu="contentmenu_extra"
-      submenu="layout"
-      title="Layout"
-      permission="zope.Public"
-      for="..interfaces.IFacetedNavigable"
-      />
-  </configure>
+  <subscriber
+    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
+         eea.facetednavigation.interfaces.IFacetedEnabledEvent"
+    handler=".events.faceted_enabled"
+    />
 
-  <!-- Plone 3.0+ support -->
-  <configure zcml:condition="installed zope.annotation">
-    <adapter for="..interfaces.IFacetedNavigable zope.interface.Interface"
-             name="layout"
-             factory=".submenu.LayoutSubMenuItem"
-             provides="plone.app.contentmenu.interfaces.IContentMenuItem" />
-  </configure>
+  <subscriber
+    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
+         eea.facetednavigation.interfaces.IFacetedDisabledEvent"
+    handler=".events.faceted_disabled"
+    />
 
   <browser:page
     name="faceted_layout"

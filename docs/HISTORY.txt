@@ -3,6 +3,27 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
+
+Upgrade steps:
+
+ * Update your buildout.cfg zcml directives to look like:
+     zcml =
+       eea.facetednavigation-meta
+       eea.facetednavigation-overrides
+       eea.facetednavigation.subtypes
+       eea.facetednavigation
+
+     See sample buildout at: http://svn.plone.org/svn/collective/eea.facetednavigation/buildout/
+ * Run provided upgrade steps, if any.
+
+Changes
+
+ * Feature: Added a way to disable IPossibleFacetedNavigable for Plone default
+   Content-Types [voineali #4254] - Thanks to thomasdesvenain
+ * Feature: Removed "Layout" menu, and override "Display" menu in order to
+   keep consistency and not to confuse novice users with to many places to
+   select object layout/display [voineali #4254]
+ * Feature: Dropped p4a. dependencies [voineali #4254]
  * Bug fix: Fixed GenericSetup circular dependencies warning [voineali #4254]
  * Bug fix: Fixed Schema positional arguments warning [voineali #4254]
  * Bug fix: Fixed faceted_subtyper permissions [voineali #4254]

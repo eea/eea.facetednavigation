@@ -1,16 +1,13 @@
 """ Layout adapters
 """
 from zope import interface
-from zope.component import getUtility
 from persistent.list import PersistentList
-from p4a.subtyper import interfaces as p4aifaces
 from zope.annotation.interfaces import IAnnotations
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.config import (
     ANNO_FACETED_LAYOUT,
     ANNO_FACETED_LAYOUTS,
 )
-
 
 class FacetedLayout(object):
     """ Faceted Layout
@@ -56,12 +53,7 @@ class FacetedLayout(object):
     def default_layouts(self):
         """ Get container default layouts
         """
-        subtyper = getUtility(p4aifaces.ISubtyper)
-        existing = subtyper.existing_type(self.context)
-
-        if not existing:
-            return self.context.getAvailableLayouts()
-        return [('folder_summary_view', 'Default View')]
+        return self.context.getAvailableLayouts()
     #
     # Setters
     #

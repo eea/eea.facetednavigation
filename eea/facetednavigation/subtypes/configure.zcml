@@ -1,6 +1,4 @@
 <configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="eea">
 
   <class class="Products.ATContentTypes.content.folder.ATFolder">
@@ -14,33 +12,5 @@
   <class class="Products.ATContentTypes.content.topic.ATTopic">
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
-
-  <adapter
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
-    provides="zope.annotation.interfaces.IAnnotations"
-    factory="zope.annotation.attribute.AttributeAnnotations"
-    />
-
-  <adapter
-    for="eea.facetednavigation.interfaces.IFacetedNavigable"
-    provides=".interfaces.IFacetedWrapper"
-    factory=".wrapper.FacetedWrapper"
-    />
-
-  <browser:page
-    name="faceted_subtyper_public"
-    for="zope.interface.Interface"
-    class=".subtyper.FacetedPublicSubtyper"
-    permission="zope.Public"
-    allowed_interface=".interfaces.IFacetedSubtyper"
-    />
-
-  <browser:page
-    name="faceted_subtyper"
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
-    class=".subtyper.FacetedSubtyper"
-    permission="cmf.ModifyPortalContent"
-    allowed_interface=".interfaces.IFacetedSubtyper"
-    />
 
 </configure>

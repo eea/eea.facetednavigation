@@ -57,6 +57,24 @@ It comes with plenty of configuration options and features like:
    14. High performance by caching faceted catalog queries via distributed
        memory object caching system: memcached
 
+Installation
+============
+
+The easiest way to get eea.facetednavigation support in Plone 4 using this
+package is to work with installations based on `zc.buildout`_.
+Other types of installations should also be possible, but might turn out
+to be somewhat tricky.
+
+To get started you will simply need to add the package to your "eggs" and
+"zcml" sections, run buildout, restart your Plone instance and install the
+"eea.facetednavigation" package using the quick-installer or via the "Add-on
+Products" section in "Site Setup".
+
+  .. _`zc.buildout`: http://pypi.python.org/pypi/zc.buildout/
+
+You can download a sample buildout at:
+
+  https://svn.plone.org/svn/collective/eea.facetednavigation/buildout
 
 Dependecies
 ===========

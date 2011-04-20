@@ -2,7 +2,6 @@
   xmlns="http://namespaces.zope.org/zope"
   xmlns:meta="http://namespaces.zope.org/meta">
 
-  <include package="p4a.subtyper" file="meta.zcml" />
   <meta:directives namespace="http://namespaces.zope.org/faceted">
     <meta:directive
       name="widget"

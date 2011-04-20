@@ -4,15 +4,12 @@
   xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="eea">
 
-  <!-- Plone 3.0+ -->
-  <configure zcml:condition="installed zope.annotation">
-    <configure zcml:condition="installed Products.LinguaPlone">
-      <browser:menu
-        id="plone_contentmenu_translate"
-        title="Translate menu - contains translation-related actions"
-        class=".menu.SafeTranslateMenu"
-        />
-    </configure>
+  <configure zcml:condition="installed Products.LinguaPlone">
+    <browser:menu
+      id="plone_contentmenu_translate"
+      title="Translate menu - contains translation-related actions"
+      class=".menu.SafeTranslateMenu"
+      />
   </configure>
 
 </configure>

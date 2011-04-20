@@ -26,9 +26,11 @@ def setup_eea_facetednavigation():
     until the setup of the Plone site testing layer.
     """
     fiveconfigure.debug_mode = True
-    import eea.facetednavigation
-    zcml.load_config('meta.zcml', eea.facetednavigation)
-    zcml.load_config('configure.zcml', eea.facetednavigation)
+    from eea import facetednavigation
+    zcml.load_config('meta.zcml', facetednavigation)
+    zcml.load_config('overrides.zcml', facetednavigation)
+    zcml.load_config('configure.zcml', facetednavigation.subtypes)
+    zcml.load_config('configure.zcml', facetednavigation)
     fiveconfigure.debug_mode = False
 
 setup_eea_facetednavigation()

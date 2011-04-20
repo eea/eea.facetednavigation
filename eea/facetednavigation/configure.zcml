@@ -2,24 +2,24 @@
     xmlns="http://namespaces.zope.org/zope"
     i18n_domain="eea">
 
-  <include package="p4a.common" />
-  <include package="p4a.z2utils" />
-  <include package="p4a.subtyper" />
+  <!-- Dependencies -->
   <include package="collective.js.jqueryui" />
+  <include package="eea.faceted.vocabularies" />
+  <include package="eea.jquery" />
 
   <include file="profiles.zcml" />
   <include file="permissions.zcml" />
 
-  <include package="eea.faceted.vocabularies" />
-  <include package="eea.jquery" />
-
+  <!-- You'll have to explicitly include eea.facetednavigation.subtypes ZCML in
+       your buildout.cfg in order to enable faceted navigation for Plone default
+       content-types -->
+  <include package=".subtypes" file="subtyping.zcml"/>
   <include package=".browser" />
   <include package=".caching" />
   <include package=".criteria" />
   <include package=".exportimport" />
   <include package=".layout" />
   <include package=".search" />
-  <include package=".subtypes" />
   <include package=".syndication" />
   <include package=".widgets" />
   <include package=".indexes" />
