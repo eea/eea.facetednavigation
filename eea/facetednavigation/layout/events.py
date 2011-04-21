@@ -24,11 +24,17 @@ def faceted_enabled(doc, evt):
     # Add default widgets
     add_default_widgets(doc)
 
+    # Reindex
+    doc.reindexObject(['object_provides', ])
+
 def faceted_disabled(doc, evt):
     """ EVENT: faceted navigation disabled
     """
     if doc.hasProperty('layout'):
         doc.manage_delProperties(['layout'])
+
+    # Reindex
+    doc.reindexObject(['object_provides', ])
 
 def add_default_widgets(context):
     """ Add default widgets to context
