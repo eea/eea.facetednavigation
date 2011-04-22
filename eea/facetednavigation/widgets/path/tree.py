@@ -1,6 +1,6 @@
 """ JsTree views
 """
-import simplejson as json
+import json
 from zope.component import queryAdapter
 from Products.Five.browser import BrowserView
 from Products.CMFPlone.browser.navtree import DefaultNavtreeStrategy

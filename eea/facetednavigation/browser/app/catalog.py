@@ -1,7 +1,7 @@
 """ Faceted catalog views
 """
+import json
 import logging
-import simplejson as json
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from eea.facetednavigation.caching import ramcache

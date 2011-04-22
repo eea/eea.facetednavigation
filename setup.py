@@ -32,11 +32,9 @@ setup(name=NAME,
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'simplejson',
-          'collective.js.jqueryui',
           'eea.faceted.vocabularies',
-          'eea.jquery',
           'collective.js.jqueryui',
+          'eea.jquery',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

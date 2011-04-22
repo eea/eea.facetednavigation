@@ -2,7 +2,7 @@
 """
 import logging
 import time
-import simplejson as json
+import json
 
 from zope.component import getMultiAdapter
 from eea.facetednavigation.caching import ramcache

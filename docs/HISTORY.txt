@@ -17,7 +17,8 @@ Upgrade steps:
  * Run provided upgrade steps, if any.
 
 Changes
-
+ 
+ * Cleanup: Dropped simplejson dependency [voineali #4254]
  * Feature: Added a way to disable IPossibleFacetedNavigable for Plone default
    Content-Types [voineali #4254] - Thanks to thomasdesvenain
  * Feature: Removed "Layout" menu, and override "Display" menu in order to
