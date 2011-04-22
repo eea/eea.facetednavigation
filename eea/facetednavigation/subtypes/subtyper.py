@@ -22,6 +22,7 @@ from eea.facetednavigation.events import (
 
 class FacetedPublicSubtyper(BrowserView):
     """ Public support for subtyping objects
+        view for non IPossibleFacetedNavigable objects
     """
     implements(IFacetedSubtyper)
 
@@ -43,31 +44,59 @@ class FacetedPublicSubtyper(BrowserView):
     def can_enable(self):
         """ See IFacetedSubtyper
         """
-        if not IPossibleFacetedNavigable.providedBy(self.context):
-            return False
-
-        if IFacetedNavigable.providedBy(self.context):
-            return False
-        return True
+        return False
 
     @property
     def can_disable(self):
         """ See IFacetedSubtyper
         """
-        if not IPossibleFacetedNavigable.providedBy(self.context):
-            return False
-
-        if IFacetedNavigable.providedBy(self.context):
-            return True
         return False
 
     @property
     def is_faceted(self):
         """ Is faceted navigable?
         """
-        if IFacetedNavigable.providedBy(self.context):
-            return True
         return False
+
+    @property
+    def is_lingua_faceted(self):
+        """ Is LinguaPlone installed and context is faceted navigable?
+        """
+        return False
+
+    def enable(self):
+        """ See IFacetedSubtyper
+        """
+        raise NotFound(self.context, 'enable', self.request)
+
+    def disable(self):
+        """ See IFacetedSubtyper
+        """
+        raise NotFound(self.context, 'disable', self.request)
+
+
+class FacetedSubtyper(FacetedPublicSubtyper):
+    """ Support for subtyping objects
+        view for IPossibleFacetedNavigable objects
+    """
+
+    @property
+    def can_enable(self):
+        """ See IFacetedSubtyper
+        """
+        return not self.is_faceted
+
+    @property
+    def can_disable(self):
+        """ See IFacetedSubtyper
+        """
+        return self.is_faceted
+
+    @property
+    def is_faceted(self):
+        """ Is faceted navigable?
+        """
+        return IFacetedNavigable.providedBy(self.context)
 
     @property
     def is_lingua_faceted(self):
@@ -81,19 +110,6 @@ class FacetedPublicSubtyper(BrowserView):
             return False
         return True
 
-    def enable(self):
-        """ See IFacetedSubtyper
-        """
-        raise NotFound(self.context, 'enable', self.request)
-
-    def disable(self):
-        """ See IFacetedSubtyper
-        """
-        raise NotFound(self.context, 'disable', self.request)
-
-class FacetedSubtyper(FacetedPublicSubtyper):
-    """ Support for subtyping objects
-    """
     def enable(self):
         """ See IFacetedSubtyper
         """

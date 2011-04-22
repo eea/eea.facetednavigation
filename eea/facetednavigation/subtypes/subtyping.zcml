@@ -16,7 +16,7 @@
     />
 
   <browser:page
-    name="faceted_subtyper_public"
+    name="faceted_subtyper"
     for="zope.interface.Interface"
     class=".subtyper.FacetedPublicSubtyper"
     permission="zope.Public"
