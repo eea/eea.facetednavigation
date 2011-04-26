@@ -10,7 +10,6 @@ from Products.Five.browser import BrowserView
 from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
-from eea.facetednavigation.interfaces import IPossibleFacetedNavigable
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.events import (
     FacetedWillBeDisabledEvent,
