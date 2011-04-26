@@ -36,4 +36,7 @@ class FacetedCatalog(BrowserView):
         """
         if self.request:
             kwargs.update(self.request.form)
+            self.request.response.setHeader('Content-Type',
+                                            'application/json; charset=utf-8')
+
         return json.dumps(self.types(**kwargs))

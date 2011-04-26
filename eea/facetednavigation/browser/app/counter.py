@@ -56,6 +56,8 @@ class FacetedQueryCounter(object):
     def __call__(self, *args, **kwargs):
         if self.request:
             kwargs.update(self.request.form)
+            self.request.response.setHeader('Content-Type',
+                                            'text/json; charset=utf-8')
 
         # Calling self.index() will set cache headers for varnish
         self.index()
