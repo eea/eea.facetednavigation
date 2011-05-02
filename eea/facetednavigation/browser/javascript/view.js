@@ -15,11 +15,11 @@ Faceted.Events.AJAX_START = 'FACETED-AJAX-START';
 Faceted.Events.AJAX_STOP = 'FACETED-AJAX-STOP';
 Faceted.Events.AJAX_ERROR = 'FACETED-AJAX-ERROR';
 Faceted.Events.REDRAW = 'FACETED-REDRAW';
+Faceted.Events.HASHCHANGE = 'hashchange.FACETED-HASHCHANGE';
 
 /* Unbind events
 */
 Faceted.Events.cleanup = function(){
-  //Faceted.Events.INITIALIZE
   jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_START);
   jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_SUCCESS);
   jQuery(Faceted.Events).unbind(Faceted.Events.QUERY_INITIALIZED);
@@ -32,6 +32,7 @@ Faceted.Events.cleanup = function(){
   jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_STOP);
   jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_ERROR);
   jQuery(Faceted.Events).unbind(Faceted.Events.REDRAW);
+  jQuery(window).unbind(Faceted.Events.HASHCHANGE); /* jQuery.bbq events */
 };
 
 /* Widgets
@@ -441,7 +442,7 @@ Faceted.Load = function(evt, baseurl){
   jQuery(Faceted.Events).trigger(Faceted.Events.INITIALIZE);
 
   // Bind events
-  jQuery(window).bind('hashchange', function(evt){
+  jQuery(window).bind(Faceted.Events.HASHCHANGE, function(evt){
     Faceted.URLHandler.hash_changed();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){

@@ -17,7 +17,9 @@ Upgrade steps:
  * Run provided upgrade steps, if any.
 
 Changes
- 
+
+ * Bug fix: When navigating the tabs of eea.relations popup,
+   the number of AJAX calls increases [voineali #3588, #4232]
  * Cleanup: Dropped simplejson dependency [voineali #4254]
  * Feature: Added a way to disable IPossibleFacetedNavigable for Plone default
    Content-Types [voineali #4254] - Thanks to thomasdesvenain
