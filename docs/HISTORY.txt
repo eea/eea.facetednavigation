@@ -4,6 +4,9 @@ Changelog
 4.0 - (unreleased)
 ------------------
 
+ * i18n: added locales directory and registered it. added pot-file and po file 
+   with translations for german. Added i18n-domains to a bunch of pt-files to 
+   make i18ndude happy. [jensens, 2011-05-09]
  * Bug fix: When navigating the tabs of eea.relations popup,
    the number of AJAX calls increases [voineali #3588, #4232]
  * Cleanup: Dropped simplejson dependency [voineali #4254]

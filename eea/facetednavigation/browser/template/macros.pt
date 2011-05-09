@@ -1,4 +1,4 @@
-<metal:position define-macro="position" tal:define="
+<metal:position define-macro="position" i18n:domain="eea" tal:define="
   positions positions | python: {};
   position position | string:top;
   mode mode | string:view;" tal:condition="positions">

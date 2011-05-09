@@ -1,4 +1,5 @@
-<div class="faceted-widget faceted-select-widget" style="display: none" tal:define="
+<div class="faceted-widget faceted-select-widget" style="display: none" 
+     i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
@@ -12,7 +13,7 @@
 
 <fieldset class="widget-fieldset">
 <legend tal:define="title python:view.data.get('title', '')" tal:content="
-  python:view.translate(title)" i18n:translate="">HTML Widget</legend>
+  python:view.translate(title)" i18n:translate="">Current Search</legend>
 <form action="." method="get"
   tal:on-error="structure python:error_view(error=error, cid=wid)">
 

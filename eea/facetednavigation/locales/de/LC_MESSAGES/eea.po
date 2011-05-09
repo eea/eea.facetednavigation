@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-05-09 16:28+0000\n"
+"PO-Revision-Date: 2011-05-09 18:16+0100\n"
+"Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:23
+msgid "Add new filter"
+msgstr "Neuen Filter hinzufügen"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "Filter nach Abfrage"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.pt:29
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.pt:23
+msgid "All"
+msgstr "Alle"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:95
+msgid "Are you sure you want to delete ${widget} widget?"
+msgstr "Möchten sie wirklich das Widget ${widget} löschen?"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr "Katalog Abfrage"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:17
+msgid "Configure faceted navigation"
+msgstr "Facettennavigation konfigurieren"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr "Zähler"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:121
+msgid "Criterion details"
+msgstr "Kriteriendetails"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "Derzeitige Konfiguration"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:28
+msgid "End date"
+msgstr "Enddatum"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr ""
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr ""
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:84
+msgid "Export"
+msgstr "Export"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr "Fabrik"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:81
+msgid "Import"
+msgstr "Import"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:73
+msgid "Import - Export configuration"
+msgstr "Import - Export der Konfiguration"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:74
+msgid "Import configuration"
+msgstr "Importieren der Konfiguration"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "Das für dieses Widget angegebene Vokabular ist leer oder ungültig. Feld Leer lassen, wenn die Vorgabe-Sortierkritierien gelten sollen."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:122
+msgid "Order"
+msgstr "Reihenfolge"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:40
+msgid "Position"
+msgstr "Position"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr "Python-Name der Factory, mit dem das implementierende Objekt erzeugt wird. Dies muss ein Objekt in einem Modul sein, welches über seinen vollen Dotted-Name adressiert wird."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "Umgekehrt"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:21
+msgid "Search"
+msgstr "Suche"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:52
+msgid "Section"
+msgstr "Abschnitt"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:20
+msgid "Start date"
+msgstr "Anfangsdatum"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr ""
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:28
+msgid "Type"
+msgstr "Art"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:145
+msgid "Widget type"
+msgstr "Art des Widgets"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:29
+msgid "all items"
+msgstr "Alle Einträge"
+
+#. Default: "[X] Remove all"
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:14
+msgid "criteria_view_remove_all"
+msgstr "[X] Alle entfernen"
+
+#. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.pt:29
+msgid "faceted_path_widget_errors"
+msgstr "Dieses Widget wird ignoriert, weil die Wurzel nicht erreichbar ist oder keine Ordner-artigen Kinder da sind."
+
+#. Default: "Position of the widget."
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:41
+msgid "help_widget_position"
+msgstr "Position des Widgets"
+
+#. Default: "Display widget in section."
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:53
+msgid "help_widget_section"
+msgstr "Zeige Widget in Abschnitt."
+
+#. Default: "Type of the widget."
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:29
+msgid "help_widget_type"
+msgstr "Art des Widgets"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:35
+msgid "in current results"
+msgstr "in aktuellen Ergebnissen"
+
+#. Default: "Select all items"
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:110
+msgid "label_select_all_items"
+msgstr "Alle auswählen"
+
+#. Default: "Content listing"
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:105
+msgid "summary_content_listing"
+msgstr "Inhaltsauflistung"
+

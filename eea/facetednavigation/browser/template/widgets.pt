@@ -1,4 +1,4 @@
-<metal:widgets define-macro="widgets" tal:define="
+<metal:widgets define-macro="widgets" i18n:domain="eea" tal:define="
   mode mode | string:edit;
   view_mode python:mode == 'view';
   edit_mode python:mode == 'edit';
