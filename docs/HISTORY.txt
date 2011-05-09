@@ -4,20 +4,6 @@ Changelog
 4.0 - (unreleased)
 ------------------
 
-Upgrade steps:
-
- * Update your buildout.cfg zcml directives to look like:
-     zcml =
-       eea.facetednavigation-meta
-       eea.facetednavigation-overrides
-       eea.facetednavigation.subtypes
-       eea.facetednavigation
-
-     See sample buildout at: http://svn.plone.org/svn/collective/eea.facetednavigation/buildout/
- * Run provided upgrade steps, if any.
-
-Changes
-
  * Bug fix: When navigating the tabs of eea.relations popup,
    the number of AJAX calls increases [voineali #3588, #4232]
  * Cleanup: Dropped simplejson dependency [voineali #4254]

@@ -1,29 +1,19 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    i18n_domain="eea">
+<configure xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="eea">
 
-  <!-- Dependencies -->
-  <include package="collective.js.jqueryui" />
-  <include package="eea.faceted.vocabularies" />
-  <include package="eea.jquery" />
+  <include file="minimal.zcml" />
 
-  <include file="profiles.zcml" />
-  <include file="permissions.zcml" />
+  <!-- Make default ATCT faceted navigable -->
+  <class class="Products.ATContentTypes.content.folder.ATFolder">
+    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
+  </class>
 
-  <!-- You'll have to explicitly include eea.facetednavigation.subtypes ZCML in
-       your buildout.cfg in order to enable faceted navigation for Plone default
-       content-types -->
-  <include package=".subtypes" file="subtyping.zcml"/>
-  <include package=".browser" />
-  <include package=".caching" />
-  <include package=".criteria" />
-  <include package=".exportimport" />
-  <include package=".layout" />
-  <include package=".search" />
-  <include package=".syndication" />
-  <include package=".widgets" />
-  <include package=".indexes" />
-  <include package=".versions" />
-  <include package=".upgrades" />
+  <class class="Products.ATContentTypes.content.folder.ATBTreeFolder">
+    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
+  </class>
+
+  <class class="Products.ATContentTypes.content.topic.ATTopic">
+    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
+  </class>
 
 </configure>

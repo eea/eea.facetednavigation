@@ -1,16 +1,34 @@
-<configure xmlns="http://namespaces.zope.org/zope"
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="eea">
 
-  <class class="Products.ATContentTypes.content.folder.ATFolder">
-    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
-  </class>
+  <adapter
+    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+    provides="zope.annotation.interfaces.IAnnotations"
+    factory="zope.annotation.attribute.AttributeAnnotations"
+    />
 
-  <class class="Products.ATContentTypes.content.folder.ATBTreeFolder">
-    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
-  </class>
+  <adapter
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    provides=".interfaces.IFacetedWrapper"
+    factory=".wrapper.FacetedWrapper"
+    />
 
-  <class class="Products.ATContentTypes.content.topic.ATTopic">
-    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
-  </class>
+  <browser:page
+    name="faceted_subtyper"
+    for="zope.interface.Interface"
+    class=".subtyper.FacetedPublicSubtyper"
+    permission="zope.Public"
+    allowed_interface=".interfaces.IFacetedSubtyper"
+    />
+
+  <browser:page
+    name="faceted_subtyper"
+    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+    class=".subtyper.FacetedSubtyper"
+    permission="cmf.ModifyPortalContent"
+    allowed_interface=".interfaces.IFacetedSubtyper"
+    />
 
 </configure>

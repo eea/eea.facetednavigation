@@ -1,0 +1,26 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="eea">
+
+  <!-- Dependencies -->
+  <include package="collective.js.jqueryui" />
+  <include package="eea.faceted.vocabularies" />
+  <include package="eea.jquery" />
+
+  <include file="profiles.zcml" />
+  <include file="permissions.zcml" />
+
+  <include package=".subtypes"/>
+  <include package=".browser" />
+  <include package=".caching" />
+  <include package=".criteria" />
+  <include package=".exportimport" />
+  <include package=".layout" />
+  <include package=".search" />
+  <include package=".syndication" />
+  <include package=".widgets" />
+  <include package=".indexes" />
+  <include package=".versions" />
+  <include package=".upgrades" />
+
+</configure>
