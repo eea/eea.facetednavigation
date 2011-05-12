@@ -3,8 +3,6 @@
   i18n_domain="eea">
 
   <include file="minimal.zcml" />
-  
-  <i18n:registerTranslations directory="locales" />  
 
   <!-- Make default ATCT faceted navigable -->
   <class class="Products.ATContentTypes.content.folder.ATFolder">

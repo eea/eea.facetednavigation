@@ -2,6 +2,8 @@
     xmlns="http://namespaces.zope.org/zope"
     i18n_domain="eea">
 
+  <i18n:registerTranslations directory="locales" />
+
   <!-- Dependencies -->
   <include package="collective.js.jqueryui" />
   <include package="eea.faceted.vocabularies" />
