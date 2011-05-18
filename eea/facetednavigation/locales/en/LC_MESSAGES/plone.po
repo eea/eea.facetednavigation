@@ -16,15 +16,15 @@ msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
-msgstr "Désactiver la navigation par facettes"
+msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
-msgstr "Activer la navigation par facettes"
+msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
-msgstr "Critères"
+msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Sync faceted translations"
