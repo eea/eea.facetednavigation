@@ -45,7 +45,7 @@ class FacetedLayout(object):
         if not template_id:
             template_id = self.layout
         template = self.context.restrictedTraverse(template_id, None)
-        if not template:
+        if not hasattr(template, 'macros'):
             return None
         return template.macros.get(macro)
 
