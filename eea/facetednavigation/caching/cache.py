@@ -18,8 +18,9 @@ def cacheKeyFacetedNavigation(method, self, *args, **kwargs):
     mtool = getToolByName(self.context, 'portal_membership')
     user = mtool.getAuthenticatedMember()
     template = IFacetedLayout(self.context).layout
+    kwargs.update(self.request.form)
     return (self.context.absolute_url(1), template,
-            self.request.form, self.request.get('LANGUAGE', 'en'),
+            kwargs, self.request.get('LANGUAGE', 'en'),
             user.getUserName())
 
 def cacheCounterKeyFacetedNavigation(method, self, *args, **kwargs):
@@ -27,8 +28,21 @@ def cacheCounterKeyFacetedNavigation(method, self, *args, **kwargs):
     """
     mtool = getToolByName(self.context, 'portal_membership')
     user = mtool.getAuthenticatedMember()
+    kwargs.update(self.request.form)
     return (self.context.absolute_url(1),
-            self.request.form, self.request.get('LANGUAGE', 'en'),
+            kwargs, self.request.get('LANGUAGE', 'en'),
+            user.getUserName())
+
+def cacheTreeKeyFacetedNavigation(method, self, *args, **kwargs):
+    """ Generate unique cache id for faceted tree widget
+    """
+    mtool = getToolByName(self.context, 'portal_membership')
+    user = mtool.getAuthenticatedMember()
+    kwargs.update(self.request.form)
+    cid = kwargs.get('cid', None)
+    root = self.get_root(cid=cid) if cid else ''
+    return (self.context.absolute_url(1), root,
+            kwargs, self.request.get('LANGUAGE', 'en'),
             user.getUserName())
 
 def invalidateFacetedCache(obj, evt):

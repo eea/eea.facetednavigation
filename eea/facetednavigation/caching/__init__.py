@@ -2,6 +2,7 @@
 """
 from eea.facetednavigation.caching.cache import cacheKeyFacetedNavigation
 from eea.facetednavigation.caching.cache import cacheCounterKeyFacetedNavigation
+from eea.facetednavigation.caching.cache import cacheTreeKeyFacetedNavigation
 try:
     from eea.cache import cache
     from lovely.memcached import event
@@ -16,6 +17,7 @@ except ImportError:
 __all__ = [
     cacheKeyFacetedNavigation.__name__,
     cacheCounterKeyFacetedNavigation.__name__,
+    cacheTreeKeyFacetedNavigation.__name__,
     ramcache.__name__,
     InvalidateCacheEvent.__name__,
 ]

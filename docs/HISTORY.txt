@@ -3,9 +3,10 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
- * added a po generation script. added french translations.
-   added translations file for plone domain. [thomasdesvenain]
- * i18n: added locales directory and registered it. added pot-file and po file
+ * Bug fix: Fixed cachekeys as they where not unique in some situations [voineali #4254]
+ * Feature: Added a po generation script. added french translations.
+   Added translations file for plone domain. [thomasdesvenain]
+ * Feature: i18n: added locales directory and registered it. added pot-file and po file
    with translations for german. Added i18n-domains to a bunch of pt-files to
    make i18ndude happy. [jensens, 2011-05-09]
  * Bug fix: When navigating the tabs of eea.relations popup,

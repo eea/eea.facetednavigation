@@ -8,7 +8,7 @@ from Products.CMFCore.utils import getToolByName
 from plone.app.layout.navigation.navtree import buildFolderTree
 
 from eea.facetednavigation.caching import ramcache
-from eea.facetednavigation.caching import cacheCounterKeyFacetedNavigation
+from eea.facetednavigation.caching import cacheTreeKeyFacetedNavigation
 from eea.facetednavigation.interfaces import ICriteria
 
 class FacetedTree(BrowserView):
@@ -157,7 +157,7 @@ class FacetedTree(BrowserView):
     #
     # JSON
     #
-    @ramcache(cacheCounterKeyFacetedNavigation,
+    @ramcache(cacheTreeKeyFacetedNavigation,
               dependencies=['eea.facetednavigation'])
     def json_tree(self, **kwargs):
         """ Get navigation tree as json
@@ -166,7 +166,7 @@ class FacetedTree(BrowserView):
             kwargs.update(self.request.form)
         return json.dumps(self.tree(**kwargs))
 
-    @ramcache(cacheCounterKeyFacetedNavigation,
+    @ramcache(cacheTreeKeyFacetedNavigation,
               dependencies=['eea.facetednavigation'])
     def json_breadcrumbs(self, **kwargs):
         """ Get breadcrumbs as json
