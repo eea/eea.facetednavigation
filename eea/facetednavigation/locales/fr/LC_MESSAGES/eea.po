@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-17 16:07+0000\n"
+"POT-Creation-Date: 2011-05-19 16:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgstr "Êtes-vous sûrs de vouloir supprimer la widget ${widget}"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:19
 msgid "Catalog query"
-msgstr ""
+msgstr "Requête catalogue"
 
 #: ../../facetednavigation/browser/template/configure.pt:17
 msgid "Configure faceted navigation"
@@ -69,7 +69,7 @@ msgstr "Valeur de l'erreur :"
 
 #: ../../facetednavigation/browser/template/configure.pt:84
 msgid "Export"
-msgstr ""
+msgstr "Exporter"
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -77,7 +77,7 @@ msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:81
 msgid "Import"
-msgstr ""
+msgstr "Importer"
 
 #: ../../facetednavigation/browser/template/configure.pt:73
 msgid "Import - Export configuration"
@@ -109,11 +109,11 @@ msgstr "Inverser"
 
 #: ../../facetednavigation/widgets/text/widget.pt:21
 msgid "Search"
-msgstr ""
+msgstr "Rechercher"
 
 #: ../../facetednavigation/browser/template/configure.pt:52
 msgid "Section"
-msgstr ""
+msgstr "Section"
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:20
 msgid "Start date"
@@ -129,21 +129,101 @@ msgstr "Type"
 
 #: ../../facetednavigation/browser/template/configure.pt:145
 msgid "Widget type"
-msgstr ""
+msgstr "Type de widget"
 
 #: ../../facetednavigation/widgets/text/widget.pt:29
 msgid "all items"
-msgstr "tous les éléments"
+msgstr "dans tous les éléments"
 
 #. Default: "[X] Remove all"
 #: ../../facetednavigation/widgets/criteria/widget.pt:14
 msgid "criteria_view_remove_all"
 msgstr "[X] Tout supprimer"
 
+#. Default: "Count results"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
+msgid "faceted_criteria_count"
+msgstr ""
+
+#. Default: "Default value"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:58
+msgid "faceted_criteria_default"
+msgstr "Valeur par défaut"
+
+#. Default: "Hide items with zero results"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:48
+msgid "faceted_criteria_emptycounthide"
+msgstr "Masquer les éléments sans résultat"
+
+#. Default: "Hidden"
+#: ../../facetednavigation/widgets/widget.py:73
+msgid "faceted_criteria_hidden"
+msgstr "Masqué"
+
+#. Default: "Catalog index"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+msgid "faceted_criteria_index"
+msgstr "Index du catalogue"
+
+#. Default: "Position"
+#: ../../facetednavigation/widgets/widget.py:54
+msgid "faceted_criteria_position"
+msgstr "Position"
+
+#. Default: "Section"
+#: ../../facetednavigation/widgets/widget.py:64
+msgid "faceted_criteria_section"
+msgstr "Section"
+
+#. Default: "Friendly name"
+#: ../../facetednavigation/widgets/widget.py:43
+msgid "faceted_criteria_title"
+msgstr "Nom d'affichage"
+
 #. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "faceted_path_widget_errors"
 msgstr ""
+
+#. Default: "Display number of results per letter"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:41
+msgid "help_faceted_criteria_alphabetic_count"
+msgstr "Afficher le nombre de résultats par lettre"
+
+#. Default: "This option works only if \"count results\" is enabled"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:49
+msgid "help_faceted_criteria_criteria_emptycounthide"
+msgstr ""
+
+#. Default: "Default letter to be selected"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:59
+msgid "help_faceted_criteria_default"
+msgstr ""
+
+#. Default: "Hide widget"
+#: ../../facetednavigation/widgets/widget.py:74
+msgid "help_faceted_criteria_hidden"
+msgstr "Masquer la widget"
+
+#. Default: "Catalog index to use for search"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+msgid "help_faceted_criteria_index"
+msgstr "Index catalogue à interroger pour la recherche"
+
+#. Default: "Widget position in page"
+#: ../../facetednavigation/widgets/widget.py:55
+msgid "help_faceted_criteria_position"
+msgstr "Position de la widget dans la page"
+
+#. Default: "Display widget in section"
+#: ../../facetednavigation/widgets/widget.py:66
+msgid "help_faceted_criteria_section"
+msgstr "Section de la widget"
+
+#. Default: "Title for widget to display in view page"
+#: ../../facetednavigation/widgets/widget.py:45
+msgid "help_faceted_criteria_title"
+msgstr "Titre de la widget affiché sur la page de recherche"
 
 #. Default: "Position of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:41
@@ -162,7 +242,7 @@ msgstr "Type de widget."
 
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "in current results"
-msgstr ""
+msgstr "dans les résultats courants"
 
 #. Default: "Select all items"
 #: ../../facetednavigation/browser/template/configure.pt:110

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-17 16:07+0000\n"
+"POT-Creation-Date: 2011-05-19 16:30+0000\n"
 "PO-Revision-Date: 2011-05-09 18:16+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,10 +137,90 @@ msgstr "Alle Einträge"
 msgid "criteria_view_remove_all"
 msgstr "[X] Alle entfernen"
 
+#. Default: "Count results"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
+msgid "faceted_criteria_count"
+msgstr ""
+
+#. Default: "Default value"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:58
+msgid "faceted_criteria_default"
+msgstr ""
+
+#. Default: "Hide items with zero results"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:48
+msgid "faceted_criteria_emptycounthide"
+msgstr ""
+
+#. Default: "Hidden"
+#: ../../facetednavigation/widgets/widget.py:73
+msgid "faceted_criteria_hidden"
+msgstr ""
+
+#. Default: "Catalog index"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+msgid "faceted_criteria_index"
+msgstr ""
+
+#. Default: "Position"
+#: ../../facetednavigation/widgets/widget.py:54
+msgid "faceted_criteria_position"
+msgstr ""
+
+#. Default: "Section"
+#: ../../facetednavigation/widgets/widget.py:64
+msgid "faceted_criteria_section"
+msgstr ""
+
+#. Default: "Friendly name"
+#: ../../facetednavigation/widgets/widget.py:43
+msgid "faceted_criteria_title"
+msgstr ""
+
 #. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "faceted_path_widget_errors"
 msgstr "Dieses Widget wird ignoriert, weil die Wurzel nicht erreichbar ist oder keine Ordner-artigen Kinder da sind."
+
+#. Default: "Display number of results per letter"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:41
+msgid "help_faceted_criteria_alphabetic_count"
+msgstr ""
+
+#. Default: "This option works only if \"count results\" is enabled"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:49
+msgid "help_faceted_criteria_criteria_emptycounthide"
+msgstr ""
+
+#. Default: "Default letter to be selected"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:59
+msgid "help_faceted_criteria_default"
+msgstr ""
+
+#. Default: "Hide widget"
+#: ../../facetednavigation/widgets/widget.py:74
+msgid "help_faceted_criteria_hidden"
+msgstr ""
+
+#. Default: "Catalog index to use for search"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+msgid "help_faceted_criteria_index"
+msgstr ""
+
+#. Default: "Widget position in page"
+#: ../../facetednavigation/widgets/widget.py:55
+msgid "help_faceted_criteria_position"
+msgstr ""
+
+#. Default: "Display widget in section"
+#: ../../facetednavigation/widgets/widget.py:66
+msgid "help_faceted_criteria_section"
+msgstr ""
+
+#. Default: "Title for widget to display in view page"
+#: ../../facetednavigation/widgets/widget.py:45
+msgid "help_faceted_criteria_title"
+msgstr ""
 
 #. Default: "Position of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:41

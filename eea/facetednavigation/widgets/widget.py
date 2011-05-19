@@ -25,6 +25,7 @@ from eea.facetednavigation.interfaces import IFacetedCatalog
 
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.widgets.interfaces import IWidget
+from eea.facetednavigation import EEAMessageFactory as _
 
 def compare(a, b):
     """ Compare lower values
@@ -39,11 +40,10 @@ CommonEditSchema = Schema((
         required=True,
         widget=StringWidget(
             size=25,
-            label='Friendly name',
-            label_msgid='faceted_criteria_title',
-            description='Title for widget to display in view page',
-            description_msgid='help_faceted_criteria_title',
-            i18n_domain="eea"
+            label=_('faceted_criteria_title',
+                    default=u"Friendly name"),
+            description=_('help_faceted_criteria_title',
+                          default=u"Title for widget to display in view page"),
         )
     ),
     StringField('position',
@@ -51,11 +51,9 @@ CommonEditSchema = Schema((
         vocabulary_factory="eea.faceted.vocabularies.WidgetPositions",
         widget=SelectionWidget(
             format='select',
-            label='Position',
-            label_msgid='faceted_criteria_position',
-            description='Widget position in page',
-            description_msgid='help_faceted_criteria_position',
-            i18n_domain="eea"
+            label=_('faceted_criteria_position', default=u'Position'),
+            description=_('help_faceted_criteria_position',
+                          default=u"Widget position in page"),
         )
     ),
     StringField('section',
@@ -63,21 +61,17 @@ CommonEditSchema = Schema((
         vocabulary_factory="eea.faceted.vocabularies.WidgetSections",
         widget=SelectionWidget(
             format='select',
-            label='Section',
-            label_msgid='faceted_criteria_section',
-            description='Display widget in section',
-            description_msgid='help_faceted_criteria_section',
-            i18n_domain="eea"
+            label=_('faceted_criteria_section',
+                    default=u"Section"),
+            description=_('help_faceted_criteria_section',
+                          default=u"Display widget in section"),
         )
     ),
     BooleanField('hidden',
         schemata="layout",
         widget=BooleanWidget(
-            label='Hidden',
-            label_msgid='faceted_criteria_hidden',
-            description='Hide widget',
-            description_msgid='help_faceted_criteria_hidden',
-            i18n_domain="eea"
+            label=_('faceted_criteria_hidden', default=u'Hidden'),
+            description=_('help_faceted_criteria_hidden', default=u"Hide widget"),
         )
     ),
 ))

@@ -18,7 +18,7 @@ from eea.facetednavigation.widgets.alphabetic.alphabets import (
 from eea.facetednavigation.widgets.alphabetic.interfaces import (
     IAlphabeticWidget,
 )
-
+from eea.facetednavigation import EEAMessageFactory as _
 
 logger = logging.getLogger('eea.facetednavigation.widgets.alphabetic')
 
@@ -29,31 +29,25 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.AlphabeticCatalogIndexes',
         widget=SelectionWidget(
             format='select',
-            label='Catalog index',
-            label_msgid='faceted_criteria_index',
-            description='Catalog index to use for search',
-            description_msgid='help_faceted_criteria_index',
-            i18n_domain="eea"
+            label=_('faceted_criteria_index', default=u"Catalog index"),
+            description=_('help_faceted_criteria_index',
+                          default=u"Catalog index to use for search"),
         )
     ),
     BooleanField('count',
         schemata="countable",
         widget=BooleanWidget(
-            label='Count results',
-            label_msgid='faceted_criteria_count',
-            description='Display number of results per letter',
-            description_msgid='help_faceted_criteria_alphabetic_count',
-            i18n_domain="eea"
+            label=_('faceted_criteria_count', default=u"Count results"),
+            description=_('help_faceted_criteria_alphabetic_count',
+                          default=u'Display number of results per letter'),
         )
     ),
     BooleanField('hidezerocount',
         schemata="countable",
         widget=BooleanWidget(
-            label='Hide items with zero results',
-            label_msgid='faceted_criteria_emptycounthide',
-            description='This option works only if "count results" is enabled',
-            description_msgid='help_faceted_criteria_criteria_emptycounthide',
-            i18n_domain="eea"
+            label=_('faceted_criteria_emptycounthide', default=u"Hide items with zero results"),
+            description=_('help_faceted_criteria_criteria_emptycounthide',
+                          default=u'This option works only if "count results" is enabled'),
         )
     ),
     StringField('default',
@@ -61,11 +55,9 @@ EditSchema = Schema((
         widget=StringWidget(
             size=3,
             maxlength=1,
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description='Default letter to be selected',
-            description_msgid='help_faceted_criteria_default',
-            i18n_domain="eea"
+            label=_('faceted_criteria_default', default=u"Default value"),
+            description=_('help_faceted_criteria_default',
+                          default=u"Default letter to be selected"),
         )
     ),
 ))
