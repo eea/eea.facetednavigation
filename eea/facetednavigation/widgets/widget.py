@@ -6,6 +6,7 @@ import operator
 from zope import interface
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
+from zope.i18nmessageid.message import Message
 from zope.schema.interfaces import IVocabularyFactory
 from zope.component import queryUtility
 from BTrees.IIBTree import weightedIntersection, IISet
@@ -180,7 +181,7 @@ class Widget(ATWidget):
         if not msgid:
             return ''
 
-        if hasattr(msgid, 'domain'):
+        if isinstance(msgid, Message):
             return translate(msgid, context=self.request)
 
         tool = getToolByName(self.context, 'translation_service')
