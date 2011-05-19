@@ -22,7 +22,7 @@
     name string:${wid}_button;
     id string:${wid}_button;"
     i18n:attributes="value" />
-  <div>
+  <div class="faceted-textwidget-place-all">
   <input type="radio" checked="checked" tal:attributes="
     name string:${wid}_place;
     id string:${wid}_place_all;
@@ -30,7 +30,7 @@
   <label tal:attributes="for string:${wid}_place_all"
     i18n:translate="">all items</label>
   </div>
-  <div>
+  <div class="faceted-textwidget-place-current">
   <input type="radio" tal:attributes="
     name string:${wid}_place;
     id string:${wid}_place_current;
