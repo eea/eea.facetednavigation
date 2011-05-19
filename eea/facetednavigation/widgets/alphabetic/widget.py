@@ -45,9 +45,10 @@ EditSchema = Schema((
     BooleanField('hidezerocount',
         schemata="countable",
         widget=BooleanWidget(
-            label=_('faceted_criteria_emptycounthide', default=u"Hide items with zero results"),
+            label=_('faceted_criteria_emptycounthide',
+               default=u"Hide items with zero results"),
             description=_('help_faceted_criteria_criteria_emptycounthide',
-                          default=u'This option works only if "count results" is enabled'),
+               default=u'This option works only if "count results" is enabled'),
         )
     ),
     StringField('default',

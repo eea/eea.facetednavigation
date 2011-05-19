@@ -65,13 +65,18 @@ class FacetedContainerView(object):
             yield widget(self.context, self.request, criterion)
 
     def check_display_criteria(self, faceted_html):
-        return self.context.unrestrictedTraverse('@@faceted_display_criteria_checker').check(faceted_html)
+        """ Check criteria
+        """
+        return self.context.unrestrictedTraverse(
+            '@@faceted_display_criteria_checker').check(faceted_html)
 
 
 class DisplayCriteriaCheckerView(BrowserView):
     """This views checks if criteria are displayed on faceted navigation
     """
     def check(self, faceted_html):
+        """ Check
+        """
         if 'listingBar' in faceted_html:
             return True
         elif self.language_present():

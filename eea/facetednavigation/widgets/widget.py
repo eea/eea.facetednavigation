@@ -71,7 +71,8 @@ CommonEditSchema = Schema((
         schemata="layout",
         widget=BooleanWidget(
             label=_('faceted_criteria_hidden', default=u'Hidden'),
-            description=_('help_faceted_criteria_hidden', default=u"Hide widget"),
+            description=_('help_faceted_criteria_hidden',
+                          default=u"Hide widget"),
         )
     ),
 ))
