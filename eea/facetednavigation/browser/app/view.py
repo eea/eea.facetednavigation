@@ -5,6 +5,7 @@ from zope.component import queryAdapter
 from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import IFacetedWrapper
+from Products.Five.browser import BrowserView
 
 class FacetedContainerView(object):
     """ Faceted view
@@ -12,17 +13,6 @@ class FacetedContainerView(object):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-
-    @property
-    def language_present(self):
-        """ Is there any widget for Language index?
-        """
-        criteria = ICriteria(self.context)
-        for criterion in criteria.values():
-            if criterion.get('index', None) == 'Language':
-                if not criterion.hidden:
-                    return True
-        return False
 
     @property
     def positions(self):
@@ -73,3 +63,31 @@ class FacetedContainerView(object):
                 continue
             widget = criteria.widget(wid=criterion.get('widget'))
             yield widget(self.context, self.request, criterion)
+
+    def check_display_criteria(self, faceted_html):
+        return self.context.unrestrictedTraverse('@@faceted_display_criteria_checker').check(faceted_html)
+
+
+class DisplayCriteriaCheckerView(BrowserView):
+    """This views checks if criteria are displayed on faceted navigation
+    """
+    def check(self, faceted_html):
+        if 'listingBar' in faceted_html:
+            return True
+        elif self.language_present():
+            return True
+        else:
+            return False
+
+    def language_present(self):
+        """ Is there any widget for Language index?
+        """
+
+        criteria = ICriteria(self.context)
+        for criterion in criteria.values():
+            if criterion.get('index', None) == 'Language':
+                if not criterion.hidden:
+                    return True
+        else:
+            return False
+

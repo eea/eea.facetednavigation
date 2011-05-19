@@ -16,6 +16,13 @@
 
   <browser:page
     for="..interfaces.IFacetedNavigable"
+    name="faceted_display_criteria_checker"
+    class=".app.view.DisplayCriteriaCheckerView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
     name="facetednavigation_simple_view"
     template="template/simple_view.pt"
     class=".app.view.FacetedContainerView"

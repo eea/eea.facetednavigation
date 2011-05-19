@@ -5,7 +5,7 @@
 
   faceted_query nocall:here/@@faceted_query;
   faceted_html python:view_mode and faceted_query(ajax=False) or '';
-  visible python:edit_mode or view.language_present or ('listingBar' in faceted_html);
+  visible python:edit_mode or view.check_display_criteria(faceted_html);
   positions python:visible and view.positions or [];
   positions python:dict((x.value, x.title) for x in positions);
 ">
