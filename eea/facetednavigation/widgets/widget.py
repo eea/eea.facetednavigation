@@ -234,16 +234,21 @@ class Widget(ATWidget):
         ctool = getToolByName(self.context, catalog)
         if not ctool:
             return []
+
         index = self.data.get('index', None)
         if not index:
             return []
+
         index = ctool.Indexes.get(index, None)
         if not index:
             return []
 
         res = []
         for val in index.uniqueValues():
-            if not isinstance(val, unicode):
+            if isinstance(val, (int, float)):
+                val = unicode(str(val), 'utf-8')
+
+            elif not isinstance(val, unicode):
                 try:
                     val = unicode(val, 'utf-8')
                 except Exception:
@@ -252,7 +257,9 @@ class Widget(ATWidget):
             val = val.strip()
             if not val:
                 continue
+
             res.append(val)
+
         return res
 
     def portal_vocabulary(self):
