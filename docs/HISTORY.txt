@@ -3,213 +3,345 @@ Changelog
 
 4.0 - (unreleased)
 ------------------
- * Bug fix: catalog index vocabulary works with int or float values [thomasdesvenain]
- * Change: Delegate criteria display check to a view so it can be customized [thomasdesvenain]
- * Bug fix: Fixed cachekeys as they where not unique in some situations [voineali #4254]
- * Feature: Added a po generation script. added french translations.
-   Added translations file for plone domain. Internationalized schemata.
-   Optimizations. [thomasdesvenain]
- * Feature: i18n: added locales directory and registered it. added pot-file and po file
-   with translations for german. Added i18n-domains to a bunch of pt-files to
-   make i18ndude happy. [jensens, 2011-05-09]
- * Bug fix: When navigating the tabs of eea.relations popup,
-   the number of AJAX calls increases [voineali #3588, #4232]
- * Cleanup: Dropped simplejson dependency [voineali #4254]
- * Feature: Added a way to disable IPossibleFacetedNavigable for Plone default
-   Content-Types [voineali #4254] - Thanks to thomasdesvenain
- * Feature: Removed "Layout" menu, and override "Display" menu in order to
-   keep consistency and not to confuse novice users with to many places to
-   select object layout/display [voineali #4254]
- * Feature: Dropped p4a. dependencies [voineali #4254]
- * Bug fix: Fixed GenericSetup circular dependencies warning [voineali #4254]
- * Bug fix: Fixed Schema positional arguments warning [voineali #4254]
- * Bug fix: Fixed faceted_subtyper permissions [voineali #4254]
- * Bug fix: Fixed configure faceted permission [voineali #4254]
- * Feature: Simplified "possible faceted navigable" mechanism. Now all you have
-   to do is to implement IPossibleFacetedNavigable interface within your
-   configure.zcml, no more p4a.subtyper descriptors for each portal type [voineali #4254]
- * Cleanup: Fixed all pylint, pyflakes violations [voineali #4254]
- * Cleanup: Use "eea" i18n domain for all EEA packages [voineali #4254]
- * Bug fix: Non eea vocabularies values are translated [thomasdesvenain]
- * Bug fix: Plone 4.1 compatible [thomasdesvenain]
- * Feature: Keep input text for Text facet on submit [voineali]
- * Feature: If TAL wigdet returns a callable, call it [jensens]
- * Bug fix: Fix TAL and Text field set default value [voineali]
- * Bug fix: Fix facets position update [voineali]
- * Bug fix: Fix checkboxes facet set default value [voineali]
- * Feature: Path widget got depth query parameter. [jensens, 2011-03-01]
- * Bug fix: Fixed Widgets: TAL (removed index field, made expression visible),
-   Path (default handling was broken). Some code-cleanup and simplifications.
-   [jensens, 2011-03-01]
- * Change: Added entry-point for z3c.autoinclude to setup.py and thus make it
-   simple to install [jensens, 2011-02-22]
- * Bug fix: Fixed counting issue caused by jQuery 1.4 params style [voineali #3658]
- * Bug fix: Fixed alphabetic widget [voineali #3658]
- * Bug fix: Fixed text widget query [voineali #3974, #4018]
- * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
-   facet is visible [voineali #3970]
- * Bug fix: Fixed batch navigation [voineali]
- * Change: Modified SKOS view so that tests pass without LinguaPlone. [yomatters]
- * Change: Removed unnecessary menu item registration for syndication. [yomatters]
- * Bug fix: Fixed cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
- * Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]
 
-4.0-rc1 - (2010-11-15)
-----------------------
- * Feature: Moved to Plone collective and start make the package compatible with Plone 4.
-    [voineali, ghicaale, hpeteragitator]
+* Bug fix: catalog index vocabulary works with int or float values.
+  [thomasdesvenain]
 
-3.10 - (2011-04-19)
--------------------
- * Bug fix: Fixed subtyper access on Plone 2.5 [voineali]
-   Use this version on Plone 2.x as version 3.9 is broken.
+* Change: Delegate criteria display check to a view so it can be customized.
+  [thomasdesvenain]
 
-3.9 - (2011-04-19)
-------------------
- * Bug fix: Fixed permission for subtyper [voineali]
+* Bug fix: Fixed cachekeys as they where not unique in some situations.
+  [voineali #4254]
+
+* Feature: Added a po generation script.
+  Added french translations.
+  Added translations file for plone domain.
+  Internationalized schemata.
+  Optimizations.
+  [thomasdesvenain]
+
+* Feature: i18n: added locales directory and registered it.
+  Added pot-file and po file with translations for german.
+  Added i18n-domains to a bunch of pt-files to
+  make i18ndude happy. [jensens, 2011-05-09]
+
+* Bug fix: When navigating the tabs of eea.relations popup,
+  the number of AJAX calls increases [voineali #3588, #4232]
+
+* Cleanup: Dropped simplejson dependency [voineali #4254]
+
+* Feature: Added a way to disable IPossibleFacetedNavigable for Plone default
+  Content-Types [voineali #4254] - Thanks to thomasdesvenain
+
+* Feature: Removed "Layout" menu, and override "Display" menu in order to
+  keep consistency and not to confuse novice users with to many places to
+  select object layout/display [voineali #4254]
+
+* Feature: Dropped p4a. dependencies [voineali #4254]
+
+* Bug fix: Fixed GenericSetup circular dependencies warning [voineali #4254]
+
+* Bug fix: Fixed Schema positional arguments warning [voineali #4254]
+
+* Bug fix: Fixed faceted_subtyper permissions [voineali #4254]
+
+* Bug fix: Fixed configure faceted permission [voineali #4254]
+
+* Feature: Simplified "possible faceted navigable" mechanism. Now all you have
+  to do is to implement IPossibleFacetedNavigable interface within your
+  configure.zcml, no more p4a.subtyper descriptors for each portal type.
+  [voineali #4254]
+
+* Cleanup: Fixed all pylint, pyflakes violations [voineali #4254]
+
+* Cleanup: Use "eea" i18n domain for all EEA packages [voineali #4254]
+
+* Bug fix: Non eea vocabularies values are translated [thomasdesvenain]
+
+* Bug fix: Plone 4.1 compatible [thomasdesvenain]
+
+* Feature: Keep input text for Text facet on submit [voineali]
+
+* Feature: If TAL wigdet returns a callable, call it [jensens]
+
+* Bug fix: Fix TAL and Text field set default value [voineali]
+
+* Bug fix: Fix facets position update [voineali]
+
+* Bug fix: Fix checkboxes facet set default value [voineali]
+
+* Feature: Path widget got depth query parameter. [jensens, 2011-03-01]
+
+* Bug fix: Fixed Widgets: TAL (removed index field, made expression visible),
+  Path (default handling was broken). Some code-cleanup and simplifications.
+  [jensens, 2011-03-01]
+
+* Change: Added entry-point for z3c.autoinclude to setup.py and thus make it
+  simple to install [jensens, 2011-02-22]
+
+* Bug fix: Fixed counting issue caused by jQuery 1.4 params style.
+  [voineali #3658]
+
+* Bug fix: Fixed alphabetic widget [voineali #3658]
+
+* Bug fix: Fixed text widget query [voineali #3974, #4018]
+
+* Bug fix: Fixed JS Faceted URL change trigger on first page access if no
+  facet is visible [voineali #3970]
+
+* Bug fix: Fixed batch navigation [voineali]
+
+* Change: Modified SKOS view so that tests pass without LinguaPlone. [yomatters]
+
+* Change: Removed unnecessary menu item registration for syndication. [yomatters]
+
+* Bug fix: Fixed cache headers for @@faceted_counter, @@tagscloud_counter. [voineali #3935]
+
+* Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]
+
+
+4.0-rc1 (2010-11-15)
+--------------------
+
+* Feature: Moved to Plone collective and start make the package compatible with Plone 4.
+  [voineali, ghicaale, hpeteragitator]
+
+
+3.10 (2011-04-19)
+-----------------
+
+* Bug fix: Fixed subtyper access on Plone 2.5 [voineali]
+  Use this version on Plone 2.x as version 3.9 is broken.
+
+
+3.9 (2011-04-19)
+----------------
+
+* Bug fix: Fixed permission for subtyper [voineali]
+
 
 3.8 - (2010-12-22)
 ------------------
- * Bug fix: Removed UnicodeSplitter from text widget query as it was bugous and
-   fixed it to work also with "(", ")" in query [voineali #4018]
+
+* Bug fix: Removed UnicodeSplitter from text widget query as it was bugous and
+  fixed it to work also with "(", ")" in query [voineali #4018]
+
 
 3.7 - (2010-12-13)
 ------------------
- * Bug fix: Fixed text widget query for non ZCTextIndex indexes [voineali #3974]
- * Bug fix: Fixed JS Faceted URL change trigger on first page access if no
-   facet is visible [voineali #3970]
+
+* Bug fix: Fixed text widget query for non ZCTextIndex indexes.
+  [voineali #3974]
+
+* Bug fix: Fixed JS Faceted URL change trigger on first page access if no
+  facet is visible.
+  [voineali #3970]
+
 
 3.6 - (2010-11-30)
 ------------------
- * Bug fix: Set cache headers for @@faceted_counter, @@tagscloud_counter [voineali #3935]
+
+* Bug fix: Set cache headers for @@faceted_counter, @@tagscloud_counter
+ [voineali #3935]
+
 
 3.5 - (2010-11-23)
 ------------------
- * Bug fix: Faceted tal expression widget ignores values with value False [voineali #3890]
+
+* Bug fix: Faceted tal expression widget ignores values with value False.
+  [voineali #3890]
+
 
 3.4 - (2010-09-30)
 ------------------
- * Bug fix: Fixed search by words containing "(", "-" etc [ghicaale #3639c
- * Bug fix: Fixed random failure of daterange doctests [voineali #3664]
+
+* Bug fix: Fixed search by words containing "(", "-" etc [ghicaale #3639c
+
+* Bug fix: Fixed random failure of daterange doctests [voineali #3664]
+
 
 3.3 (2010-09-06)
 ----------------
- * Bug fix: Fixed expandable and collapsible widgets when used in combination with
-     hide zero count items [voineali #3457]
- * Bug fix: Fixed faceted counter for custom portal types defined by
-     portal_faceted tool [voineali #3139]
+* Bug fix: Fixed expandable and collapsible widgets when used in combination with
+  hide zero count items [voineali #3457]
+
+* Bug fix: Fixed faceted counter for custom portal types defined by
+  portal_faceted tool [voineali #3139]
+
 
 3.2 (2010-08-16)
 ----------------
- * Bug fix: Fixed alphabetic widget crash when REQUEST.LANGUAGE like 'it-it' [voineali #3499]
- * Change: Better small loader animation for facets, as the previous was not visible enough [demarant]
- * Feature: Added TAL Expression Widget to allow one to define dynamic queries
-     (e.g. limit faceted query to context path) [voineali #3538]
- * Change: Cleanup faceted js/css computing mechanism and use
-     portal_javascripts/portal_css instead as eea.jquery provides profiles for
-     each jQuery plugin [voineali #3553, #3487]
+
+* Bug fix: Fixed alphabetic widget crash when REQUEST.LANGUAGE like 'it-it'.
+  [voineali #3499]
+
+* Change: Better small loader animation for facets,
+  as the previous was not visible enough [demarant]
+
+* Feature: Added TAL Expression Widget to allow one to define dynamic queries
+  (e.g. limit faceted query to context path) [voineali #3538]
+
+* Change: Cleanup faceted js/css computing mechanism and use
+  portal_javascripts/portal_css instead as eea.jquery provides profiles for
+  each jQuery plugin [voineali #3553, #3487]
+
 
 3.1.1 (2010-07-07)
 ------------------
- * Bug fix: Fixed failing tests [voineali]
+
+* Bug fix: Fixed failing tests [voineali]
+
 
 3.1 (2010-07-01)
 ----------------
- * Bug fix: Fixed facets not appearing in google chrome [voineali #3371]
- * Feature: Use jquery.bbq plugin for browsing history [voineali #3371]
+
+* Bug fix: Fixed facets not appearing in google chrome [voineali #3371]
+
+* Feature: Use jquery.bbq plugin for browsing history [voineali #3371]
+
 
 3.0 (2010-06-16)
 ----------------
- * Change: faceted_view.css has no condition anymore in portal_css profile. Removed
-     duplicate from faceted_edit.css [voineali #3409]
- * Feature: Made Large Folder faceted navigable [voineali #3059]
- * Feature: Added special faceted widget ETag in order to easily generate another
-     faceted version id which is used by squid or other proxy caching systems.
-     See docs/versions.txt [voineali #3338]
- * Change: Cleanup old css/js profile by removing duplicated items (@@ ones) [voineali]
- * Feature: Make faceted navigation aware of collection's query. [#3275]
-     [Thanks to Izhar Firdaus]
- * Bug fix: Moved faceted actions from portal_fiveactions to portal_actions
-     as as it caused conflicts with p4a.plonecalendar and p4a.video. [#3275]
-     [Thanks to Izhar Firdaus]
- * Change: Refactored field.Vocabulary to be reused also with other fields
-     than StringField [voineali]
- * Upgrade step:
-     * Within portal_setup import all steps using 'EEA Faceted Navigation' profile
-         or reinstall it from portal_quickinstaller.
+
+* Change: faceted_view.css has no condition anymore in portal_css profile.
+  Removed duplicate from faceted_edit.css [voineali #3409]
+
+* Feature: Made Large Folder faceted navigable [voineali #3059]
+
+* Feature: Added special faceted widget ETag in order to easily generate another
+  faceted version id which is used by squid or other proxy caching systems.
+  See docs/versions.txt [voineali #3338]
+
+* Change: Cleanup old css/js profile by removing duplicated items (@@ ones)
+  [voineali]
+
+* Feature: Make faceted navigation aware of collection's query. [#3275]
+  [Thanks to Izhar Firdaus]
+
+* Bug fix: Moved faceted actions from portal_fiveactions to portal_actions
+  as as it caused conflicts with p4a.plonecalendar and p4a.video. [#3275]
+  [Thanks to Izhar Firdaus]
+
+* Change: Refactored field.Vocabulary to be reused also with other fields
+  than StringField [voineali]
+
+* Upgrade step:
+  Within portal_setup import all steps using 'EEA Faceted Navigation' profile
+  or reinstall it from portal_quickinstaller.
+
 
 2.0 (2010-05-07)
 ----------------
- * Change: Update API to easily access default criteria [voineali #2939]
- * Feature: Adjust faceted navigation JavaScript to work outside faceted navigable
-     contexts using a previously defined faceted navigable configuration. This way,
-     by providing faceted navigable URL it can be used in pop-ups,
-     dialogs, etc [voineali #3198]
- * Bug fix: Fixed that z3 vocabularies are not updated at runtime [voineali #3239]
+
+* Change: Update API to easily access default criteria [voineali #2939]
+
+* Feature: Adjust faceted navigation JavaScript to work outside faceted navigable
+  contexts using a previously defined faceted navigable configuration. This way,
+  by providing faceted navigable URL it can be used in pop-ups,
+  dialogs, etc [voineali #3198]
+
+* Bug fix: Fixed that z3 vocabularies are not updated at runtime [voineali #3239]
+
 
 1.9 (2010-03-26)
 ----------------
- * Bug fix: Fixed faceted text widget error [voineali #3162]
+
+* Bug fix: Fixed faceted text widget error [voineali #3162]
+
 
 1.8 (2010-03-18)
 ----------------
- * Bug fix: Fixed that after last update faceted widgets not responding [voineali #3157]
- * Feature: Added debug widget [voineali #3141]
+
+* Bug fix: Fixed that after last update faceted widgets not responding.
+  [voineali #3157]
+
+* Feature: Added debug widget [voineali #3141]
+
 
 1.7 (2010-03-16)
 ----------------
- * Change: Replaced after_query method with IWidgetFilterBrains adapter [voineali #3141]
- * Feature: Support non-ascii keywords vocabulary [voineali #3100]
+
+* Change: Replaced after_query method with IWidgetFilterBrains adapter.
+  [voineali #3141]
+
+* Feature: Support non-ascii keywords vocabulary [voineali #3100]
+
 
 1.6 (2010-02-15)
 ----------------
- * Feature: Enable and/or search operator on faceted checkbox widget [voineali #2940]
- * Feature: Added an error layer in order to easily see widgets with configuration
-     problems and fix them without disabling JavaScript in browser
-     and then trying to figure out which one is causing the problem and remove it.
- * Bug fix: Fixed relative path problems for path widget when using
-     in production [voineali #2625]
- * Change: Make date range widget more user friendly using
-     jquery ui datepicker [voineali #2871]
- * Change: Make date widget more user friendly using jQuery slider plugin [voineali #2871]
- * Bug fix: Fixed that if jquery is present in portal_javascirpts do not reload it in
-     faceted_view.js / faceted_edit.js [voineali]
+
+* Feature: Enable and/or search operator on faceted checkbox widget.
+  [voineali #2940]
+
+* Feature: Added an error layer in order to easily see widgets with configuration
+  problems and fix them without disabling JavaScript in browser
+  and then trying to figure out which one is causing the problem and remove it.
+
+* Bug fix: Fixed relative path problems for path widget when using
+  in production [voineali #2625]
+
+* Change: Make date range widget more user friendly using
+  jquery ui datepicker [voineali #2871]
+
+* Change: Make date widget more user friendly using jQuery slider plugin.
+  [voineali #2871]
+
+* Bug fix: Fixed that if jquery is present in portal_javascirpts do not reload it in
+  faceted_view.js / faceted_edit.js [voineali]
 
 1.5 (2010-01-18)
 ----------------
- * Feature: Add path (location) widget [voineali #2625]
- * Bug fix: Fixed translate UnicodeDecodeError [voineali #2907]
+
+* Feature: Add path (location) widget [voineali #2625]
+
+* Bug fix: Fixed translate UnicodeDecodeError [voineali #2907]
 
 1.4 (2009-11-27)
 ----------------
- * Feature: Memcache tagscloud_counter results. Also use eea.cache in order
-     to dynamically set and invalidate memcache dependencies. [voineali #2801]
- * Feature: Implemented a version control system for faceted configuration in order to
-    invalidate proxy cache systems like squid by requesting a new URL. [voineali #2783]
- * Bug fix: Fixed IE submit form when return is pressed in search field [voineali #2825]
- * Feature: Keep minimum of distinct URLs for same queries in order to
-     cache efficiently [voineali #2596]
+
+* Feature: Memcache tagscloud_counter results. Also use eea.cache in order
+  to dynamically set and invalidate memcache dependencies. [voineali #2801]
+
+* Feature: Implemented a version control system for faceted configuration
+  in order to invalidate proxy cache systems like squid by requesting a new URL.
+  [voineali #2783]
+
+* Bug fix: Fixed IE submit form when return is pressed in search field.
+  [voineali #2825]
+
+* Feature: Keep minimum of distinct URLs for same queries in order to
+  cache efficiently [voineali #2596]
 
 1.3 (2009-11-18)
 ----------------
- * Bug fix: Fixed document actions position too high. [thuliper #2792]
- * Bug fix: Scroll window to top when Less button is clicked. [voineali #2799]
+
+* Bug fix: Fixed document actions position too high. [thuliper #2792]
+
+* Bug fix: Scroll window to top when Less button is clicked. [voineali #2799]
 
 1.2 (2009-11-09)
 ----------------
- * Change: Remove LinguaPlone and ATVocabularyManager dependencies. [voineali]
- * Change: Make eea.faceted.tool optional. [voineali]
- * Bug fix: Fixed export/import criteria ids. [voineali]
+
+* Change: Remove LinguaPlone and ATVocabularyManager dependencies. [voineali]
+
+* Change: Make eea.faceted.tool optional. [voineali]
+
+* Bug fix: Fixed export/import criteria ids. [voineali]
+
 
 1.1 (2009-10-30)
 ----------------
- * Duplicate release 1.0r1
+
+* Duplicate release 1.0r1
 
 1.0r1 (2009-10-30)
 ------------------
- * Bug fix: This package should not be zip_safe. [voineali]
+
+* Bug fix: This package should not be zip_safe. [voineali]
+
 
 1.0 (2009-10-30)
 ----------------
- * Initial release
+
+* Initial release
 
