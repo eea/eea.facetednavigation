@@ -1,5 +1,6 @@
 """ Checkbox widget
 """
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import LinesField
@@ -11,9 +12,9 @@ from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 from Products.Archetypes.utils import DisplayList
 
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.faceted.vocabularies.utils import compare
 from eea.facetednavigation.widgets.widget import CountableWidget
+from eea.facetednavigation import EEAMessageFactory as _
 
 
 EditSchema = Schema((
@@ -47,11 +48,9 @@ EditSchema = Schema((
         schemata="default",
         vocabulary_factory='eea.faceted.vocabularies.PortalVocabularies',
         widget=SelectionWidget(
-            label='Vocabulary',
-            label_msgid='faceted_criteria_vocabulary',
-            description='Vocabulary to use to render widget items',
-            description_msgid='help_faceted_criteria_vocabulary',
-            i18n_domain="eea"
+            label=_('faceted_criteria_vocabulary', default=u"Vocabulary"),
+            description=_('help_faceted_criteria_vocabulary',
+                          default=u'Vocabulary to use to render widget items'),
         )
     ),
     StringField('catalog',
@@ -59,12 +58,11 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.UseCatalog',
         widget=SelectionWidget(
             format='select',
-            label='Catalog',
+            label=_('faceted_criteria_catalog', default=u'Catalog'),
             label_msgid='faceted_criteria_catalog',
-            description=('Get unique values from catalog as an alternative '
-                         'for vocabulary'),
-            description_msgid='help_faceted_criteria_catalog',
-            i18n_domain="eea"
+            description=_('help_faceted_criteria_catalog',
+                          default=u"Get unique values from catalog "
+                                  u"as an alternative for vocabulary"),
         )
     ),
     IntegerField('maxitems',

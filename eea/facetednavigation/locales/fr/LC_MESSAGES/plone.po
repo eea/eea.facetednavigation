@@ -30,3 +30,15 @@ msgstr "Critères"
 msgid "Sync faceted translations"
 msgstr ""
 
+#: Default: "Countable"
+msgid "label_schema_countable"
+msgstr "Dénombrement"
+
+#: Default: "Display"
+msgid "label_schema_display"
+msgstr "Affichage"
+
+#: Default: "Layout"
+msgid "label_schema_layout"
+msgstr "Gabarit"
+

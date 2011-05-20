@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-19 16:30+0000\n"
+"POT-Creation-Date: 2011-05-20 10:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,7 +45,7 @@ msgstr "Configurer la navigation à facettes"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:30
 msgid "Counters"
-msgstr ""
+msgstr "Dénombrement"
 
 #: ../../facetednavigation/browser/template/configure.pt:121
 msgid "Criterion details"
@@ -131,7 +131,7 @@ msgstr "Type"
 msgid "Widget type"
 msgstr "Type de widget"
 
-#: ../../facetednavigation/widgets/text/widget.pt:29
+#: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
 msgstr "dans tous les éléments"
 
@@ -140,13 +140,19 @@ msgstr "dans tous les éléments"
 msgid "criteria_view_remove_all"
 msgstr "[X] Tout supprimer"
 
+#. Default: "Catalog"
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
+msgid "faceted_criteria_catalog"
+msgstr "Catalogue"
+
 #. Default: "Count results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
+#: ../../facetednavigation/widgets/tagscloud/widget.py:143
 msgid "faceted_criteria_count"
-msgstr ""
+msgstr "Dénombrer les résultats"
 
 #. Default: "Default value"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:58
+#: ../../facetednavigation/widgets/alphabetic/widget.py:59
 msgid "faceted_criteria_default"
 msgstr "Valeur par défaut"
 
@@ -180,6 +186,11 @@ msgstr "Section"
 msgid "faceted_criteria_title"
 msgstr "Nom d'affichage"
 
+#. Default: "Vocabulary"
+#: ../../facetednavigation/widgets/checkbox/widget.py:51
+msgid "faceted_criteria_vocabulary"
+msgstr "Vocabulaire"
+
 #. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "faceted_path_widget_errors"
@@ -190,15 +201,20 @@ msgstr ""
 msgid "help_faceted_criteria_alphabetic_count"
 msgstr "Afficher le nombre de résultats par lettre"
 
+#. Default: "Get unique values from catalog as an alternative for vocabulary"
+#: ../../facetednavigation/widgets/checkbox/widget.py:63
+msgid "help_faceted_criteria_catalog"
+msgstr "Utiliser l'ensemble des valeurs indexées comme vocabulaire"
+
 #. Default: "This option works only if \"count results\" is enabled"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:49
+#: ../../facetednavigation/widgets/alphabetic/widget.py:50
 msgid "help_faceted_criteria_criteria_emptycounthide"
-msgstr ""
+msgstr "Cette option ne fonctionne que si le dénombrement des résultats est activé"
 
 #. Default: "Default letter to be selected"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:59
+#: ../../facetednavigation/widgets/alphabetic/widget.py:60
 msgid "help_faceted_criteria_default"
-msgstr ""
+msgstr "Lettre à sélectionner par défaut"
 
 #. Default: "Hide widget"
 #: ../../facetednavigation/widgets/widget.py:74
@@ -220,10 +236,20 @@ msgstr "Position de la widget dans la page"
 msgid "help_faceted_criteria_section"
 msgstr "Section de la widget"
 
+#. Default: "Display number of results near each tag"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:144
+msgid "help_faceted_criteria_tagscloud_count"
+msgstr "Afficher le nombre de résultats après chaque tag"
+
 #. Default: "Title for widget to display in view page"
 #: ../../facetednavigation/widgets/widget.py:45
 msgid "help_faceted_criteria_title"
 msgstr "Titre de la widget affiché sur la page de recherche"
+
+#. Default: "Vocabulary to use to render widget items"
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
+msgid "help_faceted_criteria_vocabulary"
+msgstr "Vocabulaire à utiliser pour les éléments du widget"
 
 #. Default: "Position of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:41
@@ -233,14 +259,14 @@ msgstr "Position de la widget"
 #. Default: "Display widget in section."
 #: ../../facetednavigation/browser/template/configure.pt:53
 msgid "help_widget_section"
-msgstr ""
+msgstr "Afficher le widget dans la section."
 
 #. Default: "Type of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:29
 msgid "help_widget_type"
 msgstr "Type de widget."
 
-#: ../../facetednavigation/widgets/text/widget.pt:35
+#: ../../facetednavigation/widgets/text/widget.pt:38
 msgid "in current results"
 msgstr "dans les résultats courants"
 

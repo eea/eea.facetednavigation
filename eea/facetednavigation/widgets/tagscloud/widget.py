@@ -15,6 +15,7 @@ from eea.faceted.vocabularies.utils import compare
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
+from eea.facetednavigation import EEAMessageFactory as _
 
 TagsCloudTypes = DisplayList((
     ("list", "List"),
@@ -139,11 +140,9 @@ EditSchema = Schema((
     BooleanField('count',
         schemata="countable",
         widget=BooleanWidget(
-            label='Count results',
-            label_msgid='faceted_criteria_count',
-            description='Display number of results near each tag',
-            description_msgid='help_faceted_criteria_tagscloud_count',
-            i18n_domain="eea"
+            label=_('faceted_criteria_count', default=u'Count results'),
+            description=_('help_faceted_criteria_tagscloud_count',
+                          default=u"Display number of results near each tag"),
         )
     ),
     BooleanField('hidezerocount',

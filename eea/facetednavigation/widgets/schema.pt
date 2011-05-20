@@ -11,12 +11,12 @@
   schematas python:edit_schema.getSchemataNames();" tal:attributes="
   id string:${cid}_edit_widget;
 ">
-
 <ul style="display: none">
   <tal:schemata repeat="schemata schematas">
     <li tal:attributes="id string:${cid}-${schemata}-header">
       <a tal:attributes="href string:#${cid}-${schemata}-tab">
-        <span tal:content="schemata/title" i18n:translate="">Edit fields</span>
+        <span tal:content="python:view.getTranslatedSchemaLabel(schemata)"
+              i18n:translate="">Edit fields</span>
       </a>
     </li>
   </tal:schemata>

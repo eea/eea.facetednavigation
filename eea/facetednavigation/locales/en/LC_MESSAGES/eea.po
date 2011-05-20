@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-19 16:30+0000\n"
+"POT-Creation-Date: 2011-05-20 10:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,7 +128,7 @@ msgstr ""
 msgid "Widget type"
 msgstr ""
 
-#: ../../facetednavigation/widgets/text/widget.pt:29
+#: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
 msgstr ""
 
@@ -137,13 +137,19 @@ msgstr ""
 msgid "criteria_view_remove_all"
 msgstr ""
 
+#. Default: "Catalog"
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
+msgid "faceted_criteria_catalog"
+msgstr ""
+
 #. Default: "Count results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
+#: ../../facetednavigation/widgets/tagscloud/widget.py:143
 msgid "faceted_criteria_count"
 msgstr ""
 
 #. Default: "Default value"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:58
+#: ../../facetednavigation/widgets/alphabetic/widget.py:59
 msgid "faceted_criteria_default"
 msgstr ""
 
@@ -177,6 +183,11 @@ msgstr ""
 msgid "faceted_criteria_title"
 msgstr ""
 
+#. Default: "Vocabulary"
+#: ../../facetednavigation/widgets/checkbox/widget.py:51
+msgid "faceted_criteria_vocabulary"
+msgstr ""
+
 #. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "faceted_path_widget_errors"
@@ -187,13 +198,18 @@ msgstr ""
 msgid "help_faceted_criteria_alphabetic_count"
 msgstr ""
 
+#. Default: "Get unique values from catalog as an alternative for vocabulary"
+#: ../../facetednavigation/widgets/checkbox/widget.py:63
+msgid "help_faceted_criteria_catalog"
+msgstr ""
+
 #. Default: "This option works only if \"count results\" is enabled"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:49
+#: ../../facetednavigation/widgets/alphabetic/widget.py:50
 msgid "help_faceted_criteria_criteria_emptycounthide"
 msgstr ""
 
 #. Default: "Default letter to be selected"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:59
+#: ../../facetednavigation/widgets/alphabetic/widget.py:60
 msgid "help_faceted_criteria_default"
 msgstr ""
 
@@ -217,9 +233,19 @@ msgstr ""
 msgid "help_faceted_criteria_section"
 msgstr ""
 
+#. Default: "Display number of results near each tag"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:144
+msgid "help_faceted_criteria_tagscloud_count"
+msgstr ""
+
 #. Default: "Title for widget to display in view page"
 #: ../../facetednavigation/widgets/widget.py:45
 msgid "help_faceted_criteria_title"
+msgstr ""
+
+#. Default: "Vocabulary to use to render widget items"
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
+msgid "help_faceted_criteria_vocabulary"
 msgstr ""
 
 #. Default: "Position of the widget."
@@ -237,7 +263,7 @@ msgstr ""
 msgid "help_widget_type"
 msgstr ""
 
-#: ../../facetednavigation/widgets/text/widget.pt:35
+#: ../../facetednavigation/widgets/text/widget.pt:38
 msgid "in current results"
 msgstr ""
 

@@ -1,7 +1,11 @@
 """ Schemas
 """
+from zope.i18nmessageid.message import MessageFactory
 from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
 from Products.Five.browser import BrowserView
+
+PMF = MessageFactory('plone')
+
 
 class Schema(BrowserView):
     """ Handle widgets in edit mode
@@ -17,3 +21,8 @@ class Schema(BrowserView):
 
     def __call__(self, **kwargs):
         return self.index()
+
+    def getTranslatedSchemaLabel(self, schema):
+        label = u"label_schema_%s" % schema
+        default = unicode(schema).capitalize()
+        return PMF(label, default=default)
