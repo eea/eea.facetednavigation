@@ -69,31 +69,25 @@ EditSchema = Schema((
         schemata="display",
         default=0,
         widget=IntegerWidget(
-            label='Maximum items',
-            label_msgid='faceted_criteria_maxitems',
-            description='Number of items visible in widget',
-            description_msgid='help_faceted_criteria_maxitems',
-            i18n_domain="eea"
+            label=_('faceted_criteria_maxitems', default=u"Maximum items"),
+            description=_('help_faceted_criteria_maxitems',
+                          default=u'Number of items visible in widget'),
         )
     ),
     BooleanField('sortreversed',
         schemata="display",
         widget=BooleanWidget(
-            label='Reverse options',
-            label_msgid='faceted_criteria_reverse_options',
-            description='Sort options reversed',
-            description_msgid='help_faceted_criteria_reverse_options',
-            i18n_domain="eea"
+            label=_('faceted_criteria_reverse_options', default=u"Reverse options"),
+            description=_('help_faceted_criteria_reverse_options',
+                          default=u"Sort options reversed"),
         )
     ),
     BooleanField('count',
         schemata="countable",
         widget=BooleanWidget(
-            label='Count results',
-            label_msgid='faceted_criteria_count',
-            description='Display number of results near each option',
-            description_msgid='help_faceted_criteria_count',
-            i18n_domain="eea"
+            label=_('faceted_criteria_count', default=u"Count results"),
+            description=_('help_faceted_criteria_count',
+                          default=u"Display number of results near each option"),
         )
     ),
     BooleanField('hidezerocount',

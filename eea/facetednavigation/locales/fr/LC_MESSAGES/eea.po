@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-20 10:10+0000\n"
+"POT-Creation-Date: 2011-05-20 10:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -147,6 +147,7 @@ msgstr "Catalogue"
 
 #. Default: "Count results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
+#: ../../facetednavigation/widgets/checkbox/widget.py:88
 #: ../../facetednavigation/widgets/tagscloud/widget.py:143
 msgid "faceted_criteria_count"
 msgstr "Dénombrer les résultats"
@@ -171,10 +172,20 @@ msgstr "Masqué"
 msgid "faceted_criteria_index"
 msgstr "Index du catalogue"
 
+#. Default: "Maximum items"
+#: ../../facetednavigation/widgets/checkbox/widget.py:72
+msgid "faceted_criteria_maxitems"
+msgstr "Nombre d'items maximum"
+
 #. Default: "Position"
 #: ../../facetednavigation/widgets/widget.py:54
 msgid "faceted_criteria_position"
 msgstr "Position"
+
+#. Default: "Reverse options"
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
+msgid "faceted_criteria_reverse_options"
+msgstr "Inverser l'ordre des valeurs"
 
 #. Default: "Section"
 #: ../../facetednavigation/widgets/widget.py:64
@@ -206,6 +217,11 @@ msgstr "Afficher le nombre de résultats par lettre"
 msgid "help_faceted_criteria_catalog"
 msgstr "Utiliser l'ensemble des valeurs indexées comme vocabulaire"
 
+#. Default: "Display number of results near each option"
+#: ../../facetednavigation/widgets/checkbox/widget.py:89
+msgid "help_faceted_criteria_count"
+msgstr "Afficher le nombre de résultats de chaque valeur"
+
 #. Default: "This option works only if \"count results\" is enabled"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:50
 msgid "help_faceted_criteria_criteria_emptycounthide"
@@ -226,10 +242,20 @@ msgstr "Masquer la widget"
 msgid "help_faceted_criteria_index"
 msgstr "Index catalogue à interroger pour la recherche"
 
+#. Default: "Number of items visible in widget"
+#: ../../facetednavigation/widgets/checkbox/widget.py:73
+msgid "help_faceted_criteria_maxitems"
+msgstr "Nombre maximum d'éléments visibles dans la widget"
+
 #. Default: "Widget position in page"
 #: ../../facetednavigation/widgets/widget.py:55
 msgid "help_faceted_criteria_position"
 msgstr "Position de la widget dans la page"
+
+#. Default: "Sort options reversed"
+#: ../../facetednavigation/widgets/checkbox/widget.py:81
+msgid "help_faceted_criteria_reverse_options"
+msgstr ""
 
 #. Default: "Display widget in section"
 #: ../../facetednavigation/widgets/widget.py:66
