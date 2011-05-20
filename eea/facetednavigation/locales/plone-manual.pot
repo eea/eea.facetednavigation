@@ -41,3 +41,15 @@ msgstr ""
 #: Default: "Countable"
 msgid "label_schema_countable"
 msgstr ""
+
+msgid "Portal type"
+msgstr ""
+
+msgid "Sort on"
+msgstr ""
+
+msgid "Current search"
+msgstr ""
+
+msgid "Object provides"
+msgstr ""

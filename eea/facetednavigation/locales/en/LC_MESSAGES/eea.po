@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-20 10:58+0000\n"
+"POT-Creation-Date: 2011-05-20 16:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,14 @@ msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:84
 msgid "Export"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:133
+msgid "Faceted navigation disabled"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:122
+msgid "Faceted navigation enabled"
 msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
@@ -144,7 +152,7 @@ msgstr ""
 
 #. Default: "Count results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
-#: ../../facetednavigation/widgets/checkbox/widget.py:88
+#: ../../facetednavigation/widgets/checkbox/widget.py:89
 #: ../../facetednavigation/widgets/tagscloud/widget.py:143
 msgid "faceted_criteria_count"
 msgstr ""
@@ -215,7 +223,7 @@ msgid "help_faceted_criteria_catalog"
 msgstr ""
 
 #. Default: "Display number of results near each option"
-#: ../../facetednavigation/widgets/checkbox/widget.py:89
+#: ../../facetednavigation/widgets/checkbox/widget.py:90
 msgid "help_faceted_criteria_count"
 msgstr ""
 
@@ -250,7 +258,7 @@ msgid "help_faceted_criteria_position"
 msgstr ""
 
 #. Default: "Sort options reversed"
-#: ../../facetednavigation/widgets/checkbox/widget.py:81
+#: ../../facetednavigation/widgets/checkbox/widget.py:82
 msgid "help_faceted_criteria_reverse_options"
 msgstr ""
 

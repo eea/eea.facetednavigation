@@ -14,6 +14,9 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
 
+msgid "Current search"
+msgstr "Recherche courante"
+
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
 msgstr "Désactiver la navigation par facettes"
@@ -25,6 +28,15 @@ msgstr "Activer la navigation par facettes"
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Critères"
+
+msgid "Object provides"
+msgstr "Interfaces des objets"
+
+msgid "Portal type"
+msgstr "Type de contenu"
+
+msgid "Sort on"
+msgstr "Tri"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Sync faceted translations"

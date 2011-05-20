@@ -17,6 +17,7 @@ from eea.facetednavigation.events import (
     FacetedDisabledEvent,
     FacetedEnabledEvent,
 )
+from eea.facetednavigation import EEAMessageFactory as _
 
 
 class FacetedPublicSubtyper(BrowserView):
@@ -34,8 +35,7 @@ class FacetedPublicSubtyper(BrowserView):
         """
         if self.request:
             if msg:
-                IStatusMessage(self.request).addStatusMessage(
-                    str(msg), type='info')
+                IStatusMessage(self.request).addStatusMessage(msg, type='info')
             self.request.response.redirect(self.context.absolute_url())
         return msg
 
@@ -119,7 +119,7 @@ class FacetedSubtyper(FacetedPublicSubtyper):
         alsoProvides(self.context, IFacetedNavigable)
         notify(FacetedEnabledEvent(self.context))
 
-        self._redirect('Faceted navigation enabled')
+        self._redirect(_('Faceted navigation enabled'))
 
     def disable(self):
         """ See IFacetedSubtyper
@@ -130,4 +130,4 @@ class FacetedSubtyper(FacetedPublicSubtyper):
         notify(FacetedWillBeDisabledEvent(self.context))
         noLongerProvides(self.context, IFacetedNavigable)
         notify(FacetedDisabledEvent(self.context))
-        self._redirect('Faceted navigation disabled')
+        self._redirect(_('Faceted navigation disabled'))

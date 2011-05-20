@@ -14,6 +14,9 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+msgid "Current search"
+msgstr ""
+
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
 msgstr ""
@@ -24,6 +27,15 @@ msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
+msgstr ""
+
+msgid "Object provides"
+msgstr ""
+
+msgid "Portal type"
+msgstr ""
+
+msgid "Sort on"
 msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
