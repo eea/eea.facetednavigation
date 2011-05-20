@@ -170,39 +170,29 @@ class Widget(ATWidget):
         """
         return {}
 
-    def translate(self, msgid):
-        """ Use PloneMessageFactory to translate msgid
+    def translate(self, message):
+        """ Use zope.i18n to translate message
         """
-        if not msgid:
+        if not message:
             return ''
+        elif isinstance(message, Message):
+            # message is an i18n message
+            return translate(message, context=self.request)
+        else:
+            # message is a simple msgid
+            for domain in ['eea', 'plone']:
+                if isinstance(message, str):
+                    try:
+                        message = message.decode('utf-8')
+                    except Exception, err:
+                        logger.exception(err)
+                        continue
 
-        if isinstance(msgid, Message):
-            return translate(msgid, context=self.request)
-
-        tool = getToolByName(self.context, 'translation_service')
-        for domain in ['eea.facetednavigation', 'eea.faceted',
-                       'eea.translations', 'plone']:
-            try:
-                value = tool.utranslate(domain, msgid, {}, context=self.context,
-                            target_language=self.request.get('LANGUAGE', 'en'),
-                            default=msgid)
-            except Exception, err:
-                logger.exception(err)
-                continue
-
-            try:
-                if not isinstance(value, unicode):
-                    value = value.decode('utf-8')
-                if not isinstance(msgid, unicode):
-                    msgid = msgid.decode('utf-8')
-            except Exception, err:
-                logger.exception(err)
-                continue
-
-            if value != msgid:
-                return value
-
-        return msgid
+                value = translate(message, domain=domain, context=self.request)
+                if value != message:
+                    return value
+            else:
+                return message
 
     def cleanup(self, string):
         """ Quote string
