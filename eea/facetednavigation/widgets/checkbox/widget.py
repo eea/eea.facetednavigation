@@ -77,7 +77,8 @@ EditSchema = Schema((
     BooleanField('sortreversed',
         schemata="display",
         widget=BooleanWidget(
-            label=_('faceted_criteria_reverse_options', default=u"Reverse options"),
+            label=_('faceted_criteria_reverse_options',
+                    default=u"Reverse options"),
             description=_('help_faceted_criteria_reverse_options',
                           default=u"Sort options reversed"),
         )
@@ -87,7 +88,7 @@ EditSchema = Schema((
         widget=BooleanWidget(
             label=_('faceted_criteria_count', default=u"Count results"),
             description=_('help_faceted_criteria_count',
-                          default=u"Display number of results near each option"),
+                         default=u"Display number of results near each option"),
         )
     ),
     BooleanField('hidezerocount',

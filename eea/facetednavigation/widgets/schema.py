@@ -23,6 +23,8 @@ class Schema(BrowserView):
         return self.index()
 
     def getTranslatedSchemaLabel(self, schema):
+        """Get message for schemata
+        """
         label = u"label_schema_%s" % schema
         default = unicode(schema).capitalize()
         return PMF(label, default=default)
