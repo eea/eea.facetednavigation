@@ -76,6 +76,12 @@ You can download a sample buildout at:
 
   https://svn.plone.org/svn/collective/eea.facetednavigation/buildout
 
+Getting started
+===============
+
+Go to the "Actions" tab on a Collection of Folder, and click "enable faceted
+navigation".
+
 Dependecies
 ===========
 
