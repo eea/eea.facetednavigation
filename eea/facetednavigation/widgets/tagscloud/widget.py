@@ -79,6 +79,28 @@ EditSchema = Schema((
             i18n_domain="eea.facetednavigation"
         )
     ),
+    StringField('colormin',
+        schemata="display",
+        default="A1BE7E",
+        widget=StringWidget(
+            label='Minimum color',
+            label_msgid='faceted_criteria_colormin',
+            description='Tagscloud minimum color',
+            description_msgid='help_faceted_criteria_colormin',
+            i18n_domain="eea.facetednavigation"
+        )
+    ),
+    StringField('colormax',
+        schemata="display",
+        default="95B229",
+        widget=StringWidget(
+            label='Maximum color',
+            label_msgid='faceted_criteria_colormax',
+            description='Tagscloud max color',
+            description_msgid='help_faceted_criteria_colormax',
+            i18n_domain="eea.facetednavigation"
+        )
+    ),
     BooleanField('sortreversed',
         schemata="display",
         widget=BooleanWidget(

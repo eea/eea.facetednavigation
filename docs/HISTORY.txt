@@ -1,11 +1,13 @@
 Changelog
 =========
-[Alexandru Ghica - alec.ghica@eaudeweb.ro]
-[Alin Voinea - alin.voinea@eaudeweb.ro]
-[Antonio De Marinis - demarinis@eea.europa.eu]
+[Alexandru Ghica - alec.ghica at eaudeweb ro]
+[Alin Voinea - alin.voinea at eaudeweb ro]
+[Antonio De Marinis - demarinis at eea europa eu]
 
 3.11-dev - (unreleased)
 -----------------------
+ * Feature: Replaced hardcoded green colors in Tags Widget in order to easily
+   customize faceted theme [voineali]
 
 3.10 - (2011-04-19)
 -------------------
