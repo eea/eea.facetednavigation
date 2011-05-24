@@ -36,19 +36,19 @@ It comes with plenty of configuration options and features like:
    5. Expandable and collapsable widgets with many values
    6. Automatically counts number of content items beside each facet value
    7. Possibility to show or hide the options with zero results
-     (show only the facets which return content)
+      (show only the facets which return content)
    8. Ability to create your custom content types definition to be used
       as a combination of interface and portal type, presented in a single widget.
    9. Export of search result in RSS.
-  10. Pleasant user interface based on Ajax JQuery, implemented with "deep linking",
-      so bookmarking a faceted query works, browser history supported.
-  11. Export / Import of faceted settings as XML. Useful to replicate same facets
-      navigation on another site.
-  12. Search engine friendly, disabling javascript acts as a normal
-      collection batch list.
-  13. Synchronisation of settings across multiple languages, I18N support.
-  14. High performance by caching faceted catalog queries via distributed
-      memory object caching system: memcached
+   10. Pleasant user interface based on Ajax JQuery, implemented with "deep linking",
+       so bookmarking a faceted query works, browser history supported.
+   11. Export / Import of faceted settings as XML. Useful to replicate same facets
+       navigation on another site.
+   12. Search engine friendly, disabling javascript acts as a normal
+       collection batch list.
+   13. Synchronisation of settings across multiple languages, I18N support.
+   14. High performance by caching faceted catalog queries via distributed
+       memory object caching system: memcached
 
 Dependecies
 ===========
@@ -102,4 +102,3 @@ Funding
   EEA_ - European Enviroment Agency (EU)
 
 .. _EEA: http://www.eea.europa.eu/
-
