@@ -10,7 +10,7 @@ VERSION = open(join(*PATH)).read().strip()
 
 setup(name=NAME,
       version=VERSION,
-      description="EEA Faced navigation",
+      description="EEA Faceted Navigation (Plone 2.5, Plone 3.x)",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
