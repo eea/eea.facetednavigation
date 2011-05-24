@@ -4,8 +4,8 @@ Changelog
 [Alin Voinea - alin.voinea at eaudeweb ro]
 [Antonio De Marinis - demarinis at eea europa eu]
 
-3.11-dev - (unreleased)
------------------------
+3.11 - (2011-05-24)
+-------------------
  * Feature: Replaced hardcoded green colors in Tags Widget in order to easily
    customize faceted theme [voineali]
 
