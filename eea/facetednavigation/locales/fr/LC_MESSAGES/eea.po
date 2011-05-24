@@ -263,7 +263,7 @@ msgstr "Position de la widget dans la page"
 #. Default: "Sort options reversed"
 #: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:82
 msgid "help_faceted_criteria_reverse_options"
-msgstr ""
+msgstr "Le tri des choix est inversé"
 
 #. Default: "Display widget in section"
 #: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:66
