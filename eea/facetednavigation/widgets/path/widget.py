@@ -160,7 +160,7 @@ class Widget(AbstractWidget):
         if isinstance(data_default, unicode):
             data_default = data_default.encode('utf-8')
 
-        data_list = [_ for _ in data_default.strip().strip('/').split('/') if _]
+        data_list = [d for d in data_default.strip().strip('/').split('/') if d]
         root = self.data_root[:]
         root.extend(data_list)
 

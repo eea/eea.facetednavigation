@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2011-05-25 09:37+0000\n"
+"POT-Creation-Date: 2011-05-25 11:01+0000\n"
 "PO-Revision-Date: 2011-05-23 13:30+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,6 +74,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Date range"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:35
+msgid "Debugger"
 msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:28

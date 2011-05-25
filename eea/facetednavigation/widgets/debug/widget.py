@@ -32,7 +32,7 @@ class Widget(AbstractWidget):
     """ Widget
     """
     widget_type = 'debug'
-    widget_label = 'Debugger'
+    widget_label = _('Debugger')
     view_css = '++resource++eea.facetednavigation.widgets.debug.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.debug.edit.css'
     edit_js = '++resource++eea.facetednavigation.widgets.debug.edit.js'

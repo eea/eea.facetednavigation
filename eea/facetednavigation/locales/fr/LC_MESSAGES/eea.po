@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-25 09:37+0000\n"
+"POT-Creation-Date: 2011-05-25 11:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,6 +78,10 @@ msgstr "Date"
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Date range"
 msgstr "Intervalle de dates"
+
+#: ../../facetednavigation/widgets/debug/widget.py:35
+msgid "Debugger"
+msgstr "Débogueur"
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:28
 msgid "End date"
