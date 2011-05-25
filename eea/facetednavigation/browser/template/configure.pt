@@ -22,7 +22,8 @@
   <fieldset class="faceted-edit-fieldset">
     <legend i18n:translate="">Add new filter</legend>
     <form method="post" id="faceted-edit-addwidget" title="Add widget"
-      tal:attributes="action string:${context/absolute_url}/@@faceted_configure">
+      tal:attributes="action string:${context/absolute_url}/@@faceted_configure"
+      i18n:attributes="title">
       <div id="faceted-widget-type">
         <div class="field"  id="archetypes-fieldname-wtype">
           <label for="wtype" i18n:translate="">Type</label>
@@ -32,7 +33,7 @@
           <select name="wtype" id="wtype">
             <tal:option repeat="widget view/get_widget_types">
               <option tal:attributes="value python:widget.widget_type;"
-                tal:content="python:widget.widget_label" />
+                tal:content="python:widget.widget_label" i18n:translate="" />
             </tal:option>
           </select>
         </div>

@@ -7,7 +7,10 @@ from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
 logger = logging.getLogger('eea.facetednavigation.widgets.path')
 
 EditSchema = Schema((
@@ -82,7 +85,7 @@ class Widget(AbstractWidget):
     """
     # Widget properties
     widget_type = 'path'
-    widget_label = 'Path'
+    widget_label = _('Path')
     view_js = (
         '++resource++eea.facetednavigation.widgets.path.tree.js',
         '++resource++eea.facetednavigation.widgets.path.view.js',

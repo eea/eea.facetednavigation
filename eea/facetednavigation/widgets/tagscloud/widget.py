@@ -18,9 +18,9 @@ from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
 
 TagsCloudTypes = DisplayList((
-    ("list", "List"),
-    ("sphere", "Sphere"),
-    ("cloud", "Cloud"),
+    ("list", _("List")),
+    ("sphere", _("Sphere")),
+    ("cloud", _("Cloud")),
 ))
 
 EditSchema = Schema((
@@ -173,7 +173,7 @@ class Widget(CountableWidget):
     """
     # Widget properties
     widget_type = 'tagscloud'
-    widget_label = 'Tags Cloud'
+    widget_label = _('Tags Cloud')
     view_js = '++resource++eea.facetednavigation.widgets.tagscloud.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.tagscloud.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.tagscloud.view.css'

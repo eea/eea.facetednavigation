@@ -15,6 +15,9 @@ from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.browser import interfaces
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 
+from eea.facetednavigation import EEAMessageFactory as _
+
+
 logger = logging.getLogger('eea.facetednavigation.browser.app.configure')
 #
 # Controllers
@@ -103,7 +106,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
                                   name=u'faceted_update_criterion')
         for cid in to_delete:
             handler.delete(cid)
-        return self._redirect('Filters deleted', to=self.redirect)
+        return self._redirect(_(u"Filters deleted"), to=self.redirect)
 
 class FacetedCriterionHandler(FacetedBasicHandler):
     """ Edit criterion

@@ -42,18 +42,19 @@ msgstr "Sortieren nach"
 msgid "Sync faceted translations"
 msgstr "Facted Übersetzungen Synchronisieren"
 
-#: Default:
-#: "Countable"
+#: Default: "Countable"
 msgid "label_schema_countable"
 msgstr "Zählbar"
 
-#: Default:
-#: "Display"
+#: Default: "Display"
 msgid "label_schema_display"
 msgstr "Anzeige"
 
-#: Default:
-#: "Layout"
+#: Default: "Geometry"
+msgid "label_schema_geometry"
+msgstr ""
+
+#: Default: "Layout"
 msgid "label_schema_layout"
 msgstr "Layout"
 

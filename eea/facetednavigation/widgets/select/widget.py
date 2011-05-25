@@ -8,7 +8,10 @@ from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+
 from eea.facetednavigation.widgets.widget import CountableWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
 
 EditSchema = Schema((
     StringField('index',
@@ -95,7 +98,7 @@ class Widget(CountableWidget):
     """
     # Widget properties
     widget_type = 'select'
-    widget_label = 'Select'
+    widget_label = _('Select')
     view_js = '++resource++eea.facetednavigation.widgets.select.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.select.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.select.view.css'

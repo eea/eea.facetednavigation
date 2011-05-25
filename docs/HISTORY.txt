@@ -19,7 +19,7 @@ Changelog
 * Feature: Added a po generation script.
   Added french translations.
   Added translations file for plone domain.
-  Internationalized schemata.
+  Internationalized schemata, forms and vocabularies.
   Optimizations.
   [thomasdesvenain]
 

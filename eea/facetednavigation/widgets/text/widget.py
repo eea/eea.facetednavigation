@@ -1,11 +1,14 @@
 """ Text widget
 """
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
+
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from eea.facetednavigation import EEAMessageFactory as _
 
 
 EditSchema = Schema((
@@ -39,7 +42,7 @@ class Widget(AbstractWidget):
     """
     # Widget properties
     widget_type = 'text'
-    widget_label = 'Text field'
+    widget_label = _('Text field')
     view_js = '++resource++eea.facetednavigation.widgets.text.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.text.edit.js'
 

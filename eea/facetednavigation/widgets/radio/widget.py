@@ -1,5 +1,7 @@
 """ Checkbox widget
 """
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import BooleanField
@@ -9,8 +11,9 @@ from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
 
 EditSchema = Schema((
     StringField('index',
@@ -108,7 +111,7 @@ class Widget(CountableWidget):
     """
     # Widget properties
     widget_type = 'radio'
-    widget_label = 'Radio'
+    widget_label = _('Radio')
     view_js = '++resource++eea.facetednavigation.widgets.radio.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.radio.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.radio.view.css'

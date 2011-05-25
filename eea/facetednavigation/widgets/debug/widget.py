@@ -9,6 +9,8 @@ from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import DisplayList
 
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
 
 EditSchema = Schema((
     StringField('user',

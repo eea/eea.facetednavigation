@@ -1,14 +1,19 @@
 """ Text widget
 """
 import logging
+
 from DateTime import DateTime
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
+
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
 
 EditSchema = Schema((
@@ -43,7 +48,7 @@ class Widget(AbstractWidget):
     """
     # Widget properties
     widget_type = 'daterange'
-    widget_label = 'Date range'
+    widget_label = _('Date range')
     view_js = '++resource++eea.facetednavigation.widgets.daterange.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.daterange.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.daterange.view.css'

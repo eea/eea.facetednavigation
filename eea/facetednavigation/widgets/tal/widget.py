@@ -17,6 +17,8 @@ from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 
 # Package
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
 
 logger = logging.getLogger('eea.facetednavigation.widgets.tal')
 
@@ -60,7 +62,7 @@ class Widget(AbstractWidget):
 
     """
     widget_type = 'tal'
-    widget_label = 'TAL Expression'
+    widget_label = _('TAL Expression')
     edit_css = '++resource++eea.facetednavigation.widgets.tal.edit.css'
     edit_js = '++resource++eea.facetednavigation.widgets.tal.edit.js'
 

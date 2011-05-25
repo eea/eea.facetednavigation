@@ -1,12 +1,17 @@
 """ Text widget
 """
 import logging
+
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import IntegerWidget
 
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
+
 logger = logging.getLogger('eea.facetednavigation.widgets.resultsperpage')
 
 EditSchema = Schema((
@@ -61,7 +66,7 @@ class Widget(AbstractWidget):
     """
     # Widget properties
     widget_type = 'resultsperpage'
-    widget_label = 'Results per page'
+    widget_label = _('Results per page')
     view_js = '++resource++eea.facetednavigation.widgets.resultsperpage.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.resultsperpage.edit.js'
 

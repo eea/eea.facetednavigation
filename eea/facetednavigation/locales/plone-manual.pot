@@ -42,6 +42,10 @@ msgstr ""
 msgid "label_schema_countable"
 msgstr ""
 
+#: Default: "Geometry"
+msgid "label_schema_geometry"
+msgstr ""
+
 msgid "Portal type"
 msgstr ""
 

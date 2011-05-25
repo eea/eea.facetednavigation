@@ -118,7 +118,7 @@ class Widget(CountableWidget):
     """
     # Widget properties
     widget_type = 'checkbox'
-    widget_label = 'Checkboxes'
+    widget_label = _('Checkboxes')
     view_js = '++resource++eea.facetednavigation.widgets.checkbox.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.checkbox.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.checkbox.view.css'

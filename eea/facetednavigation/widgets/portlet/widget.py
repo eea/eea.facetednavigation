@@ -4,9 +4,11 @@ import logging
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
-
 from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
+
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation import EEAMessageFactory as _
+
 logger = logging.getLogger('eea.facetednavigation.widgets.portlet')
 
 EditSchema = Schema((
@@ -28,7 +30,7 @@ class Widget(AbstractWidget):
     """
     # Widget properties
     widget_type = 'portlet'
-    widget_label = 'Plone portlet'
+    widget_label = _('Plone portlet')
     view_js = '++resource++eea.facetednavigation.widgets.portlet.view.js'
     view_css = '++resource++eea.facetednavigation.widgets.portlet.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.portlet.edit.css'
