@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-05-25 11:01+0000\n"
+"POT-Creation-Date: 2011-05-27 15:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,11 +125,11 @@ msgstr "Importer"
 
 #: ../../facetednavigation/browser/template/configure.pt:74
 msgid "Import - Export configuration"
-msgstr ""
+msgstr "Importer - Exporter la configuration"
 
 #: ../../facetednavigation/browser/template/configure.pt:75
 msgid "Import configuration"
-msgstr ""
+msgstr "Importer la configuration"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -388,6 +388,16 @@ msgstr "dans les résultats courants"
 #: ../../facetednavigation/browser/template/configure.pt:111
 msgid "label_select_all_items"
 msgstr "Sélectionner tous les éléments"
+
+#. Default: "Configuration imported"
+#: ../../facetednavigation/browser/app/exportimport.py:44
+msgid "msg_configuration_imported"
+msgstr "Configuration importée"
+
+#. Default: "No action provided"
+#: ../../facetednavigation/browser/app/exportimport.py:72
+msgid "msg_no_action_provided"
+msgstr "Aucune action fournie"
 
 #. Default: "Content listing"
 #: ../../facetednavigation/browser/template/configure.pt:106

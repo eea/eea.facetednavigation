@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2011-05-25 11:01+0000\n"
+"POT-Creation-Date: 2011-05-27 15:07+0000\n"
 "PO-Revision-Date: 2011-05-23 13:22+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -386,6 +386,16 @@ msgstr "resultados actuales"
 #. Default: "Select all items"
 #: ../../facetednavigation/browser/template/configure.pt:111
 msgid "label_select_all_items"
+msgstr ""
+
+#. Default: "Configuration imported"
+#: ../../facetednavigation/browser/app/exportimport.py:44
+msgid "msg_configuration_imported"
+msgstr ""
+
+#. Default: "No action provided"
+#: ../../facetednavigation/browser/app/exportimport.py:72
+msgid "msg_no_action_provided"
 msgstr ""
 
 #. Default: "Content listing"
