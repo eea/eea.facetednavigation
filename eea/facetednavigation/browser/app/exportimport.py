@@ -6,6 +6,9 @@ from Products.statusmessages.interfaces import IStatusMessage
 from Products.GenericSetup.context import SnapshotExportContext
 from Products.GenericSetup.context import SnapshotImportContext
 
+from eea.facetednavigation import EEAMessageFactory as _
+
+
 class FacetedExportImport(object):
     """ Faceted view
     """
