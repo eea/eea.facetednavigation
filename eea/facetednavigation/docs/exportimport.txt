@@ -269,7 +269,7 @@ Import a valid xml file
 
     >>> query['import_file'] = self.loadfile('data/exportimport.xml')
     >>> view(**query)
-    'Configuration imported'
+    u'msg_configuration_imported'
 
 Let's see our new configuration
 
