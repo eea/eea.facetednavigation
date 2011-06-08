@@ -4,6 +4,9 @@ Changelog
 4.0 - (unreleased)
 ------------------
 
+* Bug fix: do not display empty text criteria on criteria widget.
+  [thomasdesvenain]
+
 * i18n: resynced, added stubs with some terms translated for: it, pl, es
   [jensens]
 

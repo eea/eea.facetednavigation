@@ -123,15 +123,17 @@ Faceted.TextWidget.prototype = {
     elements = elements ? elements: [];
     jQuery.each(elements, function(){
       var label = this.toString();
-      var link = jQuery('<a href="#">[X]</a>');
-      link.attr('id', 'criteria_' + widget.wid + '_' + label);
-      link.attr('title', 'Remove ' + label + ' filter');
-      link.click(function(evt){
-        widget.criteria_remove(label);
-        return false;
-      });
-      html.append(link);
-      html.append('<span>' + label + '</span>');
+      if(label.length>0){
+	      var link = jQuery('<a href="#">[X]</a>');
+	      link.attr('id', 'criteria_' + widget.wid + '_' + label);
+	      link.attr('title', 'Remove ' + label + ' filter');
+	      link.click(function(evt){
+	        widget.criteria_remove(label);
+	        return false;
+	      });
+	      html.append(link);
+	      html.append('<span>' + label + '</span>');
+      }
     });
     return html;
   },
