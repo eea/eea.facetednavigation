@@ -2,8 +2,7 @@
 <metal:block tal:define="plone_view python:context.restrictedTraverse('@@plone')">
 <tal:main define="
   batch_base_url here/absolute_url;
-  faceted_query options/query|python:{};
-  folderContents python:view.query(**faceted_query);
+  folderContents view/brains;
   here python:view.get_context(folderContents)">
   <tal:def define="
     kssClassesView context/@@kss_field_decorator_view | nothing;

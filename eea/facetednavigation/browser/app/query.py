@@ -158,4 +158,6 @@ class FacetedQueryHandler(object):
 
     @ramcache(cacheKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
     def __call__(self, *args, **kwargs):
-        return self.index(query=kwargs)
+        self.brains = self.query(**kwargs)
+        html = self.index()
+        return html
