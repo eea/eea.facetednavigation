@@ -14,7 +14,7 @@
       />
 
     <genericsetup:upgradeDepends
-      title="Fix actions"
+      title="General upgrade steps"
       import_steps="actions rolemap cssregistry jsregistry"
       />
 
