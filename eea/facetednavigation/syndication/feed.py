@@ -23,9 +23,11 @@ class FacetedFeedSource(fatadapters.BaseFeedSource):
     def getFeedEntries(self):
         """ Feed entries
         """
-        request = getattr(self.context, 'request', None)
+        request = getattr(self.context, 'REQUEST',
+                          getattr(self.context, 'request', None))
         handler = component.getMultiAdapter((self.context, request),
                                             name=u'faceted_query')
+
         brains = handler.query(ajax=False)
         for brain in brains:
             doc = brain.getObject()
