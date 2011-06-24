@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.0 - (unreleased)
+4.0 - (2011-06-24)
 ------------------
 
 * Bug fix: do not display empty text criteria on criteria widget.
@@ -148,7 +148,7 @@ Changelog
 ------------------
 
 * Bug fix: Set cache headers for @@faceted_counter, @@tagscloud_counter
- [voineali #3935]
+  [voineali #3935]
 
 
 3.5 - (2010-11-23)

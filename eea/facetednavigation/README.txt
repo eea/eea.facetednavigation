@@ -37,6 +37,9 @@ addons:
       - eea.faceted.tool
       - eea.faceted.inheritance
 
+  * Faceted themes
+      - eea.faceted.blue
+
 
 Documentation
 =============
