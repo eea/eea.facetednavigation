@@ -1,6 +1,13 @@
 Changelog
 =========
 
+4.1 - (unreleased)
+------------------
+
+* Bug fix: Fixed atct_album_view layout
+  [voineali #4369]
+
+
 4.0 - (2011-06-24)
 ------------------
 
