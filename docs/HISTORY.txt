@@ -4,6 +4,9 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* Changed word break in checkbox and radio facet from 5 to 15 characters.
+  [vincentfretin]
+
 * Bug fix: Fixed atct_album_view layout
   [voineali #4369]
 

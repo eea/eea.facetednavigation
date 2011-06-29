@@ -200,7 +200,7 @@ class Widget(ATWidget):
         safe = re.compile(r'[^_A-Za-z0-9\-]')
         return safe.sub('-', string)
 
-    def word_break(self, text='', insert="<wbr />", nchars=5):
+    def word_break(self, text='', insert="<wbr />", nchars=15):
         """ Insert a string (insert) every space or if a word length is bigger
         than given chars, every ${chars} characters.
 
