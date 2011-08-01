@@ -1,7 +1,26 @@
 <configure
   xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="eea">
+
+  <configure zcml:condition="installed eea.design">
+    <genericsetup:upgradeStep
+      title="Upgrade default faceted layout to 'folder_summary_view'"
+      handler="eea.facetednavigation.upgrades.evolve41.fix_default_layout"
+      profile="eea.facetednavigation:default"
+      source="4.0"
+      destination="4.1"
+      />
+  </configure>
+
+  <genericsetup:upgradeStep
+    title="Cleanup p4a.subtyper interfaces and annotations"
+    handler="eea.facetednavigation.upgrades.evolve41.cleanup_p4a"
+    source="4.0"
+    destination="4.1"
+    profile="eea.facetednavigation:default"
+    />
 
   <genericsetup:upgradeSteps
     source="*"

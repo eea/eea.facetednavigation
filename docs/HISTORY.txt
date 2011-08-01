@@ -4,7 +4,15 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
-* Changed word break in checkbox and radio facet from 5 to 15 characters.
+* EEA Feature: Added upgrade script to fix default layout ('folder_summary_view'
+  for Plone3 ported objects).
+  [voineali #4439]
+
+* Feature: Added upgrade scripts to cleanup p4a.subtyper interface references and
+  annotations.
+  [voineali #4439]
+
+* Feature: Changed word break in checkbox and radio facet from 5 to 15 characters.
   [vincentfretin]
 
 * Bug fix: Fixed atct_album_view layout
