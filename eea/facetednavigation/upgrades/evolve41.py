@@ -8,7 +8,6 @@ from zope.component.interface import interfaceToName
 from zope.annotation.interfaces import IAnnotations
 
 from eea.facetednavigation.interfaces import IFacetedNavigable
-from eea.facetednavigation.interfaces import IFacetedLayout
 from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 logger = logging.getLogger("eea.facetednavigation.upgrades => 4.1")
 
@@ -28,15 +27,15 @@ def fix_default_layout(context):
         doc = brain.getObject()
         anno = queryAdapter(doc, IAnnotations)
 
-        if not anno.get(ANNO_FACETED_LAYOUT, ''):
-            layout = queryAdapter(doc, IFacetedLayout)
-            logger.info(
-                'Updating faceted layout to folder_summary_view for: %s',
-                doc.absolute_url())
+        if anno.get(ANNO_FACETED_LAYOUT, ''):
+            # Not using the default one, skipping
+            continue
 
-            err = layout.update_layout('folder_summary_view')
-            if err:
-                logger.exception('\t %s', err)
+        logger.info(
+            'Updating faceted layout to folder_summary_view for: %s',
+            doc.absolute_url())
+
+        anno[ANNO_FACETED_LAYOUT] = 'folder_summary_view'
 
 def cleanup_p4a(context):
     """ eea.facetednavigation > 4.0 doesn't depend on p4a.subtyper anymore,
