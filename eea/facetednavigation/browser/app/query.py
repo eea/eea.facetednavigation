@@ -1,6 +1,7 @@
 """ Faceted query
 """
 import logging
+from types import GeneratorType
 from zope.component import queryMultiAdapter
 from zope.component import getUtility
 from zope.component import queryAdapter
@@ -153,7 +154,9 @@ class FacetedQueryHandler(object):
         b_start = safeToInt(kwargs.get('b_start', 0))
         orphans = num_per_page * 20 / 100 # orphans = 20% of items per page
 
-        brains = [brain for brain in brains]
+        if type(brains) == GeneratorType:
+            brains = [brain for brain in brains]
+            
         return Batch(brains, num_per_page, b_start, orphan=orphans)
 
     @ramcache(cacheKeyFacetedNavigation, dependencies=['eea.facetednavigation'])

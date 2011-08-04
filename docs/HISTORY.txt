@@ -4,6 +4,10 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* Feature: Improved performance for large queries by avoiding unnecessary
+  iteration over results.
+  [yomatters]
+
 * EEA Feature: Added upgrade script to fix default layout ('folder_summary_view'
   for Plone3 ported objects).
   [voineali #4439]
