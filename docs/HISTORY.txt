@@ -3,7 +3,7 @@ Changelog
 
 4.1 - (unreleased)
 ------------------
-* Feature: HTML5 validation [ghicaale]
+* Feature: HTML5 validation [ghicaale #4444]
 
 * Feature: Improved performance for large queries by avoiding unnecessary
   iteration over results.
