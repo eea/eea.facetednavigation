@@ -4,9 +4,9 @@
   i18n:domain="eea">
 
 <metal:jsslot fill-slot="javascript_head_slot">
-  <script language="javascript" type="text/javascript"
+  <script type="text/javascript"
     tal:content="string:jQuery(document).ready(Faceted.Load);"></script>
-  <script language="javascript" type="text/javascript"
+  <script type="text/javascript"
     tal:content="string:jQuery(window).unload(Faceted.Unload);"></script>
 </metal:jsslot>
 
