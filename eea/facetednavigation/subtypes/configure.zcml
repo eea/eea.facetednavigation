@@ -3,6 +3,9 @@
   xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="eea">
 
+  <include package="Products.CMFCore" />
+
+
   <adapter
     for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
     provides="zope.annotation.interfaces.IAnnotations"
