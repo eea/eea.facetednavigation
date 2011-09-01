@@ -79,7 +79,8 @@ class ViewJavascript(Javascript):
         """ JS Libs
         """
         return ['++resource++eea.faceted-navigation.js',
-                '++resource++eea.faceted-navigation-expand.js']
+                '++resource++eea.faceted-navigation-expand.js',
+                '++resource++eea.faceted-navigation-independent.js']
 
     @property
     def resources(self):

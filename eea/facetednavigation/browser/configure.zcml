@@ -181,6 +181,11 @@
     name="eea.faceted-navigation-expand.js"
     file="./javascript/expand.js"
    />
+   
+  <browser:resource
+    name="eea.faceted-navigation-independent.js"
+    file="./javascript/independent.js"
+   />
 
   <browser:resourceDirectory
     name="faceted_images"
