@@ -15,6 +15,6 @@
   MA 02111-1307 USA.
 
   The Initial Owner of the Original Code is European Environment 
-  Agency (EEA). Portions created by Eau de Web or Valentine Web Systems
+  Agency (EEA). Portions created by Eau de Web 
   are Copyright (C) 2009 by European Environment Agency. All Rights Reserved.
 
