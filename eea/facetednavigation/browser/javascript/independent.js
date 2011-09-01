@@ -15,10 +15,6 @@
 */
 $(document).ready(function() {
 
-    if ( !$('body').hasClass('section-data-and-maps')) {
-        return;
-    }
-
     $('#faceted-text-search input[type=submit]').click(function(e) {
         e.preventDefault();
         var formActionUrl = $('#faceted-text-search').attr('action');
