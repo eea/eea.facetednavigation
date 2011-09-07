@@ -1,0 +1,2 @@
+""" Faceted global settings
+"""

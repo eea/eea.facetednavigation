@@ -20,6 +20,7 @@
   <include package=".exportimport" />
   <include package=".layout" />
   <include package=".search" />
+  <include package=".settings" />
   <include package=".syndication" />
   <include package=".widgets" />
   <include package=".indexes" />

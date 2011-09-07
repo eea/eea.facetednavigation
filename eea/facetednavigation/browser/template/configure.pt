@@ -1,3 +1,6 @@
+<tal:block tal:define="disabledLeft python:request.set('disable_plone.leftcolumn', 1)"/>
+<tal:block tal:define="disabledRight python:request.set('disable_plone.rightcolumn', 1)"/>
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
   lang="en-US"
   metal:use-macro="here/main_template/macros/master"

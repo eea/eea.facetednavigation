@@ -5,6 +5,8 @@ from zope.component import queryAdapter
 from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import IFacetedWrapper
+from eea.facetednavigation.interfaces import IHidePloneLeftColumn
+from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from Products.Five.browser import BrowserView
 
 class FacetedContainerView(object):
@@ -21,6 +23,18 @@ class FacetedContainerView(object):
         voc = getUtility(IVocabularyFactory,
                          'eea.faceted.vocabularies.WidgetPositions')
         return voc(self.context)
+
+    @property
+    def hide_left_column(self):
+        """ Disable plone portlets left column
+        """
+        return IHidePloneLeftColumn.providedBy(self.context)
+
+    @property
+    def hide_right_column(self):
+        """ Disable plone portlets right column
+        """
+        return IHidePloneRightColumn.providedBy(self.context)
 
     def get_context(self, content=None):
         """ Return context

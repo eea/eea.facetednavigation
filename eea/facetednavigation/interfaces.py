@@ -33,6 +33,10 @@ from eea.facetednavigation.versions.interfaces import IFacetedVersion
 # Wrapper
 from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
 
+# Settings
+from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
+from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
+
 #
 # Events
 #
@@ -73,4 +77,6 @@ __all__ = [
     ICriteria.__name__,
     IFacetedWrapper.__name__,
     IWidget.__name__,
+    IHidePloneLeftColumn.__name__,
+    IHidePloneRightColumn.__name__,
 ]
