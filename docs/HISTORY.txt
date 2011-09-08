@@ -4,13 +4,23 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* i18n: Cleanup all widgets schema to use translations messages
+  [voineali]
+
+* i18n: Fixed actions.xml to use 'eea' i18n:domain
+  [voineali]
+
+* i18n: updated romanian translation
+  [voineali]
+
 * i18n: updated german translation.
   [jensens]
 
+# Internationalization
+  [thomasdesvenain]
+
 * Feature: Added possibility to disable plone left/right columns in view mode
   [voineali #4493]
-  Internationalization
-  [thomasdesvenain]
 
 * Feature: Disabled plone left/right columns in edit mode
   [voineali #4493]

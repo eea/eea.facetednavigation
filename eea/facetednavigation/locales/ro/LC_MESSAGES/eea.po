@@ -1,18 +1,21 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-09-08 09:39+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: Bogdan Ciobanu <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2011-09-08 17:46+0000\n"
+"PO-Revision-Date: 2011-09-08 12:00+0000\n"
+"Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
+"Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: ro\n"
+"Language-Name: Romanian\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: eea\n"
 
 #: ../../facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
@@ -20,7 +23,7 @@ msgstr "Adaugă filtru nou"
 
 #: ../../facetednavigation/browser/template/configure.pt:27
 msgid "Add widget"
-msgstr "Adăugaţi widget"
+msgstr "Adaugă widget"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:25
 msgid "After query filters"
@@ -38,19 +41,19 @@ msgstr "Alfabetic"
 
 #: ../../facetednavigation/browser/template/configure.pt:99
 msgid "Are you sure you want to delete ${widget} widget?"
-msgstr "Sunteţi sigur că doriţi să ştergeţi widget $ {widget}?"
+msgstr "Sunteţi sigur că doriţi să ştergeţi widget-ul ${widget}?"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:19
 msgid "Catalog query"
-msgstr "Interogare de catalog"
+msgstr "Criterii de interogare"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:121
+#: ../../facetednavigation/widgets/checkbox/widget.py:124
 msgid "Checkboxes"
-msgstr "Căsuţele"
+msgstr "Căsuţe"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Cloud"
-msgstr "'Cloud'"
+msgstr "Cloud"
 
 #: ../../facetednavigation/browser/template/configure.pt:20
 msgid "Configure faceted navigation"
@@ -66,35 +69,43 @@ msgstr "Detalii criteriu"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:35
 msgid "Current configuration"
-msgstr "Configurare curentă"
+msgstr "Configuraţia curentă"
 
-#: ../../facetednavigation/widgets/date/widget.py:77
+#: ../../facetednavigation/widgets/date/widget.py:76
 msgid "Date"
 msgstr "Dată"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Date range"
-msgstr "Perioada de timp"
+msgstr "Perioadă"
 
-#: ../../facetednavigation/widgets/debug/widget.py:35
+#: ../../facetednavigation/widgets/debug/widget.py:34
 msgid "Debugger"
-msgstr "Debugger"
+msgstr "Depanator"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr "Dezactivează navigarea faţetată"
 
 #: ../../facetednavigation/settings/menu.py:58
 msgid "Disable left portlets"
-msgstr ""
+msgstr "Dezactivează portleţii de stânga"
 
 #: ../../facetednavigation/settings/menu.py:73
 msgid "Disable right portlets"
-msgstr ""
+msgstr "Dezactivează portleţii de dreapta"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr "Activează navigarea faţetată"
 
 #: ../../facetednavigation/settings/menu.py:57
 msgid "Enable left portlets"
-msgstr ""
+msgstr "Activează portleţii de stânga"
 
 #: ../../facetednavigation/settings/menu.py:72
 msgid "Enable right portlets"
-msgstr ""
+msgstr "Activează portleţii de dreapta"
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:28
 msgid "End date"
@@ -102,23 +113,27 @@ msgstr "Data finală"
 
 #: ../../facetednavigation/browser/template/error.pt:10
 msgid "Error type:"
-msgstr "Tip de eroare:"
+msgstr "Tip eroare:"
 
 #: ../../facetednavigation/browser/template/error.pt:12
 msgid "Error value:"
-msgstr "Valoare eroare:"
+msgstr "Eroare:"
 
 #: ../../facetednavigation/browser/template/configure.pt:88
 msgid "Export"
-msgstr "Exportare"
+msgstr "Exportă"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr "Navigare faţetată"
 
 #: ../../facetednavigation/subtypes/subtyper.py:133
 msgid "Faceted navigation disabled"
-msgstr "Dezactivare navigare faţetată"
+msgstr "Navigarea faţetată a fost dezactivată"
 
 #: ../../facetednavigation/subtypes/subtyper.py:122
 msgid "Faceted navigation enabled"
-msgstr "Activare navigare faţetată"
+msgstr "Navigarea faţetată a fost activată"
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -130,27 +145,27 @@ msgstr "Filtre"
 
 #: ../../facetednavigation/browser/app/configure.py:109
 msgid "Filters deleted"
-msgstr "Filtre eliminate"
+msgstr "Filtrele au fost şterse cu succes"
 
 #: ../../facetednavigation/browser/template/configure.pt:85
 msgid "Import"
-msgstr "Importare"
+msgstr "Importă"
 
 #: ../../facetednavigation/browser/template/configure.pt:77
 msgid "Import - Export configuration"
-msgstr "Configurare Importare - Exportare"
+msgstr "Importă - Exportă configuraţia"
 
 #: ../../facetednavigation/browser/template/configure.pt:78
 msgid "Import configuration"
-msgstr "Configurare Importare"
+msgstr "Importă configuraţia"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
-msgstr "Vocabularul prevăzut pentru acest widget este invalid sau lipseşte. Lăsaţi spaţiu gol pentru criteriile de sortare implicită."
+msgstr "Vocabularul selectat pentru acest widget este invalid sau lipseşte. Lăsaţi spaţiu gol pentru o sortare implicită."
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
-msgstr "Lista"
+msgstr "Listă"
 
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
@@ -160,25 +175,25 @@ msgstr "Ordonare"
 msgid "Path"
 msgstr "Cale"
 
-#: ../../facetednavigation/widgets/portlet/widget.py:33
+#: ../../facetednavigation/widgets/portlet/widget.py:32
 msgid "Plone portlet"
-msgstr "Plone portlet"
+msgstr "Portlet Plone"
 
 #: ../../facetednavigation/settings/menu.py:114
 msgid "Portlets left column is hidden now"
-msgstr ""
+msgstr "Portleţii de stânga au fost ascunşi"
 
 #: ../../facetednavigation/settings/menu.py:111
 msgid "Portlets left column is visible now"
-msgstr ""
+msgstr "Portleţii de stânga sunt vizibili acum"
 
 #: ../../facetednavigation/settings/menu.py:124
 msgid "Portlets right column is hidden now"
-msgstr ""
+msgstr "Portleţii de dreapta au fost ascunşi"
 
 #: ../../facetednavigation/settings/menu.py:121
 msgid "Portlets right column is visible now"
-msgstr ""
+msgstr "Portleţii de dreapta sunt vizibili acum"
 
 #: ../../facetednavigation/browser/template/configure.pt:44
 msgid "Position"
@@ -188,33 +203,33 @@ msgstr "Poziţie"
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Numele Python al unei 'Factory' care poate creea obiectul de implementare. Aceasta trebuie sa identifice un obiect folosind numele complet cu punctuaţie"
 
-#: ../../facetednavigation/widgets/radio/widget.py:114
+#: ../../facetednavigation/widgets/radio/widget.py:113
 msgid "Radio"
 msgstr "Radio"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:69
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
-msgstr "Rezultate pe pagină."
+msgstr "Rezultate pe pagină"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
-msgstr "Inversare"
+msgstr "Sortare inversă"
 
 #: ../../facetednavigation/widgets/text/widget.pt:21
 msgid "Search"
-msgstr "Căutare"
+msgstr "Caută"
 
 #: ../../facetednavigation/browser/template/configure.pt:56
 msgid "Section"
 msgstr "Secţiune"
 
-#: ../../facetednavigation/widgets/select/widget.py:101
+#: ../../facetednavigation/widgets/select/widget.py:97
 msgid "Select"
 msgstr "Selectare"
 
-#: ../../facetednavigation/widgets/sorting/widget.py:47
+#: ../../facetednavigation/widgets/sorting/widget.py:46
 msgid "Sorting"
-msgstr "Aranjare"
+msgstr "Sortare"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:22
 msgid "Sphere"
@@ -224,21 +239,25 @@ msgstr "Sferă"
 msgid "Start date"
 msgstr "Data de începere"
 
-#: ../../facetednavigation/widgets/tal/widget.py:65
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr "Activează navigarea faţetată pe traduceri"
+
+#: ../../facetednavigation/widgets/tal/widget.py:63
 msgid "TAL Expression"
-msgstr "'TAL Expression'"
+msgstr "Expresie TAL"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:176
 msgid "Tags Cloud"
-msgstr "'Tags Cloud'"
+msgstr "Tag Cloud"
 
 #: ../../facetednavigation/widgets/text/widget.py:45
 msgid "Text field"
-msgstr "Câmpul de text"
+msgstr "Câmp text"
 
 #: ../../facetednavigation/browser/template/error.pt:3
 msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
-msgstr "Acest widget va fi ignorat datorită unei erori de randare. Pentru detalii verificaţi fişierele de inregistrare de pe server. Puteţi incerca sa modificaţi configurarea widget-ului pentru a afla care din proprietaţi genereaza această eroare."
+msgstr "Acest widget va fi ignorat datorită unei erori de randare. Pentru detalii verificaţi fişierele de logare de pe server. Puteţi încerca să modificaţi configuraţia widget-ului pentru a afla care din proprietăţi generează această eroare."
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -246,7 +265,7 @@ msgstr "Tip"
 
 #: ../../facetednavigation/browser/template/configure.pt:149
 msgid "Widget type"
-msgstr "Tip de widget"
+msgstr "Tipul widget-ului"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
@@ -255,164 +274,408 @@ msgstr "toate elementele"
 #. Default: "[X] Remove all"
 #: ../../facetednavigation/widgets/criteria/widget.pt:14
 msgid "criteria_view_remove_all"
-msgstr "Vizualizare criterii - eliminare"
+msgstr "Șterge toate filtrele"
 
 #. Default: "Catalog"
-#: ../../facetednavigation/widgets/checkbox/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:62
+#: ../../facetednavigation/widgets/radio/widget.py:47
+#: ../../facetednavigation/widgets/select/widget.py:44
 msgid "faceted_criteria_catalog"
-msgstr "Criterii faţetate - Catalog"
+msgstr "Catalog"
 
 #. Default: "Count results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
-#: ../../facetednavigation/widgets/checkbox/widget.py:89
-#: ../../facetednavigation/widgets/tagscloud/widget.py:143
+#: ../../facetednavigation/widgets/checkbox/widget.py:91
+#: ../../facetednavigation/widgets/radio/widget.py:79
 msgid "faceted_criteria_count"
-msgstr "Criterii faţetate - Total"
+msgstr "Numără rezultatele"
 
 #. Default: "Default value"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:59
+#: ../../facetednavigation/widgets/checkbox/widget.py:110
+#: ../../facetednavigation/widgets/date/widget.py:62
 msgid "faceted_criteria_default"
-msgstr "Criterii faţetate - Valoare implicită"
+msgstr "Valoare implicită"
+
+#. Default: "Search Depth"
+#: ../../facetednavigation/widgets/path/widget.py:59
+msgid "faceted_criteria_depth"
+msgstr "Adâncime"
 
 #. Default: "Hide items with zero results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:100
+#: ../../facetednavigation/widgets/radio/widget.py:88
 msgid "faceted_criteria_emptycounthide"
-msgstr "Criterii faţetate - Ascundere rezultate nule"
+msgstr "Ascundere elementele care nu generează nici un rezultat"
+
+#. Default: "End"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "faceted_criteria_end"
+msgstr "Până la"
+
+#. Default: "Default etag"
+#: ../../facetednavigation/widgets/etag/widget.py:17
+msgid "faceted_criteria_etag_default"
+msgstr "Etag implicit"
 
 #. Default: "Hidden"
 #: ../../facetednavigation/widgets/widget.py:73
 msgid "faceted_criteria_hidden"
-msgstr "Criterii faţetate - Ascundere"
+msgstr "Ascunde"
 
 #. Default: "Catalog index"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/checkbox/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:51
 msgid "faceted_criteria_index"
-msgstr "Criterii faţetate - index"
+msgstr "Index în catalog"
+
+#. Default: "Maximum characters"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:78
+msgid "faceted_criteria_maxchars"
+msgstr "Număr maxim de caractere"
 
 #. Default: "Maximum items"
-#: ../../facetednavigation/widgets/checkbox/widget.py:72
+#: ../../facetednavigation/widgets/checkbox/widget.py:73
+#: ../../facetednavigation/widgets/radio/widget.py:59
+#: ../../facetednavigation/widgets/tagscloud/widget.py:67
 msgid "faceted_criteria_maxitems"
-msgstr "Criterii faţetate - Numar maxim de obiecte"
+msgstr "Număr maxim de obiecte"
+
+#. Default: "Operator"
+#: ../../facetednavigation/widgets/checkbox/widget.py:40
+msgid "faceted_criteria_operator"
+msgstr "Operator"
+
+#. Default: "Root folder"
+#: ../../facetednavigation/widgets/path/widget.py:35
+msgid "faceted_criteria_path_root"
+msgstr "Director rădăcină"
+
+#. Default: "Navigation tree theme"
+#: ../../facetednavigation/widgets/path/widget.py:74
+msgid "faceted_criteria_path_theme"
+msgstr "Temă"
 
 #. Default: "Position"
 #: ../../facetednavigation/widgets/widget.py:54
 msgid "faceted_criteria_position"
-msgstr "Criterii faţetate - Poziţie"
+msgstr "Poziţie"
 
 #. Default: "Reverse options"
-#: ../../facetednavigation/widgets/checkbox/widget.py:80
+#: ../../facetednavigation/widgets/checkbox/widget.py:82
+#: ../../facetednavigation/widgets/radio/widget.py:69
+#: ../../facetednavigation/widgets/select/widget.py:54
 msgid "faceted_criteria_reverse_options"
-msgstr "Criterii faţetate - Opţiuni inverse"
+msgstr "Sortare inversă"
 
 #. Default: "Section"
 #: ../../facetednavigation/widgets/widget.py:64
 msgid "faceted_criteria_section"
-msgstr "Criterii faţetate - secţiune"
+msgstr "Secţiune"
+
+#. Default: "Filter from vocabulary"
+#: ../../facetednavigation/widgets/sorting/widget.py:20
+msgid "faceted_criteria_sorting_vocabulary"
+msgstr "Filtrează opţiunile folosind vocabularul"
+
+#. Default: "Start"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+msgid "faceted_criteria_start"
+msgstr "De la"
+
+#. Default: "Step"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:42
+msgid "faceted_criteria_step"
+msgstr "Pas"
+
+#. Default: "Cloud height"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:133
+msgid "faceted_criteria_tagscloud_height"
+msgstr "Înălţime"
+
+#. Default: "Maximum size"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:122
+msgid "faceted_criteria_tagscloud_maxsize"
+msgstr "Mărime maximă"
+
+#. Default: "Minimum size"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+msgid "faceted_criteria_tagscloud_minsize"
+msgstr "Mărime minimă"
+
+#. Default: "Cloud type"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:100
+msgid "faceted_criteria_tagscloud_type"
+msgstr "Tip"
+
+#. Default: "Tal Expression"
+#: ../../facetednavigation/widgets/tal/widget.py:41
+msgid "faceted_criteria_tal_default"
+msgstr "Expresie TAL"
 
 #. Default: "Friendly name"
 #: ../../facetednavigation/widgets/widget.py:43
 msgid "faceted_criteria_title"
-msgstr "Criterii faţetate - titlu"
+msgstr "Titlu"
+
+#. Default: "Visible to"
+#: ../../facetednavigation/widgets/debug/widget.py:21
+msgid "faceted_criteria_user"
+msgstr "Vizibil pentru"
 
 #. Default: "Vocabulary"
 #: ../../facetednavigation/widgets/checkbox/widget.py:51
+#: ../../facetednavigation/widgets/radio/widget.py:35
+#: ../../facetednavigation/widgets/select/widget.py:33
 msgid "faceted_criteria_vocabulary"
-msgstr "Criterii faţetate - vocabular"
+msgstr "Vocabular"
 
 #. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "faceted_path_widget_errors"
-msgstr "Criterii faţetate - erori in calea catre widget "
+msgstr "Acest widget va fi ignorat deoarece calea către rădăcina este inaccesibilă sau directorul rădăcina nu are conţinut"
+
+#. Default: "Portlet macro"
+#: ../../facetednavigation/widgets/portlet/widget.py:19
+msgid "faceted_portlet_macro"
+msgstr "Macro"
 
 #. Default: "Display number of results per letter"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:41
 msgid "help_faceted_criteria_alphabetic_count"
-msgstr "Asistenţă Criterii faţetate - ordonare alfabetica "
+msgstr "Afişează numărul de rezultate pe literă"
 
 #. Default: "Get unique values from catalog as an alternative for vocabulary"
-#: ../../facetednavigation/widgets/checkbox/widget.py:63
+#: ../../facetednavigation/widgets/checkbox/widget.py:64
+#: ../../facetednavigation/widgets/radio/widget.py:49
+#: ../../facetednavigation/widgets/select/widget.py:46
 msgid "help_faceted_criteria_catalog"
-msgstr "Asistenţă Criterii faţetate - catalog"
+msgstr "Preia valorile unice din catalog ca o alternativă la vocabular"
+
+#. Default: "Default items (one per line)"
+#: ../../facetednavigation/widgets/checkbox/widget.py:112
+msgid "help_faceted_criteria_checkboxes_default"
+msgstr "Valoare implicită (câte una pe linie)"
 
 #. Default: "Display number of results near each option"
-#: ../../facetednavigation/widgets/checkbox/widget.py:90
+#: ../../facetednavigation/widgets/checkbox/widget.py:93
+#: ../../facetednavigation/widgets/radio/widget.py:80
+#: ../../facetednavigation/widgets/select/widget.py:65
 msgid "help_faceted_criteria_count"
-msgstr "Asistenţă Criterii faţetate - ordonare"
+msgstr "Afişează numărul de rezultate lângă fiecare opţiune"
 
 #. Default: "This option works only if \"count results\" is enabled"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:50
+#: ../../facetednavigation/widgets/checkbox/widget.py:102
+#: ../../facetednavigation/widgets/radio/widget.py:90
 msgid "help_faceted_criteria_criteria_emptycounthide"
-msgstr "Asistenţă Criterii faţetate - ascundere ordonare nula"
+msgstr "Această opţiune funcţionează doar împreună cu opţiunea 'Numără rezultatele'"
+
+#. Default: "Default daterange (e.g. \"now-365=>now+1\" which means \"Starting one year ago until tomorrow\")"
+#: ../../facetednavigation/widgets/date/widget.py:63
+msgid "help_faceted_criteria_date_default"
+msgstr "Perioada implicită (ex. 'now-365=>now+1' înseamnă 'De acum un an până mâine')"
+
+#. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
+#: ../../facetednavigation/widgets/daterange/widget.py:39
+msgid "help_faceted_criteria_daterange_default"
+msgstr "Perioada implicită (ex. '2009/12/01=>2009/12/31')"
 
 #. Default: "Default letter to be selected"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:60
 msgid "help_faceted_criteria_default"
-msgstr "Asistenţă Criterii faţetate - implicit"
+msgstr "Litera selectată implicit"
+
+#. Default: "Results per page ending value"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:33
+msgid "help_faceted_criteria_end"
+msgstr "Până la"
+
+#. Default: "Etag value"
+#: ../../facetednavigation/widgets/etag/widget.py:19
+msgid "help_faceted_criteria_etag_default"
+msgstr "Valoare ETag"
 
 #. Default: "Hide widget"
 #: ../../facetednavigation/widgets/widget.py:74
 msgid "help_faceted_criteria_hidden"
-msgstr "Asistenţă Criterii faţetate - ascuns"
+msgstr "Ascunde widget-ul"
 
 #. Default: "Catalog index to use for search"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/checkbox/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:53
 msgid "help_faceted_criteria_index"
-msgstr "Asistenţă Criterii faţetate - cuprins"
+msgstr "Indexul din catalog folosit la căutare"
+
+#. Default: "Cut long phrases to provided number of characters"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:80
+msgid "help_faceted_criteria_maxchars"
+msgstr "Taie frazele lungi la numărul de caractere dat"
 
 #. Default: "Number of items visible in widget"
-#: ../../facetednavigation/widgets/checkbox/widget.py:73
+#: ../../facetednavigation/widgets/checkbox/widget.py:75
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/tagscloud/widget.py:69
 msgid "help_faceted_criteria_maxitems"
-msgstr "Asistenţă Criterii faţetate - numar maxim de obiecte"
+msgstr "Numărul de obiecte afişate în widget"
+
+#. Default: "Search with AND/OR between elements"
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
+msgid "help_faceted_criteria_operator"
+msgstr "Caută folosind SI/SAU între elementele filtrului"
+
+#. Default: "Default path to search in (relative to root folder)"
+#: ../../facetednavigation/widgets/path/widget.py:49
+msgid "help_faceted_criteria_path_default"
+msgstr "Calea implicită de căutare (relativa la directorul rădacină)"
+
+#. Default: "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+#: ../../facetednavigation/widgets/path/widget.py:61
+msgid "help_faceted_criteria_path_depth"
+msgstr "Adâncimea. 0 = nivelul curent, -1 = toate subdirectoarele recursiv, orice alt numar pozitiv = adâncimea de căutare"
+
+#. Default: "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+#: ../../facetednavigation/widgets/path/widget.py:37
+msgid "help_faceted_criteria_path_root"
+msgstr "Punct de plecare"
+
+#. Default: "Theme to be used with this widget"
+#: ../../facetednavigation/widgets/path/widget.py:76
+msgid "help_faceted_criteria_path_theme"
+msgstr "Tema folosită pentru a afisa acest widget"
 
 #. Default: "Widget position in page"
 #: ../../facetednavigation/widgets/widget.py:55
 msgid "help_faceted_criteria_position"
-msgstr "Asistenţă Criterii faţetate - poziţie"
+msgstr "Poziţia widget-ului în pagină"
+
+#. Default: "Default selected item"
+#: ../../facetednavigation/widgets/radio/widget.py:101
+#: ../../facetednavigation/widgets/tagscloud/widget.py:164
+msgid "help_faceted_criteria_radio_default"
+msgstr "Valoarea implicită selectată"
+
+#. Default: "Default results per page"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:53
+msgid "help_faceted_criteria_resultsperpage_default"
+msgstr "Rezultate pe pagina afişate implicit"
 
 #. Default: "Sort options reversed"
-#: ../../facetednavigation/widgets/checkbox/widget.py:82
+#: ../../facetednavigation/widgets/checkbox/widget.py:84
+#: ../../facetednavigation/widgets/radio/widget.py:71
+#: ../../facetednavigation/widgets/select/widget.py:56
 msgid "help_faceted_criteria_reverse_options"
-msgstr "Asistenţă Criterii faţetate - opţiuni"
+msgstr "Sortează elementele invers"
 
 #. Default: "Display widget in section"
 #: ../../facetednavigation/widgets/widget.py:66
 msgid "help_faceted_criteria_section"
-msgstr "Asistenţă Criterii faţetate - secţiune"
+msgstr "Afişează widget-ul în secţiunea"
+
+#. Default: "Default selected item"
+#: ../../facetednavigation/widgets/select/widget.py:85
+msgid "help_faceted_criteria_select_default"
+msgstr "Valoarea implicită selectată"
+
+#. Default: "Default sorting index (e.g. \"effective\" or \"effective(reverse)\")"
+#: ../../facetednavigation/widgets/sorting/widget.py:33
+msgid "help_faceted_criteria_sorting_default"
+msgstr "Indexul dupa care se sorteaza obiectele (ex. 'effective' sau 'effective(reverse)')"
+
+#. Default: "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+#: ../../facetednavigation/widgets/sorting/widget.py:22
+msgid "help_faceted_criteria_sorting_vocabulary"
+msgstr "Vocabularul folosit pentru a filtra elementele de sortare. Nu selecta pentru a folosi criteriile implicite"
+
+#. Default: "Results per page starting value"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "help_faceted_criteria_start"
+msgstr "De la"
+
+#. Default: "Results per page step"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:43
+msgid "help_faceted_criteria_step"
+msgstr "Pas"
 
 #. Default: "Display number of results near each tag"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:144
 msgid "help_faceted_criteria_tagscloud_count"
-msgstr "Asistenţă Criterii faţetate - număratoare tagscloud"
+msgstr "Afişează numărul de rezultate lângă fiecare tag"
+
+#. Default: "Cloud height (px)"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:135
+msgid "help_faceted_criteria_tagscloud_height"
+msgstr "Înălţime"
+
+#. Default: "Maximum font-size (px)"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:124
+msgid "help_faceted_criteria_tagscloud_maxsize"
+msgstr "Mărime font maximă (px)"
+
+#. Default: "Minimum font-size (px)"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:113
+msgid "help_faceted_criteria_tagscloud_minsize"
+msgstr "Mărime font minimă (px)"
+
+#. Default: "Type of the cloud"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:102
+msgid "help_faceted_criteria_tagscloud_type"
+msgstr "Tip"
+
+#. Default: "Default tal expression for query value"
+#: ../../facetednavigation/widgets/tal/widget.py:42
+msgid "help_faceted_criteria_tal_default"
+msgstr "Valoare implicită"
+
+#. Default: "Default string to search for"
+#: ../../facetednavigation/widgets/text/widget.py:33
+msgid "help_faceted_criteria_text_default"
+msgstr "Text implicit de căutat"
 
 #. Default: "Title for widget to display in view page"
 #: ../../facetednavigation/widgets/widget.py:45
 msgid "help_faceted_criteria_title"
-msgstr "Asistenţă Criterii faţetate - titlu"
+msgstr "Titlul widget-ului afişat în pagina de vizualizare"
+
+#. Default: "Widget will be visible only for selected user"
+#: ../../facetednavigation/widgets/debug/widget.py:23
+msgid "help_faceted_criteria_user"
+msgstr "Widget-ul va fi vizibil doar pentru utilizatorul selectat"
 
 #. Default: "Vocabulary to use to render widget items"
-#: ../../facetednavigation/widgets/checkbox/widget.py:52
+#: ../../facetednavigation/widgets/checkbox/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:37
+#: ../../facetednavigation/widgets/select/widget.py:35
 msgid "help_faceted_criteria_vocabulary"
-msgstr "Asistenţă Criterii faţetate - vocabular"
+msgstr "Vocabularul folosit pentru a randa elementele widget-ului"
+
+#. Default: "Path to portlet macro"
+#: ../../facetednavigation/widgets/portlet/widget.py:20
+msgid "help_faceted_portlet_macro"
+msgstr "Calea catre macro"
 
 #. Default: "Faceted global settings"
 #: ../../facetednavigation/settings/menu.py:20
 msgid "help_faceted_settings_menu"
-msgstr ""
+msgstr "Setări generale pentru navigarea faţetată"
 
 #. Default: "Position of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:45
 msgid "help_widget_position"
-msgstr "Asistenţă - poziţionare widget"
+msgstr "Poziţia widget-ului"
 
 #. Default: "Display widget in section."
 #: ../../facetednavigation/browser/template/configure.pt:57
 msgid "help_widget_section"
-msgstr "Asistenţă - secţiune widget"
+msgstr "Afişează widget-ul în secţiunea"
 
 #. Default: "Type of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:33
 msgid "help_widget_type"
-msgstr "Asistenţă - tip widget"
+msgstr "Tipul widget-ului"
 
 #: ../../facetednavigation/widgets/text/widget.pt:38
 msgid "in current results"
@@ -421,22 +684,22 @@ msgstr "în rezultatele curente"
 #. Default: "Faceted settings"
 #: ../../facetednavigation/settings/menu.py:18
 msgid "label_faceted_settings_menu"
-msgstr ""
+msgstr "Setări navigare faţetată"
 
 #. Default: "Select all items"
 #: ../../facetednavigation/browser/template/configure.pt:114
 msgid "label_select_all_items"
-msgstr "Etichetă - Selectarea tuturor obiectelor"
+msgstr "Selectează toate obiectele"
 
 #. Default: "Configuration imported"
 #: ../../facetednavigation/browser/app/exportimport.py:47
 msgid "msg_configuration_imported"
-msgstr "Configurare importata"
+msgstr "Configuraţie importată"
 
 #. Default: "No action provided"
 #: ../../facetednavigation/browser/app/exportimport.py:75
 msgid "msg_no_action_provided"
-msgstr "Nici o acţiune efectuată"
+msgstr "Nici o acţiune selectată"
 
 #. Default: "Content listing"
 #: ../../facetednavigation/browser/template/configure.pt:109

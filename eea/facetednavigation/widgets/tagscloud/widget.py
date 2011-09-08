@@ -29,10 +29,10 @@ EditSchema = Schema((
         required=True,
         vocabulary_factory='eea.faceted.vocabularies.CatalogIndexes',
         widget=SelectionWidget(
-            label='Catalog index',
-            label_msgid='faceted_criteria_index',
-            description='Catalog index to use for search',
-            description_msgid='help_faceted_criteria_index',
+            label=_(u'faceted_criteria_index',
+                default='Catalog index'),
+            description=_(u'help_faceted_criteria_index',
+                default=u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -40,10 +40,10 @@ EditSchema = Schema((
         schemata="default",
         vocabulary_factory='eea.faceted.vocabularies.PortalVocabularies',
         widget=SelectionWidget(
-            label='Vocabulary',
-            label_msgid='faceted_criteria_vocabulary',
-            description='Vocabulary to use to render widget items',
-            description_msgid='help_faceted_criteria_vocabulary',
+            label=_(u'faceted_criteria_vocabulary',
+                default=u'Vocabulary'),
+            description=_(u'help_faceted_criteria_vocabulary',
+                default=u'Vocabulary to use to render widget items'),
             i18n_domain="eea"
         )
     ),
@@ -52,11 +52,11 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.UseCatalog',
         widget=SelectionWidget(
             format='select',
-            label='Catalog',
-            label_msgid='faceted_criteria_catalog',
-            description=('Get unique values from catalog as an alternative '
-                         'for vocabulary'),
-            description_msgid='help_faceted_criteria_catalog',
+            label=_(u'faceted_criteria_catalog',
+                default=u'Catalog'),
+            description=_(u'help_faceted_criteria_catalog',
+                default=u'Get unique values from catalog as an alternative '
+                        u'for vocabulary'),
             i18n_domain="eea"
         )
     ),
@@ -64,10 +64,10 @@ EditSchema = Schema((
         schemata="display",
         default=50,
         widget=IntegerWidget(
-            label='Maximum items',
-            label_msgid='faceted_criteria_maxitems',
-            description='Number of items visible in widget',
-            description_msgid='help_faceted_criteria_maxitems',
+            label=_(u'faceted_criteria_maxitems',
+                default=u'Maximum items'),
+            description=_(u'help_faceted_criteria_maxitems',
+                default=u'Number of items visible in widget'),
             i18n_domain="eea"
         )
     ),
@@ -75,20 +75,20 @@ EditSchema = Schema((
         schemata="display",
         default=0,
         widget=IntegerWidget(
-            label='Maximum characters',
-            label_msgid='faceted_criteria_maxchars',
-            description='Cut long phrases to provided number of characters',
-            description_msgid='help_faceted_criteria_maxchars',
+            label=_(u'faceted_criteria_maxchars',
+                default=u'Maximum characters'),
+            description=_(u'help_faceted_criteria_maxchars',
+                default=u'Cut long phrases to provided number of characters'),
             i18n_domain="eea"
         )
     ),
     BooleanField('sortreversed',
         schemata="display",
         widget=BooleanWidget(
-            label='Reverse options',
-            label_msgid='faceted_criteria_reverse_options',
-            description='Sort options reversed',
-            description_msgid='help_faceted_criteria_reverse_options',
+            label=_(u'faceted_criteria_reverse_options',
+                default=u'Reverse options'),
+            description=_(u'help_faceted_criteria_reverse_options',
+                default=u'Sort options reversed'),
             i18n_domain="eea"
         )
     ),
@@ -97,10 +97,10 @@ EditSchema = Schema((
         vocabulary=TagsCloudTypes,
         widget=SelectionWidget(
             format='select',
-            label='Cloud type',
-            label_msgid='faceted_criteria_tagscloud_type',
-            description='Type of the cloud',
-            description_msgid='help_faceted_criteria_tagscloud_type',
+            label=_(u'faceted_criteria_tagscloud_type',
+                default='Cloud type'),
+            description=_(u'help_faceted_criteria_tagscloud_type',
+                default=u'Type of the cloud'),
             i18n_domain="eea"
         )
     ),
@@ -108,10 +108,10 @@ EditSchema = Schema((
         schemata="geometry",
         default=10,
         widget=IntegerWidget(
-            label='Minimum size',
-            label_msgid='faceted_criteria_tagscloud_minsize',
-            description='Minimum font-size (px)',
-            description_msgid='help_faceted_criteria_tagscloud_minsize',
+            label=_('faceted_criteria_tagscloud_minsize',
+                default=u'Minimum size'),
+            description=_(u'help_faceted_criteria_tagscloud_minsize',
+                default=u'Minimum font-size (px)'),
             i18n_domain="eea"
         )
     ),
@@ -119,10 +119,10 @@ EditSchema = Schema((
         schemata="geometry",
         default=20,
         widget=IntegerWidget(
-            label='Maximum size',
-            label_msgid='faceted_criteria_tagscloud_maxsize',
-            description='Maximum font-size (px)',
-            description_msgid='help_faceted_criteria_tagscloud_maxsize',
+            label=_(u'faceted_criteria_tagscloud_maxsize',
+                default=u'Maximum size'),
+            description=_(u'help_faceted_criteria_tagscloud_maxsize',
+                default=u'Maximum font-size (px)'),
             i18n_domain="eea"
         )
     ),
@@ -130,10 +130,10 @@ EditSchema = Schema((
         schemata="geometry",
         default=200,
         widget=IntegerWidget(
-            label='Cloud height',
-            label_msgid='faceted_criteria_tagscloud_height',
-            description='Cloud height (px)',
-            description_msgid='help_faceted_criteria_tagscloud_height',
+            label=_(u'faceted_criteria_tagscloud_height',
+                default=u'Cloud height'),
+            description=_(u'help_faceted_criteria_tagscloud_height',
+                default=u'Cloud height (px)'),
             i18n_domain="eea"
         )
     ),
@@ -148,10 +148,10 @@ EditSchema = Schema((
     BooleanField('hidezerocount',
         schemata="countable",
         widget=BooleanWidget(
-            label='Hide items with zero results',
-            label_msgid='faceted_criteria_emptycounthide',
-            description='This option works only if "count results" is enabled',
-            description_msgid='help_faceted_criteria_criteria_emptycounthide',
+            label=_(u'faceted_criteria_emptycounthide',
+                default=u'Hide items with zero results'),
+            description=_(u'help_faceted_criteria_criteria_emptycounthide',
+               default=u'This option works only if "count results" is enabled'),
             i18n_domain="eea"
         )
     ),
@@ -159,10 +159,10 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description='Default selected item',
-            description_msgid='help_faceted_criteria_radio_default',
+            label=_('faceted_criteria_default',
+                default=u'Default value'),
+            description=_(u'help_faceted_criteria_radio_default',
+                default=u'Default selected item'),
             i18n_domain="eea"
         )
     ),

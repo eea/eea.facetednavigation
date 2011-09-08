@@ -19,10 +19,10 @@ EditSchema = Schema((
         required=True,
         vocabulary_factory='eea.faceted.vocabularies.CatalogIndexes',
         widget=SelectionWidget(
-            label='Catalog index',
-            label_msgid='faceted_criteria_index',
-            description='Catalog index to use for search',
-            description_msgid='help_faceted_criteria_index',
+            label=_(u'faceted_criteria_index',
+                    default=u'Catalog index'),
+            description=_(u'help_faceted_criteria_index',
+                    default=u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -30,11 +30,10 @@ EditSchema = Schema((
         schemata="default",
         vocabulary_factory='eea.faceted.vocabularies.PortalVocabularies',
         widget=SelectionWidget(
-            label='Vocabulary',
-            label_msgid='faceted_criteria_vocabulary',
-            description='Vocabulary to use to render widget items',
-            description_msgid='help_faceted_criteria_vocabulary',
-            i18n_domain="eea"
+            label=_(u'faceted_criteria_vocabulary',
+                default=u"Vocabulary"),
+            description=_(u'help_faceted_criteria_vocabulary',
+                default=u'Vocabulary to use to render widget items'),
         )
     ),
     StringField('catalog',
@@ -42,41 +41,38 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.UseCatalog',
         widget=SelectionWidget(
             format='select',
-            label='Catalog',
-            label_msgid='faceted_criteria_catalog',
-            description=('Get unique values from catalog as an alternative '
-                         'for vocabulary'),
-            description_msgid='help_faceted_criteria_catalog',
-            i18n_domain="eea"
+            label=_(u'faceted_criteria_catalog',
+                default=u'Catalog'),
+            description=_('help_faceted_criteria_catalog',
+                default=u"Get unique values from catalog "
+                        u"as an alternative for vocabulary"),
         )
     ),
     BooleanField('sortreversed',
         schemata="display",
         widget=BooleanWidget(
-            label='Reverse options',
-            label_msgid='faceted_criteria_reverse_options',
-            description='Sort options reversed',
-            description_msgid='help_faceted_criteria_reverse_options',
-            i18n_domain="eea"
+            label=_(u'faceted_criteria_reverse_options',
+                default=u"Reverse options"),
+            description=_(u'help_faceted_criteria_reverse_options',
+                default=u"Sort options reversed"),
         )
     ),
     BooleanField('count',
         schemata="countable",
         widget=BooleanWidget(
-            label='Count results',
-            label_msgid='faceted_criteria_count',
-            description='Display number of results near each option',
-            description_msgid='help_faceted_criteria_count',
-            i18n_domain="eea"
+            label=_(u'faceted_criteria_count',
+                default=u"Count results"),
+            description=_(u'help_faceted_criteria_count',
+                default=u"Display number of results near each option"),
         )
     ),
     BooleanField('hidezerocount',
         schemata="countable",
         widget=BooleanWidget(
-            label='Hide items with zero results',
-            label_msgid='faceted_criteria_emptycounthide',
-            description='This option works only if "count results" is enabled',
-            description_msgid='help_faceted_criteria_criteria_emptycounthide',
+            label=_(u'faceted_criteria_emptycounthide',
+                default=u'Hide items with zero results'),
+            description=_(u'help_faceted_criteria_criteria_emptycounthide',
+               default=u'This option works only if "count results" is enabled'),
             i18n_domain="eea"
         )
     ),
@@ -84,10 +80,10 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description='Default selected item',
-            description_msgid='help_faceted_criteria_select_default',
+            label=_('faceted_criteria_default',
+                default='Default value'),
+            description=_(u'help_faceted_criteria_select_default',
+                default=u'Default selected item'),
             i18n_domain="eea"
         )
     ),

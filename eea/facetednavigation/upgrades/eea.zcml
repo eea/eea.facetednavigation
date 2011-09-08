@@ -1,0 +1,24 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="eea">
+
+  <genericsetup:upgradeSteps
+    source="4.0"
+    destination="4.1"
+    profile="eea.facetednavigation:default">
+
+    <genericsetup:upgradeStep
+      title="Upgrade default faceted layout to 'folder_summary_view'"
+      handler="eea.facetednavigation.upgrades.evolve41.fix_default_layout"
+      />
+
+    <genericsetup:upgradeStep
+      title="Hide left and right portlets for all faceted navigable objects"
+      handler="eea.facetednavigation.upgrades.evolve41.hide_portlets"
+      />
+
+  </genericsetup:upgradeSteps>
+
+</configure>

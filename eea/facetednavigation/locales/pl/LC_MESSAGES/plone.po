@@ -17,18 +17,6 @@ msgstr ""
 msgid "Current search"
 msgstr ""
 
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Disable faceted navigation"
-msgstr ""
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Enable faceted navigation"
-msgstr ""
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Faceted criteria"
-msgstr ""
-
 msgid "Object provides"
 msgstr ""
 
@@ -36,10 +24,6 @@ msgid "Portal type"
 msgstr ""
 
 msgid "Sort on"
-msgstr ""
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Sync faceted translations"
 msgstr ""
 
 #: Default: "Countable"

@@ -17,18 +17,6 @@ msgstr ""
 msgid "Current search"
 msgstr "Uneko bilaketa"
 
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Disable faceted navigation"
-msgstr "Sailkapen bidezko nabigazioa desaktibatu"
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Enable faceted navigation"
-msgstr "Sailkapen bidezko nabigazioa aktibatu"
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Faceted criteria"
-msgstr "Sailkapen-irizpideak"
-
 msgid "Object provides"
 msgstr "Objektuak interfaze hau eskaintzen du"
 
@@ -37,10 +25,6 @@ msgstr "Elementu-mota"
 
 msgid "Sort on"
 msgstr "Ordenazioa"
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Sync faceted translations"
-msgstr "Sailkapenaren itzulpenak sinkronizatu"
 
 #: Default: "Countable"
 msgid "label_schema_countable"

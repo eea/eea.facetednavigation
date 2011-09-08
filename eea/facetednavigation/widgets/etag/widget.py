@@ -6,6 +6,7 @@ from Products.Archetypes.public import StringWidget
 
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation import EEAMessageFactory as _
 
 EditSchema = Schema((
     StringField('default',
@@ -13,10 +14,10 @@ EditSchema = Schema((
         default='1.0',
         widget=StringWidget(
             size=25,
-            label='Default etag',
-            label_msgid='faceted_criteria_etag_default',
-            description='Etag value',
-            description_msgid='help_faceted_criteria_etag_default',
+            label=_(u'faceted_criteria_etag_default',
+                default='Default etag'),
+            description=_(u'help_faceted_criteria_etag_default',
+                default=u'Etag value'),
             i18n_domain="eea"
         )
     ),

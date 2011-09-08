@@ -19,10 +19,9 @@ EditSchema = Schema((
         schemata="display",
         default=0,
         widget=IntegerWidget(
-            label='Start',
-            label_msgid='faceted_criteria_start',
-            description='Results per page starting value',
-            description_msgid='help_faceted_criteria_start',
+            label=_(u'faceted_criteria_start', default=u'Start'),
+            description=_(u'help_faceted_criteria_start',
+                default=u'Results per page starting value'),
             i18n_domain="eea"
         )
     ),
@@ -30,10 +29,9 @@ EditSchema = Schema((
         schemata="display",
         default=50,
         widget=IntegerWidget(
-            label='End',
-            label_msgid='faceted_criteria_end',
-            description='Results per page ending value',
-            description_msgid='help_faceted_criteria_end',
+            label=_(u'faceted_criteria_end', default=u'End'),
+            description=_(u'help_faceted_criteria_end',
+                default=u'Results per page ending value'),
             i18n_domain="eea"
         )
     ),
@@ -41,10 +39,9 @@ EditSchema = Schema((
         schemata="display",
         default=5,
         widget=IntegerWidget(
-            label='Step',
-            label_msgid='faceted_criteria_step',
-            description='Results per page step',
-            description_msgid='help_faceted_criteria_step',
+            label=_(u'faceted_criteria_step', default=u'Step'),
+            description=_(u'help_faceted_criteria_step',
+                default=u'Results per page step'),
             i18n_domain="eea"
         )
     ),
@@ -52,10 +49,9 @@ EditSchema = Schema((
         schemata="default",
         default=20,
         widget=IntegerWidget(
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description='Default results per page',
-            description_msgid='help_faceted_criteria_resultsperpage_default',
+            label=_(u'faceted_criteria_default', default=u'Default value'),
+            description=_(u'help_faceted_criteria_resultsperpage_default',
+                default=u'Default results per page'),
             i18n_domain="eea"
         )
     ),

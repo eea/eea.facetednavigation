@@ -11,7 +11,6 @@ from Products.Archetypes.public import DisplayList
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
 
-
 EditSchema = Schema((
     StringField('user',
         schemata="default",
@@ -19,10 +18,10 @@ EditSchema = Schema((
         vocabulary=DisplayList(()),
         widget=SelectionWidget(
             format='select',
-            label='Visible to',
-            label_msgid='faceted_criteria_user',
-            description='Widget will be visible only for selected user',
-            description_msgid='help_faceted_criteria_user',
+            label=_(u'faceted_criteria_user',
+                default=u'Visible to'),
+            description=_(u'help_faceted_criteria_user',
+                default=u'Widget will be visible only for selected user'),
             i18n_domain="eea"
         )
     ),

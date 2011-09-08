@@ -1,46 +1,30 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 4.1\n"
 "POT-Creation-Date: 2011-05-17 16:06+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: Bogdan Ciobanu <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2011-09-08 12:00+0000\n"
+"Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
+"Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: ro\n"
+"Language-Name: Romanian\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: plone\n"
 
 msgid "Current search"
-msgstr ""
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Disable faceted navigation"
-msgstr "Dezactivare navigare faţetată"
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Enable faceted navigation"
-msgstr "Activare navigare faţetată"
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Faceted criteria"
-msgstr "Criteriu faţetat"
+msgstr "Căutare curentă"
 
 msgid "Object provides"
-msgstr "Obiectul prevede"
+msgstr "Interfeţe oferite"
 
 msgid "Portal type"
-msgstr "Tip portal"
+msgstr "Tip"
 
 msgid "Sort on"
-msgstr "Sortare pe"
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Sync faceted translations"
-msgstr "Sincronizare traduceri faţetate"
+msgstr "Sortare după"
 
 #: Default: "Countable"
 msgid "label_schema_countable"

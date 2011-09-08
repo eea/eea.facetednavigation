@@ -4,24 +4,30 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="eea">
 
-  <configure zcml:condition="installed eea.design">
-    <genericsetup:upgradeStep
-      title="Upgrade default faceted layout to 'folder_summary_view'"
-      handler="eea.facetednavigation.upgrades.evolve41.fix_default_layout"
-      profile="eea.facetednavigation:default"
-      source="4.0"
-      destination="4.1"
-      />
-  </configure>
-
-  <genericsetup:upgradeStep
-    title="Cleanup p4a.subtyper interfaces and annotations"
-    handler="eea.facetednavigation.upgrades.evolve41.cleanup_p4a"
+  <!-- 4.0 => 4.1 -->
+  <genericsetup:upgradeSteps
     source="4.0"
     destination="4.1"
-    profile="eea.facetednavigation:default"
-    />
+    profile="eea.facetednavigation:default">
 
+    <genericsetup:upgradeStep
+      title="Cleanup p4a.subtyper interfaces and annotations"
+      handler="eea.facetednavigation.upgrades.evolve41.cleanup_p4a"
+      />
+
+    <genericsetup:upgradeDepends
+      title="Import profile steps with changes: actions"
+      import_steps="actions"
+      />
+
+  </genericsetup:upgradeSteps>
+
+  <!-- Upgrade steps for EEA -->
+  <configure zcml:condition="installed eea.design">
+    <include file="eea.zcml" />
+  </configure>
+
+  <!-- all => 4.0 -->
   <genericsetup:upgradeSteps
     source="*"
     destination="4.0"

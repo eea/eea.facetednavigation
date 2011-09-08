@@ -21,10 +21,10 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.PathCatalogIndexes',
         widget=SelectionWidget(
             format='select',
-            label='Catalog index',
-            label_msgid='faceted_criteria_index',
-            description='Catalog index to use for search',
-            description_msgid='help_faceted_criteria_index',
+            label=_('faceted_criteria_index',
+                default=u'Catalog index'),
+            description=_('help_faceted_criteria_index',
+                default=u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -32,11 +32,11 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label='Root folder',
-            label_msgid='faceted_criteria_path_root',
-            description=('Navigation js-tree starting point '
-                         '(relative to plone site. ex: SITE/data-and-maps)'),
-            description_msgid='help_faceted_criteria_path_root',
+            label=_(u'faceted_criteria_path_root',
+                default=u'Root folder'),
+            description=_('help_faceted_criteria_path_root',
+                default=u'Navigation js-tree starting point '
+                        u'(relative to plone site. ex: SITE/data-and-maps)'),
             i18n_domain="eea"
         )
     ),
@@ -44,10 +44,10 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description='Default path to search in (relative to root folder)',
-            description_msgid='help_faceted_criteria_path_default',
+            label=_(u'faceted_criteria_default',
+                default=u'Default value'),
+            description=_('help_faceted_criteria_path_default',
+                default=u'Default path to search in (relative to root folder)'),
             i18n_domain="eea"
         )
     ),
@@ -56,12 +56,12 @@ EditSchema = Schema((
         default=0,
         widget=StringWidget(
             size=25,
-            label='Search Depth',
-            label_msgid='faceted_criteria_depth',
-            description='Depth to search the path. 0=this level, '
-                        '-1=all subfolders recursive, and any other positive '
-                        'integer count the subfolder-levels to search.',
-            description_msgid='help_faceted_criteria_path_depth',
+            label=_('faceted_criteria_depth',
+                default=u'Search Depth'),
+            description=_(u'help_faceted_criteria_path_depth',
+                default=u'Depth to search the path. 0=this level, '
+                        u'-1=all subfolders recursive, and any other positive '
+                        u'integer count the subfolder-levels to search.'),
             i18n_domain="eea"
         )
     ),
@@ -71,10 +71,10 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.JsTreeThemes',
         widget=SelectionWidget(
             format='select',
-            label='Navigation tree theme',
-            label_msgid='faceted_criteria_path_theme',
-            description='Theme to be used with this widget',
-            description_msgid='help_faceted_criteria_path_theme',
+            label=_(u'faceted_criteria_path_theme',
+                default=u'Navigation tree theme'),
+            description=_(u'help_faceted_criteria_path_theme',
+                default=u'Theme to be used with this widget'),
             i18n_domain="eea"
         )
     ),

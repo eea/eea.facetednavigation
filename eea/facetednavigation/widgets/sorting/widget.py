@@ -17,11 +17,11 @@ EditSchema = Schema((
         schemata="default",
         vocabulary_factory='eea.faceted.vocabularies.PortalVocabularies',
         widget=SelectionWidget(
-            label='Filter from vocabulary',
-            label_msgid='faceted_criteria_sorting_vocabulary',
-            description=('Vocabulary to use to filter sorting criteria. '
-                         'Leave empty for default sorting criteria.'),
-            description_msgid='help_faceted_criteria_sorting_vocabulary',
+            label=_(u'faceted_criteria_sorting_vocabulary',
+                default=u'Filter from vocabulary'),
+            description=_(u'help_faceted_criteria_sorting_vocabulary',
+                default=u'Vocabulary to use to filter sorting criteria. '
+                        u'Leave empty for default sorting criteria.'),
             i18n_domain="eea"
         )
     ),
@@ -29,11 +29,10 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description=('Default sorting index '
-                         '(e.g. "effective" or "effective(reverse)")'),
-            description_msgid='help_faceted_criteria_sorting_default',
+            label=_(u'faceted_criteria_default', default=u'Default value'),
+            description=_(u'help_faceted_criteria_sorting_default',
+                default=u'Default sorting index '
+                        u'(e.g. "effective" or "effective(reverse)")'),
             i18n_domain="eea"
         )
     ),

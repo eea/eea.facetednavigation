@@ -1,15 +1,40 @@
 """ Upgrade scripts to version 4.1
 """
 import logging
-from zope.interface import noLongerProvides
+from zope.interface import noLongerProvides, alsoProvides
 from Products.CMFCore.utils import getToolByName
 from zope.component import queryAdapter, getUtility
 from zope.component.interface import interfaceToName
 from zope.annotation.interfaces import IAnnotations
 
 from eea.facetednavigation.interfaces import IFacetedNavigable
+from eea.facetednavigation.interfaces import IHidePloneLeftColumn
+from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
+
 logger = logging.getLogger("eea.facetednavigation.upgrades => 4.1")
+
+def hide_portlets(context):
+    """ As eea.design changed, we need to hide left and right plone portlets
+    columns. This upgrade step is available only in EEA context
+    """
+    ctool = getToolByName(context, 'portal_catalog')
+    iface = interfaceToName(context, IFacetedNavigable)
+    brains = ctool.unrestrictedSearchResults(object_provides=iface)
+
+    logger.info(
+        'Hiding plone portlets for %s faceted navigable objects', len(brains))
+
+    for brain in brains:
+        doc = brain.getObject()
+        if not IHidePloneLeftColumn.providedBy(doc):
+            logger.info('Hidding left portlet for %s', doc.absolute_url())
+            alsoProvides(doc, IHidePloneLeftColumn)
+        if not IHidePloneRightColumn.providedBy(doc):
+            logger.info('Hidding right portlet for %s', doc.absolute_url())
+            alsoProvides(doc, IHidePloneRightColumn)
+    logger.info('Hiding plone portlets ... DONE')
+
 
 def fix_default_layout(context):
     """ In eea.facetednavigation < 4.0 the default layout was

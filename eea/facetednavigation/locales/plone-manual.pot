@@ -14,22 +14,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
 
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Disable faceted navigation"
-msgstr ""
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Enable faceted navigation"
-msgstr ""
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Faceted criteria"
-msgstr ""
-
-#: ../../facetednavigation/profiles/default/actions.xml
-msgid "Sync faceted translations"
-msgstr ""
-
 #: Default: "Layout"
 msgid "label_schema_layout"
 msgstr ""

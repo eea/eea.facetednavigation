@@ -23,10 +23,10 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.DateRangeCatalogIndexes',
         widget=SelectionWidget(
             format='select',
-            label='Catalog index',
-            label_msgid='faceted_criteria_index',
-            description='Catalog index to use for search',
-            description_msgid='help_faceted_criteria_index',
+            label=_(u'faceted_criteria_index',
+                default=u'Catalog index'),
+            description=_(u'help_faceted_criteria_index',
+                default=u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -34,10 +34,10 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label='Default value',
-            label_msgid='faceted_criteria_default',
-            description='Default daterange (e.g. "2009/12/01=>2009/12/31")',
-            description_msgid='help_faceted_criteria_date_default',
+            label=_('faceted_criteria_default',
+                default='Default value'),
+            description=_(u'help_faceted_criteria_daterange_default',
+                default=u'Default daterange (e.g. "2009/12/01=>2009/12/31")'),
             i18n_domain="eea"
         )
     ),
