@@ -52,7 +52,7 @@ msgstr "Anzeige"
 
 #: Default: "Geometry"
 msgid "label_schema_geometry"
-msgstr ""
+msgstr "Geometrie"
 
 #: Default: "Layout"
 msgid "label_schema_layout"

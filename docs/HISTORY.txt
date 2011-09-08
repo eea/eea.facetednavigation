@@ -4,6 +4,9 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* i18n: updated german translation.
+  [jensens]
+
 * Feature: Added possibility to disable plone left/right columns in view mode
   [voineali #4493]
   Internationalization

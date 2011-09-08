@@ -34,7 +34,7 @@ msgstr "Alle"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:73
 msgid "Alphabetic"
-msgstr ""
+msgstr "Alphabetisch"
 
 #: ../../facetednavigation/browser/template/configure.pt:99
 msgid "Are you sure you want to delete ${widget} widget?"
@@ -46,11 +46,11 @@ msgstr "Katalog Abfrage"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:121
 msgid "Checkboxes"
-msgstr ""
+msgstr "Checkboxen"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Cloud"
-msgstr ""
+msgstr "Wolke"
 
 #: ../../facetednavigation/browser/template/configure.pt:20
 msgid "Configure faceted navigation"
@@ -70,31 +70,31 @@ msgstr "Derzeitige Konfiguration"
 
 #: ../../facetednavigation/widgets/date/widget.py:77
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Date range"
-msgstr ""
+msgstr "Zeitraum"
 
 #: ../../facetednavigation/widgets/debug/widget.py:35
 msgid "Debugger"
-msgstr ""
+msgstr "Debugger"
 
 #: ../../facetednavigation/settings/menu.py:58
 msgid "Disable left portlets"
-msgstr ""
+msgstr "Linke Portlets abschalten"
 
 #: ../../facetednavigation/settings/menu.py:73
 msgid "Disable right portlets"
-msgstr ""
+msgstr "Rechte Portlets abschalten"
 
 #: ../../facetednavigation/settings/menu.py:57
 msgid "Enable left portlets"
-msgstr ""
+msgstr "Linke Portlets einschalten"
 
 #: ../../facetednavigation/settings/menu.py:72
 msgid "Enable right portlets"
-msgstr ""
+msgstr "Rechte Portlets einschalten"
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:28
 msgid "End date"
@@ -126,11 +126,11 @@ msgstr "Fabrik"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:13
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 #: ../../facetednavigation/browser/app/configure.py:109
 msgid "Filters deleted"
-msgstr ""
+msgstr "Filter gelöscht"
 
 #: ../../facetednavigation/browser/template/configure.pt:85
 msgid "Import"
@@ -150,7 +150,7 @@ msgstr "Das für dieses Widget angegebene Vokabular ist leer oder ungültig. Fel
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
-msgstr ""
+msgstr "Liste"
 
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
@@ -158,26 +158,27 @@ msgstr "Reihenfolge"
 
 #: ../../facetednavigation/widgets/path/widget.py:88
 msgid "Path"
-msgstr ""
+msgstr "Pfad"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:33
 msgid "Plone portlet"
-msgstr ""
+msgstr "Plone Portlet"
 
 #: ../../facetednavigation/settings/menu.py:114
 msgid "Portlets left column is hidden now"
-msgstr ""
+msgstr "Die linke Portlet Splate ist jetzt versteckt"
 
 #: ../../facetednavigation/settings/menu.py:111
 msgid "Portlets left column is visible now"
-msgstr ""
+msgstr "Die linke Portlet Spalte ist jetzt sichtbar."
 
 #: ../../facetednavigation/settings/menu.py:124
 msgid "Portlets right column is hidden now"
-msgstr ""
+msgstr "Die rechte Portlet Splate ist jetzt versteckt"
 
 #: ../../facetednavigation/settings/menu.py:121
 msgid "Portlets right column is visible now"
+msgstr "Die rechte Portlet Spalte ist jetzt sichtbar."
 msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:44
@@ -190,11 +191,11 @@ msgstr "Python-Name der Factory, mit dem das implementierende Objekt erzeugt wir
 
 #: ../../facetednavigation/widgets/radio/widget.py:114
 msgid "Radio"
-msgstr ""
+msgstr "Radio"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:69
 msgid "Results per page"
-msgstr ""
+msgstr "Ergebnisse pro Seite"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
@@ -210,15 +211,15 @@ msgstr "Abschnitt"
 
 #: ../../facetednavigation/widgets/select/widget.py:101
 msgid "Select"
-msgstr ""
+msgstr "Auswahl"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:47
 msgid "Sorting"
-msgstr ""
+msgstr "Sortierung"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:22
 msgid "Sphere"
-msgstr ""
+msgstr "Sphäre"
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:20
 msgid "Start date"
@@ -226,15 +227,15 @@ msgstr "Anfangsdatum"
 
 #: ../../facetednavigation/widgets/tal/widget.py:65
 msgid "TAL Expression"
-msgstr ""
+msgstr "TAL Ausdruck"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:176
 msgid "Tags Cloud"
-msgstr ""
+msgstr "Tag Wolke"
 
 #: ../../facetednavigation/widgets/text/widget.py:45
 msgid "Text field"
-msgstr ""
+msgstr "Text Feld"
 
 #: ../../facetednavigation/browser/template/error.pt:3
 msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
@@ -397,7 +398,7 @@ msgstr "Verwendetes Vokabular, um die Widget-Einträge zu erzeugen."
 #. Default: "Faceted global settings"
 #: ../../facetednavigation/settings/menu.py:20
 msgid "help_faceted_settings_menu"
-msgstr ""
+msgstr "Globale Einstellungen für Faceted"
 
 #. Default: "Position of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:45
@@ -431,12 +432,12 @@ msgstr "Alle auswählen"
 #. Default: "Configuration imported"
 #: ../../facetednavigation/browser/app/exportimport.py:47
 msgid "msg_configuration_imported"
-msgstr ""
+msgstr "Einstellungen wurden importiert"
 
 #. Default: "No action provided"
 #: ../../facetednavigation/browser/app/exportimport.py:75
 msgid "msg_no_action_provided"
-msgstr ""
+msgstr "Keine Aktion verfügbar"
 
 #. Default: "Content listing"
 #: ../../facetednavigation/browser/template/configure.pt:109
