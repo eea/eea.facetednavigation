@@ -6,6 +6,8 @@ Changelog
 
 * Feature: Added possibility to disable plone left/right columns in view mode
   [voineali #4493]
+  Internationalization
+  [thomasdesvenain]
 
 * Feature: Disabled plone left/right columns in edit mode
   [voineali #4493]

@@ -5,12 +5,12 @@ from zope.app.publisher.browser.menu import BrowserSubMenuItem
 from zope.app.publisher.browser.menu import BrowserMenu
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
-from plone.app.contentmenu import PloneMessageFactory as _
-from eea.facetednavigation.interfaces import IFacetedNavigable
 
+from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.settings.interfaces import ISettingsHandler
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
+from eea.facetednavigation import EEAMessageFactory as _
 
 class SettingsMenu(BrowserSubMenuItem):
     """ Faceted settings menu
@@ -54,8 +54,8 @@ class SettingsMenuItems(BrowserMenu):
 
         menu = [
             {
-                'title': ('Enable left portlets' if left_hidden
-                     else 'Disable left portlets'),
+                'title': (_('Enable left portlets') if left_hidden
+                     else _('Disable left portlets')),
                 'description': '',
                 'action': action % 'hide_left_column',
                 'selected': not left_hidden,
@@ -69,8 +69,8 @@ class SettingsMenuItems(BrowserMenu):
                 'submenu': None,
             },
             {
-                'title': ('Enable right portlets' if right_hidden
-                     else 'Disable right portlets'),
+                'title': (_('Enable right portlets') if right_hidden
+                     else _('Disable right portlets')),
                 'description': '',
                 'action': action % 'hide_right_column',
                 'selected': not right_hidden,
@@ -108,17 +108,17 @@ class SettingsHandler(BrowserView):
         """
         if IHidePloneLeftColumn.providedBy(self.context):
             noLongerProvides(self.context, IHidePloneLeftColumn)
-            return self._redirect('Portlets left column is visible now')
+            return self._redirect(_('Portlets left column is visible now'))
         else:
             alsoProvides(self.context, IHidePloneLeftColumn)
-            return self._redirect('Portlets left column is hidden now')
+            return self._redirect(_('Portlets left column is hidden now'))
 
     def hide_right_column(self, **kwargs):
         """ Hide plone portlets left column
         """
         if IHidePloneRightColumn.providedBy(self.context):
             noLongerProvides(self.context, IHidePloneRightColumn)
-            return self._redirect('Portlets right column is visible now')
+            return self._redirect(_('Portlets right column is visible now'))
         else:
             alsoProvides(self.context, IHidePloneRightColumn)
-            return self._redirect('Portlets right column is hidden now')
+            return self._redirect(_('Portlets right column is hidden now'))

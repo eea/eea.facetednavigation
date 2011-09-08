@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-07-20 05:52+0000\n"
+"POT-Creation-Date: 2011-09-08 09:39+0000\n"
 "PO-Revision-Date: 2011-07-20 08:04+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../../facetednavigation/browser/template/configure.pt:23
+#: ../../facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
 msgstr "Filtro berria gehitu"
 
-#: ../../facetednavigation/browser/template/configure.pt:24
+#: ../../facetednavigation/browser/template/configure.pt:27
 msgid "Add widget"
 msgstr "Widgeta gehitu"
 
@@ -36,7 +36,7 @@ msgstr "Guztiak"
 msgid "Alphabetic"
 msgstr "Alfabetikoki"
 
-#: ../../facetednavigation/browser/template/configure.pt:96
+#: ../../facetednavigation/browser/template/configure.pt:99
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "${widget} widgeta ezabatu nahi duzu?"
 
@@ -52,7 +52,7 @@ msgstr "Aukeratzeko-kutxak"
 msgid "Cloud"
 msgstr "Lainoa"
 
-#: ../../facetednavigation/browser/template/configure.pt:17
+#: ../../facetednavigation/browser/template/configure.pt:20
 msgid "Configure faceted navigation"
 msgstr "Sailkapen bidezko nabigazioa konfiguratu"
 
@@ -60,7 +60,7 @@ msgstr "Sailkapen bidezko nabigazioa konfiguratu"
 msgid "Counters"
 msgstr "Kontagailua"
 
-#: ../../facetednavigation/browser/template/configure.pt:122
+#: ../../facetednavigation/browser/template/configure.pt:125
 msgid "Criterion details"
 msgstr "Irizpideen ezaugarriak"
 
@@ -80,6 +80,22 @@ msgstr "Data-tartea"
 msgid "Debugger"
 msgstr "Araztailea"
 
+#: ../../facetednavigation/settings/menu.py:58
+msgid "Disable left portlets"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:73
+msgid "Disable right portlets"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:57
+msgid "Enable left portlets"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:72
+msgid "Enable right portlets"
+msgstr ""
+
 #: ../../facetednavigation/widgets/daterange/widget.pt:28
 msgid "End date"
 msgstr "Bukaera data"
@@ -92,7 +108,7 @@ msgstr "Errore-mota:"
 msgid "Error value:"
 msgstr "Errorearen balioa:"
 
-#: ../../facetednavigation/browser/template/configure.pt:85
+#: ../../facetednavigation/browser/template/configure.pt:88
 msgid "Export"
 msgstr "Esportatu"
 
@@ -116,15 +132,15 @@ msgstr "Filtroak"
 msgid "Filters deleted"
 msgstr "Filtroak ezabatu egin dira"
 
-#: ../../facetednavigation/browser/template/configure.pt:82
+#: ../../facetednavigation/browser/template/configure.pt:85
 msgid "Import"
 msgstr "Inportatu"
 
-#: ../../facetednavigation/browser/template/configure.pt:74
+#: ../../facetednavigation/browser/template/configure.pt:77
 msgid "Import - Export configuration"
 msgstr "Konfigurazioa inportatu-esportatu"
 
-#: ../../facetednavigation/browser/template/configure.pt:75
+#: ../../facetednavigation/browser/template/configure.pt:78
 msgid "Import configuration"
 msgstr "Konfigurazioa inportatu"
 
@@ -136,7 +152,7 @@ msgstr "Widget honentzat aukeratu duzun hiztegiak ez du balio edo hutsik dago. U
 msgid "List"
 msgstr "Zerrenda"
 
-#: ../../facetednavigation/browser/template/configure.pt:123
+#: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
 msgstr "Ordena"
 
@@ -148,7 +164,23 @@ msgstr "Bidea"
 msgid "Plone portlet"
 msgstr "Ploneren portleta"
 
-#: ../../facetednavigation/browser/template/configure.pt:41
+#: ../../facetednavigation/settings/menu.py:114
+msgid "Portlets left column is hidden now"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:111
+msgid "Portlets left column is visible now"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:124
+msgid "Portlets right column is hidden now"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:121
+msgid "Portlets right column is visible now"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:44
 msgid "Position"
 msgstr "Kokapena"
 
@@ -172,7 +204,7 @@ msgstr "Alderantzizkoa"
 msgid "Search"
 msgstr "Bilatu"
 
-#: ../../facetednavigation/browser/template/configure.pt:53
+#: ../../facetednavigation/browser/template/configure.pt:56
 msgid "Section"
 msgstr "Atala"
 
@@ -208,11 +240,11 @@ msgstr "Testu-eremua"
 msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
 msgstr "Widget hau ez da erakutsiko errorea gertatu delako berau erakustean. Azalpen gehiago jasotzeko begiratu zerbitzariaren log fitxategia. Widgetaren konfigurazioa aldatu dezakezu gertatu dena zer den jakiteko."
 
-#: ../../facetednavigation/browser/template/configure.pt:29
+#: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
 msgstr "Mota"
 
-#: ../../facetednavigation/browser/template/configure.pt:146
+#: ../../facetednavigation/browser/template/configure.pt:149
 msgid "Widget type"
 msgstr "Widget-mota"
 
@@ -362,18 +394,23 @@ msgstr "Widgetak orrialdean izango duen izenburua"
 msgid "help_faceted_criteria_vocabulary"
 msgstr "Widgeteko elementuak ateratzeko erabiliko den hiztegia"
 
+#. Default: "Faceted global settings"
+#: ../../facetednavigation/settings/menu.py:20
+msgid "help_faceted_settings_menu"
+msgstr ""
+
 #. Default: "Position of the widget."
-#: ../../facetednavigation/browser/template/configure.pt:42
+#: ../../facetednavigation/browser/template/configure.pt:45
 msgid "help_widget_position"
 msgstr "Widgetaren kokapena."
 
 #. Default: "Display widget in section."
-#: ../../facetednavigation/browser/template/configure.pt:54
+#: ../../facetednavigation/browser/template/configure.pt:57
 msgid "help_widget_section"
 msgstr "Widgeta atala baten erakutsi"
 
 #. Default: "Type of the widget."
-#: ../../facetednavigation/browser/template/configure.pt:30
+#: ../../facetednavigation/browser/template/configure.pt:33
 msgid "help_widget_type"
 msgstr "Widget-mota."
 
@@ -381,8 +418,13 @@ msgstr "Widget-mota."
 msgid "in current results"
 msgstr "Uneko elementuetan"
 
+#. Default: "Faceted settings"
+#: ../../facetednavigation/settings/menu.py:18
+msgid "label_faceted_settings_menu"
+msgstr ""
+
 #. Default: "Select all items"
-#: ../../facetednavigation/browser/template/configure.pt:111
+#: ../../facetednavigation/browser/template/configure.pt:114
 msgid "label_select_all_items"
 msgstr "Elementu guztiak aukeratu"
 
@@ -397,7 +439,7 @@ msgid "msg_no_action_provided"
 msgstr "Ez duzu akziorik aukeratu"
 
 #. Default: "Content listing"
-#: ../../facetednavigation/browser/template/configure.pt:106
+#: ../../facetednavigation/browser/template/configure.pt:109
 msgid "summary_content_listing"
 msgstr "Edukien zerrenda"
 
