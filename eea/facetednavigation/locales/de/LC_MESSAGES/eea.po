@@ -179,7 +179,6 @@ msgstr "Die rechte Portlet Splate ist jetzt versteckt"
 #: ../../facetednavigation/settings/menu.py:121
 msgid "Portlets right column is visible now"
 msgstr "Die rechte Portlet Spalte ist jetzt sichtbar."
-msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:44
 msgid "Position"
