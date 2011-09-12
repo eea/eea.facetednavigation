@@ -3,6 +3,8 @@
 from zope.interface import implements, alsoProvides, noLongerProvides
 from zope.app.publisher.browser.menu import BrowserSubMenuItem
 from zope.app.publisher.browser.menu import BrowserMenu
+from zope.security import checkPermission
+
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 
@@ -33,7 +35,8 @@ class SettingsMenu(BrowserSubMenuItem):
     def available(self):
         """ Is this menu available?
         """
-        return IFacetedNavigable.providedBy(self.context)
+        return (IFacetedNavigable.providedBy(self.context) and
+                checkPermission('eea.faceted.configure', self.context))
 
     def selected(self):
         """ Is this item selected?
