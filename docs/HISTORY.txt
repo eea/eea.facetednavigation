@@ -4,6 +4,10 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* Bug fix: Fixed duplicate resources load if faceted widgets are using the same
+  CSS/JS resource
+  [voineali #4510]
+
 * i18n: Cleanup all widgets schema to use translations messages
   [voineali]
 

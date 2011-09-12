@@ -91,9 +91,9 @@ class ViewJavascript(Javascript):
         info = getUtility(IWidgetsInfo).widgets
         for widget in info.values():
             view_js = widget.view_js
-            if isinstance(view_js, tuple):
-                res.extend(view_js)
-            else:
+            if isinstance(view_js, (tuple, list, set)):
+                res.extend(js for js in view_js if js not in res)
+            elif view_js not in res:
                 res.append(view_js)
         return res
 
@@ -129,9 +129,9 @@ class EditJavascript(Javascript):
         info = getUtility(IWidgetsInfo).widgets
         for widget in info.values():
             edit_js = widget.edit_js
-            if isinstance(edit_js, tuple):
-                res.extend(edit_js)
-            else:
+            if isinstance(edit_js, (tuple, list, set)):
+                res.extend(js for js in edit_js if js not in res)
+            elif edit_js not in res:
                 res.append(edit_js)
         return res
 

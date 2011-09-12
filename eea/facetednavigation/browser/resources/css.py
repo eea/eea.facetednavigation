@@ -91,9 +91,9 @@ class ViewCSS(CSS):
         info = getUtility(IWidgetsInfo).widgets
         for widget in info.values():
             view_css = widget.view_css
-            if isinstance(view_css, tuple):
-                res.extend(view_css)
-            else:
+            if isinstance(view_css, (tuple, list, set)):
+                res.extend(css for css in view_css if css not in res)
+            elif view_css not in res:
                 res.append(view_css)
         return res
 
@@ -128,9 +128,9 @@ class EditCSS(CSS):
         info = getUtility(IWidgetsInfo).widgets
         for widget in info.values():
             edit_css = widget.edit_css
-            if isinstance(edit_css, tuple):
-                res.extend(edit_css)
-            else:
+            if isinstance(edit_css, (tuple, list, set)):
+                res.extend(css for css in edit_css if css not in res)
+            elif edit_css not in res:
                 res.append(edit_css)
         return res
 
