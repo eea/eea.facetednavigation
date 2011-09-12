@@ -23,7 +23,7 @@
   <browser:page
     name="faceted_settings"
     for="..interfaces.IFacetedNavigable"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     class=".menu.SettingsHandler"
     allowed_interface=".interfaces.ISettingsHandler"
     />

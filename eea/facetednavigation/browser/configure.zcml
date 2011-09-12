@@ -50,14 +50,14 @@
     name="configure_faceted.html"
     template="template/configure.pt"
     class=".app.configure.FacetedConfigureView"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
 
   <browser:page
     for="..interfaces.IFacetedNavigable"
     name="faceted_configure"
     class=".app.configure.FacetedFormHandler"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     allowed_interface=".interfaces.IFacetedFormHandler"
     />
 
@@ -65,7 +65,7 @@
     for="..interfaces.IFacetedNavigable"
     name="faceted_update_criteria"
     class=".app.configure.FacetedCriteriaHandler"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
     <!--allowed_interface=".interfaces.IFacetedCriteriaHandler"-->
 
@@ -73,7 +73,7 @@
     for="..interfaces.IFacetedNavigable"
     name="faceted_update_criterion"
     class=".app.configure.FacetedCriterionHandler"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
     <!--allowed_interface=".interfaces.IFacetedCriterionHandler"-->
 
@@ -81,7 +81,7 @@
     for="..interfaces.IFacetedNavigable"
     name="faceted_update_position"
     class=".app.configure.FacetedPositionHandler"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
     <!--allowed_interface=".interfaces.IFacetedPositionHandler"-->
 
@@ -112,28 +112,28 @@
     for="..interfaces.IFacetedNavigable"
     name="faceted_exportimport"
     class=".app.exportimport.FacetedExportImport"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
 
   <browser:page
     for="..interfaces.IFacetedNavigable"
     name="faceted_schema"
     class=".app.schema.FacetedSchemaGetter"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
 
   <browser:page
     for="..interfaces.IFacetedNavigable"
     name="default_widgets.xml"
     template="template/default.xml"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
 
   <browser:page
     for="..interfaces.IFacetedNavigable"
     name="faceted_sync_translations"
     class=".app.synchronize.FacetedSynchronizeTranslation"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     />
 
   <browser:page
@@ -181,7 +181,7 @@
     name="eea.faceted-navigation-expand.js"
     file="./javascript/expand.js"
    />
-   
+
   <browser:resource
     name="eea.faceted-navigation-independent.js"
     file="./javascript/independent.js"

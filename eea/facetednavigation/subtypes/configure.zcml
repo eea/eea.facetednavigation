@@ -30,7 +30,7 @@
     name="faceted_subtyper"
     for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
     class=".subtyper.FacetedSubtyper"
-    permission="cmf.ModifyPortalContent"
+    permission="eea.faceted.configure"
     allowed_interface=".interfaces.IFacetedSubtyper"
     />
 

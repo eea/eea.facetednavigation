@@ -4,6 +4,10 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* Bug fix: Use 'eea.faceted.configure' permission for all faceted related views
+  in order to avoid having actions that raise Insufficient Privileges
+  [voineali]
+
 * Bug fix: Fixed duplicate resources load if faceted widgets are using the same
   CSS/JS resource
   [voineali #4510]
