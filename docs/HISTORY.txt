@@ -40,9 +40,10 @@ Changelog
 * Feature: Switched show.png with hide.png as it seems more logical this way
   [voineali]
 
-* Feature: Added javascript that will allow to add an indipendent input text
-  search on any other page. it will translate the submitted key and value into
-  faceted anchors parameters. the js has example on how to use it. [demarant]
+* Feature: Added javascript that will allow to add an indipendent faceted
+  search on any other page. it will translate the submitted keys and values into
+  faceted anchors parameters. the js has example on how to use it.
+  [demarant]
 
 * Feature: HTML5 validation [ghicaale #4444]
 
