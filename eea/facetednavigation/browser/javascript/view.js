@@ -290,6 +290,7 @@ Faceted.URLHandler = {
     if(!query){
       query = Faceted.Query;
     }
+    query = jQuery.param(query, traditional=true);
     jQuery.bbq.pushState(query, 2);
   }
 };

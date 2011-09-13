@@ -4,6 +4,10 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* Bug fix: Fixed back button by forcing jQuery to use traditional way to
+  parametrize query
+  [voineali #4524]
+
 * Bug fix: Use 'eea.faceted.configure' permission for all faceted related views
   in order to avoid having actions that raise Insufficient Privileges
   [voineali]
