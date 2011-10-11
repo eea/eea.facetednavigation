@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-09-08 17:46+0000\n"
+"POT-Creation-Date: 2011-10-11 17:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,11 +87,11 @@ msgstr "Débogueur"
 msgid "Disable faceted navigation"
 msgstr "Désactiver la navigation par facettes"
 
-#: ../../facetednavigation/settings/menu.py:58
+#: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
 msgstr "Désactiver les portlets de gauche"
 
-#: ../../facetednavigation/settings/menu.py:73
+#: ../../facetednavigation/settings/menu.py:76
 msgid "Disable right portlets"
 msgstr "Désactiver les portlets de droite"
 
@@ -99,11 +99,11 @@ msgstr "Désactiver les portlets de droite"
 msgid "Enable faceted navigation"
 msgstr "Activer la navigation par facettes"
 
-#: ../../facetednavigation/settings/menu.py:57
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
 msgstr "Activer les portlets de gauche"
 
-#: ../../facetednavigation/settings/menu.py:72
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Enable right portlets"
 msgstr "Activer les portlets de droite"
 
@@ -179,19 +179,19 @@ msgstr "Chemin d'accès"
 msgid "Plone portlet"
 msgstr "Portlet Plone"
 
-#: ../../facetednavigation/settings/menu.py:114
+#: ../../facetednavigation/settings/menu.py:117
 msgid "Portlets left column is hidden now"
 msgstr "Les portlets de gauche sont maintenant désactivées"
 
-#: ../../facetednavigation/settings/menu.py:111
+#: ../../facetednavigation/settings/menu.py:114
 msgid "Portlets left column is visible now"
 msgstr "Les portlets de gauche sont maintenant activées"
 
-#: ../../facetednavigation/settings/menu.py:124
+#: ../../facetednavigation/settings/menu.py:127
 msgid "Portlets right column is hidden now"
 msgstr "Les portlets de droite sont maintenant désactivées"
 
-#: ../../facetednavigation/settings/menu.py:121
+#: ../../facetednavigation/settings/menu.py:124
 msgid "Portlets right column is visible now"
 msgstr "Les portlets de droite sont maintenant désactivées"
 
@@ -271,10 +271,20 @@ msgstr "Type de widget"
 msgid "all items"
 msgstr "dans tous les éléments"
 
+#. Default: "&#916; Hide filters"
+#: ../../facetednavigation/widgets/criteria/widget.pt:15
+msgid "criteria_view_hide_filters"
+msgstr ""
+
 #. Default: "[X] Remove all"
-#: ../../facetednavigation/widgets/criteria/widget.pt:14
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
 msgid "criteria_view_remove_all"
 msgstr "[X] Tout supprimer"
+
+#. Default: "&#8711; Show filters"
+#: ../../facetednavigation/widgets/criteria/widget.pt:16
+msgid "criteria_view_show_filters"
+msgstr ""
 
 #. Default: "Catalog"
 #: ../../facetednavigation/widgets/checkbox/widget.py:62
@@ -658,7 +668,7 @@ msgid "help_faceted_portlet_macro"
 msgstr ""
 
 #. Default: "Faceted global settings"
-#: ../../facetednavigation/settings/menu.py:20
+#: ../../facetednavigation/settings/menu.py:22
 msgid "help_faceted_settings_menu"
 msgstr "Paramètres généraux de la navigation à facettes"
 
@@ -682,7 +692,7 @@ msgid "in current results"
 msgstr "dans les résultats courants"
 
 #. Default: "Faceted settings"
-#: ../../facetednavigation/settings/menu.py:18
+#: ../../facetednavigation/settings/menu.py:20
 msgid "label_faceted_settings_menu"
 msgstr "Paramètres"
 
