@@ -8,10 +8,18 @@ Faceted.CriteriaWidget = function(wid){
 
   this.area = jQuery('#' + wid);
   this.reset_button = jQuery('#' + wid + '_reset');
+  this.toggle_button = jQuery('.faceted-criteria-hide-show', this.widget);
+  this.toggle_button_count = jQuery('.faceted-criteria-count', this.toggle_button);
 
   var js_widget = this;
   this.reset_button.click(function(evt){
     js_widget.reset_click(this, evt);
+    return false;
+  });
+
+  var toggle_buttons = jQuery('a', this.toggle_button);
+  toggle_buttons.click(function(evt){
+    js_widget.toggle_button_click(this, evt);
     return false;
   });
 
@@ -26,12 +34,32 @@ Faceted.CriteriaWidget = function(wid){
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
     return js_widget.update_syndication();
   });
+
+  // Start collapsed
+  jQuery(toggle_buttons[0]).click();
 };
 
 Faceted.CriteriaWidget.prototype = {
   reset_click: function(element, evt){
     jQuery(Faceted.Events).trigger(Faceted.Events.RESET);
     this.do_query();
+  },
+
+  toggle_button_click: function(element, evt){
+    var show = jQuery('.faceted-criteria-show', this.toggle_button);
+    var hide = jQuery('.faceted-criteria-hide', this.toggle_button);
+
+    if(this.area.is(':visible')){
+      this.area.slideUp();
+      hide.hide();
+      show.show();
+      this.toggle_button_count.show();
+    }else{
+      this.area.slideDown();
+      hide.show();
+      show.hide();
+      this.toggle_button_count.hide();
+    }
   },
 
   do_query: function(wid, value){
@@ -54,6 +82,10 @@ Faceted.CriteriaWidget.prototype = {
           empty = false;
         });
       });
+
+      var count = jQuery('dd span', context.area).length;
+      context.toggle_button_count.text('(' + count + ')');
+
       if(!empty){
         context.widget.fadeIn('fast');
       }

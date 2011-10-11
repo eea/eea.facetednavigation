@@ -4,6 +4,9 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* Feature: Added "Hide/Show filters" button to "Criteria widget"
+  [voineali #4551]
+
 * Bug fix: Fixed back button by forcing jQuery to use traditional way to
   parametrize query
   [voineali #4524]

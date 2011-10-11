@@ -39,3 +39,15 @@
 
 .faceted-criteria-reset {
 }
+
+.faceted-criteria-hide-show {
+  float: left;
+  margin-right: 1em;
+}
+
+.faceted-criteria-hide {
+  display: none;
+}
+
+.faceted-criteria-show {
+}
