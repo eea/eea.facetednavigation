@@ -20,6 +20,13 @@
 <!-- Folder contents -->
 <div class="faceted-form" metal:define-macro="widgets" id="faceted-form"
   tal:define="mode string:view;">
+
+  <!-- Basic/Extended search -->
+  <div class="faceted-sections-buttons">
+    <a href="#" class="faceted-sections-buttons-more" i18n:translate="faceted_sections_more">More filters</a>
+    <a href="#" class="faceted-sections-buttons-less" i18n:translate="faceted_sections_less">Less filters</a>
+  </div>
+
   <metal:widgets use-macro="here/@@faceted_widgets/macros/widgets" />
 
   <!-- Faceted version -->

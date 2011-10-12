@@ -4,6 +4,10 @@ Changelog
 4.1 - (unreleased)
 ------------------
 
+* Feature: Replaced the "basic search/extended search" accordion with a more simple and
+  user friendly "More/Less filters" button
+  [voineali #2408]
+
 * Feature: Added "Hide/Show filters" button to "Criteria widget"
   [voineali #4551]
 

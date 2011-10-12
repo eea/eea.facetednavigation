@@ -108,10 +108,10 @@
   width: 100%;
 }
 
-.faceted-widget fieldset {
-  margin: 0.5em ! important;
-  padding: 1em 0.5em 0.5em 0.5em ! important;
-  border: 1px solid #ccc ! important;
+#faceted-form fieldset {
+  margin: 0.5em;
+  padding: 1em 0.5em 0.5em 0.5em;
+  border: 1px solid #ccc;
 }
 
 .widget-fieldset legend {
@@ -209,4 +209,14 @@
 ========= */
 .faceted-widget-error {
   display: none;
+}
+
+#faceted-form .faceted-sections-buttons {
+  float: right;
+  margin-right: 0.5em;
+}
+
+#faceted-form .faceted-sections-buttons a {
+  display: none;
+  color: #95B229;
 }

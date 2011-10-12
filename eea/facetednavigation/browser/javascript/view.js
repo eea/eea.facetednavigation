@@ -297,29 +297,33 @@ Faceted.URLHandler = {
 
 Faceted.Sections = {
   initialize: function(){
-    this.init_sections();
+    var self = this;
+    self.form = jQuery('.faceted-form');
+    self.advanced = jQuery('.faceted-advanced-widgets', self.form).hide();
+    if(!self.advanced.length){
+      return;
+    }
+
+    self.buttons = jQuery('.faceted-sections-buttons', self.form);
+    self.more = jQuery('.faceted-sections-buttons-more', self.form).show();
+    self.less = jQuery('.faceted-sections-buttons-less', self.form).hide();
+
+    jQuery('a', self.buttons).click(function(evt){
+      self.toggle(jQuery(this), evt);
+      return false;
+    });
   },
 
-  init_sections: function(){
-    var sections = jQuery('div.faceted-column:has(.faceted-section-header)');
-    sections.each(function(){
-      var section = jQuery(this);
-      var headers = jQuery('.faceted-section-header', section);
-      headers.show();
+  toggle: function(element, evt){
+    this.more.toggle();
+    this.less.toggle();
+    this.advanced.toggle('blind');
 
-      section.accordion({
-        autoHeight: false
-      });
-
-      section.bind('accordionchange', function(evt, ui){
-        var tags = jQuery('.faceted-tagscloud-widget:visible', section);
-        if(!tags.length){
-          return;
-        }
-        jQuery(Faceted.Events).trigger(Faceted.Events.WINDOW_WIDTH_CHANGED);
-      });
-
-    });
+    // Refresh tags facets
+    var tags = jQuery('.faceted-tagscloud-widget:visible', this.form);
+    if(tags.length){
+      jQuery(Faceted.Events).trigger(Faceted.Events.WINDOW_WIDTH_CHANGED);
+    }
   }
 };
 
