@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2011-10-11 17:33+0000\n"
+"POT-Creation-Date: 2011-10-12 16:36+0000\n"
 "PO-Revision-Date: 2011-05-23 13:22+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -449,6 +449,16 @@ msgstr ""
 #. Default: "Portlet macro"
 #: ../../facetednavigation/widgets/portlet/widget.py:19
 msgid "faceted_portlet_macro"
+msgstr ""
+
+#. Default: "Less filters"
+#: ../../facetednavigation/browser/template/view.pt:27
+msgid "faceted_sections_less"
+msgstr ""
+
+#. Default: "More filters"
+#: ../../facetednavigation/browser/template/view.pt:26
+msgid "faceted_sections_more"
 msgstr ""
 
 #. Default: "Display number of results per letter"
