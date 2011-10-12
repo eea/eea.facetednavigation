@@ -46,8 +46,12 @@
 }
 
 .faceted-criteria-hide {
-  display: none;
 }
 
 .faceted-criteria-show {
+  display: none;
+}
+
+.faceted-criteria-count {
+  display: none;
 }

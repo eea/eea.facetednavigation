@@ -46,20 +46,9 @@ Faceted.CriteriaWidget.prototype = {
   },
 
   toggle_button_click: function(element, evt){
-    var show = jQuery('.faceted-criteria-show', this.toggle_button);
-    var hide = jQuery('.faceted-criteria-hide', this.toggle_button);
-
-    if(this.area.is(':visible')){
-      this.area.slideUp();
-      hide.hide();
-      show.show();
-      this.toggle_button_count.show();
-    }else{
-      this.area.slideDown();
-      hide.show();
-      show.hide();
-      this.toggle_button_count.hide();
-    }
+    this.area.toggle('blind');
+    jQuery('a', this.toggle_button).toggle();
+    this.toggle_button_count.toggle();
   },
 
   do_query: function(wid, value){
