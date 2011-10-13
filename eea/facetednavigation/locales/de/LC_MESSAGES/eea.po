@@ -20,7 +20,7 @@ msgstr "Neuen Filter hinzufügen"
 
 #: ../../facetednavigation/browser/template/configure.pt:27
 msgid "Add widget"
-msgstr ""
+msgstr "Widget hinzufügen"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:25
 msgid "After query filters"
@@ -186,7 +186,7 @@ msgstr "Die linke Portlet Spalte ist jetzt sichtbar."
 
 #: ../../facetednavigation/settings/menu.py:127
 msgid "Portlets right column is hidden now"
-msgstr "Die rechte Portlet Splate ist jetzt versteckt"
+msgstr "Die rechte Portlet Spalte ist jetzt versteckt"
 
 #: ../../facetednavigation/settings/menu.py:124
 msgid "Portlets right column is visible now"
@@ -198,7 +198,7 @@ msgstr "Position"
 
 #: ../../facetednavigation/widgets/interfaces.py:32
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
-msgstr "Python-Name der Factory, mit dem das implementierende Objekt erzeugt wird. Dies muss ein Objekt in einem Modul sein, welches über seinen vollen Dotted-Name adressiert wird."
+msgstr "Bezeichnung der Factory (in Python), mit der das implementierende Objekt erzeugt wird. Dies muss ein Objekt in einem Modul sein, welches über seinen vollen Dotted-Name adressiert wird."
 
 #: ../../facetednavigation/widgets/radio/widget.py:113
 msgid "Radio"
@@ -722,4 +722,3 @@ msgstr "Keine Aktion verfügbar"
 #: ../../facetednavigation/browser/template/configure.pt:109
 msgid "summary_content_listing"
 msgstr "Inhaltsauflistung"
-
