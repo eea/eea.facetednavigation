@@ -1,0 +1,725 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: eea\n"
+"POT-Creation-Date: 2011-10-12 16:36+0000\n"
+"PO-Revision-Date: 2011-10-17 14:13+0800\n"
+"Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: zh-tw\n"
+"Language-Name: Traditional Chinese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: eea\n"
+
+#: ../../facetednavigation/browser/template/configure.pt:26
+msgid "Add new filter"
+msgstr "新增過濾條件"
+
+#: ../../facetednavigation/browser/template/configure.pt:27
+msgid "Add widget"
+msgstr "新增部件"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "位於查詢條件之後"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+#: ../../facetednavigation/widgets/select/widget.pt:23
+msgid "All"
+msgstr "全選"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:73
+msgid "Alphabetic"
+msgstr "按字母排列"
+
+#: ../../facetednavigation/browser/template/configure.pt:99
+msgid "Are you sure you want to delete ${widget} widget?"
+msgstr "確定要刪除 ${widget} 嗎?"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:124
+msgid "Checkboxes"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:23
+msgid "Cloud"
+msgstr "標籤雲"
+
+#: ../../facetednavigation/browser/template/configure.pt:20
+msgid "Configure faceted navigation"
+msgstr "設置智慧導覽"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:125
+msgid "Criterion details"
+msgstr "條件細節"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "目前配置"
+
+#: ../../facetednavigation/widgets/date/widget.py:76
+msgid "Date"
+msgstr "日期"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:51
+msgid "Date range"
+msgstr "日期區間"
+
+#: ../../facetednavigation/widgets/debug/widget.py:34
+msgid "Debugger"
+msgstr "偵錯"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr "停用智慧導覽"
+
+#: ../../facetednavigation/settings/menu.py:61
+msgid "Disable left portlets"
+msgstr "停用左側方框"
+
+#: ../../facetednavigation/settings/menu.py:76
+msgid "Disable right portlets"
+msgstr "停用右側方框"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr "啟用智慧導覽"
+
+#: ../../facetednavigation/settings/menu.py:60
+msgid "Enable left portlets"
+msgstr "啟用左側方框"
+
+#: ../../facetednavigation/settings/menu.py:75
+msgid "Enable right portlets"
+msgstr "啟用右側方框"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:28
+msgid "End date"
+msgstr "結束日期"
+
+#: ../../facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr "錯誤類型:"
+
+#: ../../facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr "錯誤值:"
+
+#: ../../facetednavigation/browser/template/configure.pt:88
+msgid "Export"
+msgstr "匯出"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr "智慧導覽條件"
+
+#: ../../facetednavigation/subtypes/subtyper.py:133
+msgid "Faceted navigation disabled"
+msgstr "智慧導覽已停用"
+
+#: ../../facetednavigation/subtypes/subtyper.py:122
+msgid "Faceted navigation enabled"
+msgstr "智慧導覽已啟用"
+
+#: ../../facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.py:13
+msgid "Filters"
+msgstr "過濾條件"
+
+#: ../../facetednavigation/browser/app/configure.py:109
+msgid "Filters deleted"
+msgstr "過濾條件已刪除"
+
+#: ../../facetednavigation/browser/template/configure.pt:85
+msgid "Import"
+msgstr "匯入"
+
+#: ../../facetednavigation/browser/template/configure.pt:77
+msgid "Import - Export configuration"
+msgstr "匯入/匯出設定"
+
+#: ../../facetednavigation/browser/template/configure.pt:78
+msgid "Import configuration"
+msgstr "匯入設定"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "這個部件的詞彙表並不正確，預設的排序條件因此留空。"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:21
+msgid "List"
+msgstr "列表"
+
+#: ../../facetednavigation/browser/template/configure.pt:126
+msgid "Order"
+msgstr "順序"
+
+#: ../../facetednavigation/widgets/path/widget.py:88
+msgid "Path"
+msgstr "路徑"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:32
+msgid "Plone portlet"
+msgstr "資訊方框"
+
+#: ../../facetednavigation/settings/menu.py:117
+msgid "Portlets left column is hidden now"
+msgstr "左側資訊方框被停用了"
+
+#: ../../facetednavigation/settings/menu.py:114
+msgid "Portlets left column is visible now"
+msgstr "左側資訊方框被啟用了"
+
+#: ../../facetednavigation/settings/menu.py:127
+msgid "Portlets right column is hidden now"
+msgstr "右側資訊方框被停用了"
+
+#: ../../facetednavigation/settings/menu.py:124
+msgid "Portlets right column is visible now"
+msgstr "右側資訊方框被啟用了"
+
+#: ../../facetednavigation/browser/template/configure.pt:44
+msgid "Position"
+msgstr "位置"
+
+#: ../../facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr ""
+
+#: ../../facetednavigation/widgets/radio/widget.py:113
+msgid "Radio"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:65
+msgid "Results per page"
+msgstr "每頁顯示數量"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "反向"
+
+#: ../../facetednavigation/widgets/text/widget.pt:21
+msgid "Search"
+msgstr "搜尋"
+
+#: ../../facetednavigation/browser/template/configure.pt:56
+msgid "Section"
+msgstr ""
+
+#: ../../facetednavigation/widgets/select/widget.py:97
+msgid "Select"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.py:46
+msgid "Sorting"
+msgstr "排序"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Sphere"
+msgstr "標籤球"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:20
+msgid "Start date"
+msgstr "起始日期"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tal/widget.py:63
+msgid "TAL Expression"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:176
+msgid "Tags Cloud"
+msgstr "標籤雲"
+
+#: ../../facetednavigation/widgets/text/widget.py:45
+msgid "Text field"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:32
+msgid "Type"
+msgstr "類型"
+
+#: ../../facetednavigation/browser/template/configure.pt:149
+msgid "Widget type"
+msgstr "部件類型"
+
+#: ../../facetednavigation/widgets/text/widget.pt:30
+msgid "all items"
+msgstr ""
+
+#. Default: "&#916; Hide filters"
+#: ../../facetednavigation/widgets/criteria/widget.pt:15
+msgid "criteria_view_hide_filters"
+msgstr "&#916; 隱藏條件"
+
+#. Default: "[X] Remove all"
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
+msgid "criteria_view_remove_all"
+msgstr "[X] 移除全部"
+
+#. Default: "&#8711; Show filters"
+#: ../../facetednavigation/widgets/criteria/widget.pt:16
+msgid "criteria_view_show_filters"
+msgstr "&#8711; 顯示條件"
+
+#. Default: "Catalog"
+#: ../../facetednavigation/widgets/checkbox/widget.py:62
+#: ../../facetednavigation/widgets/radio/widget.py:47
+#: ../../facetednavigation/widgets/select/widget.py:44
+msgid "faceted_criteria_catalog"
+msgstr ""
+
+#. Default: "Count results"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
+#: ../../facetednavigation/widgets/checkbox/widget.py:91
+#: ../../facetednavigation/widgets/radio/widget.py:79
+msgid "faceted_criteria_count"
+msgstr "顯示數量"
+
+#. Default: "Default value"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:59
+#: ../../facetednavigation/widgets/checkbox/widget.py:110
+#: ../../facetednavigation/widgets/date/widget.py:62
+msgid "faceted_criteria_default"
+msgstr "預設值"
+
+#. Default: "Search Depth"
+#: ../../facetednavigation/widgets/path/widget.py:59
+msgid "faceted_criteria_depth"
+msgstr "搜尋深度"
+
+#. Default: "Hide items with zero results"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:100
+#: ../../facetednavigation/widgets/radio/widget.py:88
+msgid "faceted_criteria_emptycounthide"
+msgstr "隱藏數量為零的結果"
+
+#. Default: "End"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "faceted_criteria_end"
+msgstr "結束"
+
+#. Default: "Default etag"
+#: ../../facetednavigation/widgets/etag/widget.py:17
+msgid "faceted_criteria_etag_default"
+msgstr ""
+
+#. Default: "Hidden"
+#: ../../facetednavigation/widgets/widget.py:73
+msgid "faceted_criteria_hidden"
+msgstr "隱藏"
+
+#. Default: "Catalog index"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/checkbox/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:51
+msgid "faceted_criteria_index"
+msgstr ""
+
+#. Default: "Maximum characters"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:78
+msgid "faceted_criteria_maxchars"
+msgstr "最大字元數"
+
+#. Default: "Maximum items"
+#: ../../facetednavigation/widgets/checkbox/widget.py:73
+#: ../../facetednavigation/widgets/radio/widget.py:59
+#: ../../facetednavigation/widgets/tagscloud/widget.py:67
+msgid "faceted_criteria_maxitems"
+msgstr "最大項目數"
+
+#. Default: "Operator"
+#: ../../facetednavigation/widgets/checkbox/widget.py:40
+msgid "faceted_criteria_operator"
+msgstr ""
+
+#. Default: "Root folder"
+#: ../../facetednavigation/widgets/path/widget.py:35
+msgid "faceted_criteria_path_root"
+msgstr "根目錄"
+
+#. Default: "Navigation tree theme"
+#: ../../facetednavigation/widgets/path/widget.py:74
+msgid "faceted_criteria_path_theme"
+msgstr ""
+
+#. Default: "Position"
+#: ../../facetednavigation/widgets/widget.py:54
+msgid "faceted_criteria_position"
+msgstr "位置"
+
+#. Default: "Reverse options"
+#: ../../facetednavigation/widgets/checkbox/widget.py:82
+#: ../../facetednavigation/widgets/radio/widget.py:69
+#: ../../facetednavigation/widgets/select/widget.py:54
+msgid "faceted_criteria_reverse_options"
+msgstr ""
+
+#. Default: "Section"
+#: ../../facetednavigation/widgets/widget.py:64
+msgid "faceted_criteria_section"
+msgstr ""
+
+#. Default: "Filter from vocabulary"
+#: ../../facetednavigation/widgets/sorting/widget.py:20
+msgid "faceted_criteria_sorting_vocabulary"
+msgstr ""
+
+#. Default: "Start"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+msgid "faceted_criteria_start"
+msgstr "起始"
+
+#. Default: "Step"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:42
+msgid "faceted_criteria_step"
+msgstr "間距"
+
+#. Default: "Cloud height"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:133
+msgid "faceted_criteria_tagscloud_height"
+msgstr "標籤雲高度"
+
+#. Default: "Maximum size"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:122
+msgid "faceted_criteria_tagscloud_maxsize"
+msgstr "最大尺寸"
+
+#. Default: "Minimum size"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+msgid "faceted_criteria_tagscloud_minsize"
+msgstr "最小尺寸"
+
+#. Default: "Cloud type"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:100
+msgid "faceted_criteria_tagscloud_type"
+msgstr "標籤雲類型"
+
+#. Default: "Tal Expression"
+#: ../../facetednavigation/widgets/tal/widget.py:41
+msgid "faceted_criteria_tal_default"
+msgstr ""
+
+#. Default: "Friendly name"
+#: ../../facetednavigation/widgets/widget.py:43
+msgid "faceted_criteria_title"
+msgstr ""
+
+#. Default: "Visible to"
+#: ../../facetednavigation/widgets/debug/widget.py:21
+msgid "faceted_criteria_user"
+msgstr ""
+
+#. Default: "Vocabulary"
+#: ../../facetednavigation/widgets/checkbox/widget.py:51
+#: ../../facetednavigation/widgets/radio/widget.py:35
+#: ../../facetednavigation/widgets/select/widget.py:33
+msgid "faceted_criteria_vocabulary"
+msgstr "詞彙表"
+
+#. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
+#: ../../facetednavigation/widgets/path/widget.pt:29
+msgid "faceted_path_widget_errors"
+msgstr ""
+
+#. Default: "Portlet macro"
+#: ../../facetednavigation/widgets/portlet/widget.py:19
+msgid "faceted_portlet_macro"
+msgstr ""
+
+#. Default: "Less filters"
+#: ../../facetednavigation/browser/template/view.pt:27
+msgid "faceted_sections_less"
+msgstr "更少"
+
+#. Default: "More filters"
+#: ../../facetednavigation/browser/template/view.pt:26
+msgid "faceted_sections_more"
+msgstr "更多"
+
+#. Default: "Display number of results per letter"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:41
+msgid "help_faceted_criteria_alphabetic_count"
+msgstr ""
+
+#. Default: "Get unique values from catalog as an alternative for vocabulary"
+#: ../../facetednavigation/widgets/checkbox/widget.py:64
+#: ../../facetednavigation/widgets/radio/widget.py:49
+#: ../../facetednavigation/widgets/select/widget.py:46
+msgid "help_faceted_criteria_catalog"
+msgstr ""
+
+#. Default: "Default items (one per line)"
+#: ../../facetednavigation/widgets/checkbox/widget.py:112
+msgid "help_faceted_criteria_checkboxes_default"
+msgstr "預設項目"
+
+#. Default: "Display number of results near each option"
+#: ../../facetednavigation/widgets/checkbox/widget.py:93
+#: ../../facetednavigation/widgets/radio/widget.py:80
+#: ../../facetednavigation/widgets/select/widget.py:65
+msgid "help_faceted_criteria_count"
+msgstr ""
+
+#. Default: "This option works only if \"count results\" is enabled"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:50
+#: ../../facetednavigation/widgets/checkbox/widget.py:102
+#: ../../facetednavigation/widgets/radio/widget.py:90
+msgid "help_faceted_criteria_criteria_emptycounthide"
+msgstr ""
+
+#. Default: "Default daterange (e.g. \"now-365=>now+1\" which means \"Starting one year ago until tomorrow\")"
+#: ../../facetednavigation/widgets/date/widget.py:63
+msgid "help_faceted_criteria_date_default"
+msgstr ""
+
+#. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
+#: ../../facetednavigation/widgets/daterange/widget.py:39
+msgid "help_faceted_criteria_daterange_default"
+msgstr ""
+
+#. Default: "Default letter to be selected"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:60
+msgid "help_faceted_criteria_default"
+msgstr ""
+
+#. Default: "Results per page ending value"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:33
+msgid "help_faceted_criteria_end"
+msgstr ""
+
+#. Default: "Etag value"
+#: ../../facetednavigation/widgets/etag/widget.py:19
+msgid "help_faceted_criteria_etag_default"
+msgstr "Etag 值"
+
+#. Default: "Hide widget"
+#: ../../facetednavigation/widgets/widget.py:74
+msgid "help_faceted_criteria_hidden"
+msgstr "隱藏部件"
+
+#. Default: "Catalog index to use for search"
+#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/checkbox/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:53
+msgid "help_faceted_criteria_index"
+msgstr "用來搜尋的 Catalog 索引"
+
+#. Default: "Cut long phrases to provided number of characters"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:80
+msgid "help_faceted_criteria_maxchars"
+msgstr "長句截短成指定的字數長度"
+
+#. Default: "Number of items visible in widget"
+#: ../../facetednavigation/widgets/checkbox/widget.py:75
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/tagscloud/widget.py:69
+msgid "help_faceted_criteria_maxitems"
+msgstr "部件裡顯示的項目數量"
+
+#. Default: "Search with AND/OR between elements"
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
+msgid "help_faceted_criteria_operator"
+msgstr "搜尋功能支援 AND/OR 操作元"
+
+#. Default: "Default path to search in (relative to root folder)"
+#: ../../facetednavigation/widgets/path/widget.py:49
+msgid "help_faceted_criteria_path_default"
+msgstr "預設要搜尋的路徑 (根目錄的相對位置)"
+
+#. Default: "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+#: ../../facetednavigation/widgets/path/widget.py:61
+msgid "help_faceted_criteria_path_depth"
+msgstr "搜尋的深度: 0 代表同一層 -1 代表所有子目錄 其他正整數代表子目錄數"
+
+#. Default: "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+#: ../../facetednavigation/widgets/path/widget.py:37
+msgid "help_faceted_criteria_path_root"
+msgstr "導覽樹的起始點 (根目錄的相對位置，例如 SITE/data-and-maps)"
+
+#. Default: "Theme to be used with this widget"
+#: ../../facetednavigation/widgets/path/widget.py:76
+msgid "help_faceted_criteria_path_theme"
+msgstr "部件要搭配的佈景主題"
+
+#. Default: "Widget position in page"
+#: ../../facetednavigation/widgets/widget.py:55
+msgid "help_faceted_criteria_position"
+msgstr "部件在頁面的位置"
+
+#. Default: "Default selected item"
+#: ../../facetednavigation/widgets/radio/widget.py:101
+#: ../../facetednavigation/widgets/tagscloud/widget.py:164
+msgid "help_faceted_criteria_radio_default"
+msgstr "預設的選擇項目"
+
+#. Default: "Default results per page"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:53
+msgid "help_faceted_criteria_resultsperpage_default"
+msgstr "預設每頁顯示的項目數"
+
+#. Default: "Sort options reversed"
+#: ../../facetednavigation/widgets/checkbox/widget.py:84
+#: ../../facetednavigation/widgets/radio/widget.py:71
+#: ../../facetednavigation/widgets/select/widget.py:56
+msgid "help_faceted_criteria_reverse_options"
+msgstr "排列順序反向"
+
+#. Default: "Display widget in section"
+#: ../../facetednavigation/widgets/widget.py:66
+msgid "help_faceted_criteria_section"
+msgstr "在 section 顯示部件"
+
+#. Default: "Default selected item"
+#: ../../facetednavigation/widgets/select/widget.py:85
+msgid "help_faceted_criteria_select_default"
+msgstr "預設的選擇項目"
+
+#. Default: "Default sorting index (e.g. \"effective\" or \"effective(reverse)\")"
+#: ../../facetednavigation/widgets/sorting/widget.py:33
+msgid "help_faceted_criteria_sorting_default"
+msgstr "預設的排序索引 (例如 effective)"
+
+#. Default: "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+#: ../../facetednavigation/widgets/sorting/widget.py:22
+msgid "help_faceted_criteria_sorting_vocabulary"
+msgstr "指定排序條件裡用到的詞彙表，留空代表使用預設排序條件。"
+
+#. Default: "Results per page starting value"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "help_faceted_criteria_start"
+msgstr ""
+
+#. Default: "Results per page step"
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:43
+msgid "help_faceted_criteria_step"
+msgstr ""
+
+#. Default: "Display number of results near each tag"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:144
+msgid "help_faceted_criteria_tagscloud_count"
+msgstr "顯示項目數量"
+
+#. Default: "Cloud height (px)"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:135
+msgid "help_faceted_criteria_tagscloud_height"
+msgstr "標籤雲高度 (px)"
+
+#. Default: "Maximum font-size (px)"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:124
+msgid "help_faceted_criteria_tagscloud_maxsize"
+msgstr "字元最大尺寸 (px)"
+
+#. Default: "Minimum font-size (px)"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:113
+msgid "help_faceted_criteria_tagscloud_minsize"
+msgstr "字元最小尺寸 (px)"
+
+#. Default: "Type of the cloud"
+#: ../../facetednavigation/widgets/tagscloud/widget.py:102
+msgid "help_faceted_criteria_tagscloud_type"
+msgstr "標籤雲類型"
+
+#. Default: "Default tal expression for query value"
+#: ../../facetednavigation/widgets/tal/widget.py:42
+msgid "help_faceted_criteria_tal_default"
+msgstr "預設的 TAL 查詢語法"
+
+#. Default: "Default string to search for"
+#: ../../facetednavigation/widgets/text/widget.py:33
+msgid "help_faceted_criteria_text_default"
+msgstr "預設的查詢字串"
+
+#. Default: "Title for widget to display in view page"
+#: ../../facetednavigation/widgets/widget.py:45
+msgid "help_faceted_criteria_title"
+msgstr "部件的標題"
+
+#. Default: "Widget will be visible only for selected user"
+#: ../../facetednavigation/widgets/debug/widget.py:23
+msgid "help_faceted_criteria_user"
+msgstr "只有特定使用者看得到部件"
+
+#. Default: "Vocabulary to use to render widget items"
+#: ../../facetednavigation/widgets/checkbox/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:37
+#: ../../facetednavigation/widgets/select/widget.py:35
+msgid "help_faceted_criteria_vocabulary"
+msgstr "用來顯示部件項目的詞彙表"
+
+#. Default: "Path to portlet macro"
+#: ../../facetednavigation/widgets/portlet/widget.py:20
+msgid "help_faceted_portlet_macro"
+msgstr ""
+
+#. Default: "Faceted global settings"
+#: ../../facetednavigation/settings/menu.py:22
+msgid "help_faceted_settings_menu"
+msgstr "智慧導覽的設定值"
+
+#. Default: "Position of the widget."
+#: ../../facetednavigation/browser/template/configure.pt:45
+msgid "help_widget_position"
+msgstr "部件的位置"
+
+#. Default: "Display widget in section."
+#: ../../facetednavigation/browser/template/configure.pt:57
+msgid "help_widget_section"
+msgstr ""
+
+#. Default: "Type of the widget."
+#: ../../facetednavigation/browser/template/configure.pt:33
+msgid "help_widget_type"
+msgstr "部件的類型"
+
+#: ../../facetednavigation/widgets/text/widget.pt:38
+msgid "in current results"
+msgstr ""
+
+#. Default: "Faceted settings"
+#: ../../facetednavigation/settings/menu.py:20
+msgid "label_faceted_settings_menu"
+msgstr "智慧導覽設定"
+
+#. Default: "Select all items"
+#: ../../facetednavigation/browser/template/configure.pt:114
+msgid "label_select_all_items"
+msgstr "全選"
+
+#. Default: "Configuration imported"
+#: ../../facetednavigation/browser/app/exportimport.py:47
+msgid "msg_configuration_imported"
+msgstr "設定值已匯入"
+
+#. Default: "No action provided"
+#: ../../facetednavigation/browser/app/exportimport.py:75
+msgid "msg_no_action_provided"
+msgstr ""
+
+#. Default: "Content listing"
+#: ../../facetednavigation/browser/template/configure.pt:109
+msgid "summary_content_listing"
+msgstr "內容列表"
+

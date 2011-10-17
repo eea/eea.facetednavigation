@@ -1,0 +1,44 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: eea\n"
+"POT-Creation-Date: 2011-05-17 16:06+0000\n"
+"PO-Revision-Date: 2011-10-17 14:15+0800\n"
+"Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: zh-tw\n"
+"Language-Name: Traditional Chinese\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+msgid "Current search"
+msgstr "目前搜尋"
+
+msgid "Object provides"
+msgstr ""
+
+msgid "Portal type"
+msgstr "內容型別"
+
+msgid "Sort on"
+msgstr "排序條件"
+
+#: Default: "Countable"
+msgid "label_schema_countable"
+msgstr ""
+
+#: Default: "Display"
+msgid "label_schema_display"
+msgstr "顯示"
+
+#: Default: "Geometry"
+msgid "label_schema_geometry"
+msgstr ""
+
+#: Default: "Layout"
+msgid "label_schema_layout"
+msgstr ""
+
