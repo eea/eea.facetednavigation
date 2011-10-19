@@ -67,6 +67,8 @@ Faceted.TagsCloudWidget.prototype = {
     var sizemax = jQuery('#' + this.wid + '-sizemax', this.widget).text();
     sizemax = parseInt(sizemax, 10);
     sizemax = sizemax ? sizemax : 20;
+    var colormin = jQuery('#' + this.wid + '-colormin', this.widget).text(); 
+    var colormax = jQuery('#' + this.wid + '-colormax', this.widget).text(); 
     var height = jQuery('#' + this.wid + '-height', this.widget).text();
     height = parseInt(height, 10);
     height = height ? height : 200;
@@ -76,8 +78,8 @@ Faceted.TagsCloudWidget.prototype = {
       sizemin: sizemin,
       sizemax: sizemax,
       height: height,
-      colormin: 'A1BE7E',
-      colormax: '95B229'
+      colormin: colormin, 
+      colormax: colormax 
     };
     this.update();
   },

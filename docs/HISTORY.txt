@@ -3,6 +3,8 @@ Changelog
 
 4.1 - (unreleased)
 ------------------
+ * Feature: Replaced hardcoded green colors in Tags Widget in order to easily 
+   customize faceted theme [voineali]  (backport from v3.11)
 
 * Feature: Replaced the "basic search/extended search" accordion with a more simple and
   user friendly "More/Less filters" button

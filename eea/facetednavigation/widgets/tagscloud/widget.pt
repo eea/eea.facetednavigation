@@ -12,6 +12,8 @@
   cloud python:view.data.get('cloud', 'list');
   sizemin python:view.data.get('sizemin', 10);
   sizemax python:view.data.get('sizemax', 20);
+  colormin python:view.data.get('colormin', 'A1BE7E') or 'A1BE7E'; 
+  colormax python:view.data.get('colormax', '95B229') or '95B229'; 
   height python:view.data.get('height', 200);
   maxitems python:int(view.data.get('maxitems', 0)) or 0;
   kwargs options/kwargs|python:{};
@@ -53,6 +55,8 @@
     <span tal:attributes="id string:${wid}-cloud" tal:content="cloud" />
     <span tal:attributes="id string:${wid}-sizemin" tal:content="sizemin" />
     <span tal:attributes="id string:${wid}-sizemax" tal:content="sizemax" />
+    <span tal:attributes="id string:${wid}-colormin" tal:content="colormin" /> 
+    <span tal:attributes="id string:${wid}-colormax" tal:content="colormax" /> 
     <span tal:attributes="id string:${wid}-height" tal:content="height" />
   </div>
 </tal:widget>
