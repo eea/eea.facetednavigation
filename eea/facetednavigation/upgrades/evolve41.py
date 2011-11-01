@@ -83,7 +83,7 @@ def cleanup_p4a(context):
         anno = queryAdapter(doc, IAnnotations)
 
         subtyper = getUtility(ISubtyper)
-        name = subtyper.existing_type(doc).name
+        name = getattr(subtyper.existing_type(doc), 'name', '')
         if 'faceted' not in name.lower():
             continue
 
