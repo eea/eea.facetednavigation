@@ -1,13 +1,16 @@
 Changelog
 =========
 
-4.1 - (unreleased)
-------------------
- * Feature: Replaced hardcoded green colors in Tags Widget in order to easily 
-   customize faceted theme [voineali]  (backport from v3.11)
 
-* Feature: Replaced the "basic search/extended search" accordion with a more simple and
-  user friendly "More/Less filters" button
+4.1 - (2011-11-06)
+------------------
+
+* Feature: Replaced hardcoded green colors in Tags Widget in order to easily
+  customize faceted theme
+  [voineali]
+
+* Feature: Replaced the "basic search/extended search" accordion with a more
+  simple and user friendly "More/Less filters" button
   [voineali #2408]
 
 * Feature: Added "Hide/Show filters" button to "Criteria widget"
@@ -37,7 +40,7 @@ Changelog
 * i18n: updated german translation.
   [jensens]
 
-# Internationalization
+* Internationalization
   [thomasdesvenain]
 
 * Feature: Added possibility to disable plone left/right columns in view mode
