@@ -55,6 +55,35 @@ It comes with plenty of configuration options and features like:
      object caching system: memcached <http://www.danga.com/memcached/>`_
 
 
+Extra
+=====
+You can extend faceted navigation functionality by installing the following
+addons:
+
+  - Customized vocabularies
+      - Products.ATVocabularyManager
+
+  * Multilingual/translation solution
+      - Products.LinguaPlone
+
+  * Syndication
+      - Products.basesyndication
+      - Products.fatsyndication
+      - bda.feed
+
+  * Cache (memcache)
+      - plone.memoize
+      - lovely.memcached
+      - eea.cache
+
+  * Faceted extensions
+      - eea.faceted.tool
+      - eea.faceted.inheritance
+
+  * Faceted themes
+      - eea.faceted.blue
+
+
 Screenshots
 ===========
  See more `FacetedNavigationScreenshots <http://svn.eionet.europa.eu/projects/Zope/wiki/FacetedNavigationScreenshots>`_.
