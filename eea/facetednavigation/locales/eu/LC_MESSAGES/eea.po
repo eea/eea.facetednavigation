@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: eea.facetednavigation\n"
 "POT-Creation-Date: 2011-10-12 16:36+0000\n"
-"PO-Revision-Date: 2011-07-20 08:04+0100\n"
+"PO-Revision-Date: 2011-11-24 10:37+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: eu <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,6 +13,7 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+"X-Poedit-Language: Basque\n"
 
 #: ../../facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
@@ -86,11 +87,11 @@ msgstr "Sailkapen bidezko nabigazioa desaktibatu"
 
 #: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
-msgstr ""
+msgstr "Desaktibatu ezkerreko portletak"
 
 #: ../../facetednavigation/settings/menu.py:76
 msgid "Disable right portlets"
-msgstr ""
+msgstr "Desaktibatu eskumako portletak"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
@@ -98,11 +99,11 @@ msgstr "Sailkapen bidezko nabigazioa aktibatu"
 
 #: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
-msgstr ""
+msgstr "Aktibatu ezkerreko portletak"
 
 #: ../../facetednavigation/settings/menu.py:75
 msgid "Enable right portlets"
-msgstr ""
+msgstr "Aktibatu eskumako portletak"
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:28
 msgid "End date"
@@ -178,19 +179,19 @@ msgstr "Ploneren portleta"
 
 #: ../../facetednavigation/settings/menu.py:117
 msgid "Portlets left column is hidden now"
-msgstr ""
+msgstr "Ezkerreko portleten zutabea ezkutatuta dago"
 
 #: ../../facetednavigation/settings/menu.py:114
 msgid "Portlets left column is visible now"
-msgstr ""
+msgstr "Ezkerreko portleten zutabea agerian dago"
 
 #: ../../facetednavigation/settings/menu.py:127
 msgid "Portlets right column is hidden now"
-msgstr ""
+msgstr "Eskumako portleten zutabea ezkutatuta dago"
 
 #: ../../facetednavigation/settings/menu.py:124
 msgid "Portlets right column is visible now"
-msgstr ""
+msgstr "Eskumako portleten zutabea agerian dago"
 
 #: ../../facetednavigation/browser/template/configure.pt:44
 msgid "Position"
@@ -271,7 +272,7 @@ msgstr "elementu guztiak"
 #. Default: "&#916; Hide filters"
 #: ../../facetednavigation/widgets/criteria/widget.pt:15
 msgid "criteria_view_hide_filters"
-msgstr ""
+msgstr "&#916; Filtroak ezkutatu"
 
 #. Default: "[X] Remove all"
 #: ../../facetednavigation/widgets/criteria/widget.pt:21
@@ -281,7 +282,7 @@ msgstr "[X] Guztiak ezabatu"
 #. Default: "&#8711; Show filters"
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "criteria_view_show_filters"
-msgstr ""
+msgstr "&#8711; Erakutsi filtroak"
 
 #. Default: "Catalog"
 #: ../../facetednavigation/widgets/checkbox/widget.py:62
@@ -307,7 +308,7 @@ msgstr "Defektuzko balioa"
 #. Default: "Search Depth"
 #: ../../facetednavigation/widgets/path/widget.py:59
 msgid "faceted_criteria_depth"
-msgstr ""
+msgstr "Bilaketaren sakonera"
 
 #. Default: "Hide items with zero results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:48
@@ -319,12 +320,12 @@ msgstr "Ezkutatu emaitzarik ez duten elementuak"
 #. Default: "End"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:32
 msgid "faceted_criteria_end"
-msgstr ""
+msgstr "Amaiera"
 
 #. Default: "Default etag"
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "faceted_criteria_etag_default"
-msgstr ""
+msgstr "Defektuzko etag-a"
 
 #. Default: "Hidden"
 #: ../../facetednavigation/widgets/widget.py:73
@@ -341,7 +342,7 @@ msgstr "Katalogoko indizea"
 #. Default: "Maximum characters"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:78
 msgid "faceted_criteria_maxchars"
-msgstr ""
+msgstr "Karaktere kopuru maximoa"
 
 #. Default: "Maximum items"
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
@@ -353,17 +354,17 @@ msgstr "Gehienezko elementu-kopurua"
 #. Default: "Operator"
 #: ../../facetednavigation/widgets/checkbox/widget.py:40
 msgid "faceted_criteria_operator"
-msgstr ""
+msgstr "Eragilea"
 
 #. Default: "Root folder"
 #: ../../facetednavigation/widgets/path/widget.py:35
 msgid "faceted_criteria_path_root"
-msgstr ""
+msgstr "Erroa"
 
 #. Default: "Navigation tree theme"
 #: ../../facetednavigation/widgets/path/widget.py:74
 msgid "faceted_criteria_path_theme"
-msgstr ""
+msgstr "Nabigazio zuhaitzaren itxura"
 
 #. Default: "Position"
 #: ../../facetednavigation/widgets/widget.py:54
@@ -385,42 +386,42 @@ msgstr "Atala"
 #. Default: "Filter from vocabulary"
 #: ../../facetednavigation/widgets/sorting/widget.py:20
 msgid "faceted_criteria_sorting_vocabulary"
-msgstr ""
+msgstr "Hiztegiaren arabera filtratu"
 
 #. Default: "Start"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:22
 msgid "faceted_criteria_start"
-msgstr ""
+msgstr "Hasiera"
 
 #. Default: "Step"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:42
 msgid "faceted_criteria_step"
-msgstr ""
+msgstr "Pausua"
 
 #. Default: "Cloud height"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:133
 msgid "faceted_criteria_tagscloud_height"
-msgstr ""
+msgstr "Lainoaren altuera"
 
 #. Default: "Maximum size"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:122
 msgid "faceted_criteria_tagscloud_maxsize"
-msgstr ""
+msgstr "Tamaina maximoa"
 
 #. Default: "Minimum size"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:111
 msgid "faceted_criteria_tagscloud_minsize"
-msgstr ""
+msgstr "Tamaina minimoa"
 
 #. Default: "Cloud type"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:100
 msgid "faceted_criteria_tagscloud_type"
-msgstr ""
+msgstr "Laino-tamaina"
 
 #. Default: "Tal Expression"
 #: ../../facetednavigation/widgets/tal/widget.py:41
 msgid "faceted_criteria_tal_default"
-msgstr ""
+msgstr "Tal espresioa"
 
 #. Default: "Friendly name"
 #: ../../facetednavigation/widgets/widget.py:43
@@ -430,7 +431,7 @@ msgstr "Izenburua"
 #. Default: "Visible to"
 #: ../../facetednavigation/widgets/debug/widget.py:21
 msgid "faceted_criteria_user"
-msgstr ""
+msgstr "Nork ikusi dezake"
 
 #. Default: "Vocabulary"
 #: ../../facetednavigation/widgets/checkbox/widget.py:51
@@ -447,17 +448,17 @@ msgstr "Widget hau ez da kontuan hartuko aukeratu duzun erro-karpeta ezin delako
 #. Default: "Portlet macro"
 #: ../../facetednavigation/widgets/portlet/widget.py:19
 msgid "faceted_portlet_macro"
-msgstr ""
+msgstr "Portletaren macro-a"
 
 #. Default: "Less filters"
 #: ../../facetednavigation/browser/template/view.pt:27
 msgid "faceted_sections_less"
-msgstr ""
+msgstr "Filtro gutxiago"
 
 #. Default: "More filters"
 #: ../../facetednavigation/browser/template/view.pt:26
 msgid "faceted_sections_more"
-msgstr ""
+msgstr "Filtro gehiago"
 
 #. Default: "Display number of results per letter"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:41
@@ -474,7 +475,7 @@ msgstr "Balioak katalogotik ekarri hiztegitik beharrean."
 #. Default: "Default items (one per line)"
 #: ../../facetednavigation/widgets/checkbox/widget.py:112
 msgid "help_faceted_criteria_checkboxes_default"
-msgstr ""
+msgstr "Defektuzko elementuak (bat lerro bakoitzean)"
 
 #. Default: "Display number of results near each option"
 #: ../../facetednavigation/widgets/checkbox/widget.py:93
@@ -493,12 +494,12 @@ msgstr "Aukera honek \"Emaitza kopurua erakutsi\" aktibatuta dagoenean bakarrik 
 #. Default: "Default daterange (e.g. \"now-365=>now+1\" which means \"Starting one year ago until tomorrow\")"
 #: ../../facetednavigation/widgets/date/widget.py:63
 msgid "help_faceted_criteria_date_default"
-msgstr ""
+msgstr "Defektuzko data-tartea (adibidez: \"now-365=>now+1\" honek orain dela urtebetetik bihar arte esan nahi du."
 
 #. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
 #: ../../facetednavigation/widgets/daterange/widget.py:39
 msgid "help_faceted_criteria_daterange_default"
-msgstr ""
+msgstr "Defektuzko data-tartea (adibidez: \"2009/12/01 => 2099/12/31\")"
 
 #. Default: "Default letter to be selected"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:60
@@ -513,7 +514,7 @@ msgstr ""
 #. Default: "Etag value"
 #: ../../facetednavigation/widgets/etag/widget.py:19
 msgid "help_faceted_criteria_etag_default"
-msgstr ""
+msgstr "Etag balioa"
 
 #. Default: "Hide widget"
 #: ../../facetednavigation/widgets/widget.py:74
@@ -530,7 +531,7 @@ msgstr "Bilaketarako erabili behar den katalogoko indizea"
 #. Default: "Cut long phrases to provided number of characters"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:80
 msgid "help_faceted_criteria_maxchars"
-msgstr ""
+msgstr "Moztu esaldi luzeak karaktere kopuru honetara"
 
 #. Default: "Number of items visible in widget"
 #: ../../facetednavigation/widgets/checkbox/widget.py:75
@@ -542,7 +543,7 @@ msgstr "Widgetean erakutsiko den gehienezko elementu kopurua"
 #. Default: "Search with AND/OR between elements"
 #: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "help_faceted_criteria_operator"
-msgstr ""
+msgstr "Elementuen artean AND/OR erabiliz bilatu"
 
 #. Default: "Default path to search in (relative to root folder)"
 #: ../../facetednavigation/widgets/path/widget.py:49
@@ -625,7 +626,7 @@ msgstr "Etiketa bakoitzaren ondoan emaitza-kopurua erakutsi"
 #. Default: "Cloud height (px)"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:135
 msgid "help_faceted_criteria_tagscloud_height"
-msgstr ""
+msgstr "Lainoaren altuera (px)"
 
 #. Default: "Maximum font-size (px)"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:124
@@ -701,7 +702,7 @@ msgstr "Uneko elementuetan"
 #. Default: "Faceted settings"
 #: ../../facetednavigation/settings/menu.py:20
 msgid "label_faceted_settings_menu"
-msgstr ""
+msgstr "Sailkapenaren ezarpenak"
 
 #. Default: "Select all items"
 #: ../../facetednavigation/browser/template/configure.pt:114
