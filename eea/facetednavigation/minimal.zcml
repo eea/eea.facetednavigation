@@ -26,5 +26,6 @@
   <include package=".indexes" />
   <include package=".versions" />
   <include package=".upgrades" />
+  <include package=".views" />
 
 </configure>

@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  metal:use-macro="context/main_template/macros/master"
+  i18n:domain="eea">
+
+<body>
+
+  <metal:content-core fill-slot="content-core">
+
+    <!-- Defining the 'content-core' macro is mandatory
+         for this to work as a Faceted View -->
+
+    <metal:block define-macro="content-core">
+      <div tal:define="
+        folderContents folderContents | python:context.getFolderContents();
+        Batch python:modules['Products.CMFPlone'].Batch;
+        b_start python:request.get('b_start', 0);
+        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=2);">
+
+        <!-- Having the batch present within the results page is also important,
+             otherwise you may get no facets on the page. It doesn't matter
+             if you put it on the top or at the bottom of your results, it's
+             important to have at least one of it.
+
+             Still, there is a trick you can do to avoid the batch macro. Just
+             add a HTML element with class="listingBar" like:
+
+             <div class="listingBar" style="display: none"></div>
+        -->
+        <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+        <!-- And now you can customize the look & feel of
+             your items as you wish -->
+
+        <dl>
+          <tal:entry repeat="brain folderContents">
+            <dt tal:content="brain/Title" />
+            <dd tal:content="brain/Description" />
+          </tal:entry>
+        </dl>
+
+        <!-- Another batch at the bottom. This is optional -->
+        <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+      </div>
+
+    </metal:block>
+  </metal:content-core>
+</body>
+</html>

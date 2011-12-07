@@ -10,4 +10,12 @@
       />
   </meta:directives>
 
+  <meta:directives namespace="http://namespaces.zope.org/faceted">
+    <meta:directive
+      name="view"
+      schema="zope.browserpage.metadirectives.IPageDirective"
+      handler=".views.meta.ViewDirective"
+      />
+  </meta:directives>
+
 </configure>

@@ -2,7 +2,9 @@
 """
 from zope import interface
 from persistent.list import PersistentList
+from zope.component import getUtility, queryMultiAdapter
 from zope.annotation.interfaces import IAnnotations
+from eea.facetednavigation.interfaces import IViewsInfo
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.config import (
     ANNO_FACETED_LAYOUT,
@@ -36,6 +38,14 @@ class FacetedLayout(object):
             if not self.get_macro(template_id):
                 continue
             res.append((template_id, title))
+
+        # Dynamically registered faceted views
+        info = getUtility(IViewsInfo)
+        for view in info.keys():
+            if not self.get_macro(view):
+                continue
+            res.append((view, info.label(view)))
+
         return res
 
     def get_macro(self, template_id=None, macro='content-core'):
@@ -44,10 +54,25 @@ class FacetedLayout(object):
         # Get default
         if not template_id:
             template_id = self.layout
-        template = self.context.restrictedTraverse(template_id, None)
-        if not hasattr(template, 'macros'):
+
+        request = getattr(self.context, 'REQUEST', None)
+
+
+        template = queryMultiAdapter((self.context, request), name=template_id)
+        if template:
+            # Zope3 view
+            macros = getattr(template, 'macros', None)
+            if not macros:
+                index = getattr(template, 'index', None)
+                macros = getattr(index, 'macros', None)
+        else:
+            # Zope2 skins template
+            template = self.context.restrictedTraverse(template_id, None)
+            macros = getattr(template, 'macros', None)
+
+        if not macros:
             return None
-        return template.macros.get(macro)
+        return macros.get(macro)
 
     @property
     def default_layouts(self):

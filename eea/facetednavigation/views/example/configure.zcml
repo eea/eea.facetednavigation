@@ -1,0 +1,23 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:faceted="http://namespaces.zope.org/faceted"
+  i18n_domain="eea">
+
+  <!-- A faceted view with custom python logic -->
+  <faceted:view
+    name="faceted-summary-view"
+    class=".summary.SummaryView"
+    template="summary.pt"
+    title="Faceted summary view"
+    permission="zope2.View"
+  />
+
+  <!-- A faceted view with no python logic -->
+  <faceted:view
+    name="faceted-listing-view"
+    template="summary.pt"
+    title="Faceted listing view"
+    permission="zope2.View"
+  />
+
+</configure>

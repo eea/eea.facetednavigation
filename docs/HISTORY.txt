@@ -5,6 +5,10 @@ Changelog
 4.2-dev - (unreleased)
 ----------------------
 
+* Feature: Added an easy way to define Faceted Views for the results using
+  Zope3 components. See eea.facetednavigation.views.example for more details
+  [voineali]
+
 
 4.1 - (2011-11-06)
 ------------------

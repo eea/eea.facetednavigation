@@ -25,23 +25,36 @@ class FacetedDisplayMenu(DisplayMenu):
 
         faceted_adapter = queryAdapter(obj, IFacetedLayout)
         if not faceted_adapter:
-            return []
+            return res
 
         new = []
-        allowed = set(x[0] for x in faceted_adapter.layouts)
+        template = {
+            'submenu': None,
+            'description': '',
+            'extra': {
+                'separator': None,
+                'id': '',
+                'class': ''},
+            'selected': False,
+            'action': '',
+            'title': '',
+            'icon': None
+        }
+
         current = faceted_adapter.layout
-        for item in res:
-            layout = item.get(
-                'extra', {}).get('id', '').replace('folder-', '', 1)
+        for name, label in faceted_adapter.layouts:
+            layout = template.copy()
+            layout['extra'] = template['extra'].copy()
+            layout['extra']['id'] = name
+            layout['title'] = label
+            layout['action'] = '@@faceted_layout?layout=%s' % name
 
-            if  not layout in allowed:
-                continue
+            if (name == current):
+                layout['selected'] = True
+                layout['extra']['class'] = 'actionMenuSelected'
 
-            item['action'] = '@@faceted_layout?layout=%s' % layout
-            if (layout == current):
-                item['selected'] = True
-                item['extra']['class'] = 'actionMenuSelected'
-            new.append(item)
+            new.append(layout)
+
         return new
 
 class LayoutMenuHandler(BrowserView):

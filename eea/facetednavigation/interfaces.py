@@ -19,6 +19,9 @@ from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.widgets.interfaces import IWidget
 from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
 
+# Faceted Views
+from eea.facetednavigation.views.interfaces import IViewsInfo
+
 # After query adapter
 from eea.facetednavigation.widgets.interfaces import IWidgetFilterBrains
 
@@ -69,6 +72,7 @@ __all__ = [
     IPossibleFacetedNavigable.__name__,
     IFacetedNavigable.__name__,
     IWidgetsInfo.__name__,
+    IViewsInfo.__name__,
     IWidgetFilterBrains.__name__,
     IFacetedCatalog.__name__,
     IFacetedLayout.__name__,
