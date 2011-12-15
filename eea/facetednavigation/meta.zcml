@@ -1,5 +1,6 @@
 <configure
   xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
   xmlns:meta="http://namespaces.zope.org/meta">
 
   <meta:directives namespace="http://namespaces.zope.org/faceted">
@@ -11,11 +12,22 @@
   </meta:directives>
 
   <meta:directives namespace="http://namespaces.zope.org/faceted">
-    <meta:directive
-      name="view"
-      schema="zope.browserpage.metadirectives.IPageDirective"
-      handler=".views.meta.ViewDirective"
-      />
+    <!-- Plone 4.1+  -->
+    <configure zcml:condition="installed zope.browserpage">
+      <meta:directive
+         name="view"
+         schema="zope.browserpage.metadirectives.IPageDirective"
+         handler=".views.meta.ViewDirective"
+         />
+    </configure>
+    <!-- Plone 4.0  -->
+    <configure zcml:condition="not-installed zope.browserpage">
+      <meta:directive
+         name="view"
+         schema="zope.app.publisher.browser.metadirectives.IPageDirective"
+         handler=".views.meta.ViewDirective"
+         />
+    </configure>
   </meta:directives>
 
 </configure>
