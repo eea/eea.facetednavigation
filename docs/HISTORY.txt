@@ -4,6 +4,10 @@ Changelog
 4.3-dev - (unreleased)
 ----------------------
 
+* Hide/show criteria on criteria widget is now an option on this widget.
+  It remains enabled by default.
+  [thomasdesvenain]
+
 * Fixed: when a checkbox field had a default value as 'True',
   when widget was set to 'False' (unchecked)
   on the form, the checbox remained checked after submission.

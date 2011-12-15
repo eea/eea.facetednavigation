@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2011-12-15 22:30+0000\n"
+"POT-Creation-Date: 2011-12-15 22:56+0000\n"
 "PO-Revision-Date: 2011-05-23 13:22+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Factory"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.py:13
+#: ../../facetednavigation/widgets/criteria/widget.py:31
 msgid "Filters"
 msgstr ""
 
@@ -681,6 +681,11 @@ msgstr ""
 msgid "help_faceted_settings_menu"
 msgstr ""
 
+#. Default: "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+#: ../../facetednavigation/widgets/criteria/widget.py:19
+msgid "help_hidecriteriaenabled"
+msgstr ""
+
 #. Default: "Position of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:45
 msgid "help_widget_position"
@@ -703,6 +708,11 @@ msgstr "resultados actuales"
 #. Default: "Faceted settings"
 #: ../../facetednavigation/settings/menu.py:20
 msgid "label_faceted_settings_menu"
+msgstr ""
+
+#. Default: "Enable hide/show criteria"
+#: ../../facetednavigation/widgets/criteria/widget.py:17
+msgid "label_hidecriteriaenabled"
 msgstr ""
 
 #. Default: "Select all items"

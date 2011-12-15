@@ -11,7 +11,7 @@
     python:view.translate(title)" i18n:translate="">Current filters</legend>
   <dl tal:attributes="id wid"><dt></dt></dl>
 
-  <div class="faceted-criteria-hide-show">
+  <div class="faceted-criteria-hide-show" tal:condition="view/data/hidecriteriaenabled|python:1">
     <a href="#" class="faceted-criteria-hide" i18n:translate="criteria_view_hide_filters">&#916; Hide filters</a>
     <a href="#" class="faceted-criteria-show" i18n:translate="criteria_view_show_filters">&#8711; Show filters</a>
     <span class="faceted-criteria-count">(0)</span>

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-12-15 22:30+0000\n"
+"POT-Creation-Date: 2011-12-15 22:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,7 +139,7 @@ msgstr "Navigation par facettes activée"
 msgid "Factory"
 msgstr "Factory"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:13
+#: ../../facetednavigation/widgets/criteria/widget.py:31
 msgid "Filters"
 msgstr "Filtres"
 
@@ -310,7 +310,7 @@ msgstr "Valeur par défaut"
 #. Default: "Search Depth"
 #: ../../facetednavigation/widgets/path/widget.py:59
 msgid "faceted_criteria_depth"
-msgstr ""
+msgstr "Profondeur de la recherche"
 
 #. Default: "Hide items with zero results"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:48
@@ -322,12 +322,12 @@ msgstr "Masquer les éléments sans résultat"
 #. Default: "End"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:32
 msgid "faceted_criteria_end"
-msgstr ""
+msgstr "Fin"
 
 #. Default: "Default etag"
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "faceted_criteria_etag_default"
-msgstr ""
+msgstr "ETAG par défaut"
 
 #. Default: "Hidden"
 #: ../../facetednavigation/widgets/widget.py:73
@@ -344,7 +344,7 @@ msgstr "Index du catalogue"
 #. Default: "Maximum characters"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:78
 msgid "faceted_criteria_maxchars"
-msgstr ""
+msgstr "Nombre de caractères maximum"
 
 #. Default: "Maximum items"
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
@@ -356,17 +356,17 @@ msgstr "Nombre d'items maximum"
 #. Default: "Operator"
 #: ../../facetednavigation/widgets/checkbox/widget.py:40
 msgid "faceted_criteria_operator"
-msgstr ""
+msgstr "Opérateur"
 
 #. Default: "Root folder"
 #: ../../facetednavigation/widgets/path/widget.py:35
 msgid "faceted_criteria_path_root"
-msgstr ""
+msgstr "Dossier racine"
 
 #. Default: "Navigation tree theme"
 #: ../../facetednavigation/widgets/path/widget.py:74
 msgid "faceted_criteria_path_theme"
-msgstr ""
+msgstr "Thème de l'arbre de navigation"
 
 #. Default: "Position"
 #: ../../facetednavigation/widgets/widget.py:54
@@ -388,42 +388,42 @@ msgstr "Section"
 #. Default: "Filter from vocabulary"
 #: ../../facetednavigation/widgets/sorting/widget.py:20
 msgid "faceted_criteria_sorting_vocabulary"
-msgstr ""
+msgstr "Vocabulaire des options de tri"
 
 #. Default: "Start"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:22
 msgid "faceted_criteria_start"
-msgstr ""
+msgstr "Début"
 
 #. Default: "Step"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:42
 msgid "faceted_criteria_step"
-msgstr ""
+msgstr "Étape"
 
 #. Default: "Cloud height"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:155
 msgid "faceted_criteria_tagscloud_height"
-msgstr ""
+msgstr "Hauteur du nuage"
 
 #. Default: "Maximum size"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:144
 msgid "faceted_criteria_tagscloud_maxsize"
-msgstr ""
+msgstr "Taille maximale"
 
 #. Default: "Minimum size"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:133
 msgid "faceted_criteria_tagscloud_minsize"
-msgstr ""
+msgstr "Taille minimale"
 
 #. Default: "Cloud type"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:122
 msgid "faceted_criteria_tagscloud_type"
-msgstr ""
+msgstr "Type de nuage"
 
 #. Default: "Tal Expression"
 #: ../../facetednavigation/widgets/tal/widget.py:41
 msgid "faceted_criteria_tal_default"
-msgstr ""
+msgstr "Expression Tales"
 
 #. Default: "Friendly name"
 #: ../../facetednavigation/widgets/widget.py:43
@@ -433,7 +433,7 @@ msgstr "Nom d'affichage"
 #. Default: "Visible to"
 #: ../../facetednavigation/widgets/debug/widget.py:21
 msgid "faceted_criteria_user"
-msgstr ""
+msgstr "Visible par"
 
 #. Default: "Vocabulary"
 #: ../../facetednavigation/widgets/checkbox/widget.py:51
@@ -450,17 +450,17 @@ msgstr "Cette widget sera ignorée parce que la racine fournie est iinaccessible
 #. Default: "Portlet macro"
 #: ../../facetednavigation/widgets/portlet/widget.py:19
 msgid "faceted_portlet_macro"
-msgstr ""
+msgstr "Macro de la portlet"
 
 #. Default: "Less filters"
 #: ../../facetednavigation/browser/template/view.pt:27
 msgid "faceted_sections_less"
-msgstr ""
+msgstr "Moins de filtres"
 
 #. Default: "More filters"
 #: ../../facetednavigation/browser/template/view.pt:26
 msgid "faceted_sections_more"
-msgstr ""
+msgstr "Plus de filtres"
 
 #. Default: "Display number of results per letter"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:41
@@ -477,7 +477,7 @@ msgstr "Utiliser l'ensemble des valeurs indexées comme vocabulaire"
 #. Default: "Default items (one per line)"
 #: ../../facetednavigation/widgets/checkbox/widget.py:112
 msgid "help_faceted_criteria_checkboxes_default"
-msgstr ""
+msgstr "Éléments par défaut (un par ligne)"
 
 #. Default: "Display number of results near each option"
 #: ../../facetednavigation/widgets/checkbox/widget.py:93
@@ -496,12 +496,12 @@ msgstr "Cette option ne fonctionne que si le dénombrement des résultats est ac
 #. Default: "Default daterange (e.g. \"now-365=>now+1\" which means \"Starting one year ago until tomorrow\")"
 #: ../../facetednavigation/widgets/date/widget.py:63
 msgid "help_faceted_criteria_date_default"
-msgstr ""
+msgstr "Plage de date par défaut (par ex. : \"now-365=>now+1\" qui signifie \"Depuis il y a un an jusqu'à aujourd'hui\")"
 
 #. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
 #: ../../facetednavigation/widgets/daterange/widget.py:39
 msgid "help_faceted_criteria_daterange_default"
-msgstr ""
+msgstr "Plage de date par défaut (par ex. : \"2009/12/01=>2009/12/31\")"
 
 #. Default: "Default letter to be selected"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:60
@@ -511,12 +511,12 @@ msgstr "Lettre à sélectionner par défaut"
 #. Default: "Results per page ending value"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:33
 msgid "help_faceted_criteria_end"
-msgstr ""
+msgstr "Valeur de fin des résultats par page"
 
 #. Default: "Etag value"
 #: ../../facetednavigation/widgets/etag/widget.py:19
 msgid "help_faceted_criteria_etag_default"
-msgstr ""
+msgstr "Valeur de l'ETAG"
 
 #. Default: "Hide widget"
 #: ../../facetednavigation/widgets/widget.py:74
@@ -533,7 +533,7 @@ msgstr "Index catalogue à interroger pour la recherche"
 #. Default: "Cut long phrases to provided number of characters"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:80
 msgid "help_faceted_criteria_maxchars"
-msgstr ""
+msgstr "Tronquer les mots à ce nombre de caractères"
 
 #. Default: "Number of items visible in widget"
 #: ../../facetednavigation/widgets/checkbox/widget.py:75
@@ -545,12 +545,12 @@ msgstr "Nombre maximum d'éléments visibles dans la widget"
 #. Default: "Search with AND/OR between elements"
 #: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "help_faceted_criteria_operator"
-msgstr ""
+msgstr "Opérateur de recherche entre les critères"
 
 #. Default: "Default path to search in (relative to root folder)"
 #: ../../facetednavigation/widgets/path/widget.py:49
 msgid "help_faceted_criteria_path_default"
-msgstr ""
+msgstr "Chemin d'accès par défaut où effectuer la recherche (relatif au dossier racine)"
 
 #. Default: "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 #: ../../facetednavigation/widgets/path/widget.py:61
@@ -682,6 +682,11 @@ msgstr ""
 msgid "help_faceted_settings_menu"
 msgstr "Paramètres généraux de la navigation à facettes"
 
+#. Default: "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+#: ../../facetednavigation/widgets/criteria/widget.py:19
+msgid "help_hidecriteriaenabled"
+msgstr ""
+
 #. Default: "Position of the widget."
 #: ../../facetednavigation/browser/template/configure.pt:45
 msgid "help_widget_position"
@@ -705,6 +710,11 @@ msgstr "dans les résultats courants"
 #: ../../facetednavigation/settings/menu.py:20
 msgid "label_faceted_settings_menu"
 msgstr "Paramètres"
+
+#. Default: "Enable hide/show criteria"
+#: ../../facetednavigation/widgets/criteria/widget.py:17
+msgid "label_hidecriteriaenabled"
+msgstr "Activer afficher/masquer les critères"
 
 #. Default: "Select all items"
 #: ../../facetednavigation/browser/template/configure.pt:114
