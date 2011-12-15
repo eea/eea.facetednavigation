@@ -2,8 +2,10 @@ Changelog
 =========
 
 
-4.2-dev - (unreleased)
-----------------------
+4.2 - (2011-12-15)
+------------------
+* Bug fix: Include .mo translation files in the egg
+  [voineali]
 
 * Bug fix: Wrapped value from select widget with "" to avoid option attribute
   selector error with jquery 1.7.1 when the value contained a non continuos word
