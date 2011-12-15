@@ -87,7 +87,7 @@ class SimpleATAccessor(object):
 
     def __call__(self):
         value = self.data.get(self.key, None)
-        if value:
+        if value is not None:
             return value
 
         field = self.widget.edit_schema.get(self.key)

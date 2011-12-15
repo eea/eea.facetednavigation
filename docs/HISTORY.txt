@@ -4,6 +4,11 @@ Changelog
 4.3-dev - (unreleased)
 ----------------------
 
+* Fixed: when a checkbox field had a default value as 'True',
+  when widget was set to 'False' (unchecked)
+  on the form, the checbox remained checked after submission.
+  [thomasdesvenain]
+
 * Some internationalization fixes, msg extraction and french translations.
   [thomasdesvenain]
 
