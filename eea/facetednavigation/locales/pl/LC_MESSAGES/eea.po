@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2011-10-12 16:36+0000\n"
+"POT-Creation-Date: 2011-12-15 22:30+0000\n"
 "PO-Revision-Date: 2011-05-23 13:30+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -244,7 +244,7 @@ msgstr ""
 msgid "TAL Expression"
 msgstr ""
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:176
+#: ../../facetednavigation/widgets/tagscloud/widget.py:198
 msgid "Tags Cloud"
 msgstr ""
 
@@ -398,22 +398,22 @@ msgid "faceted_criteria_step"
 msgstr ""
 
 #. Default: "Cloud height"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:133
+#: ../../facetednavigation/widgets/tagscloud/widget.py:155
 msgid "faceted_criteria_tagscloud_height"
 msgstr ""
 
 #. Default: "Maximum size"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:122
+#: ../../facetednavigation/widgets/tagscloud/widget.py:144
 msgid "faceted_criteria_tagscloud_maxsize"
 msgstr ""
 
 #. Default: "Minimum size"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+#: ../../facetednavigation/widgets/tagscloud/widget.py:133
 msgid "faceted_criteria_tagscloud_minsize"
 msgstr ""
 
 #. Default: "Cloud type"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:100
+#: ../../facetednavigation/widgets/tagscloud/widget.py:122
 msgid "faceted_criteria_tagscloud_type"
 msgstr ""
 
@@ -571,7 +571,7 @@ msgstr ""
 
 #. Default: "Default selected item"
 #: ../../facetednavigation/widgets/radio/widget.py:101
-#: ../../facetednavigation/widgets/tagscloud/widget.py:164
+#: ../../facetednavigation/widgets/tagscloud/widget.py:186
 msgid "help_faceted_criteria_radio_default"
 msgstr ""
 
@@ -618,27 +618,27 @@ msgid "help_faceted_criteria_step"
 msgstr ""
 
 #. Default: "Display number of results near each tag"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:144
+#: ../../facetednavigation/widgets/tagscloud/widget.py:166
 msgid "help_faceted_criteria_tagscloud_count"
 msgstr ""
 
 #. Default: "Cloud height (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:135
+#: ../../facetednavigation/widgets/tagscloud/widget.py:157
 msgid "help_faceted_criteria_tagscloud_height"
 msgstr ""
 
 #. Default: "Maximum font-size (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:124
+#: ../../facetednavigation/widgets/tagscloud/widget.py:146
 msgid "help_faceted_criteria_tagscloud_maxsize"
 msgstr ""
 
 #. Default: "Minimum font-size (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:113
+#: ../../facetednavigation/widgets/tagscloud/widget.py:135
 msgid "help_faceted_criteria_tagscloud_minsize"
 msgstr ""
 
 #. Default: "Type of the cloud"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:102
+#: ../../facetednavigation/widgets/tagscloud/widget.py:124
 msgid "help_faceted_criteria_tagscloud_type"
 msgstr ""
 

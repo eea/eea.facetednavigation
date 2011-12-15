@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-10-12 16:36+0000\n"
+"POT-Creation-Date: 2011-12-15 22:30+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -247,7 +247,7 @@ msgstr "Activează navigarea faţetată pe traduceri"
 msgid "TAL Expression"
 msgstr "Expresie TAL"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:176
+#: ../../facetednavigation/widgets/tagscloud/widget.py:198
 msgid "Tags Cloud"
 msgstr "Tag Cloud"
 
@@ -401,22 +401,22 @@ msgid "faceted_criteria_step"
 msgstr "Pas"
 
 #. Default: "Cloud height"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:133
+#: ../../facetednavigation/widgets/tagscloud/widget.py:155
 msgid "faceted_criteria_tagscloud_height"
 msgstr "Înălţime"
 
 #. Default: "Maximum size"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:122
+#: ../../facetednavigation/widgets/tagscloud/widget.py:144
 msgid "faceted_criteria_tagscloud_maxsize"
 msgstr "Mărime maximă"
 
 #. Default: "Minimum size"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+#: ../../facetednavigation/widgets/tagscloud/widget.py:133
 msgid "faceted_criteria_tagscloud_minsize"
 msgstr "Mărime minimă"
 
 #. Default: "Cloud type"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:100
+#: ../../facetednavigation/widgets/tagscloud/widget.py:122
 msgid "faceted_criteria_tagscloud_type"
 msgstr "Tip"
 
@@ -574,7 +574,7 @@ msgstr "Poziţia widget-ului în pagină"
 
 #. Default: "Default selected item"
 #: ../../facetednavigation/widgets/radio/widget.py:101
-#: ../../facetednavigation/widgets/tagscloud/widget.py:164
+#: ../../facetednavigation/widgets/tagscloud/widget.py:186
 msgid "help_faceted_criteria_radio_default"
 msgstr "Valoarea implicită selectată"
 
@@ -621,27 +621,27 @@ msgid "help_faceted_criteria_step"
 msgstr "Pas"
 
 #. Default: "Display number of results near each tag"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:144
+#: ../../facetednavigation/widgets/tagscloud/widget.py:166
 msgid "help_faceted_criteria_tagscloud_count"
 msgstr "Afişează numărul de rezultate lângă fiecare tag"
 
 #. Default: "Cloud height (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:135
+#: ../../facetednavigation/widgets/tagscloud/widget.py:157
 msgid "help_faceted_criteria_tagscloud_height"
 msgstr "Înălţime"
 
 #. Default: "Maximum font-size (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:124
+#: ../../facetednavigation/widgets/tagscloud/widget.py:146
 msgid "help_faceted_criteria_tagscloud_maxsize"
 msgstr "Mărime font maximă (px)"
 
 #. Default: "Minimum font-size (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:113
+#: ../../facetednavigation/widgets/tagscloud/widget.py:135
 msgid "help_faceted_criteria_tagscloud_minsize"
 msgstr "Mărime font minimă (px)"
 
 #. Default: "Type of the cloud"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:102
+#: ../../facetednavigation/widgets/tagscloud/widget.py:124
 msgid "help_faceted_criteria_tagscloud_type"
 msgstr "Tip"
 

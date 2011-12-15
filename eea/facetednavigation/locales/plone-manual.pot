@@ -41,3 +41,6 @@ msgstr ""
 
 msgid "Object provides"
 msgstr ""
+
+msgid "Faceted criteria"
+msgstr ""

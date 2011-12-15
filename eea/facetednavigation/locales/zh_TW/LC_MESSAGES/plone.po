@@ -17,6 +17,9 @@ msgstr ""
 msgid "Current search"
 msgstr "目前搜尋"
 
+msgid "Faceted criteria"
+msgstr ""
+
 msgid "Object provides"
 msgstr ""
 

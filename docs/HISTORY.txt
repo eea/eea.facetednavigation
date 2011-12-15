@@ -4,6 +4,9 @@ Changelog
 4.3-dev - (unreleased)
 ----------------------
 
+* Some internationalization fixes, msg extraction and french translations.
+  [thomasdesvenain]
+
 
 4.2 - (2011-12-15)
 ------------------

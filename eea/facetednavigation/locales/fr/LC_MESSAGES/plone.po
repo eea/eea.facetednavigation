@@ -17,6 +17,9 @@ msgstr ""
 msgid "Current search"
 msgstr "Recherche courante"
 
+msgid "Faceted criteria"
+msgstr "Configurer les facettes"
+
 msgid "Object provides"
 msgstr "Interfaces des objets"
 
