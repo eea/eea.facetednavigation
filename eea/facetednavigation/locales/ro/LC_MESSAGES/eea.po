@@ -455,12 +455,12 @@ msgstr "Macro"
 #. Default: "Less filters"
 #: ../../facetednavigation/browser/template/view.pt:27
 msgid "faceted_sections_less"
-msgstr ""
+msgstr "Mai puţine filtre"
 
 #. Default: "More filters"
 #: ../../facetednavigation/browser/template/view.pt:26
 msgid "faceted_sections_more"
-msgstr ""
+msgstr "Mai multe filtre"
 
 #. Default: "Display number of results per letter"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:41
