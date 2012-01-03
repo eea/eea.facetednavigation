@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.4-dev - (unreleased)
+----------------------
+
 4.3 - (2012-01-03)
 ------------------
 * Hide/show criteria on criteria widget is now an option on this widget.
