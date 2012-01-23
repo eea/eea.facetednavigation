@@ -22,6 +22,9 @@
 
 .ui-dialog {
   width: 50em ! important;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #888;
 }
 
 /* Archetypes
@@ -41,7 +44,7 @@
 /* Common
 ========= */
 .faceted-results {
-  border: 1px dotted green;
+  border: 1px dotted #ccc;
 }
 
 dd {
@@ -75,27 +78,47 @@ table.listing {
 
 /* Widgets
 ========== */
+#content .faceted-widget fieldset, .faceted-widget fieldset {
+  border: none;
+}
+
+.faceted-widget {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #888;
+  margin: 2em 0.5em;
+}
+
 .faceted-widget legend {
   width: 100%;
 }
 
 .ui-widget-header {
-  background: #CDE2A7;
   margin-bottom: 1em;
-  margin-top: -0.5em;
   margin-right: -0.5em;
   margin-left: -0.5em;
+  margin-top: 5px;
   text-align: left;
   padding-left: 0.5em;
   padding-bottom: 0.3em;
+  background: #CDE2A7;
+  border: none;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#CDE2A7));
+  background-image: -webkit-linear-gradient(center top , #FFFFFF, #CDE2A7);
+  background-image: -moz-linear-gradient(center top , #FFFFFF, #CDE2A7);
+  background-image: -ms-linear-gradient(center top , #FFFFFF, #CDE2A7);
+  background-image: -o-linear-gradient(center top , #FFFFFF, #CDE2A7);
+}
+
+.faceted-widget .ui-widget-header {
+  margin-top: -0.9em;
+  margin-left: -0.9em;
+  margin-right: -0.9em;
 }
 
 .faceted-widget-edit ul.formTabs {
   background-color: #ddd;
   border: 0.3em solid #ddd;
-}
-
-.faceted-widget-edit ul.formTabs {
   display: block;
   border-style: solid solid none solid;
   margin-left: 0;
@@ -139,12 +162,13 @@ table.listing {
  padding: 1em;
 }
 
-.faceted-widget .ui-widget-header {
-  margin-top: -1em;
-}
-
 .faceted-widget-hidden div.ui-widget-header {
-  background: #eee ! important;
+  background: #E6E6E6 ! important;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#E6E6E6)) ! important;
+  background-image: -webkit-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
+  background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
+  background-image: -ms-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
+  background-image: -o-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
 }
 
 .faceted-widget-hidden fieldset {
@@ -170,7 +194,7 @@ table.listing {
 /* Columns
 ========== */
 .faceted-column {
-  border-color: green;
+  border-color: #ccc;
   border-style: dotted;
   border-width: 1px;
 }
@@ -301,4 +325,8 @@ table.listing {
 .faceted-widget-error dd {
   margin-left: 2em;
   padding-bottom:0;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  right: 1em;
 }

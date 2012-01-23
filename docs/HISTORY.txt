@@ -3,6 +3,8 @@ Changelog
 
 4.4-dev - (unreleased)
 ----------------------
+* Feature: Added round corners, gradients and box shadows in edit mode
+  [voineali]
 
 4.3 - (2012-01-03)
 ------------------
