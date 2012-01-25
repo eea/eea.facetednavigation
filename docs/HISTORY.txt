@@ -3,6 +3,10 @@ Changelog
 
 4.4-dev - (unreleased)
 ----------------------
+* Change: Updated Faceted Views example (see
+  eea.facetednavigation.views.example.summary.pt for more details on how the
+  template should look in order to be used as a Faceted View)
+  [voineali]
 * Feature: Added round corners, gradients and box shadows in edit mode
   [voineali]
 
