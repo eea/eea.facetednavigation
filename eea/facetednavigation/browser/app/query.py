@@ -106,8 +106,12 @@ class FacetedQueryHandler(object):
             query['sort_on'] = 'effective'
             query['sort_order'] = 'reverse'
 
-        # Add default language
-        query.setdefault('Language', self.language)
+        # Add default language. 
+        # Also make sure to return language-independent content.
+        lang = self.language
+        if lang:
+            lang = [lang, '',] 
+        query.setdefault('Language', lang)
 
         logger.debug('QUERY: %s', query)
         return query
