@@ -106,11 +106,11 @@ class FacetedQueryHandler(object):
             query['sort_on'] = 'effective'
             query['sort_order'] = 'reverse'
 
-        # Add default language. 
+        # Add default language.
         # Also make sure to return language-independent content.
         lang = self.language
         if lang:
-            lang = [lang, '',] 
+            lang = [lang, '']
         query.setdefault('Language', lang)
 
         logger.debug('QUERY: %s', query)
@@ -160,7 +160,7 @@ class FacetedQueryHandler(object):
 
         if type(brains) == GeneratorType:
             brains = [brain for brain in brains]
-            
+
         return Batch(brains, num_per_page, b_start, orphan=orphans)
 
     @ramcache(cacheKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
