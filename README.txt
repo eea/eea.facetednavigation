@@ -113,7 +113,7 @@ Source code
   - Plone 2 and 3:
     - Latest source code in EEA svn: https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.facetednavigation/
   - Plone 4+
-    - Collective: http://svn.plone.org/svn/collective/eea.facetednavigation/trunk/
+    - Collective: https://github.com/collective/eea.facetednavigation
 
 
 Eggs repository
