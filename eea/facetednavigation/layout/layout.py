@@ -1,15 +1,11 @@
 """ Layout adapters
 """
 from zope import interface
-from persistent.list import PersistentList
 from zope.component import getUtility, queryMultiAdapter
 from zope.annotation.interfaces import IAnnotations
 from eea.facetednavigation.interfaces import IViewsInfo
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
-from eea.facetednavigation.config import (
-    ANNO_FACETED_LAYOUT,
-    ANNO_FACETED_LAYOUTS,
-)
+from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 
 class FacetedLayout(object):
     """ Faceted Layout
@@ -32,7 +28,7 @@ class FacetedLayout(object):
     def layouts(self):
         """ Available layouts
         """
-        layouts = IAnnotations(self.context).get(ANNO_FACETED_LAYOUTS, [])
+        layouts = self.default_layouts
         res = []
         for template_id, title in layouts:
             if not self.get_macro(template_id):
@@ -93,11 +89,3 @@ class FacetedLayout(object):
         IAnnotations(self.context)[ANNO_FACETED_LAYOUT] = layout
         return ''
 
-    def update_layouts(self, layouts=None):
-        """ Update layouts from given layouts. If not provided get layouts from
-        context
-        """
-        if not layouts:
-            layouts = self.default_layouts
-        IAnnotations(self.context)[
-            ANNO_FACETED_LAYOUTS] = PersistentList(layouts)

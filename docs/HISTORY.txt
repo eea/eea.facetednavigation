@@ -3,6 +3,9 @@ Changelog
 
 4.4-dev - (unreleased)
 ----------------------
+* Fixed: Dynamically get old-style Faceted Views (Faceted Layouts) used by the
+  Display menu, instead of caching them in annotations
+  [voineali]
 * Change: Always find language-independent content
   [pbauer]
 * Change: Updated Faceted Views example (see

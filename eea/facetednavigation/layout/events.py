@@ -1,7 +1,6 @@
 """ Faceted layout event handlers
 """
 from zope.component import queryAdapter, queryMultiAdapter
-from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.interfaces import ICriteria
 from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.context import SnapshotImportContext
@@ -9,10 +8,7 @@ from Products.GenericSetup.context import SnapshotImportContext
 def faceted_will_be_enabled(doc, evt):
     """ EVENT: faceted navigation is going to be enabled
     """
-    layout_adapter = queryAdapter(doc, IFacetedLayout)
-    if not layout_adapter:
-        return
-    layout_adapter.update_layouts()
+    return
 
 def faceted_enabled(doc, evt):
     """ EVENT: faceted navigation enabled
