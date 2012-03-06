@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2011-12-15 22:56+0000\n"
+"POT-Creation-Date: 2012-03-06 22:38+0000\n"
 "PO-Revision-Date: 2011-10-17 14:13+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Language-Name: Traditional Chinese\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea\n"
+
+#: ../../facetednavigation/browser/template/configure.pt:70
+msgid "Add"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
@@ -80,6 +84,10 @@ msgstr "日期區間"
 msgid "Debugger"
 msgstr "偵錯"
 
+#: ../../facetednavigation/browser/template/configure.pt:181
+msgid "Delete"
+msgstr ""
+
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
 msgstr "停用智慧導覽"
@@ -136,7 +144,15 @@ msgstr "智慧導覽已啟用"
 msgid "Factory"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.py:31
+#: ../../facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.py:32
 msgid "Filters"
 msgstr "過濾條件"
 
@@ -211,6 +227,10 @@ msgstr "每頁顯示數量"
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
 msgstr "反向"
+
+#: ../../facetednavigation/browser/template/configure.pt:180
+msgid "Save"
+msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.pt:21
 msgid "Search"
@@ -680,7 +700,7 @@ msgid "help_faceted_settings_menu"
 msgstr "智慧導覽的設定值"
 
 #. Default: "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-#: ../../facetednavigation/widgets/criteria/widget.py:19
+#: ../../facetednavigation/widgets/criteria/widget.py:18
 msgid "help_hidecriteriaenabled"
 msgstr ""
 
@@ -709,7 +729,7 @@ msgid "label_faceted_settings_menu"
 msgstr "智慧導覽設定"
 
 #. Default: "Enable hide/show criteria"
-#: ../../facetednavigation/widgets/criteria/widget.py:17
+#: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "label_hidecriteriaenabled"
 msgstr ""
 

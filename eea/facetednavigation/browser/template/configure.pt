@@ -67,7 +67,7 @@
       </div>
       <div id="faceted-widget-details"></div>
       <div class="field" style="clear: both">
-        <input class="context" type="submit" value="Add" name="addWidget_button" />
+        <input class="context" type="submit" value="Add" i18n:attributes="value" name="addWidget_button" />
       </div>
     </form>
   </fieldset>
@@ -177,8 +177,8 @@
     </table>
 
     <div>
-      <input class="context" type="submit" value="Save" name="saveChanges_button" />
-      <input class="context" type="submit" value="Delete" name="deleteWidgets_button" />
+      <input class="context" type="submit" value="Save" i18n:attributes="value"  name="saveChanges_button" />
+      <input class="context" type="submit" value="Delete" i18n:attributes="value"  name="deleteWidgets_button" />
     </div>
   </form>
 

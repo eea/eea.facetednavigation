@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-12-15 22:56+0000\n"
+"POT-Creation-Date: 2012-03-06 22:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea\n"
+
+#: ../../facetednavigation/browser/template/configure.pt:70
+msgid "Add"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
@@ -83,6 +87,10 @@ msgstr "Intervalle de dates"
 msgid "Debugger"
 msgstr "Débogueur"
 
+#: ../../facetednavigation/browser/template/configure.pt:181
+msgid "Delete"
+msgstr ""
+
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
 msgstr "Désactiver la navigation par facettes"
@@ -139,7 +147,15 @@ msgstr "Navigation par facettes activée"
 msgid "Factory"
 msgstr "Factory"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:31
+#: ../../facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.py:32
 msgid "Filters"
 msgstr "Filtres"
 
@@ -214,6 +230,10 @@ msgstr "Résultats par page"
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
 msgstr "Inverser"
+
+#: ../../facetednavigation/browser/template/configure.pt:180
+msgid "Save"
+msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.pt:21
 msgid "Search"
@@ -683,7 +703,7 @@ msgid "help_faceted_settings_menu"
 msgstr "Paramètres généraux de la navigation à facettes"
 
 #. Default: "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-#: ../../facetednavigation/widgets/criteria/widget.py:19
+#: ../../facetednavigation/widgets/criteria/widget.py:18
 msgid "help_hidecriteriaenabled"
 msgstr ""
 
@@ -712,7 +732,7 @@ msgid "label_faceted_settings_menu"
 msgstr "Paramètres"
 
 #. Default: "Enable hide/show criteria"
-#: ../../facetednavigation/widgets/criteria/widget.py:17
+#: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "label_hidecriteriaenabled"
 msgstr "Activer afficher/masquer les critères"
 

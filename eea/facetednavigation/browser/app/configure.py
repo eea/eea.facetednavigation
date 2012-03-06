@@ -75,7 +75,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
         except NameError, err:
             msg = err
         else:
-            msg = 'Filter added'
+            msg = _(u'Filter added')
         return self._redirect(msg=msg, to=self.redirect)
 
     def edit(self, **kwargs):
@@ -159,7 +159,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
         except (TypeError, KeyError), err:
             msg = err
         else:
-            msg = 'Filter deleted'
+            msg = _(u'Filter deleted')
         return self._redirect(msg=msg)
 
 class FacetedPositionHandler(FacetedBasicHandler):
