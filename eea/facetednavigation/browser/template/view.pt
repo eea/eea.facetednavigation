@@ -12,7 +12,9 @@
         Faceted.Load();
     });"></script>
   <script type="text/javascript"
-    tal:content="string:jQuery(window).unload(Faceted.Unload);"></script>
+    tal:content="string:jQuery(window).unload(function(){
+        Faceted.Unload();
+    });"></script>
 </metal:jsslot>
 
 <body>
