@@ -68,7 +68,11 @@ class FacetedLayout(object):
 
         if not macros:
             return None
-        return macros.get(macro)
+
+        try:
+            return macros[macro]
+        except KeyError:
+            return None
 
     @property
     def default_layouts(self):
