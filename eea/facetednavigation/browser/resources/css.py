@@ -2,7 +2,7 @@
 """
 from App.Common import rfc1123_date
 from DateTime import DateTime
-from zope.component import getUtility, getAdapter, getMultiAdapter
+from zope.component import getUtility, getMultiAdapter
 from zope.publisher.browser import TestRequest
 from Products.CMFCore.utils import getToolByName
 from Products.ResourceRegistries.tools.packer import CSSPacker
@@ -41,7 +41,7 @@ class CSS(object):
                 name='resource')
             obj = traverser.traverse(resource[12:], None)
         else:
-             obj = self.context.restrictedTraverse(resource, None)
+            obj = self.context.restrictedTraverse(resource, None)
 
         obj = self.context.restrictedTraverse(resource, None)
         if not obj:
