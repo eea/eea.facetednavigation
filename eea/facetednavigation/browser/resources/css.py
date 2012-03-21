@@ -2,7 +2,8 @@
 """
 from App.Common import rfc1123_date
 from DateTime import DateTime
-from zope.component import getUtility
+from zope.component import getUtility, getAdapter, getMultiAdapter
+from zope.publisher.browser import TestRequest
 from Products.CMFCore.utils import getToolByName
 from Products.ResourceRegistries.tools.packer import CSSPacker
 
@@ -29,6 +30,19 @@ class CSS(object):
     def get_resource(self, resource):
         """ Get resource content
         """
+        # If resources are retrieved via GET, the request headers
+        # are used for caching AND are mangled.
+        # That can result in getting 304 responses
+        # There is no API to extract the data from the view without
+        # mangling the headers, so we must use a fake request
+        # that can be modified without harm
+        if resource.startswith('++resource++'):
+            traverser = getMultiAdapter((self.context, TestRequest()),
+                name='resource')
+            obj = traverser.traverse(resource[12:], None)
+        else:
+             obj = self.context.restrictedTraverse(resource, None)
+
         obj = self.context.restrictedTraverse(resource, None)
         if not obj:
             return '/* ERROR */'
