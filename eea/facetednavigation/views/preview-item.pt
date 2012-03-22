@@ -1,0 +1,4 @@
+<div class="title">
+  <a tal:attributes="href context/absolute_url" tal:content="context/pretty_title_or_id">Title</a>
+</div>
+<div class="description" tal:content="context/Description|string:">Description</div>

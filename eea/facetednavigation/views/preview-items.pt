@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  metal:use-macro="context/main_template/macros/master"
+  i18n:domain="eea">
+
+<body>
+  <metal:content-core fill-slot="content-core">
+    <metal:block define-macro="content-core">
+      <div tal:define="
+        folderContents folderContents | python:context.getFolderContents();
+        Batch python:modules['Products.CMFPlone'].Batch;
+        b_start python:request.get('b_start', 0);
+        batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, 100, int(b_start), orphan=2);">
+
+        <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+        <div class="eea-preview-items">
+          <tal:entry repeat="brain folderContents">
+            <div class="eea-preview-item"
+              tal:define="doc brain/getObject|nothing"
+              tal:condition="exists:doc/@@faceted-preview-item"
+              tal:content="structure doc/@@faceted-preview-item">Entry</div>
+          </tal:entry>
+        </div>
+
+        <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+      </div>
+
+    </metal:block>
+  </metal:content-core>
+</body>
+</html>
