@@ -221,19 +221,6 @@
   color: #95B229;
 }
 
-.eea-preview-item {
-  width: 150px;
-  float: left;
-  margin: 1em;
-  height: 150px;
-  box-shadow: 3px 3px 3px #eee;
-  padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
 .eea-preview-items:after {
   content: '.';
   display: block;

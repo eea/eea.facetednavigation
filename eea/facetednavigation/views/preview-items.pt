@@ -18,7 +18,7 @@
 
         <div class="eea-preview-items">
           <tal:entry repeat="brain folderContents">
-            <div class="eea-preview-item"
+            <div class="photoAlbumEntry"
               tal:define="doc brain/getObject|nothing"
               tal:condition="exists:doc/@@faceted-preview-item"
               tal:content="structure doc/@@faceted-preview-item">Entry</div>

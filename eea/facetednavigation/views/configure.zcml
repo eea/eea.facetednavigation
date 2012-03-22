@@ -21,7 +21,7 @@
 
   <browser:page
     name="faceted-preview-item"
-    for="Products.Archetypes.interfaces.IBaseContent"
+    for="zope.interface.Interface"
     template="preview-item.pt"
     permission="zope2.View"
     />
