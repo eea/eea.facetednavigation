@@ -3,6 +3,12 @@ Changelog
 
 4.4-dev - (unreleased)
 ----------------------
+* Change: Added 'faceted-preview-items' View as the default view for Faceted
+  navigable objects instead of relaying on 'folder_listing' to be forever
+  compatible with eea.facetednavigation. This is also a more flexible solution
+  as you can customize each item display by providing a custom
+  'faceted-preview-item' z3 component for each of this items.
+  [voineali #4968]
 * Fixed: Dynamically get old-style Faceted Views (Faceted Layouts) used by the
   Display menu, instead of caching them in annotations
   [voineali]

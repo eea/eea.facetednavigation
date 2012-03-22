@@ -22,7 +22,7 @@ class FacetedLayout(object):
         """ Current layout
         """
         return IAnnotations(self.context).get(
-            ANNO_FACETED_LAYOUT, 'folder_listing')
+            ANNO_FACETED_LAYOUT, 'faceted-preview-items')
 
     @property
     def layouts(self):
