@@ -17,12 +17,12 @@
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
         <div class="eea-preview-items">
-          <tal:entry repeat="brain folderContents">
-            <div class="photoAlbumEntry"
-              tal:define="doc brain/getObject|nothing"
-              tal:condition="exists:doc/@@faceted-preview-item"
-              tal:content="structure doc/@@faceted-preview-item">Entry</div>
-          </tal:entry>
+          <tal:entries repeat="brain folderContents">
+            <tal:entry
+              define="doc brain/getObject|nothing"
+              condition="exists:doc/@@faceted-preview-item"
+              replace="structure doc/@@faceted-preview-item" />
+          </tal:entries>
         </div>
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />
