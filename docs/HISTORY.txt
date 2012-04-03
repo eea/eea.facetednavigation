@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.4-dev - (unreleased)
-----------------------
+4.4 - (2012-04-03)
+------------------
 * Change: Added 'faceted-preview-items' View as the default view for Faceted
   navigable objects instead of relaying on 'folder_listing' to be forever
   compatible with eea.facetednavigation. This is also a more flexible solution
