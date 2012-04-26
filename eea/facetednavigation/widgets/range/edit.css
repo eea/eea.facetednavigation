@@ -1,0 +1,12 @@
+.faceted-range-widget-form div {
+  float: left;
+  margin-left: 0.5em;
+}
+
+.faceted-range-widget-form div label {
+  display: block;
+}
+
+.faceted-range-widget-form input {
+  width: 10em;
+}

@@ -1,0 +1,39 @@
+<div class="faceted-widget faceted-range-widget" style="display: none"
+     i18n:domain="eea" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default python:view.default;
+  default_start python:default[0];
+  default_end python:default[1];
+  css string:faceted-widget faceted-range-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+<legend tal:define="title python:view.data.get('title', '')" tal:content="
+  python:view.translate(title)" i18n:translate="">Range widget</legend>
+
+<form action="." method="get" class="faceted-range-widget-form"
+  tal:on-error="structure python:error_view(error=error, cid=wid)">
+  <div tal:attributes="id string:${wid}_start;">
+    <label tal:attributes="for string:$wid-start-input"
+      i18n:translate="">Start</label>
+    <input type="text" name="start" title="Start" tal:attributes="
+      id string:$wid-start-input;
+      value default_start"
+      i18n:attributes="title" />
+  </div>
+  <div tal:attributes="id string:${wid}_end;">
+    <label tal:attributes="for string:$wid-end-input"
+      i18n:translate="">End</label>
+    <input type="text" name="end" title="End" tal:attributes="
+      id string:$wid-end-input;
+      value default_end"
+      i18n:attributes="title" />
+  </div>
+  <div tal:attributes="id string:${wid}_errors"></div>
+</form>
+
+</fieldset>
+</div>
