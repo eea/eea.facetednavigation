@@ -2,6 +2,7 @@ FacetedEdit.DateRangeWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
 
+  this.yearRange =  jQuery('input[name=calYearRange]', this.widget).val();
   this.start = jQuery('input[name=start]', this.widget);
   this.end = jQuery('input[name=end]', this.widget);
 
@@ -10,6 +11,7 @@ FacetedEdit.DateRangeWidget = function(wid){
     changeMonth: true,
     changeYear: true,
     dateFormat: 'yy-mm-dd',
+    yearRange: this.yearRange,
     onSelect: function(date, cal){
       js_widget.set_default(date);
     }
@@ -19,6 +21,7 @@ FacetedEdit.DateRangeWidget = function(wid){
     changeMonth: true,
     changeYear: true,
     dateFormat: 'yy-mm-dd',
+    yearRange: this.yearRange,
     onSelect: function(date, cal){
       js_widget.set_default(date);
     }

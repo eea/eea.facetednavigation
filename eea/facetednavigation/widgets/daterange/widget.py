@@ -3,6 +3,7 @@
 import logging
 
 from DateTime import DateTime
+from datetime import datetime
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 
 from Products.Archetypes.public import Schema
@@ -15,6 +16,10 @@ from eea.facetednavigation import EEAMessageFactory as _
 
 
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
+
+def formated_time(datestr):
+    return datetime.strptime(datestr, '%Y-%m-%d')
+
 
 EditSchema = Schema((
     StringField('index',
@@ -38,6 +43,16 @@ EditSchema = Schema((
                 default='Default value'),
             description=_(u'help_faceted_criteria_daterange_default',
                 default=u'Default daterange (e.g. "2009/12/01=>2009/12/31")'),
+            i18n_domain="eea"
+        )
+    ),
+    StringField('calYearRange',
+        schemata="default",
+        default="c-10:c+10",
+        widget=StringWidget(
+            size=25,
+            label=_('faceted_criteria_cal_year_range', default='Default value'),
+            description=_(u'help_faceted_criteria_cal_year_range'),
             i18n_domain="eea"
         )
     ),
@@ -101,13 +116,34 @@ class Widget(AbstractWidget):
             if not value or len(value)!=2:
                 return query
             start, end = value
+        start, end = start.replace('/', '-'), end.replace('/', '-')
+        # be sure years are 0padded & 4 digits
+        # this to allow very old years to be entered up
+        bounds = {'start': start, 'end': end}
+        for sbound in bounds:
+            bound = bounds[sbound]
+            parts = bound.split('-')
+            if len(parts) == 3:
+                year, month, day = parts
+                ypadding = 4 - len(year)
+                mpadding = 2 - len(month)
+                dpadding = 2 - len(day)
+                bounds[sbound] = '%s-%s-%s'% (
+                    '0'* ypadding + year,
+                    '0'* mpadding + month,
+                    '0'* dpadding + day,)
+
+        start, end = bounds['start'], bounds['end']
 
         if not (start and end):
             return query
 
+
         try:
-            start = DateTime(start)
-            end = DateTime(end)
+            # give datetime.datetime to allow very old or big years
+            # not to be transformed in current years (eg: 0001 -> 1901)
+            start = DateTime(formated_time(start))
+            end = DateTime(formated_time(end))
         except Exception, err:
             logger.exception(err)
             return query
@@ -121,3 +157,9 @@ class Widget(AbstractWidget):
             'range': 'min:max'
         }
         return query
+
+
+    @property
+    def cal_year_range(self):
+        return self.accessor('calYearRange')()
+

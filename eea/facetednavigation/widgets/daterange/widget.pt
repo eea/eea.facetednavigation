@@ -1,7 +1,8 @@
-<div class="faceted-widget faceted-daterange-widget" style="display: none" 
+<div class="faceted-widget faceted-daterange-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
+  yearRange python:view.cal_year_range;
   hidden python:view.hidden;
   default python:view.default;
   default_start python:default[0];
@@ -33,6 +34,9 @@
       i18n:attributes="title" />
   </div>
   <div tal:attributes="id string:${wid}_errors"></div>
+  <input type="hidden" name="calYearRange"
+    tal:attributes="id string:${wid}_calYearRange;
+    value string:$yearRange"/>
 </form>
 
 </fieldset>
