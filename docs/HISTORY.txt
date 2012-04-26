@@ -3,6 +3,8 @@ Changelog
 
 4.5-dev - (unreleased)
 ----------------------
+- Improve daterange index (large intervals) [kiorky]
+- Add range index [kiorky]
 
 4.4 - (2012-04-03)
 ------------------

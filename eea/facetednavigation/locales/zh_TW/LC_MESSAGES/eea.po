@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2012-03-06 22:38+0000\n"
+"POT-Creation-Date: 2012-04-26 15:30+0000\n"
 "PO-Revision-Date: 2011-10-17 14:13+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,7 +76,7 @@ msgstr "目前配置"
 msgid "Date"
 msgstr "日期"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:51
+#: ../../facetednavigation/widgets/daterange/widget.py:66
 msgid "Date range"
 msgstr "日期區間"
 
@@ -112,7 +112,11 @@ msgstr "啟用左側方框"
 msgid "Enable right portlets"
 msgstr "啟用右側方框"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:28
+#: ../../facetednavigation/widgets/range/widget.pt:28
+msgid "End"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:29
 msgid "End date"
 msgstr "結束日期"
 
@@ -220,6 +224,10 @@ msgstr ""
 msgid "Radio"
 msgstr ""
 
+#: ../../facetednavigation/widgets/range/widget.py:55
+msgid "Range"
+msgstr ""
+
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
 msgstr "每頁顯示數量"
@@ -252,7 +260,11 @@ msgstr "排序"
 msgid "Sphere"
 msgstr "標籤球"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:20
+#: ../../facetednavigation/widgets/range/widget.pt:20
+msgid "Start"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:21
 msgid "Start date"
 msgstr "起始日期"
 
@@ -302,6 +314,11 @@ msgstr "[X] 移除全部"
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "criteria_view_show_filters"
 msgstr "&#8711; 顯示條件"
+
+#. Default: "Default value"
+#: ../../facetednavigation/widgets/daterange/widget.py:54
+msgid "faceted_criteria_cal_year_range"
+msgstr ""
 
 #. Default: "Catalog"
 #: ../../facetednavigation/widgets/checkbox/widget.py:62
@@ -470,18 +487,22 @@ msgid "faceted_portlet_macro"
 msgstr ""
 
 #. Default: "Less filters"
-#: ../../facetednavigation/browser/template/view.pt:27
+#: ../../facetednavigation/browser/template/view.pt:31
 msgid "faceted_sections_less"
 msgstr "更少"
 
 #. Default: "More filters"
-#: ../../facetednavigation/browser/template/view.pt:26
+#: ../../facetednavigation/browser/template/view.pt:30
 msgid "faceted_sections_more"
 msgstr "更多"
 
 #. Default: "Display number of results per letter"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:41
 msgid "help_faceted_criteria_alphabetic_count"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.py:55
+msgid "help_faceted_criteria_cal_year_range"
 msgstr ""
 
 #. Default: "Get unique values from catalog as an alternative for vocabulary"
@@ -516,7 +537,7 @@ msgid "help_faceted_criteria_date_default"
 msgstr ""
 
 #. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
-#: ../../facetednavigation/widgets/daterange/widget.py:39
+#: ../../facetednavigation/widgets/daterange/widget.py:44
 msgid "help_faceted_criteria_daterange_default"
 msgstr ""
 
@@ -594,6 +615,11 @@ msgstr "部件在頁面的位置"
 #: ../../facetednavigation/widgets/tagscloud/widget.py:186
 msgid "help_faceted_criteria_radio_default"
 msgstr "預設的選擇項目"
+
+#. Default: "Default range (e.g. \"1 => 3\")"
+#: ../../facetednavigation/widgets/range/widget.py:43
+msgid "help_faceted_criteria_range_default"
+msgstr ""
 
 #. Default: "Default results per page"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:53

@@ -9,6 +9,7 @@
   <include package=".etag" />
   <include package=".portlet" />
   <include package=".radio" />
+  <include package=".range" />
   <include package=".resultsperpage" />
   <include package=".select" />
   <include package=".sorting" />
