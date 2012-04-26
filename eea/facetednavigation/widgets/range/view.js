@@ -1,13 +1,14 @@
-/* DateRange Widget
+/* Range Widget
 */
-Faceted.DateRangeWidget = function(wid){
+
+Faceted.RangeWidget = function(wid){
+  var js_widget = this;
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
   this.widget.show();
   this.title = jQuery('legend', this.widget).html();
 
   this.start = jQuery('input[name=start]', this.widget);
-  this.yearRange =  jQuery('input[name=calYearRange]', this.widget).val();
   this.end = jQuery('input[name=end]', this.widget);
   this.selected = [];
 
@@ -18,31 +19,13 @@ Faceted.DateRangeWidget = function(wid){
     Faceted.Query[this.wid] = [start, end];
   }
 
-  var js_widget = this;
-  this.start.datepicker({
-    changeMonth: true,
-    changeYear: true,
-    dateFormat: 'yy-mm-dd',
-    yearRange: this.yearRange,
-    onSelect: function(date, cal){
-      js_widget.select_change(js_widget.start);
-    }
-  });
-
-  this.end.datepicker({
-    changeMonth: true,
-    changeYear: true,
-    yearRange: this.yearRange,
-    dateFormat: 'yy-mm-dd',
-    onSelect: function(date, cal){
-      js_widget.select_change(js_widget.end);
-    }
-  });
-
   // Handle clicks
   jQuery('form', this.widget).submit(function(){
     return false;
   });
+  var handle = function(evt){js_widget.select_change(this, evt);};
+  this.start.change(handle); 
+  this.end.change(handle); 
 
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
@@ -51,9 +34,9 @@ Faceted.DateRangeWidget = function(wid){
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
     js_widget.reset();
   });
-};
+}; 
 
-Faceted.DateRangeWidget.prototype = {
+Faceted.RangeWidget.prototype = {
   select_change: function(element){
     this.do_query(element);
   },
@@ -67,11 +50,8 @@ Faceted.DateRangeWidget.prototype = {
     }
 
     var value = [start, end];
-    var start_date = new Date(start.replace(/-/g, '/'));
-    var end_date = new Date(end.replace(/-/g, '/'));
-
-    if(end_date<start_date){
-      var msg = 'Invalid date range';
+    if(end<start){
+      var msg = 'Invalid range';
       Faceted.Form.raise_error(msg, this.wid + '_errors', []);
     }else{
       this.selected = [this.start, this.end];
@@ -103,18 +83,6 @@ Faceted.DateRangeWidget.prototype = {
 
     var start = value[0];
     var end = value[1];
-    var start_date = new Date(start.replace(/-/g, '/'));
-    var end_date = new Date(end.replace(/-/g, '/'));
-
-    // Invalid date
-    if(!start_date.getFullYear()){
-      this.reset();
-      return false;
-    }
-    if(!end_date.getFullYear()){
-      this.reset();
-      return false;
-    }
 
     // Set start, end inputs
     this.start.val(start);
@@ -164,10 +132,8 @@ Faceted.DateRangeWidget.prototype = {
     var html = jQuery('<dd>');
     var start = this.start.val();
     var end = this.end.val();
-    var start_date = new Date(start.replace(/-/g, '/'));
-    var end_date = new Date(end.replace(/-/g, '/'));
 
-    var label = start_date.toDateString() + ' - ' + end_date.toDateString();
+    var label = start + ' - ' + end;
     var link = jQuery('<a href="#">[X]</a>');
 
     link.attr('id', 'criteria_' + this.wid + '_');
@@ -188,16 +154,16 @@ Faceted.DateRangeWidget.prototype = {
   }
 };
 
-Faceted.initializeDateRangeWidget = function(evt){
-  jQuery('div.faceted-daterange-widget').each(function(){
+Faceted.initializeRangeWidget = function(evt){
+  jQuery('div.faceted-range-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];
-    Faceted.Widgets[wid] = new Faceted.DateRangeWidget(wid);
+    Faceted.Widgets[wid] = new Faceted.RangeWidget(wid);
   });
 };
 
 jQuery(document).ready(function(){
   jQuery(Faceted.Events).bind(
     Faceted.Events.INITIALIZE,
-    Faceted.initializeDateRangeWidget);
+    Faceted.initializeRangeWidget);
 });
