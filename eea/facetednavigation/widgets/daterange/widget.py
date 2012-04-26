@@ -51,8 +51,17 @@ EditSchema = Schema((
         default="c-10:c+10",
         widget=StringWidget(
             size=25,
-            label=_('faceted_criteria_cal_year_range', default='Default value'),
-            description=_(u'help_faceted_criteria_cal_year_range'),
+            label=_('faceted_criteria_cal_year_range',
+                    default='UI Calendar years range'),
+            description=_(u'help_faceted_criteria_cal_year_range',
+                          default='Control the range of years'
+                          'displayed in the year drop-down: '
+                          'either relative to today\'s year '
+                          '(-nn:+nn), relative to the '
+                          'currently selected year (c-nn:c+nn'
+                          '), absolute (nnnn:nnnn), or '
+                          'combinations of these formats '
+                          '(nnnn:-nn).'),
             i18n_domain="eea"
         )
     ),
