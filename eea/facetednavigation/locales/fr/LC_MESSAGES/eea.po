@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-03-06 22:38+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"POT-Creation-Date: 2012-04-26 15:30+0000\n"
+"PO-Revision-Date: 2012-04-26 17:32+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
-msgstr ""
+msgstr "Ajouter"
 
 #: ../../facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
@@ -79,7 +79,7 @@ msgstr "Configuration actuelle"
 msgid "Date"
 msgstr "Date"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:51
+#: ../../facetednavigation/widgets/daterange/widget.py:66
 msgid "Date range"
 msgstr "Intervalle de dates"
 
@@ -89,7 +89,7 @@ msgstr "Débogueur"
 
 #: ../../facetednavigation/browser/template/configure.pt:181
 msgid "Delete"
-msgstr ""
+msgstr "Supprimer"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
@@ -115,7 +115,11 @@ msgstr "Activer les portlets de gauche"
 msgid "Enable right portlets"
 msgstr "Activer les portlets de droite"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:28
+#: ../../facetednavigation/widgets/range/widget.pt:28
+msgid "End"
+msgstr "Fin"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:29
 msgid "End date"
 msgstr "Date de fin"
 
@@ -149,11 +153,11 @@ msgstr "Factory"
 
 #: ../../facetednavigation/browser/app/configure.py:78
 msgid "Filter added"
-msgstr ""
+msgstr "Filtre ajouté"
 
 #: ../../facetednavigation/browser/app/configure.py:162
 msgid "Filter deleted"
-msgstr ""
+msgstr "Filtre supprimé"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:32
 msgid "Filters"
@@ -223,6 +227,10 @@ msgstr "Le nom python d'une factory qui peut créer une implémentation de l'obj
 msgid "Radio"
 msgstr "Bouton radio"
 
+#: ../../facetednavigation/widgets/range/widget.py:55
+msgid "Range"
+msgstr "Interval"
+
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
 msgstr "Résultats par page"
@@ -233,7 +241,7 @@ msgstr "Inverser"
 
 #: ../../facetednavigation/browser/template/configure.pt:180
 msgid "Save"
-msgstr ""
+msgstr "Sauver"
 
 #: ../../facetednavigation/widgets/text/widget.pt:21
 msgid "Search"
@@ -255,7 +263,11 @@ msgstr "Tri"
 msgid "Sphere"
 msgstr "Sphère"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:20
+#: ../../facetednavigation/widgets/range/widget.pt:20
+msgid "Start"
+msgstr "Début"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:21
 msgid "Start date"
 msgstr "Date de début"
 
@@ -305,6 +317,11 @@ msgstr "[X] Tout supprimer"
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "criteria_view_show_filters"
 msgstr "&#8711; Afficher les filtres"
+
+#. Default: "Default value"
+#: ../../facetednavigation/widgets/daterange/widget.py:54
+msgid "faceted_criteria_cal_year_range"
+msgstr "Interval de dates du calendrier"
 
 #. Default: "Catalog"
 #: ../../facetednavigation/widgets/checkbox/widget.py:62
@@ -473,12 +490,12 @@ msgid "faceted_portlet_macro"
 msgstr "Macro de la portlet"
 
 #. Default: "Less filters"
-#: ../../facetednavigation/browser/template/view.pt:27
+#: ../../facetednavigation/browser/template/view.pt:31
 msgid "faceted_sections_less"
 msgstr "Moins de filtres"
 
 #. Default: "More filters"
-#: ../../facetednavigation/browser/template/view.pt:26
+#: ../../facetednavigation/browser/template/view.pt:30
 msgid "faceted_sections_more"
 msgstr "Plus de filtres"
 
@@ -486,6 +503,10 @@ msgstr "Plus de filtres"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:41
 msgid "help_faceted_criteria_alphabetic_count"
 msgstr "Afficher le nombre de résultats par lettre"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:55
+msgid "help_faceted_criteria_cal_year_range"
+msgstr "Contrôle l'interval des années affichées dans la liste des années. Soit en relatif (-nn:+nn), soit relativement à l'année sélectionnée (c-nn:c+nn), soit en absolu (nnnn:nnnn), ou bien alors une combinaison de ces formats (nnnn:-nn)."
 
 #. Default: "Get unique values from catalog as an alternative for vocabulary"
 #: ../../facetednavigation/widgets/checkbox/widget.py:64
@@ -519,7 +540,7 @@ msgid "help_faceted_criteria_date_default"
 msgstr "Plage de date par défaut (par ex. : \"now-365=>now+1\" qui signifie \"Depuis il y a un an jusqu'à aujourd'hui\")"
 
 #. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
-#: ../../facetednavigation/widgets/daterange/widget.py:39
+#: ../../facetednavigation/widgets/daterange/widget.py:44
 msgid "help_faceted_criteria_daterange_default"
 msgstr "Plage de date par défaut (par ex. : \"2009/12/01=>2009/12/31\")"
 
@@ -596,7 +617,12 @@ msgstr "Position de la widget dans la page"
 #: ../../facetednavigation/widgets/radio/widget.py:101
 #: ../../facetednavigation/widgets/tagscloud/widget.py:186
 msgid "help_faceted_criteria_radio_default"
-msgstr ""
+msgstr "Element selectionné par défault"
+
+#. Default: "Default range (e.g. \"1 => 3\")"
+#: ../../facetednavigation/widgets/range/widget.py:43
+msgid "help_faceted_criteria_range_default"
+msgstr "Valeur de l'interval par default (e.g. \"1 => 3\")"
 
 #. Default: "Default results per page"
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:53
