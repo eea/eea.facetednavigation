@@ -49,7 +49,7 @@ EditSchema = Schema((
         )
     ),
     StringField('calYearRange',
-        schemata="default",
+        schemata="display",
         default="c-10:c+10",
         widget=StringWidget(
             size=25,
