@@ -18,6 +18,8 @@ from eea.facetednavigation import EEAMessageFactory as _
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
 
 def formated_time(datestr):
+    """Return a datetime object from a string with
+    Y-m-d as format."""
     return datetime.strptime(datestr, '%Y-%m-%d')
 
 
@@ -170,5 +172,6 @@ class Widget(AbstractWidget):
 
     @property
     def cal_year_range(self):
+        """Return the stored value of calYearRange."""
         return self.accessor('calYearRange')()
 
