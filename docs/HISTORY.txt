@@ -1,6 +1,10 @@
 Changelog
 =========
 
+4.6-dev (unreleased)
+--------------------
+
+
 4.5 - (2012-04-26)
 ------------------
 * Improve daterange index (large intervals)
