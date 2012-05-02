@@ -76,6 +76,9 @@ addons:
       - lovely.memcached
       - eea.cache
 
+  * Relations
+      - eea.relations
+
   * Faceted extensions
       - eea.faceted.tool
       - eea.faceted.inheritance
@@ -94,7 +97,7 @@ Live demo
 Here some live production demos:
 
  - `EEA Publications <http://www.eea.europa.eu/publications>`_
- - `EEA Multimedia <http://www.eea.europa.eu/multimedia>`_
+ - `EEA Multimedia <http://www.eea.europa.eu/multimedia/all-videos>`_
  - `University of Minnesota - Explore Books <http://upress.umn.edu/explore>`_
 
 
