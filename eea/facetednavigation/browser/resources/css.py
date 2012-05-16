@@ -43,7 +43,6 @@ class CSS(object):
         else:
             obj = self.context.restrictedTraverse(resource, None)
 
-        obj = self.context.restrictedTraverse(resource, None)
         if not obj:
             return '/* ERROR */'
         try:
