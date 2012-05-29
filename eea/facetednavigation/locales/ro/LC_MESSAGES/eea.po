@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-04-26 15:30+0000\n"
+"POT-Creation-Date: 2012-05-29 12:50+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -79,7 +79,7 @@ msgstr "Configuraţia curentă"
 msgid "Date"
 msgstr "Dată"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:66
+#: ../../facetednavigation/widgets/daterange/widget.py:77
 msgid "Date range"
 msgstr "Perioadă"
 
@@ -95,25 +95,33 @@ msgstr ""
 msgid "Disable faceted navigation"
 msgstr "Dezactivează navigarea faţetată"
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:63
 msgid "Disable left portlets"
 msgstr "Dezactivează portleţii de stânga"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:78
 msgid "Disable right portlets"
 msgstr "Dezactivează portleţii de dreapta"
+
+#: ../../facetednavigation/settings/menu.py:93
+msgid "Disable smart facets hiding"
+msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
 msgstr "Activează navigarea faţetată"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:62
 msgid "Enable left portlets"
 msgstr "Activează portleţii de stânga"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:77
 msgid "Enable right portlets"
 msgstr "Activează portleţii de dreapta"
+
+#: ../../facetednavigation/settings/menu.py:92
+msgid "Enable smart facets hiding"
+msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.pt:28
 msgid "End"
@@ -199,19 +207,19 @@ msgstr "Cale"
 msgid "Plone portlet"
 msgstr "Portlet Plone"
 
-#: ../../facetednavigation/settings/menu.py:117
+#: ../../facetednavigation/settings/menu.py:134
 msgid "Portlets left column is hidden now"
 msgstr "Portleţii de stânga au fost ascunşi"
 
-#: ../../facetednavigation/settings/menu.py:114
+#: ../../facetednavigation/settings/menu.py:131
 msgid "Portlets left column is visible now"
 msgstr "Portleţii de stânga sunt vizibili acum"
 
-#: ../../facetednavigation/settings/menu.py:127
+#: ../../facetednavigation/settings/menu.py:144
 msgid "Portlets right column is hidden now"
 msgstr "Portleţii de dreapta au fost ascunşi"
 
-#: ../../facetednavigation/settings/menu.py:124
+#: ../../facetednavigation/settings/menu.py:141
 msgid "Portlets right column is visible now"
 msgstr "Portleţii de dreapta sunt vizibili acum"
 
@@ -227,7 +235,7 @@ msgstr "Numele Python al unei 'Factory' care poate creea obiectul de implementar
 msgid "Radio"
 msgstr "Radio"
 
-#: ../../facetednavigation/widgets/range/widget.py:55
+#: ../../facetednavigation/widgets/range/widget.py:53
 msgid "Range"
 msgstr ""
 
@@ -254,6 +262,14 @@ msgstr "Secţiune"
 #: ../../facetednavigation/widgets/select/widget.py:97
 msgid "Select"
 msgstr "Selectare"
+
+#: ../../facetednavigation/settings/menu.py:154
+msgid "Smart facets hiding is now disabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:151
+msgid "Smart facets hiding is now enabled"
+msgstr ""
 
 #: ../../facetednavigation/widgets/sorting/widget.py:46
 msgid "Sorting"
@@ -318,8 +334,8 @@ msgstr "Șterge toate filtrele"
 msgid "criteria_view_show_filters"
 msgstr "Arată filtrele"
 
-#. Default: "Default value"
-#: ../../facetednavigation/widgets/daterange/widget.py:54
+#. Default: "UI Calendar years range"
+#: ../../facetednavigation/widgets/daterange/widget.py:56
 msgid "faceted_criteria_cal_year_range"
 msgstr ""
 
@@ -504,7 +520,8 @@ msgstr "Mai multe filtre"
 msgid "help_faceted_criteria_alphabetic_count"
 msgstr "Afişează numărul de rezultate pe literă"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:55
+#. Default: "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+#: ../../facetednavigation/widgets/daterange/widget.py:58
 msgid "help_faceted_criteria_cal_year_range"
 msgstr ""
 
@@ -540,7 +557,7 @@ msgid "help_faceted_criteria_date_default"
 msgstr "Perioada implicită (ex. 'now-365=>now+1' înseamnă 'De acum un an până mâine')"
 
 #. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
-#: ../../facetednavigation/widgets/daterange/widget.py:44
+#: ../../facetednavigation/widgets/daterange/widget.py:46
 msgid "help_faceted_criteria_daterange_default"
 msgstr "Perioada implicită (ex. '2009/12/01=>2009/12/31')"
 
@@ -620,7 +637,7 @@ msgid "help_faceted_criteria_radio_default"
 msgstr "Valoarea implicită selectată"
 
 #. Default: "Default range (e.g. \"1 => 3\")"
-#: ../../facetednavigation/widgets/range/widget.py:43
+#: ../../facetednavigation/widgets/range/widget.py:41
 msgid "help_faceted_criteria_range_default"
 msgstr ""
 
@@ -724,7 +741,7 @@ msgid "help_faceted_portlet_macro"
 msgstr "Calea catre macro"
 
 #. Default: "Faceted global settings"
-#: ../../facetednavigation/settings/menu.py:22
+#: ../../facetednavigation/settings/menu.py:23
 msgid "help_faceted_settings_menu"
 msgstr "Setări generale pentru navigarea faţetată"
 
@@ -753,7 +770,7 @@ msgid "in current results"
 msgstr "în rezultatele curente"
 
 #. Default: "Faceted settings"
-#: ../../facetednavigation/settings/menu.py:20
+#: ../../facetednavigation/settings/menu.py:21
 msgid "label_faceted_settings_menu"
 msgstr "Setări navigare faţetată"
 

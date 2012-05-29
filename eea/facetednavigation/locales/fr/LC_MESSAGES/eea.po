@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-04-26 15:30+0000\n"
+"POT-Creation-Date: 2012-05-29 12:50+0000\n"
 "PO-Revision-Date: 2012-04-26 17:32+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,7 +79,7 @@ msgstr "Configuration actuelle"
 msgid "Date"
 msgstr "Date"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:66
+#: ../../facetednavigation/widgets/daterange/widget.py:77
 msgid "Date range"
 msgstr "Intervalle de dates"
 
@@ -95,25 +95,33 @@ msgstr "Supprimer"
 msgid "Disable faceted navigation"
 msgstr "Désactiver la navigation par facettes"
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:63
 msgid "Disable left portlets"
 msgstr "Désactiver les portlets de gauche"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:78
 msgid "Disable right portlets"
 msgstr "Désactiver les portlets de droite"
+
+#: ../../facetednavigation/settings/menu.py:93
+msgid "Disable smart facets hiding"
+msgstr ""
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
 msgstr "Activer la navigation par facettes"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:62
 msgid "Enable left portlets"
 msgstr "Activer les portlets de gauche"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:77
 msgid "Enable right portlets"
 msgstr "Activer les portlets de droite"
+
+#: ../../facetednavigation/settings/menu.py:92
+msgid "Enable smart facets hiding"
+msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.pt:28
 msgid "End"
@@ -199,19 +207,19 @@ msgstr "Chemin d'accès"
 msgid "Plone portlet"
 msgstr "Portlet Plone"
 
-#: ../../facetednavigation/settings/menu.py:117
+#: ../../facetednavigation/settings/menu.py:134
 msgid "Portlets left column is hidden now"
 msgstr "Les portlets de gauche sont maintenant désactivées"
 
-#: ../../facetednavigation/settings/menu.py:114
+#: ../../facetednavigation/settings/menu.py:131
 msgid "Portlets left column is visible now"
 msgstr "Les portlets de gauche sont maintenant activées"
 
-#: ../../facetednavigation/settings/menu.py:127
+#: ../../facetednavigation/settings/menu.py:144
 msgid "Portlets right column is hidden now"
 msgstr "Les portlets de droite sont maintenant désactivées"
 
-#: ../../facetednavigation/settings/menu.py:124
+#: ../../facetednavigation/settings/menu.py:141
 msgid "Portlets right column is visible now"
 msgstr "Les portlets de droite sont maintenant désactivées"
 
@@ -227,7 +235,7 @@ msgstr "Le nom python d'une factory qui peut créer une implémentation de l'obj
 msgid "Radio"
 msgstr "Bouton radio"
 
-#: ../../facetednavigation/widgets/range/widget.py:55
+#: ../../facetednavigation/widgets/range/widget.py:53
 msgid "Range"
 msgstr "Interval"
 
@@ -254,6 +262,14 @@ msgstr "Section"
 #: ../../facetednavigation/widgets/select/widget.py:97
 msgid "Select"
 msgstr "Liste de sélection"
+
+#: ../../facetednavigation/settings/menu.py:154
+msgid "Smart facets hiding is now disabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:151
+msgid "Smart facets hiding is now enabled"
+msgstr ""
 
 #: ../../facetednavigation/widgets/sorting/widget.py:46
 msgid "Sorting"
@@ -318,8 +334,9 @@ msgstr "[X] Tout supprimer"
 msgid "criteria_view_show_filters"
 msgstr "&#8711; Afficher les filtres"
 
-#. Default: "Default value"
-#: ../../facetednavigation/widgets/daterange/widget.py:54
+#. Default: "UI Calendar years range"
+#: ../../facetednavigation/widgets/daterange/widget.py:56
+#, fuzzy
 msgid "faceted_criteria_cal_year_range"
 msgstr "Interval de dates du calendrier"
 
@@ -504,7 +521,8 @@ msgstr "Plus de filtres"
 msgid "help_faceted_criteria_alphabetic_count"
 msgstr "Afficher le nombre de résultats par lettre"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:55
+#. Default: "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+#: ../../facetednavigation/widgets/daterange/widget.py:58
 msgid "help_faceted_criteria_cal_year_range"
 msgstr "Contrôle l'interval des années affichées dans la liste des années. Soit en relatif (-nn:+nn), soit relativement à l'année sélectionnée (c-nn:c+nn), soit en absolu (nnnn:nnnn), ou bien alors une combinaison de ces formats (nnnn:-nn)."
 
@@ -540,7 +558,7 @@ msgid "help_faceted_criteria_date_default"
 msgstr "Plage de date par défaut (par ex. : \"now-365=>now+1\" qui signifie \"Depuis il y a un an jusqu'à aujourd'hui\")"
 
 #. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
-#: ../../facetednavigation/widgets/daterange/widget.py:44
+#: ../../facetednavigation/widgets/daterange/widget.py:46
 msgid "help_faceted_criteria_daterange_default"
 msgstr "Plage de date par défaut (par ex. : \"2009/12/01=>2009/12/31\")"
 
@@ -620,7 +638,7 @@ msgid "help_faceted_criteria_radio_default"
 msgstr "Element selectionné par défault"
 
 #. Default: "Default range (e.g. \"1 => 3\")"
-#: ../../facetednavigation/widgets/range/widget.py:43
+#: ../../facetednavigation/widgets/range/widget.py:41
 msgid "help_faceted_criteria_range_default"
 msgstr "Valeur de l'interval par default (e.g. \"1 => 3\")"
 
@@ -724,7 +742,7 @@ msgid "help_faceted_portlet_macro"
 msgstr ""
 
 #. Default: "Faceted global settings"
-#: ../../facetednavigation/settings/menu.py:22
+#: ../../facetednavigation/settings/menu.py:23
 msgid "help_faceted_settings_menu"
 msgstr "Paramètres généraux de la navigation à facettes"
 
@@ -753,7 +771,7 @@ msgid "in current results"
 msgstr "dans les résultats courants"
 
 #. Default: "Faceted settings"
-#: ../../facetednavigation/settings/menu.py:20
+#: ../../facetednavigation/settings/menu.py:21
 msgid "label_faceted_settings_menu"
 msgstr "Paramètres"
 
