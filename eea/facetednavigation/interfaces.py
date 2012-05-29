@@ -39,6 +39,7 @@ from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
 # Settings
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
+from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
 
 #
 # Events
@@ -83,4 +84,5 @@ __all__ = [
     IWidget.__name__,
     IHidePloneLeftColumn.__name__,
     IHidePloneRightColumn.__name__,
+    IDisableSmartFacets.__name__,
 ]

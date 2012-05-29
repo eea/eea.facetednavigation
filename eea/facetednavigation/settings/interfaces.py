@@ -13,13 +13,22 @@ class IHidePloneRightColumn(Interface):
         facetednavigation view
     """
 
+class IDisableSmartFacets(Interface):
+    """ Marker interface to always show facets even if there are not enough
+        results
+    """
+
 class ISettingsHandler(Interface):
     """ Edit faceted global settings
     """
-    def hide_left_column():
-        """ Hide plone default left column in facetednavigation view
+    def toggle_left_column():
+        """ Show / hide plone default left column in facetednavigation view
         """
 
-    def hide_right_column():
-        """ Hide plone default right column in facetednavigation view
+    def toggle_right_column():
+        """ Show / hide plone default right column in facetednavigation view
+        """
+
+    def toggle_smart_facets():
+        """ Enable / disable 'smart facets hiding' in facetednavigation view
         """

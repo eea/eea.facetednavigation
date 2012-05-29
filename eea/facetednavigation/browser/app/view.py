@@ -7,6 +7,7 @@ from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import IFacetedWrapper
 from eea.facetednavigation.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.interfaces import IHidePloneRightColumn
+from eea.facetednavigation.interfaces import IDisableSmartFacets
 from Products.Five.browser import BrowserView
 
 class FacetedContainerView(object):
@@ -49,6 +50,13 @@ class FacetedContainerView(object):
         """
         return (IHidePloneRightColumn.providedBy(self.canonical) or
                 IHidePloneRightColumn.providedBy(self.context))
+
+    @property
+    def disable_smart_facets(self):
+        """ Disable 'smart facets hiding'
+        """
+        return (IDisableSmartFacets.providedBy(self.canonical) or
+                IDisableSmartFacets.providedBy(self.context))
 
     def get_context(self, content=None):
         """ Return context
@@ -95,6 +103,8 @@ class FacetedContainerView(object):
     def check_display_criteria(self, faceted_html):
         """ Check criteria
         """
+        if self.disable_smart_facets:
+            return True
         return self.context.unrestrictedTraverse(
             '@@faceted_display_criteria_checker').check(faceted_html)
 

@@ -3,7 +3,9 @@ Changelog
 
 4.6-dev (unreleased)
 --------------------
-
+* Feature: Added a way to disable 'smart facets hiding'. See 'Faceted settings' menu.
+  'smart facets hiding' => facets are hidden if there is only one page of results
+  [voineali refs #3581]
 
 4.5 - (2012-04-26)
 ------------------

@@ -12,6 +12,7 @@ from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.settings.interfaces import ISettingsHandler
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
+from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
 from eea.facetednavigation import EEAMessageFactory as _
 
 class SettingsMenu(BrowserSubMenuItem):
@@ -54,18 +55,19 @@ class SettingsMenuItems(BrowserMenu):
 
         left_hidden = IHidePloneLeftColumn.providedBy(context)
         right_hidden = IHidePloneRightColumn.providedBy(context)
+        smart_hidden = IDisableSmartFacets.providedBy(context)
 
         menu = [
             {
                 'title': (_('Enable left portlets') if left_hidden
                      else _('Disable left portlets')),
                 'description': '',
-                'action': action % 'hide_left_column',
+                'action': action % 'toggle_left_column',
                 'selected': not left_hidden,
                 'icon': ('++resource++faceted_images/show.png' if left_hidden
                     else '++resource++faceted_images/hide.png'),
                 'extra': {
-                    'id': 'hide_left_column',
+                    'id': 'toggle_left_column',
                     'separator': None,
                     'class': ''
                     },
@@ -75,12 +77,27 @@ class SettingsMenuItems(BrowserMenu):
                 'title': (_('Enable right portlets') if right_hidden
                      else _('Disable right portlets')),
                 'description': '',
-                'action': action % 'hide_right_column',
+                'action': action % 'toggle_right_column',
                 'selected': not right_hidden,
                 'icon': ('++resource++faceted_images/show.png' if right_hidden
                     else '++resource++faceted_images/hide.png'),
                 'extra': {
-                    'id': 'hide_right_column',
+                    'id': 'toggle_right_column',
+                    'separator': None,
+                    'class': ''
+                    },
+                'submenu': None,
+            },
+            {
+                'title': (_('Enable smart facets hiding') if smart_hidden
+                     else _('Disable smart facets hiding')),
+                'description': '',
+                'action': action % 'toggle_smart_facets',
+                'selected': not smart_hidden,
+                'icon': ('++resource++faceted_images/show.png' if smart_hidden
+                    else '++resource++faceted_images/hide.png'),
+                'extra': {
+                    'id': 'disable_smart_facets',
                     'separator': None,
                     'class': ''
                     },
@@ -106,8 +123,8 @@ class SettingsHandler(BrowserView):
     #
     # Public interface
     #
-    def hide_left_column(self, **kwargs):
-        """ Hide plone portlets left column
+    def toggle_left_column(self, **kwargs):
+        """ Show / hide plone portlets left column
         """
         if IHidePloneLeftColumn.providedBy(self.context):
             noLongerProvides(self.context, IHidePloneLeftColumn)
@@ -116,8 +133,8 @@ class SettingsHandler(BrowserView):
             alsoProvides(self.context, IHidePloneLeftColumn)
             return self._redirect(_('Portlets left column is hidden now'))
 
-    def hide_right_column(self, **kwargs):
-        """ Hide plone portlets left column
+    def toggle_right_column(self, **kwargs):
+        """ Show / hide plone portlets left column
         """
         if IHidePloneRightColumn.providedBy(self.context):
             noLongerProvides(self.context, IHidePloneRightColumn)
@@ -125,3 +142,13 @@ class SettingsHandler(BrowserView):
         else:
             alsoProvides(self.context, IHidePloneRightColumn)
             return self._redirect(_('Portlets right column is hidden now'))
+
+    def toggle_smart_facets(self, **kwargs):
+        """ Enable/Disable 'smart facets hiding'
+        """
+        if IDisableSmartFacets.providedBy(self.context):
+            noLongerProvides(self.context, IDisableSmartFacets)
+            return self._redirect(_('Smart facets hiding is now enabled'))
+        else:
+            alsoProvides(self.context, IDisableSmartFacets)
+            return self._redirect(_('Smart facets hiding is now disabled'))
