@@ -129,6 +129,7 @@ Faceted.Form = {
     this.form = jQuery('#faceted-form');
     // Handle form submit event
     this.area = jQuery('#faceted-results');
+    this.mode = this.form.attr('data-mode') || 'view';
 
     // Faceted version
     this.version = '';
@@ -158,6 +159,10 @@ Faceted.Form = {
 
     if(Faceted.Query.b_start === undefined){
       Faceted.Query.b_start = 0;
+    }
+
+    if(this.mode === 'search'){
+      return;
     }
 
     jQuery(Faceted.Events).trigger(Faceted.Events.QUERY_INITIALIZED);

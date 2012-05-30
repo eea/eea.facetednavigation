@@ -22,7 +22,7 @@
     <tal:sectionattrs define="
       section_value python:section.value;
       section_title python:section.title;
-      widgets python:view_mode and view.get_view_widgets or view.get_widgets;
+      widgets python:(view_mode or search_mode) and view.get_view_widgets or view.get_widgets;
       widgets python:widgets(position=position, section=section_value)">
       <div style="display: none" tal:attributes="
         title section_title;
@@ -50,11 +50,12 @@
   mode mode | string:edit;
   view_mode python:mode == 'view';
   edit_mode python:mode == 'edit';
+  search_mode python:mode == 'search';
   faceted_html faceted_html | string:;
 ">
   <div id="faceted-results" class="faceted-results"
     metal:define-slot="content">
-    <noscript tal:condition="not:edit_mode">
+    <noscript tal:condition="view_mode">
       <tal:results replace="structure python:faceted_html" />
     </noscript>
   </div>

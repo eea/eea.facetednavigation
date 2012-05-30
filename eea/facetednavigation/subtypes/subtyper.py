@@ -11,6 +11,8 @@ from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
 from eea.facetednavigation.interfaces import IFacetedNavigable
+from eea.facetednavigation.interfaces import IFacetedSearchMode
+from eea.facetednavigation.interfaces import IDisableSmartFacets
 from eea.facetednavigation.events import (
     FacetedWillBeDisabledEvent,
     FacetedWillBeEnabledEvent,
@@ -131,3 +133,37 @@ class FacetedSubtyper(FacetedPublicSubtyper):
         noLongerProvides(self.context, IFacetedNavigable)
         notify(FacetedDisabledEvent(self.context))
         self._redirect(_('Faceted navigation disabled'))
+
+class FacetedSearchSubtyper(FacetedSubtyper):
+    """ Support for subtyping objects as faceted search form (no default items
+        on load)
+    """
+    @property
+    def is_faceted(self):
+        """ Is faceted navigable?
+        """
+        if not super(FacetedSearchSubtyper, self).is_faceted:
+            return False
+        return IFacetedSearchMode.providedBy(self.context)
+
+    def enable(self):
+        """ See IFacetedSubtyper
+        """
+        if not self.can_enable:
+            return self._redirect('Faceted search navigation not supported')
+
+        if not super(FacetedSearchSubtyper, self).is_faceted:
+            super(FacetedSearchSubtyper, self).enable()
+        if not IDisableSmartFacets.providedBy(self.context):
+            alsoProvides(self.context, IDisableSmartFacets)
+        if not IFacetedSearchMode.providedBy(self.context):
+            alsoProvides(self.context, IFacetedSearchMode)
+        self._redirect(_('Faceted search enabled'))
+
+    def disable(self):
+        """ See IFacetedSubtyper
+        """
+        if not self.can_disable:
+            return self._redirect('Faceted search navigation not supported')
+        noLongerProvides(self.context, IFacetedSearchMode)
+        self._redirect(_('Faceted search disabled'))

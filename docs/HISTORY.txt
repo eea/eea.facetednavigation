@@ -3,6 +3,15 @@ Changelog
 
 4.6-dev (unreleased)
 --------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation
+  [voineali refs #5218]
+* Feature: Added 'search' mode for faceted navigable items. See 'Actions' menu.
+  'search mode' => Display no items on load, just the faceted widgets/facets
+  Useful when you want to replace Plone default search form with a faceted
+  navigable one. Also this is useful when you enable faceted navigation on
+  large databases.
+  [voineali refs #5218]
 * Feature: Added a way to disable 'smart facets hiding'. See 'Faceted settings' menu.
   'smart facets hiding' => facets are hidden if there is only one page of results
   [voineali refs #3581]

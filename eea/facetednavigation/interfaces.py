@@ -5,6 +5,7 @@ from zope.component.interfaces import IObjectEvent
 # Subtypes
 from eea.facetednavigation.subtypes.interfaces import IPossibleFacetedNavigable
 from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
+from eea.facetednavigation.subtypes.interfaces import IFacetedSearchMode
 
 # Criteria
 from eea.facetednavigation.criteria.interfaces import ICriteria
@@ -72,6 +73,7 @@ class IFacetedDisabledEvent(IFacetedEvent):
 __all__ = [
     IPossibleFacetedNavigable.__name__,
     IFacetedNavigable.__name__,
+    IFacetedSearchMode.__name__,
     IWidgetsInfo.__name__,
     IViewsInfo.__name__,
     IWidgetFilterBrains.__name__,

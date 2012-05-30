@@ -14,6 +14,12 @@ class IFacetedNavigable(Interface):
     """
 alsoProvides(IFacetedNavigable, IContentType)
 
+class IFacetedSearchMode(Interface):
+    """ Marker interface for faceted navigable objects that are used as search
+        forms (no default items on load)
+    """
+IFacetedSearch = IFacetedSearchMode
+
 class IFacetedWrapper(Interface):
     """ Wrapper for faceted navigable objects
     """

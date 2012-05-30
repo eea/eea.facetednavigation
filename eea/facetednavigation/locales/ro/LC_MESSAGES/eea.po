@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-05-29 12:50+0000\n"
+"POT-Creation-Date: 2012-05-30 16:37+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -95,6 +95,10 @@ msgstr ""
 msgid "Disable faceted navigation"
 msgstr "Dezactivează navigarea faţetată"
 
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr ""
+
 #: ../../facetednavigation/settings/menu.py:63
 msgid "Disable left portlets"
 msgstr "Dezactivează portleţii de stânga"
@@ -110,6 +114,10 @@ msgstr ""
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
 msgstr "Activează navigarea faţetată"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr ""
 
 #: ../../facetednavigation/settings/menu.py:62
 msgid "Enable left portlets"
@@ -147,13 +155,21 @@ msgstr "Exportă"
 msgid "Faceted criteria"
 msgstr "Navigare faţetată"
 
-#: ../../facetednavigation/subtypes/subtyper.py:133
+#: ../../facetednavigation/subtypes/subtyper.py:135
 msgid "Faceted navigation disabled"
 msgstr "Navigarea faţetată a fost dezactivată"
 
-#: ../../facetednavigation/subtypes/subtyper.py:122
+#: ../../facetednavigation/subtypes/subtyper.py:124
 msgid "Faceted navigation enabled"
 msgstr "Navigarea faţetată a fost activată"
+
+#: ../../facetednavigation/subtypes/subtyper.py:169
+msgid "Faceted search disabled"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:161
+msgid "Faceted search enabled"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"

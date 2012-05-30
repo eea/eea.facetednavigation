@@ -3,7 +3,6 @@
 Faceted.CriteriaWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
-  this.widget.show();
   this.title = jQuery('legend', this.widget).html();
 
   this.area = jQuery('#' + wid);
@@ -34,9 +33,6 @@ Faceted.CriteriaWidget = function(wid){
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
     return js_widget.update_syndication();
   });
-
-  // Start collapsed
-  jQuery(toggle_buttons[0]).click();
 };
 
 Faceted.CriteriaWidget.prototype = {

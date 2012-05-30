@@ -4,6 +4,19 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="eea">
 
+  <!-- 4.1 => 4.6 -->
+  <genericsetup:upgradeSteps
+    source="4.1"
+    destination="4.6"
+    profile="eea.facetednavigation:default">
+
+    <genericsetup:upgradeDepends
+      title="Import profile steps with changes: actions"
+      import_steps="actions"
+      />
+
+  </genericsetup:upgradeSteps>
+
   <!-- 4.0 => 4.1 -->
   <genericsetup:upgradeSteps
     source="4.0"

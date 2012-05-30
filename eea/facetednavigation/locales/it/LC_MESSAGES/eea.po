@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2012-05-29 12:50+0000\n"
+"POT-Creation-Date: 2012-05-30 16:37+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -96,6 +96,10 @@ msgstr "Elimina"
 msgid "Disable faceted navigation"
 msgstr "Disabilita la navigazione a faccette"
 
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr ""
+
 #: ../../facetednavigation/settings/menu.py:63
 msgid "Disable left portlets"
 msgstr "Disabilita le portlet sulla colonna sinistra"
@@ -111,6 +115,10 @@ msgstr ""
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
 msgstr "Abilita la navigazione a faccette"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr ""
 
 #: ../../facetednavigation/settings/menu.py:62
 msgid "Enable left portlets"
@@ -148,13 +156,21 @@ msgstr "Esporta"
 msgid "Faceted criteria"
 msgstr "Criteri delle faccette"
 
-#: ../../facetednavigation/subtypes/subtyper.py:133
+#: ../../facetednavigation/subtypes/subtyper.py:135
 msgid "Faceted navigation disabled"
 msgstr "Navigazione a faccette disabilitata"
 
-#: ../../facetednavigation/subtypes/subtyper.py:122
+#: ../../facetednavigation/subtypes/subtyper.py:124
 msgid "Faceted navigation enabled"
 msgstr "Navigazione a faccette abilitata"
+
+#: ../../facetednavigation/subtypes/subtyper.py:169
+msgid "Faceted search disabled"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:161
+msgid "Faceted search enabled"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"

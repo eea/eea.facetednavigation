@@ -8,6 +8,7 @@ from eea.facetednavigation.interfaces import IFacetedWrapper
 from eea.facetednavigation.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.interfaces import IDisableSmartFacets
+from eea.facetednavigation.interfaces import IFacetedSearchMode
 from Products.Five.browser import BrowserView
 
 class FacetedContainerView(object):
@@ -17,6 +18,15 @@ class FacetedContainerView(object):
         self.context = context
         self.request = request
         self._canonical = '<NOT SET>'
+
+    @property
+    def mode(self):
+        """ Display mode
+        """
+        if (IFacetedSearchMode.providedBy(self.canonical) or
+            IFacetedSearchMode.providedBy(self.context)):
+            return 'search'
+        return 'view'
 
     @property
     def canonical(self):
@@ -72,7 +82,7 @@ class FacetedContainerView(object):
         voc = getUtility(IVocabularyFactory,
                          'eea.faceted.vocabularies.WidgetSections')
         voc = voc(self.context)
-        if not position or mode != 'view':
+        if not position or mode not in ('view', 'search'):
             return [t for t in voc]
 
         widgets = self.get_view_widgets(position=position)
