@@ -20,6 +20,7 @@
   <div class="faceted-criteria-reset">
     <a href="#" tal:attributes="id string:${wid}_reset"
       title="Remove all filters"
+      i18n:attributes="title"
       i18n:translate="criteria_view_remove_all">[X] Remove all</a>
   </div>
 

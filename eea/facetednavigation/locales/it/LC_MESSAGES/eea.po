@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2012-05-30 16:37+0000\n"
+"POT-Creation-Date: 2012-07-03 13:51+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -88,7 +88,7 @@ msgstr "Intervallo di date"
 msgid "Debugger"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:181
+#: ../../facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
 msgstr "Elimina"
 
@@ -212,6 +212,14 @@ msgstr "Il vocabolario fornito per questo widget è vuoto o non valido. Lasciare
 msgid "List"
 msgstr "Lista"
 
+#: ../../facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
 msgstr "Ordine"
@@ -256,6 +264,10 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr ""
+
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
 msgstr "Risultati per pagina"
@@ -264,7 +276,7 @@ msgstr "Risultati per pagina"
 msgid "Reverse"
 msgstr "Inverti"
 
-#: ../../facetednavigation/browser/template/configure.pt:180
+#: ../../facetednavigation/browser/template/configure.pt:182
 msgid "Save"
 msgstr "Salva"
 

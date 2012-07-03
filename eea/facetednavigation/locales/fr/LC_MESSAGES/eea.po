@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-05-30 16:37+0000\n"
+"POT-Creation-Date: 2012-07-03 13:51+0000\n"
 "PO-Revision-Date: 2012-04-26 17:32+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,7 +87,7 @@ msgstr "Intervalle de dates"
 msgid "Debugger"
 msgstr "Débogueur"
 
-#: ../../facetednavigation/browser/template/configure.pt:181
+#: ../../facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -211,6 +211,14 @@ msgstr "Le vocabulaire de cette widget est vide ou invalide. Laissez vide pour l
 msgid "List"
 msgstr "Liste"
 
+#: ../../facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
 msgstr "Ordre"
@@ -255,6 +263,10 @@ msgstr "Bouton radio"
 msgid "Range"
 msgstr "Interval"
 
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr ""
+
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
 msgstr "Résultats par page"
@@ -263,7 +275,7 @@ msgstr "Résultats par page"
 msgid "Reverse"
 msgstr "Inverser"
 
-#: ../../facetednavigation/browser/template/configure.pt:180
+#: ../../facetednavigation/browser/template/configure.pt:182
 msgid "Save"
 msgstr "Sauver"
 

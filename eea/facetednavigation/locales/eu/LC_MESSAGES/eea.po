@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2012-05-30 16:37+0000\n"
+"POT-Creation-Date: 2012-07-03 13:51+0000\n"
 "PO-Revision-Date: 2011-11-24 10:37+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
@@ -85,7 +85,7 @@ msgstr "Data-tartea"
 msgid "Debugger"
 msgstr "Araztailea"
 
-#: ../../facetednavigation/browser/template/configure.pt:181
+#: ../../facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
 msgstr ""
 
@@ -209,6 +209,14 @@ msgstr "Widget honentzat aukeratu duzun hiztegiak ez du balio edo hutsik dago. U
 msgid "List"
 msgstr "Zerrenda"
 
+#: ../../facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
 msgstr "Ordena"
@@ -253,6 +261,10 @@ msgstr "Radio"
 msgid "Range"
 msgstr ""
 
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr ""
+
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
 msgstr "Orrialde bakoitzeko emaitza kopurua"
@@ -261,7 +273,7 @@ msgstr "Orrialde bakoitzeko emaitza kopurua"
 msgid "Reverse"
 msgstr "Alderantzizkoa"
 
-#: ../../facetednavigation/browser/template/configure.pt:180
+#: ../../facetednavigation/browser/template/configure.pt:182
 msgid "Save"
 msgstr ""
 

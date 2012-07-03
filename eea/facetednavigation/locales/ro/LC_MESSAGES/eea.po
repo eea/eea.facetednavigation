@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-05-30 16:37+0000\n"
+"POT-Creation-Date: 2012-07-03 13:51+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -87,7 +87,7 @@ msgstr "Perioadă"
 msgid "Debugger"
 msgstr "Depanator"
 
-#: ../../facetednavigation/browser/template/configure.pt:181
+#: ../../facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
 msgstr ""
 
@@ -211,6 +211,14 @@ msgstr "Vocabularul selectat pentru acest widget este invalid sau lipseşte. Lă
 msgid "List"
 msgstr "Listă"
 
+#: ../../facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
 msgstr "Ordonare"
@@ -255,6 +263,10 @@ msgstr "Radio"
 msgid "Range"
 msgstr ""
 
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr ""
+
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
 msgstr "Rezultate pe pagină"
@@ -263,7 +275,7 @@ msgstr "Rezultate pe pagină"
 msgid "Reverse"
 msgstr "Sortare inversă"
 
-#: ../../facetednavigation/browser/template/configure.pt:180
+#: ../../facetednavigation/browser/template/configure.pt:182
 msgid "Save"
 msgstr ""
 

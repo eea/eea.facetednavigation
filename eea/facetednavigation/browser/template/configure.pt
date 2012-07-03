@@ -155,6 +155,7 @@
           <!-- Order -->
           <td style="text-align: center;">
             <input class="context" title="Move Up" name="moveUp_button"
+              i18n:attributes="title"
               tal:define="start repeat/criterion/start"
               tal:attributes="
                 name string:moveUp_button+++${criterion/getId};
@@ -163,6 +164,7 @@
                 class python:start and 'standalone' or 'context'"
               type="submit" value="&#8613;"/>
             <input class="context" title="Move Down" name="moveDown_button"
+              i18n:attributes="title"
               tal:define="end repeat/criterion/end"
               tal:attributes="
                 name string:moveDown_button+++${criterion/getId};

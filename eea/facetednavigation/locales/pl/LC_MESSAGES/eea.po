@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2012-05-30 16:37+0000\n"
+"POT-Creation-Date: 2012-07-03 13:51+0000\n"
 "PO-Revision-Date: 2011-05-23 13:30+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,7 +84,7 @@ msgstr ""
 msgid "Debugger"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:181
+#: ../../facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
 msgstr ""
 
@@ -208,6 +208,14 @@ msgstr ""
 msgid "List"
 msgstr ""
 
+#: ../../facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
 msgstr ""
@@ -252,6 +260,10 @@ msgstr ""
 msgid "Range"
 msgstr ""
 
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr ""
+
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:65
 msgid "Results per page"
 msgstr ""
@@ -260,7 +272,7 @@ msgstr ""
 msgid "Reverse"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:180
+#: ../../facetednavigation/browser/template/configure.pt:182
 msgid "Save"
 msgstr ""
 

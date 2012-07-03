@@ -3,6 +3,8 @@ Changelog
 
 4.7-dev - (unreleased)
 ----------------------
+* Bug Fix: Fixed i18n missing attributes in *.pt
+  [prospchr refs #5162]
 
 4.6 - (2012-06-12)
 ------------------
