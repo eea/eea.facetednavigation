@@ -1,6 +1,9 @@
 Changelog
 =========
 
+4.8-dev - (unreleased)
+----------------------
+
 4.7 - (2012-07-13)
 ------------------
 * Bug Fix: Fixed i18n missing attributes in *.pt
