@@ -53,7 +53,7 @@ It comes with plenty of configuration options and features like:
  13. Synchronization of settings across multiple languages, I18N support.
  14. High performance by caching faceted catalog queries via `distributed memory
      object caching system: memcached <http://www.danga.com/memcached/>`_
- 15: Smart facets hiding - hide facets criteria if there is only one page of
+ 15. Smart facets hiding - hide facets criteria if there is only one page of
      results (This can be explicitly disabled from version 4.6)
  16. Ability to transform faceted navigable items in search forms by
      putting them in the 'search mode' (starting with version 4.6)
