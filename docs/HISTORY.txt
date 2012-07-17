@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.8-dev - (unreleased)
-----------------------
+4.8 - (2012-07-17)
+------------------
 * Bug fix: Fixed formated_time method in daterange widget to also accept years
   as valid dates
   [voineali fixes #5371]
