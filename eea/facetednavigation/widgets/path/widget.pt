@@ -27,7 +27,7 @@
       tal:content="theme_url" />
   </form>
   <div class='faceted-path-errors' style="display: none"
-    i18n:translate="faceted_path_widget_errors">
+    i18n:translate="">
     This widget will be ignored as provided root is unreachable or it has no
     folderish children.
   </div>

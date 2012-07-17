@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2012-07-03 13:51+0000\n"
+"POT-Creation-Date: 2012-07-17 13:20+0000\n"
 "PO-Revision-Date: 2011-05-23 13:30+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,813 +14,709 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../../facetednavigation/browser/template/configure.pt:70
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:16
+msgid "&#8711; Show filters"
+msgstr "∇ Pokaż filtry"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:15
+msgid "&#916; Hide filters"
+msgstr "Δ Filtry Ukryj"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:70
 msgid "Add"
-msgstr ""
+msgstr "Dodajcie"
 
-#: ../../facetednavigation/browser/template/configure.pt:26
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
-msgstr ""
+msgstr "Dodaj nowy filtr"
 
-#: ../../facetednavigation/browser/template/configure.pt:27
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:27
 msgid "Add widget"
-msgstr ""
+msgstr "Dodaj widget"
 
-#: ../../facetednavigation/widgets/debug/widget.pt:25
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:25
 msgid "After query filters"
-msgstr ""
+msgstr "Po filtrów zapytania"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
-#: ../../facetednavigation/widgets/radio/widget.pt:29
-#: ../../facetednavigation/widgets/select/widget.pt:23
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.pt:29
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.pt:23
 msgid "All"
 msgstr "Wszystkie"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:69
 msgid "Alphabetic"
-msgstr ""
+msgstr "Alfabetyczny"
 
-#: ../../facetednavigation/browser/template/configure.pt:99
-msgid "Are you sure you want to delete ${widget} widget?"
-msgstr ""
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:99
+msgid "Are you sure you want to delete ${xxxxx} widget?"
+msgstr "Czy na pewno chcesz usunąć $ {xxxxx} widget?"
 
-#: ../../facetednavigation/widgets/debug/widget.pt:19
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:43
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:40
+msgid "Catalog"
+msgstr "Katalog"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:32
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:26
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:51
+msgid "Catalog index"
+msgstr "Strona główna Katalog"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:27
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:52
+msgid "Catalog index to use for search"
+msgstr "Strona główna Katalog używać do wyszukiwania"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:19
 msgid "Catalog query"
-msgstr ""
+msgstr "Zapytanie Katalog"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:124
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:107
 msgid "Checkboxes"
-msgstr ""
+msgstr "Pola wyboru"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:23
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Cloud"
-msgstr ""
+msgstr "chmurę"
 
-#: ../../facetednavigation/browser/template/configure.pt:20
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:137
+msgid "Cloud height"
+msgstr "Wysokość chmury"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:138
+msgid "Cloud height (px)"
+msgstr "Chmura wysokość (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:110
+msgid "Cloud type"
+msgstr "Rodzaj chmur"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:47
+msgid "Configuration imported"
+msgstr "Konfiguracja importowany"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:20
 msgid "Configure faceted navigation"
-msgstr ""
+msgstr "Skonfiguruj olbrzymie nawigacji"
 
-#: ../../facetednavigation/widgets/debug/widget.pt:30
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:109
+msgid "Content listing"
+msgstr "Zawartość witryny"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:61
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr "Kontrolowanie zakresu yearsdisplayed w roku rozwijanej: albo w stosunku do dzisiejszej roku (NN: + NN), w stosunku do aktualnie wybranego roku (C-nn: c + NN), absolutny (nnnn: nnnn) lub kombinacje z tych formatów (nnnn:-nn)."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:39
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:79
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:69
+msgid "Count results"
+msgstr "Liczyć wyniki"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:30
 msgid "Counters"
-msgstr ""
+msgstr "Liczniki"
 
-#: ../../facetednavigation/browser/template/configure.pt:125
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:125
 msgid "Criterion details"
-msgstr ""
+msgstr "Dane kryterium"
 
-#: ../../facetednavigation/widgets/debug/widget.pt:35
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:35
 msgid "Current configuration"
-msgstr ""
+msgstr "Aktualna konfiguracja"
 
-#: ../../facetednavigation/widgets/date/widget.py:76
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:71
+msgid "Cut long phrases to provided number of characters"
+msgstr "Wytnij długich fraz do przewidzianej ilości znaków"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:73
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:77
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:79
 msgid "Date range"
-msgstr ""
+msgstr "Zakres dat"
 
-#: ../../facetednavigation/widgets/debug/widget.py:34
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:32
 msgid "Debugger"
-msgstr ""
+msgstr "Debugger"
 
-#: ../../facetednavigation/browser/template/configure.pt:183
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:51
+msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
+msgstr "Domyślnie daterange (np. '2009 / 01/12 => 31.12.2009')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:61
+msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
+msgstr "Domyślnie daterange (np. 'teraz-365 => teraz +1' co oznacza 'Począwszy jeden rok temu do jutra')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:17
+msgid "Default etag"
+msgstr "Etag default"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:96
+msgid "Default items (one per line)"
+msgstr "Elementy domyślne (jeden na linię)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:57
+msgid "Default letter to be selected"
+msgstr "Domyślnie list do wyboru"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:44
+msgid "Default path to search in (relative to root folder)"
+msgstr "Domyślna ścieżka do przeszukania (w stosunku do głównego folderu)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:38
+msgid "Default range (e.g. '1 => 3')"
+msgstr "Domyślny zakres (np. '1 => 3 ')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:50
+msgid "Default results per page"
+msgstr "Wyniki domyślne na stronie"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:88
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:163
+msgid "Default selected item"
+msgstr "Domyślnie wybrana pozycja"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:31
+msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
+msgstr "Strona Domyślne sortowanie (np. 'skuteczna' lub 'skuteczny (do tyłu)')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:30
+msgid "Default string to search for"
+msgstr "Ciąg default szukać"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:41
+msgid "Default tal expression for query value"
+msgstr "Domyślnie tal wyrażenie zapytaniu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:95
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:60
+msgid "Default value"
+msgstr "Wartość domyślna"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
-msgstr ""
+msgstr "Usuń"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:55
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr "Głębokość szukać ścieżki. 0 = ten poziom, -1 = wszystkie podfoldery rekurencyjne oraz wszelkie inne dodatnią liczbą całkowitą liczą na podfolderów-poziom wyszukiwania."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
-msgstr ""
+msgstr "Wyłącz olbrzymie nawigacji"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted search"
-msgstr ""
+msgstr "Wyłącz olbrzymie wyszukiwania"
 
-#: ../../facetednavigation/settings/menu.py:63
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
-msgstr ""
+msgstr "Wyłącz lewo portletów"
 
-#: ../../facetednavigation/settings/menu.py:78
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:76
 msgid "Disable right portlets"
-msgstr ""
+msgstr "Wyłącz prawo portletów"
 
-#: ../../facetednavigation/settings/menu.py:93
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
-msgstr ""
+msgstr "Wyłącz inteligentne aspekty ukrywanie"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:80
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:70
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:56
+msgid "Display number of results near each option"
+msgstr "Wyświetla liczbę wyników pobliżu każdej opcji"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:146
+msgid "Display number of results near each tag"
+msgstr "Wyświetla liczbę wyników pobliżu każdego tagu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:40
+msgid "Display number of results per letter"
+msgstr "Wyświetla liczbę wyników na liście"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:62
+msgid "Display widget in section"
+msgstr "Wyświetlanie widget w sekcji"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:57
+msgid "Display widget in section."
+msgstr "Wyświetlanie widget w sekcji."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
-msgstr ""
+msgstr "Włącz olbrzymie nawigacji"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted search"
-msgstr ""
+msgstr "Włącz olbrzymie wyszukiwania"
 
-#: ../../facetednavigation/settings/menu.py:62
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:16
+msgid "Enable hide/show criteria"
+msgstr "Włącz ukryj / pokaż kryteria"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
-msgstr ""
+msgstr "Włącz lewo portletów"
 
-#: ../../facetednavigation/settings/menu.py:77
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:75
 msgid "Enable right portlets"
-msgstr ""
+msgstr "Włącz odpowiednie portlety"
 
-#: ../../facetednavigation/settings/menu.py:92
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
-msgstr ""
+msgstr "Włącz inteligentne aspekty ukrywanie"
 
-#: ../../facetednavigation/widgets/range/widget.pt:28
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:28
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:31
 msgid "End"
-msgstr ""
+msgstr "K O N I E C"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:29
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:29
 msgid "End date"
-msgstr ""
+msgstr "Data zakończenia"
 
-#: ../../facetednavigation/browser/template/error.pt:10
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:10
 msgid "Error type:"
-msgstr ""
+msgstr "Błąd typu:"
 
-#: ../../facetednavigation/browser/template/error.pt:12
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:12
 msgid "Error value:"
-msgstr ""
+msgstr "Wartość błędu:"
 
-#: ../../facetednavigation/browser/template/configure.pt:88
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:18
+msgid "Etag value"
+msgstr "ETag wartość"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:88
 msgid "Export"
-msgstr ""
+msgstr "Eksport"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
-msgstr ""
+msgstr "Faceted kryteria"
 
-#: ../../facetednavigation/subtypes/subtyper.py:135
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:22
+msgid "Faceted global settings"
+msgstr "Faceted globalne ustawienia"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:135
 msgid "Faceted navigation disabled"
-msgstr ""
+msgstr "Różnorodnej nawigacji wyłączone"
 
-#: ../../facetednavigation/subtypes/subtyper.py:124
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:124
 msgid "Faceted navigation enabled"
-msgstr ""
+msgstr "Różnorodnej nawigacji włączony"
 
-#: ../../facetednavigation/subtypes/subtyper.py:169
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:169
 msgid "Faceted search disabled"
-msgstr ""
+msgstr "Różnorodnej poszukiwanie wyłączone"
 
-#: ../../facetednavigation/subtypes/subtyper.py:161
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:161
 msgid "Faceted search enabled"
-msgstr ""
+msgstr "Różnorodnej poszukiwanie włączony"
 
-#: ../../facetednavigation/widgets/interfaces.py:31
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:21
+msgid "Faceted settings"
+msgstr "Faceted ustawienia"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
-msgstr ""
+msgstr "Zakład produkcyjny:"
 
-#: ../../facetednavigation/browser/app/configure.py:78
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:78
 msgid "Filter added"
-msgstr ""
+msgstr "Filtr dodał"
 
-#: ../../facetednavigation/browser/app/configure.py:162
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:162
 msgid "Filter deleted"
-msgstr ""
+msgstr "Filtruj usunięte"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:32
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:20
+msgid "Filter from vocabulary"
+msgstr "Filtruj od słownictwa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:29
 msgid "Filters"
-msgstr ""
+msgstr "‘{0}-filters{/0}’"
 
-#: ../../facetednavigation/browser/app/configure.py:109
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:109
 msgid "Filters deleted"
-msgstr ""
+msgstr "Filtry usunięte"
 
-#: ../../facetednavigation/browser/template/configure.pt:85
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:43
+msgid "Friendly name"
+msgstr "Przyjazna nazwa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:57
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:41
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr "Pobierz unikalne wartości z katalogu jako alternatywę dla słownika"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:68
+msgid "Hidden"
+msgstr "Ukryte"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:46
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:86
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:77
+msgid "Hide items with zero results"
+msgstr "Ukrywanie elementów z zerową liczbą wyników"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:69
+msgid "Hide widget"
+msgstr "Ukryj widget"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:85
 msgid "Import"
-msgstr ""
+msgstr "Importuj"
 
-#: ../../facetednavigation/browser/template/configure.pt:77
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:77
 msgid "Import - Export configuration"
-msgstr ""
+msgstr "Import - Export konfiguracji"
 
-#: ../../facetednavigation/browser/template/configure.pt:78
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:78
 msgid "Import configuration"
-msgstr ""
+msgstr "Konfiguracja importu"
 
-#: ../../facetednavigation/widgets/sorting/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
-msgstr ""
+msgstr "Nieprawidłowy lub pusty słownictwo przewidziane tego widgetu. Pozostaw puste dla kryterium sortowania domyślnych."
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:21
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr "Mniej filtry"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
-msgstr ""
+msgstr "List"
 
-#: ../../facetednavigation/browser/template/configure.pt:166
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:70
+msgid "Maximum characters"
+msgstr "Maksymalna liczba znaków"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:129
+msgid "Maximum font-size (px)"
+msgstr "Maksymalny rozmiar czcionki (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:65
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:53
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:61
+msgid "Maximum items"
+msgstr "Maksymalne pozycji"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:128
+msgid "Maximum size"
+msgstr "Maksymalny rozmiar"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:120
+msgid "Minimum font-size (px)"
+msgstr "Minimalny rozmiar czcionki (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:119
+msgid "Minimum size"
+msgstr "Minimalny rozmiar"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr "Więcej filtrów"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:166
 msgid "Move Down"
-msgstr ""
+msgstr "Przesuń w dół"
 
-#: ../../facetednavigation/browser/template/configure.pt:157
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:157
 msgid "Move Up"
-msgstr ""
+msgstr "Przesuń w górę"
 
-#: ../../facetednavigation/browser/template/configure.pt:126
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:34
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr "Nawigacja js-drzewo punkt wyjścia (w stosunku do strony Plone np.:. SITE / data-i-mapy)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:67
+msgid "Navigation tree theme"
+msgstr "Tematem drzewo nawigacji"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:74
+msgid "No action provided"
+msgstr "Brak działania pod warunkiem,"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:66
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:54
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:62
+msgid "Number of items visible in widget"
+msgstr "Liczba elementów widocznych w widgecie"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:38
+msgid "Operator"
+msgstr "Operator"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:126
 msgid "Order"
-msgstr ""
+msgstr "Zamó"
 
-#: ../../facetednavigation/widgets/path/widget.py:88
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:79
 msgid "Path"
-msgstr ""
+msgstr "Ścieżka"
 
-#: ../../facetednavigation/widgets/portlet/widget.py:32
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:20
+msgid "Path to portlet macro"
+msgstr "Ścieżka do portletu makro"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
-msgstr ""
+msgstr "Plone portlet"
 
-#: ../../facetednavigation/settings/menu.py:134
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:19
+msgid "Portlet macro"
+msgstr "Portlet makro"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:132
 msgid "Portlets left column is hidden now"
-msgstr ""
+msgstr "Portlety lewa kolumna jest ukryta teraz"
 
-#: ../../facetednavigation/settings/menu.py:131
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:129
 msgid "Portlets left column is visible now"
-msgstr ""
+msgstr "Portlety lewa kolumna jest widoczna teraz"
 
-#: ../../facetednavigation/settings/menu.py:144
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:142
 msgid "Portlets right column is hidden now"
-msgstr ""
+msgstr "Kolumna prawo portlety jest ukryty teraz"
 
-#: ../../facetednavigation/settings/menu.py:141
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:139
 msgid "Portlets right column is visible now"
-msgstr ""
+msgstr "Kolumna prawo portlety jest widoczny teraz"
 
-#: ../../facetednavigation/browser/template/configure.pt:44
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:52
 msgid "Position"
-msgstr ""
+msgstr "Stanowisko/Funkcja"
 
-#: ../../facetednavigation/widgets/interfaces.py:32
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:45
+msgid "Position of the widget."
+msgstr "Stanowisko widgetu."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:32
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
-msgstr ""
+msgstr "Nazwa Python fabryki, które mogą utworzyć obiekt realizacji. To musi zidentyfikować obiekt w module przy pełnej przerywaną nazwę."
 
-#: ../../facetednavigation/widgets/radio/widget.py:113
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:99
 msgid "Radio"
-msgstr ""
+msgstr "Radio"
 
-#: ../../facetednavigation/widgets/range/widget.py:53
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:49
 msgid "Range"
-msgstr ""
+msgstr "Zakres"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
 msgid "Remove all filters"
-msgstr ""
+msgstr "Usunąć wszystkie filtry"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:65
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:61
 msgid "Results per page"
-msgstr ""
+msgstr "Liczba wyników na stronie"
 
-#: ../../facetednavigation/widgets/sorting/widget.pt:50
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "Results per page ending value"
+msgstr "Wyniki na stronie wartości kończącego"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "Results per page starting value"
+msgstr "Liczba wyników na stronie wartość początkowa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:41
+msgid "Results per page step"
+msgstr "Liczba wyników na stronie kroku"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
-msgstr ""
+msgstr "Strona odwrotna (Rewers)"
 
-#: ../../facetednavigation/browser/template/configure.pt:182
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:72
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:61
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:48
+msgid "Reverse options"
+msgstr "Opcje tylnej"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:33
+msgid "Root folder"
+msgstr "Folder główny"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:182
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
-#: ../../facetednavigation/widgets/text/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:21
 msgid "Search"
-msgstr ""
+msgstr "Wyszukaj"
 
-#: ../../facetednavigation/browser/template/configure.pt:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:54
+msgid "Search Depth"
+msgstr "Głębokość wyszukiwania"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:39
+msgid "Search with AND/OR between elements"
+msgstr "Szukaj w I / LUB pomiędzy elementami"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:61
 msgid "Section"
-msgstr ""
+msgstr "Rozdział"
 
-#: ../../facetednavigation/widgets/select/widget.py:97
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:84
 msgid "Select"
-msgstr ""
+msgstr "Wybierz"
 
-#: ../../facetednavigation/settings/menu.py:154
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:114
+msgid "Select all items"
+msgstr "Zaznaczenie wszystkich elementów"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:152
 msgid "Smart facets hiding is now disabled"
-msgstr ""
+msgstr "Inteligentne ukrywanie aspektów jest teraz wyłączony"
 
-#: ../../facetednavigation/settings/menu.py:151
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:149
 msgid "Smart facets hiding is now enabled"
-msgstr ""
+msgstr "Inteligentne ukrywanie aspektach jest teraz aktywna"
 
-#: ../../facetednavigation/widgets/sorting/widget.py:46
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:62
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:49
+msgid "Sort options reversed"
+msgstr "Opcje sortowania odwrócone"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:43
 msgid "Sorting"
-msgstr ""
+msgstr "Sortowanie"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:22
 msgid "Sphere"
-msgstr ""
+msgstr "Kula"
 
-#: ../../facetednavigation/widgets/range/widget.pt:20
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:20
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:22
 msgid "Start"
-msgstr ""
+msgstr "Początek"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:21
 msgid "Start date"
-msgstr ""
+msgstr "Data rozpoczęcia"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:40
+msgid "Step"
+msgstr "Krok"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
 msgid "Sync faceted translations"
-msgstr ""
+msgstr "Sync fasetowanych tłumaczenia"
 
-#: ../../facetednavigation/widgets/tal/widget.py:63
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:61
 msgid "TAL Expression"
-msgstr ""
+msgstr "TAL Expression"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:198
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:174
 msgid "Tags Cloud"
-msgstr ""
+msgstr "Chmura tagów"
 
-#: ../../facetednavigation/widgets/text/widget.py:45
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:40
+msgid "Tal Expression"
+msgstr "Tal Expression"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:41
 msgid "Text field"
-msgstr ""
+msgstr "Pole tekstowe"
 
-#: ../../facetednavigation/browser/template/error.pt:3
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:68
+msgid "Theme to be used with this widget"
+msgstr "Skórka do użytku z tym widgetem"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:87
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:78
+msgid "This option works only if 'count results' is enabled"
+msgstr "Opcja ta działa tylko wtedy, gdy 'Wyniki count' jest włączona"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.pt:29
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr "Ten widget będą ignorowane zgodnie korzeń jest nieosiągalny lub nie ma żadnych folderish dzieci."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:3
 msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
-msgstr ""
+msgstr "Ten widget będą ignorowane w trybie widoku jako błąd podczas próby uczynić go. Aby uzyskać więcej informacji proszę sprawdzić plik dziennika serwera. Możesz także spróbować zmodyfikować konfigurację widżetu, aby zobaczyć, co własność jest przyczyną tego problemu."
 
-#: ../../facetednavigation/browser/template/configure.pt:32
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:44
+msgid "Title for widget to display in view page"
+msgstr "Tytuł widget do wyświetlania w widoku strony"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:32
 msgid "Type"
-msgstr ""
+msgstr "Typ instrumentu"
 
-#: ../../facetednavigation/browser/template/configure.pt:149
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:111
+msgid "Type of the cloud"
+msgstr "Rodzaj chmury"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:33
+msgid "Type of the widget."
+msgstr "Rodzaj widżetu."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:60
+msgid "UI Calendar years range"
+msgstr "UI lata kalendarzowe wahać"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:17
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr "Odznacz to pole, jeśli nie chcesz ukryj / pokaż kryteria funkcja jest włączona na tym widgetem"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:21
+msgid "Visible to"
+msgstr "Widoczne dla"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:31
+msgid "Vocabulary"
+msgstr "słownictwem."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:21
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr "Słownictwo używać do filtrowania kryteria sortowania. Pozostaw puste dla kryterium sortowania domyślnych."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:48
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:34
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:32
+msgid "Vocabulary to use to render widget items"
+msgstr "Słownictwo być używany do renderowania elementów widget"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:53
+msgid "Widget position in page"
+msgstr "Pozycja widget na stronie"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:149
 msgid "Widget type"
-msgstr ""
+msgstr "Typ Widget"
 
-#: ../../facetednavigation/widgets/text/widget.pt:30
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:22
+msgid "Widget will be visible only for selected user"
+msgstr "Widget będzie widoczny tylko dla wybranego użytkownika"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
+msgid "[X] Remove all"
+msgstr "[X] Usuń wszystko"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
 msgstr "Wszystkie zagadnienia"
 
-#. Default: "&#916; Hide filters"
-#: ../../facetednavigation/widgets/criteria/widget.pt:15
-msgid "criteria_view_hide_filters"
-msgstr ""
-
-#. Default: "[X] Remove all"
-#: ../../facetednavigation/widgets/criteria/widget.pt:21
-msgid "criteria_view_remove_all"
-msgstr "[X] Usuń wszystko"
-
-#. Default: "&#8711; Show filters"
-#: ../../facetednavigation/widgets/criteria/widget.pt:16
-msgid "criteria_view_show_filters"
-msgstr ""
-
-#. Default: "UI Calendar years range"
-#: ../../facetednavigation/widgets/daterange/widget.py:56
-msgid "faceted_criteria_cal_year_range"
-msgstr ""
-
-#. Default: "Catalog"
-#: ../../facetednavigation/widgets/checkbox/widget.py:62
-#: ../../facetednavigation/widgets/radio/widget.py:47
-#: ../../facetednavigation/widgets/select/widget.py:44
-msgid "faceted_criteria_catalog"
-msgstr ""
-
-#. Default: "Count results"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:40
-#: ../../facetednavigation/widgets/checkbox/widget.py:91
-#: ../../facetednavigation/widgets/radio/widget.py:79
-msgid "faceted_criteria_count"
-msgstr ""
-
-#. Default: "Default value"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:59
-#: ../../facetednavigation/widgets/checkbox/widget.py:110
-#: ../../facetednavigation/widgets/date/widget.py:62
-msgid "faceted_criteria_default"
-msgstr ""
-
-#. Default: "Search Depth"
-#: ../../facetednavigation/widgets/path/widget.py:59
-msgid "faceted_criteria_depth"
-msgstr ""
-
-#. Default: "Hide items with zero results"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:48
-#: ../../facetednavigation/widgets/checkbox/widget.py:100
-#: ../../facetednavigation/widgets/radio/widget.py:88
-msgid "faceted_criteria_emptycounthide"
-msgstr ""
-
-#. Default: "End"
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
-msgid "faceted_criteria_end"
-msgstr ""
-
-#. Default: "Default etag"
-#: ../../facetednavigation/widgets/etag/widget.py:17
-msgid "faceted_criteria_etag_default"
-msgstr ""
-
-#. Default: "Hidden"
-#: ../../facetednavigation/widgets/widget.py:73
-msgid "faceted_criteria_hidden"
-msgstr ""
-
-#. Default: "Catalog index"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:32
-#: ../../facetednavigation/widgets/checkbox/widget.py:26
-#: ../../facetednavigation/widgets/date/widget.py:51
-msgid "faceted_criteria_index"
-msgstr ""
-
-#. Default: "Maximum characters"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:78
-msgid "faceted_criteria_maxchars"
-msgstr ""
-
-#. Default: "Maximum items"
-#: ../../facetednavigation/widgets/checkbox/widget.py:73
-#: ../../facetednavigation/widgets/radio/widget.py:59
-#: ../../facetednavigation/widgets/tagscloud/widget.py:67
-msgid "faceted_criteria_maxitems"
-msgstr ""
-
-#. Default: "Operator"
-#: ../../facetednavigation/widgets/checkbox/widget.py:40
-msgid "faceted_criteria_operator"
-msgstr ""
-
-#. Default: "Root folder"
-#: ../../facetednavigation/widgets/path/widget.py:35
-msgid "faceted_criteria_path_root"
-msgstr ""
-
-#. Default: "Navigation tree theme"
-#: ../../facetednavigation/widgets/path/widget.py:74
-msgid "faceted_criteria_path_theme"
-msgstr ""
-
-#. Default: "Position"
-#: ../../facetednavigation/widgets/widget.py:54
-msgid "faceted_criteria_position"
-msgstr ""
-
-#. Default: "Reverse options"
-#: ../../facetednavigation/widgets/checkbox/widget.py:82
-#: ../../facetednavigation/widgets/radio/widget.py:69
-#: ../../facetednavigation/widgets/select/widget.py:54
-msgid "faceted_criteria_reverse_options"
-msgstr ""
-
-#. Default: "Section"
-#: ../../facetednavigation/widgets/widget.py:64
-msgid "faceted_criteria_section"
-msgstr ""
-
-#. Default: "Filter from vocabulary"
-#: ../../facetednavigation/widgets/sorting/widget.py:20
-msgid "faceted_criteria_sorting_vocabulary"
-msgstr ""
-
-#. Default: "Start"
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
-msgid "faceted_criteria_start"
-msgstr ""
-
-#. Default: "Step"
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:42
-msgid "faceted_criteria_step"
-msgstr ""
-
-#. Default: "Cloud height"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:155
-msgid "faceted_criteria_tagscloud_height"
-msgstr ""
-
-#. Default: "Maximum size"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:144
-msgid "faceted_criteria_tagscloud_maxsize"
-msgstr ""
-
-#. Default: "Minimum size"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:133
-msgid "faceted_criteria_tagscloud_minsize"
-msgstr ""
-
-#. Default: "Cloud type"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:122
-msgid "faceted_criteria_tagscloud_type"
-msgstr ""
-
-#. Default: "Tal Expression"
-#: ../../facetednavigation/widgets/tal/widget.py:41
-msgid "faceted_criteria_tal_default"
-msgstr ""
-
-#. Default: "Friendly name"
-#: ../../facetednavigation/widgets/widget.py:43
-msgid "faceted_criteria_title"
-msgstr ""
-
-#. Default: "Visible to"
-#: ../../facetednavigation/widgets/debug/widget.py:21
-msgid "faceted_criteria_user"
-msgstr ""
-
-#. Default: "Vocabulary"
-#: ../../facetednavigation/widgets/checkbox/widget.py:51
-#: ../../facetednavigation/widgets/radio/widget.py:35
-#: ../../facetednavigation/widgets/select/widget.py:33
-msgid "faceted_criteria_vocabulary"
-msgstr ""
-
-#. Default: "This widget will be ignored as provided root is unreachable or it has no folderish children."
-#: ../../facetednavigation/widgets/path/widget.pt:29
-msgid "faceted_path_widget_errors"
-msgstr ""
-
-#. Default: "Portlet macro"
-#: ../../facetednavigation/widgets/portlet/widget.py:19
-msgid "faceted_portlet_macro"
-msgstr ""
-
-#. Default: "Less filters"
-#: ../../facetednavigation/browser/template/view.pt:31
-msgid "faceted_sections_less"
-msgstr ""
-
-#. Default: "More filters"
-#: ../../facetednavigation/browser/template/view.pt:30
-msgid "faceted_sections_more"
-msgstr ""
-
-#. Default: "Display number of results per letter"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:41
-msgid "help_faceted_criteria_alphabetic_count"
-msgstr ""
-
-#. Default: "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
-#: ../../facetednavigation/widgets/daterange/widget.py:58
-msgid "help_faceted_criteria_cal_year_range"
-msgstr ""
-
-#. Default: "Get unique values from catalog as an alternative for vocabulary"
-#: ../../facetednavigation/widgets/checkbox/widget.py:64
-#: ../../facetednavigation/widgets/radio/widget.py:49
-#: ../../facetednavigation/widgets/select/widget.py:46
-msgid "help_faceted_criteria_catalog"
-msgstr ""
-
-#. Default: "Default items (one per line)"
-#: ../../facetednavigation/widgets/checkbox/widget.py:112
-msgid "help_faceted_criteria_checkboxes_default"
-msgstr ""
-
-#. Default: "Display number of results near each option"
-#: ../../facetednavigation/widgets/checkbox/widget.py:93
-#: ../../facetednavigation/widgets/radio/widget.py:80
-#: ../../facetednavigation/widgets/select/widget.py:65
-msgid "help_faceted_criteria_count"
-msgstr ""
-
-#. Default: "This option works only if \"count results\" is enabled"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:50
-#: ../../facetednavigation/widgets/checkbox/widget.py:102
-#: ../../facetednavigation/widgets/radio/widget.py:90
-msgid "help_faceted_criteria_criteria_emptycounthide"
-msgstr ""
-
-#. Default: "Default daterange (e.g. \"now-365=>now+1\" which means \"Starting one year ago until tomorrow\")"
-#: ../../facetednavigation/widgets/date/widget.py:63
-msgid "help_faceted_criteria_date_default"
-msgstr ""
-
-#. Default: "Default daterange (e.g. \"2009/12/01=>2009/12/31\")"
-#: ../../facetednavigation/widgets/daterange/widget.py:46
-msgid "help_faceted_criteria_daterange_default"
-msgstr ""
-
-#. Default: "Default letter to be selected"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:60
-msgid "help_faceted_criteria_default"
-msgstr ""
-
-#. Default: "Results per page ending value"
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:33
-msgid "help_faceted_criteria_end"
-msgstr ""
-
-#. Default: "Etag value"
-#: ../../facetednavigation/widgets/etag/widget.py:19
-msgid "help_faceted_criteria_etag_default"
-msgstr ""
-
-#. Default: "Hide widget"
-#: ../../facetednavigation/widgets/widget.py:74
-msgid "help_faceted_criteria_hidden"
-msgstr ""
-
-#. Default: "Catalog index to use for search"
-#: ../../facetednavigation/widgets/alphabetic/widget.py:33
-#: ../../facetednavigation/widgets/checkbox/widget.py:28
-#: ../../facetednavigation/widgets/date/widget.py:53
-msgid "help_faceted_criteria_index"
-msgstr ""
-
-#. Default: "Cut long phrases to provided number of characters"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:80
-msgid "help_faceted_criteria_maxchars"
-msgstr ""
-
-#. Default: "Number of items visible in widget"
-#: ../../facetednavigation/widgets/checkbox/widget.py:75
-#: ../../facetednavigation/widgets/radio/widget.py:61
-#: ../../facetednavigation/widgets/tagscloud/widget.py:69
-msgid "help_faceted_criteria_maxitems"
-msgstr ""
-
-#. Default: "Search with AND/OR between elements"
-#: ../../facetednavigation/widgets/checkbox/widget.py:42
-msgid "help_faceted_criteria_operator"
-msgstr ""
-
-#. Default: "Default path to search in (relative to root folder)"
-#: ../../facetednavigation/widgets/path/widget.py:49
-msgid "help_faceted_criteria_path_default"
-msgstr ""
-
-#. Default: "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
-#: ../../facetednavigation/widgets/path/widget.py:61
-msgid "help_faceted_criteria_path_depth"
-msgstr ""
-
-#. Default: "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
-#: ../../facetednavigation/widgets/path/widget.py:37
-msgid "help_faceted_criteria_path_root"
-msgstr ""
-
-#. Default: "Theme to be used with this widget"
-#: ../../facetednavigation/widgets/path/widget.py:76
-msgid "help_faceted_criteria_path_theme"
-msgstr ""
-
-#. Default: "Widget position in page"
-#: ../../facetednavigation/widgets/widget.py:55
-msgid "help_faceted_criteria_position"
-msgstr ""
-
-#. Default: "Default selected item"
-#: ../../facetednavigation/widgets/radio/widget.py:101
-#: ../../facetednavigation/widgets/tagscloud/widget.py:186
-msgid "help_faceted_criteria_radio_default"
-msgstr ""
-
-#. Default: "Default range (e.g. \"1 => 3\")"
-#: ../../facetednavigation/widgets/range/widget.py:41
-msgid "help_faceted_criteria_range_default"
-msgstr ""
-
-#. Default: "Default results per page"
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:53
-msgid "help_faceted_criteria_resultsperpage_default"
-msgstr ""
-
-#. Default: "Sort options reversed"
-#: ../../facetednavigation/widgets/checkbox/widget.py:84
-#: ../../facetednavigation/widgets/radio/widget.py:71
-#: ../../facetednavigation/widgets/select/widget.py:56
-msgid "help_faceted_criteria_reverse_options"
-msgstr ""
-
-#. Default: "Display widget in section"
-#: ../../facetednavigation/widgets/widget.py:66
-msgid "help_faceted_criteria_section"
-msgstr ""
-
-#. Default: "Default selected item"
-#: ../../facetednavigation/widgets/select/widget.py:85
-msgid "help_faceted_criteria_select_default"
-msgstr ""
-
-#. Default: "Default sorting index (e.g. \"effective\" or \"effective(reverse)\")"
-#: ../../facetednavigation/widgets/sorting/widget.py:33
-msgid "help_faceted_criteria_sorting_default"
-msgstr ""
-
-#. Default: "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
-#: ../../facetednavigation/widgets/sorting/widget.py:22
-msgid "help_faceted_criteria_sorting_vocabulary"
-msgstr ""
-
-#. Default: "Results per page starting value"
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
-msgid "help_faceted_criteria_start"
-msgstr ""
-
-#. Default: "Results per page step"
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:43
-msgid "help_faceted_criteria_step"
-msgstr ""
-
-#. Default: "Display number of results near each tag"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:166
-msgid "help_faceted_criteria_tagscloud_count"
-msgstr ""
-
-#. Default: "Cloud height (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:157
-msgid "help_faceted_criteria_tagscloud_height"
-msgstr ""
-
-#. Default: "Maximum font-size (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:146
-msgid "help_faceted_criteria_tagscloud_maxsize"
-msgstr ""
-
-#. Default: "Minimum font-size (px)"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:135
-msgid "help_faceted_criteria_tagscloud_minsize"
-msgstr ""
-
-#. Default: "Type of the cloud"
-#: ../../facetednavigation/widgets/tagscloud/widget.py:124
-msgid "help_faceted_criteria_tagscloud_type"
-msgstr ""
-
-#. Default: "Default tal expression for query value"
-#: ../../facetednavigation/widgets/tal/widget.py:42
-msgid "help_faceted_criteria_tal_default"
-msgstr ""
-
-#. Default: "Default string to search for"
-#: ../../facetednavigation/widgets/text/widget.py:33
-msgid "help_faceted_criteria_text_default"
-msgstr ""
-
-#. Default: "Title for widget to display in view page"
-#: ../../facetednavigation/widgets/widget.py:45
-msgid "help_faceted_criteria_title"
-msgstr ""
-
-#. Default: "Widget will be visible only for selected user"
-#: ../../facetednavigation/widgets/debug/widget.py:23
-msgid "help_faceted_criteria_user"
-msgstr ""
-
-#. Default: "Vocabulary to use to render widget items"
-#: ../../facetednavigation/widgets/checkbox/widget.py:53
-#: ../../facetednavigation/widgets/radio/widget.py:37
-#: ../../facetednavigation/widgets/select/widget.py:35
-msgid "help_faceted_criteria_vocabulary"
-msgstr ""
-
-#. Default: "Path to portlet macro"
-#: ../../facetednavigation/widgets/portlet/widget.py:20
-msgid "help_faceted_portlet_macro"
-msgstr ""
-
-#. Default: "Faceted global settings"
-#: ../../facetednavigation/settings/menu.py:23
-msgid "help_faceted_settings_menu"
-msgstr ""
-
-#. Default: "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-#: ../../facetednavigation/widgets/criteria/widget.py:18
-msgid "help_hidecriteriaenabled"
-msgstr ""
-
-#. Default: "Position of the widget."
-#: ../../facetednavigation/browser/template/configure.pt:45
-msgid "help_widget_position"
-msgstr ""
-
-#. Default: "Display widget in section."
-#: ../../facetednavigation/browser/template/configure.pt:57
-msgid "help_widget_section"
-msgstr ""
-
-#. Default: "Type of the widget."
-#: ../../facetednavigation/browser/template/configure.pt:33
-msgid "help_widget_type"
-msgstr ""
-
-#: ../../facetednavigation/widgets/text/widget.pt:38
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:38
 msgid "in current results"
 msgstr "Dalsze wyszukiwanie "
-
-#. Default: "Faceted settings"
-#: ../../facetednavigation/settings/menu.py:21
-msgid "label_faceted_settings_menu"
-msgstr ""
-
-#. Default: "Enable hide/show criteria"
-#: ../../facetednavigation/widgets/criteria/widget.py:16
-msgid "label_hidecriteriaenabled"
-msgstr ""
-
-#. Default: "Select all items"
-#: ../../facetednavigation/browser/template/configure.pt:114
-msgid "label_select_all_items"
-msgstr ""
-
-#. Default: "Configuration imported"
-#: ../../facetednavigation/browser/app/exportimport.py:47
-msgid "msg_configuration_imported"
-msgstr ""
-
-#. Default: "No action provided"
-#: ../../facetednavigation/browser/app/exportimport.py:75
-msgid "msg_no_action_provided"
-msgstr ""
-
-#. Default: "Content listing"
-#: ../../facetednavigation/browser/template/configure.pt:109
-msgid "summary_content_listing"
-msgstr ""
 

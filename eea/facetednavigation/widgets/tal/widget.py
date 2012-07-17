@@ -28,9 +28,8 @@ EditSchema = Schema((
         required=True,
         vocabulary_factory='eea.faceted.vocabularies.CatalogIndexes',
         widget=SelectionWidget(
-            label=_('faceted_criteria_index', default=u'Catalog index'),
-            description=_(u'help_faceted_criteria_index',
-                default=u'Catalog index to use for search'),
+            label=_(u'Catalog index'),
+            description=_(u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -38,9 +37,8 @@ EditSchema = Schema((
         schemata="default",
         default='string:',
         widget=StringWidget(
-            label=_(u'faceted_criteria_tal_default', default=u'Tal Expression'),
-            description=_(u'help_faceted_criteria_tal_default',
-                default=u'Default tal expression for query value'),
+            label=_(u'Tal Expression'),
+            description=_(u'Default tal expression for query value'),
             i18n_domain="eea"
         )
     ),

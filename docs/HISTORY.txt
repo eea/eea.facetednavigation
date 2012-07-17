@@ -6,6 +6,9 @@ Changelog
 * Bug fix: Fixed formated_time method in daterange widget to also accept years
   as valid dates
   [voineali fixes #5371]
+* Feature: Added Translation files and folder in "locales".
+  Translated all po files using google translator kit and generated .mo
+  [prospchr refs #5258]
 
 4.7 - (2012-07-13)
 ------------------
