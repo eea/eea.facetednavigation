@@ -38,10 +38,8 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.DateRangeCatalogIndexes',
         widget=SelectionWidget(
             format='select',
-            label=_(u'faceted_criteria_index',
-                default=u'Catalog index'),
-            description=_(u'help_faceted_criteria_index',
-                default=u'Catalog index to use for search'),
+            label=_(u'Catalog index'),
+            description=_(u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -49,10 +47,8 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label=_('faceted_criteria_default',
-                default='Default value'),
-            description=_(u'help_faceted_criteria_daterange_default',
-                default=u'Default daterange (e.g. "2009/12/01=>2009/12/31")'),
+            label=_(u'Default value'),
+            description=_(u"Default daterange (e.g. '2009/12/01=>2009/12/31')"),
             i18n_domain="eea"
         )
     ),
@@ -61,10 +57,8 @@ EditSchema = Schema((
         default="c-10:c+10",
         widget=StringWidget(
             size=25,
-            label=_('faceted_criteria_cal_year_range',
-                    default='UI Calendar years range'),
-            description=_(u'help_faceted_criteria_cal_year_range',
-                          default='Control the range of years'
+            label=_(u'UI Calendar years range'),
+            description=_(u'Control the range of years'
                           'displayed in the year drop-down: '
                           'either relative to today\'s year '
                           '(-nn:+nn), relative to the '

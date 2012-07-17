@@ -1,0 +1,722 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-17 13:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:16
+msgid "&#8711; Show filters"
+msgstr "∇ Filtreleri göster"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:15
+msgid "&#916; Hide filters"
+msgstr "Δ gizle filtreleri"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:70
+msgid "Add"
+msgstr "Ekle"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:26
+msgid "Add new filter"
+msgstr "Yeni bir filtre ekle"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:27
+msgid "Add widget"
+msgstr "Widget Ekle"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "Sorgu filtreleri sonra"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.pt:29
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.pt:23
+msgid "All"
+msgstr "Tüm"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:69
+msgid "Alphabetic"
+msgstr "Alfabetik"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:99
+msgid "Are you sure you want to delete ${xxxxx} widget?"
+msgstr "Eğer $ {xxxxx} Widget silmek istediğinizden emin misiniz?"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:43
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:40
+msgid "Catalog"
+msgstr "Katalog"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:32
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:26
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:51
+msgid "Catalog index"
+msgstr "Katalog endeksi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:27
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:52
+msgid "Catalog index to use for search"
+msgstr "Katalog dizin arama için kullanılacak"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr "Katalog sorgusu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:107
+msgid "Checkboxes"
+msgstr "Kutularını"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:23
+msgid "Cloud"
+msgstr "Bulut"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:137
+msgid "Cloud height"
+msgstr "Cloud yüksekliği"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:138
+msgid "Cloud height (px)"
+msgstr "Cloud yüksekliği (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:110
+msgid "Cloud type"
+msgstr "Bulut türü"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:47
+msgid "Configuration imported"
+msgstr "Yapılandırma ithal"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:20
+msgid "Configure faceted navigation"
+msgstr "Yönlü navigasyon yapılandırın"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:109
+msgid "Content listing"
+msgstr "İçerik listesi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:61
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr "Seçili yıl (c-nn: c + nn) göre,: bugünün yıl (-nn + nn) için ya göre:, mutlak (nnnn: nnnn), veya birleşimleri açılan yıl yearsdisplayed aralığı kontrol Bu formatların (nnnn:-nn)."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:39
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:79
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:69
+msgid "Count results"
+msgstr "Maçların sonuçları"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr "Sayaçlar"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:125
+msgid "Criterion details"
+msgstr "Kriter detayları"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "Şu yapılandırma"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:71
+msgid "Cut long phrases to provided number of characters"
+msgstr "Karakter sağlanan sayıda uzun cümleleri Kes"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:73
+msgid "Date"
+msgstr "Tarih"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:79
+msgid "Date range"
+msgstr "Tarih aralığı"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:32
+msgid "Debugger"
+msgstr "Debugger"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:51
+msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
+msgstr "Standart daterange (örneğin '2009 / 12/01 => 2009/12/31 ')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:61
+msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
+msgstr "Standart daterange (örneğin 'yarın kadar, bir yıl önce başlayan' şimdi-365 anlamına => Şimdi +1' ')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:17
+msgid "Default etag"
+msgstr "Standart etag"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:96
+msgid "Default items (one per line)"
+msgstr "Standart ürün (satır başına bir tane)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:57
+msgid "Default letter to be selected"
+msgstr "Standart mektup seçilecek"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:44
+msgid "Default path to search in (relative to root folder)"
+msgstr "Aramak için Varsayılan yolu (kök klasörüne göre)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:38
+msgid "Default range (e.g. '1 => 3')"
+msgstr "Standart aralığı (örneğin '1 => 3 ')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:50
+msgid "Default results per page"
+msgstr "Sayfa başına varsayılan sonuçları"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:88
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:163
+msgid "Default selected item"
+msgstr "Standart seçili öğeyi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:31
+msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
+msgstr "Varsayılan sıralama indeksi ('(ters) etkili' örneğin 'etkili' ya)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:30
+msgid "Default string to search for"
+msgstr "Aramak için Varsayılan dize"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:41
+msgid "Default tal expression for query value"
+msgstr "Sorgu değeri için varsayılan tal ifade"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:95
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:60
+msgid "Default value"
+msgstr "Varsayılan değer"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:183
+msgid "Delete"
+msgstr "Sil"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:55
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr "Arama yolunun Derinlik. 0 = bu seviyede, -1 = Tüm özyinelemeli alt klasörler ve diğer herhangi bir pozitif tam sayı aramak için alt-seviyeleri sayılır."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr "Yönlü navigasyon sakatlar"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr "Yönlü arama pasif"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:61
+msgid "Disable left portlets"
+msgstr "Sol portletler sakatlar"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:76
+msgid "Disable right portlets"
+msgstr "Sağ portletler sakatlar"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:91
+msgid "Disable smart facets hiding"
+msgstr "Akıllı yönleriyle gizleme sakatlar"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:80
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:70
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:56
+msgid "Display number of results near each option"
+msgstr "Her seçeneğin yakınında sonuç sayısını görüntüle"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:146
+msgid "Display number of results near each tag"
+msgstr "Her etiketi yakınında sonuç sayısını görüntüle"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:40
+msgid "Display number of results per letter"
+msgstr "Mektup başına sonuç sayısını görüntüle"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:62
+msgid "Display widget in section"
+msgstr "Bölümünde aracı gösterilecek"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:57
+msgid "Display widget in section."
+msgstr "Bölümünde Widget görüntüler."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr "Yönlü navigasyon etkinleştirin"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr "Yönlü arama etkinleştirin"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:16
+msgid "Enable hide/show criteria"
+msgstr "Kriterleri göstermek / gizlemek etkinleştirin"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:60
+msgid "Enable left portlets"
+msgstr "Sol portletler etkinleştirin"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:75
+msgid "Enable right portlets"
+msgstr "Sağ portletler etkinleştirin"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:90
+msgid "Enable smart facets hiding"
+msgstr "Akıllı yönleriyle gizleme etkinleştirin"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:28
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:31
+msgid "End"
+msgstr "Bitiş"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:29
+msgid "End date"
+msgstr "Bitiş Tarihi"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr "Hata türü:"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr "Hata değeri:"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:18
+msgid "Etag value"
+msgstr "Değeri etag"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:88
+msgid "Export"
+msgstr "İhracat"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr "Yönlü kriterleri"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:22
+msgid "Faceted global settings"
+msgstr "Yönlü genel ayarlar"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:135
+msgid "Faceted navigation disabled"
+msgstr "Yönlü navigasyon devre dışı"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:124
+msgid "Faceted navigation enabled"
+msgstr "Yönlü navigasyon etkin"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:169
+msgid "Faceted search disabled"
+msgstr "Yönlü arama devre dışı"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:161
+msgid "Faceted search enabled"
+msgstr "Yönlü arama etkin"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:21
+msgid "Faceted settings"
+msgstr "Yönlü ayarları"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr "Fabrika"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr "Filtre eklendi"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr "Silinen filtreleme"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:20
+msgid "Filter from vocabulary"
+msgstr "Kelime filtrelemek"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:29
+msgid "Filters"
+msgstr "Filtreler"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:109
+msgid "Filters deleted"
+msgstr "Filtreler silindi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:43
+msgid "Friendly name"
+msgstr "Dostu adı"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:57
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:41
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr "Kelime için bir alternatif olarak katalog benzersiz değerleri alın"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:68
+msgid "Hidden"
+msgstr "[Hidden]"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:46
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:86
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:77
+msgid "Hide items with zero results"
+msgstr "Sıfır sonuçları ile öğeleri gizle"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:69
+msgid "Hide widget"
+msgstr "Widget gizle"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:85
+msgid "Import"
+msgstr "Al"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:77
+msgid "Import - Export configuration"
+msgstr "İthalat - İhracat yapılandırma"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:78
+msgid "Import configuration"
+msgstr "İthalat yapılandırma"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "Geçersiz veya boş kelime bu widget için sağlanmıştır. Varsayılan sıralama kriterleri için boş bırakın."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr "Az filtreleri"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:21
+msgid "List"
+msgstr "Liste"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:70
+msgid "Maximum characters"
+msgstr "Maksimum karakter"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:129
+msgid "Maximum font-size (px)"
+msgstr "Maksimum font-size (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:65
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:53
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:61
+msgid "Maximum items"
+msgstr "Maksimum ürün"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:128
+msgid "Maximum size"
+msgstr "Azami boyut:"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:120
+msgid "Minimum font-size (px)"
+msgstr "Minimum font-size (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:119
+msgid "Minimum size"
+msgstr "Minimum boyut"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr "Daha filtreleri"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr "Aşağı taşı"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr "Yukarı taşı"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:34
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr "Navigasyon js ağacı başlangıç ​​noktası (plone siteye göre örn:. SİTE / veri-ve-haritalar)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:67
+msgid "Navigation tree theme"
+msgstr "Gezinti ağacı teması"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:74
+msgid "No action provided"
+msgstr "Hiçbir hareket sağlanır"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:66
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:54
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:62
+msgid "Number of items visible in widget"
+msgstr "Widget görünen öğeleri sayısı"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:38
+msgid "Operator"
+msgstr "Operatör"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:126
+msgid "Order"
+msgstr "Sipariş"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:79
+msgid "Path"
+msgstr "Yol"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:20
+msgid "Path to portlet macro"
+msgstr "Portleti makro yolu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:31
+msgid "Plone portlet"
+msgstr "Plone portleti"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:19
+msgid "Portlet macro"
+msgstr "Portlet makro"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:132
+msgid "Portlets left column is hidden now"
+msgstr "Portletler sol sütun şimdi gizlidir"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:129
+msgid "Portlets left column is visible now"
+msgstr "Portletler sol sütun artık görünür"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:142
+msgid "Portlets right column is hidden now"
+msgstr "Portletler sağ sütun şimdi gizlidir"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:139
+msgid "Portlets right column is visible now"
+msgstr "Portletler sağ sütun artık görünür"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:52
+msgid "Position"
+msgstr "Konum"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:45
+msgid "Position of the widget."
+msgstr "Widget Konumu."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr "Uygulama nesnesi oluşturabilirsiniz bir fabrika Python adı. Bu tam noktalı adını kullanarak bir modül bir nesne tanımlamak gerekir."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:99
+msgid "Radio"
+msgstr "·"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:49
+msgid "Range"
+msgstr "aralık"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr "Tüm filtreleri kaldırın"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:61
+msgid "Results per page"
+msgstr "Sayfa başına sonuçlar"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "Results per page ending value"
+msgstr "Sayfa bitiş değeri başına sonuçlar"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "Results per page starting value"
+msgstr "Sayfa başına sonuç değeri başlangıç"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:41
+msgid "Results per page step"
+msgstr "Sayfa adım başına Sonuçlar"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "Geri"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:72
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:61
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:48
+msgid "Reverse options"
+msgstr "Ters seçenekleri"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:33
+msgid "Root folder"
+msgstr "Kök klasörü"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:182
+msgid "Save"
+msgstr "Kaydet"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:21
+msgid "Search"
+msgstr "Ara"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:54
+msgid "Search Depth"
+msgstr "Arama Derinliği"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:39
+msgid "Search with AND/OR between elements"
+msgstr "Ile VE / VEYA elemanları arasında ara"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:61
+msgid "Section"
+msgstr "Bölüm"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:84
+msgid "Select"
+msgstr "Seç"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:114
+msgid "Select all items"
+msgstr "Tüm öğeleri seçme"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:152
+msgid "Smart facets hiding is now disabled"
+msgstr "Akıllı yönleri gizleme artık devre dışı"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:149
+msgid "Smart facets hiding is now enabled"
+msgstr "Akıllı yönleri gizleme artık etkindir"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:62
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:49
+msgid "Sort options reversed"
+msgstr "Sıralama seçenekleri tersine"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:43
+msgid "Sorting"
+msgstr "Sıralandırma"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Sphere"
+msgstr "Küre"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:20
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:22
+msgid "Start"
+msgstr "Başlat"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:21
+msgid "Start date"
+msgstr "Başlangıç ​​Tarihi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:40
+msgid "Step"
+msgstr "Adım:"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr "Yönlü çeviri Sync"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:61
+msgid "TAL Expression"
+msgstr "TAL İfade"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:174
+msgid "Tags Cloud"
+msgstr "Etiket bulutu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:40
+msgid "Tal Expression"
+msgstr "Tal İfade"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:41
+msgid "Text field"
+msgstr "Metin alanı"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:68
+msgid "Theme to be used with this widget"
+msgstr "Bu widget ile kullanılmak üzere Tema"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:87
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:78
+msgid "This option works only if 'count results' is enabled"
+msgstr "'Sayımı sonuçları' etkinse, bu seçenek sadece çalışır"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.pt:29
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr "Sağlanan kök erişilemiyor veya hiçbir folderish çocuk gibi Bu widget göz ardı edilecektir."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr "Işlemek için çalışırken bir hata oluştu olarak bu widget görünüm modunda göz ardı edilecektir. Daha fazla ayrıntı için sunucu günlük dosyasını kontrol edin. Ayrıca, bu soruna neden olan ne özelliği görmek için Widget yapılandırmasını değiştirmek için deneyebilirsiniz."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:44
+msgid "Title for widget to display in view page"
+msgstr "Görünümünde sayfada göstermek widget için Başlığı"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:32
+msgid "Type"
+msgstr "Tür"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:111
+msgid "Type of the cloud"
+msgstr "Bulut türü"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:33
+msgid "Type of the widget."
+msgstr "Widget türü."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:60
+msgid "UI Calendar years range"
+msgstr "UI Takvim yaş aralığı"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:17
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr "Eğer istemiyorsanız işareti kaldırın bu kutuyu gizlemek / göstermek kriterleri bu widget etkin özelliği"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:21
+msgid "Visible to"
+msgstr "Görülebilen"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:31
+msgid "Vocabulary"
+msgstr "Kelime"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:21
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr "Kelime sıralama kriterleri süzmek için kullanmak. Varsayılan sıralama kriterleri için boş bırakın."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:48
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:34
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:32
+msgid "Vocabulary to use to render widget items"
+msgstr "Kelime Widget öğeleri oluşturmak için kullanılacak"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:53
+msgid "Widget position in page"
+msgstr "Sayfasında Widget pozisyonu"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:149
+msgid "Widget type"
+msgstr "Widget tipi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:22
+msgid "Widget will be visible only for selected user"
+msgstr "Widget yalnızca seçilen kullanıcı için görünür olacaktır"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
+msgid "[X] Remove all"
+msgstr "[X] Tümünü kaldır"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:30
+msgid "all items"
+msgstr "tüm öğeler"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:38
+msgid "in current results"
+msgstr "Mevcut sonuçlar"
+

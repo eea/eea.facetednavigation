@@ -1,0 +1,722 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-17 13:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:16
+msgid "&#8711; Show filters"
+msgstr "∇ Εμφάνιση φίλτρων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:15
+msgid "&#916; Hide filters"
+msgstr "Δ φίλτρων Απόκρυψη"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:70
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:26
+msgid "Add new filter"
+msgstr "Προσθήκη νέου φίλτρου"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:27
+msgid "Add widget"
+msgstr "Προσθήκη widget"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "Μετά φίλτρα ερώτημα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.pt:29
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.pt:23
+msgid "All"
+msgstr "Όλα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:69
+msgid "Alphabetic"
+msgstr "Αλφαβητικά"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:99
+msgid "Are you sure you want to delete ${xxxxx} widget?"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε $ {xxxxx} widget;"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:43
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:40
+msgid "Catalog"
+msgstr "Κατάλογος"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:32
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:26
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:51
+msgid "Catalog index"
+msgstr "Κατάλογος δείκτης"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:27
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:52
+msgid "Catalog index to use for search"
+msgstr "Κατάλογος δείκτης να χρησιμοποιήσετε για αναζήτηση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr "Κατάλογος ερώτημα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:107
+msgid "Checkboxes"
+msgstr "Κουτάκια"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:23
+msgid "Cloud"
+msgstr "Σύννεφο"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:137
+msgid "Cloud height"
+msgstr "Ύψος Cloud"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:138
+msgid "Cloud height (px)"
+msgstr "Σύννεφο ύψος (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:110
+msgid "Cloud type"
+msgstr "Τύπου Cloud"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:47
+msgid "Configuration imported"
+msgstr "Εισάγονται Διαμόρφωση"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:20
+msgid "Configure faceted navigation"
+msgstr "Ρύθμιση πολύπλευρη πλοήγησης"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:109
+msgid "Content listing"
+msgstr "Λίστα περιεχομένων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:61
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr "Ελέγξτε το φάσμα των yearsdisplayed το έτος drop-down: είτε σε σχέση με το έτος σημερινή (-nn: + nn), σε σχέση με το επιλεγμένο έτους (γ-nn: C + nn), απόλυτη (nnnn: nnnn), ή συνδυασμούς από αυτές τις μορφές (nnnn:-NN)."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:39
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:79
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:69
+msgid "Count results"
+msgstr "Μετρήστε τα αποτελέσματα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr "Μετρητές"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:125
+msgid "Criterion details"
+msgstr "Κριτήριο λεπτομέρειες"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "Τρέχουσα διαμόρφωση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:71
+msgid "Cut long phrases to provided number of characters"
+msgstr "Κόψτε καιρό φράσεις που ο αριθμός των χαρακτήρων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:73
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:79
+msgid "Date range"
+msgstr "Εύρος ημερομηνιών"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:32
+msgid "Debugger"
+msgstr "Debugger"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:51
+msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
+msgstr "Προεπιλογή daterange (π.χ. '2009 / 12/01 => 12/31/2009')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:61
+msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
+msgstr "Προεπιλογή daterange (π.χ. 'τώρα-365 => τώρα +1' που σημαίνει 'Ξεκινώντας πριν από ένα χρόνο μέχρι αύριο ')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:17
+msgid "Default etag"
+msgstr "ETAG Προεπιλογή"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:96
+msgid "Default items (one per line)"
+msgstr "Προεπιλογή στοιχεία (μία ανά γραμμή)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:57
+msgid "Default letter to be selected"
+msgstr "Προεπιλογή επιστολή που θα επιλεγούν"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:44
+msgid "Default path to search in (relative to root folder)"
+msgstr "Προεπιλεγμένη διαδρομή προς αναζήτηση (σε σχέση με το ριζικό φάκελο)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:38
+msgid "Default range (e.g. '1 => 3')"
+msgstr "Περιοχή λειτουργίας (π.χ. '1 => 3 ')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:50
+msgid "Default results per page"
+msgstr "Προεπιλογή αποτελέσματα ανά σελίδα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:88
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:163
+msgid "Default selected item"
+msgstr "Προεπιλογή επιλεγμένο στοιχείο"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:31
+msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
+msgstr "Προεπιλογή δείκτης διαλογής (π.χ. «πραγματική» ή «αποτελεσματική (αντίστροφη)»)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:30
+msgid "Default string to search for"
+msgstr "Προεπιλεγμένη συμβολοσειρά για να αναζητήσετε"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:41
+msgid "Default tal expression for query value"
+msgstr "Προεπιλογή Tal έκφραση για το ερώτημα αξία"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:95
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:60
+msgid "Default value"
+msgstr "Προεπιλεγμένη τιμή"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:183
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:55
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr "Βάθος να αναζητήσετε τη διαδρομή. 0 = το επίπεδο αυτό, -1 = όλοι οι υποφάκελοι αναδρομικές, καθώς και κάθε άλλο θετικό ακέραιο μετρούν τα επίπεδα υποφάκελο για την αναζήτηση."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr "Απενεργοποίηση πολύπλευρη πλοήγησης"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr "Απενεργοποίηση πολύπλευρη αναζήτηση"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:61
+msgid "Disable left portlets"
+msgstr "Απενεργοποίηση αριστερά συστατικά στοιχεία πύλης"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:76
+msgid "Disable right portlets"
+msgstr "Απενεργοποίηση δικαίωμα συστατικά στοιχεία πύλης"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:91
+msgid "Disable smart facets hiding"
+msgstr "Απενεργοποίηση έξυπνη όψεις κρύβονται"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:80
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:70
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:56
+msgid "Display number of results near each option"
+msgstr "Εμφάνιση του αριθμού των αποτελεσμάτων δίπλα σε κάθε επιλογή"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:146
+msgid "Display number of results near each tag"
+msgstr "Εμφάνιση του αριθμού των αποτελεσμάτων δίπλα σε κάθε ετικέτα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:40
+msgid "Display number of results per letter"
+msgstr "Εμφάνιση αριθμός των αποτελεσμάτων ανά γράμμα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:62
+msgid "Display widget in section"
+msgstr "Εμφάνιση widget στο τμήμα"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:57
+msgid "Display widget in section."
+msgstr "Εμφάνιση widget στο τμήμα."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr "Ενεργοποίηση πολύπλευρη πλοήγησης"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr "Ενεργοποίηση πολύπλευρη αναζήτηση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:16
+msgid "Enable hide/show criteria"
+msgstr "Ενεργοποίηση απόκρυψη / εμφάνιση κριτήρια"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:60
+msgid "Enable left portlets"
+msgstr "Ενεργοποίηση αριστερά συστατικά στοιχεία πύλης"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:75
+msgid "Enable right portlets"
+msgstr "Ενεργοποίηση δικαίωμα συστατικά στοιχεία πύλης"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:90
+msgid "Enable smart facets hiding"
+msgstr "Ενεργοποίηση έξυπνων όψεις κρύβονται"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:28
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:31
+msgid "End"
+msgstr "Τέλος"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:29
+msgid "End date"
+msgstr "Ημερομηνία λήξης"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr "Τύπος σφάλματος:"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr "Error value"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:18
+msgid "Etag value"
+msgstr "Τιμή ETag"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:88
+msgid "Export"
+msgstr "Εξαγωγή"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr "Πολύπλευρη κριτήρια"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:22
+msgid "Faceted global settings"
+msgstr "Πολύπλευρη καθολικές ρυθμίσεις"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:135
+msgid "Faceted navigation disabled"
+msgstr "Πολύπλευρη πλοήγηση άτομα με ειδικές ανάγκες"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:124
+msgid "Faceted navigation enabled"
+msgstr "Πολύπλευρη δυνατότητα πλοήγησης"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:169
+msgid "Faceted search disabled"
+msgstr "Πολύπλευρη αναζήτηση άτομα με ειδικές ανάγκες"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:161
+msgid "Faceted search enabled"
+msgstr "Πολύπλευρη δυνατότητα αναζήτησης"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:21
+msgid "Faceted settings"
+msgstr "Πολύπλευρη ρυθμίσεις"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr "Εργοστάσιο"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr "Φίλτρο προστέθηκε"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr "Φιλτράρισμα διαγράφεται"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:20
+msgid "Filter from vocabulary"
+msgstr "Φίλτρο από το λεξιλόγιό"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:29
+msgid "Filters"
+msgstr "Φίλτρα"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:109
+msgid "Filters deleted"
+msgstr "Φίλτρα διαγράφεται"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:43
+msgid "Friendly name"
+msgstr "Φιλικό όνομα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:57
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:41
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr "Πάρτε μοναδικών τιμών από τον κατάλογο ως εναλλακτική λύση για το λεξιλόγιο"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:68
+msgid "Hidden"
+msgstr "Κρυφό"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:46
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:86
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:77
+msgid "Hide items with zero results"
+msgstr "Απόκρυψη στοιχείων με μηδενικά αποτελέσματα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:69
+msgid "Hide widget"
+msgstr "Απόκρυψη widget"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:85
+msgid "Import"
+msgstr "Εισαγωγή"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:77
+msgid "Import - Export configuration"
+msgstr "Εισαγωγή - Εξαγωγή διαμόρφωσης"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:78
+msgid "Import configuration"
+msgstr "Εισαγωγή ρυθμίσεων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "Άκυρα ή άδειο το λεξιλόγιο που προβλέπεται για το widget. Αφήστε το κενό για τα κριτήρια διαλογής προεπιλογή."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr "Λιγότερο φίλτρων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:21
+msgid "List"
+msgstr "Λίστα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:70
+msgid "Maximum characters"
+msgstr "Μέγιστος αριθμός χαρακτήρων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:129
+msgid "Maximum font-size (px)"
+msgstr "Μέγιστο μέγεθος γραμματοσειράς (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:65
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:53
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:61
+msgid "Maximum items"
+msgstr "Μέγιστη στοιχεία"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:128
+msgid "Maximum size"
+msgstr "Μέγιστο μέγεθος"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:120
+msgid "Minimum font-size (px)"
+msgstr "Ελάχιστο μέγεθος γραμματοσειράς (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:119
+msgid "Minimum size"
+msgstr "Ελάχιστο μέγεθος"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr "Περισσότερα φίλτρα"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr "Μετακίνηση προς τα κάτω"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr "Μετακίνηση επάνω"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:34
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr "Πλοήγηση js-δέντρο σημείο εκκίνησης (σε σχέση με το χώρο Plone πρώην:. SITE / δεδομένων και χάρτες)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:67
+msgid "Navigation tree theme"
+msgstr "Πλοήγηση θέμα δέντρο"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:74
+msgid "No action provided"
+msgstr "Καμία ενέργεια που"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:66
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:54
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:62
+msgid "Number of items visible in widget"
+msgstr "Αριθμός στοιχείων σε ορατό widget"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:38
+msgid "Operator"
+msgstr "Χειριστής"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:126
+msgid "Order"
+msgstr "παραγγελία"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:79
+msgid "Path"
+msgstr "Διαδρομή"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:20
+msgid "Path to portlet macro"
+msgstr "Πορεία προς το συστατικό στοιχείο πύλης μακροοικονομική"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:31
+msgid "Plone portlet"
+msgstr "Plone συστατικό στοιχείο πύλης"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:19
+msgid "Portlet macro"
+msgstr "Συστατικό στοιχείο πύλης μακροοικονομική"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:132
+msgid "Portlets left column is hidden now"
+msgstr "Συστατικά στοιχεία πύλης αριστερή στήλη κρύβεται τώρα"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:129
+msgid "Portlets left column is visible now"
+msgstr "Συστατικά στοιχεία πύλης αριστερή στήλη είναι ορατή τώρα"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:142
+msgid "Portlets right column is hidden now"
+msgstr "Συστατικά στοιχεία πύλης στήλη δεξιά κρύβεται τώρα"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:139
+msgid "Portlets right column is visible now"
+msgstr "Συστατικά στοιχεία πύλης στήλη δεξιά είναι ορατή τώρα"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:52
+msgid "Position"
+msgstr "Θέση"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:45
+msgid "Position of the widget."
+msgstr "Θέση του widget."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr "Python όνομα ενός εργοστασίου που μπορεί να δημιουργήσει το αντικείμενο εφαρμογής. Αυτό πρέπει να προσδιορίσει ένα αντικείμενο σε ένα module χρησιμοποιώντας το πλήρες όνομα διακεκομμένη."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:99
+msgid "Radio"
+msgstr "Ραδιόφωνο"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:49
+msgid "Range"
+msgstr "εύρος"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr "Κατάργηση όλων των φίλτρων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:61
+msgid "Results per page"
+msgstr "Αποτελέσματα ανά σελίδα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "Results per page ending value"
+msgstr "Αποτελέσματα ανά σελίδα που έληξε αξία"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "Results per page starting value"
+msgstr "Αποτελέσματα ανά σελίδα τιμή έναρξης"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:41
+msgid "Results per page step"
+msgstr "Αποτελέσματα ανά σελίδα βήμα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "Αντίστροφη"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:72
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:61
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:48
+msgid "Reverse options"
+msgstr "Αντίστροφη επιλογές"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:33
+msgid "Root folder"
+msgstr "Φακέλου ρίζας"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:182
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:21
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:54
+msgid "Search Depth"
+msgstr "Βάθος Αναζήτηση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:39
+msgid "Search with AND/OR between elements"
+msgstr "Αναζήτηση με ή / και μεταξύ των στοιχείων"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:61
+msgid "Section"
+msgstr "Τμήμα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:84
+msgid "Select"
+msgstr "Επιλογή"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:114
+msgid "Select all items"
+msgstr "Επιλογή όλων των στοιχείων"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:152
+msgid "Smart facets hiding is now disabled"
+msgstr "Smart απόκρυψη πτυχές είναι τώρα εκτός λειτουργίας"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:149
+msgid "Smart facets hiding is now enabled"
+msgstr "Smart απόκρυψη πτυχές είναι τώρα ενεργοποιημένη"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:62
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:49
+msgid "Sort options reversed"
+msgstr "Επιλογές ταξινόμησης αντιστρέφεται"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:43
+msgid "Sorting"
+msgstr "Ταξινόμηση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Sphere"
+msgstr "Σφαίρα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:20
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:22
+msgid "Start"
+msgstr "Έναρξη"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:21
+msgid "Start date"
+msgstr "Ημερομηνία έναρξης"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:40
+msgid "Step"
+msgstr "Βήμα"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr "Συγχρονισμός πολύπλευρη μεταφράσεις"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:61
+msgid "TAL Expression"
+msgstr "TAL Έκφραση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:174
+msgid "Tags Cloud"
+msgstr "Ετικέτες Cloud"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:40
+msgid "Tal Expression"
+msgstr "Tal Έκφραση"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:41
+msgid "Text field"
+msgstr "Πεδίο Κείμενο"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:68
+msgid "Theme to be used with this widget"
+msgstr "Θέμα που πρέπει να χρησιμοποιούνται με αυτό το μαραφέτι"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:87
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:78
+msgid "This option works only if 'count results' is enabled"
+msgstr "Αυτή η επιλογή δουλεύει μόνο αν «τα αποτελέσματα μετράνε» είναι ενεργοποιημένη"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.pt:29
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr "Αυτό το widget θα πρέπει να αγνοηθεί, όπως προβλέπεται ρίζα είναι απρόσιτος ή δεν έχει folderish παιδιά."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr "Αυτό το widget θα πρέπει να αγνοούνται σε λειτουργία προβολής ως ένα σφάλμα κατά την προσπάθεια να το καταστήσει. Για περισσότερες λεπτομέρειες παρακαλούμε να ελέγξετε το αρχείο καταγραφής διακομιστή. Μπορείτε επίσης να προσπαθήσετε να τροποποιήσετε τη διαμόρφωση widget για να δούμε τι ιδιοκτησίας προκαλεί αυτό το πρόβλημα."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:44
+msgid "Title for widget to display in view page"
+msgstr "Τίτλος widget για να εμφανιστεί σε προβολή σελίδας"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:32
+msgid "Type"
+msgstr "Τύπος"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:111
+msgid "Type of the cloud"
+msgstr "Τύπος του νέφους"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:33
+msgid "Type of the widget."
+msgstr "Τύπος του widget."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:60
+msgid "UI Calendar years range"
+msgstr "UI Ημερολογιακά έτη κυμαίνονται"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:17
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr "Αποεπιλέξτε αυτό το πλαίσιο, αν δεν θέλετε απόκρυψη / εμφάνιση κριτήρια διαθέτουν τη δυνατότητα σε αυτό το μαραφέτι"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:21
+msgid "Visible to"
+msgstr "Ορατό σε"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:31
+msgid "Vocabulary"
+msgstr "Λεξιλόγιο"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:21
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr "Λεξιλόγιο να χρησιμοποιήσετε για να φιλτράρετε τα κριτήρια διαλογής. Αφήστε το κενό για τα κριτήρια διαλογής προεπιλογή."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:48
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:34
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:32
+msgid "Vocabulary to use to render widget items"
+msgstr "Λεξιλόγιο να χρησιμοποιούμε για να καταστήσουμε τα στοιχεία widget"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:53
+msgid "Widget position in page"
+msgstr "Widget θέση στη σελίδα"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:149
+msgid "Widget type"
+msgstr "Τύπος Widget"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:22
+msgid "Widget will be visible only for selected user"
+msgstr "Widget θα είναι ορατό μόνο για επιλεγμένους χρήστες"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
+msgid "[X] Remove all"
+msgstr "[X] Κατάργηση όλων"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:30
+msgid "all items"
+msgstr "Όλα τα αντικείμενα"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:38
+msgid "in current results"
+msgstr "σε τρέχοντα αποτελέσματα"
+

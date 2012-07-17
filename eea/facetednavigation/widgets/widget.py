@@ -40,10 +40,8 @@ CommonEditSchema = Schema((
         required=True,
         widget=StringWidget(
             size=25,
-            label=_('faceted_criteria_title',
-                    default=u"Friendly name"),
-            description=_('help_faceted_criteria_title',
-                          default=u"Title for widget to display in view page"),
+            label=_(u"Friendly name"),
+            description=_(u"Title for widget to display in view page"),
         )
     ),
     StringField('position',
@@ -51,9 +49,8 @@ CommonEditSchema = Schema((
         vocabulary_factory="eea.faceted.vocabularies.WidgetPositions",
         widget=SelectionWidget(
             format='select',
-            label=_('faceted_criteria_position', default=u'Position'),
-            description=_('help_faceted_criteria_position',
-                          default=u"Widget position in page"),
+            label=_(u'Position'),
+            description=_(u"Widget position in page"),
         )
     ),
     StringField('section',
@@ -61,18 +58,15 @@ CommonEditSchema = Schema((
         vocabulary_factory="eea.faceted.vocabularies.WidgetSections",
         widget=SelectionWidget(
             format='select',
-            label=_('faceted_criteria_section',
-                    default=u"Section"),
-            description=_('help_faceted_criteria_section',
-                          default=u"Display widget in section"),
+            label=_(u"Section"),
+            description=_(u"Display widget in section"),
         )
     ),
     BooleanField('hidden',
         schemata="layout",
         widget=BooleanWidget(
-            label=_('faceted_criteria_hidden', default=u'Hidden'),
-            description=_('help_faceted_criteria_hidden',
-                          default=u"Hide widget"),
+            label=_(u'Hidden'),
+            description=_(u"Hide widget"),
         )
     ),
 ))

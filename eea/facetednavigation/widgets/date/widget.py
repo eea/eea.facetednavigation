@@ -48,10 +48,8 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.DateRangeCatalogIndexes',
         widget=SelectionWidget(
             format='select',
-            label=_(u'faceted_criteria_index',
-                default=u'Catalog index'),
-            description=_(u'help_faceted_criteria_index',
-                default=u'Catalog index to use for search'),
+            label=_(u'Catalog index'),
+            description=_(u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -59,10 +57,9 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label=_('faceted_criteria_default', default='Default value'),
-            description=_(u'help_faceted_criteria_date_default',
-                default=u'Default daterange (e.g. "now-365=>now+1" which means '
-                        u'"Starting one year ago until tomorrow")'),
+            label=_(u'Default value'),
+            description=_(u"Default daterange (e.g. 'now-365=>now+1' which "
+                        u"means 'Starting one year ago until tomorrow')"),
             i18n_domain="eea"
         )
     ),

@@ -1,0 +1,722 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-17 13:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:16
+msgid "&#8711; Show filters"
+msgstr "∇ Näytä suodattimet"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:15
+msgid "&#916; Hide filters"
+msgstr "Δ Piilota suodattimet"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:70
+msgid "Add"
+msgstr "Lisää"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:26
+msgid "Add new filter"
+msgstr "Lisää uusi suodatin"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:27
+msgid "Add widget"
+msgstr "Lisää widget"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "Kun kysely suodattimet"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.pt:21
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.pt:29
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.pt:23
+msgid "All"
+msgstr "Kaikki"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:69
+msgid "Alphabetic"
+msgstr "Aakkosellinen"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:99
+msgid "Are you sure you want to delete ${xxxxx} widget?"
+msgstr "Oletko varma että haluat poistaa ${xxxxx} widget?"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:43
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:40
+msgid "Catalog"
+msgstr "Luettelo"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:32
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:26
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:51
+msgid "Catalog index"
+msgstr "Catalog-indeksi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:27
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:52
+msgid "Catalog index to use for search"
+msgstr "Catalog indeksi käyttää hakua"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr "Catalog kysely"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:107
+msgid "Checkboxes"
+msgstr "Valintaruudut"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:23
+msgid "Cloud"
+msgstr "pilvi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:137
+msgid "Cloud height"
+msgstr "Cloud korkeus"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:138
+msgid "Cloud height (px)"
+msgstr "Cloud korkeus (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:110
+msgid "Cloud type"
+msgstr "Cloud tyyppi"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:47
+msgid "Configuration imported"
+msgstr "Määritykset on tuotu"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:20
+msgid "Configure faceted navigation"
+msgstr "Määritä fasettihiottu navigointi"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:109
+msgid "Content listing"
+msgstr "Sisällön listalle"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:61
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr "Ohjaa eri yearsdisplayed vuonna avattavasta: joko suhteessa nykypäivän vuoteen (-nn: + nn), suhteessa valittuun vuoteen (c-nn: c + nn), absoluuttinen (nnnn: nnnn), tai niiden yhdistelmiä seuraavista muodoista (nnnn:-nn)."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:39
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:79
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:69
+msgid "Count results"
+msgstr "Laske tulokset"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr "Laskurit"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:125
+msgid "Criterion details"
+msgstr "Kriteeri yksityiskohdat"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "Nykyinen kokoonpano"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:71
+msgid "Cut long phrases to provided number of characters"
+msgstr "Leikkaa pitkiä lauseita jos merkkejä"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:73
+msgid "Date"
+msgstr "Pvm"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:79
+msgid "Date range"
+msgstr "Päivämäärät"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:32
+msgid "Debugger"
+msgstr "Debugger"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:51
+msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
+msgstr "Oletus daterange (esim. '2009 / 12/01 => 12.31.2009')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:61
+msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
+msgstr "Oletus daterange (esim. 'now-365 => Nyt +1' joka tarkoittaa 'alkaen vuosi sitten huomiseen')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:17
+msgid "Default etag"
+msgstr "Oletus ETAG"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:96
+msgid "Default items (one per line)"
+msgstr "Oletus kohteet (yksi per rivi)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:57
+msgid "Default letter to be selected"
+msgstr "Oletus kirje valitaan"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:44
+msgid "Default path to search in (relative to root folder)"
+msgstr "Oletuspolku etsiä (suhteessa pääkansioon)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:38
+msgid "Default range (e.g. '1 => 3')"
+msgstr "Oletus alue (esim. '1 => 3 ')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:50
+msgid "Default results per page"
+msgstr "Default tulos per sivu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:88
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:163
+msgid "Default selected item"
+msgstr "Oletus valitun kohteen"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:31
+msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
+msgstr "Oletus lajittelu-indeksi (esim. 'tehokas' ja 'tehokas (käänteinen)')"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:30
+msgid "Default string to search for"
+msgstr "Oletus merkkijono etsiä"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:41
+msgid "Default tal expression for query value"
+msgstr "Oletus Tal lauseke kyselyn arvoa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:95
+#: eea.facetednavigation/eea/facetednavigation/widgets/date/widget.py:60
+msgid "Default value"
+msgstr "Oletusarvo"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:183
+msgid "Delete"
+msgstr "Poista"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:55
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr "Syvyys etsiä polku. 0 = tällä tasolla, -1 = alikansioineen rekursiivinen ja muut positiivinen kokonaisluku laskea alikansiota-tasot etsiä."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr "Poista fasettihiottu navigointi"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr "Poista fasettihiottu haku"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:61
+msgid "Disable left portlets"
+msgstr "Poista vasen portlet"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:76
+msgid "Disable right portlets"
+msgstr "Poista oikea portlet"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:91
+msgid "Disable smart facets hiding"
+msgstr "Poista älykäs puolta piilossa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:80
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:70
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:56
+msgid "Display number of results near each option"
+msgstr "Näytä tulosten määrä lähes jokaisen vaihtoehdon"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:146
+msgid "Display number of results near each tag"
+msgstr "Näytä tulosten määrä lähekkäin tag"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:40
+msgid "Display number of results per letter"
+msgstr "Näytä tulosten määrä per kirje"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:62
+msgid "Display widget in section"
+msgstr "Näytä widget kohdassa"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:57
+msgid "Display widget in section."
+msgstr "Näytä widget kohdassa."
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr "Ota fasettihiottu navigointi"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr "Ota fasettihiottu haku"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:16
+msgid "Enable hide/show criteria"
+msgstr "Ota piilottaa / näyttää kriteerit"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:60
+msgid "Enable left portlets"
+msgstr "Ota vasen portlet"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:75
+msgid "Enable right portlets"
+msgstr "Ota oikea portlet"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:90
+msgid "Enable smart facets hiding"
+msgstr "Ota älykäs puolta piilossa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:28
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:31
+msgid "End"
+msgstr "End-näppäin"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:29
+msgid "End date"
+msgstr "Lopetuspäivä"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr "Virhetyyppi:"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr "Error arvo:"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/etag/widget.py:18
+msgid "Etag value"
+msgstr "ETAG arvo"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:88
+msgid "Export"
+msgstr "Vie"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr "Särmikkäät kriteerit"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:22
+msgid "Faceted global settings"
+msgstr "Särmikkäät yleisasetukset"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:135
+msgid "Faceted navigation disabled"
+msgstr "Särmikkäät navigointi käytössä"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:124
+msgid "Faceted navigation enabled"
+msgstr "Särmikkäät navigointi käytössä"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:169
+msgid "Faceted search disabled"
+msgstr "Särmikkäät haku käytössä"
+
+#: eea.facetednavigation/eea/facetednavigation/subtypes/subtyper.py:161
+msgid "Faceted search enabled"
+msgstr "Särmikkäät haku päällä"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:21
+msgid "Faceted settings"
+msgstr "Särmikkäät asetukset"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr "Tehdas"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr "Suodata lisätty"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr "Suodata poistettu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:20
+msgid "Filter from vocabulary"
+msgstr "Suodata mistä sanastosta"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:29
+msgid "Filters"
+msgstr "Suodattimet"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/configure.py:109
+msgid "Filters deleted"
+msgstr "Suodattimet poistettu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:43
+msgid "Friendly name"
+msgstr "Friendly nimi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:57
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:41
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr "Hanki ainutlaatuisia arvoja kuvaston vaihtoehtona sanastoa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:68
+msgid "Hidden"
+msgstr "Piilotetut"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:46
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:86
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:77
+msgid "Hide items with zero results"
+msgstr "Piilota kohteita nolla tulosta"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:69
+msgid "Hide widget"
+msgstr "Piilota widget"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:85
+msgid "Import"
+msgstr "Tuoda"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:77
+msgid "Import - Export configuration"
+msgstr "Import - Export kokoonpano"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:78
+msgid "Import configuration"
+msgstr "Tuo kokoonpano"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "Virheellinen tai tyhjä sanastoa säädetyt tämä vekotin. Jätä tyhjä oletuksena lajitteluperusteet."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr "Vähemmän suodattimet"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:21
+msgid "List"
+msgstr "luettelo"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:70
+msgid "Maximum characters"
+msgstr "Merkkien enimmäismäärä"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:129
+msgid "Maximum font-size (px)"
+msgstr "Suurin font-size (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:65
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:53
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:61
+msgid "Maximum items"
+msgstr "Suurin kohdetta"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:128
+msgid "Maximum size"
+msgstr "Suurin koko"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:120
+msgid "Minimum font-size (px)"
+msgstr "Minimi font-size (px)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:119
+msgid "Minimum size"
+msgstr "Vähimmäiskoko"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr "Useampi suodatin"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr "Siirrä alaspäin"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr "Siirrä ylöspäin"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:34
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr "Navigointi js-puu lähtökohta (suhteessa plone sivusto. Ex: SITE / data-ja-kartat)"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:67
+msgid "Navigation tree theme"
+msgstr "Navigation puu teema"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/app/exportimport.py:74
+msgid "No action provided"
+msgstr "Ei toimenpiteitä edellyttäen"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:66
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:54
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:62
+msgid "Number of items visible in widget"
+msgstr "Kohteiden määrä näkyy widget"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:38
+msgid "Operator"
+msgstr "Operaattori"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:126
+msgid "Order"
+msgstr "Tilaus"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:79
+msgid "Path"
+msgstr "Polku"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:20
+msgid "Path to portlet macro"
+msgstr "Polku portlet makro"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:31
+msgid "Plone portlet"
+msgstr "Plone portlet"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/portlet/widget.py:19
+msgid "Portlet macro"
+msgstr "Portlet makro"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:132
+msgid "Portlets left column is hidden now"
+msgstr "Portlet vasen sarake piilotetaan nyt"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:129
+msgid "Portlets left column is visible now"
+msgstr "Portlet vasen sarake on näkyvissä nyt"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:142
+msgid "Portlets right column is hidden now"
+msgstr "Portlet oikea sarake piilotetaan nyt"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:139
+msgid "Portlets right column is visible now"
+msgstr "Portlet oikea sarake näkyy nyt"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:44
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:52
+msgid "Position"
+msgstr "Sijainti"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:45
+msgid "Position of the widget."
+msgstr "Kanta widgetin."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr "Python nimi tehdas, joka voi luoda täytäntöönpanoa objekti. Tämä on tunnistettava esine Moduuli koko katkoviivoja nimi."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:99
+msgid "Radio"
+msgstr "Radio"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.py:49
+msgid "Range"
+msgstr "Alue"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
+msgid "Remove all filters"
+msgstr "Poista kaikki suodattimet"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:61
+msgid "Results per page"
+msgstr "Tulokset sivulla"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "Results per page ending value"
+msgstr "Tulokset sivulla Loppuarvo"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "Results per page starting value"
+msgstr "Tulokset sivulla alkuarvo"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:41
+msgid "Results per page step"
+msgstr "Tulokset sivulla askel"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "Peruuttaa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:72
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:61
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:48
+msgid "Reverse options"
+msgstr "Käänteinen vaihtoehtoja"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:33
+msgid "Root folder"
+msgstr "Root-kansioon"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:182
+msgid "Save"
+msgstr "Tallenna"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:21
+msgid "Search"
+msgstr "Haku"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:54
+msgid "Search Depth"
+msgstr "Haun syvyys"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:39
+msgid "Search with AND/OR between elements"
+msgstr "Haku kanssa ja / tai elementtien välissä"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:56
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:61
+msgid "Section"
+msgstr "Osa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:84
+msgid "Select"
+msgstr "Valita"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:114
+msgid "Select all items"
+msgstr "Valitse kaikki"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:152
+msgid "Smart facets hiding is now disabled"
+msgstr "Smart puolta piilossa on nyt poistettu käytöstä"
+
+#: eea.facetednavigation/eea/facetednavigation/settings/menu.py:149
+msgid "Smart facets hiding is now enabled"
+msgstr "Smart puolta piilossa on nyt käytössä"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:73
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:62
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:49
+msgid "Sort options reversed"
+msgstr "Lajittele vaihtoehdoista päinvastaiseksi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:43
+msgid "Sorting"
+msgstr "Lajittelu"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Sphere"
+msgstr "Pallo"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/range/widget.pt:20
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:22
+msgid "Start"
+msgstr "Alkaa"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.pt:21
+msgid "Start date"
+msgstr "Aloituspäivä"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/resultsperpage/widget.py:40
+msgid "Step"
+msgstr "Vaihe"
+
+#: eea.facetednavigation/eea/facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr "Synkronoi fasettihiottu käännökset"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:61
+msgid "TAL Expression"
+msgstr "TAL Expression"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:174
+msgid "Tags Cloud"
+msgstr "Tunnisteet Cloud"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tal/widget.py:40
+msgid "Tal Expression"
+msgstr "Tal Expression"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.py:41
+msgid "Text field"
+msgstr "Tekstikenttä"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.py:68
+msgid "Theme to be used with this widget"
+msgstr "Teema tulee käyttää tämä vekotin"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/alphabetic/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:87
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:78
+msgid "This option works only if 'count results' is enabled"
+msgstr "Tämä toiminto toimii vain, jos 'count tuloksia' on käytössä"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/path/widget.pt:29
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr "Tämä widgetti ohitetaan kuten juuri on tavoittamattomissa tai sillä ei ole folderish lapsia."
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr "Tämä widgetti ohitetaan katselutilassa koska tapahtui virhe yrittää tehdä sitä. Lisätietoja tarkista palvelimen lokitiedostoon. Voit myös yrittää muokata widgetin asetukset, jotta nähdään, mitä omaisuutta aiheuttaa tämän ongelman."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:44
+msgid "Title for widget to display in view page"
+msgstr "Otsikko ja widget näyttää koska sivu"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:32
+msgid "Type"
+msgstr "Tyyppi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/tagscloud/widget.py:111
+msgid "Type of the cloud"
+msgstr "Tyyppi pilvi"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:33
+msgid "Type of the widget."
+msgstr "Tyyppi widgetin."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/daterange/widget.py:60
+msgid "UI Calendar years range"
+msgstr "UI Kalenterivuodet vaihtelevat"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.py:17
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr "Poista tämä valinta, jos et halua hide / show kriteerit ominaisuus käytössä tämä vekotin"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:21
+msgid "Visible to"
+msgstr "Näkyy"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:47
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:33
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:31
+msgid "Vocabulary"
+msgstr "Sanasto"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/sorting/widget.py:21
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr "Sanaston käyttö suodattaa lajitteluperusteet. Jätä tyhjä oletuksena lajitteluperusteet."
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/checkbox/widget.py:48
+#: eea.facetednavigation/eea/facetednavigation/widgets/radio/widget.py:34
+#: eea.facetednavigation/eea/facetednavigation/widgets/select/widget.py:32
+msgid "Vocabulary to use to render widget items"
+msgstr "Sanaston käyttö tehdä widget kohteita"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/widget.py:53
+msgid "Widget position in page"
+msgstr "Widget asema sivulla"
+
+#: eea.facetednavigation/eea/facetednavigation/browser/template/configure.pt:149
+msgid "Widget type"
+msgstr "Widget tyyppi"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/debug/widget.py:22
+msgid "Widget will be visible only for selected user"
+msgstr "Widget näkyvät vain valituille käyttäjäryhmille"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/criteria/widget.pt:21
+msgid "[X] Remove all"
+msgstr "[X] Poista kaikki"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:30
+msgid "all items"
+msgstr "kaikki kohteet"
+
+#: eea.facetednavigation/eea/facetednavigation/widgets/text/widget.pt:38
+msgid "in current results"
+msgstr "Lyhytaikaisten tulokset"
+

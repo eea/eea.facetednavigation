@@ -19,9 +19,8 @@ EditSchema = Schema((
         schemata="display",
         default=0,
         widget=IntegerWidget(
-            label=_(u'faceted_criteria_start', default=u'Start'),
-            description=_(u'help_faceted_criteria_start',
-                default=u'Results per page starting value'),
+            label=_(u'Start'),
+            description=_(u'Results per page starting value'),
             i18n_domain="eea"
         )
     ),
@@ -29,9 +28,8 @@ EditSchema = Schema((
         schemata="display",
         default=50,
         widget=IntegerWidget(
-            label=_(u'faceted_criteria_end', default=u'End'),
-            description=_(u'help_faceted_criteria_end',
-                default=u'Results per page ending value'),
+            label=_(u'End'),
+            description=_(u'Results per page ending value'),
             i18n_domain="eea"
         )
     ),
@@ -39,9 +37,8 @@ EditSchema = Schema((
         schemata="display",
         default=5,
         widget=IntegerWidget(
-            label=_(u'faceted_criteria_step', default=u'Step'),
-            description=_(u'help_faceted_criteria_step',
-                default=u'Results per page step'),
+            label=_(u'Step'),
+            description=_(u'Results per page step'),
             i18n_domain="eea"
         )
     ),
@@ -49,9 +46,8 @@ EditSchema = Schema((
         schemata="default",
         default=20,
         widget=IntegerWidget(
-            label=_(u'faceted_criteria_default', default=u'Default value'),
-            description=_(u'help_faceted_criteria_resultsperpage_default',
-                default=u'Default results per page'),
+            label=_(u'Default value'),
+            description=_(u'Default results per page'),
             i18n_domain="eea"
         )
     ),
