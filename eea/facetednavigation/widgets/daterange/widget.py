@@ -18,10 +18,18 @@ from eea.facetednavigation import EEAMessageFactory as _
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
 
 def formated_time(datestr):
-    """Return a datetime object from a string with
+    """Return a DateTime object from a string with
     Y-m-d as format."""
-    return datetime.strptime(datestr, '%Y-%m-%d')
-
+    try:
+        if(len(datestr) <= 4):
+            datestr = datetime.strptime(datestr, '%Y')
+        elif '-' in datestr:
+            datestr = datetime.strptime(datestr, '%Y-%m-%d')
+        elif '/' in datestr:
+            datestr = datetime.strptime(datestr, '%Y/%m/%d')
+    except Exception, err:
+        logger.warn(err)
+    return DateTime(datestr)
 
 EditSchema = Schema((
     StringField('index',
@@ -153,8 +161,8 @@ class Widget(AbstractWidget):
         try:
             # give datetime.datetime to allow very old or big years
             # not to be transformed in current years (eg: 0001 -> 1901)
-            start = DateTime(formated_time(start))
-            end = DateTime(formated_time(end))
+            start = formated_time(start)
+            end = formated_time(end)
         except Exception, err:
             logger.exception(err)
             return query
