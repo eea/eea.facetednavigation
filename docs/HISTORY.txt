@@ -9,6 +9,10 @@ Changelog
 * Bug fix: Fixed formated_time method in daterange widget to also accept years
   as valid dates
   [voineali fixes #5371]
+* Feature: Changed the i18n keys in .pt inorder to use Google translator kit for
+  translations. Added new translations: bg, cs, da, el, et, fi, hu, is, lt,
+  lv, mt, nl, no, pt, ru, sk, sl, sv, tr
+  [prospchr fixes #5378]
 
 4.7 - (2012-07-13)
 ------------------

@@ -30,7 +30,7 @@
       <div id="faceted-widget-type">
         <div class="field"  id="archetypes-fieldname-wtype">
           <label for="wtype" i18n:translate="">Type</label>
-          <div class="formHelp" i18n:translate="help_widget_type">
+          <div class="formHelp" i18n:translate="">
             Type of the widget.
           </div>
           <select name="wtype" id="wtype">
@@ -42,7 +42,7 @@
         </div>
         <div class="field" id="archetypes-fieldname-wposition">
           <label for="wposition" i18n:translate="">Position</label>
-          <div class="formHelp" i18n:translate="help_widget_position">
+          <div class="formHelp" i18n:translate="">
             Position of the widget.
           </div>
           <select name="wposition" id="wposition">
@@ -54,7 +54,7 @@
         </div>
         <div class="field" id="archetypes-fieldname-wsection">
           <label for="wsection" i18n:translate="">Section</label>
-          <div class="formHelp" i18n:translate="help_widget_section">
+          <div class="formHelp" i18n:translate="">
             Display widget in section.
           </div>
           <select name="wsection" id="wsection">
@@ -107,7 +107,7 @@
     tal:define="criteria view/get_criteria">
 
     <table class="listing" summary="Content listing"
-      i18n:attributes="summary summary_content_listing;">
+      i18n:attributes="summary">
       <thead>
         <tr>
         <th class="nosort" style="width: 4%">
@@ -120,7 +120,7 @@
             onClick="toggleSelect(this,'paths:list');"
             tal:attributes="src string:$portal_url/select_all_icon.gif"
             alt="Select all items"
-            i18n:attributes="title label_select_all_items; alt label_select_all_items;"/>
+            i18n:attributes="title;alt"/>
         </th>
         <th class="nosort" i18n:translate="">Criterion details</th>
         <th class="nosort" i18n:translate="">Order</th>

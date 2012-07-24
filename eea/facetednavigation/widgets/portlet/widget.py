@@ -16,9 +16,8 @@ EditSchema = Schema((
         schemata="default",
         required=True,
         widget=StringWidget(
-            label=_(u'faceted_portlet_macro', default='Portlet macro'),
-            description=_(u'help_faceted_portlet_macro',
-                default='Path to portlet macro'),
+            label=_(u'Portlet macro'),
+            description=_(u'Path to portlet macro'),
             i18n_domain="eea"
         )
     ),

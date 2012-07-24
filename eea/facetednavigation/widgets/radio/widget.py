@@ -21,10 +21,8 @@ EditSchema = Schema((
         required=True,
         vocabulary_factory='eea.faceted.vocabularies.CatalogIndexes',
         widget=SelectionWidget(
-            label=_(u'faceted_criteria_index',
-                default=u'Catalog index'),
-            description=_('help_faceted_criteria_index',
-                default=u'Catalog index to use for search'),
+            label=_(u'Catalog index'),
+            description=_(u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -32,10 +30,8 @@ EditSchema = Schema((
         schemata="default",
         vocabulary_factory='eea.faceted.vocabularies.PortalVocabularies',
         widget=SelectionWidget(
-            label=_(u'faceted_criteria_vocabulary',
-                default=u'Vocabulary'),
-            description=_('help_faceted_criteria_vocabulary',
-                default=u'Vocabulary to use to render widget items'),
+            label=_(u'Vocabulary'),
+            description=_(u'Vocabulary to use to render widget items'),
             i18n_domain="eea"
         )
     ),
@@ -44,10 +40,8 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.UseCatalog',
         widget=SelectionWidget(
             format='select',
-            label=_(u'faceted_criteria_catalog',
-                default=u'Catalog'),
-            description=_(u'help_faceted_criteria_catalog',
-                default=u'Get unique values from catalog as an alternative '
+            label=_(u'Catalog'),
+            description=_(u'Get unique values from catalog as an alternative '
                         u'for vocabulary'),
             i18n_domain="eea"
         )
@@ -56,39 +50,33 @@ EditSchema = Schema((
         schemata="display",
         default=0,
         widget=IntegerWidget(
-            label=_(u'faceted_criteria_maxitems',
-                default='Maximum items'),
-            description=_(u'help_faceted_criteria_maxitems',
-                default=u'Number of items visible in widget'),
+            label=_(u'Maximum items'),
+            description=_(u'Number of items visible in widget'),
             i18n_domain="eea"
         )
     ),
     BooleanField('sortreversed',
         schemata="display",
         widget=BooleanWidget(
-            label=_(u'faceted_criteria_reverse_options',
-                default='Reverse options'),
-            description=_(u'help_faceted_criteria_reverse_options',
-                default='Sort options reversed'),
+            label=_(u'Reverse options'),
+            description=_(u'Sort options reversed'),
             i18n_domain="eea"
         )
     ),
     BooleanField('count',
         schemata="countable",
         widget=BooleanWidget(
-            label=_(u'faceted_criteria_count', default=u'Count results'),
-            description=_('help_faceted_criteria_count',
-                default=u'Display number of results near each option'),
+            label=_(u'Count results'),
+            description=_(u'Display number of results near each option'),
             i18n_domain="eea"
         )
     ),
     BooleanField('hidezerocount',
         schemata="countable",
         widget=BooleanWidget(
-            label=_(u'faceted_criteria_emptycounthide',
-                default=u'Hide items with zero results'),
-            description=_(u'help_faceted_criteria_criteria_emptycounthide',
-               default=u'This option works only if "count results" is enabled'),
+            label=_(u'Hide items with zero results'),
+            description=_(u"This option works only if 'count results' "
+                           "is enabled"),
             i18n_domain="eea"
         )
     ),
@@ -96,10 +84,8 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label=_(u'faceted_criteria_default',
-                default=u'Default value'),
-            description=_(u'help_faceted_criteria_radio_default',
-                default=u'Default selected item'),
+            label=_(u'Default value'),
+            description=_(u'Default selected item'),
             i18n_domain="eea"
         )
     ),

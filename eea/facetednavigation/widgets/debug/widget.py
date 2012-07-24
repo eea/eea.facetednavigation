@@ -18,10 +18,8 @@ EditSchema = Schema((
         vocabulary=DisplayList(()),
         widget=SelectionWidget(
             format='select',
-            label=_(u'faceted_criteria_user',
-                default=u'Visible to'),
-            description=_(u'help_faceted_criteria_user',
-                default=u'Widget will be visible only for selected user'),
+            label=_(u'Visible to'),
+            description=_(u'Widget will be visible only for selected user'),
             i18n_domain="eea"
         )
     ),
