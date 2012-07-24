@@ -14,10 +14,8 @@ EditSchema = Schema((
         default='1.0',
         widget=StringWidget(
             size=25,
-            label=_(u'faceted_criteria_etag_default',
-                default='Default etag'),
-            description=_(u'help_faceted_criteria_etag_default',
-                default=u'Etag value'),
+            label=_(u'Default etag'),
+            description=_(u'Etag value'),
             i18n_domain="eea"
         )
     ),

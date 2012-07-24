@@ -29,26 +29,23 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.AlphabeticCatalogIndexes',
         widget=SelectionWidget(
             format='select',
-            label=_('faceted_criteria_index', default=u"Catalog index"),
-            description=_('help_faceted_criteria_index',
-                          default=u"Catalog index to use for search"),
+            label=_(u"Catalog index"),
+            description=_(u"Catalog index to use for search"),
         )
     ),
     BooleanField('count',
         schemata="countable",
         widget=BooleanWidget(
-            label=_('faceted_criteria_count', default=u"Count results"),
-            description=_('help_faceted_criteria_alphabetic_count',
-                          default=u'Display number of results per letter'),
+            label=_(u"Count results"),
+            description=_(u'Display number of results per letter'),
         )
     ),
     BooleanField('hidezerocount',
         schemata="countable",
         widget=BooleanWidget(
-            label=_('faceted_criteria_emptycounthide',
-               default=u"Hide items with zero results"),
-            description=_('help_faceted_criteria_criteria_emptycounthide',
-               default=u'This option works only if "count results" is enabled'),
+            label=_(u"Hide items with zero results"),
+            description=_(u"This option works only if 'count results' "
+                           "is enabled"),
         )
     ),
     StringField('default',
@@ -56,9 +53,8 @@ EditSchema = Schema((
         widget=StringWidget(
             size=3,
             maxlength=1,
-            label=_('faceted_criteria_default', default=u"Default value"),
-            description=_('help_faceted_criteria_default',
-                          default=u"Default letter to be selected"),
+            label=_(u"Default value"),
+            description=_(u"Default letter to be selected"),
         )
     ),
 ))

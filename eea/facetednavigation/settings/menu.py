@@ -18,10 +18,8 @@ from eea.facetednavigation import EEAMessageFactory as _
 class SettingsMenu(BrowserSubMenuItem):
     """ Faceted settings menu
     """
-    title = _(u'label_faceted_settings_menu',
-              default=u'Faceted settings')
-    description = _(u'help_faceted_settings_menu',
-                    default=u'Faceted global settings')
+    title = _(u'Faceted settings')
+    description = _(u'Faceted global settings')
 
     submenuId = 'faceted_settings_actions'
     order = 5

@@ -18,7 +18,7 @@ msgid "Current search"
 msgstr "Aktuelle Suche"
 
 msgid "Faceted criteria"
-msgstr ""
+msgstr "Faceted Kriterien"
 
 msgid "Object provides"
 msgstr "Objekt stellt zur Verfügung"
@@ -28,20 +28,4 @@ msgstr "Portal-Type"
 
 msgid "Sort on"
 msgstr "Sortieren nach"
-
-#: Default: "Countable"
-msgid "label_schema_countable"
-msgstr "Zählbar"
-
-#: Default: "Display"
-msgid "label_schema_display"
-msgstr "Anzeige"
-
-#: Default: "Geometry"
-msgid "label_schema_geometry"
-msgstr "Geometrie"
-
-#: Default: "Layout"
-msgid "label_schema_layout"
-msgstr "Layout"
 
