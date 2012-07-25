@@ -1,0 +1,722 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-18 15:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../../facetednavigation/browser/template/configure.pt:70
+msgid "Add"
+msgstr "Lägg till"
+
+#: ../../facetednavigation/browser/template/configure.pt:26
+msgid "Add new filter"
+msgstr "Lägg till nytt filter"
+
+#: ../../facetednavigation/browser/template/configure.pt:27
+msgid "Add widget"
+msgstr "Tillsätt widgeten"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "Efter query filter"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+#: ../../facetednavigation/widgets/select/widget.pt:23
+msgid "All"
+msgstr "ALLA"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:68
+msgid "Alphabetic"
+msgstr "Alfabetiska"
+
+#: ../../facetednavigation/browser/template/configure.pt:99
+msgid "Are you sure you want to delete ${widget} widget?"
+msgstr "Är du säker på att du vill ta bort ${widget} widget?"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:56
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
+msgid "Catalog"
+msgstr "Katalog"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/checkbox/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:51
+msgid "Catalog index"
+msgstr "Katalog index"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/checkbox/widget.py:27
+#: ../../facetednavigation/widgets/date/widget.py:52
+msgid "Catalog index to use for search"
+msgstr "Katalog index att använda för sökning"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr "Katalog fråga"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:106
+msgid "Checkboxes"
+msgstr "Kryssrutor"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:23
+msgid "Cloud"
+msgstr "moln"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:137
+msgid "Cloud height"
+msgstr "Molnet höjd"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:138
+msgid "Cloud height (px)"
+msgstr "Cloud höjd (px)"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:110
+msgid "Cloud type"
+msgstr "Molnet typ"
+
+#: ../../facetednavigation/browser/app/exportimport.py:47
+msgid "Configuration imported"
+msgstr "Konfiguration importeras"
+
+#: ../../facetednavigation/browser/template/configure.pt:20
+msgid "Configure faceted navigation"
+msgstr "Konfigurera mångfacetterad navigering"
+
+#: ../../facetednavigation/browser/template/configure.pt:109
+msgid "Content listing"
+msgstr "Innehållet notering"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:61
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr "Styr olika yearsdisplayed i år drop-down: antingen i förhållande till dagens året (-nn: + nn), i förhållande till den valda året (c-nn: c + nn), absolut (nnnn: nnnn), eller kombinationer dessa format (nnnn:-nn)."
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/radio/widget.py:69
+msgid "Count results"
+msgstr "Räkna resultat"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr "Räknare"
+
+#: ../../facetednavigation/browser/template/configure.pt:125
+msgid "Criterion details"
+msgstr "Kriterier detaljer"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "Aktuella konfigurationen"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:71
+msgid "Cut long phrases to provided number of characters"
+msgstr "Skär långa fraser för att som antal tecken"
+
+#: ../../facetednavigation/widgets/date/widget.py:73
+msgid "Date"
+msgstr "Datum"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:79
+msgid "Date range"
+msgstr "Tidsspann"
+
+#: ../../facetednavigation/widgets/debug/widget.py:32
+msgid "Debugger"
+msgstr "Debugger"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:51
+msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
+msgstr "Standard daterange (t.ex. '2009 / 12/01 => 2009/12/31)"
+
+#: ../../facetednavigation/widgets/date/widget.py:61
+msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
+msgstr "Standard datumintervall (t.ex. "nu-365 => Nu +1 vilket betyder" Starta ett år sedan till i morgon)"
+
+#: ../../facetednavigation/widgets/etag/widget.py:17
+msgid "Default etag"
+msgstr "Standard ETAG"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:95
+msgid "Default items (one per line)"
+msgstr "Standardobjekt (en per rad)"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+msgid "Default letter to be selected"
+msgstr "Standard brev som skall väljas"
+
+#: ../../facetednavigation/widgets/path/widget.py:44
+msgid "Default path to search in (relative to root folder)"
+msgstr "Standard väg att söka i (i förhållande till rotmappen)"
+
+#: ../../facetednavigation/widgets/range/widget.py:38
+msgid "Default range (e.g. '1 => 3')"
+msgstr "Standard räckvidden (t.ex. 1 => 3 ')"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:50
+msgid "Default results per page"
+msgstr "Default resultat per sida"
+
+#: ../../facetednavigation/widgets/radio/widget.py:87
+#: ../../facetednavigation/widgets/select/widget.py:72
+#: ../../facetednavigation/widgets/tagscloud/widget.py:162
+msgid "Default selected item"
+msgstr "Standard markerade objektet"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:31
+msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
+msgstr "Standard sortering index (t ex "effektiv" eller "effektiv (omvänd)")"
+
+#: ../../facetednavigation/widgets/text/widget.py:30
+msgid "Default string to search for"
+msgstr "Standard sträng att söka efter"
+
+#: ../../facetednavigation/widgets/tal/widget.py:41
+msgid "Default tal expression for query value"
+msgstr "Standard tal uttryck för frågevärdet"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:55
+#: ../../facetednavigation/widgets/checkbox/widget.py:94
+#: ../../facetednavigation/widgets/date/widget.py:60
+msgid "Default value"
+msgstr "Grundvärde"
+
+#: ../../facetednavigation/browser/template/configure.pt:183
+msgid "Delete"
+msgstr "Ta bort"
+
+#: ../../facetednavigation/widgets/path/widget.py:54
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr "Djup att söka vägen. 0 = denna nivå, -1 = alla undermappar rekursiva och alla andra positiva heltal räknar de undermappen-nivå för att söka."
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr "Inaktivera fasetterad navigering"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr "Inaktivera fasetterad sökning"
+
+#: ../../facetednavigation/settings/menu.py:61
+msgid "Disable left portlets"
+msgstr "Inaktivera vänstra portletar"
+
+#: ../../facetednavigation/settings/menu.py:76
+msgid "Disable right portlets"
+msgstr "Inaktivera rät portletar"
+
+#: ../../facetednavigation/settings/menu.py:91
+msgid "Disable smart facets hiding"
+msgstr "Inaktivera smarta fasetter dölja"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
+#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/select/widget.py:56
+msgid "Display number of results near each option"
+msgstr "Visa antal resultat i närheten av varje alternativ"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:146
+msgid "Display number of results near each tag"
+msgstr "Visa antal resultat i närheten av varje tagg"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
+msgid "Display number of results per letter"
+msgstr "Visa antalet resultat per brev"
+
+#: ../../facetednavigation/widgets/widget.py:62
+msgid "Display widget in section"
+msgstr "Visa widget i avsnitt"
+
+#: ../../facetednavigation/browser/template/configure.pt:57
+msgid "Display widget in section."
+msgstr "Visa widget avsnitt."
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr "Möjliggöra navigering fasetterad"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr "Möjliggöra fasetterad sökning"
+
+#: ../../facetednavigation/widgets/criteria/widget.py:16
+msgid "Enable hide/show criteria"
+msgstr "Aktivera dölja / visa kriterier för"
+
+#: ../../facetednavigation/settings/menu.py:60
+msgid "Enable left portlets"
+msgstr "Möjliggöra vänstra portletar"
+
+#: ../../facetednavigation/settings/menu.py:75
+msgid "Enable right portlets"
+msgstr "Möjliggöra rätt portletar"
+
+#: ../../facetednavigation/settings/menu.py:90
+msgid "Enable smart facets hiding"
+msgstr "Möjliggöra smarta fasetter dölja"
+
+#: ../../facetednavigation/widgets/range/widget.pt:28
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:31
+msgid "End"
+msgstr "Ände"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:29
+msgid "End date"
+msgstr "Slut-tid"
+
+#: ../../facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr "Fel typ:"
+
+#: ../../facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr "Fel värde:"
+
+#: ../../facetednavigation/widgets/etag/widget.py:18
+msgid "Etag value"
+msgstr "ETAG värde"
+
+#: ../../facetednavigation/browser/template/configure.pt:88
+msgid "Export"
+msgstr "Export"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr "Fasetterade kriterier"
+
+#: ../../facetednavigation/settings/menu.py:22
+msgid "Faceted global settings"
+msgstr "Mångfasetterade globala inställningar"
+
+#: ../../facetednavigation/subtypes/subtyper.py:135
+msgid "Faceted navigation disabled"
+msgstr "Fasetterad navigering inaktiverad"
+
+#: ../../facetednavigation/subtypes/subtyper.py:124
+msgid "Faceted navigation enabled"
+msgstr "Fasetterad navigering aktiverat"
+
+#: ../../facetednavigation/subtypes/subtyper.py:169
+msgid "Faceted search disabled"
+msgstr "Fasetterad sökning inaktiverad"
+
+#: ../../facetednavigation/subtypes/subtyper.py:161
+msgid "Faceted search enabled"
+msgstr "Fasetterad sökning aktiverat"
+
+#: ../../facetednavigation/settings/menu.py:21
+msgid "Faceted settings"
+msgstr "Fasetterade inställningar"
+
+#: ../../facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr "Tillverkning"
+
+#: ../../facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr "Filtret tillsattes"
+
+#: ../../facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr "Filtrera bort"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:20
+msgid "Filter from vocabulary"
+msgstr "Filtret från ordförrådet"
+
+#: ../../facetednavigation/widgets/criteria/widget.py:29
+msgid "Filters"
+msgstr "Filter"
+
+#: ../../facetednavigation/browser/app/configure.py:109
+msgid "Filters deleted"
+msgstr "Filtren bort"
+
+#: ../../facetednavigation/widgets/widget.py:43
+msgid "Friendly name"
+msgstr ""Friend Namn");"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:57
+#: ../../facetednavigation/widgets/radio/widget.py:44
+#: ../../facetednavigation/widgets/select/widget.py:41
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr "Få unika värden från katalogen som ett alternativ för vokabulär"
+
+#: ../../facetednavigation/widgets/widget.py:68
+msgid "Hidden"
+msgstr "Dold"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:16
+msgid "Hide filters"
+msgstr "Dölj filter"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:46
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/radio/widget.py:77
+msgid "Hide items with zero results"
+msgstr "Dölja objekt med nollresultat"
+
+#: ../../facetednavigation/widgets/widget.py:69
+msgid "Hide widget"
+msgstr "Göm widget"
+
+#: ../../facetednavigation/browser/template/configure.pt:85
+msgid "Import"
+msgstr "Import"
+
+#: ../../facetednavigation/browser/template/configure.pt:77
+msgid "Import - Export configuration"
+msgstr "Import - Export konfiguration"
+
+#: ../../facetednavigation/browser/template/configure.pt:78
+msgid "Import configuration"
+msgstr "Import konfiguration"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "Ogiltig eller tom vokabulär som denna widget. Lämna tomt för kriterierna standard sortering."
+
+#: ../../facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr "Mindre filter"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:21
+msgid "List"
+msgstr "Lista"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:70
+msgid "Maximum characters"
+msgstr "Maximala tecken"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:129
+msgid "Maximum font-size (px)"
+msgstr "Största font-storlek (px)"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:65
+#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/tagscloud/widget.py:61
+msgid "Maximum items"
+msgstr "Maximala objekt"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:128
+msgid "Maximum size"
+msgstr "Maximal storlek"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:120
+msgid "Minimum font-size (px)"
+msgstr "Minsta font-storlek (px)"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:119
+msgid "Minimum size"
+msgstr "Minsta storlek"
+
+#: ../../facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr "Fler filter"
+
+#: ../../facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr "Flytta ned"
+
+#: ../../facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr "Flytta upp"
+
+#: ../../facetednavigation/widgets/path/widget.py:34
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr "Navigering js-trädet startpunkten (i förhållande till Plone site ex. SITE / data-och-kartor)"
+
+#: ../../facetednavigation/widgets/path/widget.py:66
+msgid "Navigation tree theme"
+msgstr "Navigationsträdet temat"
+
+#: ../../facetednavigation/browser/app/exportimport.py:74
+msgid "No action provided"
+msgstr "Ingen åtgärd som"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:66
+#: ../../facetednavigation/widgets/radio/widget.py:54
+#: ../../facetednavigation/widgets/tagscloud/widget.py:62
+msgid "Number of items visible in widget"
+msgstr "Antal objekt synliga i widget"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:38
+msgid "Operator"
+msgstr "Operator"
+
+#: ../../facetednavigation/browser/template/configure.pt:126
+msgid "Order"
+msgstr "ORDER."
+
+#: ../../facetednavigation/widgets/path/widget.py:78
+msgid "Path"
+msgstr "Bana"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:20
+msgid "Path to portlet macro"
+msgstr "Sökväg till portlet macro"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:31
+msgid "Plone portlet"
+msgstr "Plone portleten"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:19
+msgid "Portlet macro"
+msgstr "Portlet makro"
+
+#: ../../facetednavigation/settings/menu.py:132
+msgid "Portlets left column is hidden now"
+msgstr "Portletar vänstra kolumnen är dold nu"
+
+#: ../../facetednavigation/settings/menu.py:129
+msgid "Portlets left column is visible now"
+msgstr "Portletar vänstra kolumnen syns nu"
+
+#: ../../facetednavigation/settings/menu.py:142
+msgid "Portlets right column is hidden now"
+msgstr "Portletar högra kolumnen är dold nu"
+
+#: ../../facetednavigation/settings/menu.py:139
+msgid "Portlets right column is visible now"
+msgstr "Portletar högra kolumnen syns nu"
+
+#: ../../facetednavigation/browser/template/configure.pt:44
+#: ../../facetednavigation/widgets/widget.py:52
+msgid "Position"
+msgstr "Position"
+
+#: ../../facetednavigation/browser/template/configure.pt:45
+msgid "Position of the widget."
+msgstr "Placering av widgeten."
+
+#: ../../facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr "Python namnet en fabrik som kan skapa genomförandet objektet. Detta måste identifiera ett objekt i en modul genom att använda hela prickade namn."
+
+#: ../../facetednavigation/widgets/radio/widget.py:98
+msgid "Radio"
+msgstr "Radio"
+
+#: ../../facetednavigation/widgets/range/widget.py:49
+msgid "Range"
+msgstr "Tidspann"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:28
+msgid "Remove all"
+msgstr "Ta bort alla"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:25
+msgid "Remove all filters"
+msgstr "Ta bort alla filter"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:61
+msgid "Results per page"
+msgstr "Resultat per sida"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "Results per page ending value"
+msgstr "Resultat per sida slutvärdet"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "Results per page starting value"
+msgstr "Resultat per sida startvärde"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:41
+msgid "Results per page step"
+msgstr "Resultat per sida steg"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "Vända"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:72
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/select/widget.py:48
+msgid "Reverse options"
+msgstr "Omvänd alternativ"
+
+#: ../../facetednavigation/widgets/path/widget.py:33
+msgid "Root folder"
+msgstr "Rotmapp"
+
+#: ../../facetednavigation/browser/template/configure.pt:182
+msgid "Save"
+msgstr "Spara"
+
+#: ../../facetednavigation/widgets/text/widget.pt:21
+msgid "Search"
+msgstr "Sök"
+
+#: ../../facetednavigation/widgets/path/widget.py:53
+msgid "Search Depth"
+msgstr "Sök Djup"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:39
+msgid "Search with AND/OR between elements"
+msgstr "Sök med och / eller mellan elementen"
+
+#: ../../facetednavigation/browser/template/configure.pt:56
+#: ../../facetednavigation/widgets/widget.py:61
+msgid "Section"
+msgstr "Avsnitt"
+
+#: ../../facetednavigation/widgets/select/widget.py:83
+msgid "Select"
+msgstr "Välj"
+
+#: ../../facetednavigation/browser/template/configure.pt:114
+msgid "Select all items"
+msgstr "Välja alla objekt"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:19
+msgid "Show filters"
+msgstr "Visar filter"
+
+#: ../../facetednavigation/settings/menu.py:152
+msgid "Smart facets hiding is now disabled"
+msgstr "Smart aspekter nederlag är nu inaktiverad"
+
+#: ../../facetednavigation/settings/menu.py:149
+msgid "Smart facets hiding is now enabled"
+msgstr "Smart aspekter nederlag är nu aktiverad"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:73
+#: ../../facetednavigation/widgets/radio/widget.py:62
+#: ../../facetednavigation/widgets/select/widget.py:49
+msgid "Sort options reversed"
+msgstr "Sorteringsalternativ omvänd"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:43
+msgid "Sorting"
+msgstr "Sortering"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Sphere"
+msgstr "Kula"
+
+#: ../../facetednavigation/widgets/range/widget.pt:20
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+msgid "Start"
+msgstr "Början"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:21
+msgid "Start date"
+msgstr "Startdatum"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:40
+msgid "Step"
+msgstr "Steg"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr "Synkronisera mångfasetterade översättningar"
+
+#: ../../facetednavigation/widgets/tal/widget.py:61
+msgid "TAL Expression"
+msgstr "TAL Expression"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:173
+msgid "Tags Cloud"
+msgstr "Taggar Cloud"
+
+#: ../../facetednavigation/widgets/tal/widget.py:40
+msgid "Tal Expression"
+msgstr "Tal Expression"
+
+#: ../../facetednavigation/widgets/text/widget.py:41
+msgid "Text field"
+msgstr "Textfält"
+
+#: ../../facetednavigation/widgets/path/widget.py:67
+msgid "Theme to be used with this widget"
+msgstr "Tema som ska användas med den här widgeten"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:47
+#: ../../facetednavigation/widgets/checkbox/widget.py:87
+#: ../../facetednavigation/widgets/radio/widget.py:78
+msgid "This option works only if 'count results' is enabled"
+msgstr "Det här alternativet fungerar bara om 'count resultat är aktiverat"
+
+#: ../../facetednavigation/widgets/path/widget.pt:29
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr "Denna widget kommer att ignoreras enligt roten är onåbar eller så har inga folderish barn."
+
+#: ../../facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr "Denna widget kommer att ignoreras i visningsläge som ett fel inträffade vid försök att göra det. För mer information vänligen kontrollera filservern loggen. Du kan också försöka ändra widget konfiguration för att se vilken egendom som orsakar detta problem."
+
+#: ../../facetednavigation/widgets/widget.py:44
+msgid "Title for widget to display in view page"
+msgstr "Titel för Widget att visa i Visa sida"
+
+#: ../../facetednavigation/browser/template/configure.pt:32
+msgid "Type"
+msgstr "Typ"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+msgid "Type of the cloud"
+msgstr "Typ av molnet"
+
+#: ../../facetednavigation/browser/template/configure.pt:33
+msgid "Type of the widget."
+msgstr "Typ av widgeten."
+
+#: ../../facetednavigation/widgets/daterange/widget.py:60
+msgid "UI Calendar years range"
+msgstr "UI kalenderår allt"
+
+#: ../../facetednavigation/widgets/criteria/widget.py:17
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr "Avmarkera denna ruta om du inte vill dölja / visa kriterier har aktiverat på denna widget"
+
+#: ../../facetednavigation/widgets/debug/widget.py:21
+msgid "Visible to"
+msgstr "Synlig för"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:47
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
+msgid "Vocabulary"
+msgstr "Ordförråd"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:21
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr "Vokabulär använda för att filtrera sortering kriterier. Lämna tomt för kriterierna standard sortering."
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:48
+#: ../../facetednavigation/widgets/radio/widget.py:34
+#: ../../facetednavigation/widgets/select/widget.py:32
+msgid "Vocabulary to use to render widget items"
+msgstr "Vokabulär som ska användas för att göra widget objekt"
+
+#: ../../facetednavigation/widgets/widget.py:53
+msgid "Widget position in page"
+msgstr "Widget position i sid"
+
+#: ../../facetednavigation/browser/template/configure.pt:149
+msgid "Widget type"
+msgstr "Widget typ"
+
+#: ../../facetednavigation/widgets/debug/widget.py:22
+msgid "Widget will be visible only for selected user"
+msgstr "Widget kommer att vara synlig endast för utvalda användare"
+
+#: ../../facetednavigation/widgets/text/widget.pt:30
+msgid "all items"
+msgstr "alla objekt"
+
+#: ../../facetednavigation/widgets/text/widget.pt:38
+msgid "in current results"
+msgstr "i nuvarande resultat"
+

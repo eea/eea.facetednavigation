@@ -1,0 +1,722 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-18 15:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../../facetednavigation/browser/template/configure.pt:70
+msgid "Add"
+msgstr "Uvozi"
+
+#: ../../facetednavigation/browser/template/configure.pt:26
+msgid "Add new filter"
+msgstr "Dodaj nov filter"
+
+#: ../../facetednavigation/browser/template/configure.pt:27
+msgid "Add widget"
+msgstr "Dodaj widget"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "Po poizvedbi filtri"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+#: ../../facetednavigation/widgets/select/widget.pt:23
+msgid "All"
+msgstr "Vsa"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:68
+msgid "Alphabetic"
+msgstr "Črkovna"
+
+#: ../../facetednavigation/browser/template/configure.pt:99
+msgid "Are you sure you want to delete ${widget} widget?"
+msgstr "Ali ste prepričani, da želite izbrisati ${widget} widget?"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:56
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
+msgid "Catalog"
+msgstr "Katalog"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/checkbox/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:51
+msgid "Catalog index"
+msgstr "Katalog indeks"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/checkbox/widget.py:27
+#: ../../facetednavigation/widgets/date/widget.py:52
+msgid "Catalog index to use for search"
+msgstr "Katalog indeks uporabiti za iskanje"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr "Katalog poizvedba"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:106
+msgid "Checkboxes"
+msgstr "Potrditvena polja"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:23
+msgid "Cloud"
+msgstr "Cloud"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:137
+msgid "Cloud height"
+msgstr "Cloud višina"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:138
+msgid "Cloud height (px)"
+msgstr "Cloud višina (px)"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:110
+msgid "Cloud type"
+msgstr "Cloud vrsta"
+
+#: ../../facetednavigation/browser/app/exportimport.py:47
+msgid "Configuration imported"
+msgstr "Nastavitve uvozi"
+
+#: ../../facetednavigation/browser/template/configure.pt:20
+msgid "Configure faceted navigation"
+msgstr "Konfiguracija raznoliko navigacijo"
+
+#: ../../facetednavigation/browser/template/configure.pt:109
+msgid "Content listing"
+msgstr "Seznamu vsebine"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:61
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr "Nadzor nad vrsto yearsdisplayed v letu spustnem: bodisi glede na leto današnji (-nn: + nn), ki glede na trenutno izbrano leto (C-nn: c + nn), ki absolutno (nnnn: nnnn) ali s kombinacijo od teh formatov (nnnn:-nn)."
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/radio/widget.py:69
+msgid "Count results"
+msgstr "Računajo rezultate"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr "Števci"
+
+#: ../../facetednavigation/browser/template/configure.pt:125
+msgid "Criterion details"
+msgstr "Merilo podrobnosti"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "Sedanji položaj"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:71
+msgid "Cut long phrases to provided number of characters"
+msgstr "Cut dolge stavke na ponujeno število znakov"
+
+#: ../../facetednavigation/widgets/date/widget.py:73
+msgid "Date"
+msgstr "Datum"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:79
+msgid "Date range"
+msgstr "Časovno obdobje"
+
+#: ../../facetednavigation/widgets/debug/widget.py:32
+msgid "Debugger"
+msgstr "Razhroščevalnik"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:51
+msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
+msgstr "Privzeto daterange (npr. '2009 / 12/01 => 2009/12/31)"
+
+#: ../../facetednavigation/widgets/date/widget.py:61
+msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
+msgstr "Daterange default (npr. "zdaj-365 => zdaj +1, kar pomeni" Od enim letom do jutri)"
+
+#: ../../facetednavigation/widgets/etag/widget.py:17
+msgid "Default etag"
+msgstr "Privzeto ETAG"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:95
+msgid "Default items (one per line)"
+msgstr "Privzeta polja (enega v vsako vrstico)"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+msgid "Default letter to be selected"
+msgstr "Privzeto pismo, ki bodo izbrane"
+
+#: ../../facetednavigation/widgets/path/widget.py:44
+msgid "Default path to search in (relative to root folder)"
+msgstr "Privzeta pot za iskanje v (glede na korensko mapo)"
+
+#: ../../facetednavigation/widgets/range/widget.py:38
+msgid "Default range (e.g. '1 => 3')"
+msgstr "Privzeto območje (npr. 1. => 3 ')"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:50
+msgid "Default results per page"
+msgstr "Privzete rezultati na stran"
+
+#: ../../facetednavigation/widgets/radio/widget.py:87
+#: ../../facetednavigation/widgets/select/widget.py:72
+#: ../../facetednavigation/widgets/tagscloud/widget.py:162
+msgid "Default selected item"
+msgstr "Privzeto izbrani element"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:31
+msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
+msgstr "Privzeto sortiranje indeks (npr. "učinkovito" ali "učinkovit (nazaj))"
+
+#: ../../facetednavigation/widgets/text/widget.py:30
+msgid "Default string to search for"
+msgstr "Privzeti niz za iskanje"
+
+#: ../../facetednavigation/widgets/tal/widget.py:41
+msgid "Default tal expression for query value"
+msgstr "Privzeto tal izraz za poizvedbe vrednost"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:55
+#: ../../facetednavigation/widgets/checkbox/widget.py:94
+#: ../../facetednavigation/widgets/date/widget.py:60
+msgid "Default value"
+msgstr "Privzeta vrednost"
+
+#: ../../facetednavigation/browser/template/configure.pt:183
+msgid "Delete"
+msgstr "Izbriši"
+
+#: ../../facetednavigation/widgets/path/widget.py:54
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr "Globina za iskanje poti. 0 = ta raven, -1 = vse podmape rekurzivne ter vsako drugo pozitivno celo število štetje podmape-raven iskati."
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr "Onemogoči raznoliko navigacijo"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr "Onemogoči raznoliko iskanje"
+
+#: ../../facetednavigation/settings/menu.py:61
+msgid "Disable left portlets"
+msgstr "Onemogoči levo portletov"
+
+#: ../../facetednavigation/settings/menu.py:76
+msgid "Disable right portlets"
+msgstr "Onemogoči prave portletov"
+
+#: ../../facetednavigation/settings/menu.py:91
+msgid "Disable smart facets hiding"
+msgstr "Onemogoči pametne plati skriva"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
+#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/select/widget.py:56
+msgid "Display number of results near each option"
+msgstr "Prikaže število rezultatov ob vsaki možnosti"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:146
+msgid "Display number of results near each tag"
+msgstr "Prikaže število rezultatov bližini vsako oznako"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
+msgid "Display number of results per letter"
+msgstr "Prikaže število zadetkov na črko"
+
+#: ../../facetednavigation/widgets/widget.py:62
+msgid "Display widget in section"
+msgstr "Prikazovanje widget na delu"
+
+#: ../../facetednavigation/browser/template/configure.pt:57
+msgid "Display widget in section."
+msgstr "Prikazovanje widget na odseku."
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr "Omogoči raznoliko navigacijo"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr "Omogoči raznoliko iskanje"
+
+#: ../../facetednavigation/widgets/criteria/widget.py:16
+msgid "Enable hide/show criteria"
+msgstr "Omogoči skriti / prikazati merila"
+
+#: ../../facetednavigation/settings/menu.py:60
+msgid "Enable left portlets"
+msgstr "Omogoči levo portletov"
+
+#: ../../facetednavigation/settings/menu.py:75
+msgid "Enable right portlets"
+msgstr "Omogoči prave portletov"
+
+#: ../../facetednavigation/settings/menu.py:90
+msgid "Enable smart facets hiding"
+msgstr "Omogočanje pametnih plati skriva"
+
+#: ../../facetednavigation/widgets/range/widget.pt:28
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:31
+msgid "End"
+msgstr "Konec"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:29
+msgid "End date"
+msgstr "Končni datum"
+
+#: ../../facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr "Napaka tipa:"
+
+#: ../../facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr "Vrednost napake:"
+
+#: ../../facetednavigation/widgets/etag/widget.py:18
+msgid "Etag value"
+msgstr "ETAG vrednost"
+
+#: ../../facetednavigation/browser/template/configure.pt:88
+msgid "Export"
+msgstr "Izvoz"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr "Obrazi merila"
+
+#: ../../facetednavigation/settings/menu.py:22
+msgid "Faceted global settings"
+msgstr "Obrazi globalne nastavitve"
+
+#: ../../facetednavigation/subtypes/subtyper.py:135
+msgid "Faceted navigation disabled"
+msgstr "Obrazi navigacija onemogočena"
+
+#: ../../facetednavigation/subtypes/subtyper.py:124
+msgid "Faceted navigation enabled"
+msgstr "Obrazi navigacija omogočeno"
+
+#: ../../facetednavigation/subtypes/subtyper.py:169
+msgid "Faceted search disabled"
+msgstr "Obrazi iskanje invalide"
+
+#: ../../facetednavigation/subtypes/subtyper.py:161
+msgid "Faceted search enabled"
+msgstr "Obrazi iskanje omogočen"
+
+#: ../../facetednavigation/settings/menu.py:21
+msgid "Faceted settings"
+msgstr "Obrazi Nastavitve"
+
+#: ../../facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr "Tovarna"
+
+#: ../../facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr "Filter dodano"
+
+#: ../../facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr "Filtrirajte črta"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:20
+msgid "Filter from vocabulary"
+msgstr "Filtrirajte iz besednjaka"
+
+#: ../../facetednavigation/widgets/criteria/widget.py:29
+msgid "Filters"
+msgstr "Filtri"
+
+#: ../../facetednavigation/browser/app/configure.py:109
+msgid "Filters deleted"
+msgstr "Filtri črta"
+
+#: ../../facetednavigation/widgets/widget.py:43
+msgid "Friendly name"
+msgstr "Prijazno ime"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:57
+#: ../../facetednavigation/widgets/radio/widget.py:44
+#: ../../facetednavigation/widgets/select/widget.py:41
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr "Get enolične vrednosti iz kataloga kot alternativa za besednjaka"
+
+#: ../../facetednavigation/widgets/widget.py:68
+msgid "Hidden"
+msgstr "skrit"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:16
+msgid "Hide filters"
+msgstr "Skrij filtri"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:46
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/radio/widget.py:77
+msgid "Hide items with zero results"
+msgstr "Skrij postavke z nič rezultatov"
+
+#: ../../facetednavigation/widgets/widget.py:69
+msgid "Hide widget"
+msgstr "Skrij widget"
+
+#: ../../facetednavigation/browser/template/configure.pt:85
+msgid "Import"
+msgstr "Uvozi"
+
+#: ../../facetednavigation/browser/template/configure.pt:77
+msgid "Import - Export configuration"
+msgstr "Uvoz - izvoz konfiguracije"
+
+#: ../../facetednavigation/browser/template/configure.pt:78
+msgid "Import configuration"
+msgstr "Uvoz nastavitev"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "Neveljavno ali prazna besednjak če za to widget. Pustite prazno za privzete meril razvrščanja."
+
+#: ../../facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr "Manj filtri"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:21
+msgid "List"
+msgstr "navedba"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:70
+msgid "Maximum characters"
+msgstr "Največje znakov"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:129
+msgid "Maximum font-size (px)"
+msgstr "Največja font-size (px)"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:65
+#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/tagscloud/widget.py:61
+msgid "Maximum items"
+msgstr "Največje postavke"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:128
+msgid "Maximum size"
+msgstr "Največja velikost:"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:120
+msgid "Minimum font-size (px)"
+msgstr "Minimum font-size (px)"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:119
+msgid "Minimum size"
+msgstr "Minimalna velikost"
+
+#: ../../facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr "Več filtri"
+
+#: ../../facetednavigation/browser/template/configure.pt:166
+msgid "Move Down"
+msgstr "Premakni navz&dol"
+
+#: ../../facetednavigation/browser/template/configure.pt:157
+msgid "Move Up"
+msgstr "Premakni navz&gor"
+
+#: ../../facetednavigation/widgets/path/widget.py:34
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr "Navigacija js-drevo izhodišče (glede na mesto Plone ex. MESTO / podatkov-in zemljevidi)"
+
+#: ../../facetednavigation/widgets/path/widget.py:66
+msgid "Navigation tree theme"
+msgstr "Navigacija drevo tema"
+
+#: ../../facetednavigation/browser/app/exportimport.py:74
+msgid "No action provided"
+msgstr "Noben ukrep pod pogojem,"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:66
+#: ../../facetednavigation/widgets/radio/widget.py:54
+#: ../../facetednavigation/widgets/tagscloud/widget.py:62
+msgid "Number of items visible in widget"
+msgstr "Število predmetov vidnih v widget"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:38
+msgid "Operator"
+msgstr "Operater"
+
+#: ../../facetednavigation/browser/template/configure.pt:126
+msgid "Order"
+msgstr "Da"
+
+#: ../../facetednavigation/widgets/path/widget.py:78
+msgid "Path"
+msgstr "Pot"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:20
+msgid "Path to portlet macro"
+msgstr "Pot do portletov makro"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:31
+msgid "Plone portlet"
+msgstr "Plone portletov"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:19
+msgid "Portlet macro"
+msgstr "Portlet makro"
+
+#: ../../facetednavigation/settings/menu.py:132
+msgid "Portlets left column is hidden now"
+msgstr "Portletov levi stolpec je zdaj skrit"
+
+#: ../../facetednavigation/settings/menu.py:129
+msgid "Portlets left column is visible now"
+msgstr "Portletov levi stolpec je viden zdaj"
+
+#: ../../facetednavigation/settings/menu.py:142
+msgid "Portlets right column is hidden now"
+msgstr "Portletov desni stolpec je zdaj skrit"
+
+#: ../../facetednavigation/settings/menu.py:139
+msgid "Portlets right column is visible now"
+msgstr "Portletov desni stolpec je viden zdaj"
+
+#: ../../facetednavigation/browser/template/configure.pt:44
+#: ../../facetednavigation/widgets/widget.py:52
+msgid "Position"
+msgstr "Položaj:"
+
+#: ../../facetednavigation/browser/template/configure.pt:45
+msgid "Position of the widget."
+msgstr "Stališče widget."
+
+#: ../../facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr "Python ime tovarne, ki lahko ustvarijo izvajanja predmeta. To mora določiti predmet v modulu s polno pikčasto ime."
+
+#: ../../facetednavigation/widgets/radio/widget.py:98
+msgid "Radio"
+msgstr "Radio"
+
+#: ../../facetednavigation/widgets/range/widget.py:49
+msgid "Range"
+msgstr "Območje"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:28
+msgid "Remove all"
+msgstr "odstrani vse"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:25
+msgid "Remove all filters"
+msgstr "Odstranite vse filtre"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:61
+msgid "Results per page"
+msgstr "Rezultati po strani"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+msgid "Results per page ending value"
+msgstr "Rezultati po strani se je končal vrednosti"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+msgid "Results per page starting value"
+msgstr "Rezultati po strani začetna vrednost"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:41
+msgid "Results per page step"
+msgstr "Rezultati po korak stran"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "Povratne"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:72
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/select/widget.py:48
+msgid "Reverse options"
+msgstr "Povratne možnosti"
+
+#: ../../facetednavigation/widgets/path/widget.py:33
+msgid "Root folder"
+msgstr "Root mapa"
+
+#: ../../facetednavigation/browser/template/configure.pt:182
+msgid "Save"
+msgstr "Shrani"
+
+#: ../../facetednavigation/widgets/text/widget.pt:21
+msgid "Search"
+msgstr "Išči"
+
+#: ../../facetednavigation/widgets/path/widget.py:53
+msgid "Search Depth"
+msgstr "Iskanje Globina"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:39
+msgid "Search with AND/OR between elements"
+msgstr "Iskanje z in / ali med elementi"
+
+#: ../../facetednavigation/browser/template/configure.pt:56
+#: ../../facetednavigation/widgets/widget.py:61
+msgid "Section"
+msgstr "Razdelek 3"
+
+#: ../../facetednavigation/widgets/select/widget.py:83
+msgid "Select"
+msgstr "Izberi"
+
+#: ../../facetednavigation/browser/template/configure.pt:114
+msgid "Select all items"
+msgstr "Izberite vse predmete"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:19
+msgid "Show filters"
+msgstr "Prikaži filtre"
+
+#: ../../facetednavigation/settings/menu.py:152
+msgid "Smart facets hiding is now disabled"
+msgstr "Smart plati skriva je zdaj onemogočen"
+
+#: ../../facetednavigation/settings/menu.py:149
+msgid "Smart facets hiding is now enabled"
+msgstr "Smart plati skriva je zdaj omogočeno"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:73
+#: ../../facetednavigation/widgets/radio/widget.py:62
+#: ../../facetednavigation/widgets/select/widget.py:49
+msgid "Sort options reversed"
+msgstr "Sort Options obrnil"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:43
+msgid "Sorting"
+msgstr "Razvrščanje"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Sphere"
+msgstr "Krogla"
+
+#: ../../facetednavigation/widgets/range/widget.pt:20
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+msgid "Start"
+msgstr "Začetek"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:21
+msgid "Start date"
+msgstr "Datum začetka"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:40
+msgid "Step"
+msgstr "Korak"
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr "Sinhronizacijo raznoliko prevode"
+
+#: ../../facetednavigation/widgets/tal/widget.py:61
+msgid "TAL Expression"
+msgstr "TAL Expression"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:173
+msgid "Tags Cloud"
+msgstr "Tags Cloud"
+
+#: ../../facetednavigation/widgets/tal/widget.py:40
+msgid "Tal Expression"
+msgstr "Tal Expression"
+
+#: ../../facetednavigation/widgets/text/widget.py:41
+msgid "Text field"
+msgstr "Besedilo polje"
+
+#: ../../facetednavigation/widgets/path/widget.py:67
+msgid "Theme to be used with this widget"
+msgstr "Tema, ki se uporabljajo s to widget"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:47
+#: ../../facetednavigation/widgets/checkbox/widget.py:87
+#: ../../facetednavigation/widgets/radio/widget.py:78
+msgid "This option works only if 'count results' is enabled"
+msgstr "Ta možnost deluje le, če je omogočena davčna izpostava štetje results '"
+
+#: ../../facetednavigation/widgets/path/widget.pt:29
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr "Ta pripomoček se bo prezrta, kot je določeno koren je nedosegljiv ali nima folderish otrok."
+
+#: ../../facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr "Ta pripomoček ne bodo upoštevani v načinu s pogledom, kot je prišlo do napake, medtem ko poskuša to postane. Za več informacij si oglejte datoteko strežnika dnevnik. Prav tako lahko poskusite spremeniti widget konfiguracijo, da bi videli, kaj premoženje povzroča ta problem."
+
+#: ../../facetednavigation/widgets/widget.py:44
+msgid "Title for widget to display in view page"
+msgstr "Naslov za widget za prikaz v pogledu strani"
+
+#: ../../facetednavigation/browser/template/configure.pt:32
+msgid "Type"
+msgstr "Tip"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+msgid "Type of the cloud"
+msgstr "Vrsta oblaku"
+
+#: ../../facetednavigation/browser/template/configure.pt:33
+msgid "Type of the widget."
+msgstr "Vrsta widget."
+
+#: ../../facetednavigation/widgets/daterange/widget.py:60
+msgid "UI Calendar years range"
+msgstr "UI Koledar let segajo"
+
+#: ../../facetednavigation/widgets/criteria/widget.py:17
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr "Počistite to polje, če ne želite Skrij / prikaži merila funkcija omogočena ta widget"
+
+#: ../../facetednavigation/widgets/debug/widget.py:21
+msgid "Visible to"
+msgstr "Vidni"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:47
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
+msgid "Vocabulary"
+msgstr "Besednjak"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:21
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr "Besednjak uporabljajo za filtriranje razvrščanje merila. Pustite prazno za privzete meril razvrščanja."
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:48
+#: ../../facetednavigation/widgets/radio/widget.py:34
+#: ../../facetednavigation/widgets/select/widget.py:32
+msgid "Vocabulary to use to render widget items"
+msgstr "Besednjak za uporabo, da postane gradnik predmetov"
+
+#: ../../facetednavigation/widgets/widget.py:53
+msgid "Widget position in page"
+msgstr "Widget položaj stran"
+
+#: ../../facetednavigation/browser/template/configure.pt:149
+msgid "Widget type"
+msgstr "Widget vrsta"
+
+#: ../../facetednavigation/widgets/debug/widget.py:22
+msgid "Widget will be visible only for selected user"
+msgstr "Gradnik bo viden le za izbranega uporabnika"
+
+#: ../../facetednavigation/widgets/text/widget.pt:30
+msgid "all items"
+msgstr "Vsi elementi"
+
+#: ../../facetednavigation/widgets/text/widget.pt:38
+msgid "in current results"
+msgstr "V trenutnih rezultatih"
+

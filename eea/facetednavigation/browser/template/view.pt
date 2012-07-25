@@ -27,8 +27,8 @@
 
   <!-- Basic/Extended search -->
   <div class="faceted-sections-buttons">
-    <a href="#" class="faceted-sections-buttons-more" i18n:translate="faceted_sections_more">More filters</a>
-    <a href="#" class="faceted-sections-buttons-less" i18n:translate="faceted_sections_less">Less filters</a>
+    <a href="#" class="faceted-sections-buttons-more" i18n:translate="">More filters</a>
+    <a href="#" class="faceted-sections-buttons-less" i18n:translate="">Less filters</a>
   </div>
 
   <metal:widgets use-macro="here/@@faceted_widgets/macros/widgets" />

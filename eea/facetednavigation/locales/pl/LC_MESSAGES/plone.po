@@ -15,33 +15,17 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "Current search"
-msgstr ""
+msgstr "Aktualny wyszukiwanie"
 
 msgid "Faceted criteria"
-msgstr ""
+msgstr "Faceted kryteria"
 
 msgid "Object provides"
-msgstr ""
+msgstr "Obiekt oferuje"
 
 msgid "Portal type"
-msgstr ""
+msgstr "Portal typ"
 
 msgid "Sort on"
-msgstr ""
-
-#: Default: "Countable"
-msgid "label_schema_countable"
-msgstr ""
-
-#: Default: "Display"
-msgid "label_schema_display"
-msgstr ""
-
-#: Default: "Geometry"
-msgid "label_schema_geometry"
-msgstr ""
-
-#: Default: "Layout"
-msgid "label_schema_layout"
-msgstr ""
+msgstr "Sortuj w sprawie"
 

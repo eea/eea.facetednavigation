@@ -13,12 +13,9 @@ EditSchema = Schema((
     BooleanField('hidecriteriaenabled',
         schemata="default",
         widget=BooleanWidget(
-            label=_(u'label_hidecriteriaenabled',
-                default='Enable hide/show criteria'),
-            description=_(
-                u'help_hidecriteriaenabled',
-                default=("Uncheck this box if you don't want hide/show "
-                         "criteria feature enabled on this widget")),
+            label=_(u'Enable hide/show criteria'),
+            description=_(u"Uncheck this box if you don't want hide/show "
+                         "criteria feature enabled on this widget"),
             i18n_domain="eea"
         )
     ),

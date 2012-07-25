@@ -17,10 +17,8 @@ EditSchema = Schema((
         required=True,
         vocabulary_factory='eea.faceted.vocabularies.TextCatalogIndexes',
         widget=SelectionWidget(
-            label=_('faceted_criteria_index',
-                default='Catalog index'),
-            description=_('help_faceted_criteria_index',
-                default=u'Catalog index to use for search'),
+            label=_(u'Catalog index'),
+            description=_(u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -28,10 +26,8 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label=_(u'faceted_criteria_default',
-                default=u'Default value'),
-            description=_(u'help_faceted_criteria_text_default',
-                default=u'Default string to search for'),
+            label=_(u'Default value'),
+            description=_(u'Default string to search for'),
             i18n_domain="eea"
         )
     ),

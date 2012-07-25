@@ -25,10 +25,8 @@ EditSchema = Schema((
         vocabulary_factory='eea.faceted.vocabularies.RangeCatalogIndexes',
         widget=SelectionWidget(
             format='select',
-            label=_(u'faceted_criteria_index',
-                default=u'Catalog index'),
-            description=_(u'help_faceted_criteria_index',
-                default=u'Catalog index to use for search'),
+            label=_(u'Catalog index'),
+            description=_(u'Catalog index to use for search'),
             i18n_domain="eea"
         )
     ),
@@ -36,10 +34,8 @@ EditSchema = Schema((
         schemata="default",
         widget=StringWidget(
             size=25,
-            label=_('faceted_criteria_default',
-                default='Default value'),
-            description=_(u'help_faceted_criteria_range_default',
-                default=u'Default range (e.g. "1 => 3")'),
+            label=_(u'Default value'),
+            description=_(u"Default range (e.g. '1 => 3')"),
             i18n_domain="eea"
         )
     ),

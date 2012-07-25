@@ -44,8 +44,7 @@ class FacetedExportImport(object):
                 kwargs.get('redirect', 'configure_faceted.html'))
 
         importer.body = xml
-        return self._redirect(_('msg_configuration_imported',
-                                default=u"Configuration imported"),
+        return self._redirect(_(u"Configuration imported"),
                               kwargs.get('redirect', 'configure_faceted.html'))
 
     def export_xml(self, **kwargs):
@@ -72,6 +71,5 @@ class FacetedExportImport(object):
             return self.import_xml(**kwargs)
         if 'export_button' in kwargs.keys():
             return self.export_xml(**kwargs)
-        self._redirect(_('msg_no_action_provided',
-                         default=u"No action provided"),
+        self._redirect(_(u"No action provided"),
                        'configure_faceted.html')
