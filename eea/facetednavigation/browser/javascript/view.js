@@ -48,6 +48,12 @@ Default: (context related)
 */
 Faceted.BASEURL = '';
 
+/* UI Options
+ */
+Faceted.Options = {};
+Faceted.Options.SHOW_SPINNER = true;
+Faceted.Options.FADE_SPEED = 'slow';
+
 /* Return minimal and sorted query
 */
 Faceted.SortedQuery = function(query){
@@ -216,10 +222,12 @@ Faceted.Form = {
 
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_START);
     context.area.fadeOut('fast', function(){
-      var loading = '<div class="faceted_loading"><img src="' +
-       Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
-      context.area.html(loading);
-      context.area.fadeIn('slow');
+      if(Faceted.Options.SHOW_SPINNER){
+	      var loading = '<div class="faceted_loading"><img src="' +
+	       Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
+	      context.area.html(loading);
+	      context.area.fadeIn(Faceted.Options.FADE_SPEED);
+      }
 
       var query = Faceted.SortedQuery();
       if(context.version){
@@ -228,7 +236,7 @@ Faceted.Form = {
       jQuery.get(Faceted.BASEURL + '@@faceted_query', query, function(data){
         context.area.fadeOut('fast', function(){
           context.area.html(data);
-          context.area.fadeIn('slow');
+          context.area.fadeIn(Faceted.Options.FADE_SPEED);
           jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_SUCCESS);
         });
       });

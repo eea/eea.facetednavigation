@@ -4,6 +4,10 @@ Changelog
 4.9-dev - (unreleased)
 ----------------------
 
+* Added a Faceted.Options object in view.js
+  so that some behaviours can be customized
+  [thomasdesvenain]
+
 4.8 - (2012-07-17)
 ------------------
 * Bug fix: Fixed formated_time method in daterange widget to also accept years
