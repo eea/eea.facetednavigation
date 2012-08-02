@@ -5,7 +5,7 @@ Changelog
 ----------------------
 
 * Check if type has a '/view' url (is in typesUseViewActionInListings)
-  on faceted preview items view.
+  on faceted preview item view.
   [thomasdesvenain]
 
 * Added a Faceted.Options object in view.js
