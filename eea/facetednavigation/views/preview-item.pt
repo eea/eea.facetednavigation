@@ -1,12 +1,17 @@
-<div class="photoAlbumEntry">
+<div class="photoAlbumEntry"
+  tal:define="portal_type context/portal_type;
+              useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings;
+              useView python:portal_type in useViewTypes;">
   <a tal:define="
       description context/Description|string:;
       title context/pretty_title_or_id|string:;
       desc_or_title python:description or title;
       url context/absolute_url|string:#;
+      view_url python:(url and useView and url + '/view') or url;
       image_thumb exists:context/image_thumb;
       image_tag python:getattr(context, 'tag', None)"
-    tal:attributes="href url; title description">
+     tal:attributes="href view_url;
+                     title description">
 
     <span class="photoAlbumEntryWrapper" tal:condition="image_thumb">
       <img style="border: none" tal:attributes="
