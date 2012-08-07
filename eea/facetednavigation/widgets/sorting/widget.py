@@ -78,8 +78,12 @@ class Widget(AbstractWidget):
 
         if sort_on:
             query['sort_on'] = sort_on
+
         if reverse:
-            query['sort_order'] = 'reverse'
+            query['sort_order'] = 'descending'
+        else:
+            query['sort_order'] = 'ascending'
+
         return query
 
     def criteriaByIndexId(self, indexId):

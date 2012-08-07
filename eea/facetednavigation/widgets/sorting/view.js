@@ -99,7 +99,16 @@ Faceted.SortingWidget.prototype = {
   synchronize: function(){
     var value = Faceted.Query[this.wid];
     var reversed_value = Faceted.Query.reversed;
-    reversed_value = reversed_value ? true : false;
+    if(!reversed_value){
+    	reversed_value = false;
+    }
+    else if (reversed_value.length == 1 && !reversed_value[0]){
+    	/* reversed value is false if == [""] */
+    	reversed_value = false;
+    }
+    else{
+    	reversed_value = true;
+    }
     if(!value){
       this.reset(reversed_value);
       return;

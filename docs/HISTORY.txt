@@ -4,6 +4,9 @@ Changelog
 4.9-dev - (unreleased)
 ----------------------
 
+* Fixed sort widget reverse option switch.
+  [thomasdesvenain]
+
 * Sort widget works with checkbox/radio widget counters.
   [thomasdesvenain]
 
