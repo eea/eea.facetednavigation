@@ -4,6 +4,9 @@ Changelog
 4.9-dev - (unreleased)
 ----------------------
 
+* French translations
+  [thomasdesvenain]
+
 * Fixed sort widget reverse option switch.
   [thomasdesvenain]
 

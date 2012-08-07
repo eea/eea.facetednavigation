@@ -88,7 +88,7 @@ msgstr "Hauteur du nuage"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:138
 msgid "Cloud height (px)"
-msgstr ""
+msgstr "Hauteur du nuage (px)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:110
@@ -185,28 +185,28 @@ msgstr "Valeur de l'interval par default (e.g. \"1 => 3\")"
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
 msgid "Default results per page"
-msgstr ""
+msgstr "Nombre de résultats par page par défaut"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/radio/widget.py:87
 #: ../../facetednavigation/widgets/select/widget.py:72
 #: ../../facetednavigation/widgets/tagscloud/widget.py:162
 msgid "Default selected item"
-msgstr ""
+msgstr "Élément sélectionné par défaut"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr ""
+msgstr "Critère de tri par défaut (par ex. 'date de publication' ou 'date de publication (inversé))"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
-msgstr ""
+msgstr "Texte à rechercher par défaut"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tal/widget.py:41
 msgid "Default tal expression for query value"
-msgstr ""
+msgstr "Expression tal de recherche par défaut"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:55
@@ -221,7 +221,7 @@ msgstr "Supprimer"
 
 #: ../../facetednavigation/widgets/path/widget.py:54
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
-msgstr ""
+msgstr "Profondeur de recherche sur le chemin. 0=ce niveau, -1=tous les sous-dossiers par défaut, et tout autre entier positif indique le nombre de niveaux de sous-dossiers à parcourir"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
@@ -229,7 +229,7 @@ msgstr "Désactiver la navigation par facettes"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted search"
-msgstr ""
+msgstr "Désactiver la recherche à facettes"
 
 #: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
@@ -241,7 +241,7 @@ msgstr "Désactiver les portlets de droite"
 
 #: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
-msgstr ""
+msgstr "Désactiver le masquage intelligent des facettes"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:80
@@ -276,7 +276,7 @@ msgstr "Activer la navigation par facettes"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted search"
-msgstr ""
+msgstr "Activer la recherche à facettes"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/criteria/widget.py:16
@@ -293,7 +293,7 @@ msgstr "Activer les portlets de droite"
 
 #: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
-msgstr ""
+msgstr "Activer le masquage intelligent des facettes"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -341,11 +341,11 @@ msgstr "Navigation par facettes activée"
 
 #: ../../facetednavigation/subtypes/subtyper.py:169
 msgid "Faceted search disabled"
-msgstr ""
+msgstr "Recherche à facettes désactivée"
 
 #: ../../facetednavigation/subtypes/subtyper.py:161
 msgid "Faceted search enabled"
-msgstr ""
+msgstr "Recherche à facettes activée"
 
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:21
@@ -443,7 +443,7 @@ msgstr "Nombre de caractères maximum"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:129
 msgid "Maximum font-size (px)"
-msgstr ""
+msgstr "Taille maximale des fontes (px)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:65
@@ -460,7 +460,7 @@ msgstr "Taille maximale"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:120
 msgid "Minimum font-size (px)"
-msgstr ""
+msgstr "Taille minimale des fontes (px)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:119
@@ -474,15 +474,15 @@ msgstr "Plus de filtres"
 
 #: ../../facetednavigation/browser/template/configure.pt:166
 msgid "Move Down"
-msgstr ""
+msgstr "Descendre"
 
 #: ../../facetednavigation/browser/template/configure.pt:157
 msgid "Move Up"
-msgstr ""
+msgstr "Monter"
 
 #: ../../facetednavigation/widgets/path/widget.py:34
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
-msgstr ""
+msgstr "Point de départ de la navigation arborescente"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:66
@@ -517,7 +517,7 @@ msgstr "Chemin d'accès"
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:20
 msgid "Path to portlet macro"
-msgstr ""
+msgstr "Chemin de la macro de la portlet"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -573,7 +573,7 @@ msgstr "Tout supprimer"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:25
 msgid "Remove all filters"
-msgstr ""
+msgstr "Retirer tous les filtres"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:61
 msgid "Results per page"
@@ -587,12 +587,12 @@ msgstr "Valeur de fin des résultats par page"
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:23
 msgid "Results per page starting value"
-msgstr ""
+msgstr "Valeur de départ du nombre de résultats par page"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:41
 msgid "Results per page step"
-msgstr ""
+msgstr "Étape des valeurs pour le nombre de résultats par page"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
@@ -648,11 +648,11 @@ msgstr "Afficher les filtres"
 
 #: ../../facetednavigation/settings/menu.py:152
 msgid "Smart facets hiding is now disabled"
-msgstr ""
+msgstr "Le masquage intelligent des facettes a été désactivé"
 
 #: ../../facetednavigation/settings/menu.py:149
 msgid "Smart facets hiding is now enabled"
-msgstr ""
+msgstr "Le masquage intelligent des facettes a été activé"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
@@ -686,7 +686,7 @@ msgstr "Étape"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Sync faceted translations"
-msgstr ""
+msgstr "Synchronisation des traductions"
 
 #: ../../facetednavigation/widgets/tal/widget.py:61
 msgid "TAL Expression"
@@ -708,7 +708,7 @@ msgstr "Champ texte"
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Theme to be used with this widget"
-msgstr ""
+msgstr "Thème à utiliser avec cette widget"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:47
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
@@ -736,7 +736,7 @@ msgstr "Type"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:111
 msgid "Type of the cloud"
-msgstr ""
+msgstr "Type de nuage"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:33
@@ -750,7 +750,7 @@ msgstr "Interval de dates du calendrier"
 #. Default: ""
 #: ../../facetednavigation/widgets/criteria/widget.py:17
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-msgstr ""
+msgstr "Décochez cette case si vous ne voulez pas que la fonctionnalité afficher/masquer soit activée sur cette widget"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/debug/widget.py:21
@@ -766,7 +766,7 @@ msgstr "Vocabulaire"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:21
 msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
-msgstr ""
+msgstr "Vocabulaire du filtre de tri. Laissez vide pour les critères de tri par défaut."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
@@ -787,7 +787,7 @@ msgstr "Type de widget"
 #. Default: ""
 #: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Widget will be visible only for selected user"
-msgstr ""
+msgstr "La widget ne sera visible que pour l'utilisateur indiqué"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
