@@ -4,6 +4,9 @@ Changelog
 4.9-dev - (unreleased)
 ----------------------
 
+* Sort widget works with checkbox/radio widget counters.
+  [thomasdesvenain]
+
 * Check if type has a '/view' url (is in typesUseViewActionInListings)
   on faceted preview item view.
   [thomasdesvenain]

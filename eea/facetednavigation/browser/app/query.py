@@ -121,6 +121,8 @@ class FacetedQueryHandler(object):
         """
         if self.request:
             kwargs.update(self.request.form)
+            kwargs.pop('sort[]', None)
+            kwargs.pop('sort', None)
 
         # jQuery >= 1.4 adds type to params keys
         # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"

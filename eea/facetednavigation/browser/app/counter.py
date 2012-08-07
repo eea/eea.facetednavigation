@@ -24,6 +24,9 @@ class FacetedQueryCounter(object):
         # Cleanup query
         kwargs.pop('sort_on', None)
         kwargs.pop('sort_order', None)
+        kwargs.pop('sort[]', None)
+        kwargs.pop('sort', None)
+        kwargs.pop('reversed[]', None)
 
         kwargs.pop(cid, None)
         self.request.form.pop(cid, None)
