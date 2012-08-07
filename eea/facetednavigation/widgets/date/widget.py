@@ -16,29 +16,29 @@ from eea.facetednavigation import EEAMessageFactory as _
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
 
 PAST = (
-    (730, '2 years ago'),
-    (365, '1 year ago'),
-    (186, '6 months ago'),
-    (93,  '3 months ago'),
-    (31,  '1 month ago'),
-    (14,  '2 weeks ago'),
-    (7,   '1 week ago'),
-    (5,   '5 days ago'),
-    (2,   '2 days ago'),
-    (1,   'Yesterday')
+    (730, _('2 years ago')),
+    (365, _('1 year ago')),
+    (186, _('6 months ago')),
+    (93, _('3 months ago')),
+    (31, _('1 month ago')),
+    (14, _('2 weeks ago')),
+    (7, _('1 week ago')),
+    (5, _('5 days ago')),
+    (2, _('2 days ago')),
+    (1, _('Yesterday'))
 )
 
 FUTURE = (
-    (1,   'Tomorrow'),
-    (2,   'Next 2 days'),
-    (5,   'Next 5 days'),
-    (7,   'Next week'),
-    (14,  'Next 2 weeks'),
-    (31,  'Next month'),
-    (93,  'Next 3 months'),
-    (186, 'Next 6 months'),
-    (365, 'Next year'),
-    (730, 'Next 2 years'),
+    (1, _('Tomorrow')),
+    (2, _('Next 2 days')),
+    (5, _('Next 5 days')),
+    (7, _('Next week')),
+    (14, _('Next 2 weeks')),
+    (31, _('Next month')),
+    (93, _('Next 3 months')),
+    (186, _('Next 6 months')),
+    (365, _('Next year')),
+    (730, _('Next 2 years')),
 )
 
 EditSchema = Schema((
@@ -109,20 +109,20 @@ class Widget(AbstractWidget):
         """
         # Past
         res = [
-            ('now-past', self.translate('Past')),
+            ('now-past', self.translate(_('Past'))),
         ]
         for key, value in PAST:
             key = 'now-%d' % key
             res.append((key, self.translate(value)))
 
         # Present
-        res.append(('now-0', self.translate('Today')))
+        res.append(('now-0', self.translate(_('Today'))))
 
         #Future
         for key, value in FUTURE:
             key = 'now_%d' % key
             res.append((key, self.translate(value)))
-        res.append(('now_future', self.translate('Future')))
+        res.append(('now_future', self.translate(_('Future'))))
         return res
 
     def query(self, form):

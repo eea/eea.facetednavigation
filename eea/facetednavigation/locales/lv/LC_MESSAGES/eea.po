@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-07-18 15:21+0000\n"
+"POT-Creation-Date: 2012-08-07 22:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,42 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#: ../../facetednavigation/widgets/date/widget.py:23
+msgid "1 month ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:25
+msgid "1 week ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:20
+msgid "1 year ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:27
+msgid "2 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:24
+msgid "2 weeks ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:19
+msgid "2 years ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:22
+msgid "3 months ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:26
+msgid "5 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:21
+msgid "6 months ago"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -36,7 +72,7 @@ msgstr "Pēc vaicājuma filtru"
 msgid "All"
 msgstr "Visas"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:68
+#: ../../facetednavigation/widgets/alphabetic/widget.py:69
 msgid "Alphabetic"
 msgstr "Alfabēta"
 
@@ -66,7 +102,7 @@ msgstr "Katalogs indeksu izmantot meklēšanai"
 msgid "Catalog query"
 msgstr "Katalogs vaicājums"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:106
+#: ../../facetednavigation/widgets/checkbox/widget.py:107
 msgid "Checkboxes"
 msgstr "Izvēles rūtiņas"
 
@@ -148,11 +184,11 @@ msgstr "Noklusējuma daterange (piem. 'tagad-365 => tagad +1, kas nozīmē "uzs�
 msgid "Default etag"
 msgstr "Noklusējuma ETAG"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:95
+#: ../../facetednavigation/widgets/checkbox/widget.py:96
 msgid "Default items (one per line)"
 msgstr "Noklusētā (viena katrā rindiņā)"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+#: ../../facetednavigation/widgets/alphabetic/widget.py:57
 msgid "Default letter to be selected"
 msgstr "Noklusējuma vēstule jāizvēlas"
 
@@ -168,9 +204,9 @@ msgstr "Noklusējuma diapazonu (piem., 1 => 3 ')"
 msgid "Default results per page"
 msgstr "Noklusējuma rezultātus uz lappuses"
 
-#: ../../facetednavigation/widgets/radio/widget.py:87
-#: ../../facetednavigation/widgets/select/widget.py:72
-#: ../../facetednavigation/widgets/tagscloud/widget.py:162
+#: ../../facetednavigation/widgets/radio/widget.py:88
+#: ../../facetednavigation/widgets/select/widget.py:73
+#: ../../facetednavigation/widgets/tagscloud/widget.py:163
 msgid "Default selected item"
 msgstr "Noklusējuma izvēlētais objekts"
 
@@ -186,8 +222,8 @@ msgstr "Default string meklēt"
 msgid "Default tal expression for query value"
 msgstr "Noklusējuma Tal izteiksmi vaicājuma vērtības"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:55
-#: ../../facetednavigation/widgets/checkbox/widget.py:94
+#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+#: ../../facetednavigation/widgets/checkbox/widget.py:95
 #: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default value"
 msgstr "Noklusējuma vērtība"
@@ -196,7 +232,7 @@ msgstr "Noklusējuma vērtība"
 msgid "Delete"
 msgstr "Dzēst"
 
-#: ../../facetednavigation/widgets/path/widget.py:54
+#: ../../facetednavigation/widgets/path/widget.py:55
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Dziļums meklēt ceļu. 0 = tas līmenis, -1 = visas apakšmapes rekursīvas un jebkura cita pozitīvs vesels skaitlis saskaitīt apakšmapi-Levels meklēt."
 
@@ -347,6 +383,10 @@ msgstr "Filtri svītrots"
 msgid "Friendly name"
 msgstr "Draudzīgs nosaukums"
 
+#: ../../facetednavigation/widgets/date/widget.py:125
+msgid "Future"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
 #: ../../facetednavigation/widgets/select/widget.py:41
@@ -437,9 +477,45 @@ msgstr "Pārvietot augšup"
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
 msgstr "Navigācija JS-koks sākumpunkts (salīdzinājumā ar Plone vietā ex. LAPAS / datu-and-kartes)"
 
-#: ../../facetednavigation/widgets/path/widget.py:66
+#: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Navigation tree theme"
 msgstr "Navigācija koks tēma"
+
+#: ../../facetednavigation/widgets/date/widget.py:33
+msgid "Next 2 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:36
+msgid "Next 2 weeks"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:41
+msgid "Next 2 years"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:38
+msgid "Next 3 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:34
+msgid "Next 5 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:39
+msgid "Next 6 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:37
+msgid "Next month"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:35
+msgid "Next week"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:40
+msgid "Next year"
+msgstr ""
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -459,7 +535,11 @@ msgstr "Operatora"
 msgid "Order"
 msgstr "kārtībā?"
 
-#: ../../facetednavigation/widgets/path/widget.py:78
+#: ../../facetednavigation/widgets/date/widget.py:112
+msgid "Past"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
 msgstr "Taka"
 
@@ -504,7 +584,7 @@ msgstr "Pozīcija widget."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python nosaukums, rūpnīcas, kas var radīt īstenošanas objektu. Tas ir identificēt objektu modulī, izmantojot pilnu punktētu vārdu."
 
-#: ../../facetednavigation/widgets/radio/widget.py:98
+#: ../../facetednavigation/widgets/radio/widget.py:99
 msgid "Radio"
 msgstr "Radio"
 
@@ -558,7 +638,7 @@ msgstr "Saglabāt"
 msgid "Search"
 msgstr "Meklēt " ""
 
-#: ../../facetednavigation/widgets/path/widget.py:53
+#: ../../facetednavigation/widgets/path/widget.py:54
 msgid "Search Depth"
 msgstr "Meklēt Dziļums"
 
@@ -571,7 +651,7 @@ msgstr "Meklēt ar UN / VAI starp elementiem"
 msgid "Section"
 msgstr "Daļa"
 
-#: ../../facetednavigation/widgets/select/widget.py:83
+#: ../../facetednavigation/widgets/select/widget.py:84
 msgid "Select"
 msgstr "Atlasītais"
 
@@ -626,7 +706,7 @@ msgstr "Sinhronizēt slīpētas tulkojumi"
 msgid "TAL Expression"
 msgstr "TAL izteikšana"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:173
+#: ../../facetednavigation/widgets/tagscloud/widget.py:174
 msgid "Tags Cloud"
 msgstr "Tags Cloud"
 
@@ -638,7 +718,7 @@ msgstr "Tal izteikšana"
 msgid "Text field"
 msgstr "Teksta lauks"
 
-#: ../../facetednavigation/widgets/path/widget.py:67
+#: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
 msgstr "Tēma, kas jāizmanto ar šo widget"
 
@@ -659,6 +739,14 @@ msgstr "Šī widget tiks ignorētas skatīšanās režīmā, kā radās kļūda,
 #: ../../facetednavigation/widgets/widget.py:44
 msgid "Title for widget to display in view page"
 msgstr "Nosaukums par widget, lai parādītu skatīšanās lapā"
+
+#: ../../facetednavigation/widgets/date/widget.py:119
+msgid "Today"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:32
+msgid "Tomorrow"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -711,6 +799,10 @@ msgstr "Widget tips"
 #: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Widget will be visible only for selected user"
 msgstr "Widget būs redzams tikai izvēlētā lietotāja"
+
+#: ../../facetednavigation/widgets/date/widget.py:28
+msgid "Yesterday"
+msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

@@ -4,6 +4,9 @@ Changelog
 4.9-dev - (unreleased)
 ----------------------
 
+* Extracted po message about date widget for all languages.
+  [thomasdesvenain]
+
 * French translations
   [thomasdesvenain]
 

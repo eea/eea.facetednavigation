@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2012-07-18 15:21+0000\n"
+"POT-Creation-Date: 2012-08-07 22:17+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -17,6 +17,42 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea.facetednavigation\n"
 "X-Is-Fallback-For: it-ch it-it\n"
+
+#: ../../facetednavigation/widgets/date/widget.py:23
+msgid "1 month ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:25
+msgid "1 week ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:20
+msgid "1 year ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:27
+msgid "2 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:24
+msgid "2 weeks ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:19
+msgid "2 years ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:22
+msgid "3 months ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:26
+msgid "5 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:21
+msgid "6 months ago"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -40,7 +76,7 @@ msgstr "Filtri da applicare dopo la query"
 msgid "All"
 msgstr "Tutto"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:68
+#: ../../facetednavigation/widgets/alphabetic/widget.py:69
 msgid "Alphabetic"
 msgstr "Alfabetico"
 
@@ -73,7 +109,7 @@ msgstr "Indice del catalogo da utilizzare per la ricerca"
 msgid "Catalog query"
 msgstr "Query al catalogo"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:106
+#: ../../facetednavigation/widgets/checkbox/widget.py:107
 msgid "Checkboxes"
 msgstr ""
 
@@ -162,12 +198,12 @@ msgstr "Intervallo di tempo predefinito (es. \"now-365=>now+1\" sta ad indicare 
 msgid "Default etag"
 msgstr "Etag predefinito"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:95
+#: ../../facetednavigation/widgets/checkbox/widget.py:96
 msgid "Default items (one per line)"
 msgstr "Elementi predefiniti (uno per linea)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+#: ../../facetednavigation/widgets/alphabetic/widget.py:57
 msgid "Default letter to be selected"
 msgstr "Lettera predefinita da selezionare"
 
@@ -186,9 +222,9 @@ msgid "Default results per page"
 msgstr "Risultati predefiniti per pagina"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/radio/widget.py:87
-#: ../../facetednavigation/widgets/select/widget.py:72
-#: ../../facetednavigation/widgets/tagscloud/widget.py:162
+#: ../../facetednavigation/widgets/radio/widget.py:88
+#: ../../facetednavigation/widgets/select/widget.py:73
+#: ../../facetednavigation/widgets/tagscloud/widget.py:163
 msgid "Default selected item"
 msgstr "Elemento selezionato predefinito"
 
@@ -207,8 +243,8 @@ msgid "Default tal expression for query value"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/widget.py:55
-#: ../../facetednavigation/widgets/checkbox/widget.py:94
+#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+#: ../../facetednavigation/widgets/checkbox/widget.py:95
 #: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default value"
 msgstr "Valore predefinito"
@@ -217,7 +253,7 @@ msgstr "Valore predefinito"
 msgid "Delete"
 msgstr "Elimina"
 
-#: ../../facetednavigation/widgets/path/widget.py:54
+#: ../../facetednavigation/widgets/path/widget.py:55
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Profondità di ricerca del percorso. 0=questo livello, -1=ricorsivamente in tutte le sottocartelle, qualsiasi altro intero positivo conta i livelli di sotto-cartelle da ricercare"
 
@@ -379,6 +415,10 @@ msgstr "Filtri eliminati"
 msgid "Friendly name"
 msgstr "Nome"
 
+#: ../../facetednavigation/widgets/date/widget.py:125
+msgid "Future"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -482,9 +522,45 @@ msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-
 msgstr "Punto di partenza del js-tree di navigazione (relativo al sito Plone. es: SITE/data-and-maps)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/widget.py:66
+#: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Navigation tree theme"
 msgstr "Tema dell'albero di navigazione"
+
+#: ../../facetednavigation/widgets/date/widget.py:33
+msgid "Next 2 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:36
+msgid "Next 2 weeks"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:41
+msgid "Next 2 years"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:38
+msgid "Next 3 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:34
+msgid "Next 5 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:39
+msgid "Next 6 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:37
+msgid "Next month"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:35
+msgid "Next week"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:40
+msgid "Next year"
+msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/browser/app/exportimport.py:74
@@ -507,7 +583,11 @@ msgstr "Operatore"
 msgid "Order"
 msgstr "Ordine"
 
-#: ../../facetednavigation/widgets/path/widget.py:78
+#: ../../facetednavigation/widgets/date/widget.py:112
+msgid "Past"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
 msgstr "Percorso"
 
@@ -556,7 +636,7 @@ msgstr "Posizione del widget."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Il nome Python di una fabbrica che può creare l'oggetto per l'implementazione. Questo deve identificare un oggetto in un modulo utilizzando il nome completo puntato."
 
-#: ../../facetednavigation/widgets/radio/widget.py:98
+#: ../../facetednavigation/widgets/radio/widget.py:99
 msgid "Radio"
 msgstr ""
 
@@ -616,7 +696,7 @@ msgid "Search"
 msgstr "Cerca"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/widget.py:53
+#: ../../facetednavigation/widgets/path/widget.py:54
 msgid "Search Depth"
 msgstr "Profondità della ricerca"
 
@@ -630,7 +710,7 @@ msgstr "Cerca con AND/OR tra gli elementi"
 msgid "Section"
 msgstr "Sezione"
 
-#: ../../facetednavigation/widgets/select/widget.py:83
+#: ../../facetednavigation/widgets/select/widget.py:84
 msgid "Select"
 msgstr "Seleziona"
 
@@ -689,7 +769,7 @@ msgstr "Sincronizza le traduzioni delle faccette"
 msgid "TAL Expression"
 msgstr "Espressione TAL"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:173
+#: ../../facetednavigation/widgets/tagscloud/widget.py:174
 msgid "Tags Cloud"
 msgstr ""
 
@@ -703,7 +783,7 @@ msgid "Text field"
 msgstr "Campo di testo"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/widget.py:67
+#: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
 msgstr "Tema da utilizzare per questo widget"
 
@@ -725,6 +805,14 @@ msgstr "Questo widget verrà ignorato in modalità di visualizzazione se dovesse
 #: ../../facetednavigation/widgets/widget.py:44
 msgid "Title for widget to display in view page"
 msgstr "Titolo del widget da mostrare nella pagina"
+
+#: ../../facetednavigation/widgets/date/widget.py:119
+msgid "Today"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:32
+msgid "Tomorrow"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -785,6 +873,10 @@ msgstr "Tipo di widget"
 #: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Widget will be visible only for selected user"
 msgstr "Il widget sarà visibile solo per l'utente selezionato"
+
+#: ../../facetednavigation/widgets/date/widget.py:28
+msgid "Yesterday"
+msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

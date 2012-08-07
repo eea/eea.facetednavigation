@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-07-24 15:12+0000\n"
+"POT-Creation-Date: 2012-08-07 22:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,42 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea\n"
+
+#: ../../facetednavigation/widgets/date/widget.py:23
+msgid "1 month ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:25
+msgid "1 week ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:20
+msgid "1 year ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:27
+msgid "2 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:24
+msgid "2 weeks ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:19
+msgid "2 years ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:22
+msgid "3 months ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:26
+msgid "5 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:21
+msgid "6 months ago"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -350,6 +386,10 @@ msgstr ""
 msgid "Friendly name"
 msgstr ""
 
+#: ../../facetednavigation/widgets/date/widget.py:125
+msgid "Future"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
 #: ../../facetednavigation/widgets/select/widget.py:41
@@ -444,6 +484,42 @@ msgstr ""
 msgid "Navigation tree theme"
 msgstr ""
 
+#: ../../facetednavigation/widgets/date/widget.py:33
+msgid "Next 2 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:36
+msgid "Next 2 weeks"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:41
+msgid "Next 2 years"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:38
+msgid "Next 3 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:34
+msgid "Next 5 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:39
+msgid "Next 6 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:37
+msgid "Next month"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:35
+msgid "Next week"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:40
+msgid "Next year"
+msgstr ""
+
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
 msgstr ""
@@ -460,6 +536,10 @@ msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:126
 msgid "Order"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:112
+msgid "Past"
 msgstr ""
 
 #: ../../facetednavigation/widgets/path/widget.py:79
@@ -663,6 +743,14 @@ msgstr ""
 msgid "Title for widget to display in view page"
 msgstr ""
 
+#: ../../facetednavigation/widgets/date/widget.py:119
+msgid "Today"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:32
+msgid "Tomorrow"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
 msgstr ""
@@ -713,6 +801,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Widget will be visible only for selected user"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:28
+msgid "Yesterday"
 msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.pt:30

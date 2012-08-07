@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-07-18 15:21+0000\n"
+"POT-Creation-Date: 2012-08-07 22:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,42 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#: ../../facetednavigation/widgets/date/widget.py:23
+msgid "1 month ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:25
+msgid "1 week ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:20
+msgid "1 year ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:27
+msgid "2 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:24
+msgid "2 weeks ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:19
+msgid "2 years ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:22
+msgid "3 months ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:26
+msgid "5 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:21
+msgid "6 months ago"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -36,7 +72,7 @@ msgstr "Po dotazu filtry"
 msgid "All"
 msgstr "Vše"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:68
+#: ../../facetednavigation/widgets/alphabetic/widget.py:69
 msgid "Alphabetic"
 msgstr "Abecední"
 
@@ -66,7 +102,7 @@ msgstr "Katalog index použít pro vyhledávání"
 msgid "Catalog query"
 msgstr "Katalog dotaz"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:106
+#: ../../facetednavigation/widgets/checkbox/widget.py:107
 msgid "Checkboxes"
 msgstr "Políčka"
 
@@ -148,11 +184,11 @@ msgstr "Výchozí RozmeziDatumu (např. "dnes-365 => nyní +1', což znamená" P
 msgid "Default etag"
 msgstr "Výchozí ETAG"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:95
+#: ../../facetednavigation/widgets/checkbox/widget.py:96
 msgid "Default items (one per line)"
 msgstr "Výchozí body (jeden na řádek)"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+#: ../../facetednavigation/widgets/alphabetic/widget.py:57
 msgid "Default letter to be selected"
 msgstr "Standardní dopis, které budou vybrány"
 
@@ -168,9 +204,9 @@ msgstr "Standardní rozsah (např. 1 => 3 ")"
 msgid "Default results per page"
 msgstr "Výchozí výsledků na stránce"
 
-#: ../../facetednavigation/widgets/radio/widget.py:87
-#: ../../facetednavigation/widgets/select/widget.py:72
-#: ../../facetednavigation/widgets/tagscloud/widget.py:162
+#: ../../facetednavigation/widgets/radio/widget.py:88
+#: ../../facetednavigation/widgets/select/widget.py:73
+#: ../../facetednavigation/widgets/tagscloud/widget.py:163
 msgid "Default selected item"
 msgstr "Výchozí vybrané položky"
 
@@ -186,8 +222,8 @@ msgstr "Výchozí řetězec k hledání"
 msgid "Default tal expression for query value"
 msgstr "Výchozí tal výraz pro dotaz hodnoty"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:55
-#: ../../facetednavigation/widgets/checkbox/widget.py:94
+#: ../../facetednavigation/widgets/alphabetic/widget.py:56
+#: ../../facetednavigation/widgets/checkbox/widget.py:95
 #: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default value"
 msgstr "výchozí hodnota"
@@ -196,7 +232,7 @@ msgstr "výchozí hodnota"
 msgid "Delete"
 msgstr "Smazat"
 
-#: ../../facetednavigation/widgets/path/widget.py:54
+#: ../../facetednavigation/widgets/path/widget.py:55
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Hloubka hledat cestu. 0 = Tato hodnota, -1 = všechny podsložky rekurzivní a jiné kladné číslo počítat podsložky-levels hledat."
 
@@ -347,6 +383,10 @@ msgstr "Filtry vymazány"
 msgid "Friendly name"
 msgstr ""přátelské"."
 
+#: ../../facetednavigation/widgets/date/widget.py:125
+msgid "Future"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
 #: ../../facetednavigation/widgets/select/widget.py:41
@@ -437,9 +477,45 @@ msgstr "Posunout nahoru"
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
 msgstr "Navigace js-strom výchozí bod (ve vztahu k webu Plone např.:. SITE / data-a-map)"
 
-#: ../../facetednavigation/widgets/path/widget.py:66
+#: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Navigation tree theme"
 msgstr "Navigační strom téma"
+
+#: ../../facetednavigation/widgets/date/widget.py:33
+msgid "Next 2 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:36
+msgid "Next 2 weeks"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:41
+msgid "Next 2 years"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:38
+msgid "Next 3 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:34
+msgid "Next 5 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:39
+msgid "Next 6 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:37
+msgid "Next month"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:35
+msgid "Next week"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:40
+msgid "Next year"
+msgstr ""
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -459,7 +535,11 @@ msgstr "Operátor"
 msgid "Order"
 msgstr "Zakázka"
 
-#: ../../facetednavigation/widgets/path/widget.py:78
+#: ../../facetednavigation/widgets/date/widget.py:112
+msgid "Past"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
 msgstr "Cesta"
 
@@ -504,7 +584,7 @@ msgstr "Pozice widgetu."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python název závodu, který může vytvořit implementační objekt. To musí určit objekt v modulu s použitím úplné tečkované jméno."
 
-#: ../../facetednavigation/widgets/radio/widget.py:98
+#: ../../facetednavigation/widgets/radio/widget.py:99
 msgid "Radio"
 msgstr "Rádio"
 
@@ -558,7 +638,7 @@ msgstr "Uložit"
 msgid "Search"
 msgstr "Vyhledávání"
 
-#: ../../facetednavigation/widgets/path/widget.py:53
+#: ../../facetednavigation/widgets/path/widget.py:54
 msgid "Search Depth"
 msgstr "Hloubka vyhledávání"
 
@@ -571,7 +651,7 @@ msgstr "Hledat s A / NEBO mezi prvky"
 msgid "Section"
 msgstr "Část"
 
-#: ../../facetednavigation/widgets/select/widget.py:83
+#: ../../facetednavigation/widgets/select/widget.py:84
 msgid "Select"
 msgstr "Výběr"
 
@@ -626,7 +706,7 @@ msgstr "Synchronizace ploškované překlady"
 msgid "TAL Expression"
 msgstr "TAL Expression"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:173
+#: ../../facetednavigation/widgets/tagscloud/widget.py:174
 msgid "Tags Cloud"
 msgstr "Tagy Cloud"
 
@@ -638,7 +718,7 @@ msgstr "Tal Expression"
 msgid "Text field"
 msgstr "Textové pole"
 
-#: ../../facetednavigation/widgets/path/widget.py:67
+#: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
 msgstr "Téma pro použití s ​​tímto widgetu"
 
@@ -659,6 +739,14 @@ msgstr "Tento widget bude ignorován v režimu prohlížení, jak došlo k chyb�
 #: ../../facetednavigation/widgets/widget.py:44
 msgid "Title for widget to display in view page"
 msgstr "Název pro ovládací prvek se zobrazí v náhledu stránky"
+
+#: ../../facetednavigation/widgets/date/widget.py:119
+msgid "Today"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:32
+msgid "Tomorrow"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -711,6 +799,10 @@ msgstr "Widget typu"
 #: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Widget will be visible only for selected user"
 msgstr "Widget bude viditelná pouze pro vybrané uživatele"
+
+#: ../../facetednavigation/widgets/date/widget.py:28
+msgid "Yesterday"
+msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
