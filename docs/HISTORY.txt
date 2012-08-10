@@ -4,6 +4,9 @@ Changelog
 4.9-dev - (unreleased)
 ----------------------
 
+* Bug fix: changed selector when checking for syndication which was changed 
+  from Plone 2.5 to Plone 4
+  [ichimdav #5412]
 * Extracted po message about date widget for all languages.
   [thomasdesvenain]
 

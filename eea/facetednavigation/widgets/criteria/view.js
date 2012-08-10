@@ -87,8 +87,7 @@ Faceted.CriteriaWidget.prototype = {
     this.skos = null;
     this.skos_href = '';
     var icon = null;
-
-    var rss = jQuery('a:has(img#icon-rss2)');
+    var rss = jQuery('#document-action-rss, #document-action-rss2').find('a');
     if(rss.length){
       rss = jQuery(rss[0]).clone();
       icon = jQuery('img', rss);
@@ -100,7 +99,7 @@ Faceted.CriteriaWidget.prototype = {
       this.rss_href = rss.attr('href');
     }
 
-    var skos = jQuery('a:has(img#icon-skos)');
+    var skos = jQuery('#document-action-skos').find('a');
     if(skos.length){
       skos = jQuery(skos[0]).clone();
       icon = jQuery('img', skos);
