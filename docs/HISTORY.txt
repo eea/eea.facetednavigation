@@ -3,27 +3,23 @@ Changelog
 
 4.9-dev - (unreleased)
 ----------------------
-
+* Feature: Added buildouts folder which will contain various samples of configurations
+  [ghicaale #5418]
 * Bug fix: changed selector when checking for syndication which was changed 
   from Plone 2.5 to Plone 4
   [ichimdav #5412]
-* Extracted po message about date widget for all languages.
+* Feature: Extracted po message about date widget for all languages.
   [thomasdesvenain]
-
-* French translations
+* Feature: French translations
   [thomasdesvenain]
-
-* Fixed sort widget reverse option switch.
+* Feature: Fixed sort widget reverse option switch.
   [thomasdesvenain]
-
-* Sort widget works with checkbox/radio widget counters.
+* Feature: Sort widget works with checkbox/radio widget counters.
   [thomasdesvenain]
-
-* Check if type has a '/view' url (is in typesUseViewActionInListings)
+* Bug fix: Check if type has a '/view' url (is in typesUseViewActionInListings)
   on faceted preview item view.
   [thomasdesvenain]
-
-* Added a Faceted.Options object in view.js
+* Feature: Added a Faceted.Options object in view.js
   so that some behaviours can be customized
   [thomasdesvenain]
 
