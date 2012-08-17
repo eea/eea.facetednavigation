@@ -57,13 +57,13 @@ class FacetedQueryCounter(object):
     @ramcache(cacheCounterKeyFacetedNavigation,
               dependencies=['eea.facetednavigation'])
     def __call__(self, *args, **kwargs):
+        # Calling self.index() will set cache headers for varnish
+        self.index()
+
         if self.request:
             kwargs.update(self.request.form)
             self.request.response.setHeader('Content-Type',
                                             'application/json; charset=utf-8')
-
-        # Calling self.index() will set cache headers for varnish
-        self.index()
 
         cid = kwargs.pop('cid', None)
         if not cid:
