@@ -15,11 +15,7 @@
 
 <body>
 
-<div metal:fill-slot="main">
-
-  <h1 i18n:translate="" id="faceted-page-title" class="documentFirstHeading">
-    Configure faceted navigation
-  </h1>
+<div metal:fill-slot="content-core">
 
   <!-- Add new widget -->
   <fieldset class="faceted-edit-fieldset">
