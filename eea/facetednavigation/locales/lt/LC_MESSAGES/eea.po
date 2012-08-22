@@ -174,11 +174,11 @@ msgstr "Debugger"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
-msgstr "Numatytoji daterange (pvz., "2009/12/01 => 2009/12/31")"
+msgstr "Numatytoji daterange (pvz., \"2009/12/01 => 2009/12/31\")"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Numatytoji daterange (pvz., "dabar-365 => dabar +1", kuris reiškia "paleidimas prieš vienerius metus iki rytojaus")"
+msgstr "Numatytoji daterange (pvz., \"dabar-365 => dabar +1\", kuris reiškia \"paleidimas prieš vienerius metus iki rytojaus\")"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -212,7 +212,7 @@ msgstr "Numatytoji pasirinktas punktas"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr "Numatytoji rūšiavimo indeksas (pvz., "veiksminga" arba "(reversas)")"
+msgstr "Numatytoji rūšiavimo indeksas (pvz., \"veiksminga\" arba \"(reversas)\")"
 
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
@@ -665,11 +665,11 @@ msgstr "Rodyti filtrus"
 
 #: ../../facetednavigation/settings/menu.py:152
 msgid "Smart facets hiding is now disabled"
-msgstr ""Smart aspektų slepiasi dabar yra išjungtas"
+msgstr "Smart aspektų slepiasi dabar yra išjungtas"
 
 #: ../../facetednavigation/settings/menu.py:149
 msgid "Smart facets hiding is now enabled"
-msgstr ""Smart aspektų slepiasi dabar įjungtas"
+msgstr "Smart aspektų slepiasi dabar įjungtas"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
 #: ../../facetednavigation/widgets/radio/widget.py:62
@@ -726,7 +726,7 @@ msgstr "Tema turi būti naudojamas su šio valdikliui"
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:78
 msgid "This option works only if 'count results' is enabled"
-msgstr "Ši galimybė veikia tik tada, jei įjungtas "balsų skaičiavimo rezultatų""
+msgstr "Ši galimybė veikia tik tada, jei įjungtas \"balsų skaičiavimo rezultatų\""
 
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."

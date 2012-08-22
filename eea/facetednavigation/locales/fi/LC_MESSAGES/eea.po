@@ -726,7 +726,7 @@ msgstr "Teema tulee käyttää tämä vekotin"
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:78
 msgid "This option works only if 'count results' is enabled"
-msgstr "Tämä toiminto toimii vain, jos "count tuloksia" on käytössä"
+msgstr "Tämä toiminto toimii vain, jos \"count tuloksia\" on käytössä"
 
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
