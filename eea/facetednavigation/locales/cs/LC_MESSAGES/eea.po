@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 před měsícem"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "Před 1 týdnem"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "Před 1 rokem"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 dny"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "Před 2 týdny"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "Před 2 roky"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "Před 3 měsíci"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "Před 5 dny"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "Před 6 měsíci"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -78,7 +78,7 @@ msgstr "Abecední"
 
 #: ../../facetednavigation/browser/template/configure.pt:99
 msgid "Are you sure you want to delete ${widget} widget?"
-msgstr "Jste si jisti, že chcete smazat ${widget}  widgetu?"
+msgstr "Jste si jisti, že chcete smazat ${widget} widget?"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:56
 #: ../../facetednavigation/widgets/radio/widget.py:43
@@ -108,7 +108,7 @@ msgstr "Políčka"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Cloud"
-msgstr "Mrak"
+msgstr "Cloud"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:137
 msgid "Cloud height"
@@ -174,11 +174,11 @@ msgstr "Ladicí program"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
-msgstr "Výchozí RozmeziDatumu (např. '2009 / 12/01 => 2009/12/31 ")"
+msgstr "Výchozí RozmeziDatumu (např. '2009 / 12/01 => 2009/12/31')"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Výchozí RozmeziDatumu (např. "dnes-365 => nyní +1', což znamená" Počínaje jedním rokem až zítra ")"
+msgstr "Výchozí RozmeziDatumu (např. 'dnes-365 => nyní +1', což znamená 'Počínaje jedním rokem až zítra')"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -198,7 +198,7 @@ msgstr "Výchozí cesta pro vyhledávání (v poměru ke kořenové složky)"
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr "Standardní rozsah (např. 1 => 3 ")"
+msgstr "Standardní rozsah (např. '1 => 3')"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
 msgid "Default results per page"
@@ -212,7 +212,7 @@ msgstr "Výchozí vybrané položky"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr "Výchozí třídění index (např. "účinné" a "efektivní (revers)")"
+msgstr "Výchozí třídění index (např. 'účinné' a 'efektivní (revers)')"
 
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
@@ -381,11 +381,11 @@ msgstr "Filtry vymazány"
 
 #: ../../facetednavigation/widgets/widget.py:43
 msgid "Friendly name"
-msgstr ""přátelské"."
+msgstr "přátelské"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "budoucí"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -459,7 +459,7 @@ msgstr "Minimální font-size (px)"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:119
 msgid "Minimum size"
-msgstr "_Minimální velikost:"
+msgstr "Minimální velikost:"
 
 #: ../../facetednavigation/browser/template/view.pt:30
 msgid "More filters"
@@ -483,39 +483,39 @@ msgstr "Navigační strom téma"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Další 2 dny"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Příštích 2 týdnech"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Další 2 roky"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Další 3 měsíce"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Další 5 dnů"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Další 6 měsíců"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Další měsíc"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Příští týden"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Příští rok"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -537,7 +537,7 @@ msgstr "Zakázka"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "kolem"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -720,13 +720,13 @@ msgstr "Textové pole"
 
 #: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
-msgstr "Téma pro použití s ​​tímto widgetu"
+msgstr "Téma pro použití s tímto widgetu"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:47
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:78
 msgid "This option works only if 'count results' is enabled"
-msgstr "Tato možnost funguje pouze tehdy, pokud se sčítají výsledky 'je povolena"
+msgstr "Tato možnost funguje pouze tehdy, pokud se sčítají výsledky je povolena"
 
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
@@ -742,11 +742,11 @@ msgstr "Název pro ovládací prvek se zobrazí v náhledu stránky"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "dnes"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "zítra"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -802,7 +802,7 @@ msgstr "Widget bude viditelná pouze pro vybrané uživatele"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "včera"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 месяц назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 неделю назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "1 год назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 дня назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "2 недели назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "2 года назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "3 месяца назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "5 дней назад"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "6 месяцев назад"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -178,7 +178,7 @@ msgstr "По умолчанию daterange (например, '2009 / 12/01 => 20
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "По умолчанию daterange (например, «сейчас-365 => Сейчас +1, что означает" Начиная год назад до завтра)"
+msgstr "По умолчанию daterange (например, 'сейчас-365 => Сейчас +1', что означает 'Начиная год назад до завтра')"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -198,7 +198,7 @@ msgstr "По умолчанию путь для поиска в (относит�
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr "По умолчанию диапазон (например, '1 => 3)"
+msgstr "По умолчанию диапазон (например, '1 => 3')"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
 msgid "Default results per page"
@@ -212,7 +212,7 @@ msgstr "По умолчанию выбранного элемента"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr "По умолчанию сортировка индекса (например, «эффективный» или «эффективный (реверс))"
+msgstr "По умолчанию сортировка индекса (например, 'эффективный' или 'эффективный (реверс)')"
 
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
@@ -385,7 +385,7 @@ msgstr "Понятное имя"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Будущие"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -409,7 +409,7 @@ msgstr "Скрыть элементы с нулевыми результатам
 
 #: ../../facetednavigation/widgets/widget.py:69
 msgid "Hide widget"
-msgstr "-hide <widget>"
+msgstr "скрывать widget"
 
 #: ../../facetednavigation/browser/template/configure.pt:85
 msgid "Import"
@@ -483,39 +483,39 @@ msgstr "Дерево навигации тему"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "На следующие 2 дня"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Следующие 2 недели"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Следующие 2 года"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Следующие 3 месяца"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Следующие 5 дней"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Следующие 6 месяцев"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Следующий месяц"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Через неделю"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "В будущем году"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -537,7 +537,7 @@ msgstr "мураттаб (шуда), тартибёфта"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "Прошедшие события"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -726,7 +726,7 @@ msgstr "Темы, которые будут использоваться с эт
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:78
 msgid "This option works only if 'count results' is enabled"
-msgstr "Эта опция работает только если "Количество результатов" включен"
+msgstr "Эта опция работает только если 'Количество результатов' включен"
 
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
@@ -742,11 +742,11 @@ msgstr "Название для виджет для отображения на 
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Сегодня"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "Завтра"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -802,7 +802,7 @@ msgstr "Виджет будет отображаться только для в�
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "Вчера"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

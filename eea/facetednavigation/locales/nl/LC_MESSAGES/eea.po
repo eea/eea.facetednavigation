@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 maand geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 week geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "1 jaar geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 dagen geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "2 weken geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "2 jaar geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "3 maanden geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "5 dagen geleden"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "6 maanden geleden"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -385,7 +385,7 @@ msgstr "Vriendelijke naam"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Toekomst"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -483,39 +483,39 @@ msgstr "Navigatie boom thema"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Volgende 2 dagen"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Komende 2 weken"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Komende 2 jaar"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Komende 3 maanden"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Komende 5 dagen"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Komende 6 maanden"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Volgende maand"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Volgende week"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Volgend jaar"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -537,7 +537,7 @@ msgstr "Order"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "afgelopen"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -594,7 +594,7 @@ msgstr "Bereik"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:28
 msgid "Remove all"
-msgstr "<< Verwijder &Alle"
+msgstr "Verwijder alles"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:25
 msgid "Remove all filters"
@@ -742,11 +742,11 @@ msgstr "Titel voor widget om weer te geven met het oog op pagina"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Vandaag"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "Morgen"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -766,7 +766,7 @@ msgstr "UI Kalenderjaren variëren"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:17
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-msgstr "Deselecteer dit vakje aan als u niet wilt dat hide / show criteria hebben ingeschakeld op deze widget"
+msgstr "Deselecteer dit vakje aan als u niet wilt dat hide/show criteria hebben ingeschakeld op deze widget"
 
 #: ../../facetednavigation/widgets/debug/widget.py:21
 msgid "Visible to"
@@ -802,7 +802,7 @@ msgstr "Widget zullen alleen zichtbaar zijn voor de geselecteerde gebruiker"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "Gisteren"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

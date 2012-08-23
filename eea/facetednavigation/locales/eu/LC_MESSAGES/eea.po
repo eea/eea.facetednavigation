@@ -17,43 +17,43 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 hilabete"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 aste"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "1 urte"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "Duela 2 egun"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "Duela 2 aste"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "Duela 2 urte"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "Duela 3 hilabete"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "Duela 5 egun"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "Duela 6 hilabete"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
-msgstr ""
+msgstr "Gehitu"
 
 #: ../../facetednavigation/browser/template/configure.pt:26
 msgid "Add new filter"
@@ -145,7 +145,7 @@ msgstr "Edukien zerrenda"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:61
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
-msgstr ""
+msgstr "Kontrolatu urte, goitibeherako yearsdisplayed sorta,:, erlatiboa, unean hautatutako urteko (c-nn: c + nn): bai, gaur egungo urteko (-nn + nn) erlatiboa, absolutua (nnnn: nnnn), edo konbinazioak formatu hauek (nnnn-nn)."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
@@ -185,11 +185,11 @@ msgstr "Araztailea"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
-msgstr "Defektuzko data-tartea (adibidez: \"2009/12/01 => 2099/12/31\")"
+msgstr "Defektuzko data-tartea (adibidez: '2009/12/01 => 2099/12/31')"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Defektuzko data-tartea (adibidez: \"now-365=>now+1\" honek orain dela urtebetetik bihar arte esan nahi du."
+msgstr "Defektuzko data-tartea (adibidez: 'now-365=>now+1' honek orain dela urtebetetik bihar arte esan nahi du."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/etag/widget.py:17
@@ -209,37 +209,37 @@ msgstr "Defektuz aukeratuta agertuko den hizkia"
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:44
 msgid "Default path to search in (relative to root folder)"
-msgstr ""
+msgstr "Default bidea bilatu behar den (erlatiboa root karpeta)"
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr ""
+msgstr "Sorta lehenetsia (adibidez, '1 => 3 ')"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
 msgid "Default results per page"
-msgstr ""
+msgstr "Lehenetsiko orria emaitzak"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/radio/widget.py:88
 #: ../../facetednavigation/widgets/select/widget.py:73
 #: ../../facetednavigation/widgets/tagscloud/widget.py:163
 msgid "Default selected item"
-msgstr ""
+msgstr "Hautatutako elementua lehenetsia"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr ""
+msgstr "Default Ordenatzeko indizea (adibidez, 'eraginkorrak' edo 'eraginkorra (alderantzizko)')"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
-msgstr ""
+msgstr "Default bilaketa katea"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tal/widget.py:41
 msgid "Default tal expression for query value"
-msgstr ""
+msgstr "Default adierazpen tela balioa kontsulta"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:56
@@ -250,11 +250,11 @@ msgstr "Defektuzko balioa"
 
 #: ../../facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
-msgstr ""
+msgstr "ezabatu"
 
 #: ../../facetednavigation/widgets/path/widget.py:55
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
-msgstr ""
+msgstr "Sakonera bidea bilatzeko. 0 = Maila honetan, -1 = azpikarpeta guztiak recursive, eta beste edozein zenbaki oso positibo azpikarpeta-maila zenbatzea bilatzeko."
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
@@ -262,7 +262,7 @@ msgstr "Sailkapen bidezko nabigazioa desaktibatu"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted search"
-msgstr ""
+msgstr "Desgaitu konbinatzeak bilaketa"
 
 #: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
@@ -274,7 +274,7 @@ msgstr "Desaktibatu eskumako portletak"
 
 #: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
-msgstr ""
+msgstr "Desgaitu smart alderdi ezkutatzen"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:80
@@ -309,12 +309,12 @@ msgstr "Sailkapen bidezko nabigazioa aktibatu"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted search"
-msgstr ""
+msgstr "Gaitu konbinatzeak bilaketa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Enable hide/show criteria"
-msgstr ""
+msgstr "Gaitu ezkutatzeko / erakusteko irizpideak"
 
 #: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
@@ -326,7 +326,7 @@ msgstr "Aktibatu eskumako portletak"
 
 #: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
-msgstr ""
+msgstr "Gaitu smart alderdi ezkutatzen"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -362,7 +362,7 @@ msgstr "Sailkapen-irizpideak"
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
-msgstr ""
+msgstr "Konbinatzeak global ezarpenak"
 
 #: ../../facetednavigation/subtypes/subtyper.py:135
 msgid "Faceted navigation disabled"
@@ -374,11 +374,11 @@ msgstr "Sailkapen bidezko nabigazioa aktibatu egin da"
 
 #: ../../facetednavigation/subtypes/subtyper.py:169
 msgid "Faceted search disabled"
-msgstr ""
+msgstr "Konbinatzeak bilaketa desgaituta"
 
 #: ../../facetednavigation/subtypes/subtyper.py:161
 msgid "Faceted search enabled"
-msgstr ""
+msgstr "Konbinatzeak bilaketa gaituta"
 
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:21
@@ -391,11 +391,11 @@ msgstr "Sortzailea"
 
 #: ../../facetednavigation/browser/app/configure.py:78
 msgid "Filter added"
-msgstr ""
+msgstr "Filter gehitu" 
 
 #: ../../facetednavigation/browser/app/configure.py:162
 msgid "Filter deleted"
-msgstr ""
+msgstr "Iragazi ezabatu"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/sorting/widget.py:20
@@ -417,7 +417,7 @@ msgstr "Izenburua"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Etorkizuna"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
@@ -480,7 +480,7 @@ msgstr "Karaktere kopuru maximoa"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:129
 msgid "Maximum font-size (px)"
-msgstr ""
+msgstr "Gehienezko font-tamaina (px)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:65
@@ -497,7 +497,7 @@ msgstr "Tamaina maximoa"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:120
 msgid "Minimum font-size (px)"
-msgstr ""
+msgstr "Gutxieneko letra-tamaina (px)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:119
@@ -511,15 +511,15 @@ msgstr "Filtro gehiago"
 
 #: ../../facetednavigation/browser/template/configure.pt:166
 msgid "Move Down"
-msgstr ""
+msgstr "Mugitu behera"
 
 #: ../../facetednavigation/browser/template/configure.pt:157
 msgid "Move Up"
-msgstr ""
+msgstr "Eraman gorantz"
 
 #: ../../facetednavigation/widgets/path/widget.py:34
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
-msgstr ""
+msgstr "Nabigazioa js-zuhaitz abiapuntua (erlatiboa Plone gune ex: SITE/datu-eta-mapak)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:67
@@ -528,39 +528,39 @@ msgstr "Nabigazio zuhaitzaren itxura"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Hurrengo 2 egun"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Hurrengo 2 aste"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Hurrengo 2 urte"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Hurrengo 3 hilabete"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Hurrengo 5 egun"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Hurrengo 6 hilabete"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "hurrengo hilabetea"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "datorren astean"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "hurrengo urtea"
 
 #. Default: ""
 #: ../../facetednavigation/browser/app/exportimport.py:74
@@ -585,7 +585,7 @@ msgstr "Ordena"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "Azken"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -594,7 +594,7 @@ msgstr "Bidea"
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:20
 msgid "Path to portlet macro"
-msgstr ""
+msgstr "Path portlet makro"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -642,7 +642,7 @@ msgstr "Radio"
 
 #: ../../facetednavigation/widgets/range/widget.py:49
 msgid "Range"
-msgstr ""
+msgstr "sorta"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:28
 msgid "Remove all"
@@ -650,7 +650,7 @@ msgstr "Guztiak ezabatu"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:25
 msgid "Remove all filters"
-msgstr ""
+msgstr "Kendu iragazki guztiak"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:61
 msgid "Results per page"
@@ -659,17 +659,17 @@ msgstr "Orrialde bakoitzeko emaitza kopurua"
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:32
 msgid "Results per page ending value"
-msgstr ""
+msgstr "Emaitzak orrialdeko balio amaitzeko"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:23
 msgid "Results per page starting value"
-msgstr ""
+msgstr "Orrialdearen emaitzak balio hasita"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:41
 msgid "Results per page step"
-msgstr ""
+msgstr "Emaitzak orrialdeko urratsa"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
@@ -689,7 +689,7 @@ msgstr "Erroa"
 
 #: ../../facetednavigation/browser/template/configure.pt:182
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 #: ../../facetednavigation/widgets/text/widget.pt:21
 msgid "Search"
