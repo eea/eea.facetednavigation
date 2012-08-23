@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 måneder siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 uker siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "1 år siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 dager siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "2 uker siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "2 år siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "3 måneder siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "5 dager siden"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "6 måneder siden"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -178,7 +178,7 @@ msgstr "Standard daterange (f.eks '2009 / 12/01 => 2009/12/31 ')"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Standard daterange (f.eks 'nå-365 => nå +1' som betyr' Starting ett år siden til i morgen ")"
+msgstr "Standard daterange (f.eks 'nå-365 => nå +1' som betyr 'Starting ett år siden til i morgen')"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -385,7 +385,7 @@ msgstr "Friendly navn"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Future"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -475,7 +475,7 @@ msgstr "Flytt opp"
 
 #: ../../facetednavigation/widgets/path/widget.py:34
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
-msgstr "Navigasjon js-treet utgangspunkt (i forhold til Plone nettstedet ex:. SITE / data-og-kart)"
+msgstr "Navigasjon js-treet utgangspunkt (i forhold til Plone nettstedet ex:. SITE/data-og-kart)"
 
 #: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Navigation tree theme"
@@ -483,39 +483,39 @@ msgstr "Navigasjonstreet tema"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Neste 2 dager"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Neste to ukene"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Neste 2 år"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Neste 3 måneder"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Neste 5 dager"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Neste 6 måneder"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Neste måned"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Neste uke"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Neste år"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -537,7 +537,7 @@ msgstr "Bestillinger"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "siste"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -742,11 +742,11 @@ msgstr "Tittel for widget for å vise i visningen side"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Idag"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "I morgen"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -802,7 +802,7 @@ msgstr "Widget vil være synlig kun for valgte brukeren"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "I går"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

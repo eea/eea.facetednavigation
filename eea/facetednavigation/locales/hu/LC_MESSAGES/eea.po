@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 hónapja"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 héttel ezelőtt"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "1 évvel ezelőtt"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 napja"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "2 héttel ezelőtt"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "2 évvel ezelőtt"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "3 hónappal ezelőtt"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "5 napja"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "6 hónappal ezelőtt"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -178,7 +178,7 @@ msgstr "Alapértelmezett daterange (pl. '2009 / 12/01 => 2009/12/31 ')"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Alapértelmezett daterange (pl. "most-365 => most +1 ami azt jelenti," egy évvel ezelőtti elindítása holnapig ")"
+msgstr "Alapértelmezett daterange (pl. 'most-365 => most +1' ami azt jelenti, 'egy évvel ezelőtti elindítása holnapig')"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -198,7 +198,7 @@ msgstr "Alap útvonalat keresni (viszonyítva gyökérkönyvtárában)"
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr "Alapértelmezett tartomány (pl. '1 => 3 ")"
+msgstr "Alapértelmezett tartomány (pl. '1 => 3')"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
 msgid "Default results per page"
@@ -212,7 +212,7 @@ msgstr "Alapértelmezett kiválasztott elem"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr "Alapértelmezett rendezési index (pl. a "hatékony" vagy "effektív (fordított)")"
+msgstr "Alapértelmezett rendezési index (pl. a 'hatékony' vagy 'effektív (fordított)')"
 
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
@@ -288,7 +288,7 @@ msgstr "Engedélyezze a sokoldalú keresési"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Enable hide/show criteria"
-msgstr "Engedélyezze elrejtése / megjelenítése kritériumok"
+msgstr "Engedélyezze elrejtése/megjelenítése kritériumok"
 
 #: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
@@ -385,7 +385,7 @@ msgstr "Barátságos neve"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Jövő"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -475,7 +475,7 @@ msgstr "Fel"
 
 #: ../../facetednavigation/widgets/path/widget.py:34
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
-msgstr "Navigációs js-Fa kiindulási pont (relatív a Plone oldalon. Ex: SITE / adat-és térképek)"
+msgstr "Navigációs js-Fa kiindulási pont (relatív a Plone oldalon. Ex: SITE/adat-és térképek)"
 
 #: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Navigation tree theme"
@@ -483,39 +483,39 @@ msgstr "Navigációs fa téma"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Következő 2 nap"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Következő 2 hét"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Következő 2 éves"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Következő 3 hónap"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Következő 5 napra"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Következő 6 hónap"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Következő hónap"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Jövő héten"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Jövőre"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -525,7 +525,7 @@ msgstr "Nincs előírt intézkedéseket"
 #: ../../facetednavigation/widgets/radio/widget.py:54
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
-msgstr "Tételek száma látható widget-"
+msgstr "Tételek száma látható widget"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:38
 msgid "Operator"
@@ -537,7 +537,7 @@ msgstr "R"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "ezután"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -644,7 +644,7 @@ msgstr "Keresés mélysége"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
 msgid "Search with AND/OR between elements"
-msgstr "Keresés az ÉS / VAGY elemek közötti"
+msgstr "Keresés az ÉS/VAGY elemek közötti"
 
 #: ../../facetednavigation/browser/template/configure.pt:56
 #: ../../facetednavigation/widgets/widget.py:61
@@ -726,7 +726,7 @@ msgstr "Theme kell használni ezt a widgetet"
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:78
 msgid "This option works only if 'count results' is enabled"
-msgstr "Ez az opció csak akkor működik, ha a "számlálás eredményeit" engedélyezve van"
+msgstr "Ez az opció csak akkor működik, ha a 'számlálás eredményeit' engedélyezve van"
 
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
@@ -742,11 +742,11 @@ msgstr "Címet widgetet megjeleníteni tekintettel oldalon"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "ma"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "Holnap"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -802,7 +802,7 @@ msgstr "Widget lesz látható, csak a kiválasztott felhasználónak"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "tegnap"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

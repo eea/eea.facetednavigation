@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 mesec nazaj"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 teden nazaj"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "Pred 1 letom"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 dni nazaj"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "2 tednov nazaj"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "2 leti nazaj"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "3 mesecev nazaj"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "5 dni nazaj"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "6 mesecev nazaj"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -178,7 +178,7 @@ msgstr "Privzeto daterange (npr. '2009 / 12/01 => 2009/12/31)"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Daterange default (npr. "zdaj-365 => zdaj +1, kar pomeni" Od enim letom do jutri)"
+msgstr "Daterange default (npr. 'zdaj-365 => zdaj +1', kar pomeni 'Od enim letom do jutri')"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -212,7 +212,7 @@ msgstr "Privzeto izbrani element"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr "Privzeto sortiranje indeks (npr. "učinkovito" ali "učinkovit (nazaj))"
+msgstr "Privzeto sortiranje indeks (npr. 'učinkovito' ali 'učinkovit (nazaj)')"
 
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
@@ -385,7 +385,7 @@ msgstr "Prijazno ime"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Prihodnost"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -483,39 +483,39 @@ msgstr "Navigacija drevo tema"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Naslednja 2 dni"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Naslednja 2 tedna"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Naslednji 2 leti"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Naslednje 3 mesece"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Naslednjih 5 dni"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Naslednjih 6 mesecev"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Naslednji mesec"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Naslednji teden!"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Naslednje leto"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -537,7 +537,7 @@ msgstr "Da"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "pretekli"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -742,11 +742,11 @@ msgstr "Naslov za widget za prikaz v pogledu strani"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Danes"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "..."
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -802,7 +802,7 @@ msgstr "Gradnik bo viden le za izbranega uporabnika"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "Včeraj"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
