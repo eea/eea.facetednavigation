@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 mánuður síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 viku síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "1 ári síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 dögum síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "2 vikum síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "2 ár síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "3 mánuðum síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "5 dögum síðan"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "6 mánuðum síðan"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -178,7 +178,7 @@ msgstr "Sjálfgefin daterange (td '2009 / 01/12 => 2009/12/31 ')"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Sjálfgefin daterange (td "nú-365 => nú +1' sem þýðir" Starting einu ári síðan þar til á morgun ')"
+msgstr "Sjálfgefin daterange (td 'nú-365=>nú+1' sem þýðir 'Starting einu ári síðan þar til á morgun')"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -198,7 +198,7 @@ msgstr "Sjálfgefin slóð til að leita í (miðað við rót mappa)"
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr "Sjálfgefin svið (td '1 => 3 ')"
+msgstr "Sjálfgefin svið (td '1 => 3')"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
 msgid "Default results per page"
@@ -212,7 +212,7 @@ msgstr "Sjálfgefin valin atriði"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr "Sjálfgefin flokkun index (td "árangri" eða "gildi (andstæða) ')"
+msgstr "Sjálfgefin flokkun index (td 'árangri' eða 'gildi (andstæða)')"
 
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
@@ -385,7 +385,7 @@ msgstr "Vingjarnlegur nafn"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Framtíð"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -475,7 +475,7 @@ msgstr "Færa upp"
 
 #: ../../facetednavigation/widgets/path/widget.py:34
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
-msgstr "Navigation JS-tré upphafið (miðað við plone síðuna td:. N / gögn-og-kort)"
+msgstr "Navigation JS-tré upphafið (miðað við plone síðuna td:. N/gögn-og-kort)"
 
 #: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Navigation tree theme"
@@ -483,39 +483,39 @@ msgstr "Navigation tree þema"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Næstu 2 dagar"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Næstu 2 vikur"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Næstu 2 ár"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Næstu 3 mánuði"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Næstu 5 daga"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Næstu 6 mánuðir"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Mánuð"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Næsta vika"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Næsta ár"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -537,7 +537,7 @@ msgstr "Panta"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "Past"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -644,7 +644,7 @@ msgstr "Leita Dýpt"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
 msgid "Search with AND/OR between elements"
-msgstr "Leita með OG / EÐA milli atriða"
+msgstr "Leita með OG/EÐA milli atriða"
 
 #: ../../facetednavigation/browser/template/configure.pt:56
 #: ../../facetednavigation/widgets/widget.py:61
@@ -742,11 +742,11 @@ msgstr "Titill fyrir græjuna til að sýna á síðu skoða"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Í dag"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "Á morgun"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -766,7 +766,7 @@ msgstr "HÍ almanaksár allt"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:17
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-msgstr "Taktu hakið úr þessum reit ef þú vilt ekki að fela / sýna viðmiðanir eru virkt á þessum hlut"
+msgstr "Taktu hakið úr þessum reit ef þú vilt ekki að fela/sýna viðmiðanir eru virkt á þessum hlut"
 
 #: ../../facetednavigation/widgets/debug/widget.py:21
 msgid "Visible to"
@@ -802,7 +802,7 @@ msgstr "Búnaður verður sýnileg aðeins fyrir valinn notanda"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "Gær"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

@@ -1,6 +1,6 @@
 # Translation of eea.pot to Italian
 # Giacomo Spettoli <giacomo.spettoli@gmail.com>, 2012.
-# 
+
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
@@ -20,39 +20,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 mese fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "1 settimana fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "1 anno fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 giorni fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "2 settimane fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "2 anni fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "3 mesi fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "5 giorni fa"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "6 mesi fa"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -111,11 +111,11 @@ msgstr "Query al catalogo"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:107
 msgid "Checkboxes"
-msgstr ""
+msgstr "Caselle di controllo"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Cloud"
-msgstr ""
+msgstr "Nuvola"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:137
@@ -147,7 +147,7 @@ msgstr "Elenco dei contenuti"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:61
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
-msgstr ""
+msgstr "Controllare l'intervallo di yearsdisplayed nell'anno discesa: o relativo all'anno oggi (-nn: + nn), relativo all'anno selezionato (c-nn: c + nn), assoluto (nnnn: nnnn), o combinazioni di questi formati (nnnn:-nn)."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
@@ -183,7 +183,7 @@ msgstr "Intervallo di date"
 
 #: ../../facetednavigation/widgets/debug/widget.py:32
 msgid "Debugger"
-msgstr ""
+msgstr "Debugger"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
@@ -214,7 +214,7 @@ msgstr "Percorso predefinito in cui cercare (relativo alla cartella radice)"
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr ""
+msgstr "Predefinito intervallo (ad esempio '1 => 3 ')"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
@@ -240,7 +240,7 @@ msgstr "Stringa predefinita da cercare"
 #. Default: ""
 #: ../../facetednavigation/widgets/tal/widget.py:41
 msgid "Default tal expression for query value"
-msgstr ""
+msgstr "Predefinito espressione Tal per valore della query"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:56
@@ -263,7 +263,7 @@ msgstr "Disabilita la navigazione a faccette"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted search"
-msgstr ""
+msgstr "Disattiva ricerca sfaccettato"
 
 #: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
@@ -275,7 +275,7 @@ msgstr "Disabilita le portlet sulla colonna destra"
 
 #: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
-msgstr ""
+msgstr "Disabilitare sfaccettature intelligenti nascondere"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:80
@@ -310,7 +310,7 @@ msgstr "Abilita la navigazione a faccette"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted search"
-msgstr ""
+msgstr "Attiva ricerca sfaccettato"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Enable hide/show criteria"
@@ -326,7 +326,7 @@ msgstr "Abilita le portlet sulla colonna destra"
 
 #: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
-msgstr ""
+msgstr "Abilita sfaccettature intelligenti nascondere"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -374,11 +374,11 @@ msgstr "Navigazione a faccette abilitata"
 
 #: ../../facetednavigation/subtypes/subtyper.py:169
 msgid "Faceted search disabled"
-msgstr ""
+msgstr "Ricerca sfaccettato disattivato"
 
 #: ../../facetednavigation/subtypes/subtyper.py:161
 msgid "Faceted search enabled"
-msgstr ""
+msgstr "Ricerca sfaccettato abilitato"
 
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:21
@@ -417,7 +417,7 @@ msgstr "Nome"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Futuro"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
@@ -511,11 +511,11 @@ msgstr "Più filtri"
 
 #: ../../facetednavigation/browser/template/configure.pt:166
 msgid "Move Down"
-msgstr ""
+msgstr "Sposta giù"
 
 #: ../../facetednavigation/browser/template/configure.pt:157
 msgid "Move Up"
-msgstr ""
+msgstr "Sposta su"
 
 #: ../../facetednavigation/widgets/path/widget.py:34
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
@@ -528,39 +528,39 @@ msgstr "Tema dell'albero di navigazione"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Prossimi 2 giorni"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Prossime 2 settimane"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Prossimi 2 anni"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Prossimi 3 mesi"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Prossimi 5 giorni"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Prossimi 6 mesi"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Il mese prossimo"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "La prossima settimana"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Prossimo anno..."
 
 #. Default: ""
 #: ../../facetednavigation/browser/app/exportimport.py:74
@@ -585,7 +585,7 @@ msgstr "Ordine"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "Precedente"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -594,7 +594,7 @@ msgstr "Percorso"
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:20
 msgid "Path to portlet macro"
-msgstr ""
+msgstr "Percorso portlet macro"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -603,7 +603,7 @@ msgstr "Portlet di Plone"
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:19
 msgid "Portlet macro"
-msgstr ""
+msgstr "Portlet macro"
 
 #: ../../facetednavigation/settings/menu.py:132
 msgid "Portlets left column is hidden now"
@@ -638,11 +638,11 @@ msgstr "Il nome Python di una fabbrica che può creare l'oggetto per l'implement
 
 #: ../../facetednavigation/widgets/radio/widget.py:99
 msgid "Radio"
-msgstr ""
+msgstr "Radio"
 
 #: ../../facetednavigation/widgets/range/widget.py:49
 msgid "Range"
-msgstr ""
+msgstr "Distnza"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:28
 msgid "Remove all"
@@ -650,7 +650,7 @@ msgstr "Rimuovi tutto"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:25
 msgid "Remove all filters"
-msgstr ""
+msgstr "Rimuovi tutti i filtri"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:61
 msgid "Results per page"
@@ -725,11 +725,11 @@ msgstr "Mostra i filtri"
 
 #: ../../facetednavigation/settings/menu.py:152
 msgid "Smart facets hiding is now disabled"
-msgstr ""
+msgstr "Intelligente nasconde aspetti è ora disattivato"
 
 #: ../../facetednavigation/settings/menu.py:149
 msgid "Smart facets hiding is now enabled"
-msgstr ""
+msgstr "Intelligente nasconde aspetti è ora abilitata"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
@@ -744,7 +744,7 @@ msgstr "Ordinamento"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:22
 msgid "Sphere"
-msgstr ""
+msgstr "Sfera"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:20
@@ -771,7 +771,7 @@ msgstr "Espressione TAL"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:174
 msgid "Tags Cloud"
-msgstr ""
+msgstr "Tag cloud"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tal/widget.py:40
@@ -808,11 +808,11 @@ msgstr "Titolo del widget da mostrare nella pagina"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Oggi"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "Domani"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -830,7 +830,7 @@ msgstr "Tipo di widget"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:60
 msgid "UI Calendar years range"
-msgstr ""
+msgstr "UI Anni solari vanno"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:17
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
@@ -876,7 +876,7 @@ msgstr "Il widget sarà visibile solo per l'utente selezionato"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "Ieri"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"

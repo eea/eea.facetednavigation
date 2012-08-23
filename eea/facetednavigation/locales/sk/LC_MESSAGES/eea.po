@@ -16,39 +16,39 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 month ago"
-msgstr ""
+msgstr "1 pred mesiacom"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "1 week ago"
-msgstr ""
+msgstr "Pred 1 týždňom"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "1 year ago"
-msgstr ""
+msgstr "Pred 1 rokom"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "2 days ago"
-msgstr ""
+msgstr "2 dni"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "2 weeks ago"
-msgstr ""
+msgstr "Pred 2 týždňami"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "2 years ago"
-msgstr ""
+msgstr "Pred 2 roky"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "3 months ago"
-msgstr ""
+msgstr "Pred 3 mesiacmi"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "5 days ago"
-msgstr ""
+msgstr "Pred 5 dňami"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "6 months ago"
-msgstr ""
+msgstr "Pred 6 mesiacmi"
 
 #: ../../facetednavigation/browser/template/configure.pt:70
 msgid "Add"
@@ -174,11 +174,11 @@ msgstr "Debugger"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
-msgstr "Východiskové RozmeziDatumu (napr. '2009 / 12/01 => 2009/12/31 ")"
+msgstr "Východiskové RozmeziDatumu (napr. '2009 / 12/01 => 2009/12/31')"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Východiskové RozmeziDatumu (napr. "dnes-365 => teraz +1', čo znamená" Počnúc jedným rokom až zajtra ")"
+msgstr "Východiskové RozmeziDatumu (napr. 'dnes-365 => teraz +1', čo znamená 'Počnúc jedným rokom až zajtra ')"
 
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
@@ -198,7 +198,7 @@ msgstr "Predvolená cesta pre vyhľadávanie (v pomere ku koreňovej zložky)"
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr "Štandardný rozsah (napr. 1 => 3 ")"
+msgstr "Štandardný rozsah (napr. '1 => 3')"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
 msgid "Default results per page"
@@ -212,7 +212,7 @@ msgstr "Východiskové vybrané položky"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:31
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
-msgstr "Predvolené triedenie index (napr. "účinné" a "efektívne (reverz)")"
+msgstr "Predvolené triedenie index (napr. 'účinné' a 'efektívne (reverz)')"
 
 #: ../../facetednavigation/widgets/text/widget.py:30
 msgid "Default string to search for"
@@ -385,7 +385,7 @@ msgstr "Popisný názov"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
-msgstr ""
+msgstr "Budúce"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:44
@@ -483,39 +483,39 @@ msgstr "Navigačný strom tému"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 2 days"
-msgstr ""
+msgstr "Ďalšie 2 dni"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 2 weeks"
-msgstr ""
+msgstr "Nasledujúcich 2 týždňoch"
 
 #: ../../facetednavigation/widgets/date/widget.py:41
 msgid "Next 2 years"
-msgstr ""
+msgstr "Ďalšie 2 roky"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 3 months"
-msgstr ""
+msgstr "Ďalšie 3 mesiace"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 5 days"
-msgstr ""
+msgstr "Ďalšie 5 dní"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 6 months"
-msgstr ""
+msgstr "Ďalšie 6 mesiacov"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next month"
-msgstr ""
+msgstr "Ďalší mesiac"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next week"
-msgstr ""
+msgstr "Budúci týždeň"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next year"
-msgstr ""
+msgstr "Budúci rok"
 
 #: ../../facetednavigation/browser/app/exportimport.py:74
 msgid "No action provided"
@@ -537,7 +537,7 @@ msgstr "Poriadok"
 
 #: ../../facetednavigation/widgets/date/widget.py:112
 msgid "Past"
-msgstr ""
+msgstr "po"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -742,11 +742,11 @@ msgstr "Názov pre ovládací prvok sa zobrazí v náhľade stránky"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Dnes"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "Zajtra"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -802,7 +802,7 @@ msgstr "Widget bude viditeľná iba pre vybraných používateľov"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "Včera"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
