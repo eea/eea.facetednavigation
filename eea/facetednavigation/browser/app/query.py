@@ -148,7 +148,10 @@ class FacetedQueryHandler(object):
             widget = widgetclass(self.context, self.request, criterion)
 
             if widget.widget_type == 'resultsperpage':
-                num_per_page = widget.results_per_page(kwargs)
+                if criterion.hidden == True:
+                    num_per_page = int(criterion.default)
+                else:
+                    num_per_page = widget.results_per_page(kwargs)
 
             brains_filter = queryAdapter(widget, IWidgetFilterBrains)
             if brains_filter:

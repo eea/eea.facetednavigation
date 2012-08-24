@@ -3,6 +3,8 @@ Changelog
 
 4.9-dev - (unreleased)
 ----------------------
+* Bug fix: results by page didn't work when it was hidden.
+  [thomasdesvenain]
 * Bug fix: with some widgets (sort, date), batch navigation was broken.
   [thomasdesvenain]
 * Feature: Added buildouts folder which will contain various samples of configurations
