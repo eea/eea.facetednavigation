@@ -182,11 +182,13 @@ Faceted.Form = {
 
   initialize_paginator: function() {
     var context = this;
+    Faceted.b_start_changed = false;
     jQuery('.listingBar a').each(function(i){
       jQuery(this).click(function(){
         var href = jQuery(this).attr('href');
         var regex = new RegExp('b_start\\:int=(\\d+)');
         var b_start = regex.exec(href)[1];
+  	    Faceted.b_start_changed = true;
         context.do_query('b_start', b_start);
         return false;
       });
@@ -199,16 +201,16 @@ Faceted.Form = {
 
   do_query: function(wid, value){
     // Update query
-    if(wid != 'b_start'){
+	if(wid != 'b_start' && !Faceted.b_start_changed){
       Faceted.Query.b_start = 0;
     }
+
     if(!value){
       value = [];
     }
     if(wid){
       Faceted.Query[wid] = value;
     }
-
     jQuery(Faceted.Events).trigger(Faceted.Events.FORM_DO_QUERY, {wid: wid});
     // Update url
     Faceted.URLHandler.set();
@@ -219,7 +221,6 @@ Faceted.Form = {
     if(Faceted.Query.b_start === undefined){
       Faceted.Query.b_start = 0;
     }
-
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_START);
     context.area.fadeOut('fast', function(){
       if(Faceted.Options.SHOW_SPINNER){
