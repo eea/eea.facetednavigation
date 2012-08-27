@@ -1,8 +1,11 @@
 Changelog
 =========
 
-4.9-dev - (unreleased)
+5.0-dev - (unreleased)
 ----------------------
+
+4.9 - (2012-08-27)
+------------------
 * Bug fix: with some widgets (sort, date), batch navigation was broken.
   [thomasdesvenain]
 * Feature: Added buildouts folder which will contain various samples of configurations
