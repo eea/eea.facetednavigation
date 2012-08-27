@@ -188,7 +188,7 @@ Faceted.Form = {
         var href = jQuery(this).attr('href');
         var regex = new RegExp('b_start\\:int=(\\d+)');
         var b_start = regex.exec(href)[1];
-  	    Faceted.b_start_changed = true;
+        Faceted.b_start_changed = true;
         context.do_query('b_start', b_start);
         return false;
       });
@@ -201,7 +201,7 @@ Faceted.Form = {
 
   do_query: function(wid, value){
     // Update query
-	if(wid != 'b_start' && !Faceted.b_start_changed){
+    if(wid != 'b_start' && !Faceted.b_start_changed){
       Faceted.Query.b_start = 0;
     }
 
@@ -224,10 +224,10 @@ Faceted.Form = {
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_START);
     context.area.fadeOut('fast', function(){
       if(Faceted.Options.SHOW_SPINNER){
-	      var loading = '<div class="faceted_loading"><img src="' +
-	       Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
-	      context.area.html(loading);
-	      context.area.fadeIn(Faceted.Options.FADE_SPEED);
+        var loading = '<div class="faceted_loading"><img src="' +
+        Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
+        context.area.html(loading);
+        context.area.fadeIn(Faceted.Options.FADE_SPEED);
       }
 
       var query = Faceted.SortedQuery();
