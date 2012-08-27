@@ -692,7 +692,7 @@ msgstr "iniciando"
 
 #: ../../facetednavigation/widgets/daterange/widget.pt:21
 msgid "Start date"
-msgstr ""Data de início""
+msgstr "Data de início"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:40
 msgid "Step"
