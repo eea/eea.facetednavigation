@@ -381,7 +381,7 @@ msgstr "Filtren bort"
 
 #: ../../facetednavigation/widgets/widget.py:43
 msgid "Friendly name"
-msgstr ""Friend Namn");"
+msgstr "Friend Namn"
 
 #: ../../facetednavigation/widgets/date/widget.py:125
 msgid "Future"
