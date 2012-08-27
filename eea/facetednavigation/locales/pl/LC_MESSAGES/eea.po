@@ -212,7 +212,7 @@ msgstr "Domyślna ścieżka do przeszukania (w stosunku do katalogu głównego)"
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr "Domyślny zakres (np. '1 => 3 ')"
+msgstr "Domyślny zakres (np. '1 => 3')"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
@@ -789,7 +789,7 @@ msgstr "Motyw do użytku z tym widgetem"
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:78
 msgid "This option works only if 'count results' is enabled"
-msgstr "Opcja ta działa tylko wtedy, gdy "wyniki liczyć" jest włączona"
+msgstr "Opcja ta działa tylko wtedy, gdy 'wyniki liczyć' jest włączona"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.pt:29
