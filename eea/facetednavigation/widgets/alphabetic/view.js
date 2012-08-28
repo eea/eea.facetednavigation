@@ -37,14 +37,15 @@ Faceted.AlphabeticalWidget = function(wid){
     js_widget.reset();
   });
   if(this.widget.hasClass('faceted-count')){
+    var sortcountable = this.widget.hasClass('faceted-sortcountable');
     jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
-      js_widget.count();
+      js_widget.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
       if(data.wid == js_widget.wid || data.wid == 'b_start'){
         return;
       }
-      js_widget.count();
+      js_widget.count(sortcountable);
     });
   }
 };
@@ -157,7 +158,7 @@ Faceted.AlphabeticalWidget.prototype = {
     this.do_query(this.selected[0]);
   },
 
-  count: function(){
+  count: function(sortcountable){
     var query = Faceted.SortedQuery();
     query.cid = this.wid;
     if(this.version){
@@ -167,12 +168,12 @@ Faceted.AlphabeticalWidget.prototype = {
     var context = this;
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});
     jQuery.getJSON(Faceted.BASEURL + '@@faceted_counter', query, function(data){
-      context.count_update(data);
+      context.count_update(data, sortcountable);
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_STOP, {wid: context.wid});
     });
   },
 
-  count_update: function(data){
+  count_update: function(data, sortcountable){
     var context = this;
     context.letters.each(function(){
       var letter = jQuery(this);
@@ -182,6 +183,9 @@ Faceted.AlphabeticalWidget.prototype = {
       var value = data[key];
       value = value ? value : 0;
       letter.attr('title', value);
+      if(sortcountable){
+        letter.data('count', value);
+      }
       if(!value){
         letter.addClass('faceted-alphabetic-letter-disabled');
       }else{
@@ -190,6 +194,14 @@ Faceted.AlphabeticalWidget.prototype = {
         });
       }
     });
+    if(sortcountable){
+      context.letters.detach().sort(function(x, y) {
+        var a = jQuery(x).data('count');
+        var b = jQuery(y).data('count');
+        return b - a;
+      });
+    }
+    jQuery('#' + context.wid, context.widget).append(context.letters);
   }
 };
 

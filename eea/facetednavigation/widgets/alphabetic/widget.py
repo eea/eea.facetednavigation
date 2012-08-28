@@ -33,21 +33,6 @@ EditSchema = Schema((
             description=_(u"Catalog index to use for search"),
         )
     ),
-    BooleanField('count',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u"Count results"),
-            description=_(u'Display number of results per letter'),
-        )
-    ),
-    BooleanField('hidezerocount',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u"Hide items with zero results"),
-            description=_(u"This option works only if 'count results' "
-                           "is enabled"),
-        )
-    ),
     StringField('default',
         schemata="default",
         widget=StringWidget(

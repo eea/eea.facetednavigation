@@ -53,14 +53,15 @@ Faceted.CheckboxesWidget = function(wid){
     js_widget.reset();
   });
   if(this.widget.hasClass('faceted-count')){
+    var sortcountable = this.widget.hasClass('faceted-sortcountable');
     jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
-      js_widget.count();
+      js_widget.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
       if(data.wid == js_widget.wid || data.wid == 'b_start'){
         return;
       }
-      js_widget.count();
+      js_widget.count(sortcountable);
     });
   }
 };
@@ -170,7 +171,7 @@ Faceted.CheckboxesWidget.prototype = {
     }
   },
 
-  count: function(){
+  count: function(sortcountable){
     var query = Faceted.SortedQuery();
     query.cid = this.wid;
     if(this.version){
@@ -180,12 +181,12 @@ Faceted.CheckboxesWidget.prototype = {
     var context = this;
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});
     jQuery.getJSON(Faceted.BASEURL + '@@faceted_counter', query, function(data){
-      context.count_update(data);
+      context.count_update(data, sortcountable);
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_STOP, {wid: context.wid});
     });
   },
 
-  count_update: function(data){
+  count_update: function(data, sortcountable){
     var context = this;
     var lis = jQuery('li', context.widget);
     jQuery(lis).each(function(){
@@ -205,6 +206,9 @@ Faceted.CheckboxesWidget.prototype = {
       var value = data[key];
       value = value ? value : 0;
       span.text('(' + data[key] + ')');
+      if(sortcountable){
+        li.data('count', value);
+      }
       if(!value){
         li.addClass('faceted-checkbox-item-disabled');
         if(context.widget.hasClass('faceted-zero-count-hidden')){
@@ -218,6 +222,14 @@ Faceted.CheckboxesWidget.prototype = {
         });
       }
     });
+    if(sortcountable){
+      lis.detach().sort(function(x, y) {
+        var a = jQuery(x).data('count');
+        var b = jQuery(y).data('count');
+        return b - a;
+      });
+    }
+    jQuery('ul', context.widget).append(lis);
     // Update expand/colapse
     context.fieldset.trigger('widget-refresh');
   }

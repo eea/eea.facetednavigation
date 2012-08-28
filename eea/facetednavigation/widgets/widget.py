@@ -291,14 +291,50 @@ class Widget(ATWidget):
         """
         return self.template
 
+
+CountableWidgetSchema = Schema((
+    BooleanField('count',
+        schemata="countable",
+        widget=BooleanWidget(
+            label=_(u"Count results"),
+            description=_(u"Display number of results near each option"),
+        )
+    ),
+    BooleanField('sortcountable',
+        schemata="countable",
+        widget=BooleanWidget(
+            label=_(u"Sort by countable"),
+            description=_(u"Use the results counter for sorting"),
+        )
+    ),
+    BooleanField('hidezerocount',
+        schemata="countable",
+        widget=BooleanWidget(
+            label=_(u'Hide items with zero results'),
+            description=_(u"This option works only if 'count results' "
+                           "is enabled"),
+            i18n_domain="eea"
+        )
+    ),
+))
+
 class CountableWidget(Widget):
     """ Defines useful methods for countable widgets
     """
+    # Widget properties
+    edit_schema = Widget.edit_schema.copy() + CountableWidgetSchema.copy()
+
     @property
     def countable(self):
         """ Count results?
         """
         return bool(safeToInt(self.data.get('count', 0)))
+
+    @property
+    def sortcountable(self):
+        """ Sort results by countable value?
+        """
+        return bool(safeToInt(self.data.get('sortcountable', 0)))
 
     @property
     def hidezerocount(self):
