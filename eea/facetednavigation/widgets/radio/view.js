@@ -202,12 +202,14 @@ Faceted.RadioWidget.prototype = {
         li.append(jQuery('<span>'));
         span = jQuery('span', li);
       }
-      if(sortcountable){
-        li.data('count', value);
-      }
+
       var value = data[key];
       value = value ? value : 0;
       span.text('(' + value + ')');
+
+      if(sortcountable){
+        li.data('count', value);
+      }
 
       if(!value){
         li.addClass('faceted-radio-item-disabled');

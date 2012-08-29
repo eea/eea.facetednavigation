@@ -1,6 +1,6 @@
-===================================
-EEA Faceted Navigation (FacetedNav)
-===================================
+======================
+EEA Faceted Navigation
+======================
 The EEA Faceted Navigation **(FacetedNav)** gives you a
 **very powerful interface to improve search within large collections of items.**
 No programming skills are required by the website manager to configure the
