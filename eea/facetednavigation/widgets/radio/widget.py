@@ -63,23 +63,6 @@ EditSchema = Schema((
             i18n_domain="eea"
         )
     ),
-    BooleanField('count',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u'Count results'),
-            description=_(u'Display number of results near each option'),
-            i18n_domain="eea"
-        )
-    ),
-    BooleanField('hidezerocount',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u'Hide items with zero results'),
-            description=_(u"This option works only if 'count results' "
-                           "is enabled"),
-            i18n_domain="eea"
-        )
-    ),
     StringField('default',
         schemata="default",
         widget=StringWidget(

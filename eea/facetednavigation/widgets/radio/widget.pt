@@ -1,14 +1,16 @@
-<div class="faceted-widget faceted-radio-widget" style="display: none" 
+<div class="faceted-widget faceted-radio-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
+  sortcountable python:view.sortcountable;
   default python:view.default or '';
   css string:faceted-widget faceted-radio-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
   css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
+  css python:sortcountable and css + ' faceted-sortcountable' or css;
   maxitems python:view.data.get('maxitems', 0) or 0;"
   tal:attributes="id string:${wid}_widget; class css">
 

@@ -3,6 +3,8 @@ Changelog
 
 5.0-dev - (unreleased)
 ----------------------
+* Feature: Adding posibility to sort CountableWidget instances by the counted results
+  [batradav]
 
 4.9 - (2012-08-27)
 ------------------
