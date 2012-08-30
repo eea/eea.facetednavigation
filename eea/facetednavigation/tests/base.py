@@ -5,7 +5,7 @@ from StringIO import StringIO
 from App.Common import package_home
 from cgi import FieldStorage
 from ZPublisher.HTTPRequest import FileUpload
-from Products.Five import zcml
+from Zope2.App import zcml
 from Products.Five import fiveconfigure
 from Products.PloneTestCase import PloneTestCase as ptc
 from Products.PloneTestCase.layer import onsetup
