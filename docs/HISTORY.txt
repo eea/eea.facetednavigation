@@ -3,6 +3,8 @@ Changelog
 
 5.0-dev - (unreleased)
 ----------------------
+* Bug fix: Cleanup zope.app.content.interfaces.IContentType dependency
+  [voineali]
 * Feature: Adding posibility to sort CountableWidget instances by the counted results
   [batradav]
 
