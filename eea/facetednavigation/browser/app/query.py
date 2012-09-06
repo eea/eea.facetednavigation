@@ -82,11 +82,7 @@ class FacetedQueryHandler(object):
         # Generate the catalog query
         mtool = getToolByName(self.context, 'portal_membership', None)
         criteria = ICriteria(self.context)
-
         query = {}
-        if mtool.isAnonymousUser():
-            query['review_state'] = 'published'
-
         for cid, criterion in criteria.items():
             widget = criteria.widget(cid=cid)
             widget = widget(self.context, self.request, criterion)

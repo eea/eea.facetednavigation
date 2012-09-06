@@ -3,6 +3,9 @@ Changelog
 
 5.0-dev - (unreleased)
 ----------------------
+* Bug fix: review state was fixed to ``published`` only. Let the catalog filter this.
+  Explanation at `mailing list <https://groups.google.com/forum/?hl=en&fromgroups=#!topic/eea-facetednavigation/jcpZTKQp0dA>`_
+  [jensens]
 * Bug fix: Cleanup zope.app.content.interfaces.IContentType dependency
   [voineali]
 * Feature: Adding posibility to sort CountableWidget instances by the counted results
