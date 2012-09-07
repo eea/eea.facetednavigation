@@ -6,7 +6,6 @@ from zope.component import queryMultiAdapter
 from zope.component import getUtility
 from zope.component import queryAdapter
 
-from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.PloneBatch import Batch
 
@@ -80,7 +79,6 @@ class FacetedQueryHandler(object):
         logger.debug("REQUEST: %r", kwargs)
 
         # Generate the catalog query
-        mtool = getToolByName(self.context, 'portal_membership', None)
         criteria = ICriteria(self.context)
         query = {}
         for cid, criterion in criteria.items():
