@@ -203,8 +203,8 @@ Faceted.SelectWidget.prototype = {
         var b = jQuery(y).data('count');
         return b - a;
       });
+      jQuery('select', context.widget).append(options);
     }
-    jQuery('select', context.widget).append(options);
   }
 };
 
