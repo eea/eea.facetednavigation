@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.1-dev - (unreleased)
+----------------------
+
 5.0 - (2012-09-18)
 ------------------
 * Bug fix: review state was fixed to ``published`` only. Let the catalog filter this.
