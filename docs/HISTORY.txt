@@ -1,8 +1,24 @@
 Changelog
 =========
 
-4.9-dev - (unreleased)
+5.0-dev - (unreleased)
 ----------------------
+* Bug fix: review state was fixed to ``published`` only. Let the catalog filter this.
+  Explanation at `mailing list <https://groups.google.com/forum/?hl=en&fromgroups=#!topic/eea-facetednavigation/jcpZTKQp0dA>`_
+  Upgrade step: warning for those still using old worklows with 
+  the infamous state 'visible' aka 'Public draft' and you want to exclude 
+  such content from searches, than follow instructions at mailing list above.
+  [jensens]
+* Bug fix: Cleanup zope.app.content.interfaces.IContentType dependency
+  [voineali]
+* Feature: Adding posibility to sort CountableWidget instances by the counted results
+  [batradav]
+* Bug fix: only reorder options of select widget, sorting by count is active
+  [do3cc]
+ 
+
+4.9 - (2012-08-27)
+------------------
 * Bug fix: with some widgets (sort, date), batch navigation was broken.
   [thomasdesvenain]
 * Feature: Added buildouts folder which will contain various samples of configurations

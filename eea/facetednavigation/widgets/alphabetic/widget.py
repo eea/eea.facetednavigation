@@ -5,11 +5,9 @@ from zope.interface import implements
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 
 from Products.Archetypes.public import Schema
-from Products.Archetypes.public import BooleanField
 from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
-from Products.Archetypes.public import BooleanWidget
 
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation.widgets.alphabetic.alphabets import (
@@ -31,21 +29,6 @@ EditSchema = Schema((
             format='select',
             label=_(u"Catalog index"),
             description=_(u"Catalog index to use for search"),
-        )
-    ),
-    BooleanField('count',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u"Count results"),
-            description=_(u'Display number of results per letter'),
-        )
-    ),
-    BooleanField('hidezerocount',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u"Hide items with zero results"),
-            description=_(u"This option works only if 'count results' "
-                           "is enabled"),
         )
     ),
     StringField('default',

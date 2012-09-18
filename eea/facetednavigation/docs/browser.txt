@@ -7,7 +7,7 @@ Imports
     >>> from zope.component import getMultiAdapter
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
 
-    >>> from Products.Five.testbrowser import Browser
+    >>> from Testing.testbrowser import Browser
     >>> from Products.PloneTestCase import PloneTestCase
 
 Set up
@@ -185,9 +185,9 @@ Edit (no AJAX)
        <property name="position">left</property>
        <property name="section">default</property>
        <property name="hidden">1</property>
+       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="count">1</property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
@@ -199,15 +199,15 @@ Edit (no AJAX)
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">0</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
-       <property name="count">0</property>
        <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
-    <BLANKLINE>
+
 
 Edit (AJAX)
 -----------

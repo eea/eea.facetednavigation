@@ -1,8 +1,7 @@
 """ Subtypes interfaces
 """
 from zope import schema
-from zope.interface import Interface, alsoProvides
-from zope.app.content.interfaces import IContentType
+from zope.interface import Interface
 
 class IPossibleFacetedNavigable(Interface):
     """ All objects that should have the ability to be faceted navigable
@@ -12,7 +11,6 @@ class IPossibleFacetedNavigable(Interface):
 class IFacetedNavigable(Interface):
     """ Marker interface for faceted navigable objects
     """
-alsoProvides(IFacetedNavigable, IContentType)
 
 class IFacetedSearchMode(Interface):
     """ Marker interface for faceted navigable objects that are used as search

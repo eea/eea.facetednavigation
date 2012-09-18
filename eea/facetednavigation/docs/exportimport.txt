@@ -73,9 +73,9 @@ Checkboxes
        <property name="position">left</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="count">1</property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
@@ -87,17 +87,17 @@ Checkboxes
        <property name="position">right</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">0</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="count">0</property>
        <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
-    <BLANKLINE>
+
 
 XML Import
 ----------
@@ -132,9 +132,9 @@ Let's check exported
        <property name="position">left</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="count">1</property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
@@ -146,17 +146,17 @@ Let's check exported
        <property name="position">right</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">0</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="count">0</property>
        <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
-    <BLANKLINE>
+
 
 Now let's see if it works if there is already confgurated.
 
@@ -190,17 +190,17 @@ Check configuration
        <property name="position">right</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">0</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="count">0</property>
        <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
-    <BLANKLINE>
+
 
 Now update it
 
@@ -215,9 +215,9 @@ Now update it
        <property name="position">left</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="count">1</property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
@@ -229,17 +229,17 @@ Now update it
        <property name="position">right</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">0</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="count">0</property>
        <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
-    <BLANKLINE>
+
 
 Using the browser interface
 ---------------------------
@@ -287,9 +287,9 @@ Let's see our new configuration
        <property name="position">left</property>
        <property name="section">default</property>
        <property name="hidden">1</property>
+       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="count">1</property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
@@ -301,12 +301,13 @@ Let's see our new configuration
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
+       <property name="count">0</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
-       <property name="count">0</property>
        <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
-    <BLANKLINE>
+
+
