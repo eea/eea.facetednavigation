@@ -1,0 +1,14 @@
+.faceted-resultsfilter-widget input[type=text] {
+  width: 99%;
+}
+
+.faceted-resultsfilter-widget dl {
+  margin-top: 0.5em;
+  border: 1px dotted green;
+}
+
+.faceted-resultsfilter-widget dt {
+  clear: both;
+  float: left;
+  margin-right: 0.5em;
+}
