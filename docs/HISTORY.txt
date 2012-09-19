@@ -3,13 +3,16 @@ Changelog
 
 5.1-dev - (unreleased)
 ----------------------
+* Feature: Adding new "Results Filter" widget which allows filtering the resulting
+  brains from a query using a tal expression, similar to the "TAL Expression" widget
+  [batradav]
 
 5.0 - (2012-09-18)
 ------------------
 * Bug fix: review state was fixed to ``published`` only. Let the catalog filter this.
   Explanation at `mailing list <https://groups.google.com/forum/?hl=en&fromgroups=#!topic/eea-facetednavigation/jcpZTKQp0dA>`_
-  Upgrade step: warning for those still using old worklows with 
-  the infamous state 'visible' aka 'Public draft' and you want to exclude 
+  Upgrade step: warning for those still using old worklows with
+  the infamous state 'visible' aka 'Public draft' and you want to exclude
   such content from searches, than follow instructions at mailing list above.
   [jensens]
 * Bug fix: Cleanup zope.app.content.interfaces.IContentType dependency
