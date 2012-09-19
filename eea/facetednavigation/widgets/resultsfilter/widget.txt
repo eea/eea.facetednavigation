@@ -1,0 +1,67 @@
+Results Filter widget
+=====================
+
+Widget to filter resulting brains
+
+Imports
+-------
+
+    >>> from DateTime import DateTime
+    >>> from zope.component import getMultiAdapter
+    >>> from Products.CMFCore.utils import getToolByName
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+Set up
+------
+
+    >>> self.loginAsPortalOwner()
+    >>> fid = portal.invokeFactory('Folder', 'sandbox-widgets')
+    >>> sandbox = portal._getOb(fid)
+    >>> sandbox.setTitle('Faceted navigation folder test')
+    >>> request = sandbox.REQUEST
+
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.enable()
+
+    >>> handler = getMultiAdapter((sandbox, request), name=u'faceted_configure')
+    >>> query = getMultiAdapter((sandbox, request), name=u'faceted_query')
+
+Cleanup default widgets
+-----------------------
+
+    >>> cids = ICriteria(sandbox).keys()
+
+Default widgets
+
+    >>> cids
+    [...'c1',...]
+
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+Add testing content
+
+    >>> fid = sandbox.invokeFactory('Folder', 'a-folder', title='Za folder')
+    >>> fob = sandbox._getOb(fid)
+    >>> fob.setLanguage('en')
+
+Add widget
+----------
+
+    >>> _ = handler(addPropertiesWidget_button=True, wtype='resultsfilter',
+    ...             wposition='top', title='Alpha',
+    ...             hidden=True, default='python:"Za" in brain.Title')
+
+Query
+-----
+
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    ['a-folder']
+
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', c0_default='python:"xx" in brain.Title')
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    []

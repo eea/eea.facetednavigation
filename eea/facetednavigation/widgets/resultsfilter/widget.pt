@@ -1,0 +1,22 @@
+<div class="faceted-widget faceted-resultsfilter-widget" style="display: none"
+     i18n:domain="eea" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default python:view.default;
+  css string:faceted-widget faceted-resultsfilter-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset">
+  <legend tal:define="title python:view.data.get('title', '')" tal:content="
+    python:view.translate(title)" i18n:translate="">Results Filter Widget</legend>
+  <div class="faceted-widget-error">
+    <form action="." method="get"
+      tal:on-error="structure python:error_view(error=error, cid=wid)">
+      <input type="text" tal:attributes="
+        name string:${wid}; id string:${wid}; value python:default;" />
+    </form>
+  </div>
+</fieldset>
+</div>
