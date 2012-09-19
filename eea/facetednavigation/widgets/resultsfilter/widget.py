@@ -54,8 +54,10 @@ class Widget(AbstractWidget):
     implements(IResultsFilterWidget)
     widget_type = 'resultsfilter'
     widget_label = _('Results Filter')
-    edit_css = '++resource++eea.facetednavigation.widgets.resultsfilter.edit.css'
-    edit_js = '++resource++eea.facetednavigation.widgets.resultsfilter.edit.js'
+    edit_css = (
+        '++resource++eea.facetednavigation.widgets.resultsfilter.edit.css')
+    edit_js = (
+        '++resource++eea.facetednavigation.widgets.resultsfilter.edit.js')
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
