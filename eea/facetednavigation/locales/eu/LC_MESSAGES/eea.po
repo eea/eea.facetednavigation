@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
 "POT-Creation-Date: 2012-08-07 22:17+0000\n"
-"PO-Revision-Date: 2011-11-24 10:37+0100\n"
+"PO-Revision-Date: 2012-09-27 12:03+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -391,7 +391,7 @@ msgstr "Sortzailea"
 
 #: ../../facetednavigation/browser/app/configure.py:78
 msgid "Filter added"
-msgstr "Filter gehitu" 
+msgstr "Filter gehitu"
 
 #: ../../facetednavigation/browser/app/configure.py:162
 msgid "Filter deleted"
@@ -726,11 +726,11 @@ msgstr "Erakutsi filtroak"
 
 #: ../../facetednavigation/settings/menu.py:152
 msgid "Smart facets hiding is now disabled"
-msgstr ""
+msgstr "Sailkapen argiak ezkutatzea desaktibatuta"
 
 #: ../../facetednavigation/settings/menu.py:149
 msgid "Smart facets hiding is now enabled"
-msgstr ""
+msgstr "Sailkapen argiak ezkutatzea aktibatuta"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
@@ -786,7 +786,7 @@ msgstr "Testu-eremua"
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
-msgstr ""
+msgstr "Widget honekin erabili beharreko itxura"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:47
 #: ../../facetednavigation/widgets/checkbox/widget.py:87
@@ -810,11 +810,11 @@ msgstr "Widgetak orrialdean izango duen izenburua"
 
 #: ../../facetednavigation/widgets/date/widget.py:119
 msgid "Today"
-msgstr ""
+msgstr "Gaur"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Tomorrow"
-msgstr ""
+msgstr "Bihar"
 
 #: ../../facetednavigation/browser/template/configure.pt:32
 msgid "Type"
@@ -823,7 +823,7 @@ msgstr "Mota"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:111
 msgid "Type of the cloud"
-msgstr ""
+msgstr "Laino-mota"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:33
@@ -832,12 +832,12 @@ msgstr "Widget-mota."
 
 #: ../../facetednavigation/widgets/daterange/widget.py:60
 msgid "UI Calendar years range"
-msgstr ""
+msgstr "Egutegiko urte-sorta"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/criteria/widget.py:17
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-msgstr ""
+msgstr "Desaktibatu kutxa hau ez baduzu widget honetan erakutsi/ezkutatu aukera agertzea nahi."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/debug/widget.py:21
@@ -854,7 +854,7 @@ msgstr "Hiztegia"
 #. Default: ""
 #: ../../facetednavigation/widgets/sorting/widget.py:21
 msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
-msgstr ""
+msgstr "Ordenazio irizpideak filtratzeko erabiliko den hiztegia. Utzi hutsik defektuzko ordenazio irizpidea erabiltzeko."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
@@ -875,11 +875,11 @@ msgstr "Widget-mota"
 #. Default: ""
 #: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Widget will be visible only for selected user"
-msgstr ""
+msgstr "Widgeta aukeratutako erabiltzaileak bakarrik ikusiko du"
 
 #: ../../facetednavigation/widgets/date/widget.py:28
 msgid "Yesterday"
-msgstr ""
+msgstr "Atzo"
 
 #: ../../facetednavigation/widgets/text/widget.pt:30
 msgid "all items"
