@@ -3,15 +3,17 @@ Changelog
 
 5.1-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed 'smart facets hiding' property for faceted inheritors.
+  [ghicaale refs #5564]
 * Feature: Adding new "Results Filter" widget which allows filtering the resulting
   brains from a query using a tal expression, similar to the "TAL Expression" widget
   [batradav]
 
 5.0 - (2012-09-18)
 ------------------
-* Bug fix: review state was fixed to ``published`` only. Let the catalog filter this.
+* Bug fix: Review state was fixed to ``published`` only. Let the catalog filter this.
   Explanation at `mailing list <https://groups.google.com/forum/?hl=en&fromgroups=#!topic/eea-facetednavigation/jcpZTKQp0dA>`_
-  Upgrade step: warning for those still using old worklows with
+  Upgrade step: warning for those still using old workflows with
   the infamous state 'visible' aka 'Public draft' and you want to exclude
   such content from searches, than follow instructions at mailing list above.
   [jensens]
@@ -19,16 +21,16 @@ Changelog
   [voineali]
 * Feature: Adding posibility to sort CountableWidget instances by the counted results
   [batradav]
-* Bug fix: only reorder options of select widget, sorting by count is active
+* Bug fix: Only reorder options of select widget, sorting by count is active
   [do3cc]
 
 4.9 - (2012-08-27)
 ------------------
-* Bug fix: with some widgets (sort, date), batch navigation was broken.
+* Bug fix: With some widgets (sort, date), batch navigation was broken.
   [thomasdesvenain]
 * Feature: Added buildouts folder which will contain various samples of configurations
   [ghicaale #5418]
-* Bug fix: changed selector when checking for syndication which was changed
+* Bug fix: Changed selector when checking for syndication which was changed
   from Plone 2.5 to Plone 4
   [ichimdav #5412]
 * Feature: Extracted po message about date widget for all languages.
