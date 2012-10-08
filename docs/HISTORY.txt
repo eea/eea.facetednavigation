@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.2-dev - (unreleased)
+----------------------
+
 5.1 - (2012-10-08)
 ------------------
 * Bug fix: Fixed 'smart facets hiding' property for faceted inheritors.
