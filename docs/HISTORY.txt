@@ -1,8 +1,8 @@
 Changelog
 =========
 
-5.1-dev - (unreleased)
-----------------------
+5.1 - (2012-10-08)
+------------------
 * Bug fix: Fixed 'smart facets hiding' property for faceted inheritors.
   [ghicaale refs #5564]
 * Feature: Adding new "Results Filter" widget which allows filtering the resulting
