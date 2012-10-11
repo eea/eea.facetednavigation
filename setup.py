@@ -44,6 +44,7 @@ setup(name=NAME,
           'eea.faceted.vocabularies',
           'collective.js.jqueryui',
           'eea.jquery',
+          'Products.PloneTestCase',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]
