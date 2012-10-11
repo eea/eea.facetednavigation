@@ -3,6 +3,7 @@
 from App.Common import rfc1123_date
 from DateTime import DateTime
 from zope.component import getUtility, getMultiAdapter
+from zope.interface import directlyProvidedBy, directlyProvides
 from zope.publisher.browser import TestRequest
 from Products.CMFCore.utils import getToolByName
 from Products.ResourceRegistries.tools.packer import JavascriptPacker
@@ -37,7 +38,11 @@ class Javascript(object):
         # mangling the headers, so we must use a fake request
         # that can be modified without harm
         if resource.startswith('++resource++'):
-            traverser = getMultiAdapter((self.context, TestRequest()),
+            fake_request = TestRequest()
+            # copy interfaces that may have been applied to the request to
+            # the TestRequest:
+            directlyProvides(fake_request, directlyProvidedBy(self.request))
+            traverser = getMultiAdapter((self.context, fake_request),
                 name='resource')
             obj = traverser.traverse(resource[12:], None)
         else:
