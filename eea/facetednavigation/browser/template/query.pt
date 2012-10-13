@@ -3,6 +3,7 @@
 <tal:main define="
   batch_base_url here/absolute_url;
   folderContents view/brains;
+  contentFilter python: {'portal_type': 'FACET-EMPTY'} if not folderContents else {};
   here python:view.get_context(folderContents)">
   <tal:def define="
     kssClassesView context/@@kss_field_decorator_view | nothing;
