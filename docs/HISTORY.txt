@@ -3,6 +3,11 @@ Changelog
 
 5.2-dev - (unreleased)
 ----------------------
+* Change: Disable by default for new faceted navigable pages
+  all the advanced settings like: smart facets hiding. Also disable Plone
+  portlets left/right columns. These still can be activated within the
+  'Faceted settings' menu.
+  [avoinea refs #24 github]
 * Bug fix: folder content listing when there are no search results
   [hman fixes #10]
 

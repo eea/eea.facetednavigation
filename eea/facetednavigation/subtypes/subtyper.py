@@ -13,6 +13,8 @@ from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.interfaces import IFacetedSearchMode
 from eea.facetednavigation.interfaces import IDisableSmartFacets
+from eea.facetednavigation.interfaces import IHidePloneLeftColumn
+from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.events import (
     FacetedWillBeDisabledEvent,
     FacetedWillBeEnabledEvent,
@@ -119,6 +121,12 @@ class FacetedSubtyper(FacetedPublicSubtyper):
 
         notify(FacetedWillBeEnabledEvent(self.context))
         alsoProvides(self.context, IFacetedNavigable)
+        if not IDisableSmartFacets.providedBy(self.context):
+            alsoProvides(self.context, IDisableSmartFacets)
+        if not IHidePloneLeftColumn.providedBy(self.context):
+            alsoProvides(self.context, IHidePloneLeftColumn)
+        if not IHidePloneRightColumn.providedBy(self.context):
+            alsoProvides(self.context, IHidePloneRightColumn)
         notify(FacetedEnabledEvent(self.context))
 
         self._redirect(_('Faceted navigation enabled'))
@@ -154,8 +162,6 @@ class FacetedSearchSubtyper(FacetedSubtyper):
 
         if not super(FacetedSearchSubtyper, self).is_faceted:
             super(FacetedSearchSubtyper, self).enable()
-        if not IDisableSmartFacets.providedBy(self.context):
-            alsoProvides(self.context, IDisableSmartFacets)
         if not IFacetedSearchMode.providedBy(self.context):
             alsoProvides(self.context, IFacetedSearchMode)
         self._redirect(_('Faceted search enabled'))
