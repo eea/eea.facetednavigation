@@ -265,6 +265,11 @@ Changelog
 * Feature: Moved to Plone collective and start make the package compatible with Plone 4.
   [voineali, ghicaale, hpeteragitator]
 
+3.11 - (2011-05-24)
+-------------------
+ * Feature: Replaced hardcoded green colors in Tags Widget in order to easily
+   customize faceted theme [voineali]
+
 3.10 (2011-04-19)
 -----------------
 * Bug fix: Fixed subtyper access on Plone 2.5 [voineali]
