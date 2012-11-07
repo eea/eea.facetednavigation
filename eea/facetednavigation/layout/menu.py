@@ -47,7 +47,8 @@ class FacetedDisplayMenu(DisplayMenu):
             layout['extra'] = template['extra'].copy()
             layout['extra']['id'] = name
             layout['title'] = label
-            layout['action'] = '@@faceted_layout?layout=%s' % name
+            layout['action'] = '%s/@@faceted_layout?layout=%s' % (
+                obj.absolute_url(), name)
 
             if (name == current):
                 layout['selected'] = True
