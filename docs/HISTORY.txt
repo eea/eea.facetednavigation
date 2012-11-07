@@ -3,6 +3,9 @@ Changelog
 
 5.2-dev - (unreleased)
 ----------------------
+* Feature: Support new Collection (plone.app.collection) and
+  new Folder (plone.app.folder) by default
+  [avoinea]
 * Change: Disable by default for new faceted navigable pages
   all the advanced settings like: smart facets hiding. Also disable Plone
   portlets left/right columns. These still can be activated within the
