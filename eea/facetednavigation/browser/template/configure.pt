@@ -8,7 +8,9 @@
 
 <metal:jsslot fill-slot="javascript_head_slot">
   <script type="text/javascript"
-    tal:content="string:jQuery(document).ready(FacetedEdit.Load);"></script>
+    tal:content="string:jQuery(document).ready(function(evt){
+      FacetedEdit.Load(evt, '${context/absolute_url}/');
+    });"></script>
   <script type="text/javascript"
     tal:content="string:jQuery(window).unload(FacetedEdit.Unload);"></script>
 </metal:jsslot>

@@ -48,7 +48,7 @@ FacetedEdit.DateWidget.prototype = {
     query[this.wid + '_default'] = value;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
-    jQuery.post('@@faceted_configure', query, function(data){
+    jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){
       jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: data});
     });
   }

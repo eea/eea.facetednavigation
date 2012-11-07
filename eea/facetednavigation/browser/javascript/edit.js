@@ -4,6 +4,11 @@ FacetedEdit.loading = '<div class="faceted_loading"><img src="++resource++facete
 // Widgets
 FacetedEdit.Widgets = {};
 
+/* Context url.
+Default: (context related)
+*/
+FacetedEdit.BASEURL = '';
+
 // Events
 FacetedEdit.Events = {};
 FacetedEdit.Events.RELOAD_WIDGETS = 'FACETEDEDIT-RELOAD-WIDGETS';
@@ -246,7 +251,7 @@ FacetedEdit.FormWidgets = {
     nocache = nocache.getTime();
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Refreshing ...'});
-    jQuery.get('@@faceted_widgets', {nocache: nocache}, function(data){
+    jQuery.get(FacetedEdit.BASEURL + '@@faceted_widgets', {nocache: nocache}, function(data){
       context.form.html(data);
 
       jQuery('#faceted-results').html(context.background_text(
@@ -411,7 +416,7 @@ FacetedEdit.FormWidgets = {
   hide_button_click: function(widget_id, criterion_id){
     var widget = jQuery('#' + widget_id);
     var button = jQuery('#' + widget_id + ' div.ui-icon-hide, div.ui-icon-show');
-    var action = '@@faceted_configure';
+    var action = FacetedEdit.BASEURL + '@@faceted_configure';
     var query = {};
     query.redirect = '';
     query.updateCriterion_button = 'Save';
@@ -494,7 +499,7 @@ FacetedEdit.FormEditWidget = {
 
     context.form.html(FacetedEdit.loading);
     context.form.dialog('open');
-    jQuery.get('@@faceted_schema', query, function(data) {
+    jQuery.get(FacetedEdit.BASEURL + '@@faceted_schema', query, function(data) {
       context.form.html(data);
 
       jQuery('#archetypes-fieldname-default').remove();
@@ -524,7 +529,7 @@ FacetedEdit.FormEditWidget = {
 
   submit: function(){
     var context = this;
-    var action = '@@faceted_configure';
+    var action = FacetedEdit.BASEURL + '@@faceted_configure';
     this.update_query();
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(action, this.query, function(data){
@@ -600,7 +605,7 @@ FacetedEdit.FormAddWidgets = {
     faceted_query.widget = widget_type;
     var context = this;
 
-    jQuery.get('@@faceted_schema', faceted_query, function(data) {
+    jQuery.get(FacetedEdit.BASEURL + '@@faceted_schema', faceted_query, function(data) {
       FacetedEdit.FormMessage.custom_message('Loading...', 'faceted-widget-type');
       context.details.html(data);
       jQuery('#archetypes-fieldname-default').hide();
@@ -915,7 +920,7 @@ FacetedEdit.FormSections = {
     context.selected = section;
 
     // Submit
-    var action = '@@faceted_configure';
+    var action = FacetedEdit.BASEURL + '@@faceted_configure';
     var query = {
       redirect:'',
       updateCriterion_button:'Save',
@@ -935,7 +940,7 @@ FacetedEdit.Catalog = {
   initialize: function(){
     this.types = {};
     var context = this;
-    jQuery.getJSON('@@faceted.catalog.types.json', {}, function(data){
+    jQuery.getJSON(FacetedEdit.BASEURL + '@@faceted.catalog.types.json', {}, function(data){
       context.types = data;
     });
 
@@ -1013,7 +1018,11 @@ FacetedEdit.FormPage = {
   }
 };
 
-FacetedEdit.Load = function(){
+FacetedEdit.Load = function(evt, baseurl){
+  if(baseurl){
+    FacetedEdit.BASEURL = baseurl;
+  }
+
   FacetedEdit.FormPage.initialize();
   // Override calendar close handler method in order to raise custom events
   if(window.Calendar){
