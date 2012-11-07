@@ -8,8 +8,8 @@
 
 <metal:jsslot fill-slot="javascript_head_slot">
   <script type="text/javascript"
-    tal:content="string:jQuery(document).ready(function(){
-        Faceted.Load();
+    tal:content="string:jQuery(document).ready(function(evt){
+        Faceted.Load(evt, '${context/absolute_url}/');
     });"></script>
   <script type="text/javascript"
     tal:content="string:jQuery(window).unload(function(){

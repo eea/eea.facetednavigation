@@ -38,7 +38,7 @@ FacetedEdit.DebugWidget.prototype = {
     var query = {};
     query['debugger'] = this.wid;
     query.mode = 'edit';
-    jQuery.get('@@faceted.widget.debug.query', query, function(data){
+    jQuery.get(FacetedEdit.BASEURL + '@@faceted.widget.debug.query', query, function(data){
       if(data == "[]"){
         jQuery('.debug-query', context.widget).hide();
       }else{
@@ -46,7 +46,7 @@ FacetedEdit.DebugWidget.prototype = {
       }
       context.query_area.text(data);
     });
-    jQuery.get('@@faceted.widget.debug.after', query, function(data){
+    jQuery.get(FacetedEdit.BASEURL + '@@faceted.widget.debug.after', query, function(data){
       if(data == "[]"){
         jQuery('.debug-after', context.widget).hide();
       }else{
@@ -54,7 +54,7 @@ FacetedEdit.DebugWidget.prototype = {
       }
       context.after_area.text(data);
     });
-    jQuery.get('@@faceted.widget.debug.criteria', query, function(data){
+    jQuery.get(FacetedEdit.BASEURL + '@@faceted.widget.debug.criteria', query, function(data){
       if(data == "[]"){
         jQuery('.debug-config', context.widget).hide();
       }else{
@@ -62,7 +62,7 @@ FacetedEdit.DebugWidget.prototype = {
       }
       context.config_area.text(data);
     });
-    jQuery.get('@@faceted.widget.debug.counters', query, function(data){
+    jQuery.get(FacetedEdit.BASEURL + '@@faceted.widget.debug.counters', query, function(data){
       if(data == "[]"){
         jQuery('.debug-count', context.widget).hide();
       }else{
