@@ -1,8 +1,11 @@
 Changelog
 =========
 
-5.2-dev - (unreleased)
+5.3-dev - (unreleased)
 ----------------------
+
+5.2 - (2012-11-09)
+------------------
 * Feature: Support new Collection (plone.app.collection) and
   new Folder (plone.app.folder) by default
   [avoinea]
