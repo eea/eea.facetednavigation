@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.3-dev - (unreleased)
+----------------------
+
 5.2 - (2012-11-09)
 ------------------
 * Feature: Support new Collection (plone.app.collection) and
