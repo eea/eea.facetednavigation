@@ -3,6 +3,9 @@ Changelog
 
 5.3-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed: faceted CSS overrides ui-accordion and ui-state-default
+  styles and breaks things outside faceted navigable pages (e.g. Daviz Edit)
+  [voineali refs #9610]
 
 5.2 - (2012-11-09)
 ------------------
