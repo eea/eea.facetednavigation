@@ -133,15 +133,15 @@
 .faceted-section-header {
 }
 
-.ui-widget {
+#faceted-form .ui-widget {
   font-size: 1em;
 }
 
-.ui-helper-reset {
+#faceted-form .ui-helper-reset {
   font-size: 1em;
 }
 
-.ui-accordion .ui-accordion-content {
+#faceted-form .ui-accordion .ui-accordion-content {
   padding: 0px;
   overflow: hidden;
   border-width: 0;
@@ -150,38 +150,38 @@
 
 /* Inactive state
 */
-.ui-accordion .ui-state-default {
+#faceted-form .ui-accordion .ui-state-default {
   border: none;
   background: none;
   background-color: #95b229;
   margin: 0 0.5em;
 }
 
-.ui-accordion .ui-state-default a {
+#faceted-form .ui-accordion .ui-state-default a {
   color: #ffffff;
   font-weight: bold;
 }
 
-.ui-accordion .ui-state-default a:hover {
+#faceted-form .ui-accordion .ui-state-default a:hover {
   border: none;
   color: #e9efcd;
 }
 
 /* Active state
 */
-.ui-accordion .ui-state-active {
+#faceted-form .ui-accordion .ui-state-active {
   border: none;
   background: none;
   background-color: #e9efcd;
   margin: 0 0.5em;
 }
 
-.ui-accordion .ui-state-active a{
+#faceted-form .ui-accordion .ui-state-active a{
   color: #8e004d;
   font-weight: bold;
 }
 
-.ui-accordion .ui-state-active a:hover{
+#faceted-form .ui-accordion .ui-state-active a:hover{
   border: none;
   cursor: text;
 }
