@@ -18,13 +18,13 @@ msgid "Current search"
 msgstr "Vyhľadajte"
 
 msgid "Faceted criteria"
-msgstr "Tvárou kritériá"
+msgstr "Fazetové kritériá"
 
 msgid "Object provides"
 msgstr "Objekt poskytuje"
 
 msgid "Portal type"
-msgstr "Portálového typu"
+msgstr "Portálový typ"
 
 msgid "Sort on"
 msgstr "Zoradiť"
