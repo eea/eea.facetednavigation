@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
 "POT-Creation-Date: 2012-08-07 22:17+0000\n"
-"PO-Revision-Date: 2012-09-27 12:31+0100\n"
+"PO-Revision-Date: 2012-11-27 16:24+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: ES <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "Añadir un nuevo filtro"
 
 #: ../../facetednavigation/browser/template/configure.pt:27
 msgid "Add widget"
-msgstr "Agregar panel"
+msgstr "Añadir widget"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:25
 msgid "After query filters"
@@ -147,7 +147,7 @@ msgstr "Listado de contenido"
 #. Default: ""
 #: ../../facetednavigation/widgets/daterange/widget.py:61
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
-msgstr "Controlar el rango de años mostrados en el año desplegable: o el relativo al año actual (-NN: + nn), en relación con el año actualmente seleccionado (c-nn: c + nn), absoluto (nnnn: nnnn), o combinaciones de estos formatos (nnnn:-nn)."
+msgstr "Controlar el rango de años mostrados en el desplegable de años: relativo al año actual (-nn: + nn), relativo al año seleccionado actualmente (c-nn: c+nn), absoluto (nnnn:nnnn), o combinaciones de estos formatos (nnnn:-nn)."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
@@ -171,7 +171,7 @@ msgstr "Configuración actual"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:71
 msgid "Cut long phrases to provided number of characters"
-msgstr "Cortar frases largas al número de caracteres proporcionado"
+msgstr "Cortar frases largas al número de caracteres indicado"
 
 #: ../../facetednavigation/widgets/date/widget.py:73
 msgid "Date"
@@ -187,11 +187,11 @@ msgstr "Debugger"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
-msgstr "Rango de fechas predeterminado (por ejemplo, '2009/12/01 => 12/31/2009 ')"
+msgstr "Rango de fechas predeterminado (por ejemplo, '2009/12/01 => 2009/12/13')"
 
 #: ../../facetednavigation/widgets/date/widget.py:61
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "Rango de fechas predeterminado (por ejemplo, 'ahora-365 => Ahora +1', que significa 'A partir de hace un año hasta mañana')"
+msgstr "Rango de fechas predeterminado (por ejemplo, 'now-365 => now +1', que significa 'A partir de hace un año hasta mañana')"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/etag/widget.py:17
@@ -201,7 +201,7 @@ msgstr "ETag por defecto"
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:96
 msgid "Default items (one per line)"
-msgstr "Elementos predeterminados (uno por línea)"
+msgstr "Elementos por defecto (uno por línea)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:57
@@ -215,7 +215,7 @@ msgstr "Ruta de acceso predeterminada para buscar en (relativa a la carpeta raí
 
 #: ../../facetednavigation/widgets/range/widget.py:38
 msgid "Default range (e.g. '1 => 3')"
-msgstr "Rango predeterminado (por ejemplo '1 => 3 ')"
+msgstr "Rango predeterminado (por ejemplo '1 => 3')"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:50
@@ -248,7 +248,7 @@ msgstr "Expresión TAL por defecto"
 #: ../../facetednavigation/widgets/checkbox/widget.py:95
 #: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default value"
-msgstr "Valor Predefinido"
+msgstr "Valor por defecto"
 
 #: ../../facetednavigation/browser/template/configure.pt:183
 msgid "Delete"
@@ -256,7 +256,7 @@ msgstr "Suprimir"
 
 #: ../../facetednavigation/widgets/path/widget.py:55
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
-msgstr "Profundidad para buscar el camino. 0 = este nivel, -1 = todas las subcarpetas recursivas, y cualquier otro número entero positivo contar la subcarpeta los niveles a búsqueda."
+msgstr "Profundidad para buscar el camino. 0=este nivel, -1=todas las subcarpetas de forma recursiva, y cualquier otro número entero positivo indica el número de niveles de subcarpetas en las que hay que buscar."
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
@@ -276,19 +276,19 @@ msgstr "Desactivar portlets de la derecha"
 
 #: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
-msgstr "Desactivar facetas inteligentes escondidos"
+msgstr "Desactivar esconder facetas inteligentes "
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:80
 #: ../../facetednavigation/widgets/radio/widget.py:70
 #: ../../facetednavigation/widgets/select/widget.py:56
 msgid "Display number of results near each option"
-msgstr "Mostrar el número de resultados cerca de cada opción"
+msgstr "Mostrar el número de resultados junto a cada opción"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:146
 msgid "Display number of results near each tag"
-msgstr "Mostrar el número de resultados cerca de cada etiqueta"
+msgstr "Mostrar el número de resultados junto a cada etiqueta"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
@@ -311,7 +311,7 @@ msgstr "Habilitar navegación facetada"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted search"
-msgstr "Habilitar la búsqueda facetada"
+msgstr "Habilitar búsqueda facetada"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/criteria/widget.py:16
@@ -328,7 +328,7 @@ msgstr "Habilitar portlets de la derecha"
 
 #: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
-msgstr "Habilitar facetas inteligentes escondidas"
+msgstr "Habilitar esconder facetas inteligentes"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -358,12 +358,12 @@ msgstr "Exportar"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
-msgstr "Criterios Faceted"
+msgstr "Criterios de facetas"
 
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
-msgstr "Configuración global faceted"
+msgstr "Configuración global de facetas"
 
 #: ../../facetednavigation/subtypes/subtyper.py:135
 msgid "Faceted navigation disabled"
@@ -384,7 +384,7 @@ msgstr "Búsqueda facetada habilitada"
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
-msgstr "Ajustes Faceted"
+msgstr "Ajustes de facetas"
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -446,7 +446,7 @@ msgstr "Ocultar elementos con cero resultados"
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:69
 msgid "Hide widget"
-msgstr "Ocultar Widget"
+msgstr "Ocultar widget"
 
 #: ../../facetednavigation/browser/template/configure.pt:85
 msgid "Import"
@@ -481,14 +481,14 @@ msgstr "Máximo de caracteres"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:129
 msgid "Maximum font-size (px)"
-msgstr "Máximo font-size (px)"
+msgstr "Tamaño de fuente máximo(font-size (px))"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:65
 #: ../../facetednavigation/widgets/radio/widget.py:53
 #: ../../facetednavigation/widgets/tagscloud/widget.py:61
 msgid "Maximum items"
-msgstr "Máximo de elementos"
+msgstr "Número máximo de elementos"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:128
@@ -498,7 +498,7 @@ msgstr "Tamaño máximo"
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:120
 msgid "Minimum font-size (px)"
-msgstr "Mínimo font-size (px)"
+msgstr "Tamaño de fuente mínimo (font-size (px))"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:119
@@ -520,7 +520,7 @@ msgstr "Subir"
 
 #: ../../facetednavigation/widgets/path/widget.py:34
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
-msgstr "Punto de partida de la navegación js-tree (en relación con el sitio plone ex:. SITIO/datos-y-maps)"
+msgstr "Punto de partida de la navegación js-tree (en relación con el sitio plone p.ej.: SITIO/datos-y-mapas)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:67
@@ -595,16 +595,16 @@ msgstr "Camino"
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:20
 msgid "Path to portlet macro"
-msgstr "Camino al portlet macro"
+msgstr "Camino al macro del portlet "
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
-msgstr "Plone portlet"
+msgstr "Portlet de Plone"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:19
 msgid "Portlet macro"
-msgstr "Portlet macro"
+msgstr "Macro de portlet"
 
 #: ../../facetednavigation/settings/menu.py:132
 msgid "Portlets left column is hidden now"
@@ -635,7 +635,7 @@ msgstr "Posición del widget."
 
 #: ../../facetednavigation/widgets/interfaces.py:32
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
-msgstr "Python nombre de una fábrica que puede crear el objeto de la implementación.. Esto debe identificar un objeto en un módulo con el nombre completo de puntos."
+msgstr "Nombre de una factoría Python que puede crear el objeto implementado. Debe indentificar un objeto de un módulo utilizando su nombre completo con puntos (p.ej.: modulo.clase.objeto)"
 
 #: ../../facetednavigation/widgets/radio/widget.py:99
 msgid "Radio"
@@ -660,17 +660,17 @@ msgstr "Resultados por página"
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:32
 msgid "Results per page ending value"
-msgstr "Resultados por valor de página final"
+msgstr "Opción final de número de resultados por página"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:23
 msgid "Results per page starting value"
-msgstr "Resultados por página un valor inicial"
+msgstr "Opción inicial de número de resultados por página"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:41
 msgid "Results per page step"
-msgstr "Resultados por página paso"
+msgstr "Intervalo entre opciones de resultados por página"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
@@ -681,7 +681,7 @@ msgstr "Al revés"
 #: ../../facetednavigation/widgets/radio/widget.py:61
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Reverse options"
-msgstr "Opciones para el reverso"
+msgstr "Opciones para la ordenación del revés"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:33
@@ -714,7 +714,7 @@ msgstr "Sección"
 
 #: ../../facetednavigation/widgets/select/widget.py:84
 msgid "Select"
-msgstr "Seleccionar"
+msgstr "Seleccionable"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:114
@@ -833,7 +833,7 @@ msgstr "Tipo del widget."
 
 #: ../../facetednavigation/widgets/daterange/widget.py:60
 msgid "UI Calendar years range"
-msgstr "UI rango de años del calendario"
+msgstr "UI Calendar rango de años"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:17
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
