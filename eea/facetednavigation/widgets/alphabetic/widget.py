@@ -95,5 +95,5 @@ class Widget(CountableWidget):
             letter = xval[0].upper()
             count = res.get(letter, 0)
             res[letter] = count + 1
-        res['all'] = index
+        res['all'] = index + 1
         return res
