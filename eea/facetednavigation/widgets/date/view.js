@@ -99,8 +99,8 @@ Faceted.DateWidget.prototype = {
       return;
     }
 
-    this.select_from.val(q_value[0]);
-    this.select_to.val(q_value[1]);
+    this.select_from.val(q_value[0]).trigger('change');
+    this.select_to.val(q_value[1]).trigger('change');
   },
 
   criteria: function(){
