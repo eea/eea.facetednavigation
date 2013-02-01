@@ -119,6 +119,12 @@ class Widget(CountableWidget):
                 return True
         return False
 
+    @property
+    def operator(self):
+        """ Get the query operator
+        """
+        return self.data.get('operator', 'and')
+
     def query(self, form):
         """ Get value from form and return a catalog dict query
         """
@@ -127,7 +133,7 @@ class Widget(CountableWidget):
         index = index.encode('utf-8', 'replace')
 
         # Use 'and' by default in order to be backward compatible
-        operator = self.data.get('operator', 'and')
+        operator = self.operator
         operator = operator.encode('utf-8', 'replace')
 
         if not index:

@@ -3,6 +3,9 @@ Changelog
 
 5.4-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed: Faceted countings are not updated for checkboxes
+  widget if AND operator is used
+  [hman refs #8061]
 * Bug fix: Fixed: Date widget doesn't update when value comes from URL
   [hman refs #8382]
 * Bug fix: Fixed: Bug in the Alphabetic widget

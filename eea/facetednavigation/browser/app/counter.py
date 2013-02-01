@@ -27,14 +27,16 @@ class FacetedQueryCounter(object):
         kwargs.pop('sort[]', None)
         kwargs.pop('sort', None)
         kwargs.pop('reversed[]', None)
+        operator = kwargs.pop('operator', None)
 
-        kwargs.pop(cid, None)
-        self.request.form.pop(cid, None)
-        # jQuery >= 1.4 adds type to params keys
-        # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
-        # Let's fix this
-        kwargs.pop(cid + '[]', None)
-        self.request.form.pop(cid + '[]', None)
+        if not operator or operator != 'and':
+            kwargs.pop(cid, None)
+            self.request.form.pop(cid, None)
+            # jQuery >= 1.4 adds type to params keys
+            # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
+            # Let's fix this
+            kwargs.pop(cid + '[]', None)
+            self.request.form.pop(cid + '[]', None)
 
         criteria = ICriteria(self.context)
         criterion = criteria.get(cid)
