@@ -8,6 +8,7 @@ Faceted.CheckboxesWidget = function(wid){
   this.title = jQuery('legend', this.widget).html();
   this.elements = jQuery('input[type=checkbox]', this.widget);
   this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
+  this.operator = this.widget.attr('data-operator');
   this.selected = [];
 
   // Faceted version
@@ -58,7 +59,7 @@ Faceted.CheckboxesWidget = function(wid){
       js_widget.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
-      if(data.wid == js_widget.wid || data.wid == 'b_start'){
+      if(js_widget.operator != 'and' && (data.wid == js_widget.wid || data.wid == 'b_start')){
         return;
       }
       js_widget.count(sortcountable);
@@ -176,6 +177,9 @@ Faceted.CheckboxesWidget.prototype = {
     query.cid = this.wid;
     if(this.version){
       query.version = this.version;
+    }
+    if(this.operator){
+      query.operator = this.operator;
     }
 
     var context = this;
