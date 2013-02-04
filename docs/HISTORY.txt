@@ -1,8 +1,11 @@
 Changelog
 =========
 
-5.4-dev - (unreleased)
+5.5-dev - (unreleased)
 ----------------------
+
+5.4 - (2013-02-04)
+------------------
 * Bug fix: Fixed: Faceted countings are not updated for checkboxes
   widget if AND operator is used
   [hman refs #8061]
