@@ -12,8 +12,8 @@ from Products.CMFCore.utils import getToolByName
 
 # Zope3
 from zope.interface import implements
-from zope.app.pagetemplate.engine import TrustedEngine, TrustedZopeContext
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.pagetemplate.engine import TrustedEngine, TrustedZopeContext
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 
 # Package
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget

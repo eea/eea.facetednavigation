@@ -2,7 +2,7 @@
 """
 import logging
 
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringField

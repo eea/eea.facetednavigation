@@ -13,7 +13,7 @@ from Products.Archetypes.public import BooleanWidget
 from Products.CMFPlone.utils import safeToInt
 from eea.faceted.vocabularies.utils import compare
 
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
 

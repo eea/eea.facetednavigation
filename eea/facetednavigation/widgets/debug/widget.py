@@ -2,7 +2,7 @@
 """
 from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringField
 from Products.Archetypes.public import SelectionWidget

@@ -6,7 +6,7 @@ from Products.Archetypes.public import Schema
 from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _

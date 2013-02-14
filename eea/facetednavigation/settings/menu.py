@@ -1,8 +1,8 @@
 """ Faceted settings
 """
 from zope.interface import implements, alsoProvides, noLongerProvides
-from zope.app.publisher.browser.menu import BrowserSubMenuItem
-from zope.app.publisher.browser.menu import BrowserMenu
+from zope.browsermenu.menu import BrowserSubMenuItem
+from zope.browsermenu.menu import BrowserMenu
 from zope.security import checkPermission
 
 from Products.Five.browser import BrowserView

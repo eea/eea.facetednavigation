@@ -5,7 +5,7 @@ from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
 from Products.ATContentTypes.criteria import _criterionRegistry
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
