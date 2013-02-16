@@ -13,7 +13,10 @@ from Products.Archetypes.public import BooleanWidget
 from Products.CMFPlone.utils import safeToInt
 from eea.faceted.vocabularies.utils import compare
 
-from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
+try:
+    from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
+except:
+    from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
 
@@ -72,28 +75,28 @@ EditSchema = Schema((
             i18n_domain="eea"
         )
     ),
-    StringField('colormin', 
-        schemata="display", 
-        default="A1BE7E", 
-        widget=StringWidget( 
-            label='Minimum color', 
-            label_msgid='faceted_criteria_colormin', 
-            description='Tagscloud minimum color', 
-            description_msgid='help_faceted_criteria_colormin', 
-            i18n_domain="eea" 
-        ) 
-    ), 
-    StringField('colormax', 
-        schemata="display", 
-        default="95B229", 
-        widget=StringWidget( 
-            label='Maximum color', 
-            label_msgid='faceted_criteria_colormax', 
-            description='Tagscloud max color', 
-            description_msgid='help_faceted_criteria_colormax', 
-            i18n_domain="eea" 
-        ) 
-    ), 
+    StringField('colormin',
+        schemata="display",
+        default="A1BE7E",
+        widget=StringWidget(
+            label='Minimum color',
+            label_msgid='faceted_criteria_colormin',
+            description='Tagscloud minimum color',
+            description_msgid='help_faceted_criteria_colormin',
+            i18n_domain="eea"
+        )
+    ),
+    StringField('colormax',
+        schemata="display",
+        default="95B229",
+        widget=StringWidget(
+            label='Maximum color',
+            label_msgid='faceted_criteria_colormax',
+            description='Tagscloud max color',
+            description_msgid='help_faceted_criteria_colormax',
+            i18n_domain="eea"
+        )
+    ),
     BooleanField('sortreversed',
         schemata="display",
         widget=BooleanWidget(
