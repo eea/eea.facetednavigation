@@ -12,9 +12,12 @@ from Products.CMFCore.utils import getToolByName
 
 # Zope3
 from zope.interface import implements
-from zope.app.pagetemplate.engine import TrustedEngine, TrustedZopeContext
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
-
+try:
+    from zope.pagetemplate.engine import TrustedEngine, TrustedZopeContext
+    from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
+except:
+    from zope.app.pagetemplate.engine import TrustedEngine, TrustedZopeContext
+    from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 # Package
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
