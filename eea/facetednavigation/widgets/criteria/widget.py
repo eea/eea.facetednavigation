@@ -1,13 +1,9 @@
 """ Criteria widget
 """
-try:
-    from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
-except:
-    from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
-
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import BooleanField, BooleanWidget
 
+from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
 

@@ -11,14 +11,10 @@ from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.interfaces import IBaseObject
 from Products.CMFCore.utils import getToolByName
 
-# Zope3
-try:
-    from zope.pagetemplate.engine import TrustedEngine, TrustedZopeContext
-    from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
-except:
-    from zope.app.pagetemplate.engine import TrustedEngine, TrustedZopeContext
-    from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 # Package
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets import TrustedEngine
+from eea.facetednavigation.widgets import TrustedZopeContext
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
 

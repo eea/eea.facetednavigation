@@ -7,11 +7,7 @@ from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 
-try:
-    from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
-except:
-    from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
-
+from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
 

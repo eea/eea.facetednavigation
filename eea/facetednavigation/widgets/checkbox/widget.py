@@ -1,9 +1,5 @@
 """ Checkbox widget
 """
-try:
-    from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
-except:
-    from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import LinesField
@@ -15,6 +11,7 @@ from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 from Products.Archetypes.utils import DisplayList
 
+from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.faceted.vocabularies.utils import compare
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _

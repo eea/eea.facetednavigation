@@ -1,17 +1,12 @@
 """ Faceted settings
 """
 from zope.interface import implements, alsoProvides, noLongerProvides
-try:
-    from zope.browsermenu.menu import BrowserSubMenuItem
-    from zope.browsermenu.menu import BrowserMenu
-except:
-    from zope.app.publisher.browser.menu import BrowserSubMenuItem
-    from zope.app.publisher.browser.menu import BrowserMenu
 from zope.security import checkPermission
-
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 
+from eea.facetednavigation.settings import BrowserMenu
+from eea.facetednavigation.settings import BrowserSubMenuItem
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.settings.interfaces import ISettingsHandler
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
