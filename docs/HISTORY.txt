@@ -3,6 +3,8 @@ Changelog
 
 5.5-dev - (unreleased)
 ----------------------
+* Change: Plone 4.3 compatible
+  [lewicki]
 
 5.4 - (2013-02-04)
 ------------------
