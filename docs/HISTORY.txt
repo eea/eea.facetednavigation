@@ -6,6 +6,8 @@ Changelog
 
 5.5 - (2013-02-25)
 ------------------
+* Feature: added information for contributors
+  [ciobabog refs #13892]
 * Change: Plone 4.3 compatible
   [lewicki]
 
