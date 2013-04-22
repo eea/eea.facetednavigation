@@ -36,7 +36,8 @@ EditSchema = Schema((
         schemata="default",
         widget=BooleanWidget(
             label=_(u'Search in all elements only'),
-            description=_(u'If this checkbox is checked, hides the choice to filter in all items or in current items only'),
+            description=_(u'If this checkbox is checked, hides the choice to '
+                          'filter in all items or in current items only'),
             i18n_domain="eea"
         )
     ),
