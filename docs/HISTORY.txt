@@ -4,6 +4,9 @@ Changelog
 5.6-dev - (unreleased)
 ----------------------
 
+* Add an option to hide all/current alternative on text search widget.
+  [thomasdesvenain]
+
 5.5 - (2013-02-25)
 ------------------
 * Feature: added information for contributors

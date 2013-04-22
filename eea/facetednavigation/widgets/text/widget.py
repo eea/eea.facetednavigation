@@ -8,6 +8,8 @@ from Products.Archetypes.public import StringWidget
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
+from Products.Archetypes.Field import BooleanField
+from Products.Archetypes.Widget import BooleanWidget
 
 
 EditSchema = Schema((
@@ -27,6 +29,14 @@ EditSchema = Schema((
             size=25,
             label=_(u'Default value'),
             description=_(u'Default string to search for'),
+            i18n_domain="eea"
+        )
+    ),
+    BooleanField('onlyallelements',
+        schemata="default",
+        widget=BooleanWidget(
+            label=_(u'Search in all elements only'),
+            description=_(u'If this checkbox is checked, hides the choice to filter in all items or in current items only'),
             i18n_domain="eea"
         )
     ),
