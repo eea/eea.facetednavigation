@@ -4,6 +4,9 @@ Changelog
 5.6-dev - (unreleased)
 ----------------------
 
+* Fix: text widget input immediately gets value set in the url as input value.
+  [thomasdesvenain]
+
 * Add an option to hide all/current alternative on text search widget.
   [thomasdesvenain]
 

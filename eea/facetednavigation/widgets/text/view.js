@@ -76,6 +76,7 @@ Faceted.TextWidget.prototype = {
     }
 
     var input = jQuery('#' + this.wid);
+    input.attr('value', value);
     this.selected = [input];
   },
 
