@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-07 22:17+0000\n"
+"POT-Creation-Date: 2013-04-22 07:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,51 +14,51 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../../facetednavigation/widgets/date/widget.py:23
+#: ../../facetednavigation/widgets/date/widget.py:22
 msgid "1 month ago"
 msgstr "Pirms 1 mēneša"
 
-#: ../../facetednavigation/widgets/date/widget.py:25
+#: ../../facetednavigation/widgets/date/widget.py:24
 msgid "1 week ago"
 msgstr "1 nedēļa pirms"
 
-#: ../../facetednavigation/widgets/date/widget.py:20
+#: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 year ago"
 msgstr "Pirms 1 gads"
 
-#: ../../facetednavigation/widgets/date/widget.py:27
+#: ../../facetednavigation/widgets/date/widget.py:26
 msgid "2 days ago"
 msgstr "2 dienas atpakaļ"
 
-#: ../../facetednavigation/widgets/date/widget.py:24
+#: ../../facetednavigation/widgets/date/widget.py:23
 msgid "2 weeks ago"
 msgstr "2 nedēļas atpakaļ"
 
-#: ../../facetednavigation/widgets/date/widget.py:19
+#: ../../facetednavigation/widgets/date/widget.py:18
 msgid "2 years ago"
 msgstr "2 gadus atpakaļ"
 
-#: ../../facetednavigation/widgets/date/widget.py:22
+#: ../../facetednavigation/widgets/date/widget.py:21
 msgid "3 months ago"
 msgstr "Pirms 3 mēnešiem"
 
-#: ../../facetednavigation/widgets/date/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:25
 msgid "5 days ago"
 msgstr "Pirms 5 dienām"
 
-#: ../../facetednavigation/widgets/date/widget.py:21
+#: ../../facetednavigation/widgets/date/widget.py:20
 msgid "6 months ago"
 msgstr "Pirms 6 mēnešiem"
 
-#: ../../facetednavigation/browser/template/configure.pt:70
+#: ../../facetednavigation/browser/template/configure.pt:68
 msgid "Add"
 msgstr "Pievienot"
 
-#: ../../facetednavigation/browser/template/configure.pt:26
+#: ../../facetednavigation/browser/template/configure.pt:24
 msgid "Add new filter"
 msgstr "Pievienot jaunu filtru"
 
-#: ../../facetednavigation/browser/template/configure.pt:27
+#: ../../facetednavigation/browser/template/configure.pt:25
 msgid "Add widget"
 msgstr "Pievienot logrīku"
 
@@ -66,35 +66,35 @@ msgstr "Pievienot logrīku"
 msgid "After query filters"
 msgstr "Pēc vaicājuma filtru"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
-#: ../../facetednavigation/widgets/radio/widget.pt:29
-#: ../../facetednavigation/widgets/select/widget.pt:23
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/radio/widget.pt:31
+#: ../../facetednavigation/widgets/select/widget.pt:25
 msgid "All"
 msgstr "Visas"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:69
+#: ../../facetednavigation/widgets/alphabetic/widget.py:52
 msgid "Alphabetic"
 msgstr "Alfabēta"
 
-#: ../../facetednavigation/browser/template/configure.pt:99
+#: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Vai tiešām vēlaties dzēst ${widget} widget?"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:56
-#: ../../facetednavigation/widgets/radio/widget.py:43
-#: ../../facetednavigation/widgets/select/widget.py:40
+#: ../../facetednavigation/widgets/radio/widget.py:42
+#: ../../facetednavigation/widgets/select/widget.py:39
 msgid "Catalog"
 msgstr "Katalogs"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/alphabetic/widget.py:30
 #: ../../facetednavigation/widgets/checkbox/widget.py:26
-#: ../../facetednavigation/widgets/date/widget.py:51
+#: ../../facetednavigation/widgets/date/widget.py:50
 msgid "Catalog index"
 msgstr "Katalogs indekss"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/alphabetic/widget.py:31
 #: ../../facetednavigation/widgets/checkbox/widget.py:27
-#: ../../facetednavigation/widgets/date/widget.py:52
+#: ../../facetednavigation/widgets/date/widget.py:51
 msgid "Catalog index to use for search"
 msgstr "Katalogs indeksu izmantot meklēšanai"
 
@@ -102,7 +102,7 @@ msgstr "Katalogs indeksu izmantot meklēšanai"
 msgid "Catalog query"
 msgstr "Katalogs vaicājums"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:107
+#: ../../facetednavigation/widgets/checkbox/widget.py:91
 msgid "Checkboxes"
 msgstr "Izvēles rūtiņas"
 
@@ -126,11 +126,7 @@ msgstr "Mākonis tips"
 msgid "Configuration imported"
 msgstr "Konfigurācija importē"
 
-#: ../../facetednavigation/browser/template/configure.pt:20
-msgid "Configure faceted navigation"
-msgstr "Konfigurēt slīpētas navigāciju"
-
-#: ../../facetednavigation/browser/template/configure.pt:109
+#: ../../facetednavigation/browser/template/configure.pt:107
 msgid "Content listing"
 msgstr "Satura sarakstā"
 
@@ -138,9 +134,7 @@ msgstr "Satura sarakstā"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Kontrolētu klāstu yearsdisplayed gadā nolaižamajā: vai nu attiecībā pret šodienas gadu (-nn: + nn), kas atkarīga no pašlaik atlasītā gadā punkta c-nn: c + nn), absolūti (nnnn: nnnn), vai abus kopā no šiem formātiem (nnnn:-nn)."
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
-#: ../../facetednavigation/widgets/radio/widget.py:69
+#: ../../facetednavigation/widgets/widget.py:299
 msgid "Count results"
 msgstr "Skaita rezultātus"
 
@@ -148,7 +142,7 @@ msgstr "Skaita rezultātus"
 msgid "Counters"
 msgstr "Skaitītāji"
 
-#: ../../facetednavigation/browser/template/configure.pt:125
+#: ../../facetednavigation/browser/template/configure.pt:123
 msgid "Criterion details"
 msgstr "Kritērijam"
 
@@ -160,7 +154,7 @@ msgstr "Pašreizējais konfigurācija"
 msgid "Cut long phrases to provided number of characters"
 msgstr "Sagriež garās frāzes sniegto zīmju skaitu"
 
-#: ../../facetednavigation/widgets/date/widget.py:73
+#: ../../facetednavigation/widgets/date/widget.py:72
 msgid "Date"
 msgstr "Datums"
 
@@ -168,7 +162,7 @@ msgstr "Datums"
 msgid "Date range"
 msgstr "Datumu diapazons"
 
-#: ../../facetednavigation/widgets/debug/widget.py:32
+#: ../../facetednavigation/widgets/debug/widget.py:33
 msgid "Debugger"
 msgstr "Atkļūdotājs"
 
@@ -176,7 +170,7 @@ msgstr "Atkļūdotājs"
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
 msgstr "Noklusējuma daterange (piem. '2009 / 12/01 => 2009/12/31)"
 
-#: ../../facetednavigation/widgets/date/widget.py:61
+#: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
 msgstr "Noklusējuma daterange (piem. 'tagad-365 => tagad +1', kas nozīmē 'uzsākšana pirms gada rītdienu')"
 
@@ -184,11 +178,11 @@ msgstr "Noklusējuma daterange (piem. 'tagad-365 => tagad +1', kas nozīmē 'uzs
 msgid "Default etag"
 msgstr "Noklusējuma ETAG"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:96
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 msgid "Default items (one per line)"
 msgstr "Noklusētā (viena katrā rindiņā)"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:57
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
 msgid "Default letter to be selected"
 msgstr "Noklusējuma vēstule jāizvēlas"
 
@@ -196,17 +190,17 @@ msgstr "Noklusējuma vēstule jāizvēlas"
 msgid "Default path to search in (relative to root folder)"
 msgstr "Noklusējuma ceļš veikt meklēšanu (salīdzinājumā ar saknes mapē)"
 
-#: ../../facetednavigation/widgets/range/widget.py:38
+#: ../../facetednavigation/widgets/range/widget.py:34
 msgid "Default range (e.g. '1 => 3')"
 msgstr "Noklusējuma diapazonu (piem., '1 => 3')"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:50
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:48
 msgid "Default results per page"
 msgstr "Noklusējuma rezultātus uz lappuses"
 
-#: ../../facetednavigation/widgets/radio/widget.py:88
-#: ../../facetednavigation/widgets/select/widget.py:73
-#: ../../facetednavigation/widgets/tagscloud/widget.py:163
+#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/tagscloud/widget.py:147
 msgid "Default selected item"
 msgstr "Noklusējuma izvēlētais objekts"
 
@@ -214,21 +208,22 @@ msgstr "Noklusējuma izvēlētais objekts"
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Šķirošana pēc noklusējuma indekss (piemēram, 'efektīvs' vai 'faktiska (reversā)')"
 
-#: ../../facetednavigation/widgets/text/widget.py:30
+#: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Default string meklēt"
 
-#: ../../facetednavigation/widgets/tal/widget.py:41
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:35
+#: ../../facetednavigation/widgets/tal/widget.py:40
 msgid "Default tal expression for query value"
 msgstr "Noklusējuma Tal izteiksmi vaicājuma vērtības"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:56
-#: ../../facetednavigation/widgets/checkbox/widget.py:95
-#: ../../facetednavigation/widgets/date/widget.py:60
+#: ../../facetednavigation/widgets/alphabetic/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/date/widget.py:59
 msgid "Default value"
 msgstr "Noklusējuma vērtība"
 
-#: ../../facetednavigation/browser/template/configure.pt:183
+#: ../../facetednavigation/browser/template/configure.pt:181
 msgid "Delete"
 msgstr "Dzēst"
 
@@ -244,37 +239,27 @@ msgstr "Atslēgt slīpētas navigāciju"
 msgid "Disable faceted search"
 msgstr "Atslēgt slīpētas meklēšanu"
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Disable left portlets"
 msgstr "Atslēgt kreiso portlets"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Disable right portlets"
 msgstr "Atslēgt tiesības portlets"
 
-#: ../../facetednavigation/settings/menu.py:91
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Disable smart facets hiding"
 msgstr "Atspējot smart šķautnes slēpjas"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:80
-#: ../../facetednavigation/widgets/radio/widget.py:70
-#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/widget.py:300
 msgid "Display number of results near each option"
 msgstr "Parādītu rezultātu skaits pie katras iespējas"
-
-#: ../../facetednavigation/widgets/tagscloud/widget.py:146
-msgid "Display number of results near each tag"
-msgstr "Parādītu rezultātu skaits pie katra taga"
-
-#: ../../facetednavigation/widgets/alphabetic/widget.py:40
-msgid "Display number of results per letter"
-msgstr "Parādītu rezultātu skaits vienā vēstules"
 
 #: ../../facetednavigation/widgets/widget.py:62
 msgid "Display widget in section"
 msgstr "Parādīt widget sadaļā"
 
-#: ../../facetednavigation/browser/template/configure.pt:57
+#: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Parādīt widget sadaļā."
 
@@ -286,24 +271,24 @@ msgstr "Iespējot slīpētas navigāciju"
 msgid "Enable faceted search"
 msgstr "Iespējot slīpētas meklēšanu"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:16
+#: ../../facetednavigation/widgets/criteria/widget.py:15
 msgid "Enable hide/show criteria"
 msgstr "Ļauj slēpt / rādīt kritērijus"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:59
 msgid "Enable left portlets"
 msgstr "Iespējot kreiso portlets"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:74
 msgid "Enable right portlets"
 msgstr "Iespējot pareizos portlets"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:89
 msgid "Enable smart facets hiding"
 msgstr "Iespējot smart šķautnes slēpjas"
 
 #: ../../facetednavigation/widgets/range/widget.pt:28
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:31
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:29
 msgid "End"
 msgstr "End"
 
@@ -323,7 +308,7 @@ msgstr "Kļūdas vērtība:"
 msgid "Etag value"
 msgstr "ETAG vērtību"
 
-#: ../../facetednavigation/browser/template/configure.pt:88
+#: ../../facetednavigation/browser/template/configure.pt:86
 msgid "Export"
 msgstr "Eksportēt"
 
@@ -331,27 +316,27 @@ msgstr "Eksportēt"
 msgid "Faceted criteria"
 msgstr "Slīpētas kritērijus"
 
-#: ../../facetednavigation/settings/menu.py:22
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted global settings"
 msgstr "Slīpētas globālie uzstādījumi"
 
-#: ../../facetednavigation/subtypes/subtyper.py:135
+#: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
 msgstr "Slīpētas navigācija invalīdiem"
 
-#: ../../facetednavigation/subtypes/subtyper.py:124
+#: ../../facetednavigation/subtypes/subtyper.py:132
 msgid "Faceted navigation enabled"
 msgstr "Slīpētas navigācija ļāva"
 
-#: ../../facetednavigation/subtypes/subtyper.py:169
+#: ../../facetednavigation/subtypes/subtyper.py:175
 msgid "Faceted search disabled"
 msgstr "Slīpētas meklēšana invalīdiem"
 
-#: ../../facetednavigation/subtypes/subtyper.py:161
+#: ../../facetednavigation/subtypes/subtyper.py:167
 msgid "Faceted search enabled"
 msgstr "Slīpētas meklēšana ļāva"
 
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:20
 msgid "Faceted settings"
 msgstr "Slīpētas uzstādījumi"
 
@@ -371,7 +356,7 @@ msgstr "Filtrēt svītrots"
 msgid "Filter from vocabulary"
 msgstr "Atlasīt vārdnīca"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:29
+#: ../../facetednavigation/widgets/criteria/widget.py:28
 msgid "Filters"
 msgstr "Filtri"
 
@@ -383,13 +368,13 @@ msgstr "Filtri svītrots"
 msgid "Friendly name"
 msgstr "Draudzīgs nosaukums"
 
-#: ../../facetednavigation/widgets/date/widget.py:125
+#: ../../facetednavigation/widgets/date/widget.py:124
 msgid "Future"
 msgstr "Nākotne"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
-#: ../../facetednavigation/widgets/radio/widget.py:44
-#: ../../facetednavigation/widgets/select/widget.py:41
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Iegūt unikālas vērtības no kataloga, kā alternatīva vārdnīca"
 
@@ -401,9 +386,7 @@ msgstr "Slēptās"
 msgid "Hide filters"
 msgstr "Paslēpt filtrus"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:46
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
-#: ../../facetednavigation/widgets/radio/widget.py:77
+#: ../../facetednavigation/widgets/widget.py:313
 msgid "Hide items with zero results"
 msgstr "Paslēpt preces ar nulles rezultātu"
 
@@ -411,15 +394,19 @@ msgstr "Paslēpt preces ar nulles rezultātu"
 msgid "Hide widget"
 msgstr "Paslēpt widget"
 
-#: ../../facetednavigation/browser/template/configure.pt:85
+#: ../../facetednavigation/widgets/text/widget.py:39
+msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
 msgstr "Importēt"
 
-#: ../../facetednavigation/browser/template/configure.pt:77
+#: ../../facetednavigation/browser/template/configure.pt:75
 msgid "Import - Export configuration"
 msgstr "Imports - Eksports konfigurācija"
 
-#: ../../facetednavigation/browser/template/configure.pt:78
+#: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "Importa konfigurācija"
 
@@ -444,7 +431,7 @@ msgid "Maximum font-size (px)"
 msgstr "Maksimālais font-size (px)"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:65
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:52
 #: ../../facetednavigation/widgets/tagscloud/widget.py:61
 msgid "Maximum items"
 msgstr "Maksimālās vienības"
@@ -465,11 +452,11 @@ msgstr "Minimālais izmērs"
 msgid "More filters"
 msgstr "Vairāk filtri"
 
-#: ../../facetednavigation/browser/template/configure.pt:166
+#: ../../facetednavigation/browser/template/configure.pt:164
 msgid "Move Down"
 msgstr "Pārvietot lejup"
 
-#: ../../facetednavigation/browser/template/configure.pt:157
+#: ../../facetednavigation/browser/template/configure.pt:155
 msgid "Move Up"
 msgstr "Pārvietot augšup"
 
@@ -481,39 +468,39 @@ msgstr "Navigācija JS-koks sākumpunkts (salīdzinājumā ar Plone vietā ex. L
 msgid "Navigation tree theme"
 msgstr "Navigācija koks tēma"
 
-#: ../../facetednavigation/widgets/date/widget.py:33
+#: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Next 2 days"
 msgstr "Nākamās 2 dienas"
 
-#: ../../facetednavigation/widgets/date/widget.py:36
+#: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next 2 weeks"
 msgstr "Nākamās 2 nedēļas"
 
-#: ../../facetednavigation/widgets/date/widget.py:41
+#: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next 2 years"
 msgstr "Nākamie 2 gadi"
 
-#: ../../facetednavigation/widgets/date/widget.py:38
+#: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next 3 months"
 msgstr "Nākamie 3 mēneši"
 
-#: ../../facetednavigation/widgets/date/widget.py:34
+#: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 5 days"
 msgstr "Next 5 dienas"
 
-#: ../../facetednavigation/widgets/date/widget.py:39
+#: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 6 months"
 msgstr "Nākamajiem 6 mēnešiem"
 
-#: ../../facetednavigation/widgets/date/widget.py:37
+#: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next month"
 msgstr "Nākamais mēnesis"
 
-#: ../../facetednavigation/widgets/date/widget.py:35
+#: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next week"
 msgstr "Nākamnedēļ"
 
-#: ../../facetednavigation/widgets/date/widget.py:40
+#: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next year"
 msgstr "Nākamais gads"
 
@@ -522,7 +509,7 @@ msgid "No action provided"
 msgstr "Nekādas darbības ar noteikumu,"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:54
+#: ../../facetednavigation/widgets/radio/widget.py:53
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
 msgstr "Vienību skaits, kas redzama widget"
@@ -531,11 +518,11 @@ msgstr "Vienību skaits, kas redzama widget"
 msgid "Operator"
 msgstr "Operatora"
 
-#: ../../facetednavigation/browser/template/configure.pt:126
+#: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
 msgstr "kārtībā?"
 
-#: ../../facetednavigation/widgets/date/widget.py:112
+#: ../../facetednavigation/widgets/date/widget.py:111
 msgid "Past"
 msgstr "pagātnē"
 
@@ -555,28 +542,28 @@ msgstr "Plone portlet"
 msgid "Portlet macro"
 msgstr "Portlet makro"
 
-#: ../../facetednavigation/settings/menu.py:132
+#: ../../facetednavigation/settings/menu.py:131
 msgid "Portlets left column is hidden now"
 msgstr "Portlets kreisā kolonna tiek paslēpta tagad"
 
-#: ../../facetednavigation/settings/menu.py:129
+#: ../../facetednavigation/settings/menu.py:128
 msgid "Portlets left column is visible now"
 msgstr "Portlets kreisā kolonna ir redzama tagad"
 
-#: ../../facetednavigation/settings/menu.py:142
+#: ../../facetednavigation/settings/menu.py:141
 msgid "Portlets right column is hidden now"
 msgstr "Portlets labā sleja tiek slēpta tagad"
 
-#: ../../facetednavigation/settings/menu.py:139
+#: ../../facetednavigation/settings/menu.py:138
 msgid "Portlets right column is visible now"
 msgstr "Portlets labā sleja ir redzama tagad"
 
-#: ../../facetednavigation/browser/template/configure.pt:44
+#: ../../facetednavigation/browser/template/configure.pt:42
 #: ../../facetednavigation/widgets/widget.py:52
 msgid "Position"
 msgstr "Pozīcija"
 
-#: ../../facetednavigation/browser/template/configure.pt:45
+#: ../../facetednavigation/browser/template/configure.pt:43
 msgid "Position of the widget."
 msgstr "Pozīcija widget."
 
@@ -584,11 +571,11 @@ msgstr "Pozīcija widget."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python nosaukums, rūpnīcas, kas var radīt īstenošanas objektu. Tas ir identificēt objektu modulī, izmantojot pilnu punktētu vārdu."
 
-#: ../../facetednavigation/widgets/radio/widget.py:99
+#: ../../facetednavigation/widgets/radio/widget.py:81
 msgid "Radio"
 msgstr "Radio"
 
-#: ../../facetednavigation/widgets/range/widget.py:49
+#: ../../facetednavigation/widgets/range/widget.py:45
 msgid "Range"
 msgstr "Diapazons"
 
@@ -600,19 +587,23 @@ msgstr "Noņemt visu"
 msgid "Remove all filters"
 msgstr "Noņemt visus filtrus"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:61
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:34
+msgid "Results Filter"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:59
 msgid "Results per page"
 msgstr "Rezultātus uz lappuses"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:30
 msgid "Results per page ending value"
 msgstr "Rezultātus uz lappuses beidzas vērtības"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:21
 msgid "Results per page starting value"
 msgstr "Rezultātus uz lappuses sākuma vērtību"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:41
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:39
 msgid "Results per page step"
 msgstr "Rezultātus uz lappuses soli"
 
@@ -621,8 +612,8 @@ msgid "Reverse"
 msgstr "Mainīt"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:72
-#: ../../facetednavigation/widgets/radio/widget.py:61
-#: ../../facetednavigation/widgets/select/widget.py:48
+#: ../../facetednavigation/widgets/radio/widget.py:60
+#: ../../facetednavigation/widgets/select/widget.py:47
 msgid "Reverse options"
 msgstr "Atgriezeniskās iespējas"
 
@@ -630,7 +621,7 @@ msgstr "Atgriezeniskās iespējas"
 msgid "Root folder"
 msgstr "Saknes mape"
 
-#: ../../facetednavigation/browser/template/configure.pt:182
+#: ../../facetednavigation/browser/template/configure.pt:180
 msgid "Save"
 msgstr "Saglabāt"
 
@@ -642,20 +633,24 @@ msgstr "Meklēt"
 msgid "Search Depth"
 msgstr "Meklēt Dziļums"
 
+#: ../../facetednavigation/widgets/text/widget.py:38
+msgid "Search in all elements only"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
 msgid "Search with AND/OR between elements"
 msgstr "Meklēt ar UN/VAI starp elementiem"
 
-#: ../../facetednavigation/browser/template/configure.pt:56
+#: ../../facetednavigation/browser/template/configure.pt:54
 #: ../../facetednavigation/widgets/widget.py:61
 msgid "Section"
 msgstr "Daļa"
 
-#: ../../facetednavigation/widgets/select/widget.py:84
+#: ../../facetednavigation/widgets/select/widget.py:67
 msgid "Select"
 msgstr "Atlasītais"
 
-#: ../../facetednavigation/browser/template/configure.pt:114
+#: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Atlasīt visus vienumus"
 
@@ -663,17 +658,21 @@ msgstr "Atlasīt visus vienumus"
 msgid "Show filters"
 msgstr "Parādīt filtrus"
 
-#: ../../facetednavigation/settings/menu.py:152
+#: ../../facetednavigation/settings/menu.py:151
 msgid "Smart facets hiding is now disabled"
 msgstr "Smart šķautnes slēpjas tagad invalīds"
 
-#: ../../facetednavigation/settings/menu.py:149
+#: ../../facetednavigation/settings/menu.py:148
 msgid "Smart facets hiding is now enabled"
 msgstr "Smart šķautnes slēpjas ir iespējota"
 
+#: ../../facetednavigation/widgets/widget.py:306
+msgid "Sort by countable"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
-#: ../../facetednavigation/widgets/radio/widget.py:62
-#: ../../facetednavigation/widgets/select/widget.py:49
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Sort options reversed"
 msgstr "Kārtošanas opcijas apvērsti"
 
@@ -686,7 +685,7 @@ msgid "Sphere"
 msgstr "Sfēra"
 
 #: ../../facetednavigation/widgets/range/widget.pt:20
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:20
 msgid "Start"
 msgstr "[Start."
 
@@ -694,7 +693,7 @@ msgstr "[Start."
 msgid "Start date"
 msgstr "Sākuma datums"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:40
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:38
 msgid "Step"
 msgstr "Soļa nr."
 
@@ -702,19 +701,19 @@ msgstr "Soļa nr."
 msgid "Sync faceted translations"
 msgstr "Sinhronizēt slīpētas tulkojumi"
 
-#: ../../facetednavigation/widgets/tal/widget.py:61
+#: ../../facetednavigation/widgets/tal/widget.py:60
 msgid "TAL Expression"
 msgstr "TAL izteikšana"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:174
+#: ../../facetednavigation/widgets/tagscloud/widget.py:158
 msgid "Tags Cloud"
 msgstr "Tags Cloud"
 
-#: ../../facetednavigation/widgets/tal/widget.py:40
+#: ../../facetednavigation/widgets/tal/widget.py:39
 msgid "Tal Expression"
 msgstr "Tal izteikšana"
 
-#: ../../facetednavigation/widgets/text/widget.py:41
+#: ../../facetednavigation/widgets/text/widget.py:50
 msgid "Text field"
 msgstr "Teksta lauks"
 
@@ -722,9 +721,7 @@ msgstr "Teksta lauks"
 msgid "Theme to be used with this widget"
 msgstr "Tēma, kas jāizmanto ar šo widget"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:47
-#: ../../facetednavigation/widgets/checkbox/widget.py:87
-#: ../../facetednavigation/widgets/radio/widget.py:78
+#: ../../facetednavigation/widgets/widget.py:314
 msgid "This option works only if 'count results' is enabled"
 msgstr "Šī opcija darbojas tikai, ja 'skaits rezultāti' ir iespējota"
 
@@ -740,15 +737,15 @@ msgstr "Šī widget tiks ignorētas skatīšanās režīmā, kā radās kļūda,
 msgid "Title for widget to display in view page"
 msgstr "Nosaukums par widget, lai parādītu skatīšanās lapā"
 
-#: ../../facetednavigation/widgets/date/widget.py:119
+#: ../../facetednavigation/widgets/date/widget.py:118
 msgid "Today"
 msgstr "Šodien"
 
-#: ../../facetednavigation/widgets/date/widget.py:32
+#: ../../facetednavigation/widgets/date/widget.py:31
 msgid "Tomorrow"
 msgstr "Rīt"
 
-#: ../../facetednavigation/browser/template/configure.pt:32
+#: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr "Type"
 
@@ -756,7 +753,7 @@ msgstr "Type"
 msgid "Type of the cloud"
 msgstr "Tips mākonis"
 
-#: ../../facetednavigation/browser/template/configure.pt:33
+#: ../../facetednavigation/browser/template/configure.pt:31
 msgid "Type of the widget."
 msgstr "Tips widget."
 
@@ -764,17 +761,21 @@ msgstr "Tips widget."
 msgid "UI Calendar years range"
 msgstr "UI Kalendārs gadus svārstās"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:17
+#: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Noņemiet atzīmi šajā lodziņā, ja nevēlaties slēpt / rādīt kritēriji iezīme Javascript šo widget"
 
-#: ../../facetednavigation/widgets/debug/widget.py:21
+#: ../../facetednavigation/widgets/widget.py:307
+msgid "Use the results counter for sorting"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Visible to"
 msgstr "Redzams"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:47
-#: ../../facetednavigation/widgets/radio/widget.py:33
-#: ../../facetednavigation/widgets/select/widget.py:31
+#: ../../facetednavigation/widgets/radio/widget.py:32
+#: ../../facetednavigation/widgets/select/widget.py:30
 msgid "Vocabulary"
 msgstr "Vārdu krājums"
 
@@ -783,8 +784,8 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "Vārdnīca izmantot, lai filtrētu šķirošanas kritērijus. Atstājiet tukšu, lai noklusējuma kārtošanas kritēriju."
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
-#: ../../facetednavigation/widgets/radio/widget.py:34
-#: ../../facetednavigation/widgets/select/widget.py:32
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary to use to render widget items"
 msgstr "Vārdnīca izmantot, lai padarītu logrīku preces"
 
@@ -792,23 +793,23 @@ msgstr "Vārdnīca izmantot, lai padarītu logrīku preces"
 msgid "Widget position in page"
 msgstr "Widget pozīcija lapā"
 
-#: ../../facetednavigation/browser/template/configure.pt:149
+#: ../../facetednavigation/browser/template/configure.pt:147
 msgid "Widget type"
 msgstr "Widget tips"
 
-#: ../../facetednavigation/widgets/debug/widget.py:22
+#: ../../facetednavigation/widgets/debug/widget.py:23
 msgid "Widget will be visible only for selected user"
 msgstr "Widget būs redzams tikai izvēlētā lietotāja"
 
-#: ../../facetednavigation/widgets/date/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:27
 msgid "Yesterday"
 msgstr "Vakar"
 
-#: ../../facetednavigation/widgets/text/widget.pt:30
+#: ../../facetednavigation/widgets/text/widget.pt:31
 msgid "all items"
 msgstr "visas preces"
 
-#: ../../facetednavigation/widgets/text/widget.pt:38
+#: ../../facetednavigation/widgets/text/widget.pt:40
 msgid "in current results"
 msgstr "pašreizējās rezultātiem"
 

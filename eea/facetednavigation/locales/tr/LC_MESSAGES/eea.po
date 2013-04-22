@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-07 22:17+0000\n"
+"POT-Creation-Date: 2013-04-22 07:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,51 +14,51 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../../facetednavigation/widgets/date/widget.py:23
+#: ../../facetednavigation/widgets/date/widget.py:22
 msgid "1 month ago"
 msgstr "1 ay önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:25
+#: ../../facetednavigation/widgets/date/widget.py:24
 msgid "1 week ago"
 msgstr "1 hafta önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:20
+#: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 year ago"
 msgstr "1 yıl önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:27
+#: ../../facetednavigation/widgets/date/widget.py:26
 msgid "2 days ago"
 msgstr "2 gün önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:24
+#: ../../facetednavigation/widgets/date/widget.py:23
 msgid "2 weeks ago"
 msgstr "2 hafta önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:19
+#: ../../facetednavigation/widgets/date/widget.py:18
 msgid "2 years ago"
 msgstr "2 yıl önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:22
+#: ../../facetednavigation/widgets/date/widget.py:21
 msgid "3 months ago"
 msgstr "3 ay önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:25
 msgid "5 days ago"
 msgstr "5 gün önce"
 
-#: ../../facetednavigation/widgets/date/widget.py:21
+#: ../../facetednavigation/widgets/date/widget.py:20
 msgid "6 months ago"
 msgstr "6 ay önce"
 
-#: ../../facetednavigation/browser/template/configure.pt:70
+#: ../../facetednavigation/browser/template/configure.pt:68
 msgid "Add"
 msgstr "Ekle"
 
-#: ../../facetednavigation/browser/template/configure.pt:26
+#: ../../facetednavigation/browser/template/configure.pt:24
 msgid "Add new filter"
 msgstr "Yeni bir filtre ekle"
 
-#: ../../facetednavigation/browser/template/configure.pt:27
+#: ../../facetednavigation/browser/template/configure.pt:25
 msgid "Add widget"
 msgstr "Widget Ekle"
 
@@ -66,35 +66,35 @@ msgstr "Widget Ekle"
 msgid "After query filters"
 msgstr "Sorgu filtreleri sonra"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
-#: ../../facetednavigation/widgets/radio/widget.pt:29
-#: ../../facetednavigation/widgets/select/widget.pt:23
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/radio/widget.pt:31
+#: ../../facetednavigation/widgets/select/widget.pt:25
 msgid "All"
 msgstr "hepsi"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:69
+#: ../../facetednavigation/widgets/alphabetic/widget.py:52
 msgid "Alphabetic"
 msgstr "Alfabetik"
 
-#: ../../facetednavigation/browser/template/configure.pt:99
+#: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Eğer ${widget} Widget silmek istediğinizden emin misiniz?"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:56
-#: ../../facetednavigation/widgets/radio/widget.py:43
-#: ../../facetednavigation/widgets/select/widget.py:40
+#: ../../facetednavigation/widgets/radio/widget.py:42
+#: ../../facetednavigation/widgets/select/widget.py:39
 msgid "Catalog"
 msgstr "Katalog"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/alphabetic/widget.py:30
 #: ../../facetednavigation/widgets/checkbox/widget.py:26
-#: ../../facetednavigation/widgets/date/widget.py:51
+#: ../../facetednavigation/widgets/date/widget.py:50
 msgid "Catalog index"
 msgstr "Katalog endeksi"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/alphabetic/widget.py:31
 #: ../../facetednavigation/widgets/checkbox/widget.py:27
-#: ../../facetednavigation/widgets/date/widget.py:52
+#: ../../facetednavigation/widgets/date/widget.py:51
 msgid "Catalog index to use for search"
 msgstr "Katalog dizin arama için kullanılacak"
 
@@ -102,7 +102,7 @@ msgstr "Katalog dizin arama için kullanılacak"
 msgid "Catalog query"
 msgstr "Katalog sorgusu"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:107
+#: ../../facetednavigation/widgets/checkbox/widget.py:91
 msgid "Checkboxes"
 msgstr "Kutularını"
 
@@ -126,11 +126,7 @@ msgstr "Bulut türü"
 msgid "Configuration imported"
 msgstr "Yapılandırma ithal"
 
-#: ../../facetednavigation/browser/template/configure.pt:20
-msgid "Configure faceted navigation"
-msgstr "Yönlü navigasyon yapılandırın"
-
-#: ../../facetednavigation/browser/template/configure.pt:109
+#: ../../facetednavigation/browser/template/configure.pt:107
 msgid "Content listing"
 msgstr "İçerik listesi"
 
@@ -138,9 +134,7 @@ msgstr "İçerik listesi"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Seçili yıl (c-nn: c + nn) göre,: bugünün yıl (-nn + nn) için ya göre:, mutlak (nnnn: nnnn), veya birleşimleri açılan yıl yearsdisplayed aralığı kontrol Bu formatların (nnnn:-nn)."
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
-#: ../../facetednavigation/widgets/radio/widget.py:69
+#: ../../facetednavigation/widgets/widget.py:299
 msgid "Count results"
 msgstr "Maçların sonuçları"
 
@@ -148,7 +142,7 @@ msgstr "Maçların sonuçları"
 msgid "Counters"
 msgstr "Sayaçlar"
 
-#: ../../facetednavigation/browser/template/configure.pt:125
+#: ../../facetednavigation/browser/template/configure.pt:123
 msgid "Criterion details"
 msgstr "Kriter detayları"
 
@@ -160,7 +154,7 @@ msgstr "Şu yapılandırma"
 msgid "Cut long phrases to provided number of characters"
 msgstr "Karakter sağlanan sayıda uzun cümleleri Kes"
 
-#: ../../facetednavigation/widgets/date/widget.py:73
+#: ../../facetednavigation/widgets/date/widget.py:72
 msgid "Date"
 msgstr "Tarih"
 
@@ -168,7 +162,7 @@ msgstr "Tarih"
 msgid "Date range"
 msgstr "Tarih aralığı"
 
-#: ../../facetednavigation/widgets/debug/widget.py:32
+#: ../../facetednavigation/widgets/debug/widget.py:33
 msgid "Debugger"
 msgstr "Debugger"
 
@@ -176,7 +170,7 @@ msgstr "Debugger"
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
 msgstr "Standart daterange (örneğin '2009 / 12/01 => 2009/12/31 ')"
 
-#: ../../facetednavigation/widgets/date/widget.py:61
+#: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
 msgstr "Standart daterange (örneğin 'yarın kadar, bir yıl önce başlayan' şimdi-365 anlamına => Şimdi +1' ')"
 
@@ -184,11 +178,11 @@ msgstr "Standart daterange (örneğin 'yarın kadar, bir yıl önce başlayan' �
 msgid "Default etag"
 msgstr "Standart etag"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:96
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 msgid "Default items (one per line)"
 msgstr "Standart ürün (satır başına bir tane)"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:57
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
 msgid "Default letter to be selected"
 msgstr "Standart mektup seçilecek"
 
@@ -196,17 +190,17 @@ msgstr "Standart mektup seçilecek"
 msgid "Default path to search in (relative to root folder)"
 msgstr "Aramak için Varsayılan yolu (kök klasörüne göre)"
 
-#: ../../facetednavigation/widgets/range/widget.py:38
+#: ../../facetednavigation/widgets/range/widget.py:34
 msgid "Default range (e.g. '1 => 3')"
 msgstr "Standart aralığı (örneğin '1 => 3 ')"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:50
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:48
 msgid "Default results per page"
 msgstr "Sayfa başına varsayılan sonuçları"
 
-#: ../../facetednavigation/widgets/radio/widget.py:88
-#: ../../facetednavigation/widgets/select/widget.py:73
-#: ../../facetednavigation/widgets/tagscloud/widget.py:163
+#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/tagscloud/widget.py:147
 msgid "Default selected item"
 msgstr "Standart seçili öğeyi"
 
@@ -214,21 +208,22 @@ msgstr "Standart seçili öğeyi"
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Varsayılan sıralama indeksi ('(ters) etkili' örneğin 'etkili' ya)"
 
-#: ../../facetednavigation/widgets/text/widget.py:30
+#: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Aramak için Varsayılan dize"
 
-#: ../../facetednavigation/widgets/tal/widget.py:41
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:35
+#: ../../facetednavigation/widgets/tal/widget.py:40
 msgid "Default tal expression for query value"
 msgstr "Sorgu değeri için varsayılan tal ifade"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:56
-#: ../../facetednavigation/widgets/checkbox/widget.py:95
-#: ../../facetednavigation/widgets/date/widget.py:60
+#: ../../facetednavigation/widgets/alphabetic/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/date/widget.py:59
 msgid "Default value"
 msgstr "Varsayılan Değer"
 
-#: ../../facetednavigation/browser/template/configure.pt:183
+#: ../../facetednavigation/browser/template/configure.pt:181
 msgid "Delete"
 msgstr "Sil"
 
@@ -244,37 +239,27 @@ msgstr "Yönlü navigasyon sakatlar"
 msgid "Disable faceted search"
 msgstr "Yönlü arama pasif"
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Disable left portlets"
 msgstr "Sol portletler sakatlar"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Disable right portlets"
 msgstr "Sağ portletler sakatlar"
 
-#: ../../facetednavigation/settings/menu.py:91
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Disable smart facets hiding"
 msgstr "Akıllı yönleriyle gizleme sakatlar"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:80
-#: ../../facetednavigation/widgets/radio/widget.py:70
-#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/widget.py:300
 msgid "Display number of results near each option"
 msgstr "Her seçeneğin yakınında sonuç sayısını görüntüle"
-
-#: ../../facetednavigation/widgets/tagscloud/widget.py:146
-msgid "Display number of results near each tag"
-msgstr "Her etiketi yakınında sonuç sayısını görüntüle"
-
-#: ../../facetednavigation/widgets/alphabetic/widget.py:40
-msgid "Display number of results per letter"
-msgstr "Mektup başına sonuç sayısını görüntüle"
 
 #: ../../facetednavigation/widgets/widget.py:62
 msgid "Display widget in section"
 msgstr "Bölümünde aracı gösterilecek"
 
-#: ../../facetednavigation/browser/template/configure.pt:57
+#: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Bölümünde Widget görüntüler."
 
@@ -286,24 +271,24 @@ msgstr "Yönlü navigasyon etkinleştirin"
 msgid "Enable faceted search"
 msgstr "Yönlü arama etkinleştirin"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:16
+#: ../../facetednavigation/widgets/criteria/widget.py:15
 msgid "Enable hide/show criteria"
 msgstr "Kriterleri göstermek / gizlemek etkinleştirin"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:59
 msgid "Enable left portlets"
 msgstr "Sol portletler etkinleştirin"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:74
 msgid "Enable right portlets"
 msgstr "Sağ portletler etkinleştirin"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:89
 msgid "Enable smart facets hiding"
 msgstr "Akıllı yönleriyle gizleme etkinleştirin"
 
 #: ../../facetednavigation/widgets/range/widget.pt:28
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:31
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:29
 msgid "End"
 msgstr "Bitiş"
 
@@ -323,7 +308,7 @@ msgstr "Hata değeri:"
 msgid "Etag value"
 msgstr "Değeri etag"
 
-#: ../../facetednavigation/browser/template/configure.pt:88
+#: ../../facetednavigation/browser/template/configure.pt:86
 msgid "Export"
 msgstr "İhracat"
 
@@ -331,27 +316,27 @@ msgstr "İhracat"
 msgid "Faceted criteria"
 msgstr "Yönlü kriterleri"
 
-#: ../../facetednavigation/settings/menu.py:22
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted global settings"
 msgstr "Yönlü genel ayarlar"
 
-#: ../../facetednavigation/subtypes/subtyper.py:135
+#: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
 msgstr "Yönlü navigasyon devre dışı"
 
-#: ../../facetednavigation/subtypes/subtyper.py:124
+#: ../../facetednavigation/subtypes/subtyper.py:132
 msgid "Faceted navigation enabled"
 msgstr "Yönlü navigasyon etkin"
 
-#: ../../facetednavigation/subtypes/subtyper.py:169
+#: ../../facetednavigation/subtypes/subtyper.py:175
 msgid "Faceted search disabled"
 msgstr "Yönlü arama devre dışı"
 
-#: ../../facetednavigation/subtypes/subtyper.py:161
+#: ../../facetednavigation/subtypes/subtyper.py:167
 msgid "Faceted search enabled"
 msgstr "Yönlü arama etkin"
 
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:20
 msgid "Faceted settings"
 msgstr "Yönlü ayarları"
 
@@ -371,7 +356,7 @@ msgstr "Silinen filtreleme"
 msgid "Filter from vocabulary"
 msgstr "Kelime filtrelemek"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:29
+#: ../../facetednavigation/widgets/criteria/widget.py:28
 msgid "Filters"
 msgstr "Filtreler"
 
@@ -383,13 +368,13 @@ msgstr "Filtreler silindi"
 msgid "Friendly name"
 msgstr "Dostu adı"
 
-#: ../../facetednavigation/widgets/date/widget.py:125
+#: ../../facetednavigation/widgets/date/widget.py:124
 msgid "Future"
 msgstr "Gelecek"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
-#: ../../facetednavigation/widgets/radio/widget.py:44
-#: ../../facetednavigation/widgets/select/widget.py:41
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Kelime için bir alternatif olarak katalog benzersiz değerleri alın"
 
@@ -401,9 +386,7 @@ msgstr "[Hidden]"
 msgid "Hide filters"
 msgstr "Filtreleri gizle"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:46
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
-#: ../../facetednavigation/widgets/radio/widget.py:77
+#: ../../facetednavigation/widgets/widget.py:313
 msgid "Hide items with zero results"
 msgstr "Sıfır sonuçları ile öğeleri gizle"
 
@@ -411,15 +394,19 @@ msgstr "Sıfır sonuçları ile öğeleri gizle"
 msgid "Hide widget"
 msgstr "Widget gizle"
 
-#: ../../facetednavigation/browser/template/configure.pt:85
+#: ../../facetednavigation/widgets/text/widget.py:39
+msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
 msgstr "Al"
 
-#: ../../facetednavigation/browser/template/configure.pt:77
+#: ../../facetednavigation/browser/template/configure.pt:75
 msgid "Import - Export configuration"
 msgstr "İthalat - İhracat yapılandırma"
 
-#: ../../facetednavigation/browser/template/configure.pt:78
+#: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "İthalat yapılandırma"
 
@@ -444,7 +431,7 @@ msgid "Maximum font-size (px)"
 msgstr "Maksimum font-size (px)"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:65
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:52
 #: ../../facetednavigation/widgets/tagscloud/widget.py:61
 msgid "Maximum items"
 msgstr "Maksimum ürün"
@@ -465,11 +452,11 @@ msgstr "Minimum boyut"
 msgid "More filters"
 msgstr "Daha filtreleri"
 
-#: ../../facetednavigation/browser/template/configure.pt:166
+#: ../../facetednavigation/browser/template/configure.pt:164
 msgid "Move Down"
 msgstr "Aşağı taşı"
 
-#: ../../facetednavigation/browser/template/configure.pt:157
+#: ../../facetednavigation/browser/template/configure.pt:155
 msgid "Move Up"
 msgstr "Yukarı taşı"
 
@@ -481,39 +468,39 @@ msgstr "Navigasyon js ağacı başlangıç ​​noktası (plone siteye göre ö
 msgid "Navigation tree theme"
 msgstr "Gezinti ağacı teması"
 
-#: ../../facetednavigation/widgets/date/widget.py:33
+#: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Next 2 days"
 msgstr "Sonraki 2 gün"
 
-#: ../../facetednavigation/widgets/date/widget.py:36
+#: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next 2 weeks"
 msgstr "Sonraki 2 hafta"
 
-#: ../../facetednavigation/widgets/date/widget.py:41
+#: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next 2 years"
 msgstr "Sonraki 2 yıl"
 
-#: ../../facetednavigation/widgets/date/widget.py:38
+#: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next 3 months"
 msgstr "Gelecek 3 ay"
 
-#: ../../facetednavigation/widgets/date/widget.py:34
+#: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 5 days"
 msgstr "Sonraki 5 gün"
 
-#: ../../facetednavigation/widgets/date/widget.py:39
+#: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 6 months"
 msgstr "Sonraki 6 ay"
 
-#: ../../facetednavigation/widgets/date/widget.py:37
+#: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next month"
 msgstr "Sonraki ay"
 
-#: ../../facetednavigation/widgets/date/widget.py:35
+#: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next week"
 msgstr "Sonraki hafta"
 
-#: ../../facetednavigation/widgets/date/widget.py:40
+#: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next year"
 msgstr "Gelecek yıl"
 
@@ -522,7 +509,7 @@ msgid "No action provided"
 msgstr "Hiçbir hareket sağlanır"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:54
+#: ../../facetednavigation/widgets/radio/widget.py:53
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
 msgstr "Widget görünen öğeleri sayısı"
@@ -531,11 +518,11 @@ msgstr "Widget görünen öğeleri sayısı"
 msgid "Operator"
 msgstr "Operatör"
 
-#: ../../facetednavigation/browser/template/configure.pt:126
+#: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
 msgstr "Sipariş"
 
-#: ../../facetednavigation/widgets/date/widget.py:112
+#: ../../facetednavigation/widgets/date/widget.py:111
 msgid "Past"
 msgstr "son"
 
@@ -555,28 +542,28 @@ msgstr "Plone portleti"
 msgid "Portlet macro"
 msgstr "Portlet makro"
 
-#: ../../facetednavigation/settings/menu.py:132
+#: ../../facetednavigation/settings/menu.py:131
 msgid "Portlets left column is hidden now"
 msgstr "Portletler sol sütun şimdi gizlidir"
 
-#: ../../facetednavigation/settings/menu.py:129
+#: ../../facetednavigation/settings/menu.py:128
 msgid "Portlets left column is visible now"
 msgstr "Portletler sol sütun artık görünür"
 
-#: ../../facetednavigation/settings/menu.py:142
+#: ../../facetednavigation/settings/menu.py:141
 msgid "Portlets right column is hidden now"
 msgstr "Portletler sağ sütun şimdi gizlidir"
 
-#: ../../facetednavigation/settings/menu.py:139
+#: ../../facetednavigation/settings/menu.py:138
 msgid "Portlets right column is visible now"
 msgstr "Portletler sağ sütun artık görünür"
 
-#: ../../facetednavigation/browser/template/configure.pt:44
+#: ../../facetednavigation/browser/template/configure.pt:42
 #: ../../facetednavigation/widgets/widget.py:52
 msgid "Position"
 msgstr "Konum"
 
-#: ../../facetednavigation/browser/template/configure.pt:45
+#: ../../facetednavigation/browser/template/configure.pt:43
 msgid "Position of the widget."
 msgstr "Widget Konumu."
 
@@ -584,11 +571,11 @@ msgstr "Widget Konumu."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Uygulama nesnesi oluşturabilirsiniz bir fabrika Python adı. Bu tam noktalı adını kullanarak bir modül bir nesne tanımlamak gerekir."
 
-#: ../../facetednavigation/widgets/radio/widget.py:99
+#: ../../facetednavigation/widgets/radio/widget.py:81
 msgid "Radio"
 msgstr "·"
 
-#: ../../facetednavigation/widgets/range/widget.py:49
+#: ../../facetednavigation/widgets/range/widget.py:45
 msgid "Range"
 msgstr "aralık"
 
@@ -600,19 +587,23 @@ msgstr "Tümünü kaldır"
 msgid "Remove all filters"
 msgstr "Tüm filtreleri kaldırın"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:61
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:34
+msgid "Results Filter"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:59
 msgid "Results per page"
 msgstr "Sayfa başına sonuçlar"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:30
 msgid "Results per page ending value"
 msgstr "Sayfa bitiş değeri başına sonuçlar"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:21
 msgid "Results per page starting value"
 msgstr "Sayfa başına sonuç değeri başlangıç"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:41
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:39
 msgid "Results per page step"
 msgstr "Sayfa adım başına Sonuçlar"
 
@@ -621,8 +612,8 @@ msgid "Reverse"
 msgstr "Geri"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:72
-#: ../../facetednavigation/widgets/radio/widget.py:61
-#: ../../facetednavigation/widgets/select/widget.py:48
+#: ../../facetednavigation/widgets/radio/widget.py:60
+#: ../../facetednavigation/widgets/select/widget.py:47
 msgid "Reverse options"
 msgstr "Ters seçenekleri"
 
@@ -630,7 +621,7 @@ msgstr "Ters seçenekleri"
 msgid "Root folder"
 msgstr "Kök klasörü"
 
-#: ../../facetednavigation/browser/template/configure.pt:182
+#: ../../facetednavigation/browser/template/configure.pt:180
 msgid "Save"
 msgstr "Kaydet"
 
@@ -642,20 +633,24 @@ msgstr "Ara"
 msgid "Search Depth"
 msgstr "Arama Derinliği"
 
+#: ../../facetednavigation/widgets/text/widget.py:38
+msgid "Search in all elements only"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
 msgid "Search with AND/OR between elements"
 msgstr "Ile VE / VEYA elemanları arasında ara"
 
-#: ../../facetednavigation/browser/template/configure.pt:56
+#: ../../facetednavigation/browser/template/configure.pt:54
 #: ../../facetednavigation/widgets/widget.py:61
 msgid "Section"
 msgstr "Bölüm"
 
-#: ../../facetednavigation/widgets/select/widget.py:84
+#: ../../facetednavigation/widgets/select/widget.py:67
 msgid "Select"
 msgstr "Seç"
 
-#: ../../facetednavigation/browser/template/configure.pt:114
+#: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Tüm öğeleri seçme"
 
@@ -663,17 +658,21 @@ msgstr "Tüm öğeleri seçme"
 msgid "Show filters"
 msgstr "Filtreleri göster"
 
-#: ../../facetednavigation/settings/menu.py:152
+#: ../../facetednavigation/settings/menu.py:151
 msgid "Smart facets hiding is now disabled"
 msgstr "Akıllı yönleri gizleme artık devre dışı"
 
-#: ../../facetednavigation/settings/menu.py:149
+#: ../../facetednavigation/settings/menu.py:148
 msgid "Smart facets hiding is now enabled"
 msgstr "Akıllı yönleri gizleme artık etkindir"
 
+#: ../../facetednavigation/widgets/widget.py:306
+msgid "Sort by countable"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
-#: ../../facetednavigation/widgets/radio/widget.py:62
-#: ../../facetednavigation/widgets/select/widget.py:49
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Sort options reversed"
 msgstr "Sıralama seçenekleri tersine"
 
@@ -686,7 +685,7 @@ msgid "Sphere"
 msgstr "Küre"
 
 #: ../../facetednavigation/widgets/range/widget.pt:20
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:20
 msgid "Start"
 msgstr "Başlat"
 
@@ -694,7 +693,7 @@ msgstr "Başlat"
 msgid "Start date"
 msgstr "Başlangıç ​​Tarihi"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:40
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:38
 msgid "Step"
 msgstr "Adım:"
 
@@ -702,19 +701,19 @@ msgstr "Adım:"
 msgid "Sync faceted translations"
 msgstr "Yönlü çeviri Sync"
 
-#: ../../facetednavigation/widgets/tal/widget.py:61
+#: ../../facetednavigation/widgets/tal/widget.py:60
 msgid "TAL Expression"
 msgstr "TAL İfade"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:174
+#: ../../facetednavigation/widgets/tagscloud/widget.py:158
 msgid "Tags Cloud"
 msgstr "Etiket bulutu"
 
-#: ../../facetednavigation/widgets/tal/widget.py:40
+#: ../../facetednavigation/widgets/tal/widget.py:39
 msgid "Tal Expression"
 msgstr "Tal İfade"
 
-#: ../../facetednavigation/widgets/text/widget.py:41
+#: ../../facetednavigation/widgets/text/widget.py:50
 msgid "Text field"
 msgstr "Metin alanı"
 
@@ -722,9 +721,7 @@ msgstr "Metin alanı"
 msgid "Theme to be used with this widget"
 msgstr "Bu widget ile kullanılmak üzere Tema"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:47
-#: ../../facetednavigation/widgets/checkbox/widget.py:87
-#: ../../facetednavigation/widgets/radio/widget.py:78
+#: ../../facetednavigation/widgets/widget.py:314
 msgid "This option works only if 'count results' is enabled"
 msgstr "'Sayımı sonuçları' etkinse, bu seçenek sadece çalışır"
 
@@ -740,15 +737,15 @@ msgstr "Işlemek için çalışırken bir hata oluştu olarak bu widget görün�
 msgid "Title for widget to display in view page"
 msgstr "Görünümünde sayfada göstermek widget için Başlığı"
 
-#: ../../facetednavigation/widgets/date/widget.py:119
+#: ../../facetednavigation/widgets/date/widget.py:118
 msgid "Today"
 msgstr "Bugün"
 
-#: ../../facetednavigation/widgets/date/widget.py:32
+#: ../../facetednavigation/widgets/date/widget.py:31
 msgid "Tomorrow"
 msgstr "Yarın"
 
-#: ../../facetednavigation/browser/template/configure.pt:32
+#: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr "Tür"
 
@@ -756,7 +753,7 @@ msgstr "Tür"
 msgid "Type of the cloud"
 msgstr "Bulut türü"
 
-#: ../../facetednavigation/browser/template/configure.pt:33
+#: ../../facetednavigation/browser/template/configure.pt:31
 msgid "Type of the widget."
 msgstr "Widget türü."
 
@@ -764,17 +761,21 @@ msgstr "Widget türü."
 msgid "UI Calendar years range"
 msgstr "UI Takvim yaş aralığı"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:17
+#: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Eğer istemiyorsanız işareti kaldırın bu kutuyu gizlemek / göstermek kriterleri bu widget etkin özelliği"
 
-#: ../../facetednavigation/widgets/debug/widget.py:21
+#: ../../facetednavigation/widgets/widget.py:307
+msgid "Use the results counter for sorting"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Visible to"
 msgstr "Görülebilen"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:47
-#: ../../facetednavigation/widgets/radio/widget.py:33
-#: ../../facetednavigation/widgets/select/widget.py:31
+#: ../../facetednavigation/widgets/radio/widget.py:32
+#: ../../facetednavigation/widgets/select/widget.py:30
 msgid "Vocabulary"
 msgstr "Kelime"
 
@@ -783,8 +784,8 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "Kelime sıralama kriterleri süzmek için kullanmak. Varsayılan sıralama kriterleri için boş bırakın."
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
-#: ../../facetednavigation/widgets/radio/widget.py:34
-#: ../../facetednavigation/widgets/select/widget.py:32
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary to use to render widget items"
 msgstr "Kelime Widget öğeleri oluşturmak için kullanılacak"
 
@@ -792,23 +793,23 @@ msgstr "Kelime Widget öğeleri oluşturmak için kullanılacak"
 msgid "Widget position in page"
 msgstr "Sayfasında Widget pozisyonu"
 
-#: ../../facetednavigation/browser/template/configure.pt:149
+#: ../../facetednavigation/browser/template/configure.pt:147
 msgid "Widget type"
 msgstr "Widget tipi"
 
-#: ../../facetednavigation/widgets/debug/widget.py:22
+#: ../../facetednavigation/widgets/debug/widget.py:23
 msgid "Widget will be visible only for selected user"
 msgstr "Widget yalnızca seçilen kullanıcı için görünür olacaktır"
 
-#: ../../facetednavigation/widgets/date/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:27
 msgid "Yesterday"
 msgstr "Dün"
 
-#: ../../facetednavigation/widgets/text/widget.pt:30
+#: ../../facetednavigation/widgets/text/widget.pt:31
 msgid "all items"
 msgstr "tüm öğeler"
 
-#: ../../facetednavigation/widgets/text/widget.pt:38
+#: ../../facetednavigation/widgets/text/widget.pt:40
 msgid "in current results"
 msgstr "Mevcut sonuçlar"
 

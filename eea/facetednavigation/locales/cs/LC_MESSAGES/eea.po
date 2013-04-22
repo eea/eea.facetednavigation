@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-07 22:17+0000\n"
+"POT-Creation-Date: 2013-04-22 07:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,51 +14,51 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../../facetednavigation/widgets/date/widget.py:23
+#: ../../facetednavigation/widgets/date/widget.py:22
 msgid "1 month ago"
 msgstr "1 před měsícem"
 
-#: ../../facetednavigation/widgets/date/widget.py:25
+#: ../../facetednavigation/widgets/date/widget.py:24
 msgid "1 week ago"
 msgstr "Před 1 týdnem"
 
-#: ../../facetednavigation/widgets/date/widget.py:20
+#: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 year ago"
 msgstr "Před 1 rokem"
 
-#: ../../facetednavigation/widgets/date/widget.py:27
+#: ../../facetednavigation/widgets/date/widget.py:26
 msgid "2 days ago"
 msgstr "2 dny"
 
-#: ../../facetednavigation/widgets/date/widget.py:24
+#: ../../facetednavigation/widgets/date/widget.py:23
 msgid "2 weeks ago"
 msgstr "Před 2 týdny"
 
-#: ../../facetednavigation/widgets/date/widget.py:19
+#: ../../facetednavigation/widgets/date/widget.py:18
 msgid "2 years ago"
 msgstr "Před 2 roky"
 
-#: ../../facetednavigation/widgets/date/widget.py:22
+#: ../../facetednavigation/widgets/date/widget.py:21
 msgid "3 months ago"
 msgstr "Před 3 měsíci"
 
-#: ../../facetednavigation/widgets/date/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:25
 msgid "5 days ago"
 msgstr "Před 5 dny"
 
-#: ../../facetednavigation/widgets/date/widget.py:21
+#: ../../facetednavigation/widgets/date/widget.py:20
 msgid "6 months ago"
 msgstr "Před 6 měsíci"
 
-#: ../../facetednavigation/browser/template/configure.pt:70
+#: ../../facetednavigation/browser/template/configure.pt:68
 msgid "Add"
 msgstr "Přidat"
 
-#: ../../facetednavigation/browser/template/configure.pt:26
+#: ../../facetednavigation/browser/template/configure.pt:24
 msgid "Add new filter"
 msgstr "Přidat nový filtr"
 
-#: ../../facetednavigation/browser/template/configure.pt:27
+#: ../../facetednavigation/browser/template/configure.pt:25
 msgid "Add widget"
 msgstr "Přidání widgetu"
 
@@ -66,35 +66,35 @@ msgstr "Přidání widgetu"
 msgid "After query filters"
 msgstr "Po dotazu filtry"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
-#: ../../facetednavigation/widgets/radio/widget.pt:29
-#: ../../facetednavigation/widgets/select/widget.pt:23
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/radio/widget.pt:31
+#: ../../facetednavigation/widgets/select/widget.pt:25
 msgid "All"
 msgstr "Vše"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:69
+#: ../../facetednavigation/widgets/alphabetic/widget.py:52
 msgid "Alphabetic"
 msgstr "Abecední"
 
-#: ../../facetednavigation/browser/template/configure.pt:99
+#: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Jste si jisti, že chcete smazat ${widget} widget?"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:56
-#: ../../facetednavigation/widgets/radio/widget.py:43
-#: ../../facetednavigation/widgets/select/widget.py:40
+#: ../../facetednavigation/widgets/radio/widget.py:42
+#: ../../facetednavigation/widgets/select/widget.py:39
 msgid "Catalog"
 msgstr "Katalog"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/alphabetic/widget.py:30
 #: ../../facetednavigation/widgets/checkbox/widget.py:26
-#: ../../facetednavigation/widgets/date/widget.py:51
+#: ../../facetednavigation/widgets/date/widget.py:50
 msgid "Catalog index"
 msgstr "Katalog index"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/alphabetic/widget.py:31
 #: ../../facetednavigation/widgets/checkbox/widget.py:27
-#: ../../facetednavigation/widgets/date/widget.py:52
+#: ../../facetednavigation/widgets/date/widget.py:51
 msgid "Catalog index to use for search"
 msgstr "Katalog index použít pro vyhledávání"
 
@@ -102,7 +102,7 @@ msgstr "Katalog index použít pro vyhledávání"
 msgid "Catalog query"
 msgstr "Katalog dotaz"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:107
+#: ../../facetednavigation/widgets/checkbox/widget.py:91
 msgid "Checkboxes"
 msgstr "Políčka"
 
@@ -126,11 +126,7 @@ msgstr "Cloud typu"
 msgid "Configuration imported"
 msgstr "Konfigurace dovážené"
 
-#: ../../facetednavigation/browser/template/configure.pt:20
-msgid "Configure faceted navigation"
-msgstr "Konfigurace tváří navigaci"
-
-#: ../../facetednavigation/browser/template/configure.pt:109
+#: ../../facetednavigation/browser/template/configure.pt:107
 msgid "Content listing"
 msgstr "Obsah stránek"
 
@@ -138,9 +134,7 @@ msgstr "Obsah stránek"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Měnit rozsah yearsdisplayed v roce drop-down: buď vzhledem k dnešním roku (-nn: + nn), vzhledem k právě vybrané rok c-nn: C + nn), absolutní (nnnn: nnnn), nebo kombinace z těchto formátů (nnnn:-nn)."
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
-#: ../../facetednavigation/widgets/radio/widget.py:69
+#: ../../facetednavigation/widgets/widget.py:299
 msgid "Count results"
 msgstr "Počítat výsledky"
 
@@ -148,7 +142,7 @@ msgstr "Počítat výsledky"
 msgid "Counters"
 msgstr "Žetony"
 
-#: ../../facetednavigation/browser/template/configure.pt:125
+#: ../../facetednavigation/browser/template/configure.pt:123
 msgid "Criterion details"
 msgstr "Kritérium detaily"
 
@@ -160,7 +154,7 @@ msgstr "Aktuální konfigurace"
 msgid "Cut long phrases to provided number of characters"
 msgstr "Střih dlouhých frází podle počtu znaků"
 
-#: ../../facetednavigation/widgets/date/widget.py:73
+#: ../../facetednavigation/widgets/date/widget.py:72
 msgid "Date"
 msgstr "Datum"
 
@@ -168,7 +162,7 @@ msgstr "Datum"
 msgid "Date range"
 msgstr "Časové období"
 
-#: ../../facetednavigation/widgets/debug/widget.py:32
+#: ../../facetednavigation/widgets/debug/widget.py:33
 msgid "Debugger"
 msgstr "Ladicí program"
 
@@ -176,7 +170,7 @@ msgstr "Ladicí program"
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
 msgstr "Výchozí RozmeziDatumu (např. '2009 / 12/01 => 2009/12/31')"
 
-#: ../../facetednavigation/widgets/date/widget.py:61
+#: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
 msgstr "Výchozí RozmeziDatumu (např. 'dnes-365 => nyní +1', což znamená 'Počínaje jedním rokem až zítra')"
 
@@ -184,11 +178,11 @@ msgstr "Výchozí RozmeziDatumu (např. 'dnes-365 => nyní +1', což znamená 'P
 msgid "Default etag"
 msgstr "Výchozí ETAG"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:96
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 msgid "Default items (one per line)"
 msgstr "Výchozí body (jeden na řádek)"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:57
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
 msgid "Default letter to be selected"
 msgstr "Standardní dopis, které budou vybrány"
 
@@ -196,17 +190,17 @@ msgstr "Standardní dopis, které budou vybrány"
 msgid "Default path to search in (relative to root folder)"
 msgstr "Výchozí cesta pro vyhledávání (v poměru ke kořenové složky)"
 
-#: ../../facetednavigation/widgets/range/widget.py:38
+#: ../../facetednavigation/widgets/range/widget.py:34
 msgid "Default range (e.g. '1 => 3')"
 msgstr "Standardní rozsah (např. '1 => 3')"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:50
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:48
 msgid "Default results per page"
 msgstr "Výchozí výsledků na stránce"
 
-#: ../../facetednavigation/widgets/radio/widget.py:88
-#: ../../facetednavigation/widgets/select/widget.py:73
-#: ../../facetednavigation/widgets/tagscloud/widget.py:163
+#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/tagscloud/widget.py:147
 msgid "Default selected item"
 msgstr "Výchozí vybrané položky"
 
@@ -214,21 +208,22 @@ msgstr "Výchozí vybrané položky"
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Výchozí třídění index (např. 'účinné' a 'efektivní (revers)')"
 
-#: ../../facetednavigation/widgets/text/widget.py:30
+#: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Výchozí řetězec k hledání"
 
-#: ../../facetednavigation/widgets/tal/widget.py:41
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:35
+#: ../../facetednavigation/widgets/tal/widget.py:40
 msgid "Default tal expression for query value"
 msgstr "Výchozí tal výraz pro dotaz hodnoty"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:56
-#: ../../facetednavigation/widgets/checkbox/widget.py:95
-#: ../../facetednavigation/widgets/date/widget.py:60
+#: ../../facetednavigation/widgets/alphabetic/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/date/widget.py:59
 msgid "Default value"
 msgstr "výchozí hodnota"
 
-#: ../../facetednavigation/browser/template/configure.pt:183
+#: ../../facetednavigation/browser/template/configure.pt:181
 msgid "Delete"
 msgstr "Smazat"
 
@@ -244,37 +239,27 @@ msgstr "Zakázat tváří navigaci"
 msgid "Disable faceted search"
 msgstr "Zakázat tváří hledání"
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Disable left portlets"
 msgstr "Zakázat vlevo portlety"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Disable right portlets"
 msgstr "Zakázat správné portlety"
 
-#: ../../facetednavigation/settings/menu.py:91
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Disable smart facets hiding"
 msgstr "Zakázat inteligentní aspekty skrývá"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:80
-#: ../../facetednavigation/widgets/radio/widget.py:70
-#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/widget.py:300
 msgid "Display number of results near each option"
 msgstr "Zobrazí počet výsledků v blízkosti každé volby"
-
-#: ../../facetednavigation/widgets/tagscloud/widget.py:146
-msgid "Display number of results near each tag"
-msgstr "Zobrazí počet výsledků u každé značky"
-
-#: ../../facetednavigation/widgets/alphabetic/widget.py:40
-msgid "Display number of results per letter"
-msgstr "Zobrazení počtu výsledků na dopis"
 
 #: ../../facetednavigation/widgets/widget.py:62
 msgid "Display widget in section"
 msgstr "Zobrazit ovládací prvek v sekci"
 
-#: ../../facetednavigation/browser/template/configure.pt:57
+#: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Zobrazit ovládací prvek v sekci."
 
@@ -286,24 +271,24 @@ msgstr "Povolit tváří navigaci"
 msgid "Enable faceted search"
 msgstr "Povolit hledání tváří"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:16
+#: ../../facetednavigation/widgets/criteria/widget.py:15
 msgid "Enable hide/show criteria"
 msgstr "Povolit skrýt / zobrazit kritéria"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:59
 msgid "Enable left portlets"
 msgstr "Zapnout vlevo portlety"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:74
 msgid "Enable right portlets"
 msgstr "Povolit správné portlety"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:89
 msgid "Enable smart facets hiding"
 msgstr "Povolit inteligentní aspekty skrývá"
 
 #: ../../facetednavigation/widgets/range/widget.pt:28
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:31
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:29
 msgid "End"
 msgstr "Konec"
 
@@ -323,7 +308,7 @@ msgstr "Chybová hodnota:"
 msgid "Etag value"
 msgstr "ETAG hodnotu"
 
-#: ../../facetednavigation/browser/template/configure.pt:88
+#: ../../facetednavigation/browser/template/configure.pt:86
 msgid "Export"
 msgstr "Exportovat"
 
@@ -331,27 +316,27 @@ msgstr "Exportovat"
 msgid "Faceted criteria"
 msgstr "Tváří kritéria"
 
-#: ../../facetednavigation/settings/menu.py:22
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted global settings"
 msgstr "Tváří globální nastavení"
 
-#: ../../facetednavigation/subtypes/subtyper.py:135
+#: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
 msgstr "Tváří navigace vypnuté"
 
-#: ../../facetednavigation/subtypes/subtyper.py:124
+#: ../../facetednavigation/subtypes/subtyper.py:132
 msgid "Faceted navigation enabled"
 msgstr "Tváří navigace povoleny"
 
-#: ../../facetednavigation/subtypes/subtyper.py:169
+#: ../../facetednavigation/subtypes/subtyper.py:175
 msgid "Faceted search disabled"
 msgstr "Tváří hledání vypnuté"
 
-#: ../../facetednavigation/subtypes/subtyper.py:161
+#: ../../facetednavigation/subtypes/subtyper.py:167
 msgid "Faceted search enabled"
 msgstr "Tváří hledání povoleny"
 
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:20
 msgid "Faceted settings"
 msgstr "Nastavení tváří"
 
@@ -371,7 +356,7 @@ msgstr "Filtr vymazány"
 msgid "Filter from vocabulary"
 msgstr "Filtr ze slovníku"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:29
+#: ../../facetednavigation/widgets/criteria/widget.py:28
 msgid "Filters"
 msgstr "filtry"
 
@@ -383,13 +368,13 @@ msgstr "Filtry vymazány"
 msgid "Friendly name"
 msgstr "přátelské"
 
-#: ../../facetednavigation/widgets/date/widget.py:125
+#: ../../facetednavigation/widgets/date/widget.py:124
 msgid "Future"
 msgstr "budoucí"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
-#: ../../facetednavigation/widgets/radio/widget.py:44
-#: ../../facetednavigation/widgets/select/widget.py:41
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Získejte jedinečných hodnot v katalogu jako alternativu pro slovníku"
 
@@ -401,9 +386,7 @@ msgstr "Skrytý"
 msgid "Hide filters"
 msgstr "Skrýt filtry"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:46
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
-#: ../../facetednavigation/widgets/radio/widget.py:77
+#: ../../facetednavigation/widgets/widget.py:313
 msgid "Hide items with zero results"
 msgstr "Skrýt položky s nulovým výsledkům"
 
@@ -411,15 +394,19 @@ msgstr "Skrýt položky s nulovým výsledkům"
 msgid "Hide widget"
 msgstr "Skrýt widgetu"
 
-#: ../../facetednavigation/browser/template/configure.pt:85
+#: ../../facetednavigation/widgets/text/widget.py:39
+msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
 msgstr "Import"
 
-#: ../../facetednavigation/browser/template/configure.pt:77
+#: ../../facetednavigation/browser/template/configure.pt:75
 msgid "Import - Export configuration"
 msgstr "Import - export konfigurace"
 
-#: ../../facetednavigation/browser/template/configure.pt:78
+#: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "Import konfigurace"
 
@@ -444,7 +431,7 @@ msgid "Maximum font-size (px)"
 msgstr "Maximální font-size (px)"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:65
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:52
 #: ../../facetednavigation/widgets/tagscloud/widget.py:61
 msgid "Maximum items"
 msgstr "Maximální položek"
@@ -465,11 +452,11 @@ msgstr "Minimální velikost:"
 msgid "More filters"
 msgstr "Další filtry"
 
-#: ../../facetednavigation/browser/template/configure.pt:166
+#: ../../facetednavigation/browser/template/configure.pt:164
 msgid "Move Down"
 msgstr "Posunout dolů"
 
-#: ../../facetednavigation/browser/template/configure.pt:157
+#: ../../facetednavigation/browser/template/configure.pt:155
 msgid "Move Up"
 msgstr "Posunout nahoru"
 
@@ -481,39 +468,39 @@ msgstr "Navigace js-strom výchozí bod (ve vztahu k webu Plone např.:. SITE / 
 msgid "Navigation tree theme"
 msgstr "Navigační strom téma"
 
-#: ../../facetednavigation/widgets/date/widget.py:33
+#: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Next 2 days"
 msgstr "Další 2 dny"
 
-#: ../../facetednavigation/widgets/date/widget.py:36
+#: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next 2 weeks"
 msgstr "Příštích 2 týdnech"
 
-#: ../../facetednavigation/widgets/date/widget.py:41
+#: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next 2 years"
 msgstr "Další 2 roky"
 
-#: ../../facetednavigation/widgets/date/widget.py:38
+#: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next 3 months"
 msgstr "Další 3 měsíce"
 
-#: ../../facetednavigation/widgets/date/widget.py:34
+#: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 5 days"
 msgstr "Další 5 dnů"
 
-#: ../../facetednavigation/widgets/date/widget.py:39
+#: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 6 months"
 msgstr "Další 6 měsíců"
 
-#: ../../facetednavigation/widgets/date/widget.py:37
+#: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next month"
 msgstr "Další měsíc"
 
-#: ../../facetednavigation/widgets/date/widget.py:35
+#: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next week"
 msgstr "Příští týden"
 
-#: ../../facetednavigation/widgets/date/widget.py:40
+#: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next year"
 msgstr "Příští rok"
 
@@ -522,7 +509,7 @@ msgid "No action provided"
 msgstr "Žádné opatření za předpokladu,"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:54
+#: ../../facetednavigation/widgets/radio/widget.py:53
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
 msgstr "Počet položek viditelných v prvku"
@@ -531,11 +518,11 @@ msgstr "Počet položek viditelných v prvku"
 msgid "Operator"
 msgstr "Operátor"
 
-#: ../../facetednavigation/browser/template/configure.pt:126
+#: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
 msgstr "Zakázka"
 
-#: ../../facetednavigation/widgets/date/widget.py:112
+#: ../../facetednavigation/widgets/date/widget.py:111
 msgid "Past"
 msgstr "kolem"
 
@@ -555,28 +542,28 @@ msgstr "Plone portlet"
 msgid "Portlet macro"
 msgstr "Portlet makro"
 
-#: ../../facetednavigation/settings/menu.py:132
+#: ../../facetednavigation/settings/menu.py:131
 msgid "Portlets left column is hidden now"
 msgstr "Portlety levém sloupci se skrývá hned"
 
-#: ../../facetednavigation/settings/menu.py:129
+#: ../../facetednavigation/settings/menu.py:128
 msgid "Portlets left column is visible now"
 msgstr "Portlety levém sloupci je vidět nyní"
 
-#: ../../facetednavigation/settings/menu.py:142
+#: ../../facetednavigation/settings/menu.py:141
 msgid "Portlets right column is hidden now"
 msgstr "Portlety pravý sloupec je skryto hned"
 
-#: ../../facetednavigation/settings/menu.py:139
+#: ../../facetednavigation/settings/menu.py:138
 msgid "Portlets right column is visible now"
 msgstr "Portlety pravém sloupci je vidět nyní"
 
-#: ../../facetednavigation/browser/template/configure.pt:44
+#: ../../facetednavigation/browser/template/configure.pt:42
 #: ../../facetednavigation/widgets/widget.py:52
 msgid "Position"
 msgstr "Pozice"
 
-#: ../../facetednavigation/browser/template/configure.pt:45
+#: ../../facetednavigation/browser/template/configure.pt:43
 msgid "Position of the widget."
 msgstr "Pozice widgetu."
 
@@ -584,11 +571,11 @@ msgstr "Pozice widgetu."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python název závodu, který může vytvořit implementační objekt. To musí určit objekt v modulu s použitím úplné tečkované jméno."
 
-#: ../../facetednavigation/widgets/radio/widget.py:99
+#: ../../facetednavigation/widgets/radio/widget.py:81
 msgid "Radio"
 msgstr "Rádio"
 
-#: ../../facetednavigation/widgets/range/widget.py:49
+#: ../../facetednavigation/widgets/range/widget.py:45
 msgid "Range"
 msgstr "rozsah"
 
@@ -600,19 +587,23 @@ msgstr "Odstranit vše"
 msgid "Remove all filters"
 msgstr "Odstranit všechny filtry"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:61
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:34
+msgid "Results Filter"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:59
 msgid "Results per page"
 msgstr "Počet výsledků na stránce"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:30
 msgid "Results per page ending value"
 msgstr "Výsledky na stránku končící hodnotou"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:21
 msgid "Results per page starting value"
 msgstr "Počet výsledků na stránku výchozí hodnoty"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:41
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:39
 msgid "Results per page step"
 msgstr "Výsledky na stránku krokem"
 
@@ -621,8 +612,8 @@ msgid "Reverse"
 msgstr "vzad"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:72
-#: ../../facetednavigation/widgets/radio/widget.py:61
-#: ../../facetednavigation/widgets/select/widget.py:48
+#: ../../facetednavigation/widgets/radio/widget.py:60
+#: ../../facetednavigation/widgets/select/widget.py:47
 msgid "Reverse options"
 msgstr "Reverzní možnosti"
 
@@ -630,7 +621,7 @@ msgstr "Reverzní možnosti"
 msgid "Root folder"
 msgstr "Kořenová složka"
 
-#: ../../facetednavigation/browser/template/configure.pt:182
+#: ../../facetednavigation/browser/template/configure.pt:180
 msgid "Save"
 msgstr "Uložit"
 
@@ -642,20 +633,24 @@ msgstr "Vyhledávání"
 msgid "Search Depth"
 msgstr "Hloubka vyhledávání"
 
+#: ../../facetednavigation/widgets/text/widget.py:38
+msgid "Search in all elements only"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
 msgid "Search with AND/OR between elements"
 msgstr "Hledat s A / NEBO mezi prvky"
 
-#: ../../facetednavigation/browser/template/configure.pt:56
+#: ../../facetednavigation/browser/template/configure.pt:54
 #: ../../facetednavigation/widgets/widget.py:61
 msgid "Section"
 msgstr "Část"
 
-#: ../../facetednavigation/widgets/select/widget.py:84
+#: ../../facetednavigation/widgets/select/widget.py:67
 msgid "Select"
 msgstr "Výběr"
 
-#: ../../facetednavigation/browser/template/configure.pt:114
+#: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Výběr všech položek"
 
@@ -663,17 +658,21 @@ msgstr "Výběr všech položek"
 msgid "Show filters"
 msgstr "Zobrazit filtry"
 
-#: ../../facetednavigation/settings/menu.py:152
+#: ../../facetednavigation/settings/menu.py:151
 msgid "Smart facets hiding is now disabled"
 msgstr "Inteligentní aspekty skrývání je nyní zakázáno"
 
-#: ../../facetednavigation/settings/menu.py:149
+#: ../../facetednavigation/settings/menu.py:148
 msgid "Smart facets hiding is now enabled"
 msgstr "Inteligentní aspekty skrývání je nyní povoleno"
 
+#: ../../facetednavigation/widgets/widget.py:306
+msgid "Sort by countable"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
-#: ../../facetednavigation/widgets/radio/widget.py:62
-#: ../../facetednavigation/widgets/select/widget.py:49
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Sort options reversed"
 msgstr "Seřadit možnosti zvrátit"
 
@@ -686,7 +685,7 @@ msgid "Sphere"
 msgstr "Koule"
 
 #: ../../facetednavigation/widgets/range/widget.pt:20
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:20
 msgid "Start"
 msgstr "C Start"
 
@@ -694,7 +693,7 @@ msgstr "C Start"
 msgid "Start date"
 msgstr "Datum začátku"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:40
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:38
 msgid "Step"
 msgstr "krok"
 
@@ -702,19 +701,19 @@ msgstr "krok"
 msgid "Sync faceted translations"
 msgstr "Synchronizace ploškované překlady"
 
-#: ../../facetednavigation/widgets/tal/widget.py:61
+#: ../../facetednavigation/widgets/tal/widget.py:60
 msgid "TAL Expression"
 msgstr "TAL Expression"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:174
+#: ../../facetednavigation/widgets/tagscloud/widget.py:158
 msgid "Tags Cloud"
 msgstr "Tagy Cloud"
 
-#: ../../facetednavigation/widgets/tal/widget.py:40
+#: ../../facetednavigation/widgets/tal/widget.py:39
 msgid "Tal Expression"
 msgstr "Tal Expression"
 
-#: ../../facetednavigation/widgets/text/widget.py:41
+#: ../../facetednavigation/widgets/text/widget.py:50
 msgid "Text field"
 msgstr "Textové pole"
 
@@ -722,9 +721,7 @@ msgstr "Textové pole"
 msgid "Theme to be used with this widget"
 msgstr "Téma pro použití s tímto widgetu"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:47
-#: ../../facetednavigation/widgets/checkbox/widget.py:87
-#: ../../facetednavigation/widgets/radio/widget.py:78
+#: ../../facetednavigation/widgets/widget.py:314
 msgid "This option works only if 'count results' is enabled"
 msgstr "Tato možnost funguje pouze tehdy, pokud se sčítají výsledky je povolena"
 
@@ -740,15 +737,15 @@ msgstr "Tento widget bude ignorován v režimu prohlížení, jak došlo k chyb�
 msgid "Title for widget to display in view page"
 msgstr "Název pro ovládací prvek se zobrazí v náhledu stránky"
 
-#: ../../facetednavigation/widgets/date/widget.py:119
+#: ../../facetednavigation/widgets/date/widget.py:118
 msgid "Today"
 msgstr "dnes"
 
-#: ../../facetednavigation/widgets/date/widget.py:32
+#: ../../facetednavigation/widgets/date/widget.py:31
 msgid "Tomorrow"
 msgstr "zítra"
 
-#: ../../facetednavigation/browser/template/configure.pt:32
+#: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr "Ty"
 
@@ -756,7 +753,7 @@ msgstr "Ty"
 msgid "Type of the cloud"
 msgstr "Typ mraku"
 
-#: ../../facetednavigation/browser/template/configure.pt:33
+#: ../../facetednavigation/browser/template/configure.pt:31
 msgid "Type of the widget."
 msgstr "Typ ovládacího prvku."
 
@@ -764,17 +761,21 @@ msgstr "Typ ovládacího prvku."
 msgid "UI Calendar years range"
 msgstr "UI Kalendář let pohybuje"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:17
+#: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Zrušte zaškrtnutí tohoto políčka, pokud nechcete zobrazit / skrýt kritéria mají povoleno na tomto prvku"
 
-#: ../../facetednavigation/widgets/debug/widget.py:21
+#: ../../facetednavigation/widgets/widget.py:307
+msgid "Use the results counter for sorting"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Visible to"
 msgstr "Viditelné"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:47
-#: ../../facetednavigation/widgets/radio/widget.py:33
-#: ../../facetednavigation/widgets/select/widget.py:31
+#: ../../facetednavigation/widgets/radio/widget.py:32
+#: ../../facetednavigation/widgets/select/widget.py:30
 msgid "Vocabulary"
 msgstr "Slovník"
 
@@ -783,8 +784,8 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "Slovník použít k filtrování kritéria třídění. Nechte prázdné pro třídícího kritéria."
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
-#: ../../facetednavigation/widgets/radio/widget.py:34
-#: ../../facetednavigation/widgets/select/widget.py:32
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary to use to render widget items"
 msgstr "Slovník slouží k vykreslení widget položky"
 
@@ -792,23 +793,23 @@ msgstr "Slovník slouží k vykreslení widget položky"
 msgid "Widget position in page"
 msgstr "Widget pozice ve straně"
 
-#: ../../facetednavigation/browser/template/configure.pt:149
+#: ../../facetednavigation/browser/template/configure.pt:147
 msgid "Widget type"
 msgstr "Widget typu"
 
-#: ../../facetednavigation/widgets/debug/widget.py:22
+#: ../../facetednavigation/widgets/debug/widget.py:23
 msgid "Widget will be visible only for selected user"
 msgstr "Widget bude viditelná pouze pro vybrané uživatele"
 
-#: ../../facetednavigation/widgets/date/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:27
 msgid "Yesterday"
 msgstr "včera"
 
-#: ../../facetednavigation/widgets/text/widget.pt:30
+#: ../../facetednavigation/widgets/text/widget.pt:31
 msgid "all items"
 msgstr "všechny položky"
 
-#: ../../facetednavigation/widgets/text/widget.pt:38
+#: ../../facetednavigation/widgets/text/widget.pt:40
 msgid "in current results"
 msgstr "v současných výsledcích"
 

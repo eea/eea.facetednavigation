@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-07 22:17+0000\n"
+"POT-Creation-Date: 2013-04-22 07:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,51 +14,51 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../../facetednavigation/widgets/date/widget.py:23
+#: ../../facetednavigation/widgets/date/widget.py:22
 msgid "1 month ago"
 msgstr "1 hónapja"
 
-#: ../../facetednavigation/widgets/date/widget.py:25
+#: ../../facetednavigation/widgets/date/widget.py:24
 msgid "1 week ago"
 msgstr "1 héttel ezelőtt"
 
-#: ../../facetednavigation/widgets/date/widget.py:20
+#: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 year ago"
 msgstr "1 évvel ezelőtt"
 
-#: ../../facetednavigation/widgets/date/widget.py:27
+#: ../../facetednavigation/widgets/date/widget.py:26
 msgid "2 days ago"
 msgstr "2 napja"
 
-#: ../../facetednavigation/widgets/date/widget.py:24
+#: ../../facetednavigation/widgets/date/widget.py:23
 msgid "2 weeks ago"
 msgstr "2 héttel ezelőtt"
 
-#: ../../facetednavigation/widgets/date/widget.py:19
+#: ../../facetednavigation/widgets/date/widget.py:18
 msgid "2 years ago"
 msgstr "2 évvel ezelőtt"
 
-#: ../../facetednavigation/widgets/date/widget.py:22
+#: ../../facetednavigation/widgets/date/widget.py:21
 msgid "3 months ago"
 msgstr "3 hónappal ezelőtt"
 
-#: ../../facetednavigation/widgets/date/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:25
 msgid "5 days ago"
 msgstr "5 napja"
 
-#: ../../facetednavigation/widgets/date/widget.py:21
+#: ../../facetednavigation/widgets/date/widget.py:20
 msgid "6 months ago"
 msgstr "6 hónappal ezelőtt"
 
-#: ../../facetednavigation/browser/template/configure.pt:70
+#: ../../facetednavigation/browser/template/configure.pt:68
 msgid "Add"
 msgstr "Hozzáadás"
 
-#: ../../facetednavigation/browser/template/configure.pt:26
+#: ../../facetednavigation/browser/template/configure.pt:24
 msgid "Add new filter"
 msgstr "Új szűrő"
 
-#: ../../facetednavigation/browser/template/configure.pt:27
+#: ../../facetednavigation/browser/template/configure.pt:25
 msgid "Add widget"
 msgstr "Új elem"
 
@@ -66,35 +66,35 @@ msgstr "Új elem"
 msgid "After query filters"
 msgstr "Lekérdezés után szűrők"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.pt:21
-#: ../../facetednavigation/widgets/radio/widget.pt:29
-#: ../../facetednavigation/widgets/select/widget.pt:23
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/radio/widget.pt:31
+#: ../../facetednavigation/widgets/select/widget.pt:25
 msgid "All"
 msgstr "mind"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:69
+#: ../../facetednavigation/widgets/alphabetic/widget.py:52
 msgid "Alphabetic"
 msgstr "Betűrendes"
 
-#: ../../facetednavigation/browser/template/configure.pt:99
+#: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Biztos benne, hogy törli ${widget} widget?"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:56
-#: ../../facetednavigation/widgets/radio/widget.py:43
-#: ../../facetednavigation/widgets/select/widget.py:40
+#: ../../facetednavigation/widgets/radio/widget.py:42
+#: ../../facetednavigation/widgets/select/widget.py:39
 msgid "Catalog"
 msgstr "Katalógus"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:32
+#: ../../facetednavigation/widgets/alphabetic/widget.py:30
 #: ../../facetednavigation/widgets/checkbox/widget.py:26
-#: ../../facetednavigation/widgets/date/widget.py:51
+#: ../../facetednavigation/widgets/date/widget.py:50
 msgid "Catalog index"
 msgstr "Katalógus index"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:33
+#: ../../facetednavigation/widgets/alphabetic/widget.py:31
 #: ../../facetednavigation/widgets/checkbox/widget.py:27
-#: ../../facetednavigation/widgets/date/widget.py:52
+#: ../../facetednavigation/widgets/date/widget.py:51
 msgid "Catalog index to use for search"
 msgstr "Katalógus index használata a keresési"
 
@@ -102,7 +102,7 @@ msgstr "Katalógus index használata a keresési"
 msgid "Catalog query"
 msgstr "Katalógus lekérdezés"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:107
+#: ../../facetednavigation/widgets/checkbox/widget.py:91
 msgid "Checkboxes"
 msgstr "Jelölőnégyzetek"
 
@@ -126,11 +126,7 @@ msgstr "Cloud típusú"
 msgid "Configuration imported"
 msgstr "Configuration importált"
 
-#: ../../facetednavigation/browser/template/configure.pt:20
-msgid "Configure faceted navigation"
-msgstr "Konfigurálása sokoldalú navigáció"
-
-#: ../../facetednavigation/browser/template/configure.pt:109
+#: ../../facetednavigation/browser/template/configure.pt:107
 msgid "Content listing"
 msgstr "Tartalom lista"
 
@@ -138,9 +134,7 @@ msgstr "Tartalom lista"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Irányítsd a tartományban yearsdisplayed az év legördülő: vagy képest a mai év (-nn: + nn) képest az aktuális év eredménye (c-nn: c + nn), az abszolút (nnnn: nnnn), vagy ezek kombinációi Ezen formátumok (nnnn:-nn)."
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
-#: ../../facetednavigation/widgets/radio/widget.py:69
+#: ../../facetednavigation/widgets/widget.py:299
 msgid "Count results"
 msgstr "Számlálás eredményeit"
 
@@ -148,7 +142,7 @@ msgstr "Számlálás eredményeit"
 msgid "Counters"
 msgstr "Számlálók"
 
-#: ../../facetednavigation/browser/template/configure.pt:125
+#: ../../facetednavigation/browser/template/configure.pt:123
 msgid "Criterion details"
 msgstr "Kritérium részletek"
 
@@ -160,7 +154,7 @@ msgstr "A jelenlegi konfiguráció"
 msgid "Cut long phrases to provided number of characters"
 msgstr "Vágjuk hosszú mondatokat, feltéve karakterek száma"
 
-#: ../../facetednavigation/widgets/date/widget.py:73
+#: ../../facetednavigation/widgets/date/widget.py:72
 msgid "Date"
 msgstr "Dátum"
 
@@ -168,7 +162,7 @@ msgstr "Dátum"
 msgid "Date range"
 msgstr "Dátumtartomány"
 
-#: ../../facetednavigation/widgets/debug/widget.py:32
+#: ../../facetednavigation/widgets/debug/widget.py:33
 msgid "Debugger"
 msgstr "Debugger"
 
@@ -176,7 +170,7 @@ msgstr "Debugger"
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
 msgstr "Alapértelmezett daterange (pl. '2009 / 12/01 => 2009/12/31 ')"
 
-#: ../../facetednavigation/widgets/date/widget.py:61
+#: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
 msgstr "Alapértelmezett daterange (pl. 'most-365 => most +1' ami azt jelenti, 'egy évvel ezelőtti elindítása holnapig')"
 
@@ -184,11 +178,11 @@ msgstr "Alapértelmezett daterange (pl. 'most-365 => most +1' ami azt jelenti, '
 msgid "Default etag"
 msgstr "Alapértelmezett ETAG"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:96
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 msgid "Default items (one per line)"
 msgstr "Alapértelmezett tételek (soronként)"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:57
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
 msgid "Default letter to be selected"
 msgstr "Alapértelmezett levelet kell választani"
 
@@ -196,17 +190,17 @@ msgstr "Alapértelmezett levelet kell választani"
 msgid "Default path to search in (relative to root folder)"
 msgstr "Alap útvonalat keresni (viszonyítva gyökérkönyvtárában)"
 
-#: ../../facetednavigation/widgets/range/widget.py:38
+#: ../../facetednavigation/widgets/range/widget.py:34
 msgid "Default range (e.g. '1 => 3')"
 msgstr "Alapértelmezett tartomány (pl. '1 => 3')"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:50
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:48
 msgid "Default results per page"
 msgstr "Alapértelmezett találat oldalanként"
 
-#: ../../facetednavigation/widgets/radio/widget.py:88
-#: ../../facetednavigation/widgets/select/widget.py:73
-#: ../../facetednavigation/widgets/tagscloud/widget.py:163
+#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/tagscloud/widget.py:147
 msgid "Default selected item"
 msgstr "Alapértelmezett kiválasztott elem"
 
@@ -214,21 +208,22 @@ msgstr "Alapértelmezett kiválasztott elem"
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Alapértelmezett rendezési index (pl. a 'hatékony' vagy 'effektív (fordított)')"
 
-#: ../../facetednavigation/widgets/text/widget.py:30
+#: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Alapértelmezett karakterlánc keresni"
 
-#: ../../facetednavigation/widgets/tal/widget.py:41
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:35
+#: ../../facetednavigation/widgets/tal/widget.py:40
 msgid "Default tal expression for query value"
 msgstr "Alapértelmezett Tal lekérdezési kifejezés értéke"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:56
-#: ../../facetednavigation/widgets/checkbox/widget.py:95
-#: ../../facetednavigation/widgets/date/widget.py:60
+#: ../../facetednavigation/widgets/alphabetic/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/date/widget.py:59
 msgid "Default value"
 msgstr "Alapértelmezett érték"
 
-#: ../../facetednavigation/browser/template/configure.pt:183
+#: ../../facetednavigation/browser/template/configure.pt:181
 msgid "Delete"
 msgstr "Törlés"
 
@@ -244,37 +239,27 @@ msgstr "Letiltása sokoldalú navigáció"
 msgid "Disable faceted search"
 msgstr "Letiltása sokoldalú keresési"
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Disable left portlets"
 msgstr "Letiltása bal portletek"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Disable right portlets"
 msgstr "Tiltás jobb portletek"
 
-#: ../../facetednavigation/settings/menu.py:91
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Disable smart facets hiding"
 msgstr "Letiltása okos arcát bujkál"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:80
-#: ../../facetednavigation/widgets/radio/widget.py:70
-#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/widget.py:300
 msgid "Display number of results near each option"
 msgstr "Kijelző eredmények száma közel minden lehetőség"
-
-#: ../../facetednavigation/widgets/tagscloud/widget.py:146
-msgid "Display number of results near each tag"
-msgstr "Kijelző eredmények száma közel minden tag"
-
-#: ../../facetednavigation/widgets/alphabetic/widget.py:40
-msgid "Display number of results per letter"
-msgstr "Kijelző eredmények száma levélben"
 
 #: ../../facetednavigation/widgets/widget.py:62
 msgid "Display widget in section"
 msgstr "Kijelző widget rész"
 
-#: ../../facetednavigation/browser/template/configure.pt:57
+#: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Kijelző widgetet részben."
 
@@ -286,24 +271,24 @@ msgstr "Engedélyezze a sokoldalú navigáció"
 msgid "Enable faceted search"
 msgstr "Engedélyezze a sokoldalú keresési"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:16
+#: ../../facetednavigation/widgets/criteria/widget.py:15
 msgid "Enable hide/show criteria"
 msgstr "Engedélyezze elrejtése/megjelenítése kritériumok"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:59
 msgid "Enable left portlets"
 msgstr "Engedélyezze a bal portletek"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:74
 msgid "Enable right portlets"
 msgstr "Engedélyezze a jobb portletek"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:89
 msgid "Enable smart facets hiding"
 msgstr "Engedélyezze okos arcát bujkál"
 
 #: ../../facetednavigation/widgets/range/widget.pt:28
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:31
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:29
 msgid "End"
 msgstr "Vége"
 
@@ -323,7 +308,7 @@ msgstr "Hiba érték:"
 msgid "Etag value"
 msgstr "ETAG érték"
 
-#: ../../facetednavigation/browser/template/configure.pt:88
+#: ../../facetednavigation/browser/template/configure.pt:86
 msgid "Export"
 msgstr "Exportálás"
 
@@ -331,27 +316,27 @@ msgstr "Exportálás"
 msgid "Faceted criteria"
 msgstr "Sokoldalú feltételek"
 
-#: ../../facetednavigation/settings/menu.py:22
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted global settings"
 msgstr "Sokoldalú globális beállítások"
 
-#: ../../facetednavigation/subtypes/subtyper.py:135
+#: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
 msgstr "Sokoldalú navigáció tiltva"
 
-#: ../../facetednavigation/subtypes/subtyper.py:124
+#: ../../facetednavigation/subtypes/subtyper.py:132
 msgid "Faceted navigation enabled"
 msgstr "Sokoldalú navigáció engedélyezve"
 
-#: ../../facetednavigation/subtypes/subtyper.py:169
+#: ../../facetednavigation/subtypes/subtyper.py:175
 msgid "Faceted search disabled"
 msgstr "Sokoldalú keresési tiltva"
 
-#: ../../facetednavigation/subtypes/subtyper.py:161
+#: ../../facetednavigation/subtypes/subtyper.py:167
 msgid "Faceted search enabled"
 msgstr "Sokoldalú keresési engedélyezve"
 
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:20
 msgid "Faceted settings"
 msgstr "Sokoldalú beállításokat"
 
@@ -371,7 +356,7 @@ msgstr "Szűrés törölve"
 msgid "Filter from vocabulary"
 msgstr "Szűrés a szókincs"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:29
+#: ../../facetednavigation/widgets/criteria/widget.py:28
 msgid "Filters"
 msgstr "Szűrés"
 
@@ -383,13 +368,13 @@ msgstr "Szűrés törölve"
 msgid "Friendly name"
 msgstr "Barátságos neve"
 
-#: ../../facetednavigation/widgets/date/widget.py:125
+#: ../../facetednavigation/widgets/date/widget.py:124
 msgid "Future"
 msgstr "Jövő"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
-#: ../../facetednavigation/widgets/radio/widget.py:44
-#: ../../facetednavigation/widgets/select/widget.py:41
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Szerezz egyedi értékeket katalógust alternatívája szókincs"
 
@@ -401,9 +386,7 @@ msgstr "Hidden"
 msgid "Hide filters"
 msgstr "Szűrők elrejtése"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:46
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
-#: ../../facetednavigation/widgets/radio/widget.py:77
+#: ../../facetednavigation/widgets/widget.py:313
 msgid "Hide items with zero results"
 msgstr "Hide tételek nulla eredmény"
 
@@ -411,15 +394,19 @@ msgstr "Hide tételek nulla eredmény"
 msgid "Hide widget"
 msgstr "Hide minialkalmazás"
 
-#: ../../facetednavigation/browser/template/configure.pt:85
+#: ../../facetednavigation/widgets/text/widget.py:39
+msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
 msgstr "Importálás"
 
-#: ../../facetednavigation/browser/template/configure.pt:77
+#: ../../facetednavigation/browser/template/configure.pt:75
 msgid "Import - Export configuration"
 msgstr "Import - Export konfiguráció"
 
-#: ../../facetednavigation/browser/template/configure.pt:78
+#: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "Konfiguráció importálása"
 
@@ -444,7 +431,7 @@ msgid "Maximum font-size (px)"
 msgstr "Maximális font-size (px)"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:65
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:52
 #: ../../facetednavigation/widgets/tagscloud/widget.py:61
 msgid "Maximum items"
 msgstr "Maximális elem"
@@ -465,11 +452,11 @@ msgstr "Minimális méret"
 msgid "More filters"
 msgstr "További szűrők"
 
-#: ../../facetednavigation/browser/template/configure.pt:166
+#: ../../facetednavigation/browser/template/configure.pt:164
 msgid "Move Down"
 msgstr "Le"
 
-#: ../../facetednavigation/browser/template/configure.pt:157
+#: ../../facetednavigation/browser/template/configure.pt:155
 msgid "Move Up"
 msgstr "Fel"
 
@@ -481,39 +468,39 @@ msgstr "Navigációs js-Fa kiindulási pont (relatív a Plone oldalon. Ex: SITE/
 msgid "Navigation tree theme"
 msgstr "Navigációs fa téma"
 
-#: ../../facetednavigation/widgets/date/widget.py:33
+#: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Next 2 days"
 msgstr "Következő 2 nap"
 
-#: ../../facetednavigation/widgets/date/widget.py:36
+#: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next 2 weeks"
 msgstr "Következő 2 hét"
 
-#: ../../facetednavigation/widgets/date/widget.py:41
+#: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next 2 years"
 msgstr "Következő 2 éves"
 
-#: ../../facetednavigation/widgets/date/widget.py:38
+#: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next 3 months"
 msgstr "Következő 3 hónap"
 
-#: ../../facetednavigation/widgets/date/widget.py:34
+#: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 5 days"
 msgstr "Következő 5 napra"
 
-#: ../../facetednavigation/widgets/date/widget.py:39
+#: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 6 months"
 msgstr "Következő 6 hónap"
 
-#: ../../facetednavigation/widgets/date/widget.py:37
+#: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next month"
 msgstr "Következő hónap"
 
-#: ../../facetednavigation/widgets/date/widget.py:35
+#: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next week"
 msgstr "Jövő héten"
 
-#: ../../facetednavigation/widgets/date/widget.py:40
+#: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next year"
 msgstr "Jövőre"
 
@@ -522,7 +509,7 @@ msgid "No action provided"
 msgstr "Nincs előírt intézkedéseket"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:54
+#: ../../facetednavigation/widgets/radio/widget.py:53
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
 msgstr "Tételek száma látható widget"
@@ -531,11 +518,11 @@ msgstr "Tételek száma látható widget"
 msgid "Operator"
 msgstr "Operátor"
 
-#: ../../facetednavigation/browser/template/configure.pt:126
+#: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
 msgstr "R"
 
-#: ../../facetednavigation/widgets/date/widget.py:112
+#: ../../facetednavigation/widgets/date/widget.py:111
 msgid "Past"
 msgstr "ezután"
 
@@ -555,28 +542,28 @@ msgstr "Plone portlet"
 msgid "Portlet macro"
 msgstr "Portlet makró"
 
-#: ../../facetednavigation/settings/menu.py:132
+#: ../../facetednavigation/settings/menu.py:131
 msgid "Portlets left column is hidden now"
 msgstr "Portletek bal oldali oszlop rejtve van most"
 
-#: ../../facetednavigation/settings/menu.py:129
+#: ../../facetednavigation/settings/menu.py:128
 msgid "Portlets left column is visible now"
 msgstr "Portletek bal oldali oszlopban látható most"
 
-#: ../../facetednavigation/settings/menu.py:142
+#: ../../facetednavigation/settings/menu.py:141
 msgid "Portlets right column is hidden now"
 msgstr "Portletek jobb oszlop rejtve van most"
 
-#: ../../facetednavigation/settings/menu.py:139
+#: ../../facetednavigation/settings/menu.py:138
 msgid "Portlets right column is visible now"
 msgstr "Portletek jobb oldali oszlopban látható most"
 
-#: ../../facetednavigation/browser/template/configure.pt:44
+#: ../../facetednavigation/browser/template/configure.pt:42
 #: ../../facetednavigation/widgets/widget.py:52
 msgid "Position"
 msgstr "Position"
 
-#: ../../facetednavigation/browser/template/configure.pt:45
+#: ../../facetednavigation/browser/template/configure.pt:43
 msgid "Position of the widget."
 msgstr "Pozíció a widget."
 
@@ -584,11 +571,11 @@ msgstr "Pozíció a widget."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python nevét a gyár, amely képes létrehozni a végrehajtás objektumot. Ez kell azonosítani egy objektumot Egy modul teljes nevét pontozott."
 
-#: ../../facetednavigation/widgets/radio/widget.py:99
+#: ../../facetednavigation/widgets/radio/widget.py:81
 msgid "Radio"
 msgstr "Rádió"
 
-#: ../../facetednavigation/widgets/range/widget.py:49
+#: ../../facetednavigation/widgets/range/widget.py:45
 msgid "Range"
 msgstr "Range"
 
@@ -600,19 +587,23 @@ msgstr "Távolítson el minden"
 msgid "Remove all filters"
 msgstr "Összes szűrő törlése"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:61
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:34
+msgid "Results Filter"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:59
 msgid "Results per page"
 msgstr "Találatok egy oldalon"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:32
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:30
 msgid "Results per page ending value"
 msgstr "Eredmények oldalanként végződő értéket"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:23
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:21
 msgid "Results per page starting value"
 msgstr "Eredmények oldalanként kezdő értéke"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:41
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:39
 msgid "Results per page step"
 msgstr "Eredmények oldalanként lépés"
 
@@ -621,8 +612,8 @@ msgid "Reverse"
 msgstr "Fordított"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:72
-#: ../../facetednavigation/widgets/radio/widget.py:61
-#: ../../facetednavigation/widgets/select/widget.py:48
+#: ../../facetednavigation/widgets/radio/widget.py:60
+#: ../../facetednavigation/widgets/select/widget.py:47
 msgid "Reverse options"
 msgstr "Fordított lehetőségek"
 
@@ -630,7 +621,7 @@ msgstr "Fordított lehetőségek"
 msgid "Root folder"
 msgstr "Gyökérmappa"
 
-#: ../../facetednavigation/browser/template/configure.pt:182
+#: ../../facetednavigation/browser/template/configure.pt:180
 msgid "Save"
 msgstr "Mentés"
 
@@ -642,20 +633,24 @@ msgstr "Keresés"
 msgid "Search Depth"
 msgstr "Keresés mélysége"
 
+#: ../../facetednavigation/widgets/text/widget.py:38
+msgid "Search in all elements only"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
 msgid "Search with AND/OR between elements"
 msgstr "Keresés az ÉS/VAGY elemek közötti"
 
-#: ../../facetednavigation/browser/template/configure.pt:56
+#: ../../facetednavigation/browser/template/configure.pt:54
 #: ../../facetednavigation/widgets/widget.py:61
 msgid "Section"
 msgstr "Section"
 
-#: ../../facetednavigation/widgets/select/widget.py:84
+#: ../../facetednavigation/widgets/select/widget.py:67
 msgid "Select"
 msgstr "Válaszon"
 
-#: ../../facetednavigation/browser/template/configure.pt:114
+#: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Minden elem kijelölése"
 
@@ -663,17 +658,21 @@ msgstr "Minden elem kijelölése"
 msgid "Show filters"
 msgstr "Mutasd szűrők"
 
-#: ../../facetednavigation/settings/menu.py:152
+#: ../../facetednavigation/settings/menu.py:151
 msgid "Smart facets hiding is now disabled"
 msgstr "Okos arcát bujkál most ki van kapcsolva"
 
-#: ../../facetednavigation/settings/menu.py:149
+#: ../../facetednavigation/settings/menu.py:148
 msgid "Smart facets hiding is now enabled"
 msgstr "Okos arcát bujkál most engedélyezve van"
 
+#: ../../facetednavigation/widgets/widget.py:306
+msgid "Sort by countable"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:73
-#: ../../facetednavigation/widgets/radio/widget.py:62
-#: ../../facetednavigation/widgets/select/widget.py:49
+#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Sort options reversed"
 msgstr "Rendezési beállítások fordított"
 
@@ -686,7 +685,7 @@ msgid "Sphere"
 msgstr "Gömb"
 
 #: ../../facetednavigation/widgets/range/widget.pt:20
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:22
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:20
 msgid "Start"
 msgstr "Start "
 
@@ -694,7 +693,7 @@ msgstr "Start "
 msgid "Start date"
 msgstr "Kezdési időpont"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:40
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:38
 msgid "Step"
 msgstr "Lépések"
 
@@ -702,19 +701,19 @@ msgstr "Lépések"
 msgid "Sync faceted translations"
 msgstr "Szinkronizálás sokoldalú fordítások"
 
-#: ../../facetednavigation/widgets/tal/widget.py:61
+#: ../../facetednavigation/widgets/tal/widget.py:60
 msgid "TAL Expression"
 msgstr "TAL Expression"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:174
+#: ../../facetednavigation/widgets/tagscloud/widget.py:158
 msgid "Tags Cloud"
 msgstr "Tags Cloud"
 
-#: ../../facetednavigation/widgets/tal/widget.py:40
+#: ../../facetednavigation/widgets/tal/widget.py:39
 msgid "Tal Expression"
 msgstr "Tal Expression"
 
-#: ../../facetednavigation/widgets/text/widget.py:41
+#: ../../facetednavigation/widgets/text/widget.py:50
 msgid "Text field"
 msgstr "Szövegmező"
 
@@ -722,9 +721,7 @@ msgstr "Szövegmező"
 msgid "Theme to be used with this widget"
 msgstr "Theme kell használni ezt a widgetet"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:47
-#: ../../facetednavigation/widgets/checkbox/widget.py:87
-#: ../../facetednavigation/widgets/radio/widget.py:78
+#: ../../facetednavigation/widgets/widget.py:314
 msgid "This option works only if 'count results' is enabled"
 msgstr "Ez az opció csak akkor működik, ha a 'számlálás eredményeit' engedélyezve van"
 
@@ -740,15 +737,15 @@ msgstr "Ez a widget figyelmen kívül hagyja a Nézet módban, mint egy hiba tö
 msgid "Title for widget to display in view page"
 msgstr "Címet widgetet megjeleníteni tekintettel oldalon"
 
-#: ../../facetednavigation/widgets/date/widget.py:119
+#: ../../facetednavigation/widgets/date/widget.py:118
 msgid "Today"
 msgstr "ma"
 
-#: ../../facetednavigation/widgets/date/widget.py:32
+#: ../../facetednavigation/widgets/date/widget.py:31
 msgid "Tomorrow"
 msgstr "Holnap"
 
-#: ../../facetednavigation/browser/template/configure.pt:32
+#: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr "Type"
 
@@ -756,7 +753,7 @@ msgstr "Type"
 msgid "Type of the cloud"
 msgstr "Típusa a felhő"
 
-#: ../../facetednavigation/browser/template/configure.pt:33
+#: ../../facetednavigation/browser/template/configure.pt:31
 msgid "Type of the widget."
 msgstr "Írja be a widget."
 
@@ -764,17 +761,21 @@ msgstr "Írja be a widget."
 msgid "UI Calendar years range"
 msgstr "UI naptári évig terjedhet"
 
-#: ../../facetednavigation/widgets/criteria/widget.py:17
+#: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Törölje ezt a rovatot, ha nem akarjuk elrejteni / show kritériumok szolgáltatás bekapcsolt, ez a widget"
 
-#: ../../facetednavigation/widgets/debug/widget.py:21
+#: ../../facetednavigation/widgets/widget.py:307
+msgid "Use the results counter for sorting"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Visible to"
 msgstr "Látható, hogy"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:47
-#: ../../facetednavigation/widgets/radio/widget.py:33
-#: ../../facetednavigation/widgets/select/widget.py:31
+#: ../../facetednavigation/widgets/radio/widget.py:32
+#: ../../facetednavigation/widgets/select/widget.py:30
 msgid "Vocabulary"
 msgstr "Szókincs"
 
@@ -783,8 +784,8 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "Szókincset használni, hogy kiszűrje rendezési feltételeket. Hagyja üresen az alapértelmezett rendezési feltételeket."
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
-#: ../../facetednavigation/widgets/radio/widget.py:34
-#: ../../facetednavigation/widgets/select/widget.py:32
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary to use to render widget items"
 msgstr "Szókincset használni, hogy tegyék felületi elemek"
 
@@ -792,23 +793,23 @@ msgstr "Szókincset használni, hogy tegyék felületi elemek"
 msgid "Widget position in page"
 msgstr "Widget pozíció oldalon"
 
-#: ../../facetednavigation/browser/template/configure.pt:149
+#: ../../facetednavigation/browser/template/configure.pt:147
 msgid "Widget type"
 msgstr "Widget típus"
 
-#: ../../facetednavigation/widgets/debug/widget.py:22
+#: ../../facetednavigation/widgets/debug/widget.py:23
 msgid "Widget will be visible only for selected user"
 msgstr "Widget lesz látható, csak a kiválasztott felhasználónak"
 
-#: ../../facetednavigation/widgets/date/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:27
 msgid "Yesterday"
 msgstr "tegnap"
 
-#: ../../facetednavigation/widgets/text/widget.pt:30
+#: ../../facetednavigation/widgets/text/widget.pt:31
 msgid "all items"
 msgstr "Az összes tétel"
 
-#: ../../facetednavigation/widgets/text/widget.pt:38
+#: ../../facetednavigation/widgets/text/widget.pt:40
 msgid "in current results"
 msgstr "A jelenlegi eredmények"
 
