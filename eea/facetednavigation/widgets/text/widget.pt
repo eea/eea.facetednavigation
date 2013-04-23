@@ -8,11 +8,15 @@
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
 
-<fieldset class="widget-fieldset">
-  <legend tal:define="title python:view.data.get('title', '')" tal:content="
+<fieldset class="widget-fieldset"
+  tal:define="title python:view.data.get('title', '')">
+  <legend tal:content="
     python:view.translate(title)" i18n:translate="">Text Widget</legend>
   <form action="." method="get"
     tal:on-error="structure python:error_view(error=error, cid=wid)">
+  <label class="text-field"
+    tal:attributes="for wid"
+    tal:content="python:view.translate(title)" />
   <input type="text" tal:attributes="
     name string:${wid};
     id string:${wid};

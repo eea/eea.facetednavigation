@@ -15,4 +15,9 @@
     file="./edit.js"
    />
 
+  <browser:resource
+    name="eea.facetednavigation.widgets.text.view.css"
+    file="./view.css"
+   />
+
 </configure>

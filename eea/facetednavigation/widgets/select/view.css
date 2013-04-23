@@ -6,7 +6,7 @@
   display: none;
 }
 
-.faceted-select-widget label {
+.faceted-select-widget label.select-field {
   position:absolute;
   left:-10000px;
   top:auto;
