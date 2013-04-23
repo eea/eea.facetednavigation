@@ -21,6 +21,7 @@
 
 <tal:select define="vocabulary python:view.vocabulary()"
   condition="vocabulary">
+  <label tal:attributes="for wid">Foobar</label>
   <select tal:attributes="name wid; id wid" class="faceted_select">
     <option title="All" value=""
       i18n:attributes="title" i18n:translate="">All</option>
