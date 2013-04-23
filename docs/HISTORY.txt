@@ -4,6 +4,12 @@ Changelog
 5.6-dev - (unreleased)
 ----------------------
 
+* Fix: Prevent whole select form from appearing if vocal is empty
+  [davismr]
+
+* Fix: Add labels for select and text field, fixes issues 29 and 30
+  [davismr]
+
 * Fix: text widget input immediately gets value set in the url as input value.
   [thomasdesvenain]
 
