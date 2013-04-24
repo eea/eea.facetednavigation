@@ -188,8 +188,8 @@ Known bugs and ongoing development
 ==================================
 Bugs and new features are entered on our Trac server at EEA.
 
-- `open bugs / tasks <http://svn.eionet.europa.eu/projects/Zope/query?status=assigned&status=new&status=reopened&component=Faceted+navigation&order=priority&col=id&col=summary&col=component&col=status&col=type&col=priority&col=milestone>`_
-- `complete list of bugs / features including fixed and open <http://svn.eionet.europa.eu/projects/Zope/query?status=assigned&status=closed&status=new&status=reopened&component=Faceted+navigation&order=priority&col=id&col=summary&col=component&col=status&col=type&col=priority&col=milestone>`_
+- `open bugs / tasks <http://taskman.eionet.europa.eu/projects/zope/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=category_id&op%5Bcategory_id%5D=%3D&v%5Bcategory_id%5D%5B%5D=120&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=1&v%5Btracker_id%5D%5B%5D=4&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=tracker&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=done_ratio&c%5B%5D=fixed_version&c%5B%5D=project&c%5B%5D=category&c%5B%5D=parent&c%5B%5D=author&c%5B%5D=updated_on&c%5B%5D=start_date&c%5B%5D=due_date&c%5B%5D=estimated_hours&c%5B%5D=created_on&c%5B%5D=closed_on&c%5B%5D=relations&c%5B%5D=cf_4&group_by=>`_
+- `complete list of bugs / features including fixed and open <http://taskman.eionet.europa.eu/projects/zope/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=category_id&op%5Bcategory_id%5D=%3D&v%5Bcategory_id%5D%5B%5D=120&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=2&v%5Btracker_id%5D%5B%5D=1&v%5Btracker_id%5D%5B%5D=4&f%5B%5D=&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=tracker&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=done_ratio&c%5B%5D=fixed_version&c%5B%5D=project&c%5B%5D=category&c%5B%5D=parent&c%5B%5D=author&c%5B%5D=updated_on&c%5B%5D=start_date&c%5B%5D=due_date&c%5B%5D=estimated_hours&c%5B%5D=created_on&c%5B%5D=closed_on&c%5B%5D=relations&c%5B%5D=cf_4&group_by=>`_
 
 
 Copyright and license
