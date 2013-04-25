@@ -3,7 +3,9 @@ Changelog
 
 5.6-dev - (unreleased)
 ----------------------
-* Change: changed links for open and closed issues for facetednavigation to 
+* Change: Added id to <li> in checkbox widget.
+  [cedricmessiant]
+* Change: changed links for open and closed issues for facetednavigation to
   point to taskman
   [ichim-david]
 * Fix: Prevent whole select form from appearing if vocal is empty
