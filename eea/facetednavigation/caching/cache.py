@@ -1,7 +1,7 @@
 """ Caching
 """
 try:
-    from lovely.memcached import event
+    from eea.cache import event
     InvalidateCacheEvent = event.InvalidateCacheEvent
 except ImportError:
     from eea.facetednavigation.caching.nocache import InvalidateCacheEvent

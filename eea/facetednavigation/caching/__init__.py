@@ -4,8 +4,7 @@ from eea.facetednavigation.caching.cache import cacheKeyFacetedNavigation
 from eea.facetednavigation.caching.cache import cacheCounterKeyFacetedNavigation
 from eea.facetednavigation.caching.cache import cacheTreeKeyFacetedNavigation
 try:
-    from eea.cache import cache
-    from lovely.memcached import event
+    from eea.cache import cache, event
     ramcache = cache
     InvalidateCacheEvent = event.InvalidateCacheEvent
 except ImportError:

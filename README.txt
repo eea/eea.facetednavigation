@@ -116,7 +116,6 @@ addons:
 * Cache (memcache)
 
   - plone.memoize
-  - lovely.memcached
   - eea.cache
 
 * Relations

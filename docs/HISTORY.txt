@@ -3,6 +3,8 @@ Changelog
 
 5.6-dev - (unreleased)
 ----------------------
+* Feature: Removed lovely.memcached dependency
+  [voineali refs #14343]
 * Change: Added id to <li> in checkbox widget.
   [cedricmessiant]
 * Change: changed links for open and closed issues for facetednavigation to
