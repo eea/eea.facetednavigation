@@ -27,8 +27,9 @@
         term_label python:view.translate(term_label);
         wbr_term_label python:view.word_break(term_label);
         chbox_id string:${wid}_${term_id};
-        chbox_id python:view.cleanup(chbox_id);"
-        tal:attributes="id term_id"
+        chbox_id python:view.cleanup(chbox_id);
+        option_id string:${wid}_option_${term_id};"
+        tal:attributes="id option_id"
         >
         <input type="checkbox" class="faceted-noborder" tal:attributes="
           checked python:view.selected(term_id);
