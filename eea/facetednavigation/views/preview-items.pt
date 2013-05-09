@@ -17,7 +17,7 @@
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
         <div class="eea-preview-items">
-          <tal:entries repeat="brain folderContents">
+          <tal:entries repeat="brain batch">
             <tal:entry
               define="doc brain/getObject|nothing"
               condition="exists:doc/@@faceted-preview-item"

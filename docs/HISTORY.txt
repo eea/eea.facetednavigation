@@ -3,6 +3,10 @@ Changelog
 
 5.6-dev - (unreleased)
 ----------------------
+* Fix: Iterate on batch instead of folderContents in preview-items.pt
+  It previously loaded all objects instead of the only first 100 when no
+  criterion was given.
+  [vincentfretin]
 * Feature: Removed lovely.memcached dependency
   [voineali refs #14343]
 * Change: Added id to <li> in checkbox widget.
