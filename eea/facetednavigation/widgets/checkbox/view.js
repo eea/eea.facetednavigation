@@ -125,6 +125,7 @@ Faceted.CheckboxesWidget.prototype = {
     });
 
     var html = jQuery('<dt>');
+    html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
     html.append('<span>' + this.title + '</span>');
     return html;
@@ -137,6 +138,7 @@ Faceted.CheckboxesWidget.prototype = {
 
     var widget = this;
     var html = jQuery('<dd>');
+    html.attr('id', 'criteria_' + this.wid + '_entries');
 
     widget.selected.each(function(i){
       var element = jQuery(this);

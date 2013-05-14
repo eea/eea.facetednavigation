@@ -67,8 +67,8 @@ Faceted.TagsCloudWidget.prototype = {
     var sizemax = jQuery('#' + this.wid + '-sizemax', this.widget).text();
     sizemax = parseInt(sizemax, 10);
     sizemax = sizemax ? sizemax : 20;
-    var colormin = jQuery('#' + this.wid + '-colormin', this.widget).text(); 
-    var colormax = jQuery('#' + this.wid + '-colormax', this.widget).text(); 
+    var colormin = jQuery('#' + this.wid + '-colormin', this.widget).text();
+    var colormax = jQuery('#' + this.wid + '-colormax', this.widget).text();
     var height = jQuery('#' + this.wid + '-height', this.widget).text();
     height = parseInt(height, 10);
     height = height ? height : 200;
@@ -78,8 +78,8 @@ Faceted.TagsCloudWidget.prototype = {
       sizemin: sizemin,
       sizemax: sizemax,
       height: height,
-      colormin: colormin, 
-      colormax: colormax 
+      colormin: colormin,
+      colormax: colormax
     };
     this.update();
   },
@@ -166,6 +166,7 @@ Faceted.TagsCloudWidget.prototype = {
     });
 
     var html = jQuery('<dt>');
+    html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
     html.append('<span>' + this.title + '</span>');
     return html;
@@ -188,6 +189,7 @@ Faceted.TagsCloudWidget.prototype = {
     });
 
     var html = jQuery('<dd>');
+    html.attr('id', 'criteria_' + this.wid + '_entries');
     html.append(link);
     html.append('<span>' + label + '</span>');
     return html;

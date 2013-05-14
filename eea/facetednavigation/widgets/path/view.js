@@ -93,6 +93,7 @@ Faceted.PathWidget.prototype = {
     });
 
     var html = jQuery('<dt>');
+    html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
     html.append('<span>' + this.title + '</span>');
     return html;

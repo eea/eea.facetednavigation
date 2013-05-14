@@ -3,6 +3,8 @@ Changelog
 
 5.6-dev - (unreleased)
 ----------------------
+* Add ids to criteria filtering entries.
+  [thomasdesvenain]
 * Fix: Iterate on batch instead of folderContents in preview-items.pt
   It previously loaded all objects instead of the only first 100 when no
   criterion was given.

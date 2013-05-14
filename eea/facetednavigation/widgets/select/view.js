@@ -125,6 +125,7 @@ Faceted.SelectWidget.prototype = {
     });
 
     var html = jQuery('<dt>');
+    html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
     html.append('<span>' + this.title + '</span>');
     return html;
@@ -137,6 +138,7 @@ Faceted.SelectWidget.prototype = {
 
     var widget = this;
     var html = jQuery('<dd>');
+    html.attr('id', 'criteria_' + this.wid + '_entries');
     var element = jQuery(this.selected);
     var value = element.val();
     var label = element.attr('title');

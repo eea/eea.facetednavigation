@@ -134,6 +134,7 @@ Faceted.RadioWidget.prototype = {
     });
 
     var html = jQuery('<dt>');
+    html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
     html.append('<span>' + this.title + '</span>');
     return html;
@@ -146,6 +147,7 @@ Faceted.RadioWidget.prototype = {
 
     var widget = this;
     var html = jQuery('<dd>');
+    html.attr('id', 'criteria_' + this.wid + '_entries');
     var element = jQuery(this.selected);
     var id = element.attr('id');
     var label = jQuery('label[for=' + id + ']');
