@@ -169,7 +169,7 @@ Faceted.DateRangeWidget.prototype = {
     var start_date = new Date(start.replace(/-/g, '/'));
     var end_date = new Date(end.replace(/-/g, '/'));
 
-    var label = start_date.toDateString() + ' - ' + end_date.toDateString();
+    var label = this.criteria_label(start_date, end_date);
     var link = jQuery('<a href="#">[X]</a>');
 
     link.attr('id', 'criteria_' + this.wid + '_');
@@ -182,6 +182,10 @@ Faceted.DateRangeWidget.prototype = {
     html.append('<span>' + label + '</span>');
 
     return html;
+  },
+
+  criterial_label: function(start_date, end_date){
+	  return start_date.toDateString() + ' - ' + end_date.toDateString();
   },
 
   criteria_remove: function(){
