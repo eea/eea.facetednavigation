@@ -4,10 +4,11 @@ Changelog
 5.7-dev - (unreleased)
 ----------------------
 
+* Criteria entries are each in a span container.
+
 5.6 - (2013-05-20)
 ------------------
 * Add ids to criteria filtering entries.
-  Checkbox criteria entries are each in a span container.
   [thomasdesvenain]
 * Fix: Iterate on batch instead of folderContents in preview-items.pt
   It previously loaded all objects instead of the only first 100 when no

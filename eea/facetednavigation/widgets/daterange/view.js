@@ -178,9 +178,10 @@ Faceted.DateRangeWidget.prototype = {
       widget.criteria_remove();
       return false;
     });
-    html.append(link);
-    html.append('<span>' + label + '</span>');
-
+    var span = jQuery('<span class="faceted-daterange-criterion">');
+    span.append(link);
+    span.append('<span>' + label + '</span>');
+    html.append(span);
     return html;
   },
 
