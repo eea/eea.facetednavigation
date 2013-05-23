@@ -24,8 +24,8 @@ Faceted.RangeWidget = function(wid){
     return false;
   });
   var handle = function(evt){js_widget.select_change(this, evt);};
-  this.start.change(handle); 
-  this.end.change(handle); 
+  this.start.change(handle);
+  this.end.change(handle);
 
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
@@ -34,7 +34,7 @@ Faceted.RangeWidget = function(wid){
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
     js_widget.reset();
   });
-}; 
+};
 
 Faceted.RangeWidget.prototype = {
   select_change: function(element){
@@ -130,6 +130,7 @@ Faceted.RangeWidget.prototype = {
 
     var widget = this;
     var html = jQuery('<dd>');
+    var span = jQuery('<span class="faceted-range-criterion">');
     var start = this.start.val();
     var end = this.end.val();
 
@@ -142,9 +143,9 @@ Faceted.RangeWidget.prototype = {
       widget.criteria_remove();
       return false;
     });
-    html.append(link);
-    html.append('<span>' + label + '</span>');
-
+    span.append(link);
+    span.append('<span>' + label + '</span>');
+    html.append(span);
     return html;
   },
 
