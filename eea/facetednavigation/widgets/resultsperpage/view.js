@@ -117,6 +117,7 @@ Faceted.ResultsPerPageWidget.prototype = {
 
   var widget = this;
   var html = jQuery('<dd>');
+  var span = jQuery('<span class="faceted-resultsperpage-criterion">');
   html.attr('id', 'criteria_' + this.wid + '_entries');
   var element = jQuery(this.selected);
   var value = element.val();
@@ -129,9 +130,9 @@ Faceted.ResultsPerPageWidget.prototype = {
     widget.criteria_remove();
     return false;
   });
-  html.append(link);
-  html.append('<span>' + label + '</span>');
-
+  span.append(link);
+  span.append('<span>' + label + '</span>');
+  html.append(span);
   return html;
 },
 

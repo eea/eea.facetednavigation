@@ -154,16 +154,16 @@ Faceted.RadioWidget.prototype = {
     var title = label.attr('title');
     label = label.html();
     var link = jQuery('<a href="#">[X]</a>');
-
+    var span = jQuery('<span class="facted-radio-criterion">');
     link.attr('id', 'criteria_' + id);
     link.attr('title', 'Remove ' + title + ' filter');
     link.click(function(evt){
       widget.criteria_remove();
       return false;
     });
-    html.append(link);
-    html.append('<span>' + label + '</span>');
-
+    span.append(link);
+    span.append('<span>' + label + '</span>');
+    html.append(span);
     return html;
   },
 

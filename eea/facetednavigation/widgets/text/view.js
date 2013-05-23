@@ -136,7 +136,7 @@ Faceted.TextWidget.prototype = {
 	      });
 	      span.append(link);
 	      span.append('<span>' + label + '</span>');
-              html.append(span);
+          html.append(span);
       }
     });
     return html;

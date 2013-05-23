@@ -151,8 +151,10 @@ Faceted.AlphabeticalWidget.prototype = {
 
     var html = jQuery('<dd>');
     html.attr('id', 'criteria_' + this.wid + '_entries');
-    html.append(link);
-    html.append('<span>' + label + '</span>');
+    var span = jQuery('<span class="faceted-alphabetic-criterion">');
+    span.append(link);
+    span.append('<span>' + label + '</span>');
+    html.append(span);
     return html;
   },
 

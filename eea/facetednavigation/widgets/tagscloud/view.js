@@ -189,9 +189,12 @@ Faceted.TagsCloudWidget.prototype = {
     });
 
     var html = jQuery('<dd>');
+    var span = jQuery('<span class="faceted-tagscloud-criterion">');
     html.attr('id', 'criteria_' + this.wid + '_entries');
-    html.append(link);
-    html.append('<span>' + label + '</span>');
+
+    span.append(link);
+    span.append('<span>' + label + '</span>');
+    html.append(span);
     return html;
   },
 

@@ -168,6 +168,7 @@ Faceted.SortingWidget.prototype = {
 
     var widget = this;
     var html = jQuery('<dd>');
+    var span = jQuery('<span class="faceted-sorting-criterion">');
     html.attr('id', 'criteria_' + this.wid + '_entries');
     var element = jQuery(this.selected);
     var value = element.val();
@@ -180,8 +181,9 @@ Faceted.SortingWidget.prototype = {
       widget.criteria_remove();
       return false;
     });
-    html.append(link);
-    html.append('<span>' + label + '</span>');
+    span.append(link);
+    span.append('<span>' + label + '</span>');
+    html.append(span);
 
     if(this.reverse.attr('checked')){
       var rid = this.reverse.attr('id');
