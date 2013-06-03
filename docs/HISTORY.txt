@@ -3,8 +3,10 @@ Changelog
 
 5.7-dev - (unreleased)
 ----------------------
-
+* Bug fix: Fix JS typo within DateRange widget
+  [voineali refs #14677]
 * Criteria entries are each in a span container.
+  [thomasdesvenain]
 
 5.6 - (2013-05-20)
 ------------------

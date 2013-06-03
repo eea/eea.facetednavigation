@@ -185,8 +185,8 @@ Faceted.DateRangeWidget.prototype = {
     return html;
   },
 
-  criterial_label: function(start_date, end_date){
-	return start_date.toDateString() + ' - ' + end_date.toDateString();
+  criteria_label: function(start_date, end_date){
+    return start_date.toDateString() + ' - ' + end_date.toDateString();
   },
 
   criteria_remove: function(){
