@@ -2,10 +2,12 @@
 ====================== */
 .ui-icon-show {
   background-image: url(../../++resource++faceted_images/show.png) ! important;
+  background-position: 0 0;
 }
 
 .ui-icon-hide {
   background-image: url(../../++resource++faceted_images/hide.png) ! important;
+  background-position: 0 0;
 }
 
 .ui-widget-header:hover {
