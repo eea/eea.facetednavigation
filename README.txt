@@ -149,27 +149,15 @@ Here some live production demos:
 Buildout installation
 =====================
 
-- Plone 2 and 3
-
-  - Buildouts: http://svn.eionet.europa.eu/repositories/Zope/trunk/eea.facetednavigation/buildouts
-  - Trac: http://svn.eionet.europa.eu/projects/Zope/browser/trunk/eea.facetednavigation/buildouts
-
-- Plone 4+
-
-  - Buildout: http://svn.plone.org/svn/collective/eea.facetednavigation/buildout
-  - Trac: http://dev.plone.org/collective/browser/eea.facetednavigation/buildout
+- `Plone 2 and 3 <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone3>`_
+- `Plone 4+ <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone4>`_
 
 
 Source code
 ===========
 
-- Plone 2 and 3:
-
-  - Latest source code in EEA svn: https://svn.eionet.europa.eu/repositories/Zope/trunk/eea.facetednavigation/
-
-- Plone 4+
-
-  - Collective: https://github.com/collective/eea.facetednavigation
+- `Plone 2 and 3 on github <https://github.com/collective/eea.facetednavigation/tree/plone3>`_
+- `Plone 4+ on github <https://github.com/collective/eea.facetednavigation>`_
 
 
 Eggs repository
@@ -189,7 +177,7 @@ Bugs and new features are entered on our Trac server at EEA.
 
 - `open bugs / tasks <http://taskman.eionet.europa.eu/projects/zope/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=category_id&op%5Bcategory_id%5D=%3D&v%5Bcategory_id%5D%5B%5D=120&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=1&v%5Btracker_id%5D%5B%5D=4&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=tracker&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=done_ratio&c%5B%5D=fixed_version&c%5B%5D=project&c%5B%5D=category&c%5B%5D=parent&c%5B%5D=author&c%5B%5D=updated_on&c%5B%5D=start_date&c%5B%5D=due_date&c%5B%5D=estimated_hours&c%5B%5D=created_on&c%5B%5D=closed_on&c%5B%5D=relations&c%5B%5D=cf_4&group_by=>`_
 - `complete list of bugs / features including fixed and open <http://taskman.eionet.europa.eu/projects/zope/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=category_id&op%5Bcategory_id%5D=%3D&v%5Bcategory_id%5D%5B%5D=120&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=2&v%5Btracker_id%5D%5B%5D=1&v%5Btracker_id%5D%5B%5D=4&f%5B%5D=&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=tracker&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=done_ratio&c%5B%5D=fixed_version&c%5B%5D=project&c%5B%5D=category&c%5B%5D=parent&c%5B%5D=author&c%5B%5D=updated_on&c%5B%5D=start_date&c%5B%5D=due_date&c%5B%5D=estimated_hours&c%5B%5D=created_on&c%5B%5D=closed_on&c%5B%5D=relations&c%5B%5D=cf_4&group_by=>`_
-
+- `open bugs / tasks on collective <https://github.com/eea/eea.facetednavigation/issues?sort=updated&state=open>`_
 
 Copyright and license
 =====================
