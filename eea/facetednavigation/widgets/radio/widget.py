@@ -45,6 +45,16 @@ EditSchema = Schema((
             i18n_domain="eea"
         )
     ),
+    BooleanField('hidealloption',
+        schemata="default",
+        default=False,
+        widget=BooleanWidget(
+            label=_(u'Hide "All" option'),
+            description=_(u'If this checkbox is checked, hides the All '
+                          u'option'),
+            i18n_domain="eea"
+        )
+    ),
     IntegerField('maxitems',
         schemata="display",
         default=0,

@@ -20,7 +20,7 @@
   <form action="." method="get"
   tal:on-error="structure python:error_view(error=error, cid=wid)">
   <ul>
-    <li>
+    <li tal:condition="not:view/data/hidealloption|nothing">
       <tal:terms define="
         chbox_id string:${wid}_all;
         chbox_id python:view.cleanup(chbox_id);">

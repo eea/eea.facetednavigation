@@ -4,8 +4,11 @@ Changelog
 5.8-dev - (unreleased)
 ----------------------
 
+* We have an option to hide "All" option from radio widget.
+  [thomasdesvenain]
 * Bug fix: If we have selected "search only in all elements" for text widget,
   behavior is the one expected.
+  [thomasdesvenain]
 * Bug fix: Fix ui-icon-hide and ui-icon-show in configure_faceted.html view
   in Plone 4.3.1.
   [cedricmessiant]
