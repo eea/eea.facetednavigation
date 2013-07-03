@@ -1,9 +1,14 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="eea">
 
   <i18n:registerTranslations directory="locales" />
+
+  <configure zcml:condition="installed plone.app.dexterity">
+    <include file="dexterity.zcml" />
+  </configure>
 
   <!-- Dependencies -->
   <include package="collective.js.jqueryui" />

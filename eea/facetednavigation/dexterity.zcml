@@ -1,0 +1,13 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:plone="http://namespaces.plone.org/plone"
+           i18n_domain="eea">
+
+  <include package="plone.behavior" file="meta.zcml" />
+
+  <plone:behavior
+      title="Faceted navigable"
+      description="Faceted navigation can be activated on the instances of this content type."
+      provides="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+      />
+
+</configure>
