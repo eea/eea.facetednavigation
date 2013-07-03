@@ -50,10 +50,11 @@ Faceted.TextWidget.prototype = {
     this.selected = [input];
 
     var where = jQuery('input[type=radio]:checked', this.widget);
-    where = where ? where.val() : 'all';
+    where = where.length == 1 ? where.val() : 'all';
     if(where == 'all'){
       return Faceted.Form.do_query(this.wid, value);
     }
+    console.log(where);
 
     var current = Faceted.Query[this.wid];
     current = current ? current : [];
