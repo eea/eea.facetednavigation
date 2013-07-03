@@ -7,7 +7,7 @@
   <plone:behavior
       title="Faceted navigable"
       description="Faceted navigation can be activated on the instances of this content type."
-      provides="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+      provides="eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable"
       />
 
 </configure>
