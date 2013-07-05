@@ -26,9 +26,7 @@ class FacetedExportImport(object):
             IStatusMessage(self.request).addStatusMessage(str(msg), type='info')
         self.request.response.redirect(to)
 
-    def import_xml(self, **kwargs):
-        """ Import config from xml
-        """
+    def _import_xml(self, **kwargs):
         upload_file = kwargs.get('import_file', None)
         if getattr(upload_file, 'read', None):
             upload_file = upload_file.read()
@@ -44,17 +42,26 @@ class FacetedExportImport(object):
                 kwargs.get('redirect', 'configure_faceted.html'))
 
         importer.body = xml
+
+    def import_xml(self, **kwargs):
+        """ Import config from xml
+        """
+        self._import_xml(**kwargs)
         return self._redirect(_(u"Configuration imported"),
                               kwargs.get('redirect', 'configure_faceted.html'))
+
+    def _export_xml(self, **kwargs):
+        environ = SnapshotExportContext(self.context, 'utf-8')
+        return queryMultiAdapter((self.context, environ), IBody)
 
     def export_xml(self, **kwargs):
         """ Export config as xml
         """
-        environ = SnapshotExportContext(self.context, 'utf-8')
-        exporter = queryMultiAdapter((self.context, environ), IBody)
+        exporter = self._export_xml(**kwargs)
         if not exporter:
             return self._redirect('No adapter found',
                 kwargs.get('redirect', 'configure_faceted.html'))
+
         self.request.response.setHeader(
             'content-type', 'text/xml; charset=utf-8')
         self.request.response.addHeader(
