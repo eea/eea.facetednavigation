@@ -1,6 +1,9 @@
 Changelog
 =========
 
+5.9-dev - (unreleased)
+----------------------
+
 5.8 - (2013-07-08)
 ------------------
 * If dexterity is installed, added a behavior that allows to enable faceted
