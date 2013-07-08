@@ -263,7 +263,7 @@ Handle empty or wrong xml files
     ... }
 
     >>> view(**query)
-    'Please provide a valid xml file'
+    u'Please provide a valid xml file'
 
 Import a valid xml file
 
