@@ -27,6 +27,8 @@ class FacetedExportImport(object):
         self.request.response.redirect(to)
 
     def _import_xml(self, **kwargs):
+        """ Import
+        """
         upload_file = kwargs.get('import_file', None)
         if getattr(upload_file, 'read', None):
             upload_file = upload_file.read()
@@ -50,6 +52,8 @@ class FacetedExportImport(object):
                               kwargs.get('redirect', 'configure_faceted.html'))
 
     def _export_xml(self, **kwargs):
+        """ Export
+        """
         environ = SnapshotExportContext(self.context, 'utf-8')
         return queryMultiAdapter((self.context, environ), IBody)
 
