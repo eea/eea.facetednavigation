@@ -1,9 +1,8 @@
 Changelog
 =========
 
-5.8-dev - (unreleased)
-----------------------
-
+5.8 - (2013-07-08)
+------------------
 * If dexterity is installed, added a behavior that allows to enable faceted
   navigation on all instances of a dexterity portal type.
 * We have an option to hide "All" option from radio widget.
