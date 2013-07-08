@@ -32,22 +32,21 @@ class FacetedExportImport(object):
             upload_file = upload_file.read()
         xml = upload_file or ''
         if not xml.startswith('<?xml version="1.0"'):
-            return self._redirect('Please provide a valid xml file',
-                kwargs.get('redirect', 'configure_faceted.html'))
+            return _('Please provide a valid xml file')
 
         environ = SnapshotImportContext(self.context, 'utf-8')
         importer = queryMultiAdapter((self.context, environ), IBody)
         if not importer:
-            return self._redirect('No adapter found',
-                kwargs.get('redirect', 'configure_faceted.html'))
+            return 'No adapter found'
 
         importer.body = xml
+        return _(u"Configuration imported")
 
     def import_xml(self, **kwargs):
         """ Import config from xml
         """
-        self._import_xml(**kwargs)
-        return self._redirect(_(u"Configuration imported"),
+        msg = self._import_xml(**kwargs)
+        return self._redirect(msg,
                               kwargs.get('redirect', 'configure_faceted.html'))
 
     def _export_xml(self, **kwargs):
