@@ -72,7 +72,7 @@ Faceted.DateRangeWidget.prototype = {
 
     if(end_date<start_date){
       Faceted.Form.raise_error(Faceted.DateRangeErrorMsg,
-    		  				   this.wid + '_errors', []);
+                               this.wid + '_errors', []);
     }else{
       this.selected = [this.start, this.end];
       Faceted.Form.clear_errors(this.wid + '_errors', []);
