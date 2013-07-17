@@ -52,7 +52,7 @@ Faceted.DateRangeWidget = function(wid){
     js_widget.reset();
   });
 };
-
+Faceted.DateRangeErrorMsg = 'Invalid date range';
 Faceted.DateRangeWidget.prototype = {
   select_change: function(element){
     this.do_query(element);
@@ -71,8 +71,8 @@ Faceted.DateRangeWidget.prototype = {
     var end_date = new Date(end.replace(/-/g, '/'));
 
     if(end_date<start_date){
-      var msg = 'Invalid date range';
-      Faceted.Form.raise_error(msg, this.wid + '_errors', []);
+      Faceted.Form.raise_error(Faceted.DateRangeErrorMsg,
+    		  				   this.wid + '_errors', []);
     }else{
       this.selected = [this.start, this.end];
       Faceted.Form.clear_errors(this.wid + '_errors', []);

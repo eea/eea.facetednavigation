@@ -4,10 +4,14 @@ Changelog
 5.9-dev - (unreleased)
 ----------------------
 
+- Date range error message is delegated so it can be overriden.
+  [thomasdesvenain]
+
 5.8 - (2013-07-08)
 ------------------
 * If dexterity is installed, added a behavior that allows to enable faceted
   navigation on all instances of a dexterity portal type.
+  [thomasdesvenain]
 * We have an option to hide "All" option from radio widget.
   [thomasdesvenain]
 * Bug fix: If we have selected "search only in all elements" for text widget,
