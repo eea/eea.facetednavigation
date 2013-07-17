@@ -4,13 +4,10 @@
   xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="eea">
 
-<configure zcml:condition="installed Products.basesyndication">
-<configure zcml:condition="installed Products.fatsyndication">
-
-  <adapter factory=".feed.FacetedFeedSource" />
   <adapter
     factory=".feed.FacetedFeed"
-    provides="Products.basesyndication.interfaces.IFeed"
+    for="eea.facetednavigation.interfaces.IFacetedNavigable"
+    provides="Products.CMFPlone.interfaces.syndication.IFeed"
     />
 
   <!-- skos syndication -->
@@ -22,6 +19,4 @@
     permission="zope.Public"
     />
 
-</configure>
-</configure>
 </configure>
