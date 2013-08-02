@@ -107,12 +107,6 @@ addons:
 
   - Products.LinguaPlone
 
-* Syndication
-
-  - Products.basesyndication
-  - Products.fatsyndication
-  - bda.feed
-
 * Cache (memcache)
 
   - plone.memoize

@@ -23,11 +23,6 @@ addons:
   * Multilingual/translation solution
       - Products.LinguaPlone
 
-  * Syndication
-      - Products.basesyndication
-      - Products.fatsyndication
-      - bda.feed
-
   * Cache (memcache)
       - plone.memoize
       - eea.cache

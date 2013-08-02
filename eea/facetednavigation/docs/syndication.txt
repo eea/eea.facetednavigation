@@ -12,6 +12,8 @@ Set up
     >>> sandbox.setLanguage('en')
     >>> request = sandbox.REQUEST
 
+    >>> from Products.CMFPlone.interfaces.syndication import IFeedSettings
+    >>> IFeedSettings(sandbox).enabled = True
     >>> from zope.component import getMultiAdapter
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
@@ -19,13 +21,13 @@ Set up
 RSS2
 ----
 
-    >>> rss = sandbox.unrestrictedTraverse('@@RSS2', None)
+    >>> rss = sandbox.unrestrictedTraverse('rss.xml', None)
     >>> if rss:
     ...     res = rss()
     ... else:
-    ...     res = u'<?xml version="1.0" ?>\n<rss version="2.0">\n</rss>\n'
+    ...     res = u'<?xml version="1.0"?>\n<rss version="2.0">\n</rss>\n'
     >>> res
-    u'<?xml version="1.0" ?>...<rss version="2.0">...</rss>...'
+    u'<?xml version="1.0"?>...<rss version="2.0">...</rss>...'
 
 SKOS
 ----
