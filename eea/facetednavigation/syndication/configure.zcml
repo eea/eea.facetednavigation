@@ -4,7 +4,7 @@
   xmlns:browser="http://namespaces.zope.org/browser"
   i18n_domain="eea">
 
-  <adapter
+  <adapter zcml:condition="have plone-43"
     factory=".feed.FacetedFeed"
     for="eea.facetednavigation.interfaces.IFacetedNavigable"
     provides="Products.CMFPlone.interfaces.syndication.IFeed"
