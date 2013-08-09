@@ -1,9 +1,8 @@
 Changelog
 =========
 
-5.9-dev - (unreleased)
-----------------------
-
+5.9 - (2013-08-09)
+------------------
 - Date range error message is delegated so it can be overriden.
   [thomasdesvenain]
 - Updating feeds to use the syndication available in Plone 4.3
