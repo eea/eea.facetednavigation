@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.0-dev - (unreleased)
+----------------------
+
 5.9 - (2013-08-09)
 ------------------
 - Date range error message is delegated so it can be overriden.
