@@ -8,6 +8,8 @@ class FacetedFeed(FolderFeed):
     """ Feed
     """
     def _brains(self):
+        """ Brains
+        """
         request = getattr(self.context, 'REQUEST',
                           getattr(self.context, 'request', None))
         handler = component.getMultiAdapter((self.context, request),
