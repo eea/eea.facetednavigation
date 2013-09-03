@@ -6,9 +6,17 @@ Faceted.CheckboxesWidget = function(wid){
   this.widget.show();
   this.fieldset = jQuery('.widget-fieldset', this.widget);
   this.title = jQuery('legend', this.widget).html();
-  this.elements = jQuery('input[type=checkbox]', this.widget);
+  this.elements = jQuery('form input[type=checkbox]', this.widget);
   this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
-  this.operator = this.widget.attr('data-operator');
+
+  var operator = this.widget.find('#' + this.wid + '-operator');
+  this.operator_visible = operator.length ? true : false;
+  if(this.operator_visible){
+    this.operator = operator.prop('checked') ? 'or': 'and';
+  }else{
+    this.operator = this.widget.attr('data-operator');
+  }
+
   this.selected = [];
 
   // Faceted version
@@ -29,7 +37,7 @@ Faceted.CheckboxesWidget = function(wid){
   });
 
   // Default values
-  var selected = jQuery('input[type=checkbox]:checked', this.widget);
+  var selected = this.widget.find('form input[type=checkbox]:checked');
   if(selected.length){
     this.selected = selected;
     Faceted.Query[this.wid] = [];
@@ -73,7 +81,7 @@ Faceted.CheckboxesWidget.prototype = {
   },
 
   do_query: function(element){
-    this.selected = jQuery('input[type=checkbox]:checked', this.widget);
+    this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
     var value = [];
     this.selected.each(function(i){
       value.push(jQuery(this).val());
@@ -94,8 +102,8 @@ Faceted.CheckboxesWidget.prototype = {
       return;
     }
 
-    jQuery('input[type=checkbox]', this.widget).val(checked);
-    this.selected = jQuery('input[type=checkbox]:checked', this.widget);
+    jQuery('form input[type=checkbox]', this.widget).val(checked);
+    this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
   },
 
   criteria: function(){
@@ -127,7 +135,7 @@ Faceted.CheckboxesWidget.prototype = {
     var html = jQuery('<dt>');
     html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
-    html.append('<span>' + this.title + '</span>');
+    html.append('<span>' + this.title + ' ( ' + this.operator + ' ) ' + '</span>');
     return html;
   },
 

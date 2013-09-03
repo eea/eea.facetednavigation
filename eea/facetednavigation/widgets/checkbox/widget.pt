@@ -10,15 +10,27 @@
   css python:view.countable and css + ' faceted-count' or css;
   css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
   css python:sortcountable and css + ' faceted-sortcountable' or css;
-  maxitems python:view.data.get('maxitems', 0) or 0;"
+  maxitems python:view.data.get('maxitems', 0) or 0;
+  operator_visible python:view.data.get('operator_visible', False)"
   tal:attributes="id string:${wid}_widget; class css; data-operator python:view.operator;">
 
 <fieldset class="widget-fieldset">
   <legend tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">HTML Widget</legend>
 
+  <div tal:condition="operator_visible" class="faceted-operator">
+    <span label="all" title="Search items that match ALL filters bellow" i18n:attributes="label; title"></span>
+      <input type="checkbox" title="Search items that match ANY/ALL of the filters bellow" i18n:attributes="title" tal:attributes="
+        id string:$wid-operator;
+        name string:$wid-operator;
+        checked python:'checked' if (view.operator == 'or') else None;
+      "/>
+    <span label="any" title="Search items that match ANY filters bellow" i18n:attributes="label; title"></span>
+  </div>
+
   <form action="." method="get"
     tal:on-error="structure python:error_view(error=error, cid=wid)">
+
   <ul>
     <tal:items repeat="term python:view.vocabulary()">
       <li tal:define="
@@ -43,6 +55,8 @@
     </tal:items>
   </ul>
   </form>
+
   <span style="display:none" tal:content="maxitems" />
+
 </fieldset>
 </div>

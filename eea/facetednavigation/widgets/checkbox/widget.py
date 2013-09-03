@@ -35,9 +35,19 @@ EditSchema = Schema((
         default='or',
         widget=SelectionWidget(
             format='select',
-            label=_(u'Operator'),
+            label=_(u'Default operator'),
             description=_(u'Search with AND/OR between elements'),
             i18n_domain="eea"
+        )
+    ),
+    BooleanField('operator_visible',
+        schemata='default',
+        required=False,
+        default=False,
+        widget=BooleanWidget(
+            label=_(u"Operator visible"),
+            description=_(u"Let the end-user choose to search with "
+                          "AND or OR between elements"),
         )
     ),
     StringField('vocabulary',

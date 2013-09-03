@@ -49,7 +49,7 @@ EditSchema = Schema((
         schemata="default",
         default=False,
         widget=BooleanWidget(
-            label=_(u'Hide "All" option'),
+            label=_(u"Hide 'All' option"),
             description=_(u'If this checkbox is checked, hides the All '
                           u'option'),
             i18n_domain="eea"

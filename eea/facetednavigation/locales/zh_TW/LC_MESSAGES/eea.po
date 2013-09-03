@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2013-04-22 07:53+0000\n"
+"POT-Creation-Date: 2013-09-03 16:17+0000\n"
 "PO-Revision-Date: 2011-10-17 14:13+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr "位於查詢條件之後"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
 #: ../../facetednavigation/widgets/radio/widget.pt:31
-#: ../../facetednavigation/widgets/select/widget.pt:25
+#: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "全選"
 
@@ -81,7 +81,7 @@ msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "確定要刪除 ${widget} 嗎?"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:56
+#: ../../facetednavigation/widgets/checkbox/widget.py:66
 #: ../../facetednavigation/widgets/radio/widget.py:42
 #: ../../facetednavigation/widgets/select/widget.py:39
 msgid "Catalog"
@@ -105,7 +105,7 @@ msgstr "用來搜尋的 Catalog 索引"
 msgid "Catalog query"
 msgstr "目录查询"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:91
+#: ../../facetednavigation/widgets/checkbox/widget.py:101
 msgid "Checkboxes"
 msgstr "勾选框"
 
@@ -129,7 +129,7 @@ msgid "Cloud type"
 msgstr "標籤雲類型"
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:47
+#: ../../facetednavigation/browser/app/exportimport.py:45
 msgid "Configuration imported"
 msgstr "設定值已匯入"
 
@@ -190,7 +190,7 @@ msgid "Default etag"
 msgstr "默认的etag"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:80
+#: ../../facetednavigation/widgets/checkbox/widget.py:90
 msgid "Default items (one per line)"
 msgstr "預設項目"
 
@@ -198,6 +198,11 @@ msgstr "預設項目"
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
 msgid "Default letter to be selected"
 msgstr "被选中的默认信"
+
+#. Default: ""
+#: ../../facetednavigation/widgets/checkbox/widget.py:38
+msgid "Default operator"
+msgstr "操作符"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:44
@@ -214,7 +219,7 @@ msgid "Default results per page"
 msgstr "預設每頁顯示的項目數"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/radio/widget.py:80
 #: ../../facetednavigation/widgets/select/widget.py:56
 #: ../../facetednavigation/widgets/tagscloud/widget.py:147
 msgid "Default selected item"
@@ -237,7 +242,7 @@ msgstr "預設的 TAL 查詢語法"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/checkbox/widget.py:89
 #: ../../facetednavigation/widgets/date/widget.py:59
 msgid "Default value"
 msgstr "預設值"
@@ -402,7 +407,7 @@ msgid "Future"
 msgstr "n.将来,未来"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:57
+#: ../../facetednavigation/widgets/checkbox/widget.py:67
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Get unique values from catalog as an alternative for vocabulary"
@@ -412,6 +417,10 @@ msgstr "从目录中获取唯一值作为替代词汇"
 #: ../../facetednavigation/widgets/widget.py:68
 msgid "Hidden"
 msgstr "隱藏"
+
+#: ../../facetednavigation/widgets/radio/widget.py:52
+msgid "Hide 'All' option"
+msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "Hide filters"
@@ -426,6 +435,10 @@ msgstr "隱藏數量為零的結果"
 #: ../../facetednavigation/widgets/widget.py:69
 msgid "Hide widget"
 msgstr "隱藏部件"
+
+#: ../../facetednavigation/widgets/radio/widget.py:53
+msgid "If this checkbox is checked, hides the All option"
+msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
@@ -452,6 +465,10 @@ msgstr "這個部件的詞彙表並不正確，預設的排序條件因此留空
 msgid "Less filters"
 msgstr "更少"
 
+#: ../../facetednavigation/widgets/checkbox/widget.py:49
+msgid "Let the end-user choose to search with AND or OR between elements"
+msgstr ""
+
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
 msgstr "列表"
@@ -467,8 +484,8 @@ msgid "Maximum font-size (px)"
 msgstr "字元最大尺寸 (px)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:65
-#: ../../facetednavigation/widgets/radio/widget.py:52
+#: ../../facetednavigation/widgets/checkbox/widget.py:75
+#: ../../facetednavigation/widgets/radio/widget.py:62
 #: ../../facetednavigation/widgets/tagscloud/widget.py:61
 msgid "Maximum items"
 msgstr "最大項目數"
@@ -547,21 +564,20 @@ msgid "Next year"
 msgstr "明年"
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:74
+#: ../../facetednavigation/browser/app/exportimport.py:84
 msgid "No action provided"
 msgstr "没有行动提供"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/checkbox/widget.py:76
+#: ../../facetednavigation/widgets/radio/widget.py:63
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
 msgstr "部件裡顯示的項目數量"
 
-#. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:38
-msgid "Operator"
-msgstr "操作符"
+#: ../../facetednavigation/widgets/checkbox/widget.py:48
+msgid "Operator visible"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
@@ -579,6 +595,10 @@ msgstr "路徑"
 #: ../../facetednavigation/widgets/portlet/widget.py:20
 msgid "Path to portlet macro"
 msgstr "portlet的宏观路径"
+
+#: ../../facetednavigation/browser/app/exportimport.py:37
+msgid "Please provide a valid xml file"
+msgstr ""
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -620,7 +640,7 @@ msgstr "部件的位置"
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python中的一个工厂，可以创建实现对象的名称。这必须是一个对象在一个模块中使用带点名称。"
 
-#: ../../facetednavigation/widgets/radio/widget.py:81
+#: ../../facetednavigation/widgets/radio/widget.py:91
 msgid "Radio"
 msgstr "收音机"
 
@@ -664,8 +684,8 @@ msgid "Reverse"
 msgstr "反向"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:72
-#: ../../facetednavigation/widgets/radio/widget.py:60
+#: ../../facetednavigation/widgets/checkbox/widget.py:82
+#: ../../facetednavigation/widgets/radio/widget.py:70
 #: ../../facetednavigation/widgets/select/widget.py:47
 msgid "Reverse options"
 msgstr "反向选项"
@@ -679,7 +699,7 @@ msgstr "根目錄"
 msgid "Save"
 msgstr "儲存"
 
-#: ../../facetednavigation/widgets/text/widget.pt:21
+#: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "搜尋"
 
@@ -690,6 +710,18 @@ msgstr "搜尋深度"
 
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:22
+msgid "Search items that match ALL filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+msgid "Search items that match ANY filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+msgid "Search items that match ANY/ALL of the filters bellow"
 msgstr ""
 
 #. Default: "Search with AND/OR between elements"
@@ -729,8 +761,8 @@ msgid "Sort by countable"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:73
-#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:83
+#: ../../facetednavigation/widgets/radio/widget.py:71
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Sort options reversed"
 msgstr "排列順序反向"
@@ -775,7 +807,7 @@ msgstr "標籤雲"
 msgid "Tal Expression"
 msgstr "TAL表达式"
 
-#: ../../facetednavigation/widgets/text/widget.py:50
+#: ../../facetednavigation/widgets/text/widget.py:51
 msgid "Text field"
 msgstr "文字字段"
 
@@ -841,7 +873,7 @@ msgid "Visible to"
 msgstr "可见"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:47
+#: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:32
 #: ../../facetednavigation/widgets/select/widget.py:30
 msgid "Vocabulary"
@@ -853,7 +885,7 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "指定排序條件裡用到的詞彙表，留空代表使用預設排序條件。"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:58
 #: ../../facetednavigation/widgets/radio/widget.py:33
 #: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary to use to render widget items"
@@ -877,11 +909,19 @@ msgstr "只有特定使用者看得到部件"
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../../facetednavigation/widgets/text/widget.pt:31
+#: ../../facetednavigation/widgets/checkbox/widget.pt:22
+msgid "all"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "所有项目"
 
-#: ../../facetednavigation/widgets/text/widget.pt:40
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+msgid "any"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "在目前的结果"
 

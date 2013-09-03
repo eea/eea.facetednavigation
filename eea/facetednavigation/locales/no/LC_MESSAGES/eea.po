@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-04-22 07:53+0000\n"
+"POT-Creation-Date: 2013-09-03 16:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,7 +68,7 @@ msgstr "Etter spørring filtre"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
 #: ../../facetednavigation/widgets/radio/widget.pt:31
-#: ../../facetednavigation/widgets/select/widget.pt:25
+#: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "Alle"
 
@@ -80,7 +80,7 @@ msgstr "Alfabetisk"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Er du sikker på at du vil slette ${widget} widget?"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:56
+#: ../../facetednavigation/widgets/checkbox/widget.py:66
 #: ../../facetednavigation/widgets/radio/widget.py:42
 #: ../../facetednavigation/widgets/select/widget.py:39
 msgid "Catalog"
@@ -102,7 +102,7 @@ msgstr "Catalog indeks som skal brukes for søk"
 msgid "Catalog query"
 msgstr "Catalog spørring"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:91
+#: ../../facetednavigation/widgets/checkbox/widget.py:101
 msgid "Checkboxes"
 msgstr "Avkrysningsbokser"
 
@@ -122,7 +122,7 @@ msgstr "Cloud høyde (px)"
 msgid "Cloud type"
 msgstr "Cloud typen"
 
-#: ../../facetednavigation/browser/app/exportimport.py:47
+#: ../../facetednavigation/browser/app/exportimport.py:45
 msgid "Configuration imported"
 msgstr "Konfigurasjon importert"
 
@@ -178,13 +178,17 @@ msgstr "Standard daterange (f.eks 'nå-365 => nå +1' som betyr 'Starting ett å
 msgid "Default etag"
 msgstr "Standard ETAG"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:80
+#: ../../facetednavigation/widgets/checkbox/widget.py:90
 msgid "Default items (one per line)"
 msgstr "Standard elementer (én per linje)"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
 msgid "Default letter to be selected"
 msgstr "Standard brev for å bli valgt"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:38
+msgid "Default operator"
+msgstr "Operatør"
 
 #: ../../facetednavigation/widgets/path/widget.py:44
 msgid "Default path to search in (relative to root folder)"
@@ -198,7 +202,7 @@ msgstr "Standard utvalg (f.eks '1 => 3 ')"
 msgid "Default results per page"
 msgstr "Standard resultater per side"
 
-#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/radio/widget.py:80
 #: ../../facetednavigation/widgets/select/widget.py:56
 #: ../../facetednavigation/widgets/tagscloud/widget.py:147
 msgid "Default selected item"
@@ -218,7 +222,7 @@ msgid "Default tal expression for query value"
 msgstr "Standard tal uttrykk for spørringsverdien"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/checkbox/widget.py:89
 #: ../../facetednavigation/widgets/date/widget.py:59
 msgid "Default value"
 msgstr "Standard verdi"
@@ -372,7 +376,7 @@ msgstr "Friendly navn"
 msgid "Future"
 msgstr "Future"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:57
+#: ../../facetednavigation/widgets/checkbox/widget.py:67
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Get unique values from catalog as an alternative for vocabulary"
@@ -381,6 +385,10 @@ msgstr "Få unike verdiene fra katalogen som et alternativ for vokabular"
 #: ../../facetednavigation/widgets/widget.py:68
 msgid "Hidden"
 msgstr "Hidden"
+
+#: ../../facetednavigation/widgets/radio/widget.py:52
+msgid "Hide 'All' option"
+msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "Hide filters"
@@ -393,6 +401,10 @@ msgstr "Skjule elementer med null resultater"
 #: ../../facetednavigation/widgets/widget.py:69
 msgid "Hide widget"
 msgstr "Skjul widget"
+
+#: ../../facetednavigation/widgets/radio/widget.py:53
+msgid "If this checkbox is checked, hides the All option"
+msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
@@ -418,6 +430,10 @@ msgstr "Ugyldig eller tom vokabular gitt for denne widgeten. La stå tomt for st
 msgid "Less filters"
 msgstr "Mindre filtre"
 
+#: ../../facetednavigation/widgets/checkbox/widget.py:49
+msgid "Let the end-user choose to search with AND or OR between elements"
+msgstr ""
+
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
 msgstr "List"
@@ -430,8 +446,8 @@ msgstr "Maksimalt tegn"
 msgid "Maximum font-size (px)"
 msgstr "Maksimal font-size (px)"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:65
-#: ../../facetednavigation/widgets/radio/widget.py:52
+#: ../../facetednavigation/widgets/checkbox/widget.py:75
+#: ../../facetednavigation/widgets/radio/widget.py:62
 #: ../../facetednavigation/widgets/tagscloud/widget.py:61
 msgid "Maximum items"
 msgstr "Maksimalt antall"
@@ -504,19 +520,19 @@ msgstr "Neste uke"
 msgid "Next year"
 msgstr "Neste år"
 
-#: ../../facetednavigation/browser/app/exportimport.py:74
+#: ../../facetednavigation/browser/app/exportimport.py:84
 msgid "No action provided"
 msgstr "Ingen tiltak forutsatt"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/checkbox/widget.py:76
+#: ../../facetednavigation/widgets/radio/widget.py:63
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
 msgstr "Antall elementer synlige i widget"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:38
-msgid "Operator"
-msgstr "Operatør"
+#: ../../facetednavigation/widgets/checkbox/widget.py:48
+msgid "Operator visible"
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
@@ -533,6 +549,10 @@ msgstr "Sti"
 #: ../../facetednavigation/widgets/portlet/widget.py:20
 msgid "Path to portlet macro"
 msgstr "Sti til portletten makro"
+
+#: ../../facetednavigation/browser/app/exportimport.py:37
+msgid "Please provide a valid xml file"
+msgstr ""
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -571,7 +591,7 @@ msgstr "Plassering av widgeten."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python navnet på en fabrikk som kan lage gjennomføringen objektet. Dette må identifisere et objekt i en modul ved hjelp av full stiplede navn."
 
-#: ../../facetednavigation/widgets/radio/widget.py:81
+#: ../../facetednavigation/widgets/radio/widget.py:91
 msgid "Radio"
 msgstr "Radio"
 
@@ -611,8 +631,8 @@ msgstr "Resultater per side trinn"
 msgid "Reverse"
 msgstr "Omvendt"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:72
-#: ../../facetednavigation/widgets/radio/widget.py:60
+#: ../../facetednavigation/widgets/checkbox/widget.py:82
+#: ../../facetednavigation/widgets/radio/widget.py:70
 #: ../../facetednavigation/widgets/select/widget.py:47
 msgid "Reverse options"
 msgstr "Omvendt valg"
@@ -625,7 +645,7 @@ msgstr "Rotmappe"
 msgid "Save"
 msgstr "Lagre"
 
-#: ../../facetednavigation/widgets/text/widget.pt:21
+#: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Søk"
 
@@ -635,6 +655,18 @@ msgstr "Søkedybde"
 
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:22
+msgid "Search items that match ALL filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+msgid "Search items that match ANY filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+msgid "Search items that match ANY/ALL of the filters bellow"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
@@ -670,8 +702,8 @@ msgstr "Smart fasetter skjulested er nå aktivert"
 msgid "Sort by countable"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:73
-#: ../../facetednavigation/widgets/radio/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:83
+#: ../../facetednavigation/widgets/radio/widget.py:71
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Sort options reversed"
 msgstr "Sorteringsalternativer reversert"
@@ -713,7 +745,7 @@ msgstr "Tags Cloud"
 msgid "Tal Expression"
 msgstr "Tal Expression"
 
-#: ../../facetednavigation/widgets/text/widget.py:50
+#: ../../facetednavigation/widgets/text/widget.py:51
 msgid "Text field"
 msgstr "Tekstfelt"
 
@@ -773,7 +805,7 @@ msgstr ""
 msgid "Visible to"
 msgstr "Synlig for"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:47
+#: ../../facetednavigation/widgets/checkbox/widget.py:57
 #: ../../facetednavigation/widgets/radio/widget.py:32
 #: ../../facetednavigation/widgets/select/widget.py:30
 msgid "Vocabulary"
@@ -783,7 +815,7 @@ msgstr "Vocabulary"
 msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
 msgstr "Ordforråd å bruke til å filtrere Sorteringskriteriene. La stå tomt for standard Sorteringskriteriene."
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:58
 #: ../../facetednavigation/widgets/radio/widget.py:33
 #: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary to use to render widget items"
@@ -805,11 +837,19 @@ msgstr "Widget vil være synlig kun for valgte brukeren"
 msgid "Yesterday"
 msgstr "I går"
 
-#: ../../facetednavigation/widgets/text/widget.pt:31
+#: ../../facetednavigation/widgets/checkbox/widget.pt:22
+msgid "all"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "alle elementer"
 
-#: ../../facetednavigation/widgets/text/widget.pt:40
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+msgid "any"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "i dagens resultater"
 
