@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-03 16:17+0000\n"
+"POT-Creation-Date: 2013-09-04 08:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -438,6 +438,18 @@ msgstr ""
 msgid "List"
 msgstr "Lista"
 
+#: ../../facetednavigation/widgets/checkbox/widget.pt:22
+msgid "Match ALL filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+msgid "Match ANY filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+msgid "Match ANY/ALL filters bellow"
+msgstr ""
+
 #: ../../facetednavigation/widgets/tagscloud/widget.py:70
 msgid "Maximum characters"
 msgstr "Karattri massimi"
@@ -655,18 +667,6 @@ msgstr "Fond Fittex"
 
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:22
-msgid "Search items that match ALL filters bellow"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-msgid "Search items that match ANY filters bellow"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:23
-msgid "Search items that match ANY/ALL of the filters bellow"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
