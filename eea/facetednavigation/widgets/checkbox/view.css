@@ -34,51 +34,19 @@
 
 /* faceted operator start */
 .faceted-operator {
-  position: relative;
-  height: 25px;
-  float: right;
-  margin-top: -30px;
-  margin-right: 40px;
+  text-align: right;
+  margin-top: -20px;
 }
 
-.faceted-operator span {
-  position: absolute;
-  width: 35px;
-  height: 25px;
-  line-height: 25px;
-  color: #8E004D;
-  text-align: center;
-  background: #fff;
+.faceted-operator label {
+  font-weight: normal;
 }
 
-.faceted-operator span:after {
-  content: attr(label);
-}
-
-.faceted-operator input {
-  position: absolute;
-  margin: 0;
-  width: 31px;
-  height: 31px;
-  filter:alpha(opacity=0);
-  -moz-opacity:0;
-  -khtml-opacity: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-.faceted-operator input[type="checkbox"] + span {
-  visibility: hidden;
-  color: #95b229;
-  background: #fff;
-}
-
-.faceted-operator input[type="checkbox"] + span:after {
-  content: attr(label);
-}
-
-.faceted-operator input[type="checkbox"]:checked + span {
-  visibility: visible;
+.faceted-operator a,
+.faceted-operator a:visited,
+.faceted-operator a:hover {
+  color: #95B229;
+  border: none;
+  text-decoration: none;
 }
 /* faceted operator end */

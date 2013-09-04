@@ -9,12 +9,23 @@ Faceted.CheckboxesWidget = function(wid){
   this.elements = jQuery('form input[type=checkbox]', this.widget);
   this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
 
-  var operator = this.widget.find('#' + this.wid + '-operator');
-  this.operator_visible = operator.length ? true : false;
-  if(this.operator_visible){
-    this.operator = operator.prop('checked') ? 'or': 'and';
+  this.operatorElem = this.widget.find('.faceted-operator a');
+  this.operatorVisible = this.operatorElem.length ? true: false;
+
+  if(this.operatorVisible){
+    this.operator = this.operatorElem.data('value');
+
+    // Handle operator click
+    this.operatorElem.click(function(evt){
+      evt.preventDefault();
+      self.operator_click(this, evt);
+    });
+
+    // Update text
+    this.operatorElem.text(this.operatorElem.data(this.operator));
+
   }else{
-    this.operator = this.widget.attr('data-operator');
+    this.operator = this.widget.data('operator');
   }
 
   this.selected = [];
@@ -31,9 +42,9 @@ Faceted.CheckboxesWidget = function(wid){
   });
 
   // Handle checkbox click
-  var js_widget = this;
+  var self = this;
   this.elements.click(function(evt){
-    js_widget.checkbox_click(this, evt);
+    self.checkbox_click(this, evt);
   });
 
   // Default values
@@ -42,8 +53,12 @@ Faceted.CheckboxesWidget = function(wid){
     this.selected = selected;
     Faceted.Query[this.wid] = [];
     selected.each(function(){
-      Faceted.Query[js_widget.wid].push(jQuery(this).val());
+      Faceted.Query[self.wid].push(jQuery(this).val());
     });
+  }
+
+  if(this.operatorVisible){
+    Faceted.Query[self.wid + '-operator'] = self.operator;
   }
 
   // Handle More/Less buttons click
@@ -56,21 +71,21 @@ Faceted.CheckboxesWidget = function(wid){
 
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
-    js_widget.synchronize();
+    self.synchronize();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
-    js_widget.reset();
+    self.reset();
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
     jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
-      js_widget.count(sortcountable);
+      self.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
-      if(js_widget.operator != 'and' && (data.wid == js_widget.wid || data.wid == 'b_start')){
+      if(self.operator != 'and' && (data.wid == self.wid || data.wid == 'b_start')){
         return;
       }
-      js_widget.count(sortcountable);
+      self.count(sortcountable);
     });
   }
 };
@@ -78,6 +93,30 @@ Faceted.CheckboxesWidget = function(wid){
 Faceted.CheckboxesWidget.prototype = {
   checkbox_click: function(element, evt){
     this.do_query(element);
+  },
+
+  operator_click: function(element, evt){
+    var self = this;
+    if(self.operator === 'or'){
+      self.operator = 'and';
+      self.operatorElem.text(self.operatorElem.data('and'));
+    }else{
+      self.operator = 'or';
+      self.operatorElem.text(self.operatorElem.data('or'));
+    }
+    Faceted.Form.do_query(this.wid + '-operator', self.operator);
+  },
+
+  operator_label: function(){
+    if(!this.operatorVisible){
+      return '';
+    }
+
+    var label = this.widget.find('.faceted-operator label');
+    label = label.length ? label.text(): '';
+    label += ' ' + this.operatorElem.data(this.operator);
+
+    return '(' + label + ')';
   },
 
   do_query: function(element){
@@ -98,12 +137,18 @@ Faceted.CheckboxesWidget.prototype = {
   synchronize: function(){
     this.elements.attr('checked', false);
     var checked = Faceted.Query[this.wid];
-    if(!checked){
-      return;
+    if(checked){
+      jQuery('form input[type=checkbox]', this.widget).val(checked);
+      this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
     }
 
-    jQuery('form input[type=checkbox]', this.widget).val(checked);
-    this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
+    var operator = Faceted.Query[this.wid + '-operator'];
+    if(this.operatorVisible && operator){
+      operator = operator[0];
+      this.operator = operator;
+      this.operatorElem.data('value', operator);
+      this.operatorElem.text(this.operatorElem.data(this.operator));
+    }
   },
 
   criteria: function(){
@@ -135,7 +180,7 @@ Faceted.CheckboxesWidget.prototype = {
     var html = jQuery('<dt>');
     html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
-    html.append('<span>' + this.title + ' ( ' + this.operator + ' ) ' + '</span>');
+    html.append('<span>' + this.title + ' ' + this.operator_label() + '</span>');
     return html;
   },
 
@@ -190,8 +235,8 @@ Faceted.CheckboxesWidget.prototype = {
     if(this.version){
       query.version = this.version;
     }
-    if(this.operator){
-      query.operator = this.operator;
+    if(this.operator && !query[this.wid + '-operator']){
+      query[this.wid + '-operator'] = this.operator;
     }
 
     var context = this;

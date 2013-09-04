@@ -3,9 +3,6 @@ Changelog
 
 6.0-dev - (unreleased)
 ----------------------
-
-WIP:
-
 * Feature: Possibility to make AND/OR operator within checkbox facet visible
   for anonymous users
   [voineali refs #16624]

@@ -27,7 +27,8 @@ class FacetedQueryCounter(object):
         kwargs.pop('sort[]', None)
         kwargs.pop('sort', None)
         kwargs.pop('reversed[]', None)
-        operator = kwargs.pop('operator', None)
+        oid = '%s-operator' % cid
+        operator = kwargs.pop(oid, kwargs.pop(oid + '[]', None))
 
         if not operator or operator != 'and':
             kwargs.pop(cid, None)

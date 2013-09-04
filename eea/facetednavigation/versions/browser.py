@@ -35,7 +35,7 @@ class FacetedVersion(BrowserView):
             cid = criterion.getId()
             operator = criterion.get('operator', '')
             if operator:
-                query['%s-operator' % cid] = operator
+                query.setdefault('%s-operator' % cid, operator)
 
             if not criterion.hidden:
                 continue

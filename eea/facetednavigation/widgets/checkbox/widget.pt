@@ -11,25 +11,27 @@
   css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
   css python:sortcountable and css + ' faceted-sortcountable' or css;
   maxitems python:view.data.get('maxitems', 0) or 0;
-  operator_visible python:view.data.get('operator_visible', False)"
-  tal:attributes="id string:${wid}_widget; class css; data-operator python:view.operator;">
+  operator python:view.operator;
+  operator_visible python:view.operator_visible;
+  operator_lable python: 'any' if operator == 'or' else 'all'"
+  tal:attributes="id string:${wid}_widget; class css; data-operator python:operator;">
 
 <fieldset class="widget-fieldset">
   <legend tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">HTML Widget</legend>
 
-  <div tal:condition="operator_visible" class="faceted-operator">
-    <span label="all" title="Match ALL filters bellow" i18n:attributes="label; title"></span>
-      <input type="checkbox" title="Match ANY/ALL filters bellow" i18n:attributes="title" tal:attributes="
-        id string:$wid-operator;
-        name string:$wid-operator;
-        checked python:'checked' if (view.operator == 'or') else None;
-      "/>
-    <span label="any" title="Match ANY filters bellow" i18n:attributes="label; title"></span>
+  <tal:facet on-error="structure python:error_view(error=error, cid=wid)">
+
+  <div class="faceted-operator" tal:condition="operator_visible" title="match any/all filters bellow" i18n:attributes="title">
+    <label tal:attributes="for string:$wid-operator" i18n:translate="">match</label>
+    <a data-or="any" data-and="all" data-name="operator" i18n:attributes="data-or; data-and" tal:attributes="
+        href string:#$wid-operator=$operator;
+        data-value string:$operator;
+        "
+      tal:content="operator_lable" />
   </div>
 
-  <form action="." method="get"
-    tal:on-error="structure python:error_view(error=error, cid=wid)">
+  <form action="." method="get">
 
   <ul>
     <tal:items repeat="term python:view.vocabulary()">
@@ -57,6 +59,8 @@
   </form>
 
   <span style="display:none" tal:content="maxitems" />
+
+  </tal:facet>
 
 </fieldset>
 </div>

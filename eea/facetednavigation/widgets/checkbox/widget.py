@@ -130,8 +130,14 @@ class Widget(CountableWidget):
         return False
 
     @property
+    def operator_visible(self):
+        """ Is operator visible for anonymous users
+        """
+        return self.data.get('operator_visible', False)
+
+    @property
     def operator(self):
-        """ Get the query operator
+        """ Get the default query operator
         """
         return self.data.get('operator', 'and')
 
@@ -142,8 +148,11 @@ class Widget(CountableWidget):
         index = self.data.get('index', '')
         index = index.encode('utf-8', 'replace')
 
-        # Use 'and' by default in order to be backward compatible
-        operator = self.operator
+        if not self.operator_visible:
+            operator = self.operator
+        else:
+            operator = form.get(self.data.getId() + '-operator', self.operator)
+
         operator = operator.encode('utf-8', 'replace')
 
         if not index:
@@ -159,4 +168,3 @@ class Widget(CountableWidget):
 
         query[index] = {'query': value, 'operator': operator}
         return query
-
