@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2013-09-04 08:29+0000\n"
+"POT-Creation-Date: 2013-09-04 14:36+0000\n"
 "PO-Revision-Date: 2011-05-23 13:46+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -467,18 +467,6 @@ msgstr ""
 msgid "List"
 msgstr "Liste"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:22
-msgid "Match ALL filters bellow"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-msgid "Match ANY filters bellow"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:23
-msgid "Match ANY/ALL filters bellow"
-msgstr ""
-
 #: ../../facetednavigation/widgets/tagscloud/widget.py:70
 msgid "Maximum characters"
 msgstr "Maximale Zeichen:"
@@ -902,7 +890,7 @@ msgstr "Widget wird nur für ausgewählte Benutzer sichtbar"
 msgid "Yesterday"
 msgstr "Gestern"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:22
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "all"
 msgstr ""
 
@@ -910,11 +898,19 @@ msgstr ""
 msgid "all items"
 msgstr "Alle Einträge"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "any"
 msgstr ""
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "in aktuellen Ergebnissen"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:24
+msgid "match"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+msgid "match any/all filters bellow"
+msgstr ""
 

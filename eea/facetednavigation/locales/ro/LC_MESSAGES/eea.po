@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-04 08:29+0000\n"
+"POT-Creation-Date: 2013-09-04 14:36+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -475,18 +475,6 @@ msgstr "Permite utilizatorului final să caute elementele folosind ŞI sau SAU �
 msgid "List"
 msgstr "Listă"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:22
-msgid "Match ALL filters bellow"
-msgstr "Caută elementele care îndeplinesc TOATE criteriile selectate"
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-msgid "Match ANY filters bellow"
-msgstr "Caută elementele care îndeplinesc ORICARE dintre criteriile selectate"
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:23
-msgid "Match ANY/ALL filters bellow"
-msgstr "Caută elementele care îndeplinesc TOATE/ORICARE dintre criteriile selectate"
-
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/widget.py:70
 msgid "Maximum characters"
@@ -910,7 +898,7 @@ msgstr "Widget-ul va fi vizibil doar pentru utilizatorul selectat"
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:22
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "all"
 msgstr "toate"
 
@@ -918,11 +906,19 @@ msgstr "toate"
 msgid "all items"
 msgstr "toate elementele"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "any"
 msgstr "oricare"
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "în rezultatele curente"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:24
+msgid "match"
+msgstr "conţine"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+msgid "match any/all filters bellow"
+msgstr "filtrează elementele care conţin toate sau oricare dintre filtrele de mai jos"
 
