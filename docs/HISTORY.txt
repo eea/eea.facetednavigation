@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.1-dev - (unreleased)
+----------------------
+
 6.0 - (2013-09-06)
 ------------------
 * Feature: Possibility to make AND/OR operator within checkbox facet visible
