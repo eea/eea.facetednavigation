@@ -827,7 +827,7 @@ msgstr "Včera"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "all"
-msgstr "všetko"
+msgstr "všetky"
 
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
@@ -835,7 +835,7 @@ msgstr "všetky položky"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "any"
-msgstr "všetky"
+msgstr "niektoré"
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
