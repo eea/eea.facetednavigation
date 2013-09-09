@@ -28,7 +28,7 @@ msgstr "Pred 1 rokom"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "2 days ago"
-msgstr "2 dni"
+msgstr "Pred 2 dňami"
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "2 weeks ago"
@@ -132,7 +132,7 @@ msgstr "Obsah stránok"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:61
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
-msgstr "Meniť rozsah yearsdisplayed v roku drop-down: buď vzhľadom k dnešným roku (-nn: + nn), vzhľadom k práve vybrané rok c-nn: C + nn), absolútny (nnnn: nnnn), alebo kombinácia z týchto formátov (nnnn:-nn)."
+msgstr "Meniť rozsah yearsdisplayed vo výbere roku: buď vzhľadom k dnešnému roku (-nn:+nn), relatívne vzhľadom k práve vybranému rok (c-nn:c+nn), absolútne (nnnn:nnnn), alebo kombinácia z týchto formátov (nnnn:-nn)."
 
 #: ../../facetednavigation/widgets/widget.py:299
 msgid "Count results"
@@ -168,7 +168,7 @@ msgstr "Debugger"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
-msgstr "Východiskové časové obdobie (napr. '2009 / 12/01 => 2009/12/31')"
+msgstr "Východiskové časové obdobie (napr. '2009/12/01 => 2009/12/31')"
 
 #: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
@@ -253,11 +253,11 @@ msgstr "Zakázať portlety vpravo"
 
 #: ../../facetednavigation/settings/menu.py:90
 msgid "Disable smart facets hiding"
-msgstr "Zakázať inteligentn aspekty skrýva"
+msgstr "Zakázať inteligentné skrývanie fazetového vyhľadávania"
 
 #: ../../facetednavigation/widgets/widget.py:300
 msgid "Display number of results near each option"
-msgstr "Zobrazí počet výsledkov v blízkosti každej voľby"
+msgstr "Zobraziť počet výsledkov v blízkosti každej voľby"
 
 #: ../../facetednavigation/widgets/widget.py:62
 msgid "Display widget in section"
@@ -269,11 +269,11 @@ msgstr "Zobraziť ovládací prvok v sekcii."
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
-msgstr "Povoliť tvárou navigáciu"
+msgstr "Povoliť fazetovú navigáciu"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted search"
-msgstr "Povoliť vyhľadávanie tvárí"
+msgstr "Povoliť fazetové vyhľadávanie"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:15
 msgid "Enable hide/show criteria"
@@ -281,7 +281,7 @@ msgstr "Povoliť skryť / zobraziť kritériá"
 
 #: ../../facetednavigation/settings/menu.py:59
 msgid "Enable left portlets"
-msgstr "Zapnúť vľavo portlety"
+msgstr "Zapnúť portlety vľavo"
 
 #: ../../facetednavigation/settings/menu.py:74
 msgid "Enable right portlets"
@@ -388,7 +388,7 @@ msgstr "Skrytý"
 
 #: ../../facetednavigation/widgets/radio/widget.py:52
 msgid "Hide 'All' option"
-msgstr ""
+msgstr "Skryť možnosť 'Všetko'"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "Hide filters"
@@ -404,11 +404,11 @@ msgstr "Skryť miniaplikáciu"
 
 #: ../../facetednavigation/widgets/radio/widget.py:53
 msgid "If this checkbox is checked, hides the All option"
-msgstr ""
+msgstr "Ak táto možnosť je povolená, skryje sa možnosť 'Všetko'"
 
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
-msgstr ""
+msgstr "Ak táto možnosť je povolená, skryje sa možnosť pre filtrovanie vo všetkých položkách alebo len v aktuálnej položke"
 
 #: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
@@ -432,7 +432,7 @@ msgstr "Menej filtrov"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:49
 msgid "Let the end-user choose to search with AND or OR between elements"
-msgstr ""
+msgstr "Nechať užívateľovi možnosť zvoliť vyhľadávanie pomocou AND alebo OR medzi prvkami"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
@@ -532,7 +532,7 @@ msgstr "Počet položiek viditeľných v miniaplikácii"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
 msgid "Operator visible"
-msgstr ""
+msgstr "Operátor viditeľny"
 
 #: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
@@ -552,7 +552,7 @@ msgstr "Cesta k makru portletu"
 
 #: ../../facetednavigation/browser/app/exportimport.py:37
 msgid "Please provide a valid xml file"
-msgstr ""
+msgstr "Prosím, dodajte validný xml súbor"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -609,7 +609,7 @@ msgstr "Odstrániť všetky filtre"
 
 #: ../../facetednavigation/widgets/resultsfilter/widget.py:34
 msgid "Results Filter"
-msgstr ""
+msgstr "Filter výsledkov"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:59
 msgid "Results per page"
@@ -688,7 +688,7 @@ msgstr "Inteligentné skrývanie fazetovej navigácie je teraz povolené"
 
 #: ../../facetednavigation/widgets/widget.py:306
 msgid "Sort by countable"
-msgstr ""
+msgstr "Zoradiť podľa počítadiel"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:83
 #: ../../facetednavigation/widgets/radio/widget.py:71
@@ -827,7 +827,7 @@ msgstr "Včera"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "all"
-msgstr ""
+msgstr "všetky"
 
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
@@ -835,7 +835,7 @@ msgstr "všetky položky"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "any"
-msgstr ""
+msgstr "niektoré"
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
@@ -843,9 +843,9 @@ msgstr "v aktuálnych výsledkoch"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:24
 msgid "match"
-msgstr ""
+msgstr "zhoda"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:23
 msgid "match any/all filters bellow"
-msgstr ""
+msgstr "zodpovedajú niektorému/všetkým filtrom nižšie"
 
