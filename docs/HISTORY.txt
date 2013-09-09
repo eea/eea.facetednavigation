@@ -3,6 +3,8 @@ Changelog
 
 6.1-dev - (unreleased)
 ----------------------
+* Feature: Slovak translation updates
+  [rlacko]
 
 6.0 - (2013-09-06)
 ------------------
