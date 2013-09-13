@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.1-dev - (unreleased)
-----------------------
+6.1 - (2013-09-13)
+------------------
 * Bug fix: Allow using keywords with spaces in a radio-widget.
   [pbauer]
 * Bug fix: Fixed adding path facet on faceted navigable objects that are default
