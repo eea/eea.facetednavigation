@@ -7,7 +7,9 @@ FacetedTree.Events.AJAX_STOP = 'FACETEDTREE-AJAX-STOP';
 
 FacetedTree.JsTree = function(wid, container, mode){
   this.BASEURL = '';
-  if(window.Faceted){
+  if(window.FacetedEdit){
+    this.BASEURL = FacetedEdit.BASEURL;
+  }else if(window.Faceted){
     this.BASEURL = Faceted.BASEURL;
   }
   this.wid = wid;

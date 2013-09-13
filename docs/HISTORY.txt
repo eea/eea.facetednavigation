@@ -3,6 +3,9 @@ Changelog
 
 6.1-dev - (unreleased)
 ----------------------
+* Bug fix: Fixed adding path facet on faceted navigable objects that are default
+  views for their parents
+  [avoinea refs #33 github]
 * Feature: Slovak translation updates
   [rlacko]
 
