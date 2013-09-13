@@ -97,7 +97,7 @@ Faceted.RadioWidget.prototype = {
       value = [value];
     }
     jQuery.each(value, function(){
-      var radio = jQuery('#' + context.wid + '_widget input[type=radio][value='+ this + ']');
+      var radio = jQuery('#' + context.wid + '_widget input[type=radio][value="'+ this + '"]');
       if(!radio.length){
         context.reset();
       }else{
