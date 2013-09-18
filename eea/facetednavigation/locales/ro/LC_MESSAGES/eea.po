@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-04 14:36+0000\n"
+"POT-Creation-Date: 2013-09-18 12:41+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -266,15 +266,19 @@ msgstr "Dezactivează navigarea faţetată"
 msgid "Disable faceted search"
 msgstr "Dezactivează căutarea faţetată"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:109
+msgid "Disable inheriting configuration"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
 msgstr "Dezactivează portleţii de stânga"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:76
 msgid "Disable right portlets"
 msgstr "Dezactivează portleţii de dreapta"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
 msgstr "Dezactivează ascunderea inteligentă a faţetelor"
 
@@ -305,15 +309,19 @@ msgstr "Activează căutarea faţetată"
 msgid "Enable hide/show criteria"
 msgstr "Activează ascunde/arată criteriile"
 
-#: ../../facetednavigation/settings/menu.py:59
+#: ../../facetednavigation/settings/menu.py:110
+msgid "Enable inheriting configuration "
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
 msgstr "Activează portleţii de stânga"
 
-#: ../../facetednavigation/settings/menu.py:74
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Enable right portlets"
 msgstr "Activează portleţii de dreapta"
 
-#: ../../facetednavigation/settings/menu.py:89
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
 msgstr "Activează asunderea inteligentă a faţetelor"
 
@@ -349,7 +357,7 @@ msgid "Faceted criteria"
 msgstr "Navigare faţetată"
 
 #. Default: ""
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Setări generale pentru navigarea faţetată"
 
@@ -370,7 +378,7 @@ msgid "Faceted search enabled"
 msgstr "Căutarea faţetată activată"
 
 #. Default: ""
-#: ../../facetednavigation/settings/menu.py:20
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Setări navigare faţetată"
 
@@ -457,6 +465,14 @@ msgstr "Importă - Exportă configuraţia"
 #: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "Importă configuraţia"
+
+#: ../../facetednavigation/settings/menu.py:176
+msgid "Inheriting configuration if is now enabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:179
+msgid "Inheriting configuration is now disabled"
+msgstr ""
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -611,19 +627,19 @@ msgstr "Portlet Plone"
 msgid "Portlet macro"
 msgstr "Macro"
 
-#: ../../facetednavigation/settings/menu.py:131
+#: ../../facetednavigation/settings/menu.py:149
 msgid "Portlets left column is hidden now"
 msgstr "Portleţii de stânga au fost ascunşi"
 
-#: ../../facetednavigation/settings/menu.py:128
+#: ../../facetednavigation/settings/menu.py:146
 msgid "Portlets left column is visible now"
 msgstr "Portleţii de stânga sunt vizibili acum"
 
-#: ../../facetednavigation/settings/menu.py:141
+#: ../../facetednavigation/settings/menu.py:159
 msgid "Portlets right column is hidden now"
 msgstr "Portleţii de dreapta au fost ascunşi"
 
-#: ../../facetednavigation/settings/menu.py:138
+#: ../../facetednavigation/settings/menu.py:156
 msgid "Portlets right column is visible now"
 msgstr "Portleţii de dreapta sunt vizibili acum"
 
@@ -737,11 +753,11 @@ msgstr "Selectează toate obiectele"
 msgid "Show filters"
 msgstr "Arată filtrele"
 
-#: ../../facetednavigation/settings/menu.py:151
+#: ../../facetednavigation/settings/menu.py:169
 msgid "Smart facets hiding is now disabled"
 msgstr "Ascunderea inteligentă a faţetelor a fost dezactivată"
 
-#: ../../facetednavigation/settings/menu.py:148
+#: ../../facetednavigation/settings/menu.py:166
 msgid "Smart facets hiding is now enabled"
 msgstr "Ascunderea inteligentă a faţetelor a fost activată"
 
@@ -898,7 +914,7 @@ msgstr "Widget-ul va fi vizibil doar pentru utilizatorul selectat"
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "all"
 msgstr "toate"
 
@@ -906,7 +922,7 @@ msgstr "toate"
 msgid "all items"
 msgstr "toate elementele"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
 msgstr "oricare"
 
@@ -914,11 +930,11 @@ msgstr "oricare"
 msgid "in current results"
 msgstr "în rezultatele curente"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:24
+#: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
 msgstr "conţine"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
 msgstr "filtrează elementele care conţin toate sau oricare dintre filtrele de mai jos"
 
