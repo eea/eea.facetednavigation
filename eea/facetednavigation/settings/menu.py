@@ -12,6 +12,7 @@ from eea.facetednavigation.settings.interfaces import ISettingsHandler
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
+from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from eea.facetednavigation import EEAMessageFactory as _
 
 class SettingsMenu(BrowserSubMenuItem):
@@ -101,6 +102,23 @@ class SettingsMenuItems(BrowserMenu):
                 'submenu': None,
             },
         ]
+        iscanonical = getattr(context, 'isCanonical', None)
+        if callable(iscanonical) and not iscanonical():
+            inherit_config = not IDontInheritConfiguration.providedBy(context)
+            menu.append({
+                'title': (_('Enable inheriting configuration') if inherit_config
+                     else _('Disable inheriting configuration ')),
+                'description': '',
+                'action': action % 'toggle_inherit_config',
+                'selected': not inherit_config,
+                'icon': None,
+                'extra': {
+                    'id': 'toggle_inherit_config',
+                    'separator': None,
+                    'class': ''
+                    },
+                'submenu': None,
+            })
 
         return menu
 
@@ -149,3 +167,13 @@ class SettingsHandler(BrowserView):
         else:
             alsoProvides(self.context, IDisableSmartFacets)
             return self._redirect(_('Smart facets hiding is now disabled'))
+
+    def toggle_inherit_config(self, **kwargs):
+        """ Enable/Disable 'inheriting configuration'
+        """
+        if IDontInheritConfiguration.providedBy(self.context):
+            noLongerProvides(self.context, IDontInheritConfiguration)
+            return self._redirect(_('Inheriting configuration if is now enabled'))
+        else:
+            alsoProvides(self.context, IDontInheritConfiguration)
+            return self._redirect(_('Inheriting configuration is now disabled'))

@@ -18,6 +18,16 @@ class IDisableSmartFacets(Interface):
         results
     """
 
+class IInheritConfiguration(Interface):
+    """ Marker interface to prevent inheriting configuration from the
+        canonical language
+    """
+
+class IDontInheritConfiguration(Interface):
+    """ Marker interface to prevent inheriting configuration from the
+        canonical language
+    """
+
 class ISettingsHandler(Interface):
     """ Edit faceted global settings
     """
@@ -31,4 +41,9 @@ class ISettingsHandler(Interface):
 
     def toggle_smart_facets():
         """ Enable / disable 'smart facets hiding' in facetednavigation view
+        """
+
+    def toggle_inherit_config():
+        """ Enable / disable 'Inherit configuration from canonical language' in
+            facetednavigation view
         """

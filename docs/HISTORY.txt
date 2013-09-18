@@ -3,6 +3,9 @@ Changelog
 
 6.2-dev - (unreleased)
 ----------------------
+* Feature: Option to disable inheriting the configuration from the canoical
+  language (only displayed when the object is not canonical).
+  [pbauer]
 
 6.1 - (2013-09-13)
 ------------------
