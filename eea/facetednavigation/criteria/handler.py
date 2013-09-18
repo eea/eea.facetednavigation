@@ -22,13 +22,13 @@ class Criteria(object):
         """
         # LinguaPlone support
         if IDontInheritConfiguration.providedBy(context):
+            self.context = context
+        else:
             canonical = getattr(context, 'getCanonical', None)
             if canonical:
                 self.context = canonical()
             else:
                 self.context = context
-        else:
-            self.context = context
         self.criteria = self._criteria()
 
     def _criteria(self):

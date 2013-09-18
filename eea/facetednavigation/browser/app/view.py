@@ -33,7 +33,7 @@ class FacetedContainerView(object):
     def canonical(self):
         """ Get canonical
         """
-        if IDontInheritConfiguration.providedBy(self.context):
+        if not IDontInheritConfiguration.providedBy(self.context):
             if self._canonical == '<NOT SET>':
                 canonical = getattr(self.context, 'getCanonical', None)
                 if callable(canonical):
