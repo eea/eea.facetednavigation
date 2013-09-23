@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-04 14:36+0000\n"
+"POT-Creation-Date: 2013-09-18 12:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,15 +243,19 @@ msgstr "Inaktivera fasetterad navigering"
 msgid "Disable faceted search"
 msgstr "Inaktivera fasetterad sökning"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:109
+msgid "Disable inheriting configuration"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
 msgstr "Inaktivera vänstra portletar"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:76
 msgid "Disable right portlets"
 msgstr "Inaktivera rät portletar"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
 msgstr "Inaktivera smarta fasetter dölja"
 
@@ -279,15 +283,19 @@ msgstr "Möjliggöra fasetterad sökning"
 msgid "Enable hide/show criteria"
 msgstr "Aktivera dölja / visa kriterier för"
 
-#: ../../facetednavigation/settings/menu.py:59
+#: ../../facetednavigation/settings/menu.py:110
+msgid "Enable inheriting configuration "
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
 msgstr "Möjliggöra vänstra portletar"
 
-#: ../../facetednavigation/settings/menu.py:74
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Enable right portlets"
 msgstr "Möjliggöra rätt portletar"
 
-#: ../../facetednavigation/settings/menu.py:89
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
 msgstr "Möjliggöra smarta fasetter dölja"
 
@@ -320,7 +328,7 @@ msgstr "Export"
 msgid "Faceted criteria"
 msgstr "Fasetterade kriterier"
 
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Mångfasetterade globala inställningar"
 
@@ -340,7 +348,7 @@ msgstr "Fasetterad sökning inaktiverad"
 msgid "Faceted search enabled"
 msgstr "Fasetterad sökning aktiverat"
 
-#: ../../facetednavigation/settings/menu.py:20
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Fasetterade inställningar"
 
@@ -421,6 +429,14 @@ msgstr "Import - Export konfiguration"
 #: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "Import konfiguration"
+
+#: ../../facetednavigation/settings/menu.py:176
+msgid "Inheriting configuration if is now enabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:179
+msgid "Inheriting configuration is now disabled"
+msgstr ""
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -562,19 +578,19 @@ msgstr "Plone portleten"
 msgid "Portlet macro"
 msgstr "Portlet makro"
 
-#: ../../facetednavigation/settings/menu.py:131
+#: ../../facetednavigation/settings/menu.py:149
 msgid "Portlets left column is hidden now"
 msgstr "Portletar vänstra kolumnen är dold nu"
 
-#: ../../facetednavigation/settings/menu.py:128
+#: ../../facetednavigation/settings/menu.py:146
 msgid "Portlets left column is visible now"
 msgstr "Portletar vänstra kolumnen syns nu"
 
-#: ../../facetednavigation/settings/menu.py:141
+#: ../../facetednavigation/settings/menu.py:159
 msgid "Portlets right column is hidden now"
 msgstr "Portletar högra kolumnen är dold nu"
 
-#: ../../facetednavigation/settings/menu.py:138
+#: ../../facetednavigation/settings/menu.py:156
 msgid "Portlets right column is visible now"
 msgstr "Portletar högra kolumnen syns nu"
 
@@ -678,11 +694,11 @@ msgstr "Välja alla objekt"
 msgid "Show filters"
 msgstr "Visar filter"
 
-#: ../../facetednavigation/settings/menu.py:151
+#: ../../facetednavigation/settings/menu.py:169
 msgid "Smart facets hiding is now disabled"
 msgstr "Smart aspekter nederlag är nu inaktiverad"
 
-#: ../../facetednavigation/settings/menu.py:148
+#: ../../facetednavigation/settings/menu.py:166
 msgid "Smart facets hiding is now enabled"
 msgstr "Smart aspekter nederlag är nu aktiverad"
 
@@ -825,7 +841,7 @@ msgstr "Widget kommer att vara synlig endast för utvalda användare"
 msgid "Yesterday"
 msgstr "I går"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "all"
 msgstr ""
 
@@ -833,7 +849,7 @@ msgstr ""
 msgid "all items"
 msgstr "alla objekt"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
 msgstr ""
 
@@ -841,11 +857,11 @@ msgstr ""
 msgid "in current results"
 msgstr "i nuvarande resultat"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:24
+#: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
 msgstr ""
 

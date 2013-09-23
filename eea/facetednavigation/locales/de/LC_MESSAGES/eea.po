@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2013-09-04 14:36+0000\n"
+"POT-Creation-Date: 2013-09-18 12:41+0000\n"
 "PO-Revision-Date: 2011-05-23 13:46+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -260,15 +260,19 @@ msgstr "Faceted Navigation abschalten"
 msgid "Disable faceted search"
 msgstr "Deaktivieren facettierte Suche"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:109
+msgid "Disable inheriting configuration"
+msgstr "Vererbung deaktivieren"
+
+#: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
 msgstr "Linke Portlets abschalten"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:76
 msgid "Disable right portlets"
 msgstr "Rechte Portlets abschalten"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
 msgstr "Deaktiviert die Smartcard Facetten versteckt"
 
@@ -300,15 +304,19 @@ msgstr "Aktivieren facettierte Suche"
 msgid "Enable hide/show criteria"
 msgstr "Aktivieren hide / show Kriterien"
 
-#: ../../facetednavigation/settings/menu.py:59
+#: ../../facetednavigation/settings/menu.py:110
+msgid "Enable inheriting configuration "
+msgstr "Vererbung aktivieren"
+
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
 msgstr "Linke Portlets einschalten"
 
-#: ../../facetednavigation/settings/menu.py:74
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Enable right portlets"
 msgstr "Rechte Portlets einschalten"
 
-#: ../../facetednavigation/settings/menu.py:89
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
 msgstr "Smart Facetten versteckt"
 
@@ -343,7 +351,7 @@ msgid "Faceted criteria"
 msgstr "Faceted-Kriterium"
 
 #. Default: ""
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Globale Einstellungen für Faceted"
 
@@ -364,7 +372,7 @@ msgid "Faceted search enabled"
 msgstr "Faceted Suche aktiviert"
 
 #. Default: ""
-#: ../../facetednavigation/settings/menu.py:20
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Faceted Einstellungen"
 
@@ -449,6 +457,14 @@ msgstr "Import - Export der Konfiguration"
 #: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "Importieren der Konfiguration"
+
+#: ../../facetednavigation/settings/menu.py:176
+msgid "Inheriting configuration if is now enabled"
+msgstr "Vererbung der Einstellungen von der Hauptsprache ist aktiviert"
+
+#: ../../facetednavigation/settings/menu.py:179
+msgid "Inheriting configuration is now disabled"
+msgstr "Vererbung der Einstellungen von der Hauptsprache ist nun deaktiviert"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -602,19 +618,19 @@ msgstr "Plone Portlet"
 msgid "Portlet macro"
 msgstr "Portlet-Makro"
 
-#: ../../facetednavigation/settings/menu.py:131
+#: ../../facetednavigation/settings/menu.py:149
 msgid "Portlets left column is hidden now"
 msgstr "Die linke Portlet Splate ist jetzt versteckt"
 
-#: ../../facetednavigation/settings/menu.py:128
+#: ../../facetednavigation/settings/menu.py:146
 msgid "Portlets left column is visible now"
 msgstr "Die linke Portlet Spalte ist jetzt sichtbar."
 
-#: ../../facetednavigation/settings/menu.py:141
+#: ../../facetednavigation/settings/menu.py:159
 msgid "Portlets right column is hidden now"
 msgstr "Die rechte Portlet Spalte ist jetzt versteckt"
 
-#: ../../facetednavigation/settings/menu.py:138
+#: ../../facetednavigation/settings/menu.py:156
 msgid "Portlets right column is visible now"
 msgstr "Die rechte Portlet Spalte ist jetzt sichtbar."
 
@@ -728,11 +744,11 @@ msgstr "Alle auswählen"
 msgid "Show filters"
 msgstr "Filter anzeigen"
 
-#: ../../facetednavigation/settings/menu.py:151
+#: ../../facetednavigation/settings/menu.py:169
 msgid "Smart facets hiding is now disabled"
 msgstr "Smart Facetten Versteck ist nun deaktiviert"
 
-#: ../../facetednavigation/settings/menu.py:148
+#: ../../facetednavigation/settings/menu.py:166
 msgid "Smart facets hiding is now enabled"
 msgstr "Smart Facetten Versteck ist nun aktiviert"
 
@@ -890,7 +906,7 @@ msgstr "Widget wird nur für ausgewählte Benutzer sichtbar"
 msgid "Yesterday"
 msgstr "Gestern"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "all"
 msgstr ""
 
@@ -898,7 +914,7 @@ msgstr ""
 msgid "all items"
 msgstr "Alle Einträge"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
 msgstr ""
 
@@ -906,11 +922,11 @@ msgstr ""
 msgid "in current results"
 msgstr "in aktuellen Ergebnissen"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:24
+#: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
 msgstr ""
 

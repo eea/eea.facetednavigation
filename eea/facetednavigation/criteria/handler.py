@@ -8,6 +8,7 @@ from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation.config import ANNO_CRITERIA
 from eea.facetednavigation.widgets.storage import Criterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
+from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 
 from eea.facetednavigation.criteria.interfaces import ICriteria
 
@@ -20,11 +21,14 @@ class Criteria(object):
         """ Handle criteria
         """
         # LinguaPlone support
-        canonical = getattr(context, 'getCanonical', None)
-        if canonical:
-            self.context = canonical()
-        else:
+        if IDontInheritConfiguration.providedBy(context):
             self.context = context
+        else:
+            canonical = getattr(context, 'getCanonical', None)
+            if canonical:
+                self.context = canonical()
+            else:
+                self.context = context
         self.criteria = self._criteria()
 
     def _criteria(self):

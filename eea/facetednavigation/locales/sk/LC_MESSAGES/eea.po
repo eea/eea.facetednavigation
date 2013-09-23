@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-04 14:36+0000\n"
+"POT-Creation-Date: 2013-09-18 12:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,15 +243,19 @@ msgstr "Zakázať fazetovú navigáciu"
 msgid "Disable faceted search"
 msgstr "Zakázať fazetové hľadanie"
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:109
+msgid "Disable inheriting configuration"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
 msgstr "Zakázať portlety vľavo"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:76
 msgid "Disable right portlets"
 msgstr "Zakázať portlety vpravo"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
 msgstr "Zakázať inteligentné skrývanie fazetového vyhľadávania"
 
@@ -279,15 +283,19 @@ msgstr "Povoliť fazetové vyhľadávanie"
 msgid "Enable hide/show criteria"
 msgstr "Povoliť skryť / zobraziť kritériá"
 
-#: ../../facetednavigation/settings/menu.py:59
+#: ../../facetednavigation/settings/menu.py:110
+msgid "Enable inheriting configuration "
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
 msgstr "Zapnúť portlety vľavo"
 
-#: ../../facetednavigation/settings/menu.py:74
+#: ../../facetednavigation/settings/menu.py:75
 msgid "Enable right portlets"
 msgstr "Povoliť portlety vpravo"
 
-#: ../../facetednavigation/settings/menu.py:89
+#: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
 msgstr "Povoliť inteligentné skrývanie fazetového vyhľadávania"
 
@@ -320,7 +328,7 @@ msgstr "Export"
 msgid "Faceted criteria"
 msgstr "Kritériá fazetového vyhľadávania"
 
-#: ../../facetednavigation/settings/menu.py:21
+#: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Globálne nastavenia fazetového vyhľadávania"
 
@@ -340,7 +348,7 @@ msgstr "Fazetové vyhľadávanie vypnuté"
 msgid "Faceted search enabled"
 msgstr "Fazetové vyhľadávanie povolené"
 
-#: ../../facetednavigation/settings/menu.py:20
+#: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Nastavenie fazetového vyhľadávania"
 
@@ -421,6 +429,14 @@ msgstr "Import - export konfigurácie"
 #: ../../facetednavigation/browser/template/configure.pt:76
 msgid "Import configuration"
 msgstr "Import konfigurácie"
+
+#: ../../facetednavigation/settings/menu.py:176
+msgid "Inheriting configuration if is now enabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:179
+msgid "Inheriting configuration is now disabled"
+msgstr ""
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -562,19 +578,19 @@ msgstr "Plone portlet"
 msgid "Portlet macro"
 msgstr "Makro portletu"
 
-#: ../../facetednavigation/settings/menu.py:131
+#: ../../facetednavigation/settings/menu.py:149
 msgid "Portlets left column is hidden now"
 msgstr "Ľavý stĺpec portletov je teraz ukrytý"
 
-#: ../../facetednavigation/settings/menu.py:128
+#: ../../facetednavigation/settings/menu.py:146
 msgid "Portlets left column is visible now"
 msgstr "Ľavý stĺpec portletov je teraz viditeľný"
 
-#: ../../facetednavigation/settings/menu.py:141
+#: ../../facetednavigation/settings/menu.py:159
 msgid "Portlets right column is hidden now"
 msgstr "Pravý stĺpec portletov je teraz ukrytý"
 
-#: ../../facetednavigation/settings/menu.py:138
+#: ../../facetednavigation/settings/menu.py:156
 msgid "Portlets right column is visible now"
 msgstr "Pravý stĺpec portletov je teraz viditeľný"
 
@@ -678,11 +694,11 @@ msgstr "Vybrať všetky položky"
 msgid "Show filters"
 msgstr "Zobraziť filtre"
 
-#: ../../facetednavigation/settings/menu.py:151
+#: ../../facetednavigation/settings/menu.py:169
 msgid "Smart facets hiding is now disabled"
 msgstr "Inteligentné skrývanie fazetovej navigácie je teraz zakázané"
 
-#: ../../facetednavigation/settings/menu.py:148
+#: ../../facetednavigation/settings/menu.py:166
 msgid "Smart facets hiding is now enabled"
 msgstr "Inteligentné skrývanie fazetovej navigácie je teraz povolené"
 
@@ -825,7 +841,7 @@ msgstr "Miniaplikácia bude viditeľná iba pre vybraných používateľov"
 msgid "Yesterday"
 msgstr "Včera"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "all"
 msgstr "všetky"
 
@@ -833,7 +849,7 @@ msgstr "všetky"
 msgid "all items"
 msgstr "všetky položky"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
 msgstr "niektoré"
 
@@ -841,11 +857,11 @@ msgstr "niektoré"
 msgid "in current results"
 msgstr "v aktuálnych výsledkoch"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:24
+#: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
 msgstr "zhoda"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:23
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
 msgstr "zodpovedajú niektorému/všetkým filtrom nižšie"
 

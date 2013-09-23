@@ -9,6 +9,7 @@ from eea.facetednavigation.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.interfaces import IDisableSmartFacets
 from eea.facetednavigation.interfaces import IFacetedSearchMode
+from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from Products.Five.browser import BrowserView
 
 class FacetedContainerView(object):
@@ -32,11 +33,12 @@ class FacetedContainerView(object):
     def canonical(self):
         """ Get canonical
         """
-        if self._canonical == '<NOT SET>':
-            canonical = getattr(self.context, 'getCanonical', None)
-            if callable(canonical):
-                canonical = canonical()
-            self._canonical = canonical
+        if not IDontInheritConfiguration.providedBy(self.context):
+            if self._canonical == '<NOT SET>':
+                canonical = getattr(self.context, 'getCanonical', None)
+                if callable(canonical):
+                    canonical = canonical()
+                self._canonical = canonical
         return self._canonical
 
     @property
