@@ -106,8 +106,9 @@ class SettingsMenuItems(BrowserMenu):
         if callable(iscanonical) and not iscanonical():
             inherit_config = not IDontInheritConfiguration.providedBy(context)
             menu.append({
-                'title': (_('Disable inheriting configuration') if inherit_config
-                     else _('Enable inheriting configuration ')),
+                'title': (_('Disable inheriting configuration')
+                          if inherit_config
+                          else _('Enable inheriting configuration ')),
                 'description': '',
                 'action': action % 'toggle_inherit_config',
                 'selected': not inherit_config,
@@ -173,7 +174,9 @@ class SettingsHandler(BrowserView):
         """
         if IDontInheritConfiguration.providedBy(self.context):
             noLongerProvides(self.context, IDontInheritConfiguration)
-            return self._redirect(_('Inheriting configuration if is now enabled'))
+            return self._redirect(
+                _('Inheriting configuration if is now enabled'))
         else:
             alsoProvides(self.context, IDontInheritConfiguration)
-            return self._redirect(_('Inheriting configuration is now disabled'))
+            return self._redirect(
+                _('Inheriting configuration is now disabled'))
