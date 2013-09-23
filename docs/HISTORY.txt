@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.3-dev - (unreleased)
+----------------------
+
 6.2 - (2013-09-23)
 ------------------
 * Feature: Option to disable inheriting the configuration from the canoical
