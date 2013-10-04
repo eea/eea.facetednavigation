@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.3-dev - (unreleased)
-----------------------
+6.3 - (2013-10-04)
+------------------
 * Bug fix: Add sensical da translations
   [tmog]
 
