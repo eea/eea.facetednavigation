@@ -28,3 +28,7 @@ msgstr ""
 
 msgid "Faceted criteria"
 msgstr ""
+
+msgid "Current filters"
+msgstr ""
+
