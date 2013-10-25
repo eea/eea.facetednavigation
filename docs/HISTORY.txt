@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.4-dev - (unreleased)
-----------------------
+6.4 - (2013-10-25)
+------------------
 * Bug fix: Added 'Current filters' to plone-manual.pot and updated po files.
   [prospchr]
 
