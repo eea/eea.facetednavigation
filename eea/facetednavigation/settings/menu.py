@@ -49,7 +49,9 @@ class SettingsMenuItems(BrowserMenu):
         """ Return menu items
         """
         url = context.absolute_url()
-        action = url + '/@@faceted_settings/%s'
+        # use format to avoid messing with url with "%" in them like
+        # 'http://foo/stones-1/foo%20bar%20moo/@@faceted_settings/%s'
+        action = url + '/@@faceted_settings/{0}'
 
         left_hidden = IHidePloneLeftColumn.providedBy(context)
         right_hidden = IHidePloneRightColumn.providedBy(context)
@@ -60,7 +62,7 @@ class SettingsMenuItems(BrowserMenu):
                 'title': (_('Enable left portlets') if left_hidden
                      else _('Disable left portlets')),
                 'description': '',
-                'action': action % 'toggle_left_column',
+                'action': action.format('toggle_left_column'),
                 'selected': not left_hidden,
                 'icon': ('++resource++faceted_images/show.png' if left_hidden
                     else '++resource++faceted_images/hide.png'),
@@ -75,7 +77,7 @@ class SettingsMenuItems(BrowserMenu):
                 'title': (_('Enable right portlets') if right_hidden
                      else _('Disable right portlets')),
                 'description': '',
-                'action': action % 'toggle_right_column',
+                'action': action.format('toggle_right_column'),
                 'selected': not right_hidden,
                 'icon': ('++resource++faceted_images/show.png' if right_hidden
                     else '++resource++faceted_images/hide.png'),
@@ -90,7 +92,7 @@ class SettingsMenuItems(BrowserMenu):
                 'title': (_('Enable smart facets hiding') if smart_hidden
                      else _('Disable smart facets hiding')),
                 'description': '',
-                'action': action % 'toggle_smart_facets',
+                'action': action.format('toggle_smart_facets'),
                 'selected': not smart_hidden,
                 'icon': ('++resource++faceted_images/show.png' if smart_hidden
                     else '++resource++faceted_images/hide.png'),

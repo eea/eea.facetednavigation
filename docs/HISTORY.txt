@@ -3,6 +3,7 @@ Changelog
 
 6.5-dev - (unreleased)
 ----------------------
+* Bug fix: fix url handling in settings menu [kiorky]
 
 6.4 - (2013-10-25)
 ------------------
