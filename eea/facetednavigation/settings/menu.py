@@ -112,7 +112,7 @@ class SettingsMenuItems(BrowserMenu):
                           if inherit_config
                           else _('Enable inheriting configuration ')),
                 'description': '',
-                'action': action % 'toggle_inherit_config',
+                'action': action.format('toggle_inherit_config'),
                 'selected': not inherit_config,
                 'icon': None,
                 'extra': {
