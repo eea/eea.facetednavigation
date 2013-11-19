@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
 "POT-Creation-Date: 2013-09-18 12:41+0000\n"
-"PO-Revision-Date: 2012-11-27 16:51+0100\n"
+"PO-Revision-Date: 2013-11-19 08:24+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -266,7 +266,7 @@ msgstr "Sailkapen bidezko bilaketa desaktibatu"
 
 #: ../../facetednavigation/settings/menu.py:109
 msgid "Disable inheriting configuration"
-msgstr ""
+msgstr "Desaktibatu konfigurazioa heredatzea"
 
 #: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
@@ -310,7 +310,7 @@ msgstr "Gaitu ezkutatzeko / erakusteko irizpideak"
 
 #: ../../facetednavigation/settings/menu.py:110
 msgid "Enable inheriting configuration "
-msgstr ""
+msgstr "Aktibatu konfigurazioa heredatzea"
 
 #: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
@@ -429,7 +429,7 @@ msgstr "Ezkutuan"
 
 #: ../../facetednavigation/widgets/radio/widget.py:52
 msgid "Hide 'All' option"
-msgstr ""
+msgstr "Ezkutatu 'guztiak' aukera"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "Hide filters"
@@ -447,11 +447,11 @@ msgstr "Widgeta ezkutatu"
 
 #: ../../facetednavigation/widgets/radio/widget.py:53
 msgid "If this checkbox is checked, hides the All option"
-msgstr ""
+msgstr "Aukeratuta badago 'guztiak' aukera ez da erakutsiko"
 
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
-msgstr ""
+msgstr "Aukeratuta badago, elementu guztien artean edo uneko elementuen artean bakarrik filtratzeko aukera ez da erakutsiko"
 
 #: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
@@ -467,11 +467,11 @@ msgstr "Konfigurazioa inportatu"
 
 #: ../../facetednavigation/settings/menu.py:176
 msgid "Inheriting configuration if is now enabled"
-msgstr ""
+msgstr "Konfigurazioa heredatzea aktibatu da"
 
 #: ../../facetednavigation/settings/menu.py:179
 msgid "Inheriting configuration is now disabled"
-msgstr ""
+msgstr "Konfigurazioa heredatzea desaktibatu da"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -484,7 +484,7 @@ msgstr "Filtro gutxiago"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:49
 msgid "Let the end-user choose to search with AND or OR between elements"
-msgstr ""
+msgstr "Utzi erabiltzaileari AND eta OR erabiliz bilatzen utzi"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
@@ -594,7 +594,7 @@ msgstr "Widgetean erakutsiko den gehienezko elementu kopurua"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
 msgid "Operator visible"
-msgstr ""
+msgstr "Eragilea erakutsi"
 
 #: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
@@ -615,7 +615,7 @@ msgstr "Portletaren macroaren bidea"
 
 #: ../../facetednavigation/browser/app/exportimport.py:37
 msgid "Please provide a valid xml file"
-msgstr ""
+msgstr "XML fitxategi zuzen bat kargatu mesedez"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -675,7 +675,7 @@ msgstr "Kendu iragazki guztiak"
 
 #: ../../facetednavigation/widgets/resultsfilter/widget.py:34
 msgid "Results Filter"
-msgstr ""
+msgstr "Emaitzen filtroa"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:59
 msgid "Results per page"
@@ -727,7 +727,7 @@ msgstr "Bilaketaren sakonera"
 
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
-msgstr ""
+msgstr "Elementu guztietan bakarrik bilatu"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
@@ -763,7 +763,7 @@ msgstr "Sailkapen argiak ezkutatzea aktibatuta"
 
 #: ../../facetednavigation/widgets/widget.py:306
 msgid "Sort by countable"
-msgstr ""
+msgstr "Kontagarri direnen arabera ordenatu"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:83
@@ -872,7 +872,7 @@ msgstr "Desaktibatu kutxa hau ez baduzu widget honetan erakutsi/ezkutatu aukera 
 
 #: ../../facetednavigation/widgets/widget.py:307
 msgid "Use the results counter for sorting"
-msgstr ""
+msgstr "Emaitzen kontagailua erabili ordenatzeko"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/debug/widget.py:22
@@ -918,7 +918,7 @@ msgstr "Atzo"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "all"
-msgstr ""
+msgstr "guztiak"
 
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
@@ -926,7 +926,7 @@ msgstr "elementu guztiak"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
-msgstr ""
+msgstr "edozein"
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
@@ -934,9 +934,9 @@ msgstr "uneko elementuetan"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
-msgstr ""
+msgstr "bat-etorri"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
-msgstr ""
+msgstr "Beheko filtro guztiak/edozein bat-etorri"
 
