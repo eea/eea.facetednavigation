@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.6-dev - (unreleased)
+----------------------
+
 6.5 - (2013-11-20)
 ------------------
 * Bug fix: fix url handling in settings menu
