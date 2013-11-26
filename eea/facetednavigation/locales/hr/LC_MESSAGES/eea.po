@@ -1,0 +1,870 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-11-26 15:22+0000\n"
+"PO-Revision-Date: 2012-04-26 17:32+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: eea\n"
+
+#: ../../facetednavigation/widgets/date/widget.py:22
+msgid "1 month ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:24
+msgid "1 week ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:19
+msgid "1 year ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:26
+msgid "2 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:23
+msgid "2 weeks ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:18
+msgid "2 years ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:21
+msgid "3 months ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:25
+msgid "5 days ago"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:20
+msgid "6 months ago"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:68
+msgid "Add"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:24
+msgid "Add new filter"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:25
+msgid "Add widget"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/radio/widget.pt:31
+#: ../../facetednavigation/widgets/select/widget.pt:28
+msgid "All"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:52
+msgid "Alphabetic"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:97
+msgid "Are you sure you want to delete ${widget} widget?"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:66
+#: ../../facetednavigation/widgets/radio/widget.py:42
+#: ../../facetednavigation/widgets/select/widget.py:39
+msgid "Catalog"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:30
+#: ../../facetednavigation/widgets/checkbox/widget.py:26
+#: ../../facetednavigation/widgets/date/widget.py:50
+msgid "Catalog index"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:31
+#: ../../facetednavigation/widgets/checkbox/widget.py:27
+#: ../../facetednavigation/widgets/date/widget.py:51
+msgid "Catalog index to use for search"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:101
+msgid "Checkboxes"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:23
+msgid "Cloud"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:137
+msgid "Cloud height"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:138
+msgid "Cloud height (px)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:110
+msgid "Cloud type"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/exportimport.py:45
+msgid "Configuration imported"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:107
+msgid "Content listing"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.py:61
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:299
+msgid "Count results"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:123
+msgid "Criterion details"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:71
+msgid "Cut long phrases to provided number of characters"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:72
+msgid "Date"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.py:79
+msgid "Date range"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:33
+msgid "Debugger"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.py:51
+msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:60
+msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
+msgstr ""
+
+#: ../../facetednavigation/widgets/etag/widget.py:17
+msgid "Default etag"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:90
+msgid "Default items (one per line)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:40
+msgid "Default letter to be selected"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:38
+msgid "Default operator"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:44
+msgid "Default path to search in (relative to root folder)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/widget.py:34
+msgid "Default range (e.g. '1 => 3')"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:48
+msgid "Default results per page"
+msgstr ""
+
+#: ../../facetednavigation/widgets/radio/widget.py:80
+#: ../../facetednavigation/widgets/select/widget.py:56
+#: ../../facetednavigation/widgets/tagscloud/widget.py:147
+msgid "Default selected item"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.py:31
+msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.py:31
+msgid "Default string to search for"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:35
+#: ../../facetednavigation/widgets/tal/widget.py:40
+msgid "Default tal expression for query value"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:89
+#: ../../facetednavigation/widgets/date/widget.py:59
+msgid "Default value"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:181
+msgid "Delete"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:55
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr ""
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Disable faceted search"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:111
+msgid "Disable inheriting configuration"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:63
+msgid "Disable left portlets"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:78
+msgid "Disable right portlets"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:93
+msgid "Disable smart facets hiding"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:300
+msgid "Display number of results near each option"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:62
+msgid "Display widget in section"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:55
+msgid "Display widget in section."
+msgstr ""
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Enable faceted search"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.py:15
+msgid "Enable hide/show criteria"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:113
+msgid "Enable inheriting configuration "
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:62
+msgid "Enable left portlets"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:77
+msgid "Enable right portlets"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:92
+msgid "Enable smart facets hiding"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/widget.pt:28
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:29
+msgid "End"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:29
+msgid "End date"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr ""
+
+#: ../../facetednavigation/widgets/etag/widget.py:18
+msgid "Etag value"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:86
+msgid "Export"
+msgstr ""
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Faceted criteria"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:22
+msgid "Faceted global settings"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:143
+msgid "Faceted navigation disabled"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:132
+msgid "Faceted navigation enabled"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:175
+msgid "Faceted search disabled"
+msgstr ""
+
+#: ../../facetednavigation/subtypes/subtyper.py:167
+msgid "Faceted search enabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:21
+msgid "Faceted settings"
+msgstr ""
+
+#: ../../facetednavigation/widgets/interfaces.py:31
+msgid "Factory"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/configure.py:78
+msgid "Filter added"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/configure.py:162
+msgid "Filter deleted"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.py:20
+msgid "Filter from vocabulary"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.py:28
+msgid "Filters"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/configure.py:109
+msgid "Filters deleted"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:43
+msgid "Friendly name"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:124
+msgid "Future"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:67
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:68
+msgid "Hidden"
+msgstr ""
+
+#: ../../facetednavigation/widgets/radio/widget.py:52
+msgid "Hide 'All' option"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:16
+msgid "Hide filters"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:313
+msgid "Hide items with zero results"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:69
+msgid "Hide widget"
+msgstr ""
+
+#: ../../facetednavigation/widgets/radio/widget.py:53
+msgid "If this checkbox is checked, hides the All option"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.py:39
+msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:83
+msgid "Import"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:75
+msgid "Import - Export configuration"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:76
+msgid "Import configuration"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:180
+msgid "Inheriting configuration if is now enabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:184
+msgid "Inheriting configuration is now disabled"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr ""
+
+#: ../../facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:49
+msgid "Let the end-user choose to search with AND or OR between elements"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:21
+msgid "List"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:70
+msgid "Maximum characters"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:129
+msgid "Maximum font-size (px)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:75
+#: ../../facetednavigation/widgets/radio/widget.py:62
+#: ../../facetednavigation/widgets/tagscloud/widget.py:61
+msgid "Maximum items"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:128
+msgid "Maximum size"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:120
+msgid "Minimum font-size (px)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:119
+msgid "Minimum size"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:164
+msgid "Move Down"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:155
+msgid "Move Up"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:34
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:67
+msgid "Navigation tree theme"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:32
+msgid "Next 2 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:35
+msgid "Next 2 weeks"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:40
+msgid "Next 2 years"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:37
+msgid "Next 3 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:33
+msgid "Next 5 days"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:38
+msgid "Next 6 months"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:36
+msgid "Next month"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:34
+msgid "Next week"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:39
+msgid "Next year"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/exportimport.py:84
+msgid "No action provided"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:76
+#: ../../facetednavigation/widgets/radio/widget.py:63
+#: ../../facetednavigation/widgets/tagscloud/widget.py:62
+msgid "Number of items visible in widget"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:48
+msgid "Operator visible"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:124
+msgid "Order"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:111
+msgid "Past"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:79
+msgid "Path"
+msgstr ""
+
+#: ../../facetednavigation/widgets/portlet/widget.py:20
+msgid "Path to portlet macro"
+msgstr ""
+
+#: ../../facetednavigation/browser/app/exportimport.py:37
+msgid "Please provide a valid xml file"
+msgstr ""
+
+#: ../../facetednavigation/widgets/portlet/widget.py:31
+msgid "Plone portlet"
+msgstr ""
+
+#: ../../facetednavigation/widgets/portlet/widget.py:19
+msgid "Portlet macro"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:152
+msgid "Portlets left column is hidden now"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:149
+msgid "Portlets left column is visible now"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:162
+msgid "Portlets right column is hidden now"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:159
+msgid "Portlets right column is visible now"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:42
+#: ../../facetednavigation/widgets/widget.py:52
+msgid "Position"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:43
+msgid "Position of the widget."
+msgstr ""
+
+#: ../../facetednavigation/widgets/interfaces.py:32
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr ""
+
+#: ../../facetednavigation/widgets/radio/widget.py:91
+msgid "Radio"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/widget.py:45
+msgid "Range"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:28
+msgid "Remove all"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:25
+msgid "Remove all filters"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:34
+msgid "Results Filter"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:59
+msgid "Results per page"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:30
+msgid "Results per page ending value"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:21
+msgid "Results per page starting value"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:39
+msgid "Results per page step"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:82
+#: ../../facetednavigation/widgets/radio/widget.py:70
+#: ../../facetednavigation/widgets/select/widget.py:47
+msgid "Reverse options"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:33
+msgid "Root folder"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:180
+msgid "Save"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.pt:25
+msgid "Search"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:54
+msgid "Search Depth"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.py:38
+msgid "Search in all elements only"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:39
+msgid "Search with AND/OR between elements"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:54
+#: ../../facetednavigation/widgets/widget.py:61
+msgid "Section"
+msgstr ""
+
+#: ../../facetednavigation/widgets/select/widget.py:67
+msgid "Select"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:112
+msgid "Select all items"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:19
+msgid "Show filters"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:172
+msgid "Smart facets hiding is now disabled"
+msgstr ""
+
+#: ../../facetednavigation/settings/menu.py:169
+msgid "Smart facets hiding is now enabled"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:306
+msgid "Sort by countable"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:83
+#: ../../facetednavigation/widgets/radio/widget.py:71
+#: ../../facetednavigation/widgets/select/widget.py:48
+msgid "Sort options reversed"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.py:43
+msgid "Sorting"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Sphere"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/widget.pt:20
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:20
+msgid "Start"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:21
+msgid "Start date"
+msgstr ""
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:38
+msgid "Step"
+msgstr ""
+
+#: ../../facetednavigation/profiles/default/actions.xml
+msgid "Sync faceted translations"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tal/widget.py:60
+msgid "TAL Expression"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:158
+msgid "Tags Cloud"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tal/widget.py:39
+msgid "Tal Expression"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.py:51
+msgid "Text field"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.py:68
+msgid "Theme to be used with this widget"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:314
+msgid "This option works only if 'count results' is enabled"
+msgstr ""
+
+#: ../../facetednavigation/widgets/path/widget.pt:29
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr ""
+
+#: ../../facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:44
+msgid "Title for widget to display in view page"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:118
+msgid "Today"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:31
+msgid "Tomorrow"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:30
+msgid "Type"
+msgstr ""
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+msgid "Type of the cloud"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:31
+msgid "Type of the widget."
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/widget.py:60
+msgid "UI Calendar years range"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.py:16
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:307
+msgid "Use the results counter for sorting"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:22
+msgid "Visible to"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:57
+#: ../../facetednavigation/widgets/radio/widget.py:32
+#: ../../facetednavigation/widgets/select/widget.py:30
+msgid "Vocabulary"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.py:21
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:58
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
+msgid "Vocabulary to use to render widget items"
+msgstr ""
+
+#: ../../facetednavigation/widgets/widget.py:53
+msgid "Widget position in page"
+msgstr ""
+
+#: ../../facetednavigation/browser/template/configure.pt:147
+msgid "Widget type"
+msgstr ""
+
+#: ../../facetednavigation/widgets/debug/widget.py:23
+msgid "Widget will be visible only for selected user"
+msgstr ""
+
+#: ../../facetednavigation/widgets/date/widget.py:27
+msgid "Yesterday"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+msgid "all"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.pt:35
+msgid "all items"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+msgid "any"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.pt:44
+msgid "in current results"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:26
+msgid "match"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+msgid "match any/all filters bellow"
+msgstr ""
+

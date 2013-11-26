@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "Current filters"
-msgstr ""
+msgstr "Käytössä olevat suotimet"
 
 msgid "Current search"
 msgstr "Nykyinen haku"

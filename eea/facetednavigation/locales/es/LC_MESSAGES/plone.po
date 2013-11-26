@@ -17,7 +17,7 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 msgid "Current filters"
-msgstr ""
+msgstr "Filtros activos"
 
 msgid "Current search"
 msgstr "Búsqueda actual"

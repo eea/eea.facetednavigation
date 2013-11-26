@@ -15,7 +15,7 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "Current filters"
-msgstr ""
+msgstr "Aktuelle filter"
 
 msgid "Current search"
 msgstr "Nåværende søk"

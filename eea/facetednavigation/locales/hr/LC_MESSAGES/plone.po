@@ -9,26 +9,26 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: plone\n"
 
 msgid "Current filters"
-msgstr "Criteri di ricerca"
+msgstr "Postojeći filteri"
 
 msgid "Current search"
-msgstr "Ricerca corrente"
+msgstr ""
 
 msgid "Faceted criteria"
-msgstr "Criteri delle faccette"
+msgstr ""
 
 msgid "Object provides"
-msgstr "Interfacce fornite dall'oggetto"
+msgstr ""
 
 msgid "Portal type"
 msgstr ""
 
 msgid "Sort on"
-msgstr "Ordina per"
+msgstr ""
 
