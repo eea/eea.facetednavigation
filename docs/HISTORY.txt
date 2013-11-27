@@ -3,7 +3,7 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
-* Bug fix: Added mt translations for 'Current filters'.
+* Bug fix: Added translations for 'Current filters'.
   [prospchr]
 
 6.5 - (2013-11-20)
