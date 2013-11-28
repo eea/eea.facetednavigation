@@ -23,9 +23,10 @@ from Products.Archetypes.public import SelectionWidget
 
 from eea.facetednavigation.interfaces import IFacetedCatalog
 
+from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.widgets.interfaces import IWidget
-from eea.facetednavigation import EEAMessageFactory as _
 
 def compare(a, b):
     """ Compare lower values
@@ -368,18 +369,15 @@ class CountableWidget(Widget):
             if not value:
                 res[value] = len(brains)
                 continue
-            if isinstance(value, unicode):
-                try:
-                    value = value.encode('utf-8')
-                except Exception:
-                    continue
-            rset = ctool.apply_index(self.context, index, value)[0]
+            normalized_value = atdx_normalize(value)
+            rset = ctool.apply_index(self.context, index, normalized_value)[0]
             rset = IISet(rset)
             rset = weightedIntersection(brains, rset)[1]
-            if isinstance(value, str):
-                try:
-                    value = value.decode('utf-8')
-                except Exception:
-                    continue
-            res[value] = len(rset)
+            if isinstance(value, unicode):
+                res[value] = len(rset)
+            elif isinstance(normalized_value, unicode):
+                res[normalized_value] = len(rset)
+            else:
+                unicode_value = value.decode('utf-8')
+                res[unicode_value] = len(rset)
         return res

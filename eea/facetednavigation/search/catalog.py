@@ -22,6 +22,7 @@ class FacetedCatalog(object):
             return IIBucket(), (index_id,)
 
         rset = apply_index({index_id: value})
+
         if not rset:
             return IIBucket(), (index_id,)
 
