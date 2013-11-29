@@ -4,6 +4,15 @@ Changelog
 6.6-dev - (unreleased)
 ----------------------
 
+* Bug fix: fix import of '0' values for boolean properties
+  which were considered as True when.
+  [thomasdesvenain]
+
+* Feature: Add a new widget : BooleanWidget
+  We get a checkbox widget to filter contents
+  which gets a true boolean value for an index (FieldIndex or BooleanIndex).
+  [thomasdesvenain]
+
 * Bug fix: in search mode, search results were not kept when we go back.
   [thomasdesvenain]
 

@@ -59,6 +59,10 @@ class Criterion(object):
         for key, value in kwargs.items():
             if isinstance(value, str):
                 value = value.decode('utf-8', 'replace')
+
+            if value == u'0':
+                value = u""
+
             setattr(self, key, value)
 
     def getId(self):
