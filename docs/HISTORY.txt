@@ -4,6 +4,9 @@ Changelog
 6.6-dev - (unreleased)
 ----------------------
 
+* Feature: Add a checkbox field to filter on a true boolean value with a checkbox.
+  [thomasdesvenain]
+
 * Bug fix: in search mode, search results were not kept when we go back.
   [thomasdesvenain]
 
