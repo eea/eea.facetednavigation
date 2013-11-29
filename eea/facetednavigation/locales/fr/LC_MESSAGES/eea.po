@@ -926,7 +926,7 @@ msgstr "dans tous les éléments"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
-msgstr "n'importe lequel"
+msgstr "au moins un"
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
@@ -934,7 +934,7 @@ msgstr "dans les résultats courants"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
-msgstr "correspond"
+msgstr "correspondance"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
