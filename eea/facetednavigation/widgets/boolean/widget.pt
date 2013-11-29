@@ -1,0 +1,46 @@
+<div class="faceted-widget faceted-checkboxes-widget faceted-boolean-widget" style="display: none"
+     i18n:domain="eea" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  hidezerocount python:view.hidezerocount;
+  sortcountable python:view.sortcountable;
+  css string:faceted-widget faceted-checkboxes-widget;
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  css python:view.countable and css + ' faceted-count' or css;
+  title python:view.translate(view.data.get('title', ''));
+  "
+  tal:attributes="id string:${wid}_widget; class css;">
+
+<fieldset class="widget-fieldset">
+  <legend tal:content="title" i18n:translate="">HTML Widget</legend>
+  <tal:facet on-error="structure python:error_view(error=error, cid=wid)">
+
+  <form action="." method="get">
+
+  <ul>
+      <li tal:define="
+        term_id view/index_id;
+        chbox_id string:${wid}_${term_id};
+        chbox_id python:view.cleanup(chbox_id);
+        option_id string:${wid}_option_${term_id};
+        "
+        tal:attributes="id option_id"
+        >
+        <input type="checkbox" class="faceted-noborder"
+               value="1"
+               tal:attributes="
+          checked view/selected;
+          name string:${wid}:int;
+          id chbox_id;
+          title title;" />
+        <label tal:attributes="for chbox_id; title title"
+          tal:content="title">term label</label>
+      </li>
+  </ul>
+  </form>
+
+  </tal:facet>
+
+</fieldset>
+</div>
