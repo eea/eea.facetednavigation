@@ -82,7 +82,7 @@ class Javascript(object):
             for atfield in atfields:
                 atwidget = atfield.widget
                 helper = getattr(atwidget, 'helper_js', None)
-                 # We expect the attribute value to be a iterable.
+                # We expect the attribute value to be a iterable.
                 if not helper:
                     continue
                 res.extend(item for item in helper if item not in res)
