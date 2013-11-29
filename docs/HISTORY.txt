@@ -21,6 +21,10 @@ Changelog
 
 * Bug fix: Added translations for 'Current filters'.
   [prospchr]
+* Feature: Radio and checkbox widgets query for unicode or encoded strings
+  depending on the availability of plone.app.contenttypes. This is a
+  requirement to work with dexterity
+  [do3cc]
 
 6.5 - (2013-11-20)
 ------------------

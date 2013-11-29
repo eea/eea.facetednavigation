@@ -1,15 +1,16 @@
 """ Text widget
 """
+from Products.Archetypes.Field import BooleanField
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import StringField
 from Products.Archetypes.public import StringWidget
+from Products.Archetypes.Widget import BooleanWidget
 
+from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation import EEAMessageFactory as _
-from Products.Archetypes.Field import BooleanField
-from Products.Archetypes.Widget import BooleanWidget
 
 
 EditSchema = Schema((
