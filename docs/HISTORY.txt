@@ -4,6 +4,9 @@ Changelog
 6.6-dev - (unreleased)
 ----------------------
 
+* Bug fix: in search mode, search results were not kept when we go back.
+  [thomasdesvenain]
+
 * Feature: French translations updates.
   [thomasdesvenain]
 

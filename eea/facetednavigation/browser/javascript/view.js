@@ -167,7 +167,12 @@ Faceted.Form = {
       Faceted.Query.b_start = 0;
     }
 
-    if(this.mode === 'search'){
+    if(this.mode === 'search' && !has_hash){
+    	/* if we are in search mode
+    	 * and we don't have a request set up in URL
+    	 * (this the case when we click 'back' button
+    	 * we don't execute an initial search
+    	 */
       return;
     }
 
