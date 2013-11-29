@@ -269,7 +269,7 @@ msgstr "Désactiver la recherche à facettes"
 
 #: ../../facetednavigation/settings/menu.py:109
 msgid "Disable inheriting configuration"
-msgstr ""
+msgstr "Désactiver l'héritage de la configuration"
 
 #: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
@@ -313,7 +313,7 @@ msgstr "Activer afficher/masquer les critères"
 
 #: ../../facetednavigation/settings/menu.py:110
 msgid "Enable inheriting configuration "
-msgstr ""
+msgstr "Activer l'héritage de la configuration"
 
 #: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
@@ -432,7 +432,7 @@ msgstr "Masqué"
 
 #: ../../facetednavigation/widgets/radio/widget.py:52
 msgid "Hide 'All' option"
-msgstr ""
+msgstr "Masquer l'option 'Tous'"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "Hide filters"
@@ -450,7 +450,7 @@ msgstr "Masquer la widget"
 
 #: ../../facetednavigation/widgets/radio/widget.py:53
 msgid "If this checkbox is checked, hides the All option"
-msgstr ""
+msgstr "Si cette case est cochée, masque l'option 'Tous'"
 
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
@@ -470,11 +470,11 @@ msgstr "Importer la configuration"
 
 #: ../../facetednavigation/settings/menu.py:176
 msgid "Inheriting configuration if is now enabled"
-msgstr ""
+msgstr "L'héritage de configuration a été activée"
 
 #: ../../facetednavigation/settings/menu.py:179
 msgid "Inheriting configuration is now disabled"
-msgstr ""
+msgstr "L'héritage de configuration a été desactivée"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -487,7 +487,7 @@ msgstr "Moins de filtres"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:49
 msgid "Let the end-user choose to search with AND or OR between elements"
-msgstr ""
+msgstr "Permettez aux utilisateurs de choisir entre une recherche avec ET ou avec OU"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
@@ -597,7 +597,7 @@ msgstr "Nombre maximum d'éléments visibles dans la widget"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
 msgid "Operator visible"
-msgstr ""
+msgstr "Opérateur visible"
 
 #: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
@@ -618,7 +618,7 @@ msgstr "Chemin de la macro du portlet"
 
 #: ../../facetednavigation/browser/app/exportimport.py:37
 msgid "Please provide a valid xml file"
-msgstr ""
+msgstr "Veuillez fournir un fichier xml valide"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -918,7 +918,7 @@ msgstr "Hier"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "all"
-msgstr ""
+msgstr "tous"
 
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
@@ -926,7 +926,7 @@ msgstr "dans tous les éléments"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
-msgstr ""
+msgstr "n'importe lequel"
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
@@ -934,9 +934,9 @@ msgstr "dans les résultats courants"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
-msgstr ""
+msgstr "correspond"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
-msgstr ""
+msgstr "correspond à un / tous les filtres ci-dessous"
 

@@ -3,6 +3,10 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
+
+* Feature: French translations updates.
+  [thomasdesvenain]
+
 * Bug fix: Added translations for 'Current filters'.
   [prospchr]
 
