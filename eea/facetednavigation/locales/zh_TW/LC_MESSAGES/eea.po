@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
 "POT-Creation-Date: 2013-09-18 12:41+0000\n"
-"PO-Revision-Date: 2011-10-17 14:13+0800\n"
+"PO-Revision-Date: 2013-12-07 22:22+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,43 +16,43 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "1 month ago"
-msgstr "1个月前"
+msgstr "一個月前"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "1 week ago"
-msgstr "1个星期前"
+msgstr "一週前"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 year ago"
-msgstr "1年前"
+msgstr "一年前"
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "2 days ago"
-msgstr "2天前"
+msgstr "兩天前"
 
 #: ../../facetednavigation/widgets/date/widget.py:23
 msgid "2 weeks ago"
-msgstr "2个星期前"
+msgstr "兩週前"
 
 #: ../../facetednavigation/widgets/date/widget.py:18
 msgid "2 years ago"
-msgstr "2年前"
+msgstr "兩年前"
 
 #: ../../facetednavigation/widgets/date/widget.py:21
 msgid "3 months ago"
-msgstr "3个月前"
+msgstr "三個月前"
 
 #: ../../facetednavigation/widgets/date/widget.py:25
 msgid "5 days ago"
-msgstr "5天前"
+msgstr "五天前"
 
 #: ../../facetednavigation/widgets/date/widget.py:20
 msgid "6 months ago"
-msgstr "6个月前"
+msgstr "六個月前"
 
 #: ../../facetednavigation/browser/template/configure.pt:68
 msgid "Add"
-msgstr "加"
+msgstr "新增"
 
 #: ../../facetednavigation/browser/template/configure.pt:24
 msgid "Add new filter"
@@ -74,7 +74,7 @@ msgstr "全選"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:52
 msgid "Alphabetic"
-msgstr "按字母排列"
+msgstr "按英文排列"
 
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
@@ -85,14 +85,14 @@ msgstr "確定要刪除 ${widget} 嗎?"
 #: ../../facetednavigation/widgets/radio/widget.py:42
 #: ../../facetednavigation/widgets/select/widget.py:39
 msgid "Catalog"
-msgstr "编号"
+msgstr "Catalog"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:30
 #: ../../facetednavigation/widgets/checkbox/widget.py:26
 #: ../../facetednavigation/widgets/date/widget.py:50
 msgid "Catalog index"
-msgstr "目录索引"
+msgstr "Catalog 索引"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:31
@@ -103,11 +103,11 @@ msgstr "用來搜尋的 Catalog 索引"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:19
 msgid "Catalog query"
-msgstr "目录查询"
+msgstr "Catalog 搜尋"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:101
 msgid "Checkboxes"
-msgstr "勾选框"
+msgstr "核選方框"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Cloud"
@@ -140,7 +140,7 @@ msgstr "內容列表"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:61
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
-msgstr "控制范围内yearsdisplayed的一年下拉：无论是相对于今天的年（-NN：+ NN），相对于在当前选定的一年（Ç-NN：Ç+ NN），绝对（分：分），或组​​合这些格式（分：-NN）。"
+msgstr "控制 yearsdisplayed 的變數範圍：可以是今年的相對值 (-nn:+nn)，某一年的相對值 (c-nn:c+nn)，絕對值 (nnnn:nnnn)，或是混合格式。"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:299
@@ -149,7 +149,7 @@ msgstr "顯示數量"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:30
 msgid "Counters"
-msgstr "计数器"
+msgstr "計數"
 
 #: ../../facetednavigation/browser/template/configure.pt:123
 msgid "Criterion details"
@@ -174,20 +174,20 @@ msgstr "日期區間"
 
 #: ../../facetednavigation/widgets/debug/widget.py:33
 msgid "Debugger"
-msgstr "偵錯"
+msgstr "偵錯方框"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:51
 msgid "Default daterange (e.g. '2009/12/01=>2009/12/31')"
-msgstr "默认的日期范围（例如'2009 / 12/01 => 2009/12/31）"
+msgstr "預設的日期範圍 (例如 '2009/12/01=>2009/12/31')"
 
 #: ../../facetednavigation/widgets/date/widget.py:60
 msgid "Default daterange (e.g. 'now-365=>now+1' which means 'Starting one year ago until tomorrow')"
-msgstr "默认的日期范围（例如'-365 => +1“的意思是”从一年前开始，直到明天）"
+msgstr "預設的日期範圍 (例如 'now-365=>now+1' 代表從一年前到明天)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/etag/widget.py:17
 msgid "Default etag"
-msgstr "默认的etag"
+msgstr "預設的 etag"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:90
@@ -197,12 +197,12 @@ msgstr "預設項目"
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:40
 msgid "Default letter to be selected"
-msgstr "被选中的默认信"
+msgstr "預設選取的英文字母"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:38
 msgid "Default operator"
-msgstr "操作符"
+msgstr "預設的操作元"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:44
@@ -211,7 +211,7 @@ msgstr "預設要搜尋的路徑 (根目錄的相對位置)"
 
 #: ../../facetednavigation/widgets/range/widget.py:34
 msgid "Default range (e.g. '1 => 3')"
-msgstr "预设范围（例如“1 => 3'）"
+msgstr "預設範圍 (例如 '1 => 3')"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:48
@@ -257,15 +257,15 @@ msgstr "搜尋的深度: 0 代表同一層 -1 代表所有子目錄 其他正整
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted navigation"
-msgstr "停用智慧導覽"
+msgstr "停用 Faceted 導覽"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Disable faceted search"
-msgstr "禁用面搜索"
+msgstr "停用 Faceted 搜尋"
 
 #: ../../facetednavigation/settings/menu.py:109
 msgid "Disable inheriting configuration"
-msgstr ""
+msgstr "停用上層設定"
 
 #: ../../facetednavigation/settings/menu.py:61
 msgid "Disable left portlets"
@@ -277,39 +277,39 @@ msgstr "停用右側方框"
 
 #: ../../facetednavigation/settings/menu.py:91
 msgid "Disable smart facets hiding"
-msgstr "禁用智能方面隐藏"
+msgstr "停用 smart facets hiding"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:300
 msgid "Display number of results near each option"
-msgstr "显示每个选项的结果附近的数"
+msgstr "依選項顯示數量"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:62
 msgid "Display widget in section"
-msgstr "在 section 顯示部件"
+msgstr "在區段顯示部件"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
-msgstr "显示第部件。"
+msgstr "在區段顯示部件。"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
-msgstr "啟用智慧導覽"
+msgstr "啟用 Faceted 導覽"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted search"
-msgstr "使面搜索"
+msgstr "啟用 Faceted 搜尋"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/criteria/widget.py:15
 msgid "Enable hide/show criteria"
-msgstr "启用隐藏/显示标准"
+msgstr "啟用 Hide/Show 條件"
 
 #: ../../facetednavigation/settings/menu.py:110
 msgid "Enable inheriting configuration "
-msgstr ""
+msgstr "啟用上層設定的沿用"
 
 #: ../../facetednavigation/settings/menu.py:60
 msgid "Enable left portlets"
@@ -321,7 +321,7 @@ msgstr "啟用右側方框"
 
 #: ../../facetednavigation/settings/menu.py:90
 msgid "Enable smart facets hiding"
-msgstr "启用智能方面隐藏"
+msgstr "啟用 Smart Facets Hiding"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -352,50 +352,50 @@ msgstr "匯出"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
-msgstr "智慧導覽條件"
+msgstr "Faceted 條件"
 
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
-msgstr "智慧導覽的設定值"
+msgstr "Faceted 導覽的設定值"
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
-msgstr "智慧導覽已停用"
+msgstr "Faceted 導覽已停用"
 
 #: ../../facetednavigation/subtypes/subtyper.py:132
 msgid "Faceted navigation enabled"
-msgstr "智慧導覽已啟用"
+msgstr "Faceted 導覽已啟用"
 
 #: ../../facetednavigation/subtypes/subtyper.py:175
 msgid "Faceted search disabled"
-msgstr "禁用面搜索"
+msgstr "Faceted 搜尋已停用"
 
 #: ../../facetednavigation/subtypes/subtyper.py:167
 msgid "Faceted search enabled"
-msgstr "面搜索启用"
+msgstr "Faceted 搜尋已啟用"
 
 #. Default: ""
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
-msgstr "智慧導覽設定"
+msgstr "Faceted 導覽設定"
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
-msgstr "工厂"
+msgstr "Factory"
 
 #: ../../facetednavigation/browser/app/configure.py:78
 msgid "Filter added"
-msgstr "过滤器添加"
+msgstr "過濾條件已新增"
 
 #: ../../facetednavigation/browser/app/configure.py:162
 msgid "Filter deleted"
-msgstr "过滤器删除"
+msgstr "過濾條件已刪除"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/sorting/widget.py:20
 msgid "Filter from vocabulary"
-msgstr "从词汇过滤"
+msgstr "從詞彙過濾"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:28
 msgid "Filters"
@@ -408,18 +408,18 @@ msgstr "過濾條件已刪除"
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:43
 msgid "Friendly name"
-msgstr "友好名称"
+msgstr "方框標題"
 
 #: ../../facetednavigation/widgets/date/widget.py:124
 msgid "Future"
-msgstr "n.将来,未来"
+msgstr "未來"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:67
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Get unique values from catalog as an alternative for vocabulary"
-msgstr "从目录中获取唯一值作为替代词汇"
+msgstr "使用 Catalog 索引值作為詞彙"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:68
@@ -428,7 +428,7 @@ msgstr "隱藏"
 
 #: ../../facetednavigation/widgets/radio/widget.py:52
 msgid "Hide 'All' option"
-msgstr ""
+msgstr "隱藏 'All' 選項"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:16
 msgid "Hide filters"
@@ -446,11 +446,11 @@ msgstr "隱藏部件"
 
 #: ../../facetednavigation/widgets/radio/widget.py:53
 msgid "If this checkbox is checked, hides the All option"
-msgstr ""
+msgstr "勾選的話，會隱藏 All 選項。"
 
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
-msgstr ""
+msgstr "勾選的話，會隱藏所有或現有項目的過濾條件。"
 
 #: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
@@ -466,11 +466,11 @@ msgstr "匯入設定"
 
 #: ../../facetednavigation/settings/menu.py:176
 msgid "Inheriting configuration if is now enabled"
-msgstr ""
+msgstr "設定沿用功能已啟用"
 
 #: ../../facetednavigation/settings/menu.py:179
 msgid "Inheriting configuration is now disabled"
-msgstr ""
+msgstr "設定沿用功能已停用"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
@@ -483,7 +483,7 @@ msgstr "更少"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:49
 msgid "Let the end-user choose to search with AND or OR between elements"
-msgstr ""
+msgstr "讓使用者能用 AND 或 OR 進行搜尋。"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:21
 msgid "List"
@@ -541,39 +541,39 @@ msgstr "導覽樹的起始點 (根目錄的相對位置，例如 SITE/data-and-m
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:67
 msgid "Navigation tree theme"
-msgstr "导航树主题"
+msgstr "導覽樹佈景主題"
 
 #: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Next 2 days"
-msgstr "未来2天"
+msgstr "未來兩天"
 
 #: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next 2 weeks"
-msgstr "接下来的2周"
+msgstr "未來兩週"
 
 #: ../../facetednavigation/widgets/date/widget.py:40
 msgid "Next 2 years"
-msgstr "未来2年"
+msgstr "未來兩年"
 
 #: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next 3 months"
-msgstr "未来3个月"
+msgstr "未來三個月"
 
 #: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next 5 days"
-msgstr "未来5天"
+msgstr "未來五天"
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next 6 months"
-msgstr "未来6个月"
+msgstr "未來六個月"
 
 #: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next month"
-msgstr "下个月"
+msgstr "下個月"
 
 #: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next week"
-msgstr "下周."
+msgstr "下週"
 
 #: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next year"
@@ -582,7 +582,7 @@ msgstr "明年"
 #. Default: ""
 #: ../../facetednavigation/browser/app/exportimport.py:84
 msgid "No action provided"
-msgstr "没有行动提供"
+msgstr "沒有動作被提供"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:76
@@ -593,7 +593,7 @@ msgstr "部件裡顯示的項目數量"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
 msgid "Operator visible"
-msgstr ""
+msgstr "顯示操作元"
 
 #: ../../facetednavigation/browser/template/configure.pt:124
 msgid "Order"
@@ -601,7 +601,7 @@ msgstr "順序"
 
 #: ../../facetednavigation/widgets/date/widget.py:111
 msgid "Past"
-msgstr "n.过去的,结束了的"
+msgstr "過往"
 
 #: ../../facetednavigation/widgets/path/widget.py:79
 msgid "Path"
@@ -610,11 +610,11 @@ msgstr "路徑"
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:20
 msgid "Path to portlet macro"
-msgstr "portlet的宏观路径"
+msgstr "Portlet Macro 的路徑"
 
 #: ../../facetednavigation/browser/app/exportimport.py:37
 msgid "Please provide a valid xml file"
-msgstr ""
+msgstr "請提供 XML 檔案"
 
 #: ../../facetednavigation/widgets/portlet/widget.py:31
 msgid "Plone portlet"
@@ -623,23 +623,23 @@ msgstr "資訊方框"
 #. Default: ""
 #: ../../facetednavigation/widgets/portlet/widget.py:19
 msgid "Portlet macro"
-msgstr "Portlet的宏"
+msgstr "Portlet Macro"
 
 #: ../../facetednavigation/settings/menu.py:149
 msgid "Portlets left column is hidden now"
-msgstr "左側資訊方框被停用了"
+msgstr "左側資訊方框已停用"
 
 #: ../../facetednavigation/settings/menu.py:146
 msgid "Portlets left column is visible now"
-msgstr "左側資訊方框被啟用了"
+msgstr "左側資訊方框已啟用"
 
 #: ../../facetednavigation/settings/menu.py:159
 msgid "Portlets right column is hidden now"
-msgstr "右側資訊方框被停用了"
+msgstr "右側資訊方框已停用"
 
 #: ../../facetednavigation/settings/menu.py:156
 msgid "Portlets right column is visible now"
-msgstr "右側資訊方框被啟用了"
+msgstr "右側資訊方框已啟用"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:42
@@ -654,27 +654,27 @@ msgstr "部件的位置"
 
 #: ../../facetednavigation/widgets/interfaces.py:32
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
-msgstr "Python中的一个工厂，可以创建实现对象的名称。这必须是一个对象在一个模块中使用带点名称。"
+msgstr "Factory 的名稱，可用來建立實作的物件，它必須使用 dotted name 來指定模組裡的物件。"
 
 #: ../../facetednavigation/widgets/radio/widget.py:91
 msgid "Radio"
-msgstr "收音机"
+msgstr "Radio"
 
 #: ../../facetednavigation/widgets/range/widget.py:45
 msgid "Range"
-msgstr "系列"
+msgstr "範圍"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:28
 msgid "Remove all"
-msgstr "移除全部"
+msgstr "刪除全部"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:25
 msgid "Remove all filters"
-msgstr "删除全部过滤器"
+msgstr "删除全部過濾條件"
 
 #: ../../facetednavigation/widgets/resultsfilter/widget.py:34
 msgid "Results Filter"
-msgstr ""
+msgstr "搜尋結果的過濾條件"
 
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:59
 msgid "Results per page"
@@ -683,28 +683,28 @@ msgstr "每頁顯示數量"
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:30
 msgid "Results per page ending value"
-msgstr "结果每页结束值"
+msgstr "搜尋結果每頁的結束值"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:21
 msgid "Results per page starting value"
-msgstr "每页的结果起始值"
+msgstr "搜尋結果每頁的起始值"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/widget.py:39
 msgid "Results per page step"
-msgstr "结果每页步骤"
+msgstr "搜尋結果每頁的間距"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
-msgstr "反向"
+msgstr "相反順序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:82
 #: ../../facetednavigation/widgets/radio/widget.py:70
 #: ../../facetednavigation/widgets/select/widget.py:47
 msgid "Reverse options"
-msgstr "反向选项"
+msgstr "相反順序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:33
@@ -726,7 +726,7 @@ msgstr "搜尋深度"
 
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
-msgstr ""
+msgstr "以所有條件來搜尋"
 
 #. Default: "Search with AND/OR between elements"
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
@@ -737,11 +737,11 @@ msgstr "搜尋功能支援 AND/OR 操作元"
 #: ../../facetednavigation/browser/template/configure.pt:54
 #: ../../facetednavigation/widgets/widget.py:61
 msgid "Section"
-msgstr "部分"
+msgstr "區段"
 
 #: ../../facetednavigation/widgets/select/widget.py:67
 msgid "Select"
-msgstr "selectable?"
+msgstr "選擇方框"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:112
@@ -750,26 +750,26 @@ msgstr "全選"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:19
 msgid "Show filters"
-msgstr "顯示條件"
+msgstr "顯示過濾條件"
 
 #: ../../facetednavigation/settings/menu.py:169
 msgid "Smart facets hiding is now disabled"
-msgstr "智能方面的藏身现在被禁用"
+msgstr "Smart Facets Hiding 已停用"
 
 #: ../../facetednavigation/settings/menu.py:166
 msgid "Smart facets hiding is now enabled"
-msgstr "智能方面的藏身现在已启用"
+msgstr "Smart Facets Hiding 已啟用"
 
 #: ../../facetednavigation/widgets/widget.py:306
 msgid "Sort by countable"
-msgstr ""
+msgstr "依計數結果排序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:83
 #: ../../facetednavigation/widgets/radio/widget.py:71
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Sort options reversed"
-msgstr "排列順序反向"
+msgstr "相反順序排列"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:43
 msgid "Sorting"
@@ -796,11 +796,11 @@ msgstr "間距"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Sync faceted translations"
-msgstr "同步方位的翻译"
+msgstr "同步翻譯"
 
 #: ../../facetednavigation/widgets/tal/widget.py:60
 msgid "TAL Expression"
-msgstr "TAL表达"
+msgstr "TAL 表示式"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:158
 msgid "Tags Cloud"
@@ -809,11 +809,11 @@ msgstr "標籤雲"
 #. Default: ""
 #: ../../facetednavigation/widgets/tal/widget.py:39
 msgid "Tal Expression"
-msgstr "TAL表达式"
+msgstr "TAL 表示式"
 
 #: ../../facetednavigation/widgets/text/widget.py:51
 msgid "Text field"
-msgstr "文字字段"
+msgstr "文字欄位"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:68
@@ -822,15 +822,15 @@ msgstr "部件要搭配的佈景主題"
 
 #: ../../facetednavigation/widgets/widget.py:314
 msgid "This option works only if 'count results' is enabled"
-msgstr "此选项仅适用于“计数结果”启用"
+msgstr "啟用「顯示數量」時，這個設定值才會生效。"
 
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
-msgstr "这个小工具提供的根是无法访问或它有没有folderish的儿童将被忽略。"
+msgstr "當條件不符合時，這個部件不會顯示。"
 
 #: ../../facetednavigation/browser/template/error.pt:3
 msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
-msgstr "在视图模式发生了错误，而试图使其这个小工具将被忽略。有关详细信息，请检查服务器日志文件。您也可以尝试修改窗口小部件配置在看什么财产造成这个问题。"
+msgstr "執行時發生錯誤的話，這個部件不會顯示。想了解細節的話，請查看 log 檔案，也可以修改設定值，查看哪個設定值造成錯誤。"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:44
@@ -861,20 +861,20 @@ msgstr "部件的類型"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:60
 msgid "UI Calendar years range"
-msgstr "UI日历年的范围"
+msgstr "日曆的年份範圍"
 
 #: ../../facetednavigation/widgets/criteria/widget.py:16
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
-msgstr "取消选中此复选框，如果你不想隐藏/显示标准配备上启用了这个小部件"
+msgstr "不想 Hide/Show 條件功能被啟用的話，請取消勾選。"
 
 #: ../../facetednavigation/widgets/widget.py:307
 msgid "Use the results counter for sorting"
-msgstr ""
+msgstr "依計數結果來排序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/debug/widget.py:22
 msgid "Visible to"
-msgstr "可见"
+msgstr "顯示"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:57
@@ -915,25 +915,25 @@ msgstr "昨天"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "all"
-msgstr ""
+msgstr "全部"
 
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
-msgstr "所有项目"
+msgstr "所有項目"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "any"
-msgstr ""
+msgstr "任何"
 
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
-msgstr "在目前的结果"
+msgstr "在現行結果裡"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:26
 msgid "match"
-msgstr ""
+msgstr "符合"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:25
 msgid "match any/all filters bellow"
-msgstr ""
+msgstr "符合 Any/All 過濾條件"
 
