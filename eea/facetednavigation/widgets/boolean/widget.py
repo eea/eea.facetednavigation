@@ -61,9 +61,13 @@ class Widget(CountableWidget):
         return self.default or False
 
     def vocabulary(self):
-        return [(1,1)]
+        """ Vocabulary
+        """
+        return [(1, 1)]
 
     def index_id(self):
+        """ Index
+        """
         return self.data.get('index', '').lower()
 
     def query(self, form):

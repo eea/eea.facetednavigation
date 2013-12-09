@@ -146,7 +146,7 @@ Let's check exported
        <property name="position">right</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
-       <property name="count">0</property>
+       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
@@ -229,7 +229,7 @@ Now update it
        <property name="position">right</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
-       <property name="count">0</property>
+       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>
@@ -301,7 +301,7 @@ Let's see our new configuration
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">0</property>
-       <property name="count">0</property>
+       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="cloud">sphere</property>

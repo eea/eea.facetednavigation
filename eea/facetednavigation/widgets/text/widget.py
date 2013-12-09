@@ -8,7 +8,6 @@ from Products.Archetypes.public import StringWidget
 from Products.Archetypes.Widget import BooleanWidget
 
 from eea.facetednavigation import EEAMessageFactory as _
-from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
