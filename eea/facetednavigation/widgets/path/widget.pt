@@ -1,4 +1,4 @@
-<div class="faceted-widget faceted-path-widget" style="display: none" 
+<div class="faceted-widget faceted-path-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
@@ -6,7 +6,7 @@
   theme python:view.data.get('theme', 'green');
   theme_url string:${site_url}/++resource++jquery.jstree/themes/${theme}/style.css;
   hidden python:view.hidden;
-  default python:view.default or '';
+  default_value python:view.default or '';
   css string:faceted-widget faceted-path-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
@@ -19,7 +19,7 @@
     <input type="text" tal:attributes="
       name string:${wid};
       id string:${wid};
-      value python:default;" />
+      value default_value;" />
     <span style="display: none"
       tal:attributes="
       id string:${wid}-theme;

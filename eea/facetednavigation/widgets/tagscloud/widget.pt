@@ -1,10 +1,10 @@
-<div class="faceted-widget faceted-tagscloud-widget" style="display: none" 
+<div class="faceted-widget faceted-tagscloud-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
-  default python:view.default or '';
+  default_value python:view.default or '';
   css string:faceted-widget faceted-tagscloud-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
@@ -12,8 +12,8 @@
   cloud python:view.data.get('cloud', 'list');
   sizemin python:view.data.get('sizemin', 10);
   sizemax python:view.data.get('sizemax', 20);
-  colormin python:view.data.get('colormin', 'A1BE7E') or 'A1BE7E'; 
-  colormax python:view.data.get('colormax', '95B229') or '95B229'; 
+  colormin python:view.data.get('colormin', 'A1BE7E') or 'A1BE7E';
+  colormax python:view.data.get('colormax', '95B229') or '95B229';
   height python:view.data.get('height', 200);
   maxitems python:int(view.data.get('maxitems', 0)) or 0;
   kwargs options/kwargs|python:{};
@@ -28,7 +28,7 @@
   all python:vocabulary.next();">
   <ul tal:attributes="id string:${wid}" class="tags-cloud">
       <li tal:attributes="
-       class python:default == '' and 'faceted-tag-selected' or '';
+       class python:default_value == '' and 'faceted-tag-selected' or '';
        value python:(all[2] == -1) and view.randint or all[2];
        title string:All;
        id string:${wid}all;" i18n:attributes="title"
@@ -41,7 +41,7 @@
         tag_label python:view.translate(tag_label);
         tag_count python:(tag[2] == -1) and view.randint or tag[2]+1;"
         tal:attributes="
-        class python:tag_id == default and 'faceted-tag-selected' or '';
+        class python:tag_id == default_value and 'faceted-tag-selected' or '';
         value python:tag_count;
         title tag_label;
         id string:${wid}${tag_id}"
@@ -55,8 +55,8 @@
     <span tal:attributes="id string:${wid}-cloud" tal:content="cloud" />
     <span tal:attributes="id string:${wid}-sizemin" tal:content="sizemin" />
     <span tal:attributes="id string:${wid}-sizemax" tal:content="sizemax" />
-    <span tal:attributes="id string:${wid}-colormin" tal:content="colormin" /> 
-    <span tal:attributes="id string:${wid}-colormax" tal:content="colormax" /> 
+    <span tal:attributes="id string:${wid}-colormin" tal:content="colormin" />
+    <span tal:attributes="id string:${wid}-colormax" tal:content="colormax" />
     <span tal:attributes="id string:${wid}-height" tal:content="height" />
   </div>
 </tal:widget>

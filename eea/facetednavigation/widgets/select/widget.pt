@@ -5,7 +5,7 @@
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
   sortcountable python:view.sortcountable;
-  default python:view.default or '';
+  default_value python:view.default or '';
   css string:faceted-widget faceted-select-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
@@ -35,7 +35,7 @@
         chbox_id string:${wid}_${term_id};
         chbox_id python:view.cleanup(chbox_id);"
         tal:attributes="
-        selected python:term_id == default;
+        selected python:term_id == default_value;
         value term_id;
         title term_label;"
         tal:content="term_label" />

@@ -1,11 +1,11 @@
-<div class="faceted-widget faceted-sorting-widget" style="display: none" 
+<div class="faceted-widget faceted-sorting-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
-  default python:view.default;
-  default_index python:len(default) > 0 and default[0] or '';
-  default_reverse python:len(default) > 1 and default[1] or None;
+  default_value python:view.default;
+  default_index python:len(default_value) > 0 and default_value[0] or '';
+  default_reverse python:len(default_value) > 1 and default_value[1] or None;
   css string:faceted-widget faceted-sorting-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">

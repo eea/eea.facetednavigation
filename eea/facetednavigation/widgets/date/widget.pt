@@ -1,11 +1,11 @@
-<div class="faceted-widget faceted-date-widget" style="display: none" 
+<div class="faceted-widget faceted-date-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
-  default python:view.default;
-  default_from python:default[0];
-  default_to python:default[1];
+  default_value python:view.default;
+  default_from python:default_value[0];
+  default_to python:default_value[1];
   vocabulary python:view.select_vocabulary;
   css string:faceted-widget faceted-date-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;"

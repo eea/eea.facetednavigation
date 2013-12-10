@@ -4,9 +4,9 @@
   wid python:view.data.getId();
   yearRange python:view.cal_year_range;
   hidden python:view.hidden;
-  default python:view.default;
-  default_start python:default[0];
-  default_end python:default[1];
+  default_value python:view.default;
+  default_start python:default_value[0];
+  default_end python:default_value[1];
   css string:faceted-widget faceted-daterange-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
