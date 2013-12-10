@@ -68,7 +68,7 @@ class Widget(AbstractWidget):
     def default(self):
         """ Get default values
         """
-        value = self.data.get('default', 0)
+        value = self.data.get('default', 0) or 0
         try:
             return int(value)
         except (TypeError, ValueError), err:
@@ -98,7 +98,7 @@ class Widget(AbstractWidget):
         """ Vocabulary
         """
         try:
-            start = int(self.data.get('start', 0))
+            start = int(self.data.get('start', 0) or 0)
         except (TypeError, ValueError), err:
             logger.exception(err)
             start = 0
