@@ -4,8 +4,8 @@ Changelog
 6.6-dev - (unreleased)
 ----------------------
 
-* Bug fix: fix import of '0' values for boolean properties
-  which were considered as True when.
+* Bug fix: fix xml import of '0' values for boolean properties
+  which were considered as True.
   [thomasdesvenain]
 
 * Feature: Add a new widget : BooleanWidget
