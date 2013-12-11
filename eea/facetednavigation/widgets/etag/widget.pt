@@ -1,9 +1,9 @@
-<div class="faceted-widget faceted-etag-widget" style="display: none" 
+<div class="faceted-widget faceted-etag-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
-  default python:view.default or '';
+  default_value python:view.default or '';
   css string:faceted-widget faceted-etag-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
@@ -17,7 +17,7 @@
     <input type="text" tal:attributes="
       name string:${wid};
       id string:${wid};
-      value python:default;
+      value default_value;
     "/>
     </form>
   </div>

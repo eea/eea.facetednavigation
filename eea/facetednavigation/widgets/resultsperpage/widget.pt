@@ -1,9 +1,9 @@
-<div class="faceted-widget faceted-resultsperpage-widget" style="display: none" 
+<div class="faceted-widget faceted-resultsperpage-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
-  default python:view.default or 0;
+  default_value python:view.default or 0;
   css string:faceted-widget faceted-resultsperpage-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   vocabulary python:view.vocabulary()"
@@ -24,7 +24,7 @@
         chbox_id string:${wid}_${term_id};
         chbox_id python:view.cleanup(chbox_id);"
         tal:attributes="
-        selected python:term_id == default;
+        selected python:term_id == default_value;
         value term_id;
         title term_label;"
         tal:content="term_label" />

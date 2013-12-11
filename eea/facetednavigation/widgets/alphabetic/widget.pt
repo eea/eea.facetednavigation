@@ -5,7 +5,7 @@
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
   sortcountable python:view.sortcountable;
-  default python:view.default or '';
+  default_value python:view.default or '';
   css string:faceted-widget faceted-alphabetic-widget;
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
@@ -21,7 +21,7 @@
       tal:on-error="structure python:error_view(error=error, cid=wid)"
       tal:attributes="id wid">
       <span class="faceted_letter" tal:define="
-          letter_css python:default == '' and 'faceted_letter faceted_letter_selected' or 'faceted_letter'"
+          letter_css python:default_value == '' and 'faceted_letter faceted_letter_selected' or 'faceted_letter'"
           tal:attributes="
             class letter_css;
             title string:All;
@@ -31,7 +31,7 @@
           letter_id python:letter[0];
           capital_letter python:letter[1];
           letter_css string:faceted_letter;
-          letter_css python:capital_letter == default and letter_css + ' faceted_letter_selected' or letter_css;"
+          letter_css python:capital_letter == default_value and letter_css + ' faceted_letter_selected' or letter_css;"
           tal:content="capital_letter"
           tal:attributes="
             class letter_css;
