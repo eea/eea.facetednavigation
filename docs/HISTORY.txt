@@ -4,7 +4,8 @@ Changelog
 6.6-dev - (unreleased)
 ----------------------
 
-* Fix field default value rendering with chameleon.
+* Fix field default value rendering with chameleon,
+  avoiding use of 'default' name in tal, wich is a reserved keyword.
   [thomasdesvenain]
 
 * Bug fix: fix xml import of '0' values for boolean properties
