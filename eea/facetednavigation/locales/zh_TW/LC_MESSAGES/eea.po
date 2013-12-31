@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
 "POT-Creation-Date: 2013-09-18 12:41+0000\n"
-"PO-Revision-Date: 2013-12-07 22:22+0800\n"
+"PO-Revision-Date: 2013-12-31 23:42+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -60,7 +60,7 @@ msgstr "新增過濾條件"
 
 #: ../../facetednavigation/browser/template/configure.pt:25
 msgid "Add widget"
-msgstr "新增部件"
+msgstr "新增搜尋方框"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:25
 msgid "After query filters"
@@ -74,7 +74,7 @@ msgstr "全選"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:52
 msgid "Alphabetic"
-msgstr "按英文排列"
+msgstr "字母列表"
 
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
@@ -107,7 +107,7 @@ msgstr "Catalog 搜尋"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:101
 msgid "Checkboxes"
-msgstr "核選方框"
+msgstr "方形勾選"
 
 #: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Cloud"
@@ -287,12 +287,12 @@ msgstr "依選項顯示數量"
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:62
 msgid "Display widget in section"
-msgstr "在區段顯示部件"
+msgstr "在區段顯示方框"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
-msgstr "在區段顯示部件。"
+msgstr "在區段顯示方框。"
 
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Enable faceted navigation"
@@ -442,7 +442,7 @@ msgstr "隱藏數量為零的結果"
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:69
 msgid "Hide widget"
-msgstr "隱藏部件"
+msgstr "隱藏方框"
 
 #: ../../facetednavigation/widgets/radio/widget.py:53
 msgid "If this checkbox is checked, hides the All option"
@@ -450,7 +450,7 @@ msgstr "勾選的話，會隱藏 All 選項。"
 
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
-msgstr "勾選的話，會隱藏所有或現有項目的過濾條件。"
+msgstr "勾選的話，會隱藏「所有項目」或「在現行結果裡」的選項。"
 
 #: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
@@ -474,7 +474,7 @@ msgstr "設定沿用功能已停用"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
-msgstr "這個部件的詞彙表並不正確，預設的排序條件因此留空。"
+msgstr "這個方框的詞彙表並不正確，預設的排序條件因此留空。"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:31
@@ -589,7 +589,7 @@ msgstr "沒有動作被提供"
 #: ../../facetednavigation/widgets/radio/widget.py:63
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Number of items visible in widget"
-msgstr "部件裡顯示的項目數量"
+msgstr "方框裡顯示的項目數量"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:48
 msgid "Operator visible"
@@ -650,7 +650,7 @@ msgstr "位置"
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:43
 msgid "Position of the widget."
-msgstr "部件的位置"
+msgstr "方框的位置"
 
 #: ../../facetednavigation/widgets/interfaces.py:32
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
@@ -658,7 +658,7 @@ msgstr "Factory 的名稱，可用來建立實作的物件，它必須使用 dot
 
 #: ../../facetednavigation/widgets/radio/widget.py:91
 msgid "Radio"
-msgstr "Radio"
+msgstr "單選圓鈕"
 
 #: ../../facetednavigation/widgets/range/widget.py:45
 msgid "Range"
@@ -726,7 +726,7 @@ msgstr "搜尋深度"
 
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
-msgstr "以所有條件來搜尋"
+msgstr "只針對「所有項目」來搜尋"
 
 #. Default: "Search with AND/OR between elements"
 #: ../../facetednavigation/widgets/checkbox/widget.py:39
@@ -818,7 +818,7 @@ msgstr "文字欄位"
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
-msgstr "部件要搭配的佈景主題"
+msgstr "方框要搭配的佈景主題"
 
 #: ../../facetednavigation/widgets/widget.py:314
 msgid "This option works only if 'count results' is enabled"
@@ -826,16 +826,16 @@ msgstr "啟用「顯示數量」時，這個設定值才會生效。"
 
 #: ../../facetednavigation/widgets/path/widget.pt:29
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
-msgstr "當條件不符合時，這個部件不會顯示。"
+msgstr "當條件不符合時，這個方框不會顯示。"
 
 #: ../../facetednavigation/browser/template/error.pt:3
 msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
-msgstr "執行時發生錯誤的話，這個部件不會顯示。想了解細節的話，請查看 log 檔案，也可以修改設定值，查看哪個設定值造成錯誤。"
+msgstr "執行時發生錯誤的話，這個方框不會顯示。想了解細節的話，請查看 log 檔案，也可以修改設定值，查看哪個設定值造成錯誤。"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:44
 msgid "Title for widget to display in view page"
-msgstr "部件的標題"
+msgstr "搜尋方框的標題"
 
 #: ../../facetednavigation/widgets/date/widget.py:118
 msgid "Today"
@@ -857,7 +857,7 @@ msgstr "標籤雲類型"
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:31
 msgid "Type of the widget."
-msgstr "部件的類型"
+msgstr "搜尋方框的類型"
 
 #: ../../facetednavigation/widgets/daterange/widget.py:60
 msgid "UI Calendar years range"
@@ -893,21 +893,21 @@ msgstr "指定排序條件裡用到的詞彙表，留空代表使用預設排序
 #: ../../facetednavigation/widgets/radio/widget.py:33
 #: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary to use to render widget items"
-msgstr "用來顯示部件項目的詞彙表"
+msgstr "用來顯示方框選項的詞彙表"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/widget.py:53
 msgid "Widget position in page"
-msgstr "部件在頁面的位置"
+msgstr "方框在頁面的位置"
 
 #: ../../facetednavigation/browser/template/configure.pt:147
 msgid "Widget type"
-msgstr "部件類型"
+msgstr "方框類型"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/debug/widget.py:23
 msgid "Widget will be visible only for selected user"
-msgstr "只有特定使用者看得到部件"
+msgstr "只有特定使用者看得到方框"
 
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "Yesterday"

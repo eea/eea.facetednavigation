@@ -15,7 +15,7 @@ msgstr ""
 "Domain: plone\n"
 
 msgid "Current filters"
-msgstr ""
+msgstr "目前的過濾條件"
 
 msgid "Current search"
 msgstr "目前搜尋"
