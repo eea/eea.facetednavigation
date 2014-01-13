@@ -3,26 +3,20 @@ Changelog
 
 6.6-dev - (unreleased)
 ----------------------
-
-* Fix field default value rendering with chameleon,
+* Bug fix: Fix field default value rendering with chameleon,
   avoiding use of 'default' name in tal, wich is a reserved keyword.
   [thomasdesvenain]
-
-* Bug fix: fix xml import of '0' values for boolean properties
+* Bug fix: Fix xml import of '0' values for boolean properties
   which were considered as True.
   [thomasdesvenain]
-
 * Feature: Add a new widget : BooleanWidget
   We get a checkbox widget to filter contents
   which gets a true boolean value for an index (FieldIndex or BooleanIndex).
   [thomasdesvenain]
-
-* Bug fix: in search mode, search results were not kept when we go back.
+* Bug fix: In search mode, search results were not kept when we go back.
   [thomasdesvenain]
-
 * Feature: French translations updates.
   [thomasdesvenain]
-
 * Bug fix: Added translations for 'Current filters'.
   [prospchr]
 * Feature: Radio and checkbox widgets query for unicode or encoded strings
