@@ -66,6 +66,23 @@ It comes with plenty of configuration options and features like:
     faceted navigable contexts (starting with version 4.1. Both disabled by
     default for new faceted navigable pages starting with version 5.2)
 
+Install
+=======
+
+- Add eea.facetednavigation to your eggs section in your buildout and
+  re-run buildout.
+  You can download a sample buildout from
+  https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
+- Install *EEA Faceted Navigation* within Site Setup > Add-ons
+
+Getting started
+===============
+
+1. Go to your working space and add a **Folder** and within **Actions** menu
+   click on **Enable faceted navigation**.
+   See more on the dedicated youtube channel: `EEA Web Systems Training`_
+
+
 Faceted settings
 ================
 (*New in version 4.1*)
@@ -134,13 +151,13 @@ addons:
 
 Screenshots
 ===========
-See more `FacetedNavigationScreenshots <http://svn.eionet.europa.eu/projects/Zope/wiki/FacetedNavigationScreenshots>`_.
+See more `FacetedNavigationScreenshots <http://taskman.eionet.europa.eu/projects/zope/wiki/FacetedNavigationScreenshots>`_.
 
 
 Live demo
 =========
-Here some live production demos:
 
+- `EEA Web Systems Training`_
 - `EEA Publications <http://www.eea.europa.eu/publications>`_
 - `EEA Multimedia <http://www.eea.europa.eu/multimedia/all-videos>`_
 - `University of Minnesota - Explore Books <http://upress.umn.edu/explore>`_
@@ -179,6 +196,16 @@ Bugs and new features are entered on our Trac server at EEA.
 - `complete list of bugs / features including fixed and open <http://taskman.eionet.europa.eu/projects/zope/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=category_id&op%5Bcategory_id%5D=%3D&v%5Bcategory_id%5D%5B%5D=120&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=2&v%5Btracker_id%5D%5B%5D=1&v%5Btracker_id%5D%5B%5D=4&f%5B%5D=&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=tracker&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=done_ratio&c%5B%5D=fixed_version&c%5B%5D=project&c%5B%5D=category&c%5B%5D=parent&c%5B%5D=author&c%5B%5D=updated_on&c%5B%5D=start_date&c%5B%5D=due_date&c%5B%5D=estimated_hours&c%5B%5D=created_on&c%5B%5D=closed_on&c%5B%5D=relations&c%5B%5D=cf_4&group_by=>`_
 - `open bugs / tasks on collective <https://github.com/eea/eea.facetednavigation/issues?sort=updated&state=open>`_
 
+Other resources
+===============
+
+- `Faceted navigation pattern <http://www.welie.com/patterns/showPattern.php?patternID=faceted-navigation>`_
+- `Faceted classification <http://www.webdesignpractices.com/navigation/facets.html>`_
+- `Flamenco faceted navigation <http://flamenco.berkeley.edu/demos.html>`_ made at University of Berkeley
+- `A simpler Faceted plone 3 product made 2008 <http://plone.org/products/faceted-navigation>`_
+- `Folder navigation (GSoC) <http://plone.org/support/forums/core#nabble-td3165375>`_ A new product Folder Navigation in early development]
+- `Exhibit <http://www.simile-widgets.org/exhibit/>`_ Client based faceted navigation via javascript
+
 Copyright and license
 =====================
 
@@ -200,13 +227,10 @@ The Initial Owner of the Original Code is European Environment Agency (EEA).
 Portions created by Eau de Web are Copyright (C) 2009 by
 European Environment Agency. All Rights Reserved.
 
+Funding
+=======
 
-Other resources
-===============
+EEA_ - European Environment Agency (EU)
 
-- `Faceted navigation pattern <http://www.welie.com/patterns/showPattern.php?patternID=faceted-navigation>`_
-- `Faceted classification <http://www.webdesignpractices.com/navigation/facets.html>`_
-- `Flamenco faceted navigation <http://flamenco.berkeley.edu/demos.html>`_ made at University of Berkeley
-- `A simpler Faceted plone 3 product made 2008 <http://plone.org/products/faceted-navigation>`_
-- `Folder navigation (GSoC) <http://plone.org/support/forums/core#nabble-td3165375>`_ A new product Folder Navigation in early development]
-- `Exhibit <http://www.simile-widgets.org/exhibit/>`_ Client based faceted navigation via javascript
+.. _EEA: http://www.eea.europa.eu/
+.. _`EEA Web Systems Training`: http://www.youtube.com/user/eeacms/videos?view=1
