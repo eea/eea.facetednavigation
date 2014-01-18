@@ -3,6 +3,7 @@
   xmlns:zcml="http://namespaces.zope.org/zcml"
   i18n_domain="eea">
 
+  <include file="documentation.zcml" />
   <include file="minimal.zcml" />
 
   <!-- Make default ATCT faceted navigable -->

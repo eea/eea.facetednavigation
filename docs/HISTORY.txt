@@ -23,6 +23,8 @@ Changelog
   depending on the availability of plone.app.contenttypes. This is a
   requirement to work with dexterity
   [do3cc]
+* Feature: adding Sphinx-generated documentation in Page Template format
+  [batradav refs #9502]
 
 6.5 - (2013-11-20)
 ------------------

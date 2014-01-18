@@ -1,0 +1,10 @@
+<configure
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="eea">
+
+  <browser:resourceDirectory
+    name="eea.facetednavigation.documentation"
+    directory="documentation"
+    />
+
+</configure>
