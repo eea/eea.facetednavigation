@@ -1,7 +1,7 @@
 
 
 
-<tal:block define="context python: request.PARENTS[-2]">
+<tal:block define="context python: request.PARENTS[-2]; here nocall:context">
 <html metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 
