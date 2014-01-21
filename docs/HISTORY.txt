@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.7-dev - (unreleased)
+----------------------
+
 6.6 - (2014-01-21)
 ------------------
 * Bug fix: Fix field default value rendering with chameleon,
