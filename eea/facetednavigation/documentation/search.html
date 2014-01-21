@@ -1,5 +1,5 @@
 
-<tal:block define="context python: request.PARENTS[-2]; here nocall:context">
+<tal:block define="context python: request.PARENTS[1]; here nocall:context">
 <html metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 
@@ -18,6 +18,7 @@
   <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css"/>
   <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+  <link rel="stylesheet" href="_static/theme.css" type="text/css"/>
 </metal:styleslot>
 <metal:javascriptslot fill-slot="javascript_head_slot">
   <script type="text/javascript">
@@ -92,17 +93,6 @@
         </div>
     </div>
 </metal:main>
-
-<metal:right-portlet fill-slot="portlets_two_slot">
-      <div class="span3">
-          
-        <div class="sphinxsidebar">
-            <div class="sphinxsidebarwrapper">
-            </div>
-        </div>
-      </div>
-  
-</metal:right-portlet>
 
 </body>
 </html>

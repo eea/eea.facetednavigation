@@ -1,5 +1,5 @@
 
-<tal:block define="context python: request.PARENTS[-2]; here nocall:context">
+<tal:block define="context python: request.PARENTS[1]; here nocall:context">
 <html metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 
@@ -18,6 +18,7 @@
   <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css"/>
   <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+  <link rel="stylesheet" href="_static/theme.css" type="text/css"/>
 </metal:styleslot>
 <metal:javascriptslot fill-slot="javascript_head_slot">
   <script type="text/javascript">
@@ -282,46 +283,6 @@ European Environment Agency. All Rights Reserved.</p>
         </div>
     </div>
 </metal:main>
-
-<metal:right-portlet fill-slot="portlets_two_slot">
-      <div class="span3">
-          
-        <div class="sphinxsidebar">
-            <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">EEA Faceted Navigation</a><ul>
-<li><a class="reference internal" href="#main-features">Main features</a></li>
-<li><a class="reference internal" href="#faceted-settings">Faceted settings</a><ul>
-<li><a class="reference internal" href="#enable-disable-left-portlets">Enable/disable left portlets</a></li>
-<li><a class="reference internal" href="#enable-disable-right-portlets">Enable/disable right portlets</a></li>
-<li><a class="reference internal" href="#enable-disable-smart-facets-hiding">Enable/disable smart facets hiding</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#extra">Extra</a></li>
-<li><a class="reference internal" href="#screenshots">Screenshots</a></li>
-<li><a class="reference internal" href="#live-demo">Live demo</a></li>
-<li><a class="reference internal" href="#buildout-installation">Buildout installation</a></li>
-<li><a class="reference internal" href="#source-code">Source code</a></li>
-<li><a class="reference internal" href="#eggs-repository">Eggs repository</a></li>
-<li><a class="reference internal" href="#plone-versions">Plone versions</a></li>
-<li><a class="reference internal" href="#known-bugs-and-ongoing-development">Known bugs and ongoing development</a></li>
-<li><a class="reference internal" href="#copyright-and-license">Copyright and license</a></li>
-<li><a class="reference internal" href="#other-resources">Other resources</a></li>
-</ul>
-</li>
-</ul>
-
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/index.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-            </div>
-        </div>
-      </div>
-  
-</metal:right-portlet>
 
 </body>
 </html>
