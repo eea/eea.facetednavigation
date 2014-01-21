@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.6-dev - (unreleased)
-----------------------
+6.6 - (2014-01-21)
+------------------
 * Bug fix: Fix field default value rendering with chameleon,
   avoiding use of 'default' name in tal, wich is a reserved keyword.
   [thomasdesvenain]
