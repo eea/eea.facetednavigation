@@ -3,6 +3,8 @@ Changelog
 
 6.7-dev - (unreleased)
 ----------------------
+* Bug fix: Corrected 'Current filters' in Polish translation.
+  [prospchr]
 
 6.6 - (2014-01-21)
 ------------------
