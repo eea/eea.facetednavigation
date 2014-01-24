@@ -5,3 +5,5 @@
 dist
 .project
 .pydevproject
+documentation/searchindex.js
+documentation/search.html
