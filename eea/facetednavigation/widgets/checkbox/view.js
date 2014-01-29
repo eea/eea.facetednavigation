@@ -211,7 +211,7 @@ Faceted.CheckboxesWidget.prototype = {
       });
 
       span.append(link);
-      span.append('<span>' + label + '</span>');
+      jQuery('<span>').text(label).appendTo(span);
       html.append(span);
     });
 

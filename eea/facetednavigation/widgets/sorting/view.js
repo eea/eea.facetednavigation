@@ -182,7 +182,7 @@ Faceted.SortingWidget.prototype = {
       return false;
     });
     span.append(link);
-    span.append('<span>' + label + '</span>');
+    jQuery('<span>').text(label).appendTo(span);
     html.append(span);
 
     if(this.reverse.attr('checked')){

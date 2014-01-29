@@ -180,7 +180,7 @@ Faceted.DateRangeWidget.prototype = {
     });
     var span = jQuery('<span class="faceted-daterange-criterion">');
     span.append(link);
-    span.append('<span>' + label + '</span>');
+    jQuery('<span>').text(label).appendTo(span);
     html.append(span);
     return html;
   },

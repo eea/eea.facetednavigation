@@ -3,6 +3,8 @@ Changelog
 
 6.7-dev - (unreleased)
 ----------------------
+& Bug fix: Fix labels in "Current filters" widget
+  [avoinea]
 * Bug fix: Corrected 'Current filters' in Polish translation.
   [prospchr]
 

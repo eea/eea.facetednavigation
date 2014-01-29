@@ -193,7 +193,7 @@ Faceted.TagsCloudWidget.prototype = {
     html.attr('id', 'criteria_' + this.wid + '_entries');
 
     span.append(link);
-    span.append('<span>' + label + '</span>');
+    jQuery('<span>').text(label).appendTo(span);
     html.append(span);
     return html;
   },

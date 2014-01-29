@@ -152,7 +152,7 @@ Faceted.SelectWidget.prototype = {
       return false;
     });
     span.append(link);
-    span.append('<span>' + label + '</span>');
+    jQuery('<span>').text(label).appendTo(span);
     html.append(span);
 
     return html;
