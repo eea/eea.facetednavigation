@@ -1,8 +1,8 @@
 Changelog
 =========
 
-6.7-dev - (unreleased)
-----------------------
+6.7 - (2014-01-29)
+------------------
 & Bug fix: Fix labels in "Current filters" widget
   [avoinea]
 * Bug fix: Corrected 'Current filters' in Polish translation.
