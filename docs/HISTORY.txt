@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.8-dev - (unreleased)
+----------------------
+
 6.7 - (2014-01-29)
 ------------------
 & Bug fix: Fix labels in "Current filters" widget
