@@ -13,6 +13,7 @@ from Products.Archetypes.public import BooleanWidget
 from Products.CMFPlone.utils import safeToInt
 
 from eea.faceted.vocabularies.utils import compare
+from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
@@ -150,6 +151,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(CountableWidget):
     """ Widget
     """
@@ -226,10 +228,8 @@ class Widget(CountableWidget):
         if compare(value, 'all') == 0:
             return query
 
-        if not isinstance(value, unicode):
-            value = value.decode('utf-8')
-
-        query[index] = value.encode('utf-8')
+        value = atdx_normalize(value)
+        query[index] = value
         return query
 
     def __call__(self, **kwargs):

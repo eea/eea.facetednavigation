@@ -3,6 +3,8 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Feature: plone.app.contenttypes-compatability for select and tagcloud widgets
+  [pbauer]
 
 6.7 - (2014-01-29)
 ------------------
