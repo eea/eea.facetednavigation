@@ -91,6 +91,12 @@ class Widget(AbstractWidget):
         """
         catalog_tool = getToolByName(self.context, 'portal_catalog')
         indexObj = catalog_tool.Indexes[indexId]
+        # allow DateRecurringIndex that is unknown to atct.
+        # events in plone.app.contenttypes use it for start and end
+        if indexObj.meta_type == "DateRecurringIndex":
+            return ('ATFriendlyDateCriteria',
+                    'ATDateRangeCriterion',
+                    'ATSortCriterion')
         results = _criterionRegistry.criteriaByIndex(indexObj.meta_type)
         return results
 
@@ -107,9 +113,8 @@ class Widget(AbstractWidget):
 
     def listSortFields(self):
         """Return a list of available fields for sorting."""
-        fields = [ field
-                    for field in self.listFields()
-                    if self.validateAddCriterion(field[0], 'ATSortCriterion') ]
+        fields = [field for field in self.listFields()
+                  if self.validateAddCriterion(field[0], 'ATSortCriterion')]
         return fields
 
     def vocabulary(self, **kwargs):

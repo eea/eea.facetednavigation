@@ -6,6 +6,10 @@ Changelog
 * Feature: plone.app.contenttypes-compatability for select and tagcloud widgets
   [pbauer]
 
+* Allow DateRecurringIndex (start and end-date of events provided by plone.app.contenttypes
+  with plone.app.event) for sorting.
+  [pbauer]
+
 6.7 - (2014-01-29)
 ------------------
 * Bug fix: Fix labels in "Current filters" widget
