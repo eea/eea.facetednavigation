@@ -3,7 +3,12 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
-* Feature: plone.app.contenttypes-compatability for select and tagcloud widgets
+
+* Fix: for consistency with select widget, radio and checkbox widgets
+  are not displayed if vocabulary is empty.
+  [thomasdesvenain]
+
+* Feature: plone.app.contenttypes-compatibility for select and tagcloud widgets.
   [pbauer]
 
 6.7 - (2014-01-29)

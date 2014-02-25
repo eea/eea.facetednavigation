@@ -13,7 +13,9 @@
   maxitems python:view.data.get('maxitems', 0) or 0;
   operator python:view.operator;
   operator_visible python:view.operator_visible;
-  operator_lable python: 'any' if operator == 'or' else 'all'"
+  operator_lable python: 'any' if operator == 'or' else 'all';
+  vocabulary view/vocabulary;"
+  tal:condition="vocabulary"
   tal:attributes="id string:${wid}_widget; class css; data-operator python:operator;">
 
 <fieldset class="widget-fieldset">
@@ -34,7 +36,7 @@
   <form action="." method="get">
 
   <ul>
-    <tal:items repeat="term python:view.vocabulary()">
+    <tal:items repeat="term vocabulary">
       <li tal:define="
         term_id python:term[0];
         term_label python:term[1];
