@@ -155,11 +155,10 @@ Faceted.Form = {
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_ERROR);
     });
 
-    var has_hash = false;
     var hashquery = Faceted.URLHandler.get();
+    var has_hash = !jQuery.isEmptyObject(hashquery);
 
-    if (!jQuery.isEmptyObject(hashquery)) {
-      has_hash = true;
+    if (has_hash) {
       Faceted.Query = hashquery;
     }
 
