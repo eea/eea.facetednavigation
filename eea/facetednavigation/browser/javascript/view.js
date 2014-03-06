@@ -157,11 +157,11 @@ Faceted.Form = {
 
     var has_hash = false;
     var hashquery = Faceted.URLHandler.get();
-    jQuery.each(hashquery, function(){
+
+    if (!jQuery.isEmptyObject(hashquery)) {
       has_hash = true;
       Faceted.Query = hashquery;
-      return false;
-    });
+    }
 
     if(Faceted.Query.b_start === undefined){
       Faceted.Query.b_start = 0;
