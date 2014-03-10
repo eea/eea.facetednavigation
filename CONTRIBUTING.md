@@ -13,7 +13,7 @@ top of things.
 
 * Make sure you have a [GitHub account](https://github.com/signup/free)
 * If you need to submit a ticket do it under EEA Organisation area (https://github.com/eea)
-  under the respective package, e.g. https://github.com/eea/eea.daviz/issues
+  under the respective package, e.g. https://github.com/eea/eea.facetednavigation/issues
 * Submit a ticket for your issue, assuming one does not already exist.
   * Check that issue/feature is not already reported under EEA official issues register for Zope/Plone at http://taskman.eionet.europa.eu/projects/zope
   * Clearly describe the issue including steps to reproduce when it is a bug.
@@ -35,7 +35,7 @@ EEA sprints are managed at http://taskman.eionet.europa.eu/projects/zope.
 ## Making Changes
 
 * The pull requests and changes must be done on packages found on Collective
-  e.g. https://github.com/collective/eea.daviz
+  e.g. https://github.com/collective/eea.facetednavigation
 * Fork the repository from Collective not from EEA (as stated above they
   will be synced in automatic)
 * Make sure you added an entry under HISTORY.txt describing your changes
