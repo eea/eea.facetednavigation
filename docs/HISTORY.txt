@@ -4,6 +4,10 @@ Changelog
 6.8-dev - (unreleased)
 ----------------------
 
+* Feature: In radio- and checkbox-widgets the number of results is appended
+  to <label> instead of <li>. This allows to style line-breaks better
+  [pbauer]
+
 * Fix: for consistency with select widget, radio and checkbox widgets
   are not displayed if vocabulary is empty.
   [thomasdesvenain]

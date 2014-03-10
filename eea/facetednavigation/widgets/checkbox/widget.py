@@ -123,9 +123,10 @@ class Widget(CountableWidget):
     def selected(self, key):
         """ Return True if key in self.default
         """
-        if not self.default:
+        default = self.default
+        if not default:
             return False
-        for item in self.default:
+        for item in default:
             if compare(key, item) == 0:
                 return True
         return False

@@ -201,7 +201,9 @@ Faceted.RadioWidget.prototype = {
 
       var span = jQuery('span', li);
       if(!span.length){
-        li.append(jQuery('<span>'));
+        var label = jQuery('label', li);
+        label.append(' ');
+        label.append(jQuery('<span>'));
         span = jQuery('span', li);
       }
 
