@@ -155,13 +155,12 @@ Faceted.Form = {
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_ERROR);
     });
 
-    var has_hash = false;
     var hashquery = Faceted.URLHandler.get();
-    jQuery.each(hashquery, function(){
-      has_hash = true;
+    var has_hash = !jQuery.isEmptyObject(hashquery);
+
+    if (has_hash) {
       Faceted.Query = hashquery;
-      return false;
-    });
+    }
 
     if(Faceted.Query.b_start === undefined){
       Faceted.Query.b_start = 0;
