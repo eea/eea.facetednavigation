@@ -180,7 +180,9 @@ Faceted.SelectWidget.prototype = {
 
   count_update: function(data, sortcountable){
     var context = this;
+    var select = jQuery('select', context.widget);
     var options = jQuery('option', context.widget);
+    var current_val = select.val();
     jQuery(options).each(function(){
       var option = jQuery(this);
       option.removeClass('faceted-select-item-disabled');
@@ -207,7 +209,8 @@ Faceted.SelectWidget.prototype = {
         var b = jQuery(y).data('count');
         return b - a;
       });
-      jQuery('select', context.widget).append(options);
+      select.append(options);
+      select.val(current_val);
     }
   }
 };
