@@ -162,6 +162,7 @@ class Widget(CountableWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.tagscloud.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.tagscloud.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.tagscloud.edit.css'
+    css_class = 'faceted-tagscloud-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema.copy() + EditSchema

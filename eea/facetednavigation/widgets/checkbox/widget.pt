@@ -5,7 +5,7 @@
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
   sortcountable python:view.sortcountable;
-  css string:faceted-widget faceted-checkboxes-widget;
+  css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
   css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;

@@ -59,6 +59,7 @@ class Widget(AbstractWidget):
         '++resource++eea.facetednavigation.widgets.resultsfilter.edit.css')
     edit_js = (
         '++resource++eea.facetednavigation.widgets.resultsfilter.edit.js')
+    css_class = 'faceted-resultsfilter-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema

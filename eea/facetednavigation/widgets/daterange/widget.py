@@ -81,6 +81,7 @@ class Widget(AbstractWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.daterange.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.daterange.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.daterange.edit.css'
+    css_class = 'faceted-daterange-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema

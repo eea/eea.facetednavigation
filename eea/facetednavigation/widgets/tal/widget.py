@@ -66,6 +66,7 @@ class Widget(AbstractWidget):
     edit_schema['title'].default = 'TAL Expression'
     edit_schema['hidden'].default = True
     edit_schema['hidden'].schemata = 'hidden'
+    css_class = 'faceted-tal-widget'
 
     def referer(self, path=None):
         """ Extract referer from request or return self.context

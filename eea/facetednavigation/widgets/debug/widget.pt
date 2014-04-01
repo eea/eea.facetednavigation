@@ -1,9 +1,9 @@
-<div class="faceted-widget faceted-debug-widget" style="display: none" 
+<div class="faceted-widget faceted-debug-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
-  css string:faceted-widget faceted-debug-widget;
+  css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;
   visible nocall:context/@@faceted.widget.debug.visible"
   tal:attributes="id string:${wid}_widget; class css"

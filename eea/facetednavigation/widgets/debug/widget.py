@@ -35,6 +35,8 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.debug.edit.css'
     edit_js = '++resource++eea.facetednavigation.widgets.debug.edit.js'
     view_js = '++resource++eea.facetednavigation.widgets.debug.view.js'
+    css_class = 'faceted-debug-widget'
+
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema.copy()
     edit_schema['title'].default = 'Debug faceted criteria'
