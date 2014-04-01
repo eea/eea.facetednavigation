@@ -32,6 +32,7 @@ class Widget(AbstractWidget):
     view_js = '++resource++eea.facetednavigation.widgets.portlet.view.js'
     view_css = '++resource++eea.facetednavigation.widgets.portlet.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.portlet.edit.css'
+    css_class = 'faceted-portlet-widget'
 
     index = ZopeTwoPageTemplateFile('widget.pt', globals())
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema

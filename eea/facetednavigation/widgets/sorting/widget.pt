@@ -6,7 +6,7 @@
   default_value python:view.default;
   default_index python:len(default_value) > 0 and default_value[0] or '';
   default_reverse python:len(default_value) > 1 and default_value[1] or None;
-  css string:faceted-widget faceted-sorting-widget;
+  css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
 

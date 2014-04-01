@@ -44,6 +44,7 @@ class Widget(AbstractWidget):
     view_js = '++resource++eea.facetednavigation.widgets.sorting.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.sorting.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.sorting.view.css'
+    css_class = 'faceted-sorting-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema

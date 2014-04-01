@@ -4,6 +4,10 @@ Changelog
 6.8-dev - (unreleased)
 ----------------------
 
+* Widget css class is an attribute of widget object,
+  to make it more easy to override.
+  [thomasdesvenain]
+
 * Fix: workaround for weird firefox behavior on select widget.
   Depending on the options one chooses, firefox shows the wrong selected option
   [do3cc]

@@ -6,7 +6,7 @@
   hidezerocount python:view.hidezerocount;
   sortcountable python:view.sortcountable;
   default_value python:view.default or '';
-  css string:faceted-widget faceted-radio-widget;
+  css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
   css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;

@@ -107,6 +107,7 @@ class Widget(CountableWidget):
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema.copy() + EditSchema
+    css_class = "faceted-checkboxes-widget"
 
     @property
     def default(self):

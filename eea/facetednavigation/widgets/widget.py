@@ -124,6 +124,7 @@ class Widget(ATWidget):
     # Widget properties
     widget_type = 'abstract'
     widget_label = 'Abstract'
+    css_class = 'faceted-abstract-widget'
     view_css = ()
     edit_css = ()
     view_js = ()

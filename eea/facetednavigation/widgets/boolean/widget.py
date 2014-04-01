@@ -48,6 +48,7 @@ class Widget(CountableWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.checkbox.edit.css'
     edit_schema = BooleanEditSchema
     index = ViewPageTemplateFile('widget.pt')
+    css_class = "faceted-boolean-widget"
 
     @property
     def default(self):

@@ -4,7 +4,7 @@
   wid python:view.data.getId();
   hidden python:view.hidden;
   default_value python:view.default;
-  css string:faceted-widget faceted-tal-widget;
+  css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
 
