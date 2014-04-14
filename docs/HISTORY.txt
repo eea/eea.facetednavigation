@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Feature: Made it possible to reset the date filter by manually deleting
+  the start/end fields.
+  [nightmarebadger]
 
 * Widget css class is an attribute of widget object,
   to make it more easy to override.
