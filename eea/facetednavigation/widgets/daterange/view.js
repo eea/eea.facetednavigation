@@ -39,6 +39,30 @@ Faceted.DateRangeWidget = function(wid){
     }
   });
 
+  /**
+   * Make sure we can reset the date range by manually deleting the start and
+   * end value of the date range and call the 'onChange' event (click outside
+   * the changed field).
+   */
+  this.start.change(function(){
+    var start = js_widget.start.val();
+    var end = js_widget.end.val();
+
+    if(!start && !end){
+      js_widget.reset();
+      Faceted.Form.do_query(js_widget.wid, []);
+    }
+  });
+  this.end.change(function(){
+    var start = js_widget.start.val();
+    var end = js_widget.end.val();
+
+    if(!start && !end){
+      js_widget.reset();
+      Faceted.Form.do_query(js_widget.wid, []);
+    }
+  });
+
   // Handle clicks
   jQuery('form', this.widget).submit(function(){
     return false;
@@ -61,6 +85,16 @@ Faceted.DateRangeWidget.prototype = {
   do_query: function(element){
     var start = this.start.val();
     var end = this.end.val();
+
+    /**
+     * Make sure we can reset the date range by manually deleting the start and
+     * end value of the date range and running the query (press enter).
+     */
+    if(!start && !end){
+      this.reset();
+      Faceted.Form.do_query(this.wid, []);
+    }
+
     if(!start || !end){
       this.selected = [];
       return false;
