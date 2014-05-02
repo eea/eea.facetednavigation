@@ -260,7 +260,8 @@ class Widget(ATWidget):
         if not voc:
             voc = queryUtility(IVocabularyFactory, voc_id, None)
             if voc:
-                return [(term.value, (term.title or term.token or term.value))
+                return [(term.value.decode('utf-8'),
+                         (term.title or term.token or term.value.decode('utf-8')))
                         for term in voc(self.context)]
             return []
 

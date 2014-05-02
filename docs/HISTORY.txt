@@ -3,6 +3,9 @@ Changelog
 
 6.8-dev - (unreleased)
 ----------------------
+* Fix an error with non-ascii characters in keyword vocabulary
+  [mpeeters]
+
 * Feature: Made it possible to reset the date filter by manually deleting
   the start/end fields.
   [nightmarebadger]
