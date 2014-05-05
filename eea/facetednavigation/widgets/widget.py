@@ -260,8 +260,13 @@ class Widget(ATWidget):
         if not voc:
             voc = queryUtility(IVocabularyFactory, voc_id, None)
             if voc:
-                return [(term.value, (term.title or term.token or term.value))
-                        for term in voc(self.context)]
+                values = []
+                for term in voc(self.context):
+                    value = term.value
+                    if isinstance(value, str):
+                        value = value.decode('utf-8')
+                    values.append((value, (term.title or term.token or value)))
+                return values
             return []
 
         terms = voc.getDisplayList(self.context)
