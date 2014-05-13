@@ -1,34 +1,27 @@
 Changelog
 =========
 
-6.8-dev - (unreleased)
-----------------------
+6.8 - (2014-05-13)
+------------------
 * Fix an error with non-ascii characters in keyword vocabulary
   [mpeeters]
-
 * Feature: Made it possible to reset the date filter by manually deleting
   the start/end fields.
   [nightmarebadger]
-
 * Widget css class is an attribute of widget object,
   to make it more easy to override.
   [thomasdesvenain]
-
 * Fix: workaround for weird firefox behavior on select widget.
   Depending on the options one chooses, firefox shows the wrong selected option
   [do3cc]
-
 * Feature: In radio- and checkbox-widgets the number of results is appended
   to <label> instead of <li>. This allows to style line-breaks better
   [pbauer]
-
 * Fix: for consistency with select widget, radio and checkbox widgets
   are not displayed if vocabulary is empty.
   [thomasdesvenain]
-
 * Feature: plone.app.contenttypes-compatibility for select and tagcloud widgets.
   [pbauer]
-
 * Allow DateRecurringIndex (start and end-date of events provided by plone.app.contenttypes
   with plone.app.event) for sorting.
   [pbauer]
