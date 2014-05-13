@@ -1,6 +1,9 @@
 Changelog
 =========
 
+6.9-dev - (unreleased)
+----------------------
+
 6.8 - (2014-05-13)
 ------------------
 * Fix an error with non-ascii characters in keyword vocabulary
