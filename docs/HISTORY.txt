@@ -3,6 +3,9 @@ Changelog
 
 6.9-dev - (unreleased)
 ----------------------
+* Change: set CSS resources by default to have rendering as 'link'.
+  Thx to Yuri for reporting this.
+  [ghicaale]
 
 6.8 - (2014-05-13)
 ------------------

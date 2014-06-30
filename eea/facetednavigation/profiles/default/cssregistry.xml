@@ -4,9 +4,9 @@
  <stylesheet id="@@faceted_edit.css" remove="True" />
  <stylesheet title="Faceted View CSS" cacheable="True" compression="none"
     cookable="True" enabled="on" expression=""
-    id="faceted_view.css" media="all" rel="stylesheet" rendering="import"/>
+    id="faceted_view.css" media="all" rel="stylesheet" rendering="link"/>
  <stylesheet title="Faceted Edit CSS" cacheable="True" compression="none"
     cookable="True" enabled="on"
     expression="python:'configure_faceted.html' in request.URL0"
-    id="faceted_edit.css" media="all" rel="stylesheet" rendering="import"/>
+    id="faceted_edit.css" media="all" rel="stylesheet" rendering="link"/>
 </object>
