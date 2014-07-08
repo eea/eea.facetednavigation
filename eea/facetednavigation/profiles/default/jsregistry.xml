@@ -1,13 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
- <javascript id="@@faceted_view.js" remove="True" />
- <javascript id="@@faceted_edit.js" remove="True" />
- <javascript cacheable="True" compression="none" cookable="True"
-    enabled="True"
-    expression="python: request.get('jsdisable','') != 'jquery'"
-    id="faceted_view.js" inline="False"/>
- <javascript cacheable="True" compression="none" cookable="True"
-    enabled="True"
-    expression="python:'configure_faceted.html' in request.URL0"
-    id="faceted_edit.js" inline="False"/>
+ <javascript id="faceted_view.js" />
+ <javascript id="faceted_edit.js"
+  expression="python:'configure_faceted.html' in request.URL0" />
 </object>

@@ -3,6 +3,9 @@ Changelog
 
 7.0-dev - (unreleased)
 ----------------------
+* Cleanup: Cleaned css and js registry
+  Thx to Yuri for reporting this.
+  [avoinea]
 
 6.9 - (2014-06-30)
 ------------------
