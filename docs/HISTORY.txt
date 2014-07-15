@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.1-dev - (unreleased)
+----------------------
+
 7.0 - (2014-07-15)
 ------------------
 * Cleanup: Cleaned css and js registry
