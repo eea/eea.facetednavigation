@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.0-dev - (unreleased)
-----------------------
+7.0 - (2014-07-15)
+------------------
 * Cleanup: Cleaned css and js registry
   Thx to Yuri for reporting this.
   [avoinea]
