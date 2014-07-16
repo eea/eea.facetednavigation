@@ -58,4 +58,16 @@
 
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="4.6"
+    destination="7.1"
+    profile="eea.facetednavigation:default">
+
+    <genericsetup:upgradeStep
+      title="Update registry with diazo rules disable option"
+      handler="eea.facetednavigation.upgrades.evolve71.update_registry"
+      />
+
+  </genericsetup:upgradeSteps>
+
 </configure>

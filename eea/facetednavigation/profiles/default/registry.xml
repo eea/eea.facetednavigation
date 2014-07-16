@@ -1,0 +1,12 @@
+<registry>
+  <record name="eea.facetednavigation.interfaces.IEEASettings.disable_diazo_rules_ajax"
+          interface="eea.facetednavigation.interfaces.IEEASettings"
+          field="disable_diazo_rules_ajax">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <required>False</required>
+      <title>Disable diazo rules on ajax requests</title>
+    </field>
+    <value>False</value>
+  </record>
+</registry>

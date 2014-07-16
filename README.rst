@@ -148,6 +148,13 @@ addons:
 
   - eea.faceted.blue
 
+Diazo
+=====
+
+To gain performance, you can disable diazo theme on faceted results ajax requests.
+Go to "configuration registry" on control panel, select the key "Disable diazo rules on ajax requests"
+and set it True. Be sure you do not actually need it.
+
 
 Screenshots
 ===========

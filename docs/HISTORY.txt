@@ -4,6 +4,9 @@ Changelog
 7.1-dev - (unreleased)
 ----------------------
 
+* Added a registry property to disable diazo rules on faceted query ajax request.
+  [thomasdesvenain]
+
 7.0 - (2014-07-15)
 ------------------
 * Cleanup: Cleaned css and js registry
