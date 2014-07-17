@@ -1,6 +1,8 @@
 """ Faceted Navigation public interfaces
 """
 from zope.component.interfaces import IObjectEvent
+from zope.interface import Interface
+from zope import schema
 
 # Subtypes
 from eea.facetednavigation.subtypes.interfaces import IPossibleFacetedNavigable
@@ -41,7 +43,7 @@ from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
-
+from eea.facetednavigation import EEAMessageFactory as _
 #
 # Events
 #
@@ -68,6 +70,14 @@ class IFacetedWillBeDisabledEvent(IFacetedEvent):
 class IFacetedDisabledEvent(IFacetedEvent):
     """ Faceted navigation disabled
     """
+
+
+class IEEASettings(Interface):
+
+    disable_diazo_rules_ajax = schema.Bool(
+                title=_(u"Disable diazo rules on ajax requests"),
+                required=False)
+
 
 # pylint, pyflakes
 __all__ = [

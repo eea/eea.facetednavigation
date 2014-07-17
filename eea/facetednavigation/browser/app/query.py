@@ -8,10 +8,11 @@ from zope.component import queryAdapter
 
 from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.PloneBatch import Batch
+from plone.registry.interfaces import IRegistry
 
 from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import cacheKeyFacetedNavigation
-from eea.facetednavigation.interfaces import IFacetedLayout
+from eea.facetednavigation.interfaces import IFacetedLayout, IEEASettings
 from eea.facetednavigation.interfaces import IFacetedCatalog
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
@@ -26,6 +27,11 @@ class FacetedQueryHandler(object):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        if 'HTTP_X_REQUESTED_WITH' in request and request['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest':
+            registry = getUtility(IRegistry)
+            settings = registry.forInterface(IEEASettings)
+            if settings.disable_diazo_rules_ajax:
+                request.response.setHeader('X-Theme-Disabled', '1')
 
     def macros(self, name='content-core'):
         """ Return macro from default layout

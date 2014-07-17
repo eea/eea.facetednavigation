@@ -58,4 +58,16 @@
 
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="4.6"
+    destination="7.1"
+    profile="eea.facetednavigation:default">
+
+     <genericsetup:upgradeDepends
+       title="Import steps with changes: plone.app.registry"
+       import_steps="plone.app.registry"
+       />
+
+  </genericsetup:upgradeSteps>
+
 </configure>
