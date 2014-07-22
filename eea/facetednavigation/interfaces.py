@@ -73,6 +73,8 @@ class IFacetedDisabledEvent(IFacetedEvent):
 
 
 class IEEASettings(Interface):
+    """Registry settings for eea.facetednavigation product
+    """
 
     disable_diazo_rules_ajax = schema.Bool(
                 title=_(u"Disable diazo rules on ajax requests"),

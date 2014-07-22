@@ -27,7 +27,7 @@ class FacetedQueryHandler(object):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        if 'HTTP_X_REQUESTED_WITH' in request and request['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest':
+        if request.get('HTTP_X_REQUESTED_WITH', '') == 'XMLHttpRequest':
             registry = getUtility(IRegistry)
             settings = registry.forInterface(IEEASettings)
             if settings.disable_diazo_rules_ajax:
