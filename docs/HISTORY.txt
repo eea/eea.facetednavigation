@@ -3,7 +3,8 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
-
+* Feature: Made faceted navigation new-style Collection query aware
+  [avoinea refs github #52]
 * Added a registry property to disable diazo rules on faceted query ajax request.
   [thomasdesvenain]
 

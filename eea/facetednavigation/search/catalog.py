@@ -5,6 +5,9 @@ from zope.interface import implements
 from Products.CMFCore.utils import getToolByName
 from BTrees.IIBTree import IIBucket
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
+from eea.facetednavigation.search.interfaces import ICollection
+from eea.facetednavigation.search import parseFormquery
+
 logger = logging.getLogger('eea.facetednavigation.search.catalog')
 
 class FacetedCatalog(object):
@@ -48,9 +51,25 @@ class FacetedCatalog(object):
         # Also get query from Topic
         buildQuery = getattr(context, 'buildQuery', None)
         newquery = buildQuery and buildQuery() or {}
+
+        # Get query from Collection
+        if ICollection.providedBy(context):
+            getRawQuery = getattr(context, 'getRawQuery', lambda: [])
+            formquery = getRawQuery()
+
+            getSortOn = getattr(context, 'getSort_on', lambda: None)
+            sort_on = getSortOn()
+
+            getSortOrder = getattr(context, 'getSort_reversed', lambda: None)
+            sort_order = getSortOrder()
+
+            newquery = parseFormquery(context, formquery, sort_on, sort_order)
+
         if not isinstance(newquery, dict):
             newquery = {}
-        if 'sort_on'in query and 'sort_order' not in query:
+
+        if 'sort_on' in query and 'sort_order' not in query:
             newquery.pop('sort_order', None)
+
         newquery.update(query)
         return search(**newquery)
