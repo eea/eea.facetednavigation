@@ -146,38 +146,38 @@ Get some results (default set) for integers
 
   >>> def make_test(range_query):
   ...     _ = handler(
-  ...         updateCriterion_button='Save', 
+  ...         updateCriterion_button='Save',
   ...         cid='c1', c1_hidden=True,
   ...         c1_index='getRangen', c1_default=range_query)
   ...     brains = query.query()
   ...     return [brain.getId for brain in brains]
   >>> make_test('2=>6')
-  ['testfolder2', 'testfolder4', 'testfolder6']
+  ['testfolder6', 'testfolder4', 'testfolder2']
   >>> make_test('4=>6')
-  ['testfolder4', 'testfolder6']
+  ['testfolder6', 'testfolder4']
   >>> make_test('6=>6')
   ['testfolder6']
   >>> make_test('0=>1')
   []
   >>> make_test('0=>3')
-  ['testfolder2'] 
+  ['testfolder2']
   >>> make_test('3=>5')
   ['testfolder4']
 
 Get some results (default set) for Strings
-------------------------------------------- 
+-------------------------------------------
 
   >>> def make_test(range_query):
   ...     _ = handler(
-  ...         updateCriterion_button='Save', 
+  ...         updateCriterion_button='Save',
   ...         cid='c1', c1_hidden=True,
   ...         c1_index='getRangea', c1_default=range_query)
   ...     brains = query.query()
   ...     return [brain.getId for brain in brains]
   >>> make_test('aa=>cc')
-  ['testfolder2', 'testfolder4', 'testfolder6']
+  ['testfolder6', 'testfolder4', 'testfolder2']
   >>> make_test('aa=>bb')
-  ['testfolder2', 'testfolder4']
+  ['testfolder4', 'testfolder2']
   >>> make_test('aa=>a')
   ['testfolder2']
   >>> make_test('e=>z')

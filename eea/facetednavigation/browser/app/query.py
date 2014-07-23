@@ -70,7 +70,7 @@ class FacetedQueryHandler(object):
             return self.context
         return wrapper(content)
 
-    def criteria(self, sort=True, **kwargs):
+    def criteria(self, sort=False, **kwargs):
         """ Process catalog query
         """
         if self.request:
@@ -116,7 +116,7 @@ class FacetedQueryHandler(object):
         logger.debug('QUERY: %s', query)
         return query
 
-    def query(self, batch=True, sort=True, **kwargs):
+    def query(self, batch=True, sort=False, **kwargs):
         """ Search using given criteria
         """
         if self.request:
