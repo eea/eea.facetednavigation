@@ -41,7 +41,7 @@ setup(name=NAME,
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'eea.faceted.vocabularies>=4.6',
+          'eea.faceted.vocabularies > 4.9',
           'collective.js.jqueryui',
           'eea.jquery',
           'Products.PloneTestCase',
