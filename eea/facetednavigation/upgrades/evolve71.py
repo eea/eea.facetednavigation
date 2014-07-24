@@ -1,7 +1,6 @@
 """ Upgrade to version 7.1
 """
 import logging
-from zope.component import queryAdapter
 from Products.CMFCore.utils import getToolByName
 from zope.component.interface import interfaceToName
 from eea.facetednavigation.interfaces import ICriteria
