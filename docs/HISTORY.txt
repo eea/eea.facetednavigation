@@ -5,6 +5,8 @@ Changelog
 ----------------------
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.facetednavigation
+* Cleanup: Removed default object_provides widget for new Faceted Navigable items
+  [avoinea]
 * Change: Removed default hardcoded sorting by effective date, reversed as
   this can be easily accomplished with a sorting widget. Also added an upgrade
   step that adds a hidden sorting widget by effective date

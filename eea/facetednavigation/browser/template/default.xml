@@ -46,21 +46,5 @@
    <property name="section">default</property>
    <property name="hidden">0</property>
   </criterion>
-  <criterion name="c4">
-   <property name="widget">checkbox</property>
-   <property name="title">Object provides</property>
-   <property name="position">right</property>
-   <property name="section">default</property>
-   <property name="hidden">1</property>
-   <property name="index">object_provides</property>
-   <property
-      name="vocabulary">eea.faceted.vocabularies.ObjectProvides</property>
-   <property name="catalog"></property>
-   <property name="maxitems">5</property>
-   <property name="sortreversed">0</property>
-   <property name="count">0</property>
-   <property name="hidezerocount">0</property>
-   <property name="default"/>
-  </criterion>
  </criteria>
 </object>
