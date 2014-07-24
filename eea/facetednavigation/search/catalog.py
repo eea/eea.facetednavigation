@@ -60,13 +60,25 @@ class FacetedCatalog(object):
             getSortOn = getattr(context, 'getSort_on', lambda: None)
             sort_on = getSortOn()
 
-            getSortOrder = getattr(context, 'getSort_reversed', lambda: None)
-            sort_order = getSortOrder()
+            if sort_on:
+                getSortReversed = getattr(
+                    context, 'getSort_reversed', lambda: None)
+                sort_order = getSortReversed()
+                if sort_order:
+                    sort_order = 'descending'
+                else:
+                    sort_order = 'ascending'
+            else:
+                sort_order = None
 
             newquery = parseFormquery(context, formquery, sort_on, sort_order)
 
         if not isinstance(newquery, dict):
             newquery = {}
+
+        # Avoid mixing sorting params from faceted and collection
+        if 'sort_on' not in query:
+            query.pop('sort_order', None)
 
         if 'sort_on' in query and 'sort_order' not in query:
             newquery.pop('sort_order', None)
