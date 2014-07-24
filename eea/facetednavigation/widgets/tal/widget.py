@@ -25,7 +25,7 @@ EditSchema = Schema((
     StringField('index',
         schemata="default",
         required=True,
-        vocabulary_factory='eea.faceted.vocabularies.CatalogIndexes',
+        vocabulary_factory='eea.faceted.vocabularies.SortingCatalogIndexes',
         widget=SelectionWidget(
             label=_(u'Catalog index'),
             description=_(u'Catalog index to use for search'),
@@ -98,10 +98,12 @@ class Widget(AbstractWidget):
         path = '/'.join(path.split('/')[:-1])
         return self.referer(path)
 
-    @property
-    def talexpr(self):
+    def talexpr(self, form=None):
         """ Compile tal expression
         """
+        if form is None:
+            form = {}
+
         talexpr = self.default
         if talexpr is None:
             return ''
@@ -112,7 +114,8 @@ class Widget(AbstractWidget):
             referer=self.referer(),
             request=self.request,
             criterion=self.data,
-            widget=self
+            widget=self,
+            form=form
         ))
         expression = engine.compile(talexpr)
         result = context.evaluate(expression)
@@ -132,7 +135,7 @@ class Widget(AbstractWidget):
             return query
 
         try:
-            value = self.talexpr
+            value = self.talexpr(form=form)
         except Exception, err:
             logger.exception(err)
             return query
