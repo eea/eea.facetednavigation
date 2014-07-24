@@ -3,6 +3,13 @@ Changelog
 
 7.1-dev - (unreleased)
 ----------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation
+* Change: Removed default hardcoded sorting by effective date, reversed as
+  this can be easily accomplished with a sorting widget. Also added an upgrade
+  step that adds a hidden sorting widget by effective date
+  (if no sorting already present) in order to keep backward compatibility.
+  [avoinea refs github #44]
 * Feature: Possibility to select sort_on and sort_order indexes within
   TAL Expression field
   [avoinea refs github #44]
