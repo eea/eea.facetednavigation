@@ -1,6 +1,4 @@
-<configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:zcml="http://namespaces.zope.org/zcml">
+<configure xmlns="http://namespaces.zope.org/zope">
 
   <subscriber
     for="..interfaces.IFacetedNavigable
@@ -13,13 +11,5 @@
          zope.lifecycleevent.interfaces.IObjectModifiedEvent"
     handler=".cache.invalidateFacetedCache"
     />
-
-  <configure zcml:condition="installed eea.plone3compat">
-    <subscriber
-      for="Products.Archetypes.interfaces.IBaseContent
-           eea.plone3compat.IActionSucceededEvent"
-      handler=".cache.invalidateFacetedCache"
-      />
-  </configure>
 
 </configure>
