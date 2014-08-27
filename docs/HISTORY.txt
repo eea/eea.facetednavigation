@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.3-dev - (unreleased)
+----------------------
+
 7.2 - (2014-08-27)
 ------------------
 * Change: Cleanup plone3compat legacy code
