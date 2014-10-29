@@ -10,6 +10,7 @@ from zope.i18nmessageid.message import Message
 from zope.schema.interfaces import IVocabularyFactory
 from zope.component import queryUtility
 from BTrees.IIBTree import weightedIntersection, IISet
+from zExceptions import NotFound
 
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
@@ -100,7 +101,17 @@ class ATWidget(BrowserView):
         """ Get edit macro from archetypes schema by given field name
         """
         field = self.get_field(field, schema)
-        return field.widget('edit', self.context)
+        try:
+            return field.widget('edit', self.context)
+        except NotFound:
+            # This hack makes this work for dexterity items - they do not
+            # implement dict access (getitem), therefore we get a NotFound
+            # when trying to get the 'at_widget_%s' customization element
+            # - see Products/Archetypes/generator/widget.py
+            # Trick Archetypes into avoid trying to get the 'at_widget_%s'
+            # macro:
+            field.widget.macro = field.widget.macro + '|dummy'
+            return field.widget('edit', self.context)
 
     def get_field(self, field, schema='view'):
         """ Get field from archetypes schema by given field name
