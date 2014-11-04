@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<metadata>
+ <version>0001</version>
+ <dependencies>
+  <dependency>profile-collective.js.jqueryui:default</dependency>
+  <dependency>profile-eea.jquery:03-ajaxfileupload</dependency>
+  <dependency>profile-eea.jquery:04-bbq</dependency>
+  <dependency>profile-eea.jquery:10-jstree</dependency>
+  <dependency>profile-eea.jquery:12-select2uislider</dependency>
+  <dependency>profile-eea.jquery:14-tagcloud</dependency>
+ </dependencies>
+</metadata>

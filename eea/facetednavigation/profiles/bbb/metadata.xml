@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <metadata>
- <version>7.3</version>
+ <version>001</version>
  <dependencies>
-  <dependency>profile-eea.jquery:28-browser</dependency>
+  <dependency>profile-eea.jquery:01-jquery</dependency>
+  <dependency>profile-eea.jquery:05-cookie</dependency>
   <dependency>profile-eea.facetednavigation:common</dependency>
  </dependencies>
 </metadata>

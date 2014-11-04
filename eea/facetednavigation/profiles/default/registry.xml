@@ -1,12 +1,61 @@
 <registry>
-  <record name="eea.facetednavigation.interfaces.IEEASettings.disable_diazo_rules_ajax"
-          interface="eea.facetednavigation.interfaces.IEEASettings"
-          field="disable_diazo_rules_ajax">
-    <field type="plone.registry.field.Bool">
-      <default>False</default>
-      <required>False</required>
-      <title>Disable diazo rules on ajax requests</title>
-    </field>
-    <value>False</value>
-  </record>
+  <records prefix="plone.bundles/facetednavigation-jquery"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>browser</element>
+      <element>ajaxfileupload</element>
+      <element>bbq</element>
+      <element>jstree</element>
+      <element>select2uislider</element>
+      <element>tagcloud</element>
+    </value>
+    <value key="depends">jqueryui</value>
+    <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
+    <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+  </records>
+
+  <!-- TODO faceted_view.js fails when compiled/minified so put it in a separate
+       bundle and treat the source as if it were already compiled until it can
+       be fixed -->
+  <records prefix="plone.resources/facetednavigation-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>faceted_view.css</element>
+    </value>
+    <value key="js">faceted_view.js</value>
+  </records>
+  <records prefix="plone.bundles/facetednavigation-view"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>facetednavigation-view</element>
+    </value>
+    <value key="depends">plone</value>
+    <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
+    <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+  </records>
+
+  <records prefix="plone.resources/facetednavigation-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>faceted_edit.css</element>
+    </value>
+    <value key="js">faceted_edit.js</value>
+  </records>
+  <records prefix="plone.bundles/facetednavigation-edit"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>facetednavigation-edit</element>
+    </value>
+    <value key="depends">facetednavigation-view</value>
+    <value key="expression">python:'configure_faceted.html' in request.URL0</value>
+    <value key="csscompilation">++plone++static/facetednavigation-edit-compiled.css</value>
+    <value key="jscompilation">++plone++static/facetednavigation-edit-compiled.js</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+  </records>
+
 </registry>
