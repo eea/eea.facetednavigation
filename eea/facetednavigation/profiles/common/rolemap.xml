@@ -4,6 +4,7 @@
     <permission name="eea.facetednavigation: Configure faceted" acquire="True">
       <role name="Owner"/>
       <role name="Manager"/>
+      <role name="Site Administrator"/>
       <role name="Editor"/>
     </permission>
   </permissions>
