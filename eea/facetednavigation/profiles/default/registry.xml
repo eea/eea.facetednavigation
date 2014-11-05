@@ -16,6 +16,23 @@
     <value key="enabled">True</value>
   </records>
 
+  <records prefix="plone.bundles/facetednavigation-jquery"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>browser</element>
+      <element>ajaxfileupload</element>
+      <element>bbq</element>
+      <element>jstree</element>
+      <element>select2uislider</element>
+      <element>tagcloud</element>
+    </value>
+    <value key="depends">jqueryui</value>
+    <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
+    <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+  </records>
+
   <!-- TODO faceted_view.js fails when compiled/minified so put it in a separate
        bundle and treat the source as if it were already compiled until it can
        be fixed -->
@@ -29,19 +46,12 @@
   <records prefix="plone.bundles/facetednavigation-view"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>browser</element>
-      <element>ajaxfileupload</element>
-      <element>bbq</element>
-      <element>jstree</element>
-      <element>select2uislider</element>
-      <element>tagcloud</element>
       <element>facetednavigation-view</element>
     </value>
-    <value key="depends">jqueryui</value>
-    <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
-    <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
-    <value key="compile">False</value>
+    <value key="depends">facetednavigation-jquery</value>
     <value key="enabled">True</value>
+    <value key="csscompilation">faceted_view.css</value>
+    <value key="jscompilation">faceted_view.js</value>
   </records>
 
   <records prefix="plone.resources/facetednavigation-edit"
