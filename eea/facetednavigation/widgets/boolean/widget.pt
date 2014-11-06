@@ -23,7 +23,7 @@
         term_id view/index_id;
         chbox_id string:${wid}_${term_id};
         chbox_id python:view.cleanup(chbox_id);
-        option_id string:${wid}_option_${term_id};
+        option_id string:${wid}_option_${chbox_id};
         "
         tal:attributes="id option_id"
         >
