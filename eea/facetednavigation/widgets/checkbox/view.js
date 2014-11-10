@@ -200,7 +200,7 @@ Faceted.CheckboxesWidget.prototype = {
       var value = element.val();
       var label = jQuery('label[for=' + id + ']', widget.widget);
       var title = label.attr('title');
-      label = label.html();
+      label = label.text();
 
       var link = jQuery('<a href="#">[X]</a>');
       link.attr('id', 'criteria_' + id);
