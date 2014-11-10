@@ -3,6 +3,8 @@ Changelog
 
 7.3-dev - (unreleased)
 ----------------------
+* Fix: Fixed unescaped html in filters widget
+  [olimpiurob]
 * Fix: Use normalized id's for li in checkbox and boolean widgets.
   [olimpiurob]
 * Give Site Administrators permissions to change faceted settings.
