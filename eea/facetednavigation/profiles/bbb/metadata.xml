@@ -4,6 +4,6 @@
  <dependencies>
   <dependency>profile-eea.jquery:01-jquery</dependency>
   <dependency>profile-eea.jquery:05-cookie</dependency>
-  <dependency>profile-eea.facetednavigation:common</dependency>
+  <dependency>profile-eea.facetednavigation:universal</dependency>
  </dependencies>
 </metadata>

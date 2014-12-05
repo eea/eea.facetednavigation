@@ -8,16 +8,9 @@
   <five:registerPackage package="."/>
 
   <genericsetup:registerProfile
-      name="common"
-      title="EEA Faceted Navigation Common Configuration"
-      description="Extension profile for EEA Faceted Navigation settings that
-                   aren't version dependent."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-  <genericsetup:registerProfile
       zcml:condition="have plone-5"
       name="default"
+      directory="profiles/default"
       title="EEA Faceted Navigation"
       description="Extension profile for EEA Faceted Navigation."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -29,6 +22,15 @@
       directory="profiles/bbb"
       title="EEA Faceted Navigation"
       description="Extension profile for EEA Faceted Navigation."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="universal"
+      directory="profiles/common"
+      title="EEA Faceted Navigation Common Configuration"
+      description="Extension profile for EEA Faceted Navigation settings that
+                   aren't version dependent."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
