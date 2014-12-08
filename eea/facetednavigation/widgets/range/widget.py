@@ -47,7 +47,6 @@ class Widget(AbstractWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.range.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.range.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.range.edit.css'
-    css_class = 'faceted-range-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema

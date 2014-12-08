@@ -70,7 +70,6 @@ class Widget(CountableWidget):
     view_js = '++resource++eea.facetednavigation.widgets.select.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.select.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.select.view.css'
-    css_class = 'faceted-select-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema.copy() + EditSchema

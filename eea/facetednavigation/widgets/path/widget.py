@@ -87,7 +87,6 @@ class Widget(AbstractWidget):
     )
     view_css = '++resource++eea.facetednavigation.widgets.path.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.path.edit.css'
-    css_class = 'faceted-path-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema

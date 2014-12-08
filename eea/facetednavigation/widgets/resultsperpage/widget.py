@@ -59,7 +59,6 @@ class Widget(AbstractWidget):
     widget_label = _('Results per page')
     view_js = '++resource++eea.facetednavigation.widgets.resultsperpage.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.resultsperpage.edit.js'
-    css_class = 'faceted-resultsperpage-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
