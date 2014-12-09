@@ -29,7 +29,6 @@ class Widget(AbstractWidget):
     view_js = '++resource++eea.facetednavigation.widgets.criteria.view.js'
     view_css = '++resource++eea.facetednavigation.widgets.criteria.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.criteria.edit.css'
-    css_class = 'faceted-criteria-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
