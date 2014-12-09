@@ -1,5 +1,7 @@
 """ Checkbox widget
 """
+from plone.i18n.normalizer import urlnormalizer as normalizer
+
 from Products.Archetypes.public import Schema
 from Products.Archetypes.public import IntegerField
 from Products.Archetypes.public import LinesField
@@ -107,7 +109,15 @@ class Widget(CountableWidget):
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema.copy() + EditSchema
-    css_class = "faceted-checkboxes-widget"
+
+    @property
+    def css_class(self):
+        """ Widget specific css class
+        """
+        css_type = self.widget_type
+        css_title = normalizer.normalize(self.data.title)
+        return 'faceted-checkboxes-widget faceted-{0}-widget section-{1}'.format(css_type, css_title)
+
 
     @property
     def default(self):

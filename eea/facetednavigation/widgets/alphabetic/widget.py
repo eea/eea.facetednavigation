@@ -57,7 +57,6 @@ class Widget(CountableWidget):
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = CountableWidget.edit_schema.copy() + EditSchema
-    css_class = "faceted-alphabetic-widget"
 
     # Widget custom API
     def getAlphabet(self, lang):

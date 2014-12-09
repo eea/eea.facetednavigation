@@ -12,6 +12,7 @@ from zope.component import queryUtility
 from BTrees.IIBTree import weightedIntersection, IISet
 from zExceptions import NotFound
 
+from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from Products.CMFPlone.utils import safeToInt
@@ -135,7 +136,6 @@ class Widget(ATWidget):
     # Widget properties
     widget_type = 'abstract'
     widget_label = 'Abstract'
-    css_class = 'faceted-abstract-widget'
     view_css = ()
     edit_css = ()
     view_js = ()
@@ -152,6 +152,14 @@ class Widget(ATWidget):
         """ Widget template
         """
         return self.index()
+
+    @property
+    def css_class(self):
+        """ Widget specific css class
+        """
+        css_type = self.widget_type
+        css_title = normalizer.normalize(self.data.title)
+        return 'faceted-{0}-widget section-{1}'.format(css_type, css_title)
 
     @property
     def hidden(self):

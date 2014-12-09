@@ -28,7 +28,6 @@ class Widget(AbstractWidget):
     widget_label = 'ETag'
     edit_js = '++resource++eea.facetednavigation.widgets.etag.edit.js'
     edit_css = '++resource++eea.facetednavigation.widgets.etag.edit.css'
-    css_class = 'faceted-etag-widget'
 
     index = ViewPageTemplateFile('widget.pt')
     edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
