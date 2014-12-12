@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <registry>
   <record name="eea.facetednavigation.interfaces.IEEASettings.disable_diazo_rules_ajax"
           interface="eea.facetednavigation.interfaces.IEEASettings"

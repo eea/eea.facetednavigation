@@ -29,7 +29,7 @@ class FacetedQueryHandler(object):
         self.request = request
         if request.get('HTTP_X_REQUESTED_WITH', '') == 'XMLHttpRequest':
             registry = getUtility(IRegistry)
-            settings = registry.forInterface(IEEASettings)
+            settings = registry.forInterface(IEEASettings, check=False)
             if settings.disable_diazo_rules_ajax:
                 request.response.setHeader('X-Theme-Disabled', '1')
 

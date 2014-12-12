@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
- <version>001</version>
+ <version>7.5</version>
  <dependencies>
   <dependency>profile-eea.jquery:01-jquery</dependency>
   <dependency>profile-eea.jquery:05-cookie</dependency>
