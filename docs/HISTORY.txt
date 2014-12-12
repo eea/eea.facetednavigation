@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.4-dev - (unreleased)
-----------------------
+7.4 - (2014-12-12)
+------------------
 * Bug fix: Fixed default profile to be imported when installing
   from Site Setup > Add-ons
   [avoinea refs github #57]
