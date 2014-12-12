@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.5-dev - (unreleased)
+----------------------
+
 7.4 - (2014-12-12)
 ------------------
 * Bug fix: Fixed default profile to be imported when installing
