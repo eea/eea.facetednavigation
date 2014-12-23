@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.6-dev - (unreleased)
+----------------------
+
 7.5 - (2014-12-23)
 ------------------
 * Bug fix: Fix upgrade steps and registry.xml. Also safely check for
