@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.5-dev - (unreleased)
-----------------------
+7.5 - (2014-12-23)
+------------------
 * Bug fix: Fix upgrade steps and registry.xml. Also safely check for
   disable_diazo registry without hard crash if it doesn't exists.
   [avoinea]
