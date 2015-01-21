@@ -8,11 +8,27 @@
       desc_or_title python:description or title;
       url context/absolute_url|string:#;
       view_url python:(url and useView and url + '/view') or url;
+      is_namedimage python:getattr(getattr(context, 'image', None), 'getImageSize', None) is not None;
       image_thumb exists:context/image_thumb;
       image_tag python:getattr(context, 'tag', None)"
      tal:attributes="href view_url;
                      title description">
 
+<tal:block tal:condition="is_namedimage">
+    <span class="photoAlbumEntryWrapper">
+
+       <img style="border: none" tal:attributes="
+        title desc_or_title;
+        alt title;
+        src string:$url/@@images/image/thumb"/>
+    </span>
+
+    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
+    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
+
+</tal:block>
+
+<tal:block tal:condition="not:is_namedimage">
     <span class="photoAlbumEntryWrapper" tal:condition="image_thumb">
       <img style="border: none" tal:attributes="
         title desc_or_title;
@@ -26,6 +42,7 @@
 
     <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
     <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
+</tal:block>
 
   </a>
 </div>
