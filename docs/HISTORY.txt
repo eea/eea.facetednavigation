@@ -1,6 +1,9 @@
 Changelog
 =========
 
+7.7-dev - (unreleased)
+----------------------
+
 7.6 - (2015-01-22)
 ------------------
 * Fix: support Dexterity items with image (on the 'image' field)
