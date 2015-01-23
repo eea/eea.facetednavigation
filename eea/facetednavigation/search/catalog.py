@@ -8,6 +8,14 @@ from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.search.interfaces import ICollection
 from eea.facetednavigation.search import parseFormquery
 
+try:
+    from plone.app.contenttypes import interfaces as PACI
+    from plone.app.contenttypes.behaviors.collection import \
+            ICollection as ICollection_behavior
+    HAS_PAT = True
+except ImportError:
+    HAS_PAT = False
+
 logger = logging.getLogger('eea.facetednavigation.search.catalog')
 
 class FacetedCatalog(object):
@@ -51,8 +59,18 @@ class FacetedCatalog(object):
         # Also get query from Topic
         buildQuery = getattr(context, 'buildQuery', None)
         newquery = buildQuery and buildQuery() or {}
+        formquery = None
 
         # Get query from Collection
+        if HAS_PAT:
+            if PACI.ICollection.providedBy(context):
+                infos = ICollection_behavior(context)
+                sort_order = ('descending'
+                              if infos.sort_reversed
+                              else 'ascending')
+                sort_on = infos.sort_on
+                formquery = infos.query
+
         if ICollection.providedBy(context):
             getRawQuery = getattr(context, 'getRawQuery', lambda: [])
             formquery = getRawQuery()
@@ -71,6 +89,7 @@ class FacetedCatalog(object):
             else:
                 sort_order = None
 
+        if formquery is not None:
             newquery = parseFormquery(context, formquery, sort_on, sort_order)
 
         if not isinstance(newquery, dict):

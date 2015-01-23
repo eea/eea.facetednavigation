@@ -3,6 +3,8 @@ Changelog
 
 7.7-dev - (unreleased)
 ----------------------
+* Fix: basic support for collections coming from plone.app.contenttypes
+  [kiorky]
 
 7.6 - (2015-01-22)
 ------------------
