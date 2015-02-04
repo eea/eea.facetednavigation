@@ -375,7 +375,6 @@ class CountableWidget(Widget):
         """ Intersect results
         """
         res = {}
-        res[""] = res['all'] = len(brains)
         try:
             # Use facet count of solr, if it is installed and used
             pkg_resources.get_distribution('collective.solr')
@@ -396,6 +395,7 @@ class CountableWidget(Widget):
                     # no facet counts were returned. we exit anyway because
                     # zcatalog methods throw an error on solr responses
                     pass
+                res[""] = res['all'] = len(brains)
                 return res
             else:
                 # this is handled by the zcatalog. see below
@@ -421,6 +421,7 @@ class CountableWidget(Widget):
             return res
 
         brains = IISet(brain.getRID() for brain in brains)
+        res[""] = res['all'] = len(brains)
         for value in sequence:
             if not value:
                 res[value] = len(brains)
