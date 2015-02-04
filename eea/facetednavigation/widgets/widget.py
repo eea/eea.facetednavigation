@@ -3,6 +3,7 @@
 import re
 import logging
 import operator
+import pkg_resources
 from zope import interface
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
@@ -368,10 +369,41 @@ class CountableWidget(Widget):
         """
         return bool(safeToInt(self.data.get('hidezerocount', 0)))
 
+    faceted_field = True
+
     def count(self, brains, sequence=None):
         """ Intersect results
         """
         res = {}
+        res[""] = res['all'] = len(brains)
+        try:
+            # Use facet count of solr, if it is installed and used
+            pkg_resources.get_distribution('collective.solr')
+
+            from collective.solr.parser import SolrResponse
+            if isinstance(brains, SolrResponse):
+                if hasattr(brains.facet_counts, 'facet_fields'):
+                    for value, num in brains.facet_counts.facet_fields:
+                        normalized_value = atdx_normalize(value)
+                        if isinstance(value, unicode):
+                            res[value] = num
+                        elif isinstance(normalized_value, unicode):
+                            res[normalized_value] = num
+                        else:
+                            unicode_value = value.decode('utf-8')
+                            res[unicode_value] = num
+                else:
+                    # no facet counts were returned. we exit anyway because
+                    # zcatalog methods throw an error on solr responses
+                    pass
+                return res
+            else:
+                # this is handled by the zcatalog. see below
+                pass
+        except pkg_resources.DistributionNotFound:
+            # Don't mind, if solr is not installed, use catalog for counting
+            pass
+
         if not sequence:
             sequence = [key for key, value in self.vocabulary()]
 
@@ -389,7 +421,6 @@ class CountableWidget(Widget):
             return res
 
         brains = IISet(brain.getRID() for brain in brains)
-        res[""] = res['all'] = len(brains)
         for value in sequence:
             if not value:
                 res[value] = len(brains)

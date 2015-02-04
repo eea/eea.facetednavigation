@@ -3,6 +3,8 @@ Changelog
 
 7.8.dev0 - (unreleased)
 -----------------------
+* Play nice with collective.solr
+  [tomgross]
 
 7.7 - (2015-02-03)
 ------------------
