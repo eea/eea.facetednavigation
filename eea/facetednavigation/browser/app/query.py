@@ -91,7 +91,14 @@ class FacetedQueryHandler(object):
             widget = criteria.widget(cid=cid)
             widget = widget(self.context, self.request, criterion)
 
-            query.update(widget.query(kwargs))
+            widget_query = widget.query(kwargs)
+            if getattr(widget, 'faceted_field', False):
+                widget_index = widget.data.get('index', '')
+                if 'facet.field' in query and widget_index not in query['facet.field']:
+                    query['facet.field'].append(widget_index)
+                else:
+                    query['facet.field'] = [widget_index]
+            query.update(widget_query)
 
             # Handle language widgets
             if criterion.get('index', '') == 'Language':
