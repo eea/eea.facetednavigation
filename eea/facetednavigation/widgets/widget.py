@@ -3,7 +3,6 @@
 import re
 import logging
 import operator
-import pkg_resources
 from zope import interface
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
