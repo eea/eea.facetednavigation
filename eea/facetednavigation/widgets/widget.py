@@ -302,7 +302,24 @@ class Widget(ATWidget):
 
         if catalog:
             mapping = dict(mapping)
-            values = self.catalog_vocabulary()
+            try:
+                from collective.solr.interfaces import ISearch
+                searchutility = queryUtility(ISearch, None)
+                if searchutility is not None:
+		    index = self.data.get('index', None)
+		    kw = {'facet': 'on', 
+			  'facet.field': index,    # facet on index
+			  'facet.limit': -1,       # show unlimited results
+			  'rows':0}                # no results needed
+		    result = searchutility.search('*:*', **kw)
+                    try:
+                        values = result.facet_counts['facet_fields'][index].keys()
+                    except (AttributeError, KeyError):
+                        values = []
+            except ImportError:
+                values = []
+            if not values:
+                values = self.catalog_vocabulary()
             res = [(val, mapping.get(val, val)) for val in values]
             res.sort(key=operator.itemgetter(1), cmp=compare)
         else:
@@ -377,8 +394,11 @@ class CountableWidget(Widget):
         # by checking for facet_counts we assume this is a SolrResponse
         # from collective.solr
         if hasattr(brains, 'facet_counts'):
-            if hasattr(brains.facet_counts, 'facet_fields'):
-                for value, num in brains.facet_counts.facet_fields:
+            facet_fields = brains.facet_counts.get('facet_fields')
+            if facet_fields:
+                index_id = self.data.get('index')
+                facet_field = facet_fields.get(index_id, {})
+                for value, num in facet_field.items():
                     normalized_value = atdx_normalize(value)
                     if isinstance(value, unicode):
                         res[value] = num
