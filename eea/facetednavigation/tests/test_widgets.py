@@ -6,11 +6,7 @@ class DummySolrResponse(dict):
 
     @property
     def facet_counts(self):
-        class DummyCounts(dict):
-           @property
-           def facet_fields(self):
-               return self.items()
-        return DummyCounts(self)
+        return {'facet_fields': self}
 
 
 class CountableWidgetTestCase(FacetedTestCase):
@@ -25,8 +21,8 @@ class CountableWidgetTestCase(FacetedTestCase):
 
     def test_widget_solr_count(self):
         """ Test facet extraction from solr response """
-        data = {}
+        data = {'index': 'tags'}
         widget = CountableWidget(self.portal, self.request, data=data)
-        dummyresponse = DummySolrResponse({'foo': 10, 'bar': 7})
+        dummyresponse = DummySolrResponse({'tags': {'foo': 10, 'bar': 7}})
         self.assertEqual(widget.count(dummyresponse),
-                         {'': 2, 'all': 2, u'bar': 7, u'foo': 10})
+                         {'': 1, 'all': 1, u'bar': 7, u'foo': 10})
