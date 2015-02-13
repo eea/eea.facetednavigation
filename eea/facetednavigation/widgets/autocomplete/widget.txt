@@ -1,0 +1,143 @@
+Autocomplete Widget
+===================
+Facet for free text search. This widget allows you to search by a free text
+query or by multiple string queries.
+
+Set up
+------
+
+  Imports
+
+    >>> from zope.component import getMultiAdapter
+    >>> from eea.facetednavigation.interfaces import ICriteria
+
+  Add faceted navigable sandbox
+
+    >>> self.loginAsPortalOwner()
+    >>> sid = portal.invokeFactory('Folder', 'sandbox')
+    >>> sandbox = portal._getOb(sid)
+    >>> request = sandbox.REQUEST
+
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
+    >>> subtyper.can_enable
+    True
+
+    >>> subtyper.enable()
+
+  Setup faceted components
+
+    >>> configure = getMultiAdapter((sandbox, request), name=u'faceted_configure')
+    >>> query = getMultiAdapter((sandbox, request), name=u'faceted_query')
+    >>> widgets = sandbox.unrestrictedTraverse('@@faceted_widgets')
+
+  Cleanup default widgets
+
+    >>> cids = ICriteria(sandbox).keys()
+    >>> for cid in cids:
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
+    []
+
+  Add some content
+
+    >>> doc = sandbox.invokeFactory('News Item', 'non-ascii-folder',
+    ...         title='Distance-to-target (Kyoto Protocol) for new Member States countries')
+    >>> doc = sandbox._getOb(doc)
+    >>> doc.setLanguage('en')
+    >>> doc.setSubject((u'\u015etire', u'\u015etire politica'))
+    >>> doc.reindexObject()
+
+    >>> doc = sandbox.invokeFactory('News Item', 'doc-title-two',
+    ...         title='443/2009 EEA-32')
+    >>> doc = sandbox._getOb(doc)
+    >>> doc.setLanguage('en')
+    >>> doc.reindexObject()
+
+Faceted navigation
+------------------
+
+  Add a hidden Text facet and do some search
+
+    >>> _ = configure(addPropertiesWidget_button='Add', wtype='text',
+    ...               wposition='top', title='Autocomplete',
+    ...               index='Subject', default='\xc5\x9etire', hidden=True)
+    >>> brains = query.query(batch=False)
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
+  Make it visible
+
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=0)
+    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
+  As we said before, you can search using multiple queries. This is used in real
+  world to search in current query
+
+    >>> brains = query.query(batch=False, c0=['\xc5\x9etire', '\xc5\x9etire politica'])
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
+  Now let's do some search in title
+
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', index='Title')
+    >>> brains = query.query(batch=False, c0='Kyoto')
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
+    >>> brains = query.query(batch=False, c0='(Kyoto')
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
+    >>> brains = query.query(batch=False, c0=['(Kyoto', 'Protocol)'])
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
+    >>> brains = query.query(batch=False, c0=['Member States', 'Kyoto'])
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
+    >>> brains = query.query(batch=False, c0='443/2009')
+    >>> for brain in brains:
+    ...     print brain.Title
+    443/2009 EEA-32
+
+    >>> brains = query.query(batch=False, c0=['443/2009'])
+    >>> for brain in brains:
+    ...     print brain.Title
+    443/2009 EEA-32
+
+    >>> brains = query.query(batch=False, c0='EEA-32')
+    >>> for brain in brains:
+    ...     print brain.Title
+    443/2009 EEA-32
+
+    >>> brains = query.query(batch=False, c0=['EEA-32'])
+    >>> for brain in brains:
+    ...     print brain.Title
+    443/2009 EEA-32
+
+    >>> brains = query.query(batch=False, c0=['(Kyoto', 'EEA-32'])
+    >>> [brain.Title for brain in brains]
+    []
+
+  Render facet
+
+    >>> print widgets()
+    <BLANKLINE>
+    ...<legend>Autocomplete</legend>
+    ...
+    ...<input type="text"...
+    ...
+
+  Cleanup
+
+    >>> ICriteria(sandbox).delete('c0')
