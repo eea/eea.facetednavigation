@@ -1,0 +1,48 @@
+<div class="faceted-widget faceted-autocomplete-widget" style="display: none"
+     i18n:domain="eea" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  default_value python:view.default or '';
+  css string:faceted-widget ${view/css_class};
+  css python:hidden and css + ' faceted-widget-hidden' or css;"
+  tal:attributes="id string:${wid}_widget; class css">
+
+<fieldset class="widget-fieldset"
+  tal:define="title python:view.data.get('title', '')">
+  <legend tal:content="python:view.translate(title)" i18n:translate="">Text Widget with autocomplete</legend>
+  <form action="." method="get"
+    >
+  <label class="text-field"
+    tal:attributes="for wid"
+    tal:content="python:view.translate(title)" />
+  <input type="text" tal:attributes="
+    name string:${wid};
+    id string:${wid};
+    value default_value;
+  "/>
+  <input type="submit" class="searchButton" value="Search" tal:attributes="
+    name string:${wid}_button;
+    id string:${wid}_button;"
+    i18n:attributes="value" />
+  <div class="faceted-textwidget-place-all"
+       tal:condition="not:view/data/onlyallelements|nothing">
+  <input type="radio" checked="checked" tal:attributes="
+    name string:${wid}_place;
+    id string:${wid}_place_all;
+    value string:all" />
+  <label tal:attributes="for string:${wid}_place_all"
+    i18n:translate="">all items</label>
+  </div>
+  <div class="faceted-textwidget-place-current"
+       tal:condition="not:view/data/onlyallelements|nothing">
+  <input type="radio" tal:attributes="
+    name string:${wid}_place;
+    id string:${wid}_place_current;
+    value string:current" />
+  <label tal:attributes="for string:${wid}_place_current"
+    i18n:translate="">in current results</label>
+  </div>
+  </form>
+</fieldset>
+</div>
