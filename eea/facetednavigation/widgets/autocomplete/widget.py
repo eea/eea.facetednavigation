@@ -1,6 +1,7 @@
 """ Text widget
 """
 import json
+import urllib
 from zope.component import queryUtility
 
 from lxml import etree
@@ -121,25 +122,25 @@ class Widget(AbstractWidget):
         query[index] = {'query': value, 'operator': 'and'}
         return query
 
-import urllib
 
 class AutocompleteSuggest(BrowserView):
 
     def __call__(self):
         result = []
-        if not HAS_SOLR:
-            return json.dumps(result)
         term = self.request.get('term')
-        if term:
-            from collective.solr.interfaces import ISolrConnectionManager
-            manager = queryUtility(ISolrConnectionManager)
-            connection = manager.getConnection()
-            # XXX this should really go into c.solr
-            request = urllib.urlencode({'q': term}, doseq=True)
-            response = connection.doPost(connection.solrBase + '/suggest', request, connection.formheaders)
-            root = etree.fromstring(response.read())
-            suggestion = root.xpath("//arr[@name='suggestion']")
-            if len(suggestion):
-                result = [item.text for item in suggestion[0].findall('str')]
+        if not HAS_SOLR or not term:
+            return json.dumps(result)
+
+        # we import c.solr here, because we checked, if it is available earlier
+        from collective.solr.interfaces import ISolrConnectionManager
+        manager = queryUtility(ISolrConnectionManager)
+        connection = manager.getConnection()
+        # XXX this should really go into c.solr
+        request = urllib.urlencode({'q': term}, doseq=True)
+        response = connection.doPost(connection.solrBase + '/suggest', request, connection.formheaders)
+        root = etree.fromstring(response.read())
+        suggestion = root.xpath("//arr[@name='suggestion']")
+        if len(suggestion):
+            result = [item.text for item in suggestion[0].findall('str')]
 
         return json.dumps(result)
