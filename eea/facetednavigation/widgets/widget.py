@@ -302,6 +302,7 @@ class Widget(ATWidget):
 
         if catalog:
             mapping = dict(mapping)
+            values = []
             try:
                 from collective.solr.interfaces import ISearch
                 searchutility = queryUtility(ISearch, None)
@@ -315,9 +316,9 @@ class Widget(ATWidget):
                     try:
                         values = result.facet_counts['facet_fields'][index].keys()
                     except (AttributeError, KeyError):
-                        values = []
+                        pass
             except ImportError:
-                values = []
+                pass
             if not values:
                 values = self.catalog_vocabulary()
             res = [(val, mapping.get(val, val)) for val in values]
