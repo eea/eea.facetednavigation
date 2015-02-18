@@ -124,7 +124,8 @@ class Widget(AbstractWidget):
 
 
 class AutocompleteSuggest(BrowserView):
-
+    """ Autocomplete widget
+    """
     def __call__(self):
         result = []
         term = self.request.get('term')
@@ -137,7 +138,8 @@ class AutocompleteSuggest(BrowserView):
         connection = manager.getConnection()
         # XXX this should really go into c.solr
         request = urllib.urlencode({'q': term}, doseq=True)
-        response = connection.doPost(connection.solrBase + '/suggest', request, connection.formheaders)
+        response = connection.doPost(
+            connection.solrBase + '/suggest', request, connection.formheaders)
         root = etree.fromstring(response.read())
         suggestion = root.xpath("//arr[@name='suggestion']")
         if len(suggestion):

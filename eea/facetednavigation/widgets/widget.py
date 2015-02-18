@@ -307,14 +307,15 @@ class Widget(ATWidget):
                 from collective.solr.interfaces import ISearch
                 searchutility = queryUtility(ISearch, None)
                 if searchutility is not None:
-		    index = self.data.get('index', None)
-		    kw = {'facet': 'on', 
-			  'facet.field': index,    # facet on index
-			  'facet.limit': -1,       # show unlimited results
-			  'rows':0}                # no results needed
-		    result = searchutility.search('*:*', **kw)
+                    index = self.data.get('index', None)
+                    kw = {'facet': 'on',
+                      'facet.field': index,    # facet on index
+                      'facet.limit': -1,       # show unlimited results
+                      'rows':0}                # no results needed
+                    result = searchutility.search('*:*', **kw)
                     try:
-                        values = result.facet_counts['facet_fields'][index].keys()
+                        values = result.facet_counts[
+                            'facet_fields'][index].keys()
                     except (AttributeError, KeyError):
                         pass
             except ImportError:
