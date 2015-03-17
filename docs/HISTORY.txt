@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.0.dev0 - (unreleased)
+-----------------------
+
 7.9 - (2015-03-17)
 ------------------
 * Change: Switched to curl in the jenkins build install script
