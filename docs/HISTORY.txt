@@ -1,8 +1,8 @@
 Changelog
 =========
 
-7.9.dev0 - (unreleased)
------------------------
+7.9 - (2015-03-17)
+------------------
 * Change: Switched to curl in the jenkins build install script
   [olimpiurob refs #22402]
 * Change: Changed fetch url for jenkins build install script to the install 
