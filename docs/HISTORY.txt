@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.0.dev0 - (unreleased)
------------------------
+8.0 - (2015-04-15)
+------------------
 * Feature: Added possibility to easily redefine default faceted widgets. Just
   register a browser:page named default_widgets.xml for your interfaces. See
   default.xml within eea.facetednavigation.browser.templates
