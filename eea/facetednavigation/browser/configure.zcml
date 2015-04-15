@@ -123,7 +123,7 @@
     />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
+    for="..interfaces.IPossibleFacetedNavigable"
     name="default_widgets.xml"
     template="template/default.xml"
     permission="eea.faceted.configure"

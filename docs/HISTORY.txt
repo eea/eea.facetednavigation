@@ -3,12 +3,16 @@ Changelog
 
 8.0.dev0 - (unreleased)
 -----------------------
+* Feature: Added possibility to easily redefine default faceted widgets. Just
+  register a browser:page named default_widgets.xml for your interfaces. See
+  default.xml within eea.facetednavigation.browser.templates
+  [avoinea]
 
 7.9 - (2015-03-17)
 ------------------
 * Change: Switched to curl in the jenkins build install script
   [olimpiurob refs #22402]
-* Change: Changed fetch url for jenkins build install script to the install 
+* Change: Changed fetch url for jenkins build install script to the install
   script from the main EEA CPB repository
   [olimpiurob refs #22402]
 
