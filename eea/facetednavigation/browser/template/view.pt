@@ -31,7 +31,7 @@
     <a href="#" class="faceted-sections-buttons-less" i18n:translate="">Less filters</a>
   </div>
 
-  <metal:widgets use-macro="here/@@faceted_widgets/macros/widgets" />
+  <metal:widgets use-macro="here/@@faceted_widgets_macros/macros/widgets" />
 
   <!-- Faceted version -->
   <div style="display: none" id="faceted-version"

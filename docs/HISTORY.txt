@@ -3,6 +3,8 @@ Changelog
 
 8.1.dev0 - (unreleased)
 -----------------------
+* Tune: avoid useless instantiation when using macros
+  [gotcha]
 
 8.0 - (2015-04-15)
 ------------------
