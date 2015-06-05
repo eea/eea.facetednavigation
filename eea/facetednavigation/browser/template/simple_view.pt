@@ -1,7 +1,7 @@
 <!-- Folder contents -->
 <div class="faceted-form" metal:define-macro="widgets" id="faceted-form"
   tal:define="mode view/mode | string:view" tal:attributes="data-mode mode">
-  <metal:widgets use-macro="here/@@faceted_widgets/macros/widgets" />
+  <metal:widgets use-macro="here/@@faceted_widgets_macros/macros/widgets" />
 
   <!-- Faceted version -->
   <div style="display: none" id="faceted-version"

@@ -39,9 +39,15 @@
 
   <browser:page
     for="..interfaces.IFacetedNavigable"
+    name="faceted_widgets_macros"
+    template="template/widgets.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.IFacetedNavigable"
     name="faceted_macros"
     template="template/macros.pt"
-    class=".app.view.FacetedContainerView"
     permission="zope2.View"
     />
 
