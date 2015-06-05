@@ -16,5 +16,5 @@ def test_suite():
             Suite('widgets/alphabetic/widget.txt',
                   optionflags=OPTIONFLAGS,
                   package='eea.facetednavigation',
-                  test_class=FacetedFunctionalTestCase) ,
+                  test_class=FacetedFunctionalTestCase),
               ))

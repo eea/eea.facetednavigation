@@ -68,8 +68,8 @@ class FacetedExportImport(object):
         self.request.response.setHeader(
             'content-type', 'text/xml; charset=utf-8')
         self.request.response.addHeader(
-            "content-disposition","attachment; filename=%s.xml" % (
-                self.context.getId(),))
+            "content-disposition", "attachment; filename=%s.xml" % (
+                self.context.getId(), ))
         return exporter.body
 
     def __call__(self, **kwargs):

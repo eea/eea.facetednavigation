@@ -19,7 +19,7 @@ class CriteriaContext(BaseContext):
 
     def __init__(self, tool, encoding='utf-8'):
         self._tool = tool
-        self._site = aq_parent( aq_inner( tool.context ) )
+        self._site = aq_parent(aq_inner(tool.context))
         self._loggers = {}
         self._messages = []
         self._encoding = encoding

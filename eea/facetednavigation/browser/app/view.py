@@ -143,6 +143,4 @@ class DisplayCriteriaCheckerView(BrowserView):
             if criterion.get('index', None) == 'Language':
                 if not criterion.hidden:
                     return True
-        else:
-            return False
-
+        return False

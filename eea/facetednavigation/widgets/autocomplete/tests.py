@@ -13,8 +13,8 @@ def test_suite():
     """ Suite
     """
     return unittest.TestSuite((
-            Suite('widgets/autocomplete/widget.txt',
-                  optionflags=OPTIONFLAGS,
-                  package='eea.facetednavigation',
-                  test_class=FacetedFunctionalTestCase) ,
-              ))
+        Suite('widgets/autocomplete/widget.txt',
+              optionflags=OPTIONFLAGS,
+              package='eea.facetednavigation',
+              test_class=FacetedFunctionalTestCase),
+    ))

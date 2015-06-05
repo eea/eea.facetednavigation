@@ -11,7 +11,7 @@ class SummaryView(BrowserView):
     on a map, or do whatever you want.
     This is limited only by your imagination... and your python skills :)
     """
- 
+
     def truncate(self, text='', chars=100):
         """ Truncate text by given number of characters
         """

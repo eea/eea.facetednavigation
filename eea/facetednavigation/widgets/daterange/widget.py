@@ -21,7 +21,7 @@ def formated_time(datestr):
     """Return a DateTime object from a string with
     Y-m-d as format."""
     try:
-        if(len(datestr) <= 4):
+        if len(datestr) <= 4:
             datestr = datetime.strptime(datestr, '%Y')
         elif '-' in datestr:
             datestr = datetime.strptime(datestr, '%Y-%m-%d')
@@ -91,11 +91,11 @@ class Widget(AbstractWidget):
         """
         default = self.data.get('default', '')
         if not default:
-            return ('', '')
+            return '', ''
 
         default = default.split('=>')
         if len(default) != 2:
-            return ('', '')
+            return '', ''
 
         start, end = default
         try:
@@ -126,7 +126,7 @@ class Widget(AbstractWidget):
             start, end = self.default
         else:
             value = form.get(self.data.getId(), ())
-            if not value or len(value)!=2:
+            if not value or len(value) != 2:
                 return query
             start, end = value
         start, end = start.replace('/', '-'), end.replace('/', '-')
@@ -150,7 +150,6 @@ class Widget(AbstractWidget):
 
         if not (start and end):
             return query
-
 
         try:
             # give datetime.datetime to allow very old or big years

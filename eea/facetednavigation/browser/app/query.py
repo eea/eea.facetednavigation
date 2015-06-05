@@ -168,7 +168,7 @@ class FacetedQueryHandler(object):
         b_start = safeToInt(kwargs.get('b_start', 0))
         orphans = num_per_page * 20 / 100 # orphans = 20% of items per page
 
-        if type(brains) == GeneratorType:
+        if isinstance(brains, GeneratorType):
             brains = [brain for brain in brains]
 
         return Batch(brains, num_per_page, b_start, orphan=orphans)

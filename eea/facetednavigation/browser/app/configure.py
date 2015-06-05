@@ -264,15 +264,15 @@ class FacetedFormHandler(FacetedBasicHandler):
             return handler.update(**kwargs)
 
         # Move up button clicked
-        move_up = [key for key in kwargs.keys()
-                   if key.startswith('moveUp_button')]
+        move_up = [k for k in kwargs.keys()
+                   if k.startswith('moveUp_button')]
         if move_up:
             cid = move_up[0].split('+++')[1]
             return handler.move_up(cid)
 
         # Move down button clicked
-        move_down = [key for key in kwargs.keys()
-                   if key.startswith('moveDown_button')]
+        move_down = [k for k in kwargs.keys()
+                   if k.startswith('moveDown_button')]
         if move_down:
             cid = move_down[0].split('+++')[1]
             return handler.move_down(cid)

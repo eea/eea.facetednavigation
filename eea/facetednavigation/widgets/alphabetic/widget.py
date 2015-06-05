@@ -88,7 +88,7 @@ class Widget(CountableWidget):
             xval = getattr(brain, index_id, None)
             if not xval:
                 continue
-            if type(xval) not in (str, unicode):
+            if not isinstance(xval, (str, unicode)):
                 continue
             if isinstance(xval, str):
                 xval = xval.decode('utf-8', 'replace')

@@ -79,7 +79,7 @@ class Widget(AbstractWidget):
             start, end = self.default
         else:
             value = form.get(self.data.getId(), ())
-            if not value or len(value)!=2:
+            if not value or len(value) != 2:
                 return query
             start, end = value
 

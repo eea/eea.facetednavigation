@@ -50,7 +50,7 @@ class FacetedDisplayMenu(DisplayMenu):
             layout['action'] = '%s/@@faceted_layout?layout=%s' % (
                 obj.absolute_url(), name)
 
-            if (name == current):
+            if name == current:
                 layout['selected'] = True
                 layout['extra']['class'] = 'actionMenuSelected'
 

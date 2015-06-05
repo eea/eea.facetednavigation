@@ -206,8 +206,7 @@ class Widget(ATWidget):
                 value = translate(message, domain=domain, context=self.request)
                 if value != message:
                     return value
-            else:
-                return message
+            return message
 
     def cleanup(self, string):
         """ Quote string

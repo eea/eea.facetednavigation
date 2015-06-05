@@ -38,7 +38,7 @@ class WidgetFilterBrains(object):
             if xval is None:
                 continue
 
-            if type(xval) not in (str, unicode):
+            if not isinstance(xval, (str, unicode)):
                 continue
 
             if isinstance(xval, str):
