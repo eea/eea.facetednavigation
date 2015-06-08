@@ -3,6 +3,8 @@ Changelog
 
 8.1.dev0 - (unreleased)
 -----------------------
+* Bug fix: Cleanup debugging console.log
+  [avoinea refs #67]
 * Tune: avoid useless instantiation when using macros
   [gotcha]
 

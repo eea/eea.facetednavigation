@@ -54,7 +54,6 @@ Faceted.TextWidget.prototype = {
     if(where == 'all'){
       return Faceted.Form.do_query(this.wid, value);
     }
-    console.log(where);
 
     var current = Faceted.Query[this.wid];
     current = current ? current : [];
