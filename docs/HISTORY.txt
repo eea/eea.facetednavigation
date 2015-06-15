@@ -3,6 +3,9 @@ Changelog
 
 8.1.dev0 - (unreleased)
 -----------------------
+* Change: applied styles tweaks for faceted edititing when used together
+  with Twitter Bootstrap
+  [ichimdav refs #25986]
 * Bug fix: Cleanup debugging console.log
   [avoinea refs #67]
 * Tune: avoid useless instantiation when using macros
