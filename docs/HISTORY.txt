@@ -10,6 +10,9 @@ Changelog
   [avoinea refs #67]
 * Tune: avoid useless instantiation when using macros
   [gotcha]
+* Feature: Added 'wildcard' checkbox to the text widget
+  that, when checked, will do a wildcard search automatically
+  [gbastien]
 
 8.0 - (2015-04-15)
 ------------------
@@ -713,4 +716,3 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
-

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-18 12:41+0000\n"
+"POT-Creation-Date: 2015-06-29 12:50+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -70,7 +70,7 @@ msgid "After query filters"
 msgstr "După filtre de interogare"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
-#: ../../facetednavigation/widgets/radio/widget.pt:31
+#: ../../facetednavigation/widgets/radio/widget.pt:33
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "Toate"
@@ -83,24 +83,28 @@ msgstr "Alfabetic"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Sunteţi sigur că doriţi să ştergeţi widget-ul ${widget}?"
 
+#: ../../facetednavigation/widgets/boolean/widget.py:44
+msgid "Boolean"
+msgstr ""
+
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:42
-#: ../../facetednavigation/widgets/select/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:69
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Catalog"
 msgstr "Catalog"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:30
-#: ../../facetednavigation/widgets/checkbox/widget.py:26
-#: ../../facetednavigation/widgets/date/widget.py:50
+#: ../../facetednavigation/widgets/autocomplete/widget.py:28
+#: ../../facetednavigation/widgets/boolean/widget.py:20
 msgid "Catalog index"
 msgstr "Index în catalog"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:31
-#: ../../facetednavigation/widgets/checkbox/widget.py:27
-#: ../../facetednavigation/widgets/date/widget.py:51
+#: ../../facetednavigation/widgets/autocomplete/widget.py:29
+#: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Catalog index to use for search"
 msgstr "Indexul din catalog folosit la căutare"
 
@@ -108,26 +112,26 @@ msgstr "Indexul din catalog folosit la căutare"
 msgid "Catalog query"
 msgstr "Criterii de interogare"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:101
+#: ../../facetednavigation/widgets/checkbox/widget.py:104
 msgid "Checkboxes"
 msgstr "Căsuţe"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:23
+#: ../../facetednavigation/widgets/tagscloud/widget.py:24
 msgid "Cloud"
 msgstr "Cloud"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:137
+#: ../../facetednavigation/widgets/tagscloud/widget.py:138
 msgid "Cloud height"
 msgstr "Înălţime"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:138
+#: ../../facetednavigation/widgets/tagscloud/widget.py:139
 msgid "Cloud height (px)"
 msgstr "Înălţime"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:110
+#: ../../facetednavigation/widgets/tagscloud/widget.py:111
 msgid "Cloud type"
 msgstr "Tip"
 
@@ -146,7 +150,7 @@ msgid "Control the range of yearsdisplayed in the year drop-down: either relativ
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:299
+#: ../../facetednavigation/widgets/widget.py:343
 msgid "Count results"
 msgstr "Numără rezultatele"
 
@@ -163,7 +167,7 @@ msgid "Current configuration"
 msgstr "Configuraţia curentă"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:71
+#: ../../facetednavigation/widgets/tagscloud/widget.py:72
 msgid "Cut long phrases to provided number of characters"
 msgstr "Taie frazele lungi la numărul de caractere dat"
 
@@ -193,7 +197,8 @@ msgid "Default etag"
 msgstr "Etag implicit"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:90
+#: ../../facetednavigation/widgets/boolean/widget.py:29
+#: ../../facetednavigation/widgets/checkbox/widget.py:93
 msgid "Default items (one per line)"
 msgstr "Valoare implicită (câte una pe linie)"
 
@@ -203,7 +208,7 @@ msgid "Default letter to be selected"
 msgstr "Litera selectată implicit"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:38
+#: ../../facetednavigation/widgets/checkbox/widget.py:41
 msgid "Default operator"
 msgstr "Operator"
 
@@ -222,9 +227,9 @@ msgid "Default results per page"
 msgstr "Rezultate pe pagina afişate implicit"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/radio/widget.py:80
-#: ../../facetednavigation/widgets/select/widget.py:56
-#: ../../facetednavigation/widgets/tagscloud/widget.py:147
+#: ../../facetednavigation/widgets/radio/widget.py:81
+#: ../../facetednavigation/widgets/select/widget.py:57
+#: ../../facetednavigation/widgets/tagscloud/widget.py:148
 msgid "Default selected item"
 msgstr "Valoarea implicită selectată"
 
@@ -233,6 +238,7 @@ msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Indexul dupa care se sorteaza obiectele (ex. 'effective' sau 'effective(reverse)')"
 
 #. Default: ""
+#: ../../facetednavigation/widgets/autocomplete/widget.py:38
 #: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Text implicit de căutat"
@@ -245,8 +251,8 @@ msgstr "Valoare implicită"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:89
-#: ../../facetednavigation/widgets/date/widget.py:59
+#: ../../facetednavigation/widgets/autocomplete/widget.py:37
+#: ../../facetednavigation/widgets/boolean/widget.py:28
 msgid "Default value"
 msgstr "Valoare implicită"
 
@@ -258,37 +264,41 @@ msgstr "Şterge"
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Adâncimea. 0 = nivelul curent, -1 = toate subdirectoarele recursiv, orice alt numar pozitiv = adâncimea de căutare"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/interfaces.py:80
+msgid "Disable diazo rules on ajax requests"
+msgstr ""
+
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Disable faceted navigation"
 msgstr "Dezactivează navigarea faţetată"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Disable faceted search"
 msgstr "Dezactivează căutarea faţetată"
 
-#: ../../facetednavigation/settings/menu.py:109
+#: ../../facetednavigation/settings/menu.py:111
 msgid "Disable inheriting configuration"
 msgstr ""
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:63
 msgid "Disable left portlets"
 msgstr "Dezactivează portleţii de stânga"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:78
 msgid "Disable right portlets"
 msgstr "Dezactivează portleţii de dreapta"
 
-#: ../../facetednavigation/settings/menu.py:91
+#: ../../facetednavigation/settings/menu.py:93
 msgid "Disable smart facets hiding"
 msgstr "Dezactivează ascunderea inteligentă a faţetelor"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:300
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Display number of results near each option"
 msgstr "Afişează numărul de rezultate lângă fiecare opţiune"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:62
+#: ../../facetednavigation/widgets/widget.py:65
 msgid "Display widget in section"
 msgstr "Afişează widget-ul în secţiunea"
 
@@ -297,11 +307,11 @@ msgstr "Afişează widget-ul în secţiunea"
 msgid "Display widget in section."
 msgstr "Afişează widget-ul în secţiunea"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
 msgstr "Activează navigarea faţetată"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted search"
 msgstr "Activează căutarea faţetată"
 
@@ -309,19 +319,19 @@ msgstr "Activează căutarea faţetată"
 msgid "Enable hide/show criteria"
 msgstr "Activează ascunde/arată criteriile"
 
-#: ../../facetednavigation/settings/menu.py:110
+#: ../../facetednavigation/settings/menu.py:113
 msgid "Enable inheriting configuration "
 msgstr ""
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:62
 msgid "Enable left portlets"
 msgstr "Activează portleţii de stânga"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:77
 msgid "Enable right portlets"
 msgstr "Activează portleţii de dreapta"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:92
 msgid "Enable smart facets hiding"
 msgstr "Activează asunderea inteligentă a faţetelor"
 
@@ -352,6 +362,7 @@ msgstr "Valoare ETag"
 msgid "Export"
 msgstr "Exportă"
 
+#: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Navigare faţetată"
@@ -408,7 +419,7 @@ msgid "Filters deleted"
 msgstr "Filtrele au fost şterse cu succes"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:43
+#: ../../facetednavigation/widgets/widget.py:46
 msgid "Friendly name"
 msgstr "Titlu"
 
@@ -417,42 +428,47 @@ msgid "Future"
 msgstr "În viitor"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:67
-#: ../../facetednavigation/widgets/radio/widget.py:43
-#: ../../facetednavigation/widgets/select/widget.py:40
+#: ../../facetednavigation/widgets/checkbox/widget.py:70
+#: ../../facetednavigation/widgets/radio/widget.py:44
+#: ../../facetednavigation/widgets/select/widget.py:41
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Preia valorile unice din catalog ca o alternativă la vocabular"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:68
+#: ../../facetednavigation/widgets/widget.py:71
 msgid "Hidden"
 msgstr "Ascunde"
 
-#: ../../facetednavigation/widgets/radio/widget.py:52
+#: ../../facetednavigation/widgets/radio/widget.py:53
 msgid "Hide 'All' option"
 msgstr "Ascunde optţiunea 'Toate'"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:16
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "Hide filters"
 msgstr "Ascunde filtrele"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:313
+#: ../../facetednavigation/widgets/widget.py:357
 msgid "Hide items with zero results"
 msgstr "Ascundere elementele care nu generează nici un rezultat"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:69
+#: ../../facetednavigation/widgets/widget.py:72
 msgid "Hide widget"
 msgstr "Ascunde widget-ul"
 
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:54
 msgid "If this checkbox is checked, hides the All option"
 msgstr "Dacă această opţiune este selectată, ascunde optiunea 'Toate'"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:46
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr "Dacă aceasta opţiune este selectată, ascunde opţiunile de cautare avansată"
+
+#: ../../facetednavigation/widgets/text/widget.py:48
+msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
+msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
@@ -466,11 +482,11 @@ msgstr "Importă - Exportă configuraţia"
 msgid "Import configuration"
 msgstr "Importă configuraţia"
 
-#: ../../facetednavigation/settings/menu.py:176
+#: ../../facetednavigation/settings/menu.py:180
 msgid "Inheriting configuration if is now enabled"
 msgstr ""
 
-#: ../../facetednavigation/settings/menu.py:179
+#: ../../facetednavigation/settings/menu.py:184
 msgid "Inheriting configuration is now disabled"
 msgstr ""
 
@@ -483,43 +499,43 @@ msgstr "Vocabularul selectat pentru acest widget este invalid sau lipseşte. Lă
 msgid "Less filters"
 msgstr "Mai puţine filtre"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:49
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr "Permite utilizatorului final să caute elementele folosind ŞI sau SAU între filtre"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:21
+#: ../../facetednavigation/widgets/tagscloud/widget.py:22
 msgid "List"
 msgstr "Listă"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:70
+#: ../../facetednavigation/widgets/tagscloud/widget.py:71
 msgid "Maximum characters"
 msgstr "Număr maxim de caractere"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:129
+#: ../../facetednavigation/widgets/tagscloud/widget.py:130
 msgid "Maximum font-size (px)"
 msgstr "Mărime font maximă (px)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:75
-#: ../../facetednavigation/widgets/radio/widget.py:62
-#: ../../facetednavigation/widgets/tagscloud/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:78
+#: ../../facetednavigation/widgets/radio/widget.py:63
+#: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Maximum items"
 msgstr "Număr maxim de obiecte"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:128
+#: ../../facetednavigation/widgets/tagscloud/widget.py:129
 msgid "Maximum size"
 msgstr "Mărime maximă"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:120
+#: ../../facetednavigation/widgets/tagscloud/widget.py:121
 msgid "Minimum font-size (px)"
 msgstr "Mărime font minimă (px)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:119
+#: ../../facetednavigation/widgets/tagscloud/widget.py:120
 msgid "Minimum size"
 msgstr "Mărime minimă"
 
@@ -587,13 +603,13 @@ msgid "No action provided"
 msgstr "Nici o acţiune selectată"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:76
-#: ../../facetednavigation/widgets/radio/widget.py:63
-#: ../../facetednavigation/widgets/tagscloud/widget.py:62
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/radio/widget.py:64
+#: ../../facetednavigation/widgets/tagscloud/widget.py:63
 msgid "Number of items visible in widget"
 msgstr "Numărul de obiecte afişate în widget"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:51
 msgid "Operator visible"
 msgstr "Operator vizibil"
 
@@ -627,25 +643,25 @@ msgstr "Portlet Plone"
 msgid "Portlet macro"
 msgstr "Macro"
 
-#: ../../facetednavigation/settings/menu.py:149
+#: ../../facetednavigation/settings/menu.py:152
 msgid "Portlets left column is hidden now"
 msgstr "Portleţii de stânga au fost ascunşi"
 
-#: ../../facetednavigation/settings/menu.py:146
+#: ../../facetednavigation/settings/menu.py:149
 msgid "Portlets left column is visible now"
 msgstr "Portleţii de stânga sunt vizibili acum"
 
-#: ../../facetednavigation/settings/menu.py:159
+#: ../../facetednavigation/settings/menu.py:162
 msgid "Portlets right column is hidden now"
 msgstr "Portleţii de dreapta au fost ascunşi"
 
-#: ../../facetednavigation/settings/menu.py:156
+#: ../../facetednavigation/settings/menu.py:159
 msgid "Portlets right column is visible now"
 msgstr "Portleţii de dreapta sunt vizibili acum"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:42
-#: ../../facetednavigation/widgets/widget.py:52
+#: ../../facetednavigation/widgets/widget.py:55
 msgid "Position"
 msgstr "Poziţie"
 
@@ -658,7 +674,7 @@ msgstr "Poziţia widget-ului"
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Numele Python al unei 'Factory' care poate creea obiectul de implementare. Aceasta trebuie sa identifice un obiect folosind numele complet cu punctuaţie"
 
-#: ../../facetednavigation/widgets/radio/widget.py:91
+#: ../../facetednavigation/widgets/radio/widget.py:92
 msgid "Radio"
 msgstr "Radio"
 
@@ -666,11 +682,11 @@ msgstr "Radio"
 msgid "Range"
 msgstr "Spectru"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:28
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
 msgid "Remove all"
 msgstr "Șterge toate filtrele"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:25
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
 msgid "Remove all filters"
 msgstr "Şterge toate filtrele"
 
@@ -702,9 +718,9 @@ msgid "Reverse"
 msgstr "Sortare inversă"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:82
-#: ../../facetednavigation/widgets/radio/widget.py:70
-#: ../../facetednavigation/widgets/select/widget.py:47
+#: ../../facetednavigation/widgets/checkbox/widget.py:85
+#: ../../facetednavigation/widgets/radio/widget.py:71
+#: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Reverse options"
 msgstr "Sortare inversă"
 
@@ -717,6 +733,7 @@ msgstr "Director rădăcină"
 msgid "Save"
 msgstr "Salvează"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:24
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Caută"
@@ -726,21 +743,22 @@ msgstr "Caută"
 msgid "Search Depth"
 msgstr "Adâncime"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:45
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr "Caută în toate elementele"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "Search with AND/OR between elements"
 msgstr "Caută folosind SI/SAU între elementele filtrului"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:54
-#: ../../facetednavigation/widgets/widget.py:61
+#: ../../facetednavigation/widgets/widget.py:64
 msgid "Section"
 msgstr "Secţiune"
 
-#: ../../facetednavigation/widgets/select/widget.py:67
+#: ../../facetednavigation/widgets/select/widget.py:69
 msgid "Select"
 msgstr "Selectare"
 
@@ -749,26 +767,26 @@ msgstr "Selectare"
 msgid "Select all items"
 msgstr "Selectează toate obiectele"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:19
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "Arată filtrele"
 
-#: ../../facetednavigation/settings/menu.py:169
+#: ../../facetednavigation/settings/menu.py:172
 msgid "Smart facets hiding is now disabled"
 msgstr "Ascunderea inteligentă a faţetelor a fost dezactivată"
 
-#: ../../facetednavigation/settings/menu.py:166
+#: ../../facetednavigation/settings/menu.py:169
 msgid "Smart facets hiding is now enabled"
 msgstr "Ascunderea inteligentă a faţetelor a fost activată"
 
-#: ../../facetednavigation/widgets/widget.py:306
+#: ../../facetednavigation/widgets/widget.py:350
 msgid "Sort by countable"
 msgstr "Sortează după numărul de elementele"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:83
-#: ../../facetednavigation/widgets/radio/widget.py:71
-#: ../../facetednavigation/widgets/select/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/radio/widget.py:72
+#: ../../facetednavigation/widgets/select/widget.py:49
 msgid "Sort options reversed"
 msgstr "Sortează elementele invers"
 
@@ -776,7 +794,7 @@ msgstr "Sortează elementele invers"
 msgid "Sorting"
 msgstr "Sortare"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+#: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Sphere"
 msgstr "Sferă"
 
@@ -795,7 +813,7 @@ msgstr "Data de începere"
 msgid "Step"
 msgstr "Pas"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Sync faceted translations"
 msgstr "Activează navigarea faţetată pe traduceri"
 
@@ -803,7 +821,7 @@ msgstr "Activează navigarea faţetată pe traduceri"
 msgid "TAL Expression"
 msgstr "Expresie TAL"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:158
+#: ../../facetednavigation/widgets/tagscloud/widget.py:160
 msgid "Tags Cloud"
 msgstr "Tag Cloud"
 
@@ -812,16 +830,20 @@ msgstr "Tag Cloud"
 msgid "Tal Expression"
 msgstr "Expresie TAL"
 
-#: ../../facetednavigation/widgets/text/widget.py:51
+#: ../../facetednavigation/widgets/text/widget.py:61
 msgid "Text field"
 msgstr "Câmp text"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:58
+msgid "Text field with suggestions"
+msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
 msgstr "Tema folosită pentru a afisa acest widget"
 
-#: ../../facetednavigation/widgets/widget.py:314
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "This option works only if 'count results' is enabled"
 msgstr "Această opţiune funcţionează doar împreună cu opţiunea 'Numără rezultatele'"
 
@@ -834,7 +856,7 @@ msgid "This widget will be ignored in view mode as an error occurred while tryin
 msgstr "Acest widget va fi ignorat datorită unei erori de randare. Pentru detalii verificaţi fişierele de logare de pe server. Puteţi încerca să modificaţi configuraţia widget-ului pentru a afla care din proprietăţi generează această eroare."
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:44
+#: ../../facetednavigation/widgets/widget.py:47
 msgid "Title for widget to display in view page"
 msgstr "Titlul widget-ului afişat în pagina de vizualizare"
 
@@ -851,7 +873,7 @@ msgid "Type"
 msgstr "Tip"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+#: ../../facetednavigation/widgets/tagscloud/widget.py:112
 msgid "Type of the cloud"
 msgstr "Tip"
 
@@ -868,7 +890,7 @@ msgstr ""
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Deselectează aceasta opţiune dacă nu vrei 'ascunde/arată criteriile' activă pentru acest widget"
 
-#: ../../facetednavigation/widgets/widget.py:307
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Use the results counter for sorting"
 msgstr "Utilizează contorul rezultat pentru sortare"
 
@@ -878,9 +900,9 @@ msgid "Visible to"
 msgstr "Vizibil pentru"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:57
-#: ../../facetednavigation/widgets/radio/widget.py:32
-#: ../../facetednavigation/widgets/select/widget.py:30
+#: ../../facetednavigation/widgets/checkbox/widget.py:60
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary"
 msgstr "Vocabular"
 
@@ -890,14 +912,14 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "Vocabularul folosit pentru a filtra elementele de sortare. Nu selecta pentru a folosi criteriile implicite"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:58
-#: ../../facetednavigation/widgets/radio/widget.py:33
-#: ../../facetednavigation/widgets/select/widget.py:31
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
+#: ../../facetednavigation/widgets/radio/widget.py:34
+#: ../../facetednavigation/widgets/select/widget.py:32
 msgid "Vocabulary to use to render widget items"
 msgstr "Vocabularul folosit pentru a randa elementele widget-ului"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:53
+#: ../../facetednavigation/widgets/widget.py:56
 msgid "Widget position in page"
 msgstr "Poziţia widget-ului în pagină"
 
@@ -910,31 +932,37 @@ msgstr "Tipul widget-ului"
 msgid "Widget will be visible only for selected user"
 msgstr "Widget-ul va fi vizibil doar pentru utilizatorul selectat"
 
+#: ../../facetednavigation/widgets/text/widget.py:47
+msgid "Wildcard search"
+msgstr ""
+
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 msgid "all"
 msgstr "toate"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "toate elementele"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 msgid "any"
 msgstr "oricare"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:43
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "în rezultatele curente"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:26
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
 msgid "match"
 msgstr "conţine"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "match any/all filters bellow"
 msgstr "filtrează elementele care conţin toate sau oricare dintre filtrele de mai jos"
 

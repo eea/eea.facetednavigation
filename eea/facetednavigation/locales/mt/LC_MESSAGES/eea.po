@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-09-18 12:41+0000\n"
+"POT-Creation-Date: 2015-06-29 12:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,7 +67,7 @@ msgid "After query filters"
 msgstr "Wara filtri mistoqsija"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
-#: ../../facetednavigation/widgets/radio/widget.pt:31
+#: ../../facetednavigation/widgets/radio/widget.pt:33
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "kollha"
@@ -80,21 +80,25 @@ msgstr "Alfabetiku"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Int żgur li trid tħassar ${widget} widget?"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:66
-#: ../../facetednavigation/widgets/radio/widget.py:42
-#: ../../facetednavigation/widgets/select/widget.py:39
+#: ../../facetednavigation/widgets/boolean/widget.py:44
+msgid "Boolean"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:69
+#: ../../facetednavigation/widgets/radio/widget.py:43
+#: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Catalog"
 msgstr "Catalog"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:30
-#: ../../facetednavigation/widgets/checkbox/widget.py:26
-#: ../../facetednavigation/widgets/date/widget.py:50
+#: ../../facetednavigation/widgets/autocomplete/widget.py:28
+#: ../../facetednavigation/widgets/boolean/widget.py:20
 msgid "Catalog index"
 msgstr "Indiċi Catalog"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:31
-#: ../../facetednavigation/widgets/checkbox/widget.py:27
-#: ../../facetednavigation/widgets/date/widget.py:51
+#: ../../facetednavigation/widgets/autocomplete/widget.py:29
+#: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Catalog index to use for search"
 msgstr "Indiċi Catalog għall-użu għall-tfittxija"
 
@@ -102,23 +106,23 @@ msgstr "Indiċi Catalog għall-użu għall-tfittxija"
 msgid "Catalog query"
 msgstr "Mistoqsija Catalog"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:101
+#: ../../facetednavigation/widgets/checkbox/widget.py:104
 msgid "Checkboxes"
 msgstr "Checkboxes"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:23
+#: ../../facetednavigation/widgets/tagscloud/widget.py:24
 msgid "Cloud"
 msgstr "Cloud"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:137
+#: ../../facetednavigation/widgets/tagscloud/widget.py:138
 msgid "Cloud height"
 msgstr "Għoli Cloud"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:138
+#: ../../facetednavigation/widgets/tagscloud/widget.py:139
 msgid "Cloud height (px)"
 msgstr "Cloud għoli (px)"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:110
+#: ../../facetednavigation/widgets/tagscloud/widget.py:111
 msgid "Cloud type"
 msgstr "Tip Cloud"
 
@@ -134,7 +138,7 @@ msgstr "Elenkar Kontenut"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Kontroll tal-firxa ta 'yearsdisplayed fis-sena drop-down: jew relattiv għal sena tal-lum (-nn: + nn), relattiva għas-sena attwalment magħżula (c-nn: c + nn), assoluta (nnnn: nnnn), jew kombinazzjonijiet ta 'dawn il-formati (nnnn:-nn)."
 
-#: ../../facetednavigation/widgets/widget.py:299
+#: ../../facetednavigation/widgets/widget.py:343
 msgid "Count results"
 msgstr "Count riżultati"
 
@@ -150,7 +154,7 @@ msgstr "Kriterju dettalji"
 msgid "Current configuration"
 msgstr "Kurrenti konfigurazzjoni"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:71
+#: ../../facetednavigation/widgets/tagscloud/widget.py:72
 msgid "Cut long phrases to provided number of characters"
 msgstr "Aqta frażijiet twal li numru provdut ta 'karattri"
 
@@ -178,7 +182,8 @@ msgstr "Default daterange (eż. 'issa-365 => issa +1' li tfisser 'Bidu sena ilu 
 msgid "Default etag"
 msgstr "ETAG Default"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:90
+#: ../../facetednavigation/widgets/boolean/widget.py:29
+#: ../../facetednavigation/widgets/checkbox/widget.py:93
 msgid "Default items (one per line)"
 msgstr "Default oġġetti (wieħed għal kull linja)"
 
@@ -186,7 +191,7 @@ msgstr "Default oġġetti (wieħed għal kull linja)"
 msgid "Default letter to be selected"
 msgstr "Nuqqas ittra li għandhom ikunu magħżula"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:38
+#: ../../facetednavigation/widgets/checkbox/widget.py:41
 msgid "Default operator"
 msgstr "Operatur"
 
@@ -202,9 +207,9 @@ msgstr "Firxa Default (eż. '1 => 3')"
 msgid "Default results per page"
 msgstr "Default riżultati għal kull paġna"
 
-#: ../../facetednavigation/widgets/radio/widget.py:80
-#: ../../facetednavigation/widgets/select/widget.py:56
-#: ../../facetednavigation/widgets/tagscloud/widget.py:147
+#: ../../facetednavigation/widgets/radio/widget.py:81
+#: ../../facetednavigation/widgets/select/widget.py:57
+#: ../../facetednavigation/widgets/tagscloud/widget.py:148
 msgid "Default selected item"
 msgstr "Oġġett magħżula Default"
 
@@ -212,6 +217,7 @@ msgstr "Oġġett magħżula Default"
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Issortjar Default indiċi (eż. 'effettiva' jew 'effettiva (reverse)')"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:38
 #: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Sekwenza default ta 'tiftix għal"
@@ -222,8 +228,8 @@ msgid "Default tal expression for query value"
 msgstr "Espressjoni Default Tal għall-valur mistoqsija"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/checkbox/widget.py:89
-#: ../../facetednavigation/widgets/date/widget.py:59
+#: ../../facetednavigation/widgets/autocomplete/widget.py:37
+#: ../../facetednavigation/widgets/boolean/widget.py:28
 msgid "Default value"
 msgstr "Valur awtomatiċi"
 
@@ -235,35 +241,39 @@ msgstr "Ħassar"
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Fond biex tfittex il-passaġġ. 0 = dan il-livell, -1 = l subfolders kollha jirrikorri, u kull numru sħiħ pożittiv ieħor joqgħod il-subfolder l-livelli ta 'tiftix."
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/interfaces.py:80
+msgid "Disable diazo rules on ajax requests"
+msgstr ""
+
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Disable faceted navigation"
 msgstr "Itfi navigazzjoni aspetti"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Disable faceted search"
 msgstr "Itfi tfittxija aspetti"
 
-#: ../../facetednavigation/settings/menu.py:109
+#: ../../facetednavigation/settings/menu.py:111
 msgid "Disable inheriting configuration"
 msgstr ""
 
-#: ../../facetednavigation/settings/menu.py:61
+#: ../../facetednavigation/settings/menu.py:63
 msgid "Disable left portlets"
 msgstr "Itfi portlets xellug"
 
-#: ../../facetednavigation/settings/menu.py:76
+#: ../../facetednavigation/settings/menu.py:78
 msgid "Disable right portlets"
 msgstr "Itfi portlets dritt"
 
-#: ../../facetednavigation/settings/menu.py:91
+#: ../../facetednavigation/settings/menu.py:93
 msgid "Disable smart facets hiding"
 msgstr "Itfi aspetti intelliġenti ħabi"
 
-#: ../../facetednavigation/widgets/widget.py:300
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Display number of results near each option"
 msgstr "Uri numru ta 'riżultati qrib kull għażla"
 
-#: ../../facetednavigation/widgets/widget.py:62
+#: ../../facetednavigation/widgets/widget.py:65
 msgid "Display widget in section"
 msgstr "Uri widget fis-sezzjoni"
 
@@ -271,11 +281,11 @@ msgstr "Uri widget fis-sezzjoni"
 msgid "Display widget in section."
 msgstr "Uri widget fis-sezzjoni."
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
 msgstr "Jippermettu navigazzjoni aspetti"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted search"
 msgstr "Jippermettu tiftix aspetti"
 
@@ -283,19 +293,19 @@ msgstr "Jippermettu tiftix aspetti"
 msgid "Enable hide/show criteria"
 msgstr "Jippermettu jaħbu / juru kriterji"
 
-#: ../../facetednavigation/settings/menu.py:110
+#: ../../facetednavigation/settings/menu.py:113
 msgid "Enable inheriting configuration "
 msgstr ""
 
-#: ../../facetednavigation/settings/menu.py:60
+#: ../../facetednavigation/settings/menu.py:62
 msgid "Enable left portlets"
 msgstr "Jippermettu portlets xellug"
 
-#: ../../facetednavigation/settings/menu.py:75
+#: ../../facetednavigation/settings/menu.py:77
 msgid "Enable right portlets"
 msgstr "Jippermettu portlets dritt"
 
-#: ../../facetednavigation/settings/menu.py:90
+#: ../../facetednavigation/settings/menu.py:92
 msgid "Enable smart facets hiding"
 msgstr "Jippermettu aspetti intelliġenti ħabi"
 
@@ -324,6 +334,7 @@ msgstr "ETAG valur"
 msgid "Export"
 msgstr "Esportazzjoni"
 
+#: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Kriterji aspetti"
@@ -376,7 +387,7 @@ msgstr "Filtri"
 msgid "Filters deleted"
 msgstr "Filtri mħassra"
 
-#: ../../facetednavigation/widgets/widget.py:43
+#: ../../facetednavigation/widgets/widget.py:46
 msgid "Friendly name"
 msgstr "Friendly isem"
 
@@ -384,38 +395,43 @@ msgstr "Friendly isem"
 msgid "Future"
 msgstr "Futur"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:67
-#: ../../facetednavigation/widgets/radio/widget.py:43
-#: ../../facetednavigation/widgets/select/widget.py:40
+#: ../../facetednavigation/widgets/checkbox/widget.py:70
+#: ../../facetednavigation/widgets/radio/widget.py:44
+#: ../../facetednavigation/widgets/select/widget.py:41
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Get valuri uniċi minn katalogu bħala alternattiva għall-vokabularju"
 
-#: ../../facetednavigation/widgets/widget.py:68
+#: ../../facetednavigation/widgets/widget.py:71
 msgid "Hidden"
 msgstr "Moħbija"
 
-#: ../../facetednavigation/widgets/radio/widget.py:52
+#: ../../facetednavigation/widgets/radio/widget.py:53
 msgid "Hide 'All' option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:16
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "Hide filters"
 msgstr "Aħbi filtri"
 
-#: ../../facetednavigation/widgets/widget.py:313
+#: ../../facetednavigation/widgets/widget.py:357
 msgid "Hide items with zero results"
 msgstr "Hide oġġetti b'riżultati żero"
 
-#: ../../facetednavigation/widgets/widget.py:69
+#: ../../facetednavigation/widgets/widget.py:72
 msgid "Hide widget"
 msgstr "Aħbi widget"
 
-#: ../../facetednavigation/widgets/radio/widget.py:53
+#: ../../facetednavigation/widgets/radio/widget.py:54
 msgid "If this checkbox is checked, hides the All option"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:46
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
+msgstr ""
+
+#: ../../facetednavigation/widgets/text/widget.py:48
+msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
 msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:83
@@ -430,11 +446,11 @@ msgstr "Importazzjoni - konfigurazzjoni Esportazzjoni"
 msgid "Import configuration"
 msgstr "Konfigurazzjoni Importazzjoni"
 
-#: ../../facetednavigation/settings/menu.py:176
+#: ../../facetednavigation/settings/menu.py:180
 msgid "Inheriting configuration if is now enabled"
 msgstr ""
 
-#: ../../facetednavigation/settings/menu.py:179
+#: ../../facetednavigation/settings/menu.py:184
 msgid "Inheriting configuration is now disabled"
 msgstr ""
 
@@ -446,37 +462,37 @@ msgstr "Vokabularju invalida jew vojta prevista dan widget. Ħalli vojta għal k
 msgid "Less filters"
 msgstr "Filtri anqas"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:49
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr ""
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:21
+#: ../../facetednavigation/widgets/tagscloud/widget.py:22
 msgid "List"
 msgstr "Lista"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:70
+#: ../../facetednavigation/widgets/tagscloud/widget.py:71
 msgid "Maximum characters"
 msgstr "Karattri massimi"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:129
+#: ../../facetednavigation/widgets/tagscloud/widget.py:130
 msgid "Maximum font-size (px)"
 msgstr "Massimu font daqs (px)"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:75
-#: ../../facetednavigation/widgets/radio/widget.py:62
-#: ../../facetednavigation/widgets/tagscloud/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:78
+#: ../../facetednavigation/widgets/radio/widget.py:63
+#: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Maximum items"
 msgstr "Oġġetti massimi"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:128
+#: ../../facetednavigation/widgets/tagscloud/widget.py:129
 msgid "Maximum size"
 msgstr "Massimu daqs"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:120
+#: ../../facetednavigation/widgets/tagscloud/widget.py:121
 msgid "Minimum font-size (px)"
 msgstr "Minimu tat-tipa ta 'daqs (px)"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:119
+#: ../../facetednavigation/widgets/tagscloud/widget.py:120
 msgid "Minimum size"
 msgstr "Daqs minimu tal-"
 
@@ -540,13 +556,13 @@ msgstr "Li jmiss sena"
 msgid "No action provided"
 msgstr "L-ebda azzjoni sakemm"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:76
-#: ../../facetednavigation/widgets/radio/widget.py:63
-#: ../../facetednavigation/widgets/tagscloud/widget.py:62
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/radio/widget.py:64
+#: ../../facetednavigation/widgets/tagscloud/widget.py:63
 msgid "Number of items visible in widget"
 msgstr "Numru ta 'oġġetti viżibbli widget"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:51
 msgid "Operator visible"
 msgstr ""
 
@@ -578,24 +594,24 @@ msgstr "Plone portlet"
 msgid "Portlet macro"
 msgstr "Portlet makro"
 
-#: ../../facetednavigation/settings/menu.py:149
+#: ../../facetednavigation/settings/menu.py:152
 msgid "Portlets left column is hidden now"
 msgstr "Portlets kolonna tax-xellug hija moħbija issa"
 
-#: ../../facetednavigation/settings/menu.py:146
+#: ../../facetednavigation/settings/menu.py:149
 msgid "Portlets left column is visible now"
 msgstr "Portlets kolonna tax-xellug huwa viżibbli issa"
 
-#: ../../facetednavigation/settings/menu.py:159
+#: ../../facetednavigation/settings/menu.py:162
 msgid "Portlets right column is hidden now"
 msgstr "Kolonna tal-lemin Portlets hija moħbija issa"
 
-#: ../../facetednavigation/settings/menu.py:156
+#: ../../facetednavigation/settings/menu.py:159
 msgid "Portlets right column is visible now"
 msgstr "Kolonna tal-lemin Portlets huwa viżibbli issa"
 
 #: ../../facetednavigation/browser/template/configure.pt:42
-#: ../../facetednavigation/widgets/widget.py:52
+#: ../../facetednavigation/widgets/widget.py:55
 msgid "Position"
 msgstr "Pożizzjoni"
 
@@ -607,7 +623,7 @@ msgstr "Pożizzjoni tal-widget."
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Isem Python ta 'fabbrika li jistgħu joħolqu l-oġġett ta' implimentazzjoni. Dan għandu jidentifika oġġett fil-modulu jintuża l-isem bit-tikek sħiħ."
 
-#: ../../facetednavigation/widgets/radio/widget.py:91
+#: ../../facetednavigation/widgets/radio/widget.py:92
 msgid "Radio"
 msgstr "Radju"
 
@@ -615,11 +631,11 @@ msgstr "Radju"
 msgid "Range"
 msgstr "Medda"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:28
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
 msgid "Remove all"
 msgstr "Neħħi kollha"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:25
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
 msgid "Remove all filters"
 msgstr "Neħħi l-filtri"
 
@@ -647,9 +663,9 @@ msgstr "Riżultati għal kull paġna pass"
 msgid "Reverse"
 msgstr "Reverse"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:82
-#: ../../facetednavigation/widgets/radio/widget.py:70
-#: ../../facetednavigation/widgets/select/widget.py:47
+#: ../../facetednavigation/widgets/checkbox/widget.py:85
+#: ../../facetednavigation/widgets/radio/widget.py:71
+#: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Reverse options"
 msgstr "Għażliet Reverse"
 
@@ -661,6 +677,7 @@ msgstr "Folder ta 'għerq"
 msgid "Save"
 msgstr "Ħlief"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:24
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Fittex"
@@ -669,20 +686,21 @@ msgstr "Fittex"
 msgid "Search Depth"
 msgstr "Fond Fittex"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:45
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:39
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "Search with AND/OR between elements"
 msgstr "Fittex bil U / JEW bejn l-elementi"
 
 #: ../../facetednavigation/browser/template/configure.pt:54
-#: ../../facetednavigation/widgets/widget.py:61
+#: ../../facetednavigation/widgets/widget.py:64
 msgid "Section"
 msgstr "Taqsima"
 
-#: ../../facetednavigation/widgets/select/widget.py:67
+#: ../../facetednavigation/widgets/select/widget.py:69
 msgid "Select"
 msgstr "Agħżel"
 
@@ -690,25 +708,25 @@ msgstr "Agħżel"
 msgid "Select all items"
 msgstr "Agħżel l-oġġetti kollha"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:19
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "Uri filtri"
 
-#: ../../facetednavigation/settings/menu.py:169
+#: ../../facetednavigation/settings/menu.py:172
 msgid "Smart facets hiding is now disabled"
 msgstr "Smart aspetti ħabi huwa issa diżattivat"
 
-#: ../../facetednavigation/settings/menu.py:166
+#: ../../facetednavigation/settings/menu.py:169
 msgid "Smart facets hiding is now enabled"
 msgstr "Smart aspetti ħabi issa hija ppermettiet"
 
-#: ../../facetednavigation/widgets/widget.py:306
+#: ../../facetednavigation/widgets/widget.py:350
 msgid "Sort by countable"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:83
-#: ../../facetednavigation/widgets/radio/widget.py:71
-#: ../../facetednavigation/widgets/select/widget.py:48
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/radio/widget.py:72
+#: ../../facetednavigation/widgets/select/widget.py:49
 msgid "Sort options reversed"
 msgstr "Għażliet Sort maqluba"
 
@@ -716,7 +734,7 @@ msgstr "Għażliet Sort maqluba"
 msgid "Sorting"
 msgstr "Issortjar"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+#: ../../facetednavigation/widgets/tagscloud/widget.py:23
 msgid "Sphere"
 msgstr "Sfera"
 
@@ -733,7 +751,7 @@ msgstr "Data ta 'tnedija"
 msgid "Step"
 msgstr "Pass"
 
-#: ../../facetednavigation/profiles/default/actions.xml
+#: ../../facetednavigation/profiles/common/actions.xml
 msgid "Sync faceted translations"
 msgstr "Sync traduzzjonijiet aspetti"
 
@@ -741,7 +759,7 @@ msgstr "Sync traduzzjonijiet aspetti"
 msgid "TAL Expression"
 msgstr "TAL Espressjoni"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:158
+#: ../../facetednavigation/widgets/tagscloud/widget.py:160
 msgid "Tags Cloud"
 msgstr "Tags Cloud"
 
@@ -749,15 +767,19 @@ msgstr "Tags Cloud"
 msgid "Tal Expression"
 msgstr "Tal Espressjoni"
 
-#: ../../facetednavigation/widgets/text/widget.py:51
+#: ../../facetednavigation/widgets/text/widget.py:61
 msgid "Text field"
 msgstr "Qasam tat-test"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:58
+msgid "Text field with suggestions"
+msgstr ""
 
 #: ../../facetednavigation/widgets/path/widget.py:68
 msgid "Theme to be used with this widget"
 msgstr "Tema li għandhom jintużaw ma 'dan widget"
 
-#: ../../facetednavigation/widgets/widget.py:314
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "This option works only if 'count results' is enabled"
 msgstr "Din l-għażla jaħdem biss jekk 'Riżultat għadd' hija ppermettiet"
 
@@ -769,7 +791,7 @@ msgstr "Dan widget se jiġu injorati bħala għerq sakemm huwa unreachable jew m
 msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
 msgstr "Dan widget se jiġu injorati fil-modalità ħsieb bħala żball seħħet filwaqt li tipprova tirrendi dan. Għal aktar dettalji jekk jogħġbok iċċekkja l-fajl log server. Tista 'wkoll tipprova timmodifika konfigurazzjoni widget biex tara liema proprjetà huwa jikkawża din il-problema."
 
-#: ../../facetednavigation/widgets/widget.py:44
+#: ../../facetednavigation/widgets/widget.py:47
 msgid "Title for widget to display in view page"
 msgstr "Titolu għall widget għall-wiri fil-paġna ħsieb"
 
@@ -785,7 +807,7 @@ msgstr "Għada"
 msgid "Type"
 msgstr "Tip"
 
-#: ../../facetednavigation/widgets/tagscloud/widget.py:111
+#: ../../facetednavigation/widgets/tagscloud/widget.py:112
 msgid "Type of the cloud"
 msgstr "Tip ta 'l-sħaba"
 
@@ -801,7 +823,7 @@ msgstr "UI snin Kalendarju jvarjaw"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Uncheck din il-kaxxa jekk inti ma tridx jinħbew / Kriterji juru karatteristika mixgħula fuq dan widget"
 
-#: ../../facetednavigation/widgets/widget.py:307
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Use the results counter for sorting"
 msgstr ""
 
@@ -809,9 +831,9 @@ msgstr ""
 msgid "Visible to"
 msgstr "Viżibbli"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:57
-#: ../../facetednavigation/widgets/radio/widget.py:32
-#: ../../facetednavigation/widgets/select/widget.py:30
+#: ../../facetednavigation/widgets/checkbox/widget.py:60
+#: ../../facetednavigation/widgets/radio/widget.py:33
+#: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary"
 msgstr "Vokabolarju"
 
@@ -819,13 +841,13 @@ msgstr "Vokabolarju"
 msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
 msgstr "Vokabolarju li tuża biex filtru kriterji ta 'għażla. Ħalli vojta għal kriterji issortjar default."
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:58
-#: ../../facetednavigation/widgets/radio/widget.py:33
-#: ../../facetednavigation/widgets/select/widget.py:31
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
+#: ../../facetednavigation/widgets/radio/widget.py:34
+#: ../../facetednavigation/widgets/select/widget.py:32
 msgid "Vocabulary to use to render widget items"
 msgstr "Vokabolarju għall-użu sabiex tirrendi oġġetti widget"
 
-#: ../../facetednavigation/widgets/widget.py:53
+#: ../../facetednavigation/widgets/widget.py:56
 msgid "Widget position in page"
 msgstr "Pożizzjoni widget fil-paġna"
 
@@ -837,31 +859,37 @@ msgstr "Tip widget"
 msgid "Widget will be visible only for selected user"
 msgstr "Widget se jkun viżibbli biss għal magħżul mill-utent"
 
+#: ../../facetednavigation/widgets/text/widget.py:47
+msgid "Wildcard search"
+msgstr ""
+
 #: ../../facetednavigation/widgets/date/widget.py:27
 msgid "Yesterday"
 msgstr "Ilbieraħ"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 msgid "all"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "l-oġġetti kollha"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 msgid "any"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:43
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "fir-riżultati attwali"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:26
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:25
+#: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "match any/all filters bellow"
 msgstr ""
 
