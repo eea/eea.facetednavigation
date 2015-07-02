@@ -129,6 +129,17 @@ Faceted navigation
     >>> [brain.Title for brain in brains]
     []
 
+  Wildcard search
+
+    >>> brains = query.query(batch=False, c0=['Proto'])
+    >>> [brain.Title for brain in brains]
+    []
+    >>> _ = configure(updateCriterion_button='Save', cid='c0', wildcard=1)
+    >>> brains = query.query(batch=False, c0=['Proto'])
+    >>> for brain in brains:
+    ...     print brain.Title
+    Distance-to-target (Kyoto Protocol) for new Member States countries
+
   Render facet
 
     >>> print widgets()
