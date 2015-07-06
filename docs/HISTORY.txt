@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.1.dev0 - (unreleased)
------------------------
+8.1 - (2015-07-06)
+------------------
 * Change: applied styles tweaks for faceted edititing when used together
   with Twitter Bootstrap
   [ichimdav refs #25986]
@@ -716,3 +716,4 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
+
