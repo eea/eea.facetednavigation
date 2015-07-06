@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.2.dev0 - (unreleased)
+-----------------------
+
 8.1 - (2015-07-06)
 ------------------
 * Change: applied styles tweaks for faceted edititing when used together
