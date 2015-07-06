@@ -37,7 +37,7 @@ EditSchema = Schema((
         widget=BooleanWidget(
             label=_(u'Search in all elements only'),
             description=_(u'If this checkbox is checked, hides the choice to '
-                          'filter in all items or in current items only'),
+                          u'filter in all items or in current items only'),
             i18n_domain="eea"
         )
     ),
@@ -45,9 +45,11 @@ EditSchema = Schema((
         schemata="default",
         widget=BooleanWidget(
             label=_(u'Wildcard search'),
-            description=_(u'If this checkbox is checked, the system will automatically do a wildcard '
-                          'search by appending a \'*\' to the search term so searching for \'budget\' will '
-                          'also return elements containing \'budgetary\'.'),
+            description=_(u"If this checkbox is checked, the system will "
+                          u"automatically do a wildcard search by appending "
+                          u"a '*' to the search term so "
+                          u"searching for 'budget' will also return elements "
+                          u"containing 'budgetary'."),
             i18n_domain="eea"
         )
     ),
