@@ -16,7 +16,8 @@ from eea.facetednavigation.browser import interfaces
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 
 from eea.facetednavigation import EEAMessageFactory as _
-
+from plone.protect.interfaces import IDisableCSRFProtection
+from zope.interface import alsoProvides
 
 logger = logging.getLogger('eea.facetednavigation.browser.app.configure')
 #
@@ -209,6 +210,7 @@ class FacetedFormHandler(FacetedBasicHandler):
     def __call__(self, **kwargs):
         """ This method is called from a form with more than one submit buttons
         """
+        alsoProvides(self.request, IDisableCSRFProtection)
         kwargs = self._request_form(kwargs)
         #
         # Criteria
@@ -287,6 +289,7 @@ class FacetedConfigureView(object):
     """
     def __init__(self, context, request):
         self.context = context
+        alsoProvides(request, IDisableCSRFProtection)
         self.request = request
 
     @property
