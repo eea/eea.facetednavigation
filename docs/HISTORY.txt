@@ -3,6 +3,8 @@ Changelog
 
 8.2.dev0 - (unreleased)
 -----------------------
+* Feature: make boolean index work well with checkbox widget.
+  [cedricmessiant]
 
 8.1 - (2015-07-06)
 ------------------
