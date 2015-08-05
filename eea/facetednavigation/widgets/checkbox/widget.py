@@ -12,6 +12,7 @@ from Products.Archetypes.public import LinesWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 from Products.Archetypes.utils import DisplayList
+from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
@@ -181,6 +182,14 @@ class Widget(CountableWidget):
 
         if not value:
             return query
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+        if index in catalog.Indexes:
+            if catalog.Indexes[index].meta_type == 'BooleanIndex':
+                if value == 'False':
+                    value = False
+                elif value == 'True':
+                    value = True
 
         query[index] = {'query': value, 'operator': operator}
         return query
