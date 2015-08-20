@@ -45,6 +45,8 @@ class CriteriaXMLAdapter(XMLAdapterBase):
         """
         env = CriteriaContext(self.context)
         should_purge = env.shouldPurge()
+        if node.getAttribute('purge'):
+            should_purge = self._convertToBoolean(node.getAttribute('purge'))
         if should_purge:
             cids = self.context.keys()
             for cid in cids:
@@ -55,8 +57,16 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                 continue
 
             name = child.getAttribute('name')
-
-            cid = self.context.add('text', 'top', _cid_=name)
+            try:
+                cid = self.context.add('text', 'top', _cid_=name)
+            except KeyError:
+                # element already exists, we log and we continue
+                # this could be the case if should_purge is False
+                logger.warn('Criterion with name "%s" could not be created '
+                            'on "%s" because a criterion with same name '
+                            'already exists!' %
+                            (name, '/'.join(env._tool.context.getPhysicalPath())))
+                continue
             criterion = self.context.get(cid)
 
             importer = queryMultiAdapter((criterion, env), IBody)

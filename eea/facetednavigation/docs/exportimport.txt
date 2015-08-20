@@ -311,3 +311,149 @@ Let's see our new configuration
     </object>
 
 
+Test the criteria purge attribute
+---------------------------------
+
+Import a xml file with purge set to False, new criteria will be added to existing ones
+
+    >>> query = {
+    ...   'import_button': 'Import',
+    ...   'import_file': self.loadfile('data/with_purge_false.xml'),
+    ...   'redirect': '',
+    ... }
+    >>> view(**query)
+    u'Configuration imported'
+
+    >>> query = {
+    ...   'export_button': 'Export',
+    ...   'redirect': '',
+    ... }
+    >>> print view(**query)
+    <?xml version="1.0"?>
+    <object name="new_sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c7">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">1</property>
+       <property name="count">1</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
+      <criterion name="c2">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="count"></property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="default">ATFolder</property>
+      </criterion>
+      <criterion name="c10">
+        <property name="widget">daterange</property>
+        <property name="title">Modified</property>
+        <property name="position">top</property>
+        <property name="section">advanced</property>
+        <property name="hidden">0</property>
+        <property name="index">Date</property>
+        <property name="default"></property>
+        <property name="calYearRange">c-10:c+10</property>
+       </criterion>
+     </criteria>
+    </object>
+
+Importing an already existing criterion will not fail, it is just ignored and a warning is added to the Zope log
+    >>> query = {
+    ...   'import_button': 'Import',
+    ...   'import_file': self.loadfile('data/with_purge_false.xml'),
+    ...   'redirect': '',
+    ... }
+    >>> view(**query)
+    u'Configuration imported'
+    >>> query = {
+    ...   'export_button': 'Export',
+    ...   'redirect': '',
+    ... }
+
+    >>> print view(**query)
+    <?xml version="1.0"?>
+    <object name="new_sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c7">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">1</property>
+       <property name="count">1</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
+      <criterion name="c2">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="count"></property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="default">ATFolder</property>
+      </criterion>
+      <criterion name="c10">
+        <property name="widget">daterange</property>
+        <property name="title">Modified</property>
+        <property name="position">top</property>
+        <property name="section">advanced</property>
+        <property name="hidden">0</property>
+        <property name="index">Date</property>
+        <property name="default"></property>
+        <property name="calYearRange">c-10:c+10</property>
+       </criterion>
+     </criteria>
+    </object>
+
+Import a xml file with purge set to True (default), existing criteria are removed and the new is imported
+
+    >>> query = {
+    ...   'import_button': 'Import',
+    ...   'import_file': self.loadfile('data/with_purge_true.xml'),
+    ...   'redirect': '',
+    ... }
+    >>> view(**query)
+    u'Configuration imported'
+
+    >>> query = {
+    ...   'export_button': 'Export',
+    ...   'redirect': '',
+    ... }
+    >>> print view(**query)
+    <?xml version="1.0"?>
+    <object name="new_sandbox" meta_type="ATFolder">
+     <criteria>
+      <criterion name="c22">
+        <property name="widget">daterange</property>
+        <property name="title">Created</property>
+        <property name="position">top</property>
+        <property name="section">advanced</property>
+        <property name="hidden">0</property>
+        <property name="index">Date</property>
+        <property name="default"></property>
+        <property name="calYearRange">c-10:c+10</property>
+       </criterion>
+     </criteria>
+    </object>
