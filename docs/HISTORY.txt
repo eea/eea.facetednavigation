@@ -3,6 +3,8 @@ Changelog
 
 8.3.dev0 - (unreleased)
 -----------------------
+* Bug fix: Infinite loop of javascript spinner after Browser refresh. 
+  [karalics] PR #69
 
 8.2 - (2015-08-18)
 ------------------
