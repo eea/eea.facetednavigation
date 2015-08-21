@@ -372,6 +372,7 @@ Import a xml file with purge set to False, new criteria will be added to existin
     </object>
 
 Importing an already existing criterion will not fail, it is just ignored and a warning is added to the Zope log
+
     >>> query = {
     ...   'import_button': 'Import',
     ...   'import_file': self.loadfile('data/with_purge_false.xml'),
