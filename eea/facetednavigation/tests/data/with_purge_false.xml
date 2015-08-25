@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="sandbox" meta_type="ATFolder">
+ <criteria purge="False">
+  <criterion name="c10">
+   <property name="widget">daterange</property>
+   <property name="title">Modified</property>
+   <property name="position">top</property>
+   <property name="section">advanced</property>
+   <property name="hidden">0</property>
+   <property name="index">Date</property>
+   <property name="default"></property>
+   <property name="calYearRange">c-10:c+10</property>
+  </criterion>
+ </criteria>
+</object>

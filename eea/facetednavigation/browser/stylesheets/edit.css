@@ -183,6 +183,10 @@ table.listing {
   margin-top: 1em;
 }
 
+#faceted-edit-widgets-ajax input {
+  margin-right: 0.5em;
+}
+
 #faceted-page-title {
   padding-right: 0px;
 }

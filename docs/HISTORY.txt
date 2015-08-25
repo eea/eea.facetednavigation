@@ -8,6 +8,10 @@ Changelog
 
 8.2 - (2015-08-18)
 ------------------
+* Feature: in the GenericSetup import step, make the "purge" parameter work
+  at the "criteria" level, for now it was always purged, it is now possible
+  to not purge and add extra criteria
+  [gbastien]
 * Feature: make boolean index work well with checkbox widget.
   [cedricmessiant]
 
@@ -726,4 +730,3 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
-
