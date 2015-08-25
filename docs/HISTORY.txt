@@ -3,6 +3,8 @@ Changelog
 
 8.3.dev0 - (unreleased)
 -----------------------
+* Change: trigger an event just before a query is made by FacetedCatalog.
+  [cedricmessiant]
 
 8.2 - (2015-08-18)
 ------------------
