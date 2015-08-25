@@ -9,6 +9,7 @@ from eea.facetednavigation.interfaces import (
     IFacetedEnabledEvent,
     IFacetedWillBeDisabledEvent,
     IFacetedDisabledEvent,
+    IQueryWillBeExecutedEvent,
 )
 
 class FacetedEvent(ObjectEvent):
@@ -34,3 +35,12 @@ class FacetedWillBeDisabledEvent(FacetedEvent):
 class FacetedDisabledEvent(FacetedEvent):
     """ Event triggered if faceted navigation was disabled """
     implements(IFacetedDisabledEvent)
+
+
+class QueryWillBeExecutedEvent(FacetedEvent):
+    """Event triggered before a query is executed."""
+    implements(IQueryWillBeExecutedEvent)
+
+    def __init__(self, obj, query):
+        self.object = obj
+        self.query = query

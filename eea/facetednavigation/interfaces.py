@@ -1,7 +1,7 @@
 """ Faceted Navigation public interfaces
 """
 from zope.component.interfaces import IObjectEvent
-from zope.interface import Interface
+from zope.interface import Attribute, Interface
 from zope import schema
 
 # Subtypes
@@ -81,6 +81,13 @@ class IEEASettings(Interface):
                 required=False)
 
 
+class IQueryWillBeExecutedEvent(IFacetedEvent):
+    """Catalog query event.
+    """
+
+    # query = Attribute("The query that will be done.")
+
+
 # pylint, pyflakes
 __all__ = [
     IPossibleFacetedNavigable.__name__,
@@ -99,4 +106,5 @@ __all__ = [
     IHidePloneLeftColumn.__name__,
     IHidePloneRightColumn.__name__,
     IDisableSmartFacets.__name__,
+    IQueryWillBeExecutedEvent.__name__,
 ]

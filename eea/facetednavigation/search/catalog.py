@@ -1,9 +1,11 @@
 """ Custom catalog
 """
 import logging
+from zope.event import notify
 from zope.interface import implements
 from Products.CMFCore.utils import getToolByName
 from BTrees.IIBTree import IIBucket
+from eea.facetednavigation.events import QueryWillBeExecutedEvent
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.search.interfaces import ICollection
 from eea.facetednavigation.search import parseFormquery
@@ -103,4 +105,6 @@ class FacetedCatalog(object):
             newquery.pop('sort_order', None)
 
         newquery.update(query)
+
+        notify(QueryWillBeExecutedEvent(context, newquery))
         return search(**newquery)
