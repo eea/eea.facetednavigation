@@ -62,10 +62,11 @@ class CriteriaXMLAdapter(XMLAdapterBase):
             except KeyError:
                 # element already exists, we log and we continue
                 # this could be the case if should_purge is False
-                logger.warn('Criterion with name "%s" could not be created '
-                            'on "%s" because a criterion with same name '
-                            'already exists!' %
-                            (name, '/'.join(env._tool.context.getPhysicalPath())))
+                logger.warn(
+                    'Criterion with name "%s" could not be created '
+                    'on "%s" because a criterion with same name '
+                    'already exists!',
+                        name, '/'.join(env._tool.context.getPhysicalPath()))
                 continue
             criterion = self.context.get(cid)
 
