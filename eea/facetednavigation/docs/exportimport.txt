@@ -281,6 +281,18 @@ Let's see our new configuration
     <?xml version="1.0"?>
     <object name="new_sandbox" meta_type="ATFolder">
      <criteria>
+      <criterion name="c2">
+       <property name="widget">tagscloud</property>
+       <property name="title">Meta-type d'element</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">0</property>
+       <property name="count"></property>
+       <property name="index">meta_type</property>
+       <property name="vocabulary"></property>
+       <property name="cloud">sphere</property>
+       <property name="default">ATFolder</property>
+      </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
@@ -294,18 +306,6 @@ Let's see our new configuration
         <element value="Folder"/>
         <element value="Document"/>
        </property>
-      </criterion>
-      <criterion name="c2">
-       <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
-       <property name="position">top</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count"></property>
-       <property name="index">meta_type</property>
-       <property name="vocabulary"></property>
-       <property name="cloud">sphere</property>
-       <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
@@ -332,20 +332,6 @@ Import a xml file with purge set to False, new criteria will be added to existin
     <?xml version="1.0"?>
     <object name="new_sandbox" meta_type="ATFolder">
      <criteria>
-      <criterion name="c7">
-       <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">1</property>
-       <property name="count">1</property>
-       <property name="index">portal_type</property>
-       <property name="vocabulary"></property>
-       <property name="default">
-        <element value="Folder"/>
-        <element value="Document"/>
-       </property>
-      </criterion>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
@@ -368,6 +354,20 @@ Import a xml file with purge set to False, new criteria will be added to existin
         <property name="default"></property>
         <property name="calYearRange">c-10:c+10</property>
        </criterion>
+      <criterion name="c7">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">1</property>
+       <property name="count">1</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
      </criteria>
     </object>
 
@@ -389,20 +389,6 @@ Importing an already existing criterion will not fail, it is just ignored and a 
     <?xml version="1.0"?>
     <object name="new_sandbox" meta_type="ATFolder">
      <criteria>
-      <criterion name="c7">
-       <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">1</property>
-       <property name="count">1</property>
-       <property name="index">portal_type</property>
-       <property name="vocabulary"></property>
-       <property name="default">
-        <element value="Folder"/>
-        <element value="Document"/>
-       </property>
-      </criterion>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
@@ -425,6 +411,20 @@ Importing an already existing criterion will not fail, it is just ignored and a 
         <property name="default"></property>
         <property name="calYearRange">c-10:c+10</property>
        </criterion>
+      <criterion name="c7">
+       <property name="widget">checkbox</property>
+       <property name="title">Type d'element</property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">1</property>
+       <property name="count">1</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="default">
+        <element value="Folder"/>
+        <element value="Document"/>
+       </property>
+      </criterion>
      </criteria>
     </object>
 

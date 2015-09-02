@@ -5,6 +5,8 @@ Changelog
 -----------------------
 * Change: trigger an event just before a query is made by FacetedCatalog.
   [cedricmessiant]
+* Bug fix: Sort ICriteria.criteria when a new criterion is added.
+  [gbastien]
 
 8.2 - (2015-08-18)
 ------------------
