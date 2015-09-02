@@ -32,14 +32,14 @@ Cleanup default widgets
 Add criteria
 ------------
 
-    >>> _ = ICriteria(sandbox).add('alphabetic', 'left')
-    >>> _ = ICriteria(sandbox).add('checkbox', 'left')
-    >>> _ = ICriteria(sandbox).add('criteria', 'right')
-    >>> _ = ICriteria(sandbox).add('daterange', 'right')
-    >>> _ = ICriteria(sandbox).add('radio', 'top')
-    >>> _ = ICriteria(sandbox).add('select', 'top')
-    >>> _ = ICriteria(sandbox).add('sorting', 'center')
-    >>> _ = ICriteria(sandbox).add('text', 'center')
+    >>> _ = ICriteria(sandbox).add('alphabetic', 'top')
+    >>> _ = ICriteria(sandbox).add('checkbox', 'top')
+    >>> _ = ICriteria(sandbox).add('criteria', 'left')
+    >>> _ = ICriteria(sandbox).add('daterange', 'left')
+    >>> _ = ICriteria(sandbox).add('radio', 'center')
+    >>> _ = ICriteria(sandbox).add('select', 'center')
+    >>> _ = ICriteria(sandbox).add('sorting', 'right')
+    >>> _ = ICriteria(sandbox).add('text', 'right')
 
 Get criteria
 ------------

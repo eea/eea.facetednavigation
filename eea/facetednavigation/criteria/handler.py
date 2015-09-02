@@ -94,7 +94,18 @@ class Criteria(object):
 
         criterion = Criterion(widget=wid, position=position,
                               section=section, **properties)
-        criteria.append(criterion)
+
+        # insert the new criterion at the right place in criteria
+        voc = getUtility(IVocabularyFactory,
+                         'eea.faceted.vocabularies.WidgetPositions')
+        positions = [term.value for term in voc(self.context)]
+        # will be inserted at the end by default
+        insert_index = len(criteria)
+        for index, stored_criterion in enumerate(criteria):
+            if positions.index(position) < positions.index(stored_criterion.position):
+                insert_index = index
+                break
+        criteria.insert(insert_index, criterion)
         return criterion.getId()
 
     def delete(self, cid):
