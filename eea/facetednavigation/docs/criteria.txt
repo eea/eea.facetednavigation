@@ -117,3 +117,15 @@ Change position
     ['c7', 'c6', 'c5', 'c4', 'c3']
     >>> ICriteria(sandbox).get('c4').get('position')
     u'left'
+
+Add criteria to specific sections
+---------------------------------
+
+    >>> _ = ICriteria(sandbox).add('alphabetic', 'top', section='advanced')
+    >>> _ = ICriteria(sandbox).add('alphabetic', 'top')
+    >>> ICriteria(sandbox).get('c2').get('section')
+    u'advanced'
+    >>> ICriteria(sandbox).get('c1').get('section')
+    u'default'
+    >>> ICriteria(sandbox).keys()
+    ['c7', 'c6', 'c1', 'c2', 'c5', 'c4', 'c3']

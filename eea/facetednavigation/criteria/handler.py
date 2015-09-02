@@ -98,11 +98,18 @@ class Criteria(object):
         # insert the new criterion at the right place in criteria
         voc = getUtility(IVocabularyFactory,
                          'eea.faceted.vocabularies.WidgetPositions')
-        positions = [term.value for term in voc(self.context)]
+        # we need to take into account position and section
+        positions = []
+        for term in voc(self.context):
+            positions.append('{0}_default'.format(term.value))
+            positions.append('{0}_advanced'.format(term.value))
         # will be inserted at the end by default
         insert_index = len(criteria)
+        crit_pos_sect = '{0}_{1}'.format(position, section)
         for index, stored_criterion in enumerate(criteria):
-            if positions.index(position) < positions.index(stored_criterion.position):
+            stored_crit_pos_sect = '{0}_{1}'.format(stored_criterion.position,
+                                                    stored_criterion.section)
+            if positions.index(crit_pos_sect) < positions.index(stored_crit_pos_sect):
                 insert_index = index
                 break
         criteria.insert(insert_index, criterion)
@@ -171,7 +178,6 @@ class Criteria(object):
                          'eea.faceted.vocabularies.WidgetPositions')
         positions = ((term.value, kwargs.get(term.value, []))
                      for term in voc(self.context))
-
         res = []
         for position, cids in positions:
             for cid in cids:
