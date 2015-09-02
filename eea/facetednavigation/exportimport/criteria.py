@@ -58,12 +58,15 @@ class CriteriaXMLAdapter(XMLAdapterBase):
 
             name = child.getAttribute('name')
             try:
-                # we need to find the 'position' because it is used
-                # to sort criteria when the criterion is added
+                # we need to find the 'position' and 'section' because
+                # it is used to sort criteria when the criterion is added
                 position = [subchild for subchild in child.getElementsByTagName('property')
                             if subchild.getAttribute('name') == 'position']
                 position = position and position[0].childNodes[0].nodeValue or 'top'
-                cid = self.context.add('text', position, _cid_=name)
+                section = [subchild for subchild in child.getElementsByTagName('property')
+                            if subchild.getAttribute('name') == 'section']
+                section = section and section[0].childNodes[0].nodeValue or 'default'
+                cid = self.context.add('text', position, section, _cid_=name)
             except KeyError:
                 # element already exists, we log and we continue
                 # this could be the case if should_purge is False
