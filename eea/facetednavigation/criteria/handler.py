@@ -112,7 +112,8 @@ class Criteria(object):
         for index, stored_criterion in enumerate(criteria):
             stored_crit_pos_sect = '{0}_{1}'.format(stored_criterion.position,
                                                     stored_criterion.section)
-            if positions.index(crit_pos_sect) < positions.index(stored_crit_pos_sect):
+            if (positions.index(crit_pos_sect) <
+               positions.index(stored_crit_pos_sect)):
                 insert_index = index
                 break
         criteria.insert(insert_index, criterion)
