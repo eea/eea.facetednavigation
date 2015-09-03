@@ -12,6 +12,7 @@ from Products.GenericSetup.context import BaseContext
 from Products.GenericSetup.interfaces import ISetupEnviron
 logger = logging.getLogger('eea.facetednavigation.exportimport.criteria')
 
+
 class CriteriaContext(BaseContext):
     """ Criteria import environ
     """
@@ -24,6 +25,7 @@ class CriteriaContext(BaseContext):
         self._messages = []
         self._encoding = encoding
         self._should_purge = True
+
 
 class CriteriaXMLAdapter(XMLAdapterBase):
     """ GenericSetup XML Adapter for faceted criteria
@@ -60,12 +62,12 @@ class CriteriaXMLAdapter(XMLAdapterBase):
             try:
                 # we need to find the 'position' and 'section' because
                 # it is used to sort criteria when the criterion is added
-                position = [subchild for subchild in child.getElementsByTagName('property')
-                            if subchild.getAttribute('name') == 'position']
-                position = position and position[0].childNodes[0].nodeValue or 'top'
-                section = [subchild for subchild in child.getElementsByTagName('property')
-                            if subchild.getAttribute('name') == 'section']
-                section = section and section[0].childNodes[0].nodeValue or 'default'
+                pos = [s for s in child.getElementsByTagName('property')
+                       if s.getAttribute('name') == 'position']
+                position = pos and pos[0].childNodes[0].nodeValue or 'top'
+                sect = [s for s in child.getElementsByTagName('property')
+                        if s.getAttribute('name') == 'section']
+                section = sect and sect[0].childNodes[0].nodeValue or 'default'
                 cid = self.context.add('text', position, section, _cid_=name)
             except KeyError:
                 # element already exists, we log and we continue
@@ -74,7 +76,7 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                     'Criterion with name "%s" could not be created '
                     'on "%s" because a criterion with same name '
                     'already exists!',
-                        name, '/'.join(env._tool.context.getPhysicalPath()))
+                    name, '/'.join(env._tool.context.getPhysicalPath()))
                 continue
             criterion = self.context.get(cid)
 

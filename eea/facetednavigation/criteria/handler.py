@@ -12,6 +12,7 @@ from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 
 from eea.facetednavigation.criteria.interfaces import ICriteria
 
+
 class Criteria(object):
     """ Handle criteria
     """
@@ -49,6 +50,7 @@ class Criteria(object):
     #
     # Getters
     #
+
     def newid(self):
         """ Get new id
         """
@@ -79,6 +81,7 @@ class Criteria(object):
     #
     # Setters
     #
+
     def add(self, wid, position, section='default', **kwargs):
         """ Add criterion
         """
@@ -140,6 +143,7 @@ class Criteria(object):
     #
     # Position
     #
+
     def up(self, cid):
         """ Move criterion up
         """
@@ -188,6 +192,7 @@ class Criteria(object):
     #
     # Utils
     #
+
     def widget(self, wid=None, cid=None):
         """ Return widget by given wid or from criterion by given cid
         """
