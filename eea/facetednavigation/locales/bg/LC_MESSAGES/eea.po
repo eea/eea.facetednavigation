@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-06-29 12:50+0000\n"
+"POT-Creation-Date: 2015-09-04 09:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,24 +80,28 @@ msgstr "Азбучен"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Сигурни ли сте че искате да изтриете ${widget} джаджа?"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:52
+msgid "Autocomplete source"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:44
 msgid "Boolean"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:69
+#: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Catalog"
 msgstr "Референтен каталожен номер"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:30
-#: ../../facetednavigation/widgets/autocomplete/widget.py:28
+#: ../../facetednavigation/widgets/autocomplete/widget.py:32
 #: ../../facetednavigation/widgets/boolean/widget.py:20
 msgid "Catalog index"
 msgstr "Каталог индекс"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:31
-#: ../../facetednavigation/widgets/autocomplete/widget.py:29
+#: ../../facetednavigation/widgets/autocomplete/widget.py:33
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Catalog index to use for search"
 msgstr "Каталог индекс да се използва за търсене"
@@ -106,7 +110,7 @@ msgstr "Каталог индекс да се използва за търсен
 msgid "Catalog query"
 msgstr "Каталог заявка"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:104
+#: ../../facetednavigation/widgets/checkbox/widget.py:105
 msgid "Checkboxes"
 msgstr "Отметки"
 
@@ -183,7 +187,7 @@ msgid "Default etag"
 msgstr "По подразбиране ETAG"
 
 #: ../../facetednavigation/widgets/boolean/widget.py:29
-#: ../../facetednavigation/widgets/checkbox/widget.py:93
+#: ../../facetednavigation/widgets/checkbox/widget.py:94
 msgid "Default items (one per line)"
 msgstr "Стандартните елементи (по един на ред)"
 
@@ -191,7 +195,7 @@ msgstr "Стандартните елементи (по един на ред)"
 msgid "Default letter to be selected"
 msgstr "По подразбиране писмо, да се избере"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:41
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "Default operator"
 msgstr "Operator"
 
@@ -217,7 +221,7 @@ msgstr "По подразбиране избрания елемент"
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "По подразбиране сортирането индекс (например 'ефективен' или 'ефективен (назад)')"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:38
+#: ../../facetednavigation/widgets/autocomplete/widget.py:43
 #: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Низ по подразбиране, за да потърсите"
@@ -228,7 +232,7 @@ msgid "Default tal expression for query value"
 msgstr "Default Тал израз за заявка стойност"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/autocomplete/widget.py:37
+#: ../../facetednavigation/widgets/autocomplete/widget.py:42
 #: ../../facetednavigation/widgets/boolean/widget.py:28
 msgid "Default value"
 msgstr "Стойността по подразбиране"
@@ -395,7 +399,7 @@ msgstr "Приятелски име"
 msgid "Future"
 msgstr "бъдеще"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:70
+#: ../../facetednavigation/widgets/checkbox/widget.py:71
 #: ../../facetednavigation/widgets/radio/widget.py:44
 #: ../../facetednavigation/widgets/select/widget.py:41
 msgid "Get unique values from catalog as an alternative for vocabulary"
@@ -425,7 +429,7 @@ msgstr "Скриване на джаджа"
 msgid "If this checkbox is checked, hides the All option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:46
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr ""
@@ -462,7 +466,7 @@ msgstr "Невалидни или празни речник е предвиде�
 msgid "Less filters"
 msgstr "По-малко филтри"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:52
+#: ../../facetednavigation/widgets/checkbox/widget.py:53
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr ""
 
@@ -478,7 +482,7 @@ msgstr "Максимални символи"
 msgid "Maximum font-size (px)"
 msgstr "Максималният размер на шрифта (пиксела)"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:78
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
 #: ../../facetednavigation/widgets/radio/widget.py:63
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Maximum items"
@@ -556,13 +560,13 @@ msgstr "Следваща година"
 msgid "No action provided"
 msgstr "Няма действие, при условие"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 #: ../../facetednavigation/widgets/radio/widget.py:64
 #: ../../facetednavigation/widgets/tagscloud/widget.py:63
 msgid "Number of items visible in widget"
 msgstr "Брой на обекти, видими в джаджа"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:51
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
 msgid "Operator visible"
 msgstr ""
 
@@ -663,7 +667,7 @@ msgstr "Резултати на страница стъпка"
 msgid "Reverse"
 msgstr "Заден ход:"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:85
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
 #: ../../facetednavigation/widgets/radio/widget.py:71
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Reverse options"
@@ -677,7 +681,7 @@ msgstr "Главната папка"
 msgid "Save"
 msgstr "Запази"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:24
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Търсене"
@@ -686,12 +690,12 @@ msgstr "Търсене"
 msgid "Search Depth"
 msgstr "Търсене Дълбочина"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:45
+#: ../../facetednavigation/widgets/autocomplete/widget.py:62
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:42
+#: ../../facetednavigation/widgets/checkbox/widget.py:43
 msgid "Search with AND/OR between elements"
 msgstr "Търси с и / или между елементите"
 
@@ -707,6 +711,10 @@ msgstr "избор"
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Избиране на всички елементи"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Select the source of the autocomplete suggestions"
+msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
@@ -724,7 +732,7 @@ msgstr "Смарт аспекти скривалището е активиран
 msgid "Sort by countable"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:72
 #: ../../facetednavigation/widgets/select/widget.py:49
 msgid "Sort options reversed"
@@ -767,11 +775,11 @@ msgstr "Етикети"
 msgid "Tal Expression"
 msgstr "Тал Изразяване"
 
-#: ../../facetednavigation/widgets/text/widget.py:61
+#: ../../facetednavigation/widgets/text/widget.py:63
 msgid "Text field"
 msgstr "Текст областта"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:58
+#: ../../facetednavigation/widgets/autocomplete/widget.py:76
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -831,7 +839,7 @@ msgstr ""
 msgid "Visible to"
 msgstr "Вижда се от"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:60
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
 #: ../../facetednavigation/widgets/radio/widget.py:33
 #: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary"
@@ -841,7 +849,7 @@ msgstr "Речник"
 msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
 msgstr "Речник, за да се използва за филтриране на сортиране критерии. Оставете празно за критерии по подразбиране за сортиране."
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:62
 #: ../../facetednavigation/widgets/radio/widget.py:34
 #: ../../facetednavigation/widgets/select/widget.py:32
 msgid "Vocabulary to use to render widget items"
@@ -871,7 +879,7 @@ msgstr "вчера"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "всички елементи"
@@ -880,7 +888,7 @@ msgstr "всички елементи"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:43
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "в текущите резултати"
@@ -891,5 +899,9 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "match any/all filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:154
+msgid "solr"
 msgstr ""
 

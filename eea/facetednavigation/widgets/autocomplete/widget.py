@@ -14,13 +14,17 @@ from Products.Archetypes.public import StringWidget
 from Products.Archetypes.Widget import BooleanWidget
 from Products.Five import BrowserView
 
+from eea.faceted.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.config import HAS_SOLR
 
+from zope.interface import implements
+
 EditSchema = Schema((
-    StringField('index',
+    StringField(
+        'index',
         schemata="default",
         required=True,
         vocabulary_factory='eea.faceted.vocabularies.TextCatalogIndexes',
@@ -30,7 +34,8 @@ EditSchema = Schema((
             i18n_domain="eea"
         )
     ),
-    StringField('default',
+    StringField(
+        'default',
         schemata="default",
         widget=StringWidget(
             size=25,
@@ -39,7 +44,20 @@ EditSchema = Schema((
             i18n_domain="eea"
         )
     ),
-    BooleanField('onlyallelements',
+    StringField(
+        'autocomplete_view',
+        schemata="default",
+        required=True,
+        vocabulary_factory='eea.faceted.vocabularies.AutocompleteVocabularies',
+        widget=SelectionWidget(
+            label=_(u"Autocomplete source"),
+            description=_(
+                u'Select the source of the autocomplete suggestions'
+            ),
+        )
+    ),
+    BooleanField(
+        'onlyallelements',
         schemata="default",
         widget=BooleanWidget(
             label=_(u'Search in all elements only'),
@@ -49,6 +67,7 @@ EditSchema = Schema((
         )
     ),
 ))
+
 
 class Widget(AbstractWidget):
     """ Widget
@@ -122,10 +141,19 @@ class Widget(AbstractWidget):
         query[index] = {'query': value, 'operator': 'and'}
         return query
 
+    def autocomplete_view(self):
+        view_name = self.data.get('autocomplete_view', '')
+        return view_name
 
-class AutocompleteSuggest(BrowserView):
-    """ Autocomplete widget
+
+class SolrSuggest(BrowserView):
+    """ Solr Autocomplete view
     """
+
+    implements(IAutocompleteSuggest)
+
+    label = _("solr")
+
     def __call__(self):
         result = []
         term = self.request.get('term')
@@ -143,6 +171,7 @@ class AutocompleteSuggest(BrowserView):
         root = etree.fromstring(response.read())
         suggestion = root.xpath("//arr[@name='suggestion']")
         if len(suggestion):
-            result = [item.text for item in suggestion[0].findall('str')]
+            suggestions = suggestion[0].findall('str')
+            result = [{'label': s.text, 'value': s.text} for s in suggestions]
 
         return json.dumps(result)

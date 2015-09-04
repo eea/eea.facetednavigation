@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-06-29 12:50+0000\n"
+"POT-Creation-Date: 2015-09-04 09:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,24 +80,28 @@ msgstr "Stafrófsröð"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Ertu viss um að þú viljir eyða ${widget} búnaður?"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:52
+msgid "Autocomplete source"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:44
 msgid "Boolean"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:69
+#: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Catalog"
 msgstr "Skráning"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:30
-#: ../../facetednavigation/widgets/autocomplete/widget.py:28
+#: ../../facetednavigation/widgets/autocomplete/widget.py:32
 #: ../../facetednavigation/widgets/boolean/widget.py:20
 msgid "Catalog index"
 msgstr "Skráning vísitölu"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:31
-#: ../../facetednavigation/widgets/autocomplete/widget.py:29
+#: ../../facetednavigation/widgets/autocomplete/widget.py:33
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Catalog index to use for search"
 msgstr "Skráning vísitölu til að nota við leit"
@@ -106,7 +110,7 @@ msgstr "Skráning vísitölu til að nota við leit"
 msgid "Catalog query"
 msgstr "Skráning fyrirspurn"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:104
+#: ../../facetednavigation/widgets/checkbox/widget.py:105
 msgid "Checkboxes"
 msgstr "Gátreitina"
 
@@ -183,7 +187,7 @@ msgid "Default etag"
 msgstr "Sjálfgefin etag"
 
 #: ../../facetednavigation/widgets/boolean/widget.py:29
-#: ../../facetednavigation/widgets/checkbox/widget.py:93
+#: ../../facetednavigation/widgets/checkbox/widget.py:94
 msgid "Default items (one per line)"
 msgstr "Sjálfgefið atriði (eitt í hverja línu)"
 
@@ -191,7 +195,7 @@ msgstr "Sjálfgefið atriði (eitt í hverja línu)"
 msgid "Default letter to be selected"
 msgstr "Sjálfgefin bréf til að velja"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:41
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "Default operator"
 msgstr "Flugrekandi"
 
@@ -217,7 +221,7 @@ msgstr "Sjálfgefin valin atriði"
 msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Sjálfgefin flokkun index (td 'árangri' eða 'gildi (andstæða)')"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:38
+#: ../../facetednavigation/widgets/autocomplete/widget.py:43
 #: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Sjálfgefin band til að leita að"
@@ -228,7 +232,7 @@ msgid "Default tal expression for query value"
 msgstr "Sjálfgefin Tal tjáning fyrir fyrirspurn gildi"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/autocomplete/widget.py:37
+#: ../../facetednavigation/widgets/autocomplete/widget.py:42
 #: ../../facetednavigation/widgets/boolean/widget.py:28
 msgid "Default value"
 msgstr "Sjálfgefið gildi"
@@ -395,7 +399,7 @@ msgstr "Vingjarnlegur nafn"
 msgid "Future"
 msgstr "Framtíð"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:70
+#: ../../facetednavigation/widgets/checkbox/widget.py:71
 #: ../../facetednavigation/widgets/radio/widget.py:44
 #: ../../facetednavigation/widgets/select/widget.py:41
 msgid "Get unique values from catalog as an alternative for vocabulary"
@@ -425,7 +429,7 @@ msgstr "Fela Tónlist"
 msgid "If this checkbox is checked, hides the All option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:46
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr ""
@@ -462,7 +466,7 @@ msgstr "Ógilt eða tóm orðaforða sem kveðið er á þessum hlut. Skildu þe
 msgid "Less filters"
 msgstr "Minna síur"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:52
+#: ../../facetednavigation/widgets/checkbox/widget.py:53
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr ""
 
@@ -478,7 +482,7 @@ msgstr "Hámark stafir"
 msgid "Maximum font-size (px)"
 msgstr "Hámarks font-size (px)"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:78
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
 #: ../../facetednavigation/widgets/radio/widget.py:63
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Maximum items"
@@ -556,13 +560,13 @@ msgstr "Næsta ár"
 msgid "No action provided"
 msgstr "Engin aðgerð enda"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 #: ../../facetednavigation/widgets/radio/widget.py:64
 #: ../../facetednavigation/widgets/tagscloud/widget.py:63
 msgid "Number of items visible in widget"
 msgstr "Fjöldi hluta sýnilegra í hlut"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:51
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
 msgid "Operator visible"
 msgstr ""
 
@@ -663,7 +667,7 @@ msgstr "Per skref síðu"
 msgid "Reverse"
 msgstr "Aftur"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:85
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
 #: ../../facetednavigation/widgets/radio/widget.py:71
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Reverse options"
@@ -677,7 +681,7 @@ msgstr "Rót mappa"
 msgid "Save"
 msgstr "Vista"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:24
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Leita"
@@ -686,12 +690,12 @@ msgstr "Leita"
 msgid "Search Depth"
 msgstr "Leita Dýpt"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:45
+#: ../../facetednavigation/widgets/autocomplete/widget.py:62
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:42
+#: ../../facetednavigation/widgets/checkbox/widget.py:43
 msgid "Search with AND/OR between elements"
 msgstr "Leita með OG/EÐA milli atriða"
 
@@ -707,6 +711,10 @@ msgstr "Velja"
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Veldu öll atriði"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Select the source of the autocomplete suggestions"
+msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
@@ -724,7 +732,7 @@ msgstr "Smart hliðar fela er nú virkt"
 msgid "Sort by countable"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:72
 #: ../../facetednavigation/widgets/select/widget.py:49
 msgid "Sort options reversed"
@@ -767,11 +775,11 @@ msgstr "Tags Cloud"
 msgid "Tal Expression"
 msgstr "Tal Tjáning"
 
-#: ../../facetednavigation/widgets/text/widget.py:61
+#: ../../facetednavigation/widgets/text/widget.py:63
 msgid "Text field"
 msgstr "Texti sviði"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:58
+#: ../../facetednavigation/widgets/autocomplete/widget.py:76
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -831,7 +839,7 @@ msgstr ""
 msgid "Visible to"
 msgstr "Birtist"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:60
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
 #: ../../facetednavigation/widgets/radio/widget.py:33
 #: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary"
@@ -841,7 +849,7 @@ msgstr "Orðaforði"
 msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
 msgstr "Orðaforði til að nota til að sía flokkun viðmið. Skildu þetta eftir autt fyrir vanræksla flokkun forsendum."
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:62
 #: ../../facetednavigation/widgets/radio/widget.py:34
 #: ../../facetednavigation/widgets/select/widget.py:32
 msgid "Vocabulary to use to render widget items"
@@ -871,7 +879,7 @@ msgstr "Gær"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "öll atriði"
@@ -880,7 +888,7 @@ msgstr "öll atriði"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:43
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "í núverandi niðurstöður"
@@ -891,5 +899,9 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "match any/all filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:154
+msgid "solr"
 msgstr ""
 

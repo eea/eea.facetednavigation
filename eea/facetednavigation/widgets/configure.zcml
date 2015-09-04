@@ -3,7 +3,7 @@
     xmlns:zcml="http://namespaces.zope.org/zcml">
 
   <include package=".alphabetic" />
-  <include package=".autocomplete" zcml:condition="installed collective.solr" />
+  <include package=".autocomplete" />
   <include package=".boolean" />
   <include package=".checkbox" />
   <include package=".criteria" />

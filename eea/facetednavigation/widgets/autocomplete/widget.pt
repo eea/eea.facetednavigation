@@ -1,12 +1,13 @@
-<div class="faceted-widget faceted-autocomplete-widget" style="display: none"
+<div class="faceted-widget faceted-autocompleteselection-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
-  default_value python:view.default or '';
+  default_value python:view.default and view.default.get('value') or '';
+  default_label python:view.default and view.default.get('label') or '';
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;"
-  tal:attributes="id string:${wid}_widget; class css">
+  tal:attributes="id string:${wid}_widget; class css; data-autocomplete-view view/autocomplete_view">
 
 <fieldset class="widget-fieldset"
   tal:define="title python:view.data.get('title', '')">
@@ -16,10 +17,13 @@
   <label class="text-field"
     tal:attributes="for wid"
     tal:content="python:view.translate(title)" />
-  <input type="text" tal:attributes="
-    name string:${wid};
-    id string:${wid};
+  <input type="hidden" tal:attributes="
+    id string:value_${wid};
     value default_value;
+  "/>
+  <input type="text" tal:attributes="
+    id string:${wid};
+    value default_label;
   "/>
   <input type="submit" class="searchButton" value="Search" tal:attributes="
     name string:${wid}_button;
