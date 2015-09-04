@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 09:59+0000\n"
+"POT-Creation-Date: 2015-09-04 11:47+0000\n"
 "PO-Revision-Date: 2012-04-26 17:32+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,9 +83,9 @@ msgstr "Alphabet"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Êtes-vous sûrs de vouloir supprimer le widget ${widget}?"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:52
-msgid "Autocomplete source"
-msgstr "Source de l'autocomplétion"
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Autocomplete"
+msgstr "Autocomplétion"
 
 #: ../../facetednavigation/widgets/boolean/widget.py:44
 msgid "Boolean"
@@ -467,7 +467,7 @@ msgstr "Masquer la widget"
 msgid "If this checkbox is checked, hides the All option"
 msgstr "Si cette case est cochée, masque l'option 'Tous'"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:63
+#: ../../facetednavigation/widgets/autocomplete/widget.py:64
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr "Si cette case est cochée, masque la possibilité de filtrer soit dans tous les éléments soit seulement dans les éléments courants."
@@ -749,7 +749,7 @@ msgstr "Rechercher"
 msgid "Search Depth"
 msgstr "Profondeur de la recherche"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:62
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr "Rechercher seulement dans tous les éléments"
@@ -773,7 +773,7 @@ msgstr "Liste de sélection"
 msgid "Select all items"
 msgstr "Sélectionner tous les éléments"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+#: ../../facetednavigation/widgets/autocomplete/widget.py:54
 msgid "Select the source of the autocomplete suggestions"
 msgstr "Sélectionnez la source des suggestions de l'autocomplétion"
 
@@ -844,7 +844,7 @@ msgstr "Expression Tales"
 msgid "Text field"
 msgstr "Champ texte"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:76
+#: ../../facetednavigation/widgets/autocomplete/widget.py:77
 msgid "Text field with suggestions"
 msgstr "Champ de texte avec autocomplétion"
 
@@ -976,7 +976,7 @@ msgstr "correspondance"
 msgid "match any/all filters bellow"
 msgstr "correspond à un / tous les filtres ci-dessous"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:154
+#: ../../facetednavigation/widgets/autocomplete/widget.py:155
 msgid "solr"
 msgstr ""
 

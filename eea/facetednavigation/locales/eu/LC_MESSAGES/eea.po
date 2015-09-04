@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2015-09-04 09:59+0000\n"
+"POT-Creation-Date: 2015-09-04 11:47+0000\n"
 "PO-Revision-Date: 2013-11-19 08:24+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
@@ -81,8 +81,8 @@ msgstr "Alfabetikoki"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "${widget} widgeta ezabatu nahi duzu?"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:52
-msgid "Autocomplete source"
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Autocomplete"
 msgstr ""
 
 #: ../../facetednavigation/widgets/boolean/widget.py:44
@@ -464,7 +464,7 @@ msgstr "Widgeta ezkutatu"
 msgid "If this checkbox is checked, hides the All option"
 msgstr "Aukeratuta badago 'guztiak' aukera ez da erakutsiko"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:63
+#: ../../facetednavigation/widgets/autocomplete/widget.py:64
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr "Aukeratuta badago, elementu guztien artean edo uneko elementuen artean bakarrik filtratzeko aukera ez da erakutsiko"
@@ -746,7 +746,7 @@ msgstr "Bilatu"
 msgid "Search Depth"
 msgstr "Bilaketaren sakonera"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:62
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr "Elementu guztietan bakarrik bilatu"
@@ -771,7 +771,7 @@ msgstr "Aukeraketa-kutxa"
 msgid "Select all items"
 msgstr "Elementu guztiak aukeratu"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+#: ../../facetednavigation/widgets/autocomplete/widget.py:54
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
@@ -842,7 +842,7 @@ msgstr "Tal espresioa"
 msgid "Text field"
 msgstr "Testu-eremua"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:76
+#: ../../facetednavigation/widgets/autocomplete/widget.py:77
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -976,7 +976,7 @@ msgstr "bat-etorri"
 msgid "match any/all filters bellow"
 msgstr "Beheko filtro guztiak/edozein bat-etorri"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:154
+#: ../../facetednavigation/widgets/autocomplete/widget.py:155
 msgid "solr"
 msgstr ""
 
