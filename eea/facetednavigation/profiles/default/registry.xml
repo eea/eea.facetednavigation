@@ -14,7 +14,7 @@
     <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
     <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
     <value key="compile">False</value>
-    <value key="enabled">True</value>
+    <value key="enabled">False</value>
   </records>
 
   <records prefix="plone.bundles/facetednavigation-jquery"
@@ -31,7 +31,7 @@
     <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
     <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
     <value key="compile">False</value>
-    <value key="enabled">True</value>
+    <value key="enabled">False</value>
   </records>
 
   <!-- TODO faceted_view.js fails when compiled/minified so put it in a separate
@@ -50,7 +50,7 @@
       <element>facetednavigation-view</element>
     </value>
     <value key="depends">facetednavigation-jquery</value>
-    <value key="enabled">True</value>
+    <value key="enabled">False</value>
     <value key="csscompilation">faceted_view.css</value>
     <value key="jscompilation">faceted_view.js</value>
   </records>
@@ -72,7 +72,7 @@
     <value key="csscompilation">++plone++static/facetednavigation-edit-compiled.css</value>
     <value key="jscompilation">++plone++static/facetednavigation-edit-compiled.js</value>
     <value key="compile">False</value>
-    <value key="enabled">True</value>
+    <value key="enabled">False</value>
   </records>
 
 </registry>

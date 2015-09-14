@@ -11,6 +11,7 @@ from eea.facetednavigation.interfaces import IDisableSmartFacets
 from eea.facetednavigation.interfaces import IFacetedSearchMode
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from Products.Five.browser import BrowserView
+from Products.CMFPlone.resources import add_bundle_on_request
 
 class FacetedContainerView(object):
     """ Faceted view
@@ -18,6 +19,8 @@ class FacetedContainerView(object):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        add_bundle_on_request(request, 'facetednavigation-jquery')
+        add_bundle_on_request(request, 'facetednavigation-view')
         self._canonical = '<NOT SET>'
 
     @property

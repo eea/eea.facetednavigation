@@ -18,6 +18,7 @@ from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 from eea.facetednavigation import EEAMessageFactory as _
 from plone.protect.interfaces import IDisableCSRFProtection
 from zope.interface import alsoProvides
+from Products.CMFPlone.resources import add_bundle_on_request
 
 logger = logging.getLogger('eea.facetednavigation.browser.app.configure')
 #
@@ -291,6 +292,8 @@ class FacetedConfigureView(object):
         self.context = context
         alsoProvides(request, IDisableCSRFProtection)
         self.request = request
+        add_bundle_on_request(request, 'facetednavigation-jquery')
+        add_bundle_on_request(request, 'facetednavigation-edit')
 
     @property
     def positions(self):
