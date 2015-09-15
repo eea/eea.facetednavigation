@@ -3,6 +3,9 @@ Changelog
 
 8.4.dev0 - (unreleased)
 -----------------------
+* Bug fix: Safely access *count* method on widget in order to avoid errors like:
+  *Widget object has no attribute 'count'* when counting non-countable widgets
+  [voineali refs #28781]
 
 8.3 - (2015-09-10)
 ------------------
