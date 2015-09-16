@@ -48,7 +48,7 @@ EditSchema = Schema((
         'autocomplete_view',
         schemata="default",
         required=True,
-        vocabulary_factory='eea.faceted.vocabularies.AutocompleteVocabularies',
+        vocabulary_factory='eea.faceted.vocabularies.AutocompleteViews',
         widget=SelectionWidget(
             label=_(u"Autocomplete source"),
             description=_(
