@@ -53,7 +53,8 @@ class FacetedQueryCounter(object):
 
         # Get index
         widget = criteria.widget(cid=cid)(self.context, self.request, criterion)
-        res = widget.count(brains)
+        count = getattr(widget, 'count', lambda brains: {})
+        res = count(brains)
         logger.debug('Benchmark %s: %s', cid, time.time() - start)
         return res
 

@@ -37,7 +37,8 @@ class TagsCloudCounter(BrowserView):
                     in widget.vocabulary(oll=True) if key not in ("", "all"))
 
         # Count
-        res = widget.count(brains, sequence=vocabulary.keys())
+        count = getattr(widget, 'count', lambda brains, sequence: {})
+        res = count(brains, sequence=vocabulary.keys())
         res.pop("", 0)
         oll = res.pop('all', 0)
 
