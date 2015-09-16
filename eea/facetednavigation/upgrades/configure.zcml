@@ -15,7 +15,7 @@
        />
 
   <genericsetup:upgradeStep
-      title="Add default sorting widgets to all Faceted Navigable objects"
+      title="Set the default value of suggestions view of each autocomplete widget"
       handler="eea.facetednavigation.upgrades.evolve84.migrate_autocomplete_widget"
       />
   </genericsetup:upgradeSteps>
