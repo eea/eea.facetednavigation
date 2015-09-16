@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 09:59+0000\n"
+"POT-Creation-Date: 2015-09-04 11:47+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -83,8 +83,8 @@ msgstr "Alfabetic"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Sunteţi sigur că doriţi să ştergeţi widget-ul ${widget}?"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:52
-msgid "Autocomplete source"
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Autocomplete"
 msgstr ""
 
 #: ../../facetednavigation/widgets/boolean/widget.py:44
@@ -465,7 +465,7 @@ msgstr "Ascunde widget-ul"
 msgid "If this checkbox is checked, hides the All option"
 msgstr "Dacă această opţiune este selectată, ascunde optiunea 'Toate'"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:63
+#: ../../facetednavigation/widgets/autocomplete/widget.py:64
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr "Dacă aceasta opţiune este selectată, ascunde opţiunile de cautare avansată"
@@ -747,7 +747,7 @@ msgstr "Caută"
 msgid "Search Depth"
 msgstr "Adâncime"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:62
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr "Caută în toate elementele"
@@ -771,7 +771,7 @@ msgstr "Selectare"
 msgid "Select all items"
 msgstr "Selectează toate obiectele"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+#: ../../facetednavigation/widgets/autocomplete/widget.py:54
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
@@ -842,7 +842,7 @@ msgstr "Expresie TAL"
 msgid "Text field"
 msgstr "Câmp text"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:76
+#: ../../facetednavigation/widgets/autocomplete/widget.py:77
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -974,7 +974,7 @@ msgstr "conţine"
 msgid "match any/all filters bellow"
 msgstr "filtrează elementele care conţin toate sau oricare dintre filtrele de mai jos"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:154
+#: ../../facetednavigation/widgets/autocomplete/widget.py:155
 msgid "solr"
 msgstr ""
 

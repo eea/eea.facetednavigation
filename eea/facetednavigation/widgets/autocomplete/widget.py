@@ -50,7 +50,7 @@ EditSchema = Schema((
         required=True,
         vocabulary_factory='eea.faceted.vocabularies.AutocompleteViews',
         widget=SelectionWidget(
-            label=_(u"Autocomplete source"),
+            label=_(u"Autocomplete"),
             description=_(
                 u'Select the source of the autocomplete suggestions'
             ),

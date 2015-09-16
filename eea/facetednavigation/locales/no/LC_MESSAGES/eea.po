@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 09:59+0000\n"
+"POT-Creation-Date: 2015-09-04 11:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,8 +80,8 @@ msgstr "Alfabetisk"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Er du sikker på at du vil slette ${widget} widget?"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:52
-msgid "Autocomplete source"
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Autocomplete"
 msgstr ""
 
 #: ../../facetednavigation/widgets/boolean/widget.py:44
@@ -429,7 +429,7 @@ msgstr "Skjul widget"
 msgid "If this checkbox is checked, hides the All option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:63
+#: ../../facetednavigation/widgets/autocomplete/widget.py:64
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr ""
@@ -690,7 +690,7 @@ msgstr "Søk"
 msgid "Search Depth"
 msgstr "Søkedybde"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:62
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr ""
@@ -712,7 +712,7 @@ msgstr "Velg"
 msgid "Select all items"
 msgstr "Velg alle elementer"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+#: ../../facetednavigation/widgets/autocomplete/widget.py:54
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
@@ -779,7 +779,7 @@ msgstr "Tal Expression"
 msgid "Text field"
 msgstr "Tekstfelt"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:76
+#: ../../facetednavigation/widgets/autocomplete/widget.py:77
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -901,7 +901,7 @@ msgstr ""
 msgid "match any/all filters bellow"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:154
+#: ../../facetednavigation/widgets/autocomplete/widget.py:155
 msgid "solr"
 msgstr ""
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2015-09-04 09:59+0000\n"
+"POT-Creation-Date: 2015-09-04 11:47+0000\n"
 "PO-Revision-Date: 2013-12-31 23:42+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -80,8 +80,8 @@ msgstr "字母列表"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "確定要刪除 ${widget} 嗎?"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:52
-msgid "Autocomplete source"
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Autocomplete"
 msgstr ""
 
 #: ../../facetednavigation/widgets/boolean/widget.py:44
@@ -463,7 +463,7 @@ msgstr "隱藏方框"
 msgid "If this checkbox is checked, hides the All option"
 msgstr "勾選的話，會隱藏 All 選項。"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:63
+#: ../../facetednavigation/widgets/autocomplete/widget.py:64
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr "勾選的話，會隱藏「所有項目」或「在現行結果裡」的選項。"
@@ -745,7 +745,7 @@ msgstr "搜尋"
 msgid "Search Depth"
 msgstr "搜尋深度"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:62
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr "只針對「所有項目」來搜尋"
@@ -770,7 +770,7 @@ msgstr "選擇方框"
 msgid "Select all items"
 msgstr "全選"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+#: ../../facetednavigation/widgets/autocomplete/widget.py:54
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
@@ -841,7 +841,7 @@ msgstr "TAL 表示式"
 msgid "Text field"
 msgstr "文字欄位"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:76
+#: ../../facetednavigation/widgets/autocomplete/widget.py:77
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -973,7 +973,7 @@ msgstr "符合"
 msgid "match any/all filters bellow"
 msgstr "符合 Any/All 過濾條件"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:154
+#: ../../facetednavigation/widgets/autocomplete/widget.py:155
 msgid "solr"
 msgstr ""
 
