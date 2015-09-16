@@ -5,6 +5,22 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="7.5"
+    destination="8.4"
+    profile="eea.facetednavigation:default">
+
+     <genericsetup:upgradeDepends
+       title="Import all steps from eea.facetednavigation default profile"
+       import_profile="eea.facetednavigation:default"
+       />
+
+  <genericsetup:upgradeStep
+      title="Add default sorting widgets to all Faceted Navigable objects"
+      handler="eea.facetednavigation.upgrades.evolve84.migrate_autocomplete_widget"
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="7.1"
     destination="7.5"
     profile="eea.facetednavigation:default">
