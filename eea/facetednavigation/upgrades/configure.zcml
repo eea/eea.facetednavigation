@@ -9,11 +9,6 @@
     destination="8.4"
     profile="eea.facetednavigation:default">
 
-     <genericsetup:upgradeDepends
-       title="Import all steps from eea.facetednavigation default profile"
-       import_profile="eea.facetednavigation:default"
-       />
-
   <genericsetup:upgradeStep
       title="Set the default value of suggestions view of each autocomplete widget"
       handler="eea.facetednavigation.upgrades.evolve84.migrate_autocomplete_widget"
