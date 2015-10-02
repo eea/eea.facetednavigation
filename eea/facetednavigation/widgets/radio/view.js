@@ -152,7 +152,7 @@ Faceted.RadioWidget.prototype = {
     var id = element.attr('id');
     var label = jQuery('label[for=' + id + ']');
     var title = label.attr('title');
-    label = label.html();
+    label = label.text();
     var link = jQuery('<a href="#">[X]</a>');
     var span = jQuery('<span class="facted-radio-criterion">');
     link.attr('id', 'criteria_' + id);
