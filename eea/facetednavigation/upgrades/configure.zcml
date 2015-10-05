@@ -5,6 +5,17 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="7.5"
+    destination="8.4"
+    profile="eea.facetednavigation:default">
+
+  <genericsetup:upgradeStep
+      title="Set the default value of suggestions view of each autocomplete widget"
+      handler="eea.facetednavigation.upgrades.evolve84.migrate_autocomplete_widget"
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="7.1"
     destination="7.5"
     profile="eea.facetednavigation:default">

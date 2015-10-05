@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2015-06-29 12:50+0000\n"
+"POT-Creation-Date: 2015-09-04 11:47+0000\n"
 "PO-Revision-Date: 2012-11-27 16:24+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -82,12 +82,16 @@ msgstr "Alfabético"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "¿Está seguro que desea eliminar el widget ${widget}?"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Autocomplete"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:44
 msgid "Boolean"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:69
+#: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Catalog"
@@ -95,14 +99,14 @@ msgstr "Catálogo"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:30
-#: ../../facetednavigation/widgets/autocomplete/widget.py:28
+#: ../../facetednavigation/widgets/autocomplete/widget.py:32
 #: ../../facetednavigation/widgets/boolean/widget.py:20
 msgid "Catalog index"
 msgstr "Índice del catálogo"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:31
-#: ../../facetednavigation/widgets/autocomplete/widget.py:29
+#: ../../facetednavigation/widgets/autocomplete/widget.py:33
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Catalog index to use for search"
 msgstr "Índice del catálogo a utilizar para la búsqueda"
@@ -111,7 +115,7 @@ msgstr "Índice del catálogo a utilizar para la búsqueda"
 msgid "Catalog query"
 msgstr "Consulta del catálogo"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:104
+#: ../../facetednavigation/widgets/checkbox/widget.py:105
 msgid "Checkboxes"
 msgstr "Casillas de verificación"
 
@@ -198,7 +202,7 @@ msgstr "ETag por defecto"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/boolean/widget.py:29
-#: ../../facetednavigation/widgets/checkbox/widget.py:93
+#: ../../facetednavigation/widgets/checkbox/widget.py:94
 msgid "Default items (one per line)"
 msgstr "Elementos por defecto (uno por línea)"
 
@@ -208,7 +212,7 @@ msgid "Default letter to be selected"
 msgstr "Letra por defecto para ser seleccionada"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:41
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "Default operator"
 msgstr "Operador"
 
@@ -238,7 +242,7 @@ msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "Índice de ordenación por defecto (por ejemplo, 'effective' o 'effective(reverse)')"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/autocomplete/widget.py:38
+#: ../../facetednavigation/widgets/autocomplete/widget.py:43
 #: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "Cadena de búsqueda por defecto"
@@ -251,7 +255,7 @@ msgstr "Expresión TAL por defecto"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/autocomplete/widget.py:37
+#: ../../facetednavigation/widgets/autocomplete/widget.py:42
 #: ../../facetednavigation/widgets/boolean/widget.py:28
 msgid "Default value"
 msgstr "Valor por defecto"
@@ -428,7 +432,7 @@ msgid "Future"
 msgstr "Futuro"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:70
+#: ../../facetednavigation/widgets/checkbox/widget.py:71
 #: ../../facetednavigation/widgets/radio/widget.py:44
 #: ../../facetednavigation/widgets/select/widget.py:41
 msgid "Get unique values from catalog as an alternative for vocabulary"
@@ -461,7 +465,7 @@ msgstr "Ocultar widget"
 msgid "If this checkbox is checked, hides the All option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:46
+#: ../../facetednavigation/widgets/autocomplete/widget.py:64
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr ""
@@ -499,7 +503,7 @@ msgstr "Se ha configurado un vocabulario no válido o vacío para este widget. D
 msgid "Less filters"
 msgstr "Menos filtros"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:52
+#: ../../facetednavigation/widgets/checkbox/widget.py:53
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr ""
 
@@ -518,7 +522,7 @@ msgid "Maximum font-size (px)"
 msgstr "Tamaño de fuente máximo(font-size (px))"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:78
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
 #: ../../facetednavigation/widgets/radio/widget.py:63
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Maximum items"
@@ -603,13 +607,13 @@ msgid "No action provided"
 msgstr "Ninguna acción prevista"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 #: ../../facetednavigation/widgets/radio/widget.py:64
 #: ../../facetednavigation/widgets/tagscloud/widget.py:63
 msgid "Number of items visible in widget"
 msgstr "Número de elementos visibles en el widget"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:51
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
 msgid "Operator visible"
 msgstr ""
 
@@ -718,7 +722,7 @@ msgid "Reverse"
 msgstr "Al revés"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:85
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
 #: ../../facetednavigation/widgets/radio/widget.py:71
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Reverse options"
@@ -733,7 +737,7 @@ msgstr "Carpeta raíz"
 msgid "Save"
 msgstr "Guardar"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:24
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Buscar"
@@ -743,13 +747,13 @@ msgstr "Buscar"
 msgid "Search Depth"
 msgstr "Profundidad de búsqueda"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:45
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:42
+#: ../../facetednavigation/widgets/checkbox/widget.py:43
 msgid "Search with AND/OR between elements"
 msgstr "Buscar con y/o entre los elementos"
 
@@ -768,6 +772,10 @@ msgstr "Seleccionable"
 msgid "Select all items"
 msgstr "Seleccionar todos los elementos"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:54
+msgid "Select the source of the autocomplete suggestions"
+msgstr ""
+
 #: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "Mostrar filtros"
@@ -785,7 +793,7 @@ msgid "Sort by countable"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:72
 #: ../../facetednavigation/widgets/select/widget.py:49
 msgid "Sort options reversed"
@@ -831,11 +839,11 @@ msgstr "Nube de etiquetas"
 msgid "Tal Expression"
 msgstr "Expresión TAL"
 
-#: ../../facetednavigation/widgets/text/widget.py:61
+#: ../../facetednavigation/widgets/text/widget.py:63
 msgid "Text field"
 msgstr "Campo de Texto"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:58
+#: ../../facetednavigation/widgets/autocomplete/widget.py:77
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -902,7 +910,7 @@ msgid "Visible to"
 msgstr "Visible para"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:60
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
 #: ../../facetednavigation/widgets/radio/widget.py:33
 #: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary"
@@ -914,7 +922,7 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "Vocabulario para filtrar criterios de ordenación. Dejar en blanco para los criterios de ordenación por defecto."
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:62
 #: ../../facetednavigation/widgets/radio/widget.py:34
 #: ../../facetednavigation/widgets/select/widget.py:32
 msgid "Vocabulary to use to render widget items"
@@ -946,7 +954,7 @@ msgstr "Ayer"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "todos los elementos"
@@ -955,7 +963,7 @@ msgstr "todos los elementos"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:43
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "en los resultados actuales"
@@ -966,5 +974,9 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "match any/all filters bellow"
+msgstr ""
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+msgid "solr"
 msgstr ""
 

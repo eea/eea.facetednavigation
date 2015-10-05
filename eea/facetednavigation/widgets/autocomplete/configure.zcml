@@ -20,10 +20,11 @@
     file="./view.css"
    />
 
-  <browser:page
+  <browser:view
     for="*"
-    name="autocomplete-suggest"
-    class=".widget.AutocompleteSuggest"
+    provides="eea.faceted.vocabularies.autocomplete.IAutocompleteSuggest"
+    name="solr-autocomplete-suggest"
+    class=".widget.SolrSuggest"
     permission="zope2.View"
     />
 

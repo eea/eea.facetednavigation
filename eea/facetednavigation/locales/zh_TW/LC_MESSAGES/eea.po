@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2015-06-29 12:50+0000\n"
+"POT-Creation-Date: 2015-09-04 11:47+0000\n"
 "PO-Revision-Date: 2013-12-31 23:42+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -80,12 +80,16 @@ msgstr "字母列表"
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "確定要刪除 ${widget} 嗎?"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:53
+msgid "Autocomplete"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:44
 msgid "Boolean"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:69
+#: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
 msgid "Catalog"
@@ -93,14 +97,14 @@ msgstr "Catalog"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:30
-#: ../../facetednavigation/widgets/autocomplete/widget.py:28
+#: ../../facetednavigation/widgets/autocomplete/widget.py:32
 #: ../../facetednavigation/widgets/boolean/widget.py:20
 msgid "Catalog index"
 msgstr "Catalog 索引"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:31
-#: ../../facetednavigation/widgets/autocomplete/widget.py:29
+#: ../../facetednavigation/widgets/autocomplete/widget.py:33
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Catalog index to use for search"
 msgstr "用來搜尋的 Catalog 索引"
@@ -109,7 +113,7 @@ msgstr "用來搜尋的 Catalog 索引"
 msgid "Catalog query"
 msgstr "Catalog 搜尋"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:104
+#: ../../facetednavigation/widgets/checkbox/widget.py:105
 msgid "Checkboxes"
 msgstr "方形勾選"
 
@@ -195,7 +199,7 @@ msgstr "預設的 etag"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/boolean/widget.py:29
-#: ../../facetednavigation/widgets/checkbox/widget.py:93
+#: ../../facetednavigation/widgets/checkbox/widget.py:94
 msgid "Default items (one per line)"
 msgstr "預設項目"
 
@@ -205,7 +209,7 @@ msgid "Default letter to be selected"
 msgstr "預設選取的英文字母"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:41
+#: ../../facetednavigation/widgets/checkbox/widget.py:42
 msgid "Default operator"
 msgstr "預設的操作元"
 
@@ -235,7 +239,7 @@ msgid "Default sorting index (e.g. 'effective' or 'effective(reverse)')"
 msgstr "預設的排序索引 (例如 effective)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/autocomplete/widget.py:38
+#: ../../facetednavigation/widgets/autocomplete/widget.py:43
 #: ../../facetednavigation/widgets/text/widget.py:31
 msgid "Default string to search for"
 msgstr "預設的查詢字串"
@@ -248,7 +252,7 @@ msgstr "預設的 TAL 查詢語法"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/widget.py:39
-#: ../../facetednavigation/widgets/autocomplete/widget.py:37
+#: ../../facetednavigation/widgets/autocomplete/widget.py:42
 #: ../../facetednavigation/widgets/boolean/widget.py:28
 msgid "Default value"
 msgstr "預設值"
@@ -426,7 +430,7 @@ msgid "Future"
 msgstr "未來"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:70
+#: ../../facetednavigation/widgets/checkbox/widget.py:71
 #: ../../facetednavigation/widgets/radio/widget.py:44
 #: ../../facetednavigation/widgets/select/widget.py:41
 msgid "Get unique values from catalog as an alternative for vocabulary"
@@ -459,7 +463,7 @@ msgstr "隱藏方框"
 msgid "If this checkbox is checked, hides the All option"
 msgstr "勾選的話，會隱藏 All 選項。"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:46
+#: ../../facetednavigation/widgets/autocomplete/widget.py:64
 #: ../../facetednavigation/widgets/text/widget.py:39
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr "勾選的話，會隱藏「所有項目」或「在現行結果裡」的選項。"
@@ -497,7 +501,7 @@ msgstr "這個方框的詞彙表並不正確，預設的排序條件因此留空
 msgid "Less filters"
 msgstr "更少"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:52
+#: ../../facetednavigation/widgets/checkbox/widget.py:53
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr "讓使用者能用 AND 或 OR 進行搜尋。"
 
@@ -516,7 +520,7 @@ msgid "Maximum font-size (px)"
 msgstr "字元最大尺寸 (px)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:78
+#: ../../facetednavigation/widgets/checkbox/widget.py:79
 #: ../../facetednavigation/widgets/radio/widget.py:63
 #: ../../facetednavigation/widgets/tagscloud/widget.py:62
 msgid "Maximum items"
@@ -601,13 +605,13 @@ msgid "No action provided"
 msgstr "沒有動作被提供"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:79
+#: ../../facetednavigation/widgets/checkbox/widget.py:80
 #: ../../facetednavigation/widgets/radio/widget.py:64
 #: ../../facetednavigation/widgets/tagscloud/widget.py:63
 msgid "Number of items visible in widget"
 msgstr "方框裡顯示的項目數量"
 
-#: ../../facetednavigation/widgets/checkbox/widget.py:51
+#: ../../facetednavigation/widgets/checkbox/widget.py:52
 msgid "Operator visible"
 msgstr "顯示操作元"
 
@@ -716,7 +720,7 @@ msgid "Reverse"
 msgstr "相反順序"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:85
+#: ../../facetednavigation/widgets/checkbox/widget.py:86
 #: ../../facetednavigation/widgets/radio/widget.py:71
 #: ../../facetednavigation/widgets/select/widget.py:48
 msgid "Reverse options"
@@ -731,7 +735,7 @@ msgstr "根目錄"
 msgid "Save"
 msgstr "儲存"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:24
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "搜尋"
@@ -741,13 +745,13 @@ msgstr "搜尋"
 msgid "Search Depth"
 msgstr "搜尋深度"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:45
+#: ../../facetednavigation/widgets/autocomplete/widget.py:63
 #: ../../facetednavigation/widgets/text/widget.py:38
 msgid "Search in all elements only"
 msgstr "只針對「所有項目」來搜尋"
 
 #. Default: "Search with AND/OR between elements"
-#: ../../facetednavigation/widgets/checkbox/widget.py:42
+#: ../../facetednavigation/widgets/checkbox/widget.py:43
 msgid "Search with AND/OR between elements"
 msgstr "搜尋功能支援 AND/OR 操作元"
 
@@ -766,6 +770,10 @@ msgstr "選擇方框"
 msgid "Select all items"
 msgstr "全選"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:54
+msgid "Select the source of the autocomplete suggestions"
+msgstr ""
+
 #: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "顯示過濾條件"
@@ -783,7 +791,7 @@ msgid "Sort by countable"
 msgstr "依計數結果排序"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:86
+#: ../../facetednavigation/widgets/checkbox/widget.py:87
 #: ../../facetednavigation/widgets/radio/widget.py:72
 #: ../../facetednavigation/widgets/select/widget.py:49
 msgid "Sort options reversed"
@@ -829,11 +837,11 @@ msgstr "標籤雲"
 msgid "Tal Expression"
 msgstr "TAL 表示式"
 
-#: ../../facetednavigation/widgets/text/widget.py:61
+#: ../../facetednavigation/widgets/text/widget.py:63
 msgid "Text field"
 msgstr "文字欄位"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:58
+#: ../../facetednavigation/widgets/autocomplete/widget.py:77
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -899,7 +907,7 @@ msgid "Visible to"
 msgstr "顯示"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:60
+#: ../../facetednavigation/widgets/checkbox/widget.py:61
 #: ../../facetednavigation/widgets/radio/widget.py:33
 #: ../../facetednavigation/widgets/select/widget.py:31
 msgid "Vocabulary"
@@ -911,7 +919,7 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "指定排序條件裡用到的詞彙表，留空代表使用預設排序條件。"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/checkbox/widget.py:61
+#: ../../facetednavigation/widgets/checkbox/widget.py:62
 #: ../../facetednavigation/widgets/radio/widget.py:34
 #: ../../facetednavigation/widgets/select/widget.py:32
 msgid "Vocabulary to use to render widget items"
@@ -943,7 +951,7 @@ msgstr "昨天"
 msgid "all"
 msgstr "全部"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "所有項目"
@@ -952,7 +960,7 @@ msgstr "所有項目"
 msgid "any"
 msgstr "任何"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:43
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "在現行結果裡"
@@ -964,4 +972,8 @@ msgstr "符合"
 #: ../../facetednavigation/widgets/checkbox/widget.pt:27
 msgid "match any/all filters bellow"
 msgstr "符合 Any/All 過濾條件"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+msgid "solr"
+msgstr ""
 
