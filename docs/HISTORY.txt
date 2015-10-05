@@ -5,15 +5,15 @@ Changelog
 -----------------------
 * Bug fix: Fixed rendering issues for current search widget
   [szabozo0 refs #28743]
+* Feature: Add field 'autocomplete_view' on theautocomplete widget to be able
+  to select the suggestion view. Register a solr suggestion view.
+  [sdelcourt]
 
 8.4 - (2015-10-05)
 ------------------
 * Bug fix: Safely access *count* method on widget in order to avoid errors like:
   *Widget object has no attribute 'count'* when counting non-countable widgets
   [voineali refs #28781]
-* Feature: Add field 'autocomplete_view' on theautocomplete widget to be able
-  to select the suggestion view. Register a solr suggestion view.
-  [sdelcourt]
 
 8.3 - (2015-09-10)
 ------------------
