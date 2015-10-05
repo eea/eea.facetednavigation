@@ -173,6 +173,7 @@ Faceted.AlphabeticalWidget.prototype = {
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_START, {wid: context.wid});
     jQuery.getJSON(Faceted.BASEURL + '@@faceted_counter', query, function(data){
       context.count_update(data, sortcountable);
+      jQuery(Faceted.Events).trigger(Faceted.Events.DO_UPDATE);
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_STOP, {wid: context.wid});
     });
   },

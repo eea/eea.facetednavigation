@@ -3,7 +3,8 @@ Changelog
 
 8.5.dev0 - (unreleased)
 -----------------------
-
+* Bug fix: 
+  [szabozo0 refs #
 8.4 - (2015-10-05)
 ------------------
 * Bug fix: Safely access *count* method on widget in order to avoid errors like:
