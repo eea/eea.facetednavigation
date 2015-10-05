@@ -171,11 +171,6 @@ Faceted.initializeAutocompleteWidget = function(evt){
       jQuery("#" + wid).autocomplete({
         source:  autocomplete_view,
         minLength: 2,
-        change: function (event, ui) {
-            event.preventDefault();
-            jQuery('#value_' + this.id).val('');
-            jQuery(this).val('');
-        },
         select: function (event, ui) {
             event.preventDefault();
             jQuery('#value_' + this.id).val(ui.item.value);
