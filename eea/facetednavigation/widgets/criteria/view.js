@@ -30,6 +30,10 @@ Faceted.CriteriaWidget = function(wid){
     return js_widget.update();
   });
 
+  jQuery(Faceted.Events).bind(Faceted.Events.DO_UPDATE, function(evt){
+    return js_widget.update();
+  });
+
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
     return js_widget.update_syndication();
   });
