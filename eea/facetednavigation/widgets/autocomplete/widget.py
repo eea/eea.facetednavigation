@@ -142,6 +142,8 @@ class Widget(AbstractWidget):
         return query
 
     def autocomplete_view(self):
+        """ Get the autocomplete view name
+        """
         view_name = self.data.get('autocomplete_view', '')
         return view_name
 
