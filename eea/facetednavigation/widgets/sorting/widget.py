@@ -10,6 +10,10 @@ from Products.ATContentTypes.criteria import _criterionRegistry
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
+from plone.app.querystring.interfaces import IQuerystringRegistryReader
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
+import json
 
 
 EditSchema = Schema((
@@ -108,13 +112,14 @@ class Widget(AbstractWidget):
     def listFields(self):
         """Return a list of fields from portal_catalog.
         """
-        tool = getToolByName(self.context, 'portal_atct')
-        return tool.getEnabledFields()
+        registry = getUtility(IRegistry)
+        config = IQuerystringRegistryReader(registry)()
+        return config['sortable_indexes'].keys()
 
     def listSortFields(self):
         """Return a list of available fields for sorting."""
         fields = [field for field in self.listFields()
-                  if self.validateAddCriterion(field[0], 'ATSortCriterion')]
+                  if self.validateAddCriterion(field, 'ATSortCriterion')]
         return fields
 
     def vocabulary(self, **kwargs):
@@ -126,4 +131,4 @@ class Widget(AbstractWidget):
             return sort_fields
 
         vocab_fields = [field[0].replace('term.', '', 1) for field in vocab]
-        return [f for f in sort_fields if f[0] in vocab_fields]
+        return [f for f in sort_fields if f in vocab_fields]

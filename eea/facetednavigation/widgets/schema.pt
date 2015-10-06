@@ -1,4 +1,3 @@
-<metal:block use-macro="here/global_defines/macros/defines" />
 <div metal:define-macro="schema" class="faceted-widget-edit" tal:define="
   mode string:search;
   errors python:{};
@@ -32,7 +31,9 @@
         fieldName string:${cid}_${field_id};
         accessor python:faceted_widget.accessor(field_id);
         widget python:field.widget">
-        <div metal:use-macro="python:faceted_widget.get_macro(field_id, 'edit')" />
+        <h1 tal:content="field_id"></h1>
+        <h2 tal:content="faceted_widget"></h2>
+        <!-- <div metal:use-macro="python:faceted_widget.get_macro(field_id, 'edit')" /> -->
       </tal:widget>
     </tal:field>
   </div>

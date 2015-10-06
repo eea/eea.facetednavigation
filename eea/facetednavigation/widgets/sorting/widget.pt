@@ -29,10 +29,10 @@
     <option value=""></option>
     <tal:option repeat="term vocabulary">
       <option tal:define="
-        term_id python:term[0];
-        term_label python:term[1];
+        term_id python:term;
+        term_label python:term;
         term_label python:view.translate(term_label);
-        term_description python:term[2];
+        term_description python:term;
         chbox_id string:${wid}_${term_id};
         chbox_id python:view.cleanup(chbox_id);"
         tal:attributes="
