@@ -3,6 +3,8 @@ Changelog
 
 8.5.dev0 - (unreleased)
 -----------------------
+* Bug fix: Infinite loop of javascript spinner after Browser refresh.
+  [karalics] PR #69
 * Bug fix: Fixed rendering issues for current search widget
   [szabozo0 refs #28743]
 * Feature: Add field 'autocomplete_view' on theautocomplete widget to be able
