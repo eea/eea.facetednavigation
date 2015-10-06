@@ -206,7 +206,8 @@ class Widget(ATWidget):
                 value = translate(message, domain=domain, context=self.request)
                 if value != message:
                     return value
-            return message
+            else:
+                return message
 
     def cleanup(self, string):
         """ Quote string
@@ -407,7 +408,7 @@ class CountableWidget(Widget):
                         res[normalized_value] = num
                     else:
                         unicode_value = value.decode('utf-8')
-                    res[unicode_value] = num
+                        res[unicode_value] = num
             else:
                 # no facet counts were returned. we exit anyway because
                 # zcatalog methods throw an error on solr responses
