@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.5.dev0 - (unreleased)
------------------------
+8.5 - (2015-10-22)
+------------------
 * Bug fix: Infinite loop of javascript spinner after Browser refresh.
   [karalics] PR #69
 * Bug fix: Fixed rendering issues for current search widget
