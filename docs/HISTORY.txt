@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.7.dev0 - (unreleased)
+-----------------------
+
 8.6 - (2015-11-17)
 ------------------
 * Fixed tests, disabled CSRF protection while testing
