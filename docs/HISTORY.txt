@@ -3,6 +3,8 @@ Changelog
 
 8.6.dev0 - (unreleased)
 -----------------------
+* Fixed tests, disabled CSRF protection while testing
+  [szabozo0 refs #30716]
 
 8.5 - (2015-10-22)
 ------------------

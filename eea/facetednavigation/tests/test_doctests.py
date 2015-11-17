@@ -20,6 +20,8 @@ OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
 def test_suite():
     """ Suite
     """
+    import os; os.environ['PLONE_CSRF_DISABLED'] = 'true'
+
     tests = unittest.TestSuite((
             Suite('README.txt',
                   optionflags=OPTIONFLAGS,
