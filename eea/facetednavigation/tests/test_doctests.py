@@ -2,7 +2,6 @@
 """
 import unittest
 import doctest
-import os
 from Testing.ZopeTestCase import FunctionalDocFileSuite as Suite
 from eea.facetednavigation.tests.base import FacetedFunctionalTestCase
 
@@ -21,7 +20,6 @@ OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
 def test_suite():
     """ Suite
     """
-    os.environ['PLONE_CSRF_DISABLED'] = 'true'
 
     tests = unittest.TestSuite((
             Suite('README.txt',

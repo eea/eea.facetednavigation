@@ -3,6 +3,8 @@ Changelog
 
 8.7.dev0 - (unreleased)
 -----------------------
+* Change: Removed CSRF security quickfix for tests
+  [szabozo0 refs #30858]
 
 8.6 - (2015-11-17)
 ------------------
