@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.7.dev0 - (unreleased)
------------------------
+8.7 - (2015-12-07)
+------------------
 * Change: Removed CSRF security quickfix for tests
   [szabozo0 refs #30858]
 
