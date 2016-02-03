@@ -114,6 +114,9 @@ class Widget(AbstractWidget):
     def normalize(self, value):
         """ Process value to be used in catalog query
         """
+        # select2 send us selected values separated by a comma
+        if ',' in value:
+            value = value.split(',')
         if isinstance(value, (tuple, list)):
             value = self.normalize_list(value)
         elif isinstance(value, (str, unicode)):

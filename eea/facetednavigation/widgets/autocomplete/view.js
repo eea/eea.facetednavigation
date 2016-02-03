@@ -39,7 +39,7 @@ Faceted.AutocompleteWidget.prototype = {
   },
 
   do_query: function(element){
-    var input = jQuery('#value_' + this.wid);
+    var input = jQuery('#' + this.wid);
     var value = input.val();
     value = value ? [value] : [];
 
@@ -168,19 +168,31 @@ Faceted.initializeAutocompleteWidget = function(evt){
     var autocomplete_view = jQuery(this).attr('data-autocomplete-view');
     wid = wid.split('_')[0];
     Faceted.Widgets[wid] = new Faceted.AutocompleteWidget(wid);
-      jQuery("#" + wid).autocomplete({
-        source:  autocomplete_view,
-        minLength: 2,
-        select: function (event, ui) {
-            event.preventDefault();
-            jQuery('#value_' + this.id).val(ui.item.value);
-            jQuery(this).val(ui.item.label);
-        }
+
+    jQuery("#" + wid).select2({
+      placeholder: "Select an option",
+      multiple: true,
+      ajax: {
+        url: autocomplete_view,
+        delay: 250,
+        dataType: 'json',
+        data: function (term, page) {
+            return {
+                term: term,
+                add_terms: true
+            };
+        },
+        results: function (data, page) {
+            return {
+                results: data
+            };
+        },
+        cache: false,
+      },
     });
   });
-
 };
-
+  
 jQuery(document).ready(function(){
   jQuery(Faceted.Events).bind(
     Faceted.Events.INITIALIZE,
