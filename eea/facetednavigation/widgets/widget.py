@@ -173,11 +173,16 @@ class Widget(ATWidget):
         """
         # Language widget has custom behaviour so be sure you keep
         # this in your widget
-        if self.data.get('index', None) == 'Language':
+        index = self.data.get('index', None)
+        if index == 'Language':
             language_widget = queryMultiAdapter((self, self.context),
                                                 ILanguageWidgetAdapter)
             if language_widget:
                 return language_widget.default
+        # Take value from request parameter, for example ?SearchableText=test.
+        from_request = self.request.form.pop(index, None)
+        if from_request is not None:
+            return from_request
         return self.data.get('default', None)
 
     def query(self, form):
