@@ -2,6 +2,7 @@
 """
 from eea.facetednavigation.tests.base import FacetedTestCase
 from eea.facetednavigation.widgets.widget import CountableWidget
+from eea.facetednavigation.widgets.widget import Widget
 
 
 class DummySolrResponse(dict):
@@ -37,3 +38,29 @@ class CountableWidgetTestCase(FacetedTestCase):
         dummyresponse = DummySolrResponse({'tags': {'foo': 10, 'bar': 7}})
         self.assertEqual(widget.count(dummyresponse),
                          {'': 1, 'all': 1, u'bar': 7, u'foo': 10})
+
+
+class WidgetTestCase(FacetedTestCase):
+    """ Test
+    """
+
+    def afterSetUp(self):
+        """ Setup
+        """
+        self.request = self.app.REQUEST
+
+    def test_default_from_widget(self):
+        """ Get default value from widget.
+        """
+        data = {'index': 'SearchableText', 'default': 'fun'}
+        self.request.form['otherindex'] = 'serious fun'
+        widget = Widget(self.portal, self.request, data=data)
+        self.assertEqual(widget.default, 'fun')
+
+    def test_default_from_request(self):
+        """ Get default value from request.
+        """
+        data = {'index': 'SearchableText', 'default': 'fun'}
+        self.request.form['SearchableText'] = 'serious fun'
+        widget = Widget(self.portal, self.request, data=data)
+        self.assertEqual(widget.default, 'serious fun')
