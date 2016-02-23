@@ -66,6 +66,15 @@ EditSchema = Schema((
             i18n_domain="eea"
         )
     ),
+
+    BooleanField(
+        'multivalued',
+        schemata="default",
+        default=True,
+        widget=BooleanWidget(
+            label=_(u'Can select several elements'),
+        )
+    ),
 ))
 
 

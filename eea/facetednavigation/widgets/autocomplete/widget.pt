@@ -7,7 +7,13 @@
   default_label python:view.default and view.default.get('label') or '';
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;"
-  tal:attributes="id string:${wid}_widget; class css; data-autocomplete-view view/autocomplete_view">
+  data-placeholder="Select a value"
+  i18n:attributes="data-placeholder"
+  tal:attributes="
+    id string:${wid}_widget; class css;
+    data-autocomplete-view view/autocomplete_view;
+    data-multiple python:str(getattr(view.data, 'multivalued', True)).lower();
+">
 
 <fieldset class="widget-fieldset"
   tal:define="title python:view.data.get('title', '')">
