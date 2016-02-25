@@ -175,7 +175,7 @@ Faceted.initializeAutocompleteWidget = function(evt){
       placeholder: placeholder,
       multiple: multiple,
       allowClear: true,
-      minimumInputLength: 1,
+      minimumInputLength: 2,
       ajax: {
         url: autocomplete_view,
         delay: 250,
