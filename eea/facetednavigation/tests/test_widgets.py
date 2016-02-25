@@ -64,3 +64,23 @@ class WidgetTestCase(FacetedTestCase):
         self.request.form['SearchableText'] = 'serious fun'
         widget = Widget(self.portal, self.request, data=data)
         self.assertEqual(widget.default, 'serious fun')
+
+
+
+class AutocompleteWidgetTestCase(FacetedTestCase):
+    """ Test
+    """
+
+    def afterSetUp(self):
+        """ Setup
+        """
+        self.request = self.app.REQUEST
+
+    def test_comma_separated_values(self):
+        """ Comma separated values are transformed to a list
+        """
+        from eea.facetednavigation.widgets.autocomplete.widget import Widget
+        data = {}
+        value = 'Folder,Document'
+        widget = Widget(self.portal, self.request, data=data)
+        self.assertEqual(widget.normalize(value), ['Folder', 'Document'])
