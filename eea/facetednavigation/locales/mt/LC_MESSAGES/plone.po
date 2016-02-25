@@ -31,4 +31,3 @@ msgstr "Portal tip"
 
 msgid "Sort on"
 msgstr "Sort fuq"
-

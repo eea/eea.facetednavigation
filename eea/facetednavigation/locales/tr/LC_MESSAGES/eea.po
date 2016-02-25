@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 11:47+0000\n"
+"POT-Creation-Date: 2016-02-23 12:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,6 +88,10 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:75
+msgid "Can select several elements"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
@@ -142,7 +146,7 @@ msgstr "İçerik listesi"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Seçili yıl (c-nn: c + nn) göre,: bugünün yıl (-nn + nn) için ya göre:, mutlak (nnnn: nnnn), veya birleşimleri açılan yıl yearsdisplayed aralığı kontrol Bu formatların (nnnn:-nn)."
 
-#: ../../facetednavigation/widgets/widget.py:343
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Count results"
 msgstr "Maçların sonuçları"
 
@@ -273,7 +277,7 @@ msgstr "Sağ portletler sakatlar"
 msgid "Disable smart facets hiding"
 msgstr "Akıllı yönleriyle gizleme sakatlar"
 
-#: ../../facetednavigation/widgets/widget.py:344
+#: ../../facetednavigation/widgets/widget.py:345
 msgid "Display number of results near each option"
 msgstr "Her seçeneğin yakınında sonuç sayısını görüntüle"
 
@@ -284,6 +288,14 @@ msgstr "Bölümünde aracı gösterilecek"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Bölümünde Widget görüntüler."
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:35
+msgid "EEA Faceted Navigation Common Configuration"
+msgstr ""
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
@@ -338,14 +350,39 @@ msgstr "Değeri etag"
 msgid "Export"
 msgstr "İhracat"
 
+#: ../../facetednavigation/profiles.zcml:35
+msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr ""
+
 #: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Yönlü kriterleri"
 
+#: ../../facetednavigation/settings/configure.zcml:19
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Yönlü genel ayarlar"
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
+msgstr ""
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
@@ -366,6 +403,10 @@ msgstr "Yönlü arama etkin"
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Yönlü ayarları"
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -417,7 +458,7 @@ msgstr ""
 msgid "Hide filters"
 msgstr "Filtreleri gizle"
 
-#: ../../facetednavigation/widgets/widget.py:357
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "Hide items with zero results"
 msgstr "Sıfır sonuçları ile öğeleri gizle"
 
@@ -681,7 +722,7 @@ msgstr "Kök klasörü"
 msgid "Save"
 msgstr "Kaydet"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Ara"
@@ -708,6 +749,10 @@ msgstr "Bölüm"
 msgid "Select"
 msgstr "Seç"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
+msgid "Select a value"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Tüm öğeleri seçme"
@@ -728,7 +773,7 @@ msgstr "Akıllı yönleri gizleme artık devre dışı"
 msgid "Smart facets hiding is now enabled"
 msgstr "Akıllı yönleri gizleme artık etkindir"
 
-#: ../../facetednavigation/widgets/widget.py:350
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Sort by countable"
 msgstr ""
 
@@ -779,7 +824,7 @@ msgstr "Tal İfade"
 msgid "Text field"
 msgstr "Metin alanı"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:77
+#: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -787,7 +832,7 @@ msgstr ""
 msgid "Theme to be used with this widget"
 msgstr "Bu widget ile kullanılmak üzere Tema"
 
-#: ../../facetednavigation/widgets/widget.py:358
+#: ../../facetednavigation/widgets/widget.py:359
 msgid "This option works only if 'count results' is enabled"
 msgstr "'Sayımı sonuçları' etkinse, bu seçenek sadece çalışır"
 
@@ -831,7 +876,7 @@ msgstr "UI Takvim yaş aralığı"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Eğer istemiyorsanız işareti kaldırın bu kutuyu gizlemek / göstermek kriterleri bu widget etkin özelliği"
 
-#: ../../facetednavigation/widgets/widget.py:351
+#: ../../facetednavigation/widgets/widget.py:352
 msgid "Use the results counter for sorting"
 msgstr ""
 
@@ -879,7 +924,7 @@ msgstr "Dün"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:44
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "tüm öğeler"
@@ -888,7 +933,7 @@ msgstr "tüm öğeler"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:53
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "Mevcut sonuçlar"
@@ -901,7 +946,6 @@ msgstr ""
 msgid "match any/all filters bellow"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+#: ../../facetednavigation/widgets/autocomplete/widget.py:169
 msgid "solr"
 msgstr ""
-

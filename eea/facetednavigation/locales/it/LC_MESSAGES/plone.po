@@ -31,4 +31,3 @@ msgstr ""
 
 msgid "Sort on"
 msgstr "Ordina per"
-

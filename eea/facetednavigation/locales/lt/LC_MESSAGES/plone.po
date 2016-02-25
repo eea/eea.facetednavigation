@@ -31,4 +31,3 @@ msgstr "Portalas tipas"
 
 msgid "Sort on"
 msgstr "Rūšiuoti pagal"
-

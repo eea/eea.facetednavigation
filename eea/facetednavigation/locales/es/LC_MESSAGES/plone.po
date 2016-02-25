@@ -33,4 +33,3 @@ msgstr "Tipo de elemento"
 
 msgid "Sort on"
 msgstr "Ordenar por"
-

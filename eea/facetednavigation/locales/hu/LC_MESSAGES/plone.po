@@ -31,4 +31,3 @@ msgstr "Szemafor"
 
 msgid "Sort on"
 msgstr "Rendezés on"
-

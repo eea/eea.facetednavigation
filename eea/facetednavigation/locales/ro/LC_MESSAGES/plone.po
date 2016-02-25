@@ -31,4 +31,3 @@ msgstr "Tip"
 
 msgid "Sort on"
 msgstr "Sortare după"
-

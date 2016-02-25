@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 11:47+0000\n"
+"POT-Creation-Date: 2016-02-23 12:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,6 +88,10 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:75
+msgid "Can select several elements"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
@@ -142,7 +146,7 @@ msgstr "Λίστα περιεχομένων"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Ελέγξτε το φάσμα των yearsdisplayed το έτος drop-down: είτε σε σχέση με το έτος σημερινή (-nn: + nn), σε σχέση με το επιλεγμένο έτους (γ-nn: C + nn), απόλυτη (nnnn: nnnn), ή συνδυασμούς από αυτές τις μορφές (nnnn:-NN)."
 
-#: ../../facetednavigation/widgets/widget.py:343
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Count results"
 msgstr "Μετρήστε τα αποτελέσματα"
 
@@ -273,7 +277,7 @@ msgstr "Απενεργοποίηση δικαίωμα συστατικά στο�
 msgid "Disable smart facets hiding"
 msgstr "Απενεργοποίηση έξυπνη όψεις κρύβονται"
 
-#: ../../facetednavigation/widgets/widget.py:344
+#: ../../facetednavigation/widgets/widget.py:345
 msgid "Display number of results near each option"
 msgstr "Εμφάνιση του αριθμού των αποτελεσμάτων δίπλα σε κάθε επιλογή"
 
@@ -284,6 +288,14 @@ msgstr "Εμφάνιση widget στο τμήμα"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Εμφάνιση widget στο τμήμα."
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:35
+msgid "EEA Faceted Navigation Common Configuration"
+msgstr ""
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
@@ -338,14 +350,39 @@ msgstr "Τιμή ETag"
 msgid "Export"
 msgstr "Εξαγωγή"
 
+#: ../../facetednavigation/profiles.zcml:35
+msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr ""
+
 #: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Πολύπλευρη κριτήρια"
 
+#: ../../facetednavigation/settings/configure.zcml:19
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Πολύπλευρη καθολικές ρυθμίσεις"
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
+msgstr ""
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
@@ -366,6 +403,10 @@ msgstr "Πολύπλευρη δυνατότητα αναζήτησης"
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Πολύπλευρη ρυθμίσεις"
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -417,7 +458,7 @@ msgstr ""
 msgid "Hide filters"
 msgstr "Απόκρυψη φίλτρων"
 
-#: ../../facetednavigation/widgets/widget.py:357
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "Hide items with zero results"
 msgstr "Απόκρυψη στοιχείων με μηδενικά αποτελέσματα"
 
@@ -681,7 +722,7 @@ msgstr "Φακέλου ρίζας"
 msgid "Save"
 msgstr "Αποθήκευση"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Αναζήτηση"
@@ -708,6 +749,10 @@ msgstr "Τμήμα"
 msgid "Select"
 msgstr "Επιλογή"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
+msgid "Select a value"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Επιλογή όλων των στοιχείων"
@@ -728,7 +773,7 @@ msgstr "Smart απόκρυψη πτυχές είναι τώρα εκτός λε�
 msgid "Smart facets hiding is now enabled"
 msgstr "Smart απόκρυψη πτυχές είναι τώρα ενεργοποιημένη"
 
-#: ../../facetednavigation/widgets/widget.py:350
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Sort by countable"
 msgstr ""
 
@@ -779,7 +824,7 @@ msgstr "Tal Έκφραση"
 msgid "Text field"
 msgstr "Πεδίο Κείμενο"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:77
+#: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -787,7 +832,7 @@ msgstr ""
 msgid "Theme to be used with this widget"
 msgstr "Θέμα που πρέπει να χρησιμοποιούνται με αυτό το μαραφέτι"
 
-#: ../../facetednavigation/widgets/widget.py:358
+#: ../../facetednavigation/widgets/widget.py:359
 msgid "This option works only if 'count results' is enabled"
 msgstr "Αυτή η επιλογή δουλεύει μόνο αν «τα αποτελέσματα μετράνε» είναι ενεργοποιημένη"
 
@@ -831,7 +876,7 @@ msgstr "UI Ημερολογιακά έτη κυμαίνονται"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Αποεπιλέξτε αυτό το πλαίσιο, αν δεν θέλετε απόκρυψη / εμφάνιση κριτήρια διαθέτουν τη δυνατότητα σε αυτό το μαραφέτι"
 
-#: ../../facetednavigation/widgets/widget.py:351
+#: ../../facetednavigation/widgets/widget.py:352
 msgid "Use the results counter for sorting"
 msgstr ""
 
@@ -879,7 +924,7 @@ msgstr "χτες"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:44
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "Όλα τα αντικείμενα"
@@ -888,7 +933,7 @@ msgstr "Όλα τα αντικείμενα"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:53
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "σε τρέχοντα αποτελέσματα"
@@ -901,7 +946,6 @@ msgstr ""
 msgid "match any/all filters bellow"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+#: ../../facetednavigation/widgets/autocomplete/widget.py:169
 msgid "solr"
 msgstr ""
-

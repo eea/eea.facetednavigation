@@ -31,4 +31,3 @@ msgstr "Portal tipi"
 
 msgid "Sort on"
 msgstr "Sırala"
-

@@ -31,4 +31,3 @@ msgstr "Портален тип"
 
 msgid "Sort on"
 msgstr "Сортирай по"
-

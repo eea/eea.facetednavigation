@@ -31,4 +31,3 @@ msgstr "Portāls tips"
 
 msgid "Sort on"
 msgstr "Kārtot pēc"
-

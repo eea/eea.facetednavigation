@@ -31,4 +31,3 @@ msgstr "Портал типа"
 
 msgid "Sort on"
 msgstr "Сортировать по"
-
