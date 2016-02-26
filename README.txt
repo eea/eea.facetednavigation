@@ -94,6 +94,15 @@ Hide facets criteria if there is only one page of results.
 
 Default: **disabled** (*starting with version 5.2*)
 
+Autocomplete widget
+-------------------
+For the autocomplete widget to work, you need to have select2 javascript library installed. You can install it by selecting "EEA jQuery - Select2" profile in ZMI portal_setup/Import and clicking `Import all steps` button.
+
+To include a specific select2 locale, French for instance, you can add a resource `++resource++select2/select2_locale_fr.js` in portal_javascripts (Plone 4). It needs to be after the select2.min.js resource. (You need eea.jquery 8.7 minimum)
+
+You can add a new autocomplete source by registering a IAutocompleteSuggest browser view, you can see an example in
+`eea/facetednavigation/tests/autocomplete.py` and `eea/facetednavigation/tests/autocomplete.zcml`
+
 Extra
 =====
 You can extend faceted navigation functionality by installing the following
