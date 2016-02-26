@@ -186,6 +186,6 @@ class SolrSuggest(BrowserView):
         suggestion = root.xpath("//arr[@name='suggestion']")
         if len(suggestion):
             suggestions = suggestion[0].findall('str')
-            result = [{'label': s.text, 'value': s.text} for s in suggestions]
+            result = [{'id': s.text, 'text': s.text} for s in suggestions]
 
         return json.dumps(result)
