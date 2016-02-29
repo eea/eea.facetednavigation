@@ -43,7 +43,7 @@ setup(name=NAME,
           # -*- Extra requirements: -*-
           'eea.faceted.vocabularies > 5.2',
           'collective.js.jqueryui',
-          'eea.jquery',
+          'eea.jquery >= 8.7',
           'Products.PloneTestCase',
       ],
       entry_points="""
