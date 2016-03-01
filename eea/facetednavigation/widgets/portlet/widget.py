@@ -53,7 +53,7 @@ class Widget(AbstractWidget):
         path, mode = macro_list
         path = path.split('/')
         try:
-            template = self.context.restrictedTraverse(path)
+            template = self.context.restrictedTraverse(path).index
             if template:
                 return template.macros[mode]
         except Exception:
