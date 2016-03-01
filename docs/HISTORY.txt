@@ -20,6 +20,7 @@ Changelog
   widget that searches in the SearchableText index, and you have
   ``?SearchableText=fun`` in the url, then the widget will show
   ``fun`` as default value.  [maurits]
+* Get the correct template object for "Plone Portlet" widgets [skurfer]
 
 8.7 - (2015-12-07)
 ------------------

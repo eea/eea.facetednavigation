@@ -54,6 +54,7 @@ class Widget(AbstractWidget):
         path = path.split('/')
         try:
             template = self.context.restrictedTraverse(path)
+            template = getattr(template, 'index', template)
             if template:
                 return template.macros[mode]
         except Exception:
