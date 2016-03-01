@@ -191,8 +191,8 @@ Faceted.initializeAutocompleteWidget = function(evt){
                 results: data
             };
         },
-        cache: false,
-      },
+        cache: false
+      }
     });
   });
 };

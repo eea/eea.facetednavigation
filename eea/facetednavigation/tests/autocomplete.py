@@ -1,3 +1,5 @@
+""" Autocomplete widget tests
+"""
 import json
 from Products.Five import BrowserView
 from zope.interface import implements

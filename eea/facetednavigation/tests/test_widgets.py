@@ -3,7 +3,7 @@
 from eea.facetednavigation.tests.base import FacetedTestCase
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation.widgets.widget import Widget
-
+from eea.facetednavigation.widgets.autocomplete.widget import Widget as AWidget
 
 class DummySolrResponse(dict):
     """ Solr
@@ -79,8 +79,7 @@ class AutocompleteWidgetTestCase(FacetedTestCase):
     def test_comma_separated_values(self):
         """ Comma separated values are transformed to a list
         """
-        from eea.facetednavigation.widgets.autocomplete.widget import Widget
         data = {}
         value = 'Folder,Document'
-        widget = Widget(self.portal, self.request, data=data)
+        widget = AWidget(self.portal, self.request, data=data)
         self.assertEqual(widget.normalize(value), ['Folder', 'Document'])
