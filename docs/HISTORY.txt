@@ -1,6 +1,9 @@
 Changelog
 =========
 
+8.9.dev0 - (unreleased)
+-----------------------
+
 8.8 - (2016-03-01)
 ------------------
 * Change: The autocomplete widget now uses select2 instead of
