@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.8.dev0 - (unreleased)
------------------------
+8.8 - (2016-03-01)
+------------------
 * Change: The autocomplete widget now uses select2 instead of
   jquery.autocomplete. It supports mono value or multi values.
   This release registers select2 javascript library in portal_javascripts.
@@ -779,3 +779,4 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
+
