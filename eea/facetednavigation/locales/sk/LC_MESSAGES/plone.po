@@ -31,4 +31,3 @@ msgstr "Portálový typ"
 
 msgid "Sort on"
 msgstr "Zoradiť"
-

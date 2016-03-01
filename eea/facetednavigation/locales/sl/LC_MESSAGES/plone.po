@@ -31,4 +31,3 @@ msgstr "Portal vrsta"
 
 msgid "Sort on"
 msgstr "Razvrsti na"
-

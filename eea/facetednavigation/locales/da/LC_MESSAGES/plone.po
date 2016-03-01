@@ -31,4 +31,3 @@ msgstr "Indholdstype"
 
 msgid "Sort on"
 msgstr "Sortér efter"
-

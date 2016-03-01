@@ -31,4 +31,3 @@ msgstr "內容型別"
 
 msgid "Sort on"
 msgstr "排序條件"
-

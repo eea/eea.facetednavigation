@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 11:47+0000\n"
+"POT-Creation-Date: 2016-02-23 12:02+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -91,6 +91,10 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:75
+msgid "Can select several elements"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
@@ -154,7 +158,7 @@ msgid "Control the range of yearsdisplayed in the year drop-down: either relativ
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:343
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Count results"
 msgstr "Numără rezultatele"
 
@@ -297,7 +301,7 @@ msgid "Disable smart facets hiding"
 msgstr "Dezactivează ascunderea inteligentă a faţetelor"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:344
+#: ../../facetednavigation/widgets/widget.py:345
 msgid "Display number of results near each option"
 msgstr "Afişează numărul de rezultate lângă fiecare opţiune"
 
@@ -310,6 +314,14 @@ msgstr "Afişează widget-ul în secţiunea"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Afişează widget-ul în secţiunea"
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:35
+msgid "EEA Faceted Navigation Common Configuration"
+msgstr ""
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
@@ -366,15 +378,40 @@ msgstr "Valoare ETag"
 msgid "Export"
 msgstr "Exportă"
 
+#: ../../facetednavigation/profiles.zcml:35
+msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr ""
+
 #: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Navigare faţetată"
 
 #. Default: ""
+#: ../../facetednavigation/settings/configure.zcml:19
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Setări generale pentru navigarea faţetată"
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
+msgstr ""
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
@@ -396,6 +433,10 @@ msgstr "Căutarea faţetată activată"
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Setări navigare faţetată"
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -452,7 +493,7 @@ msgid "Hide filters"
 msgstr "Ascunde filtrele"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:357
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "Hide items with zero results"
 msgstr "Ascundere elementele care nu generează nici un rezultat"
 
@@ -737,7 +778,7 @@ msgstr "Director rădăcină"
 msgid "Save"
 msgstr "Salvează"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Caută"
@@ -766,6 +807,10 @@ msgstr "Secţiune"
 msgid "Select"
 msgstr "Selectare"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
+msgid "Select a value"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
@@ -787,7 +832,7 @@ msgstr "Ascunderea inteligentă a faţetelor a fost dezactivată"
 msgid "Smart facets hiding is now enabled"
 msgstr "Ascunderea inteligentă a faţetelor a fost activată"
 
-#: ../../facetednavigation/widgets/widget.py:350
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Sort by countable"
 msgstr "Sortează după numărul de elementele"
 
@@ -842,7 +887,7 @@ msgstr "Expresie TAL"
 msgid "Text field"
 msgstr "Câmp text"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:77
+#: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -851,7 +896,7 @@ msgstr ""
 msgid "Theme to be used with this widget"
 msgstr "Tema folosită pentru a afisa acest widget"
 
-#: ../../facetednavigation/widgets/widget.py:358
+#: ../../facetednavigation/widgets/widget.py:359
 msgid "This option works only if 'count results' is enabled"
 msgstr "Această opţiune funcţionează doar împreună cu opţiunea 'Numără rezultatele'"
 
@@ -898,7 +943,7 @@ msgstr ""
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Deselectează aceasta opţiune dacă nu vrei 'ascunde/arată criteriile' activă pentru acest widget"
 
-#: ../../facetednavigation/widgets/widget.py:351
+#: ../../facetednavigation/widgets/widget.py:352
 msgid "Use the results counter for sorting"
 msgstr "Utilizează contorul rezultat pentru sortare"
 
@@ -952,7 +997,7 @@ msgstr "Ieri"
 msgid "all"
 msgstr "toate"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:44
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "toate elementele"
@@ -961,7 +1006,7 @@ msgstr "toate elementele"
 msgid "any"
 msgstr "oricare"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:53
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "în rezultatele curente"
@@ -974,7 +1019,6 @@ msgstr "conţine"
 msgid "match any/all filters bellow"
 msgstr "filtrează elementele care conţin toate sau oricare dintre filtrele de mai jos"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+#: ../../facetednavigation/widgets/autocomplete/widget.py:169
 msgid "solr"
 msgstr ""
-

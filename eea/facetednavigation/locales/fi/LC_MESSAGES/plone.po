@@ -31,4 +31,3 @@ msgstr "Portal tyyppi"
 
 msgid "Sort on"
 msgstr "Lajitella"
-

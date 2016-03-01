@@ -3,6 +3,10 @@ Changelog
 
 8.8.dev0 - (unreleased)
 -----------------------
+* Change: The autocomplete widget now uses select2 instead of
+  jquery.autocomplete. It supports mono value or multi values.
+  This release registers select2 javascript library in portal_javascripts.
+  [vincentfretin]
 
 * Read default value of widget from the request.  Fallback to the
   default set on the widget.  For example, if you have a faceted text

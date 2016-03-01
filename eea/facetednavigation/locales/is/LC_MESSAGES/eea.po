@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 11:47+0000\n"
+"POT-Creation-Date: 2016-02-23 12:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,6 +88,10 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:75
+msgid "Can select several elements"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
@@ -142,7 +146,7 @@ msgstr "Efni skráningu"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Stjórna fjölda yearsdisplayed árið falla niður: annaðhvort miðað við árið í dag (-nn: + nn) og miðað við valinn árið c-nn: c + nn), alger (NNNN: NNNN), eða samsetningar þessi snið (NNNN:-nn)."
 
-#: ../../facetednavigation/widgets/widget.py:343
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Count results"
 msgstr "Fjöldi niðurstöður"
 
@@ -273,7 +277,7 @@ msgstr "Slökkva á rétt portlets"
 msgid "Disable smart facets hiding"
 msgstr "Slökkva á sviði hliðar fela"
 
-#: ../../facetednavigation/widgets/widget.py:344
+#: ../../facetednavigation/widgets/widget.py:345
 msgid "Display number of results near each option"
 msgstr "Sýna fjölda niðurstaðna nálægt hvern valkost"
 
@@ -284,6 +288,14 @@ msgstr "Sýna Tónlist í kafla"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Sýna ferð í kafla."
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:35
+msgid "EEA Faceted Navigation Common Configuration"
+msgstr ""
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
@@ -338,14 +350,39 @@ msgstr "Etag gildi"
 msgid "Export"
 msgstr "Flytja út"
 
+#: ../../facetednavigation/profiles.zcml:35
+msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr ""
+
 #: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Faceted viðmið"
 
+#: ../../facetednavigation/settings/configure.zcml:19
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Faceted Alþjóðlegar stillingar"
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
+msgstr ""
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
@@ -366,6 +403,10 @@ msgstr "Faceted leita virkt"
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Faceted stillingar"
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -417,7 +458,7 @@ msgstr ""
 msgid "Hide filters"
 msgstr "Fela síur"
 
-#: ../../facetednavigation/widgets/widget.py:357
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "Hide items with zero results"
 msgstr "Fela atriði með núll árangri"
 
@@ -681,7 +722,7 @@ msgstr "Rót mappa"
 msgid "Save"
 msgstr "Vista"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Leita"
@@ -708,6 +749,10 @@ msgstr "Kafli"
 msgid "Select"
 msgstr "Velja"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
+msgid "Select a value"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Veldu öll atriði"
@@ -728,7 +773,7 @@ msgstr "Smart hliðar fela er nú óvirk"
 msgid "Smart facets hiding is now enabled"
 msgstr "Smart hliðar fela er nú virkt"
 
-#: ../../facetednavigation/widgets/widget.py:350
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Sort by countable"
 msgstr ""
 
@@ -779,7 +824,7 @@ msgstr "Tal Tjáning"
 msgid "Text field"
 msgstr "Texti sviði"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:77
+#: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -787,7 +832,7 @@ msgstr ""
 msgid "Theme to be used with this widget"
 msgstr "Þema að nota með þessum hlut"
 
-#: ../../facetednavigation/widgets/widget.py:358
+#: ../../facetednavigation/widgets/widget.py:359
 msgid "This option works only if 'count results' is enabled"
 msgstr "Þessi valkostur virkar aðeins ef 'af telja niðurstöður' er virkt"
 
@@ -831,7 +876,7 @@ msgstr "HÍ almanaksár allt"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Taktu hakið úr þessum reit ef þú vilt ekki að fela/sýna viðmiðanir eru virkt á þessum hlut"
 
-#: ../../facetednavigation/widgets/widget.py:351
+#: ../../facetednavigation/widgets/widget.py:352
 msgid "Use the results counter for sorting"
 msgstr ""
 
@@ -879,7 +924,7 @@ msgstr "Gær"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:44
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "öll atriði"
@@ -888,7 +933,7 @@ msgstr "öll atriði"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:53
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "í núverandi niðurstöður"
@@ -901,7 +946,6 @@ msgstr ""
 msgid "match any/all filters bellow"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+#: ../../facetednavigation/widgets/autocomplete/widget.py:169
 msgid "solr"
 msgstr ""
-

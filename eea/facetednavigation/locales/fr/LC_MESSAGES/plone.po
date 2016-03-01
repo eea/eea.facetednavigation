@@ -31,4 +31,3 @@ msgstr "Type de contenu"
 
 msgid "Sort on"
 msgstr "Tri"
-

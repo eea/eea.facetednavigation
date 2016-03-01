@@ -66,6 +66,15 @@ EditSchema = Schema((
             i18n_domain="eea"
         )
     ),
+
+    BooleanField(
+        'multivalued',
+        schemata="default",
+        default=True,
+        widget=BooleanWidget(
+            label=_(u'Can select several elements'),
+        )
+    ),
 ))
 
 
@@ -114,6 +123,9 @@ class Widget(AbstractWidget):
     def normalize(self, value):
         """ Process value to be used in catalog query
         """
+        # select2 send us selected values separated by a comma
+        if ',' in value:
+            value = value.split(',')
         if isinstance(value, (tuple, list)):
             value = self.normalize_list(value)
         elif isinstance(value, (str, unicode)):
@@ -174,6 +186,6 @@ class SolrSuggest(BrowserView):
         suggestion = root.xpath("//arr[@name='suggestion']")
         if len(suggestion):
             suggestions = suggestion[0].findall('str')
-            result = [{'label': s.text, 'value': s.text} for s in suggestions]
+            result = [{'id': s.text, 'text': s.text} for s in suggestions]
 
         return json.dumps(result)

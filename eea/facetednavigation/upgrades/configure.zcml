@@ -5,6 +5,17 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="8.4"
+    destination="8.8"
+    profile="eea.facetednavigation:default">
+
+  <genericsetup:upgradeStep
+      title="Register select2 in portal_javascripts, needed for the autocomplete widget"
+      handler="eea.facetednavigation.upgrades.evolve88.install_select2"
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="7.5"
     destination="8.4"
     profile="eea.facetednavigation:default">

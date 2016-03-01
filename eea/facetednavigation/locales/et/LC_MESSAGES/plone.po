@@ -31,4 +31,3 @@ msgstr "Portaali tüüpi"
 
 msgid "Sort on"
 msgstr "Sorteerida"
-

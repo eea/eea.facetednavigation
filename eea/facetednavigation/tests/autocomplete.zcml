@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser">
+
+<!-- vocabulary for the types autocomplete faceted widget -->
+  <browser:view
+    for="*"
+    provides="eea.faceted.vocabularies.autocomplete.IAutocompleteSuggest"
+    name="types-autocomplete-suggest"
+    class=".autocomplete.TypesSuggest"
+    permission="zope2.View"
+  />
+
+</configure>

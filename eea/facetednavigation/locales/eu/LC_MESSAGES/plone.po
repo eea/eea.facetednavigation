@@ -31,4 +31,3 @@ msgstr "Elementu-mota"
 
 msgid "Sort on"
 msgstr "Ordenazioa"
-

@@ -31,4 +31,3 @@ msgstr "Portal tegund"
 
 msgid "Sort on"
 msgstr "Raða á"
-

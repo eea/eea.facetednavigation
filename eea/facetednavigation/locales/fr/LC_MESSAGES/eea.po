@@ -3,19 +3,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 11:47+0000\n"
-"PO-Revision-Date: 2012-04-26 17:32+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-02-23 12:02+0000\n"
+"PO-Revision-Date: 2016-02-23 12:06+0100\n"
+"Last-Translator: Vincent Fretin <vincent.fretin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea\n"
+"Language: fr\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: ../../facetednavigation/widgets/date/widget.py:22
 msgid "1 month ago"
@@ -91,6 +93,10 @@ msgstr "Autocomplétion"
 msgid "Boolean"
 msgstr "Booléen"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:75
+msgid "Can select several elements"
+msgstr "Peut sélectionner plusieurs éléments"
+
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
@@ -154,7 +160,7 @@ msgid "Control the range of yearsdisplayed in the year drop-down: either relativ
 msgstr "Contrôle l'interval affiché dans la liste des années: soit relatif à l'année en cours (-nn:+nn), soit relatif à l'année sélectionnée (c-nn:c+nn), soit absolu (nnnn:nnnn) ou alors une combinaison de ces formats (nnnn:-nn)."
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:343
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Count results"
 msgstr "Compter les résultats"
 
@@ -298,7 +304,7 @@ msgid "Disable smart facets hiding"
 msgstr "Désactiver le masquage intelligent des facettes"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:344
+#: ../../facetednavigation/widgets/widget.py:345
 msgid "Display number of results near each option"
 msgstr "Afficher le nombre de résultats de chaque valeur"
 
@@ -311,6 +317,14 @@ msgstr "Section de la widget"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Afficher le widget dans la section."
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:35
+msgid "EEA Faceted Navigation Common Configuration"
+msgstr ""
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
@@ -368,15 +382,40 @@ msgstr "Valeur de l'ETAG"
 msgid "Export"
 msgstr "Exporter"
 
+#: ../../facetednavigation/profiles.zcml:35
+msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr ""
+
 #: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Critères"
 
 #. Default: ""
+#: ../../facetednavigation/settings/configure.zcml:19
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Paramètres généraux de la navigation à facettes"
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
+msgstr ""
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
@@ -398,6 +437,10 @@ msgstr "Recherche à facettes activée"
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Paramètres"
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -454,7 +497,7 @@ msgid "Hide filters"
 msgstr "Masquer les filtres"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/widget.py:357
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "Hide items with zero results"
 msgstr "Masquer les éléments sans résultat"
 
@@ -739,7 +782,7 @@ msgstr "Dossier racine"
 msgid "Save"
 msgstr "Sauver"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Rechercher"
@@ -768,6 +811,10 @@ msgstr "Section"
 msgid "Select"
 msgstr "Liste de sélection"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
+msgid "Select a value"
+msgstr "Sélectionner une valeur"
+
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
@@ -789,7 +836,7 @@ msgstr "Le masquage intelligent des facettes a été désactivé"
 msgid "Smart facets hiding is now enabled"
 msgstr "Le masquage intelligent des facettes a été activé"
 
-#: ../../facetednavigation/widgets/widget.py:350
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Sort by countable"
 msgstr "Trier suivant le décompte"
 
@@ -844,7 +891,7 @@ msgstr "Expression Tales"
 msgid "Text field"
 msgstr "Champ texte"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:77
+#: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
 msgstr "Champ de texte avec autocomplétion"
 
@@ -853,7 +900,7 @@ msgstr "Champ de texte avec autocomplétion"
 msgid "Theme to be used with this widget"
 msgstr "Thème à utiliser avec ce widget"
 
-#: ../../facetednavigation/widgets/widget.py:358
+#: ../../facetednavigation/widgets/widget.py:359
 msgid "This option works only if 'count results' is enabled"
 msgstr "Cette option ne fonctionne que si le dénombrement des résultats est activé"
 
@@ -901,7 +948,7 @@ msgstr "Interval de dates du calendrier"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Décochez cette case si vous ne voulez pas que la fonctionnalité afficher/masquer soit activée sur ce widget"
 
-#: ../../facetednavigation/widgets/widget.py:351
+#: ../../facetednavigation/widgets/widget.py:352
 msgid "Use the results counter for sorting"
 msgstr "Utilise le compteur de résultats pour le tri"
 
@@ -954,7 +1001,7 @@ msgstr "Hier"
 msgid "all"
 msgstr "tous"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:44
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "dans tous les éléments"
@@ -963,7 +1010,7 @@ msgstr "dans tous les éléments"
 msgid "any"
 msgstr "au moins un"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:53
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "dans les résultats courants"
@@ -976,7 +1023,6 @@ msgstr "correspondance"
 msgid "match any/all filters bellow"
 msgstr "correspond à un / tous les filtres ci-dessous"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+#: ../../facetednavigation/widgets/autocomplete/widget.py:169
 msgid "solr"
 msgstr ""
-

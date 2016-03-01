@@ -31,4 +31,3 @@ msgstr "Portal soort"
 
 msgid "Sort on"
 msgstr "Sorteer op"
-

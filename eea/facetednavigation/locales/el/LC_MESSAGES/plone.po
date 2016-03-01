@@ -31,4 +31,3 @@ msgstr "Πύλη τύπου"
 
 msgid "Sort on"
 msgstr "Ταξινόμηση με"
-

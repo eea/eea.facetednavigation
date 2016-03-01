@@ -31,4 +31,3 @@ msgstr "Tipo de Portal"
 
 msgid "Sort on"
 msgstr "Classificar por"
-

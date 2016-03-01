@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 11:47+0000\n"
+"POT-Creation-Date: 2016-02-23 12:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,6 +91,10 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:75
+msgid "Can select several elements"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
@@ -145,7 +149,7 @@ msgstr ""
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr ""
 
-#: ../../facetednavigation/widgets/widget.py:343
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Count results"
 msgstr ""
 
@@ -276,7 +280,7 @@ msgstr ""
 msgid "Disable smart facets hiding"
 msgstr ""
 
-#: ../../facetednavigation/widgets/widget.py:344
+#: ../../facetednavigation/widgets/widget.py:345
 msgid "Display number of results near each option"
 msgstr ""
 
@@ -286,6 +290,14 @@ msgstr ""
 
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:35
+msgid "EEA Faceted Navigation Common Configuration"
 msgstr ""
 
 #: ../../facetednavigation/profiles/common/actions.xml
@@ -341,13 +353,38 @@ msgstr ""
 msgid "Export"
 msgstr ""
 
+#: ../../facetednavigation/profiles.zcml:35
+msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr ""
+
 #: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr ""
 
+#: ../../facetednavigation/settings/configure.zcml:19
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
+msgstr ""
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
 msgstr ""
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
@@ -368,6 +405,10 @@ msgstr ""
 
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
 msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
@@ -420,7 +461,7 @@ msgstr ""
 msgid "Hide filters"
 msgstr ""
 
-#: ../../facetednavigation/widgets/widget.py:357
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "Hide items with zero results"
 msgstr ""
 
@@ -684,7 +725,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr ""
@@ -711,6 +752,10 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
+msgid "Select a value"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr ""
@@ -731,7 +776,7 @@ msgstr ""
 msgid "Smart facets hiding is now enabled"
 msgstr ""
 
-#: ../../facetednavigation/widgets/widget.py:350
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Sort by countable"
 msgstr ""
 
@@ -782,7 +827,7 @@ msgstr ""
 msgid "Text field"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:77
+#: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -790,7 +835,7 @@ msgstr ""
 msgid "Theme to be used with this widget"
 msgstr ""
 
-#: ../../facetednavigation/widgets/widget.py:358
+#: ../../facetednavigation/widgets/widget.py:359
 msgid "This option works only if 'count results' is enabled"
 msgstr ""
 
@@ -834,7 +879,7 @@ msgstr ""
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr ""
 
-#: ../../facetednavigation/widgets/widget.py:351
+#: ../../facetednavigation/widgets/widget.py:352
 msgid "Use the results counter for sorting"
 msgstr ""
 
@@ -882,7 +927,7 @@ msgstr ""
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:44
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr ""
@@ -891,7 +936,7 @@ msgstr ""
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:53
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr ""
@@ -904,7 +949,6 @@ msgstr ""
 msgid "match any/all filters bellow"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+#: ../../facetednavigation/widgets/autocomplete/widget.py:169
 msgid "solr"
 msgstr ""
-

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-09-04 11:47+0000\n"
+"POT-Creation-Date: 2016-02-23 12:02+0000\n"
 "PO-Revision-Date: 2013-10-03 11:56 +0100\n"
 "Last-Translator: Thomas Clement Mogensen <tmog@headnet.dk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,6 +88,10 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: ../../facetednavigation/widgets/autocomplete/widget.py:75
+msgid "Can select several elements"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
 #: ../../facetednavigation/widgets/radio/widget.py:43
 #: ../../facetednavigation/widgets/select/widget.py:40
@@ -142,7 +146,7 @@ msgstr "Indholdsliste"
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Indstil den årrække der skal kunne vælges fra - enten i forhold til indeværende år (-nn:+nn), i forhold til det valgte år (c-nn:c+nn), eller helt frit (nnnn:nnnn). Du kan også bruge en kombination af disse formater, f.eks. (nnnn:-nn)."
 
-#: ../../facetednavigation/widgets/widget.py:343
+#: ../../facetednavigation/widgets/widget.py:344
 msgid "Count results"
 msgstr "Tæl resultater"
 
@@ -273,7 +277,7 @@ msgstr "Slå højre-kolonne portletter fra"
 msgid "Disable smart facets hiding"
 msgstr "Slå intelligent visning af facetter fra"
 
-#: ../../facetednavigation/widgets/widget.py:344
+#: ../../facetednavigation/widgets/widget.py:345
 msgid "Display number of results near each option"
 msgstr "Vis antallet af resultater ud for hver valgmulighed"
 
@@ -284,6 +288,14 @@ msgstr "Vis widget i sektionen"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Vis widget i sektionen."
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:35
+msgid "EEA Faceted Navigation Common Configuration"
+msgstr ""
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
@@ -338,14 +350,39 @@ msgstr "ETAG værdi"
 msgid "Export"
 msgstr "Eksportér"
 
+#: ../../facetednavigation/profiles.zcml:35
+msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+msgstr ""
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr ""
+
 #: ../../facetednavigation/profiles/bbb/actions.xml
 #: ../../facetednavigation/profiles/default/actions.xml
 msgid "Faceted criteria"
 msgstr "Facetteret søgning"
 
+#: ../../facetednavigation/settings/configure.zcml:19
 #: ../../facetednavigation/settings/menu.py:22
 msgid "Faceted global settings"
 msgstr "Globale indstillinger for facetter"
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr ""
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr ""
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
+msgstr ""
 
 #: ../../facetednavigation/subtypes/subtyper.py:143
 msgid "Faceted navigation disabled"
@@ -366,6 +403,10 @@ msgstr "Facetteret søgning slået til"
 #: ../../facetednavigation/settings/menu.py:21
 msgid "Faceted settings"
 msgstr "Indstillinger for facetter"
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -417,7 +458,7 @@ msgstr "Skjul muligheden Alle"
 msgid "Hide filters"
 msgstr "Skjul filtre"
 
-#: ../../facetednavigation/widgets/widget.py:357
+#: ../../facetednavigation/widgets/widget.py:358
 msgid "Hide items with zero results"
 msgstr "Skjul elementer med nul resultater"
 
@@ -681,7 +722,7 @@ msgstr "Rodmappe"
 msgid "Save"
 msgstr "Gem"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:28
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:34
 #: ../../facetednavigation/widgets/text/widget.pt:25
 msgid "Search"
 msgstr "Søg"
@@ -708,6 +749,10 @@ msgstr "Sektion"
 msgid "Select"
 msgstr "Vælg"
 
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
+msgid "Select a value"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Vælg alle emner"
@@ -728,7 +773,7 @@ msgstr "Intelligent visning af facetter er nu slået far"
 msgid "Smart facets hiding is now enabled"
 msgstr "Intelligent visning af facetter er nu slået til"
 
-#: ../../facetednavigation/widgets/widget.py:350
+#: ../../facetednavigation/widgets/widget.py:351
 msgid "Sort by countable"
 msgstr "Sortér efter antal"
 
@@ -779,7 +824,7 @@ msgstr "TAL-udtryk"
 msgid "Text field"
 msgstr "Tekstfelt"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:77
+#: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
 msgstr ""
 
@@ -787,7 +832,7 @@ msgstr ""
 msgid "Theme to be used with this widget"
 msgstr "Tema, der skal bruges med denne widget"
 
-#: ../../facetednavigation/widgets/widget.py:358
+#: ../../facetednavigation/widgets/widget.py:359
 msgid "This option works only if 'count results' is enabled"
 msgstr "Denne indstilling gælder kun, hvis 'Tæl resultater' er slået til"
 
@@ -831,7 +876,7 @@ msgstr "År, der skal kunne vælges"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Fjern markeringen i dette felt, hvis du ikke ønsker skjul/vis kriterier funktionaliteten på denne widget"
 
-#: ../../facetednavigation/widgets/widget.py:351
+#: ../../facetednavigation/widgets/widget.py:352
 msgid "Use the results counter for sorting"
 msgstr "Sorter efter antal resultater"
 
@@ -879,7 +924,7 @@ msgstr "I går"
 msgid "all"
 msgstr "alle"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:44
 #: ../../facetednavigation/widgets/text/widget.pt:35
 msgid "all items"
 msgstr "alle emner"
@@ -888,7 +933,7 @@ msgstr "alle emner"
 msgid "any"
 msgstr "enhver"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:53
 #: ../../facetednavigation/widgets/text/widget.pt:44
 msgid "in current results"
 msgstr "i nuværende resultater"
@@ -901,7 +946,6 @@ msgstr "match"
 msgid "match any/all filters bellow"
 msgstr "match en/alle af nedenstående filtre"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:155
+#: ../../facetednavigation/widgets/autocomplete/widget.py:169
 msgid "solr"
 msgstr ""
-

@@ -31,6 +31,7 @@ def setup_eea_facetednavigation():
     zcml.load_config('overrides.zcml', facetednavigation)
     zcml.load_config('configure.zcml', facetednavigation.subtypes)
     zcml.load_config('configure.zcml', facetednavigation)
+    zcml.load_config('autocomplete.zcml', facetednavigation.tests)
     fiveconfigure.debug_mode = False
 
 setup_eea_facetednavigation()
