@@ -7,20 +7,20 @@ Changelog
   jquery.autocomplete. It supports mono value or multi values.
   This release registers select2 javascript library in portal_javascripts.
   [vincentfretin]
-
-* Added classifiers in ``setup.py`` for clarity.  Claim that the
+* Feature: Added classifiers in ``setup.py`` for clarity.  Claim that the
   package works on Plone 4.0 through 4.3, and on Python 2.6 and 2.7.
   [maurits]
-
-* Fixed ``MANIFEST.in`` file so releases are sure to contain all the
-  needed files.  [maurits]
-
-* Read default value of widget from the request.  Fallback to the
+* Bug fix: fixed ``MANIFEST.in`` file so releases are sure to contain all the
+  needed files.
+  [maurits]
+* Feature: read default value of widget from the request. Fallback to the
   default set on the widget.  For example, if you have a faceted text
   widget that searches in the SearchableText index, and you have
   ``?SearchableText=fun`` in the url, then the widget will show
-  ``fun`` as default value.  [maurits]
-* Get the correct template object for "Plone Portlet" widgets [skurfer]
+  ``fun`` as default value.
+  [maurits]
+* Bug fix: Get the correct template object for "Plone Portlet" widgets
+  [skurfer]
 
 8.7 - (2015-12-07)
 ------------------
