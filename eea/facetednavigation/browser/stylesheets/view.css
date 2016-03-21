@@ -202,9 +202,6 @@
   background-repeat:no-repeat;
 }
 
-.faceted-widget-loading-msie {
-  background-position: 95% 2.5em;
-}
 /* Errors
 ========= */
 .faceted-widget-error {

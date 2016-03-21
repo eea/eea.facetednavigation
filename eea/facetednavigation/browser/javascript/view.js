@@ -383,9 +383,6 @@ Faceted.AjaxLook = {
     var widget = jQuery('#' + wid + '_widget');
     if(widget.length){
       widget.addClass('faceted-widget-loading');
-      if(jQuery.browser.msie){
-        widget.addClass('faceted-widget-loading-msie');
-      }
     }
   },
 
@@ -402,7 +399,6 @@ Faceted.AjaxLook = {
     var widget = jQuery('#' + wid + '_widget');
     if(widget.length){
       widget.removeClass('faceted-widget-loading');
-      widget.removeClass('faceted-widget-loading-msie');
     }
     this.unlock();
   },
