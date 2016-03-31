@@ -1,8 +1,8 @@
 Changelog
 =========
 
-8.9.dev0 - (unreleased)
------------------------
+8.9 - (2016-03-31)
+------------------
 * Bug fix: With jquery 1.9 theres no more jquery.browser, remove the usage
   of it.
   [pcdummy]
