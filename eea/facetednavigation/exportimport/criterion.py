@@ -62,6 +62,7 @@ class CriterionXMLAdapter(XMLAdapterBase):
                 if element.nodeName != 'element':
                     continue
                 elements.append(element.getAttribute('value').encode('utf-8'))
+
             if elements:
                 properties[key] = elements
             else:
