@@ -9,6 +9,10 @@ Changelog
 * Bug fix: With jquery 1.9 theres no more jquery.browser, remove the usage
   of it.
   [pcdummy]
+* Bug fix: With autocomplete select2 widget, when data value for 'multivalued'
+  is imported, it is stored as '1' and not as 'True', take this into account
+  in the widget, we may not use the stored value immediately.
+  [gbastien]
 
 8.8 - (2016-03-01)
 ------------------

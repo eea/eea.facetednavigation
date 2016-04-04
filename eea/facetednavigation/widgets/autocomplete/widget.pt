@@ -12,8 +12,7 @@
   tal:attributes="
     id string:${wid}_widget; class css;
     data-autocomplete-view view/autocomplete_view;
-    data-multiple python:str(getattr(view.data, 'multivalued', True)).lower();
-">
+    data-multiple python:'true' if getattr(view.data, 'multivalued', True) else 'false';">
 
 <fieldset class="widget-fieldset"
   tal:define="title python:view.data.get('title', '')">
