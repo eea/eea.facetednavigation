@@ -3,6 +3,9 @@ Changelog
 
 9.0.dev0 - (unreleased)
 -----------------------
+* Feature: The daterange widget automatically restricts date range in end date
+  calendar. 
+  [laulaz refs #98]
 * Bug fix: Fix pylint warnings
   [ichim-david refs #71940]
 
