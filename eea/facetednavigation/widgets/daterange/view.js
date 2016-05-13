@@ -40,7 +40,9 @@ Faceted.DateRangeWidget = function(wid){
     }
   });
 
-  if(start) js_widget.force_range();
+  if(start){
+    js_widget.force_range();
+  }
 
   /**
    * Make sure we can reset the date range by manually deleting the start and
@@ -87,7 +89,9 @@ Faceted.DateRangeWidget.prototype = {
 
   force_range: function(){
     var start_date = this.start.datepicker("getDate");
-    if(!start_date) return;
+    if(!start_date){
+      return;
+    }
     var min_end_date = new Date(start_date.getTime());
     min_end_date.setDate(start_date.getDate() + 1);
     this.end.datepicker("option", "minDate", min_end_date);

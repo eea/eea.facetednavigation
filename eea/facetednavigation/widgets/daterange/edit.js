@@ -38,13 +38,17 @@ FacetedEdit.DateRangeWidget = function(wid){
   });
 
   var start = this.start.val();
-  if(start) js_widget.force_range();
+  if(start){
+    js_widget.force_range();
+  }
 };
 
 FacetedEdit.DateRangeWidget.prototype = {
   force_range: function(){
     var start_date = this.start.datepicker("getDate");
-    if(!start_date) return;
+    if(!start_date){
+      return;
+    }
     var min_end_date = new Date(start_date.getTime());
     min_end_date.setDate(start_date.getDate() + 1);
     this.end.datepicker("option", "minDate", min_end_date);
