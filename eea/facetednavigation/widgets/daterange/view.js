@@ -10,6 +10,8 @@ Faceted.DateRangeWidget = function(wid){
   this.yearRange =  jQuery('input[name=calYearRange]', this.widget).val();
   this.end = jQuery('input[name=end]', this.widget);
   this.selected = [];
+  this.dateFormat = jQuery('input[name=dateFormat]', this.widget).val();
+  this.language = jQuery('input[name=language]', this.widget).val();
 
   var start = this.start.val();
   var end = this.end.val();
@@ -22,7 +24,7 @@ Faceted.DateRangeWidget = function(wid){
   this.start.datepicker({
     changeMonth: true,
     changeYear: true,
-    dateFormat: 'yy-mm-dd',
+    dateFormat: this.dateFormat,
     yearRange: this.yearRange,
     onSelect: function(date, cal){
       js_widget.force_range();
@@ -34,7 +36,7 @@ Faceted.DateRangeWidget = function(wid){
     changeMonth: true,
     changeYear: true,
     yearRange: this.yearRange,
-    dateFormat: 'yy-mm-dd',
+    dateFormat: this.dateFormat,
     onSelect: function(date, cal){
       js_widget.select_change(js_widget.end);
     }
@@ -116,8 +118,8 @@ Faceted.DateRangeWidget.prototype = {
     }
 
     var value = [start, end];
-    var start_date = new Date(start.replace(/-/g, '/'));
-    var end_date = new Date(end.replace(/-/g, '/'));
+    var start_date = $.datepicker.parseDate(this.dateFormat, value[0]);
+    var end_date = $.datepicker.parseDate(this.dateFormat, value[1]);
 
     if(end_date<start_date){
       Faceted.Form.raise_error(Faceted.DateRangeErrorMsg,
@@ -153,8 +155,8 @@ Faceted.DateRangeWidget.prototype = {
 
     var start = value[0];
     var end = value[1];
-    var start_date = new Date(start.replace(/-/g, '/'));
-    var end_date = new Date(end.replace(/-/g, '/'));
+    var start_date = $.datepicker.parseDate(this.dateFormat, start);
+    var end_date = $.datepicker.parseDate(this.dateFormat, end);
 
     // Invalid date
     if(!start_date.getFullYear()){
@@ -216,8 +218,8 @@ Faceted.DateRangeWidget.prototype = {
     html.attr('id', 'criteria_' + this.wid + '_entries');
     var start = this.start.val();
     var end = this.end.val();
-    var start_date = new Date(start.replace(/-/g, '/'));
-    var end_date = new Date(end.replace(/-/g, '/'));
+    var start_date = $.datepicker.parseDate(this.dateFormat, start);
+    var end_date = $.datepicker.parseDate(this.dateFormat, end);
 
     var label = this.criteria_label(start_date, end_date);
     var link = jQuery('<a href="#">[X]</a>');
@@ -236,7 +238,17 @@ Faceted.DateRangeWidget.prototype = {
   },
 
   criteria_label: function(start_date, end_date){
-    return start_date.toDateString() + ' - ' + end_date.toDateString();
+    if (this.language){
+      var options = {weekday: "short",
+                     year: "numeric",
+                     month: "short",
+                     day: "numeric"};
+      var start_date_label = start_date.toLocaleDateString(this.language, options);
+      var end_date_label = end_date.toLocaleDateString(this.language, options);
+      return start_date_label + ' - ' + end_date_label;
+    }else{
+      return start_date.toDateString() + ' - ' + end_date.toDateString();
+    }
   },
 
   criteria_remove: function(){

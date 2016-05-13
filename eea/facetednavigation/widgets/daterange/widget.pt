@@ -3,6 +3,8 @@
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   yearRange python:view.cal_year_range;
+  dateFormat python:view.js_date_format;
+  language python:view.js_language;
   hidden python:view.hidden;
   default_value python:view.default;
   default_start python:default_value[0];
@@ -37,6 +39,12 @@
   <input type="hidden" name="calYearRange"
     tal:attributes="id string:${wid}_calYearRange;
     value string:$yearRange"/>
+  <input type="hidden" name="dateFormat"
+    tal:attributes="id string:${wid}_dateFormat;
+    value string:$dateFormat"/>
+  <input type="hidden" name="language"
+    tal:attributes="id string:${wid}_language;
+    value string:$language"/>
 </form>
 
 </fieldset>

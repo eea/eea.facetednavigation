@@ -3,6 +3,11 @@ Changelog
 
 9.0.dev0 - (unreleased)
 -----------------------
+* Feature: Add setting to allow the use of Plone date format and language to
+  render daterange widget and criteria label.
+  Old behavior (with format yy-mm-dd) is set by default and is still working
+  the same way as before to allow special years (like '0001').
+  [laulaz refs #99]
 * Feature: The daterange widget automatically restricts date range in end date
   calendar. 
   [laulaz refs #98]
