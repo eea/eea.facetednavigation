@@ -13,6 +13,7 @@ FacetedEdit.DateRangeWidget = function(wid){
     dateFormat: 'yy-mm-dd',
     yearRange: this.yearRange,
     onSelect: function(date, cal){
+      js_widget.force_range();
       js_widget.set_default(date);
     }
   });
@@ -28,15 +29,27 @@ FacetedEdit.DateRangeWidget = function(wid){
   });
 
   this.start.change(function(){
+    js_widget.force_range();
     js_widget.set_default(this);
   });
 
   this.end.change(function(){
     js_widget.set_default(this);
   });
+
+  var start = this.start.val();
+  if(start) js_widget.force_range();
 };
 
 FacetedEdit.DateRangeWidget.prototype = {
+  force_range: function(){
+    var start_date = this.start.datepicker("getDate");
+    if(!start_date) return;
+    var min_end_date = new Date(start_date.getTime());
+    min_end_date.setDate(start_date.getDate() + 1);
+    this.end.datepicker("option", "minDate", min_end_date);
+  },
+
   set_default: function(element){
     var start = this.start.val();
     var end = this.end.val();
