@@ -3,6 +3,7 @@
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   yearRange python:view.cal_year_range;
+  usePloneFormat python:view.use_plone_date_format;
   dateFormat python:view.js_date_format;
   language python:view.js_language;
   hidden python:view.hidden;
@@ -39,6 +40,9 @@
   <input type="hidden" name="calYearRange"
     tal:attributes="id string:${wid}_calYearRange;
     value string:$yearRange"/>
+  <input type="hidden" name="usePloneFormat"
+    tal:attributes="id string:${wid}_usePloneFormat;
+    value string:$usePloneFormat"/>
   <input type="hidden" name="dateFormat"
     tal:attributes="id string:${wid}_dateFormat;
     value string:$dateFormat"/>
