@@ -237,7 +237,7 @@ class Widget(AbstractWidget, L10nDatepicker):
 
     @property
     def js_language(self):
-        """Return the language to use with JS datepicker"""
+        """Return the language to use with JS code"""
         if self.use_plone_date_format:
             return self.jq_language()
         else:
