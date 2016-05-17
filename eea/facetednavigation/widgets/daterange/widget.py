@@ -144,15 +144,19 @@ class Widget(AbstractWidget, L10nDatepicker):
             return '', ''
 
         start, end = default
+        start = start.strip()
+        end = end.strip()
         try:
-            start = DateTime(start.strip())
+            start = DateTime(datetime.strptime(start,
+                                               self.python_date_format))
             start = start.strftime(self.python_date_format)
         except Exception, err:
             logger.exception('%s => Start date: %s', err, start)
             start = ''
 
         try:
-            end = DateTime(end.strip())
+            end = DateTime(datetime.strptime(end,
+                                             self.python_date_format))
             end = end.strftime(self.python_date_format)
         except Exception, err:
             logger.exception('%s => End date: %s', err, end)
