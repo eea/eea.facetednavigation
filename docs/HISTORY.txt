@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.0.dev0 - (unreleased)
------------------------
+9.0 - (2016-05-19)
+------------------
 * Feature: Add setting to allow the use of Plone date format and language to
   render daterange widget and criteria label.
   Old behavior (with format yy-mm-dd) is set by default and is still working
