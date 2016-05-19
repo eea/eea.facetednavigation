@@ -146,6 +146,9 @@ class Widget(AbstractWidget, L10nDatepicker):
         start, end = default
         start = start.strip()
         end = end.strip()
+        if not self.use_plone_date_format:
+            start = start.replace('/', '-')
+            end = end.replace('/', '-')
         try:
             start = DateTime(datetime.strptime(start,
                                                self.python_date_format))
