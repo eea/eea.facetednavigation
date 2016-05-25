@@ -5,40 +5,45 @@ Imports
 -------
 
     >>> from zope.component import getMultiAdapter
+    >>> from plone.app.testing import setRoles
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
+    >>> from eea.facetednavigation.tests.utils import preparefile
 
-    >>> from Testing.testbrowser import Browser
-    >>> from Products.PloneTestCase import PloneTestCase
+    >>> from plone.testing.z2 import Browser
+    >>> from plone.app.testing import TEST_USER_ID, TEST_USER_NAME, TEST_USER_PASSWORD
 
 Set up
 ------
 
   Add sandbox
 
-    >>> self.loginAsPortalOwner()
+    >>> portal = layer["portal"]
+    >>> portal.error_log._ignored_exceptions = ()
+    >>> app = layer["app"]
+    >>> setRoles(portal, TEST_USER_ID, ['Manager'])
+
     >>> fid = portal.invokeFactory('Folder', 'sandbox', title='Sandbox faceted navigation')
     >>> sandbox = portal._getOb(fid)
-    >>> sandbox.setLanguage('en')
+    >>> sandbox.setLanguage("en")
     >>> request = sandbox.REQUEST
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
-    >>> self.logout()
 
   Initialize browser
 
-    >>> browser = Browser()
+    >>> browser = Browser(app)
     >>> browser.handleErrors = False
-    >>> self.portal.error_log._ignored_exceptions = ()
-    >>> browser.addHeader('Authorization',
-    ...                   'Basic %s:%s' % (PloneTestCase.portal_owner,
-    ...                                    PloneTestCase.default_password))
-    >>> sandbox_url = sandbox.absolute_url()
+    >>> browser.addHeader('Authorization', 'Basic %s:%s' % (TEST_USER_NAME, TEST_USER_PASSWORD))
+    >>> import transaction
+    >>> transaction.commit()
+
 
 Browser views
 -------------
 
   Default view
 
+    >>> sandbox_url = sandbox.absolute_url()
     >>> browser.open(sandbox_url)
     >>> 'faceted-results' in browser.contents
     True
@@ -168,7 +173,7 @@ Edit (no AJAX)
 
   Import
 
-    >>> import_file = self.loadfile('data/exportimport.xml')
+    >>> import_file = preparefile('data/exportimport.xml')
     >>> browser.getControl(name='import_file').value = import_file
     >>> browser.getControl('Import').click()
 
