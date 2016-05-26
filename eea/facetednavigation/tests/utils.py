@@ -24,3 +24,12 @@ def preparefile(rel_filename, ctype='text/xml'):
     fp = StringIO(ofile.get('data'))
     fp.filename = ofile.get('name')
     return fp
+
+class DummySolrResponse(dict):
+    """ Solr
+    """
+    @property
+    def facet_counts(self):
+        """ Count
+        """
+        return {'facet_fields': self}

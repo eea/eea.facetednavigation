@@ -5,15 +5,18 @@ Imports
 -------
 
     >>> from zope.component import getMultiAdapter
+    >>> from plone.app.testing import setRoles
+    >>> from plone.app.testing import TEST_USER_ID
     >>> from eea.facetednavigation.interfaces import ICriteria
 
 Set up
 ------
 
-    >>> self.loginAsPortalOwner()
-    >>> sid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(sid)
-    >>> request = sandbox.REQUEST
+Setup sandbox
+
+    >>> portal = layer["portal"]
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.can_enable
     True

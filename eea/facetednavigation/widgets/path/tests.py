@@ -2,8 +2,8 @@
 """
 import doctest
 import unittest
-from Testing.ZopeTestCase import FunctionalDocFileSuite as Suite
-from eea.facetednavigation.tests.base import FacetedFunctionalTestCase
+from eea.facetednavigation.tests.base import FUNCTIONAL_TESTING
+from plone.testing import layered
 try:
     from Products import LinguaPlone
     LinguaPlone = True if LinguaPlone else False
@@ -14,19 +14,29 @@ OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
                doctest.ELLIPSIS |
                doctest.NORMALIZE_WHITESPACE)
 
+
 def test_suite():
     """ Suite
     """
+    suite = unittest.TestSuite()
     if not LinguaPlone:
-        return unittest.TestSuite()
+        return suite
 
-    return unittest.TestSuite((
-        Suite('widgets/path/widget.txt',
-              optionflags=OPTIONFLAGS,
-              package='eea.facetednavigation',
-              test_class=FacetedFunctionalTestCase),
-        Suite('widgets/path/tree.txt',
-              optionflags=OPTIONFLAGS,
-              package='eea.facetednavigation',
-              test_class=FacetedFunctionalTestCase),
-    ))
+    suite.addTests([
+        layered(
+            doctest.DocFileSuite(
+                'widgets/path/widget.txt',
+                optionflags=OPTIONFLAGS,
+                package='eea.facetednavigation'),
+            layer=FUNCTIONAL_TESTING),
+        layered(
+            doctest.DocFileSuite(
+                'widgets/path/tree.txt',
+                optionflags=OPTIONFLAGS,
+                package='eea.facetednavigation'),
+            layer=FUNCTIONAL_TESTING),
+    ])
+    return suite
+
+if __name__ == '__main__':
+    unittest.main(defaultTest='test_suite')

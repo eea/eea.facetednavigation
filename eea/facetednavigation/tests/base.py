@@ -1,9 +1,12 @@
 """ Base test cases
 """
 from plone.testing import z2
+from plone.app.testing import TEST_USER_ID
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
+from Products.CMFPlone import setuphandlers
+from plone.app.testing import setRoles
 
 class EEAFixture(PloneSandboxLayer):
     """ EEA Testing Policy
@@ -19,6 +22,20 @@ class EEAFixture(PloneSandboxLayer):
         """ Setup Plone
         """
         applyProfile(portal, 'eea.facetednavigation:default')
+
+        # Default workflow
+        wftool = portal['portal_workflow']
+        wftool.setDefaultChain('simple_publication_workflow')
+
+        # Login as manager
+        setRoles(portal, TEST_USER_ID, ['Manager'])
+
+        # Add default Plone content
+        setuphandlers.setupPortalContent(portal)
+
+        # Create testing environment
+        portal.invokeFactory("Folder", "sandbox", title="Sandbox")
+
 
     def tearDownZope(self, app):
         """ Uninstall Zope

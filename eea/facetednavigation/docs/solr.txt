@@ -1,0 +1,66 @@
+Using with collective.solr
+==========================
+
+Imports
+-------
+
+    >>> from eea.facetednavigation.tests.utils import DummySolrResponse
+    >>> from eea.facetednavigation.widgets.widget import CountableWidget
+    >>> from eea.facetednavigation.widgets.widget import Widget
+    >>> from eea.facetednavigation.widgets.autocomplete.widget import Widget as AWidget
+
+Set up
+------
+
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+
+Coutable Widget
+---------------
+
+Empty count
+
+    >>> data = {}
+    >>> widget = CountableWidget(portal, request, data=data)
+    >>> widget.count([])
+    {}
+
+Solr count
+
+    >>> data = {'index': 'tags'}
+    >>> widget = CountableWidget(portal, request, data=data)
+    >>> dummyresponse = DummySolrResponse({'tags': {'foo': 10, 'bar': 7}})
+    >>> widget.count(dummyresponse)
+    {'': 1, 'all': 1, u'foo': 10, u'bar': 7}
+
+
+Widget
+------
+
+Get default value from widget:
+
+    >>> data = {'index': 'SearchableText', 'default': 'fun'}
+    >>> request.form['otherindex'] = 'serious fun'
+    >>> widget = Widget(portal, request, data=data)
+    >>> widget.default
+    'fun'
+
+
+Get default value from request:
+
+    >>> data = {'index': 'SearchableText', 'default': 'fun'}
+    >>> request.form['SearchableText'] = 'serious fun'
+    >>> widget = Widget(portal, request, data=data)
+    >>> widget.default
+    'serious fun'
+
+Auto complete widget
+--------------------
+
+Comma separated values are transformed to a list
+
+    >>> data = {}
+    >>> value = 'Folder,Document'
+    >>> widget = AWidget(portal, request, data=data)
+    >>> widget.normalize(value)
+    ['Folder', 'Document']

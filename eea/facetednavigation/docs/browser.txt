@@ -5,12 +5,11 @@ Imports
 -------
 
     >>> from zope.component import getMultiAdapter
-    >>> from plone.app.testing import setRoles
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
     >>> from eea.facetednavigation.tests.utils import preparefile
 
     >>> from plone.testing.z2 import Browser
-    >>> from plone.app.testing import TEST_USER_ID, TEST_USER_NAME, TEST_USER_PASSWORD
+    >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
 
 Set up
 ------
@@ -18,14 +17,12 @@ Set up
   Add sandbox
 
     >>> portal = layer["portal"]
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> portal.error_log._ignored_exceptions = ()
     >>> app = layer["app"]
-    >>> setRoles(portal, TEST_USER_ID, ['Manager'])
 
-    >>> fid = portal.invokeFactory('Folder', 'sandbox', title='Sandbox faceted navigation')
-    >>> sandbox = portal._getOb(fid)
     >>> sandbox.setLanguage("en")
-    >>> request = sandbox.REQUEST
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
 

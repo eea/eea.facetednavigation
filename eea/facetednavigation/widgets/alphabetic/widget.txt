@@ -14,11 +14,10 @@ Imports
 Set up
 ------
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'sandbox-widgets')
-    >>> sandbox = portal._getOb(fid)
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> sandbox.setTitle('Faceted navigation folder test')
-    >>> request = sandbox.REQUEST
 
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
