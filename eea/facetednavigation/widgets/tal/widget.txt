@@ -10,20 +10,19 @@ The following contexts can be used within tal expressions:
     - widget -- Tal Expression Widget instance
     - criterion -- Tal Expression Criterion instance
 
+    >>> from eea.facetednavigation.widgets.tal.widget import Widget
+    >>> from eea.facetednavigation.widgets.storage import Criterion
 
 Setup
 -----
 
-    >>> self.loginAsPortalOwner()
-    >>> from eea.facetednavigation.widgets.tal.widget import Widget
-    >>> from eea.facetednavigation.widgets.storage import Criterion
-    >>> sid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(sid)
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> criterion = Criterion(index='path', title='A Title')
-    >>> folder.setLanguage('en')
+    >>> sandbox.setLanguage('en')
 
-    >>> request = folder.REQUEST
-    >>> widget = Widget(folder, request, criterion)
+    >>> widget = Widget(sandbox, request, criterion)
 
 
 Simple expressions
@@ -123,28 +122,28 @@ context
 
     >>> widget.data.update(default=u'string:${context/absolute_url}')
     >>> widget.query(form={})
-    {'path': u'http://nohost/plone/Members/test_user_1_'}
+    {'path': u'http://nohost/plone/sandbox'}
 
     >>> widget.data.update(default=u'python:context.absolute_url(1)')
     >>> widget.query(form={})
-    {'path': 'plone/Members/test_user_1_'}
+    {'path': 'plone/sandbox'}
 
 referer
 ~~~~~~~
 
     >>> widget.data.update(default=u'string:${referer/absolute_url}')
     >>> widget.query(form={})
-    {'path': u'http://nohost/plone/Members/test_user_1_'}
+    {'path': u'http://nohost/plone/sandbox'}
 
     >>> widget.data.update(default=u'python:referer.absolute_url(1)')
     >>> widget.query(form={})
-    {'path': 'plone/Members/test_user_1_'}
+    {'path': 'plone/sandbox'}
 
     This is the same as context, let's see what happends if faceted is loaded
     from another place
 
     >>> request.HTTP_REFERER = sandbox.absolute_url()
-    >>> widget = Widget(folder, request, criterion)
+    >>> widget = Widget(sandbox, request, criterion)
 
     >>> widget.data.update(default=u'string:${referer/absolute_url}')
     >>> widget.query(form={})

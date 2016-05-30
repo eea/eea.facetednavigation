@@ -12,18 +12,19 @@ Imports
 Set up
 ------
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'folder')
-    >>> counter_sandbox = portal._getOb(fid)
-    >>> counter_sandbox.setTitle('Faceted navigation counter test')
-    >>> request = counter_sandbox.REQUEST
+Setup sandbox
 
-    >>> subtyper = getMultiAdapter((counter_sandbox, request), name=u'faceted_subtyper')
+    >>> portal = layer["portal"]
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
+    >>> sandbox.setTitle('Faceted navigation counter test')
+
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
 
-    >>> view    = counter_sandbox.unrestrictedTraverse('@@facetednavigation_view')
-    >>> handler = counter_sandbox.unrestrictedTraverse('@@faceted_configure')
-    >>> counter = counter_sandbox.unrestrictedTraverse('@@faceted_counter')
+    >>> view    = sandbox.unrestrictedTraverse('@@facetednavigation_view')
+    >>> handler = sandbox.unrestrictedTraverse('@@faceted_configure')
+    >>> counter = sandbox.unrestrictedTraverse('@@faceted_counter')
 
     >>> default = [widget for widget in view.get_widgets()]
     >>> cids = [widget.data.getId() for widget in default]

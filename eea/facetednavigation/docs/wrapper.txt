@@ -3,18 +3,24 @@ Faceted wrapper
 Wrap faceted navigable objects to define new methods or overwrite existing ones,
 even Zope Python scripts.
 
-Setup
------
+Imports
+-------
 
     >>> from zope.component import getMultiAdapter
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'folder')
-    >>> sandbox = portal._getOb(fid)
+Set up
+------
+
+    >>> portal = layer["portal"]
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> sandbox.setLanguage('en')
-    >>> request = sandbox.REQUEST
+
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
+
+    >>> fid = portal.invokeFactory('Folder', 'folder', title='A Folder')
+    >>> folder = portal['folder']
 
 Get wrapper
 -----------

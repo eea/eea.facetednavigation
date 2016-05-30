@@ -26,13 +26,12 @@ setup(name=NAME,
           "Framework :: Plone :: 4.3",
           "Programming Language :: Zope",
           "Programming Language :: Python",
-          "Programming Language :: Python :: 2.6",
           "Programming Language :: Python :: 2.7",
           "Topic :: Software Development :: Libraries :: Python Modules",
           "License :: OSI Approved :: GNU General Public License (GPL)",
           "License :: OSI Approved :: Mozilla Public License 1.0 (MPL)",
       ],
-      keywords='eea faceted navigation',
+      keywords='eea faceted navigation add-on add-ons plone zope',
       author='Alin Voinea, Alexandru Ghica, Antonio De Marinis',
       author_email='webadmin@eea.europa.eu',
       url='http://plone.org/products/eea.facetednavigation',
@@ -47,8 +46,12 @@ setup(name=NAME,
           'eea.faceted.vocabularies > 5.2',
           'collective.js.jqueryui',
           'eea.jquery > 8.6',
-          'Products.PloneTestCase',
       ],
+      extras_require={
+          'test': [
+              'plone.app.testing',
+          ],
+      },
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone

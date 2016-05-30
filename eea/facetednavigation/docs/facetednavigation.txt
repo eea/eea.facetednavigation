@@ -8,29 +8,30 @@ Imports
     >>> from eea.facetednavigation.interfaces import ICriteria
 
 Set up
-======
+=======
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'folder')
-    >>> folder = portal._getOb(fid)
-    >>> folder.setTitle('Faceted navigation folder test')
-    >>> request = folder.REQUEST
+Setup sandbox
 
-    >>> subtyper = getMultiAdapter((folder, request), name=u'faceted_subtyper')
+    >>> portal = layer["portal"]
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
+    >>> sandbox.setTitle('Faceted navigation folder test')
+
+    >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.can_enable
     True
 
     >>> subtyper.enable()
 
-    >>> handler = getMultiAdapter((folder, request), name=u'faceted_configure')
-    >>> query_handler = getMultiAdapter((folder, request), name=u'faceted_query')
-    >>> config = getMultiAdapter((folder, request), name=u'configure_faceted.html')
-    >>> view = getMultiAdapter((folder, request), name=u'facetednavigation_view')
+    >>> handler = getMultiAdapter((sandbox, request), name=u'faceted_configure')
+    >>> query_handler = getMultiAdapter((sandbox, request), name=u'faceted_query')
+    >>> config = getMultiAdapter((sandbox, request), name=u'configure_faceted.html')
+    >>> view = getMultiAdapter((sandbox, request), name=u'facetednavigation_view')
 
 Cleanup default widgets
 =======================
 
-    >>> cids = ICriteria(folder).keys()
+    >>> cids = ICriteria(sandbox).keys()
 
 Default widgets
 
@@ -38,8 +39,8 @@ Default widgets
     [...'c1',...]
 
     >>> for cid in cids:
-    ...     ICriteria(folder).delete(cid)
-    >>> ICriteria(folder).keys()
+    ...     ICriteria(sandbox).delete(cid)
+    >>> ICriteria(sandbox).keys()
     []
 
 Add some criteria

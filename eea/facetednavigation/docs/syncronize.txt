@@ -8,11 +8,10 @@ a syncronize action was added within object_buttons menu items.
 Set up
 ------
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(fid)
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> sandbox.setLanguage('en')
-    >>> request = sandbox.REQUEST
 
 Add some translations
 

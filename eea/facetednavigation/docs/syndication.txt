@@ -3,14 +3,18 @@ Syndication
 Syndicate faceted navigable results. To enable syndication you can check eea
 buildout configuration (http://svn.eionet.europa.eu/repositories/Zope/trunk/eea-buildout).
 
+Imports
+-------
+
+    >>> from zope.component import getMultiAdapter
+
 Set up
 ------
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(fid)
+    >>> portal = layer["portal"]
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> sandbox.setLanguage('en')
-    >>> request = sandbox.REQUEST
 
     >>> try:
     ...     from Products.CMFPlone.interfaces.syndication import IFeedSettings

@@ -2,12 +2,19 @@ Faceted XML Adapter
 ===================
 XML Adapter for Faceted Navigable objects to be used within GenericSetup profiles.
 
-Add a faceted navigable object
+Imports
+-------
 
-    >>> self.loginAsPortalOwner()
+    >>> from zope.component import getMultiAdapter
+    >>> from eea.facetednavigation.tests.utils import preparefile
 
-    >>> fid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(fid)
+Set up
+------
+
+Setup sandbox
+
+    >>> portal = layer["portal"]
+    >>> sandbox = portal['sandbox']
     >>> sandbox.setTitle('Faceted navigation sandbox')
     >>> request = sandbox.REQUEST
 
@@ -267,7 +274,7 @@ Handle empty or wrong xml files
 
 Import a valid xml file
 
-    >>> query['import_file'] = self.loadfile('data/exportimport.xml')
+    >>> query['import_file'] = preparefile('data/exportimport.xml')
     >>> view(**query)
     u'Configuration imported'
 
@@ -318,7 +325,7 @@ Import a xml file with purge set to False, new criteria will be added to existin
 
     >>> query = {
     ...   'import_button': 'Import',
-    ...   'import_file': self.loadfile('data/with_purge_false.xml'),
+    ...   'import_file': preparefile('data/with_purge_false.xml'),
     ...   'redirect': '',
     ... }
     >>> view(**query)
@@ -375,7 +382,7 @@ Importing an already existing criterion will not fail, it is just ignored and a 
 
     >>> query = {
     ...   'import_button': 'Import',
-    ...   'import_file': self.loadfile('data/with_purge_false.xml'),
+    ...   'import_file': preparefile('data/with_purge_false.xml'),
     ...   'redirect': '',
     ... }
     >>> view(**query)
@@ -432,7 +439,7 @@ Import a xml file with purge set to True (default), existing criteria are remove
 
     >>> query = {
     ...   'import_button': 'Import',
-    ...   'import_file': self.loadfile('data/with_purge_true.xml'),
+    ...   'import_file': preparefile('data/with_purge_true.xml'),
     ...   'redirect': '',
     ... }
     >>> view(**query)

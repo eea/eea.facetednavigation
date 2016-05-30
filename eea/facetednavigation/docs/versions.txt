@@ -21,18 +21,21 @@ What if I want to generate another version id even if faceted configuration
 didn't change?
 You can do that by adding an ETag widget. See ETag section in this document.
 
+Imports
+-------
+
+    >>> from zope.component import getMultiAdapter
+
 Set up
 ------
 
 Setup sandbox
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(fid)
+    >>> portal = layer["portal"]
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> sandbox.setLanguage('en')
-    >>> request = sandbox.REQUEST
 
-    >>> from zope.component import getMultiAdapter
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
 

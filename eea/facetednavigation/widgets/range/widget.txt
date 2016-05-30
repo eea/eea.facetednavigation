@@ -14,11 +14,10 @@ Imports
 Set up
 ------
 
-  >>> self.loginAsPortalOwner()
-  >>> fid = portal.invokeFactory('Folder', 'sandbox-widgets')
-  >>> sandbox = portal._getOb(fid)
+  >>> portal = layer['portal']
+  >>> request = layer['request']
+  >>> sandbox = portal['sandbox']
   >>> sandbox.setTitle('Faceted navigation folder test')
-  >>> request = sandbox.REQUEST
 
   >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
   >>> subtyper.enable()
@@ -66,8 +65,8 @@ We add too fields (numeric & alpha) to test the range,
   ...     def getFields(self):
   ...         return self.fields
   >>> provideAdapter(RangeExt, name='foo')
-  >>> testfolder = self.folder.invokeFactory('Folder', 'testfolder')
-  >>> rangeable_doc = getattr(self.folder, testfolder)
+  >>> testfolder = sandbox.invokeFactory('Folder', 'testfolder')
+  >>> rangeable_doc = getattr(sandbox, testfolder)
   >>> t2 = rangeable_doc.invokeFactory('Folder', 'testfolder2', title='range widget 1')
   >>> t4 = rangeable_doc.invokeFactory('Folder', 'testfolder4', title='range widget 2')
   >>> t6 = rangeable_doc.invokeFactory('Folder', 'testfolder6', title='range widget 4')
@@ -186,6 +185,3 @@ Get some results (default set) for Strings
   ['testfolder6']
   >>> make_test('1=>2')
   []
-
-
-

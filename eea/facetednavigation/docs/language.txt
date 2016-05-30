@@ -26,8 +26,11 @@ Language index to query catalog, even they are Select widgets or TagsCloud ones.
 Set up
 ------
 
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
     >>> from Products.LinguaPlone.browser import controlpanel
-    >>> controllang = controlpanel.IMultiLanguageSelectionSchema(self.portal)
+    >>> controllang = controlpanel.IMultiLanguageSelectionSchema(portal)
     >>> controllang.available_languages
     [u'en']
 
@@ -37,11 +40,7 @@ Set up
 
 Setup sandbox
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(fid)
     >>> sandbox.setLanguage('en')
-    >>> request = sandbox.REQUEST
 
     >>> from zope.component import getMultiAdapter
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')

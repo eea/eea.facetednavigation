@@ -13,10 +13,9 @@ Set up
 
   Add faceted navigable sandbox
 
-    >>> self.loginAsPortalOwner()
-    >>> sid = portal.invokeFactory('Folder', 'sandbox')
-    >>> sandbox = portal._getOb(sid)
-    >>> request = sandbox.REQUEST
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    >>> sandbox = portal['sandbox']
 
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.can_enable
