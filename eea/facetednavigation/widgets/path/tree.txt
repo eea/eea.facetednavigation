@@ -22,12 +22,12 @@ Set up
 
   Add english folder
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'english')
-    >>> english = portal._getOb(fid)
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    >>> english = portal.invokeFactory('Folder', 'english')
+    >>> english = portal[english]
     >>> english.processForm(values={'title': 'English'}, data=1, metadata=1)
     >>> english.setLanguage('en')
-    >>> request = english.REQUEST
 
   Add translations
 
@@ -261,3 +261,4 @@ Set up
     Italian
     >>> breadcrumbs_it(cid='c0', path='/english-child/english-nephew')
     '[]'
+

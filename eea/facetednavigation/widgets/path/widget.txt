@@ -29,11 +29,11 @@ Set up
 
 Add english folder
 
-    >>> self.loginAsPortalOwner()
-    >>> fid = portal.invokeFactory('Folder', 'english')
-    >>> english = portal._getOb(fid)
+    >>> portal = layer['portal']
+    >>> request = layer['request']
+    >>> english = portal.invokeFactory('Folder', 'english')
+    >>> english = portal[english]
     >>> english.setLanguage('en')
-    >>> request = english.REQUEST
 
 Add translations
 
@@ -222,3 +222,4 @@ Let's see what if we set root to an invalid folder
     >>> form = widget_it.query(form={})
     >>> form.get('path', {}).get('query', 'NOT SET')
     'NOT SET'
+

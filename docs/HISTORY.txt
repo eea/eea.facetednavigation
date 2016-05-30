@@ -3,6 +3,8 @@ Changelog
 
 9.1.dev0 - (unreleased)
 -----------------------
+* Change: Update tests to plone.app.testing
+  [avoinea refs #89]
 
 9.0 - (2016-05-19)
 ------------------
