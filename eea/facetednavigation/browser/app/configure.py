@@ -133,7 +133,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
 
         criteria = ICriteria(self.context)
         widget = criteria.widget(cid=cid)
-        fields = widget.edit_schema.keys()[:]
+        fields = widget.fields.keys()[:]
         update = {}
 
         for prop in fields:
@@ -217,6 +217,7 @@ class FacetedFormHandler(FacetedBasicHandler):
                                   name=u'faceted_update_criteria')
 
         # Add button clicked
+        print kwargs
         if kwargs.get('addWidget_button', None):
             return handler.add(**kwargs)
 

@@ -37,6 +37,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(AbstractWidget):
     """ Widget
     """
@@ -49,7 +50,8 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.range.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
 
     @property
     def default(self):

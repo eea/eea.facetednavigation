@@ -64,6 +64,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(AbstractWidget):
     """ Widget
     """
@@ -76,7 +77,7 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.date.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
 
     def __init__(self, context, request, data=None):
         AbstractWidget.__init__(self, context, request, data)

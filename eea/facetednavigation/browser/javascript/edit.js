@@ -502,8 +502,8 @@ FacetedEdit.FormEditWidget = {
     jQuery.get(FacetedEdit.BASEURL + '@@faceted_schema', query, function(data) {
       context.form.html(data);
 
-      jQuery('#archetypes-fieldname-default').remove();
-      jQuery('#archetypes-fieldname-' + context.cid + '_default').remove();
+      jQuery('field-c0-form-widgets-default').remove();
+      jQuery('.field-' + context.cid + '-form-widgets-default').remove();
 
       var catalog = jQuery('#archetypes-fieldname-index select');
       var operator = jQuery('#archetypes-fieldname-operator select');
@@ -585,8 +585,8 @@ FacetedEdit.FormAddWidgets = {
     });
 
     jQuery('#faceted-edit-addwidget input[type=submit]').hide();
-    jQuery('#archetypes-fieldname-wposition').hide();
-    jQuery('#archetypes-fieldname-wsection').hide();
+    jQuery('#faceted-field-wposition').hide();
+    jQuery('#faceted-field-wsection').hide();
     jQuery('#faceted-widget-type .field', this.form).css('float', 'left');
     var clear = jQuery('<div>');
     clear.html('&nbsp;');
@@ -608,8 +608,8 @@ FacetedEdit.FormAddWidgets = {
     jQuery.get(FacetedEdit.BASEURL + '@@faceted_schema', faceted_query, function(data) {
       FacetedEdit.FormMessage.custom_message('Loading...', 'faceted-widget-type');
       context.details.html(data);
-      jQuery('#archetypes-fieldname-default').hide();
-      jQuery('#archetypes-fieldname-c0_default').hide();
+      //jQuery('#archetypes-fieldname-default').hide();
+      jQuery('.field-c0-form-widgets-default').hide();
       var catalog = jQuery('#archetypes-fieldname-index select');
       var operator = jQuery('#archetypes-fieldname-operator select');
       if(catalog.length && operator.length){

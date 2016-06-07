@@ -26,6 +26,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(AbstractWidget):
     """ Widget
     """
@@ -37,8 +38,8 @@ class Widget(AbstractWidget):
     view_js = '++resource++eea.facetednavigation.widgets.debug.view.js'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema.copy()
-    edit_schema['title'].default = 'Debug faceted criteria'
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema.copy()
+    # edit_schema['title'].default = 'Debug faceted criteria'
 
     def __init__(self, context, request, data=None):
         super(Widget, self).__init__(context, request, data)

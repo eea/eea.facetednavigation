@@ -51,6 +51,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(AbstractWidget):
     """ Widget
     """
@@ -61,8 +62,9 @@ class Widget(AbstractWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.resultsperpage.edit.js'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'Results per page'
+
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema['title'].default = 'Results per page'
 
     @property
     def default(self):

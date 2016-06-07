@@ -21,6 +21,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(AbstractWidget):
     """ Widget
     """
@@ -30,7 +31,7 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.etag.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'ETag'
-    edit_schema['hidden'].default = True
-    edit_schema['hidden'].schemata = 'hidden'
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema['title'].default = 'ETag'
+    # edit_schema['hidden'].default = True
+    # edit_schema['hidden'].schemata = 'hidden'

@@ -62,10 +62,11 @@ class Widget(AbstractWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.tal.edit.js'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'TAL Expression'
-    edit_schema['hidden'].default = True
-    edit_schema['hidden'].schemata = 'hidden'
+
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema['title'].default = 'TAL Expression'
+    # edit_schema['hidden'].default = True
+    # edit_schema['hidden'].schemata = 'hidden'
 
     def referer(self, path=None):
         """ Extract referer from request or return self.context

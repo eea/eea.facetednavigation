@@ -97,6 +97,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(CountableWidget):
     """ Widget
     """
@@ -109,7 +110,7 @@ class Widget(CountableWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.checkbox.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = CountableWidget.edit_schema.copy() + EditSchema
+    # edit_schema = CountableWidget.edit_schema.copy() + EditSchema
 
     @property
     def css_class(self):

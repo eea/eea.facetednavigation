@@ -32,9 +32,10 @@ BooleanEditSchema = Schema((
     ),
 ))
 
-BooleanEditSchema = CountableWidget.edit_schema.copy() + BooleanEditSchema
-del BooleanEditSchema['sortcountable']
-del BooleanEditSchema['hidezerocount']
+# BooleanEditSchema = CountableWidget.edit_schema.copy() + BooleanEditSchema
+# del BooleanEditSchema['sortcountable']
+# del BooleanEditSchema['hidezerocount']
+
 
 class Widget(CountableWidget):
     """ Widget
@@ -46,7 +47,7 @@ class Widget(CountableWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.checkbox.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.checkbox.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.checkbox.edit.css'
-    edit_schema = BooleanEditSchema
+    # edit_schema = BooleanEditSchema
     index = ViewPageTemplateFile('widget.pt')
 
     @property

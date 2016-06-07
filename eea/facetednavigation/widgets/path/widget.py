@@ -89,8 +89,9 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.path.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'Search in'
+
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema['title'].default = 'Search in'
 
     @property
     def data_root(self):

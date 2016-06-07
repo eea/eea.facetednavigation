@@ -89,7 +89,7 @@ class Widget(AbstractWidget):
     view_css = '++resource++eea.facetednavigation.widgets.autocomplete.view.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
 
     def quotestring(self, string):
         """ Quote given string

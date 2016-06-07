@@ -3,6 +3,7 @@
 from zope import interface
 from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
 
+
 class WidgetsInfo(object):
     """ Widgets registry
     """
@@ -19,6 +20,7 @@ class WidgetsInfo(object):
         """ Get widget by key or raise
         """
         return self._widgets.get(key)
+
 
 def WidgetDirective(_context, factory=None, **kwargs):
     """ Register faceted widgets

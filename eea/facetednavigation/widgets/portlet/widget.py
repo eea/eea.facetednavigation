@@ -34,8 +34,9 @@ class Widget(AbstractWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.portlet.edit.css'
 
     index = ZopeTwoPageTemplateFile('widget.pt', globals())
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'Portlet'
+
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema['title'].default = 'Portlet'
 
     @property
     def macro(self):

@@ -164,7 +164,7 @@ class Widget(CountableWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.tagscloud.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = CountableWidget.edit_schema.copy() + EditSchema
+    # edit_schema = CountableWidget.edit_schema.copy() + EditSchema
 
     @property
     def maxitems(self):

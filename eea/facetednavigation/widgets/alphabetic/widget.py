@@ -42,6 +42,7 @@ EditSchema = Schema((
     ),
 ))
 
+
 class Widget(CountableWidget):
     """ Widget
     """
@@ -56,7 +57,7 @@ class Widget(CountableWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.alphabets.edit.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = CountableWidget.edit_schema.copy() + EditSchema
+    # edit_schema = CountableWidget.edit_schema.copy() + EditSchema
 
     # Widget custom API
     def getAlphabet(self, lang):

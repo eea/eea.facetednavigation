@@ -24,7 +24,7 @@ class CriterionXMLAdapter(XMLAdapterBase):
         widget = info(widget_id)
 
         properties = ['widget']
-        properties.extend(widget.edit_schema.keys())
+        properties.extend(widget.fields.keys())
         for key in properties:
             value = self.context.get(key, None)
             if value is None:
