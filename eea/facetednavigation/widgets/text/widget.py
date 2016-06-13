@@ -1,6 +1,5 @@
 """ Text widget
 """
-from Products.Archetypes.public import Schema
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget

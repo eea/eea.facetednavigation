@@ -2,13 +2,13 @@
 """
 from zope import schema
 from z3c.form import field
-from eea.facetednavigation.widgets.interfaces import IWidgetEdit
+from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-class ITextWidget(IWidgetEdit):
+class ITextSchema(ISchema):
     """ Text Widget
     """
     index = schema.Choice(
@@ -39,7 +39,7 @@ class ITextWidget(IWidgetEdit):
 class DefaultSchemata(DS):
     """ Schemata default
     """
-    fields = field.Fields(ITextWidget).select(
+    fields = field.Fields(ITextSchema).select(
         'title',
         'default',
         'index',
@@ -49,7 +49,7 @@ class DefaultSchemata(DS):
 
 
 __all__ = [
-    ITextWidget.__name__,
+    ITextSchema.__name__,
     DefaultSchemata.__name__,
     LayoutSchemata.__name__,
 ]

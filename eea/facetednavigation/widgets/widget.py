@@ -5,6 +5,7 @@ import logging
 import operator
 from zope import interface
 from z3c.form import form, group, field
+from z3c.form.interfaces import IGroup
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
 from zope.i18nmessageid.message import Message
@@ -17,12 +18,9 @@ from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
 
 from eea.facetednavigation.interfaces import IFacetedCatalog
-
-from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.widgets.interfaces import IWidget
-from eea.facetednavigation.widgets.interfaces import IWidgetEdit
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
@@ -36,17 +34,14 @@ def compare(a, b):
 #
 # Faceted Widget
 #
+@interface.implementer(IWidget)
 class Widget(group.GroupForm, form.Form):
     """ All faceted widgets should inherit from this class
     """
-    interface.implements(IWidget)
-
     # z3c.form
-    fields = field.Fields(IWidgetEdit)
     groups = (DefaultSchemata, LayoutSchemata)
-    ignoreContext = True
 
-    # Widget properties
+    # Faceted Widget properties
     widget_type = 'abstract'
     widget_label = 'Abstract'
     view_css = ()
@@ -59,6 +54,31 @@ class Widget(group.GroupForm, form.Form):
         self.request = request
         self.request.debug = False
         self.data = data
+
+    @property
+    def prefix(self):
+        """ Form prefix
+        """
+        return self.data.getId()
+
+    def getContent(self):
+        """ Content
+        """
+        return self.data
+
+    def update(self):
+        """ Update
+        """
+        self.updateWidgets(prefix=self.prefix)
+        groups = []
+        for groupClass in self.groups:
+            if IGroup.providedBy(groupClass):
+                group = groupClass
+            else:
+                group = groupClass(self.data, self.request, self)
+            group.updateWidgets(prefix=self.prefix)
+            groups.append(group)
+        self.groups = tuple(groups)
 
     @property
     def template(self):
@@ -97,9 +117,6 @@ class Widget(group.GroupForm, form.Form):
         if from_request is not None:
             return from_request
         return self.data.get('default', None)
-
-    # def updateWidgets(self, prefix=None):
-    #     return super(Widget, self).updateWidgets(prefix=prefix)
 
     def query(self, form):
         """ Get value from form and return a catalog dict query

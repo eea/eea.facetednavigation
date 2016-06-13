@@ -424,10 +424,10 @@ FacetedEdit.FormWidgets = {
 
     if(widget.hasClass('faceted-widget-hidden')){
       this.show_widget(widget_id);
-      query[criterion_id + '_hidden'] = 0;
+      query['form.' + criterion_id + '.hidden-empty-marker'] = 1;
     }else{
       this.hide_widget(widget_id);
-      query[criterion_id + '_hidden'] = 1;
+      query['form.' + criterion_id + '.hidden'] = 'selected';
     }
 
     jQuery.post(action, query, function(data){
@@ -502,11 +502,12 @@ FacetedEdit.FormEditWidget = {
     jQuery.get(FacetedEdit.BASEURL + '@@faceted_schema', query, function(data) {
       context.form.html(data);
 
-      jQuery('field-c0-form-widgets-default').remove();
-      jQuery('.field-' + context.cid + '-form-widgets-default').remove();
+      //jQuery('.field-c0-form-c0-default').remove();
+      var selector = '.field-' + context.cid + '-form-' + context.cid;
+      jQuery(selector + '-default').remove();
 
-      var catalog = jQuery('#archetypes-fieldname-index select');
-      var operator = jQuery('#archetypes-fieldname-operator select');
+      var catalog = jQuery(selector + '-index select');
+      var operator = jQuery(selector + '-operator select');
       if(catalog.length && operator.length){
         operator = operator.clone();
         jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.CATALOG_CHANGED, {
@@ -608,10 +609,10 @@ FacetedEdit.FormAddWidgets = {
     jQuery.get(FacetedEdit.BASEURL + '@@faceted_schema', faceted_query, function(data) {
       FacetedEdit.FormMessage.custom_message('Loading...', 'faceted-widget-type');
       context.details.html(data);
-      //jQuery('#archetypes-fieldname-default').hide();
-      jQuery('.field-c0-form-widgets-default').hide();
-      var catalog = jQuery('#archetypes-fieldname-index select');
-      var operator = jQuery('#archetypes-fieldname-operator select');
+      var selector = '.field-c0-form-c0';
+      jQuery(selector + '-default').hide();
+      var catalog = jQuery(selector + '-index select');
+      var operator = jQuery(selector + '-operator select');
       if(catalog.length && operator.length){
         operator = operator.clone();
         catalog.change(function(){
@@ -645,6 +646,7 @@ FacetedEdit.FormAddWidgets = {
   update_query: function(){
     this.query = 'redirect=&addPropertiesWidget_button=Add&';
     this.query += this.form.serialize();
+    console.log(this.query);
   }
 };
 

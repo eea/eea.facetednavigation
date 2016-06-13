@@ -3,11 +3,10 @@
 from zope import interface
 from eea.facetednavigation.widgets.interfaces import ICriterion
 
+@interface.implementer(ICriterion)
 class Criterion(object):
     """ Search criteria
     """
-    interface.implements(ICriterion)
-
     widget = None
     title = ''
     index = ''

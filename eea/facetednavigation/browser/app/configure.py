@@ -14,7 +14,6 @@ from eea.facetednavigation.interfaces import IWidgetsInfo
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.browser import interfaces
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
-
 from eea.facetednavigation import EEAMessageFactory as _
 
 
@@ -113,6 +112,13 @@ class FacetedCriterionHandler(FacetedBasicHandler):
     """
     implements(interfaces.IFacetedCriterionHandler)
 
+    def extractData(self, widget):
+        """ Extract form
+        """
+        widget.update()
+        form, _errors = widget.extractData(setErrors=False)
+        return form
+
     def add(self, **kwargs):
         """ See IFacetedCriterionHandler
         """
@@ -124,23 +130,23 @@ class FacetedCriterionHandler(FacetedBasicHandler):
 
         criteria = ICriteria(self.context)
         cid = criteria.add(wid, position, section)
-        return self.edit(cid, **kwargs)
+        return self.edit(cid, __new__=True)
 
     def edit(self, cid, **kwargs):
         """ See IFacetedCriterionHandler
         """
-        kwargs = self._request_form(kwargs)
-
         criteria = ICriteria(self.context)
         widget = criteria.widget(cid=cid)
-        fields = widget.fields.keys()[:]
+        criterion = criteria.get(cid)
+        if kwargs.get('__new__', False):
+            criterion = criterion.__class__(cid='c0')
+        widget = widget(self.context, self.request, criterion)
+        properties = self.extractData(widget)
         update = {}
-
-        for prop in fields:
-            new_value = kwargs.get(prop, None)
-            if new_value is None:
+        for prop, value in properties.items():
+            if value is None:
                 continue
-            update[prop] = new_value
+            update[prop] = value
 
         if update:
             criteria.edit(cid, **update)
@@ -217,7 +223,6 @@ class FacetedFormHandler(FacetedBasicHandler):
                                   name=u'faceted_update_criteria')
 
         # Add button clicked
-        print kwargs
         if kwargs.get('addWidget_button', None):
             return handler.add(**kwargs)
 

@@ -3,13 +3,10 @@
 import logging
 from zope.interface import implements
 
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.public import SelectionWidget
-
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
+from eea.facetednavigation.widgets.alphabetic.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.alphabetic.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.alphabetic.alphabets import (
     unicode_character_map,
 )
@@ -19,29 +16,6 @@ from eea.facetednavigation.widgets.alphabetic.interfaces import (
 from eea.facetednavigation import EEAMessageFactory as _
 
 logger = logging.getLogger('eea.facetednavigation.widgets.alphabetic')
-
-EditSchema = Schema((
-    StringField('index',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.AlphabeticCatalogIndexes',
-        widget=SelectionWidget(
-            format='select',
-            label=_(u"Catalog index"),
-            description=_(u"Catalog index to use for search"),
-        )
-    ),
-    StringField('default',
-        schemata="default",
-        widget=StringWidget(
-            size=3,
-            maxlength=1,
-            label=_(u"Default value"),
-            description=_(u"Default letter to be selected"),
-        )
-    ),
-))
-
 
 class Widget(CountableWidget):
     """ Widget
@@ -55,9 +29,9 @@ class Widget(CountableWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.alphabets.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.alphabets.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.alphabets.edit.css'
+    groups = (DefaultSchemata, LayoutSchemata)
 
     index = ViewPageTemplateFile('widget.pt')
-    # edit_schema = CountableWidget.edit_schema.copy() + EditSchema
 
     # Widget custom API
     def getAlphabet(self, lang):

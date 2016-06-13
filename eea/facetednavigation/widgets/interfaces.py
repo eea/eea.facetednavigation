@@ -4,7 +4,9 @@ from zope import schema
 from zope.interface import Interface
 from z3c.form import group, field
 from zope.configuration.fields import GlobalObject
+from zope.configuration.fields import GlobalInterface
 from eea.facetednavigation import EEAMessageFactory as _
+
 
 class ICriterion(Interface):
     """ Model to store search criteria
@@ -41,21 +43,41 @@ class IWidgetDirective(Interface):
         required=True,
     )
 
+    schema = GlobalInterface(
+        title=_("Schema interface"),
+        description=_("An interface describing schema to be used"
+                      " within z3c.form"),
+        required=False
+    )
 
-class IWidgetEdit(Interface):
+    accessor = GlobalObject(
+        title=_("Accessor"),
+        description=_("Accessor to extract data for faceted widget."),
+        required=False
+    )
+
+    criterion = GlobalInterface(
+        title=_("Criterion interface"),
+        description=_("Criterion interface"),
+        required=False
+    )
+
+
+class ISchema(Interface):
     """ Common edit schema for Faceted Widgets
     """
     title = schema.TextLine(
         title=_(u"Friendly name"),
         description=_(u"Title for widget to display in view page"),
-        required=True
     )
+    title._type = (unicode, str)
 
     default = schema.TextLine(
         title=_(u"Default value"),
         description=_(u"Default query"),
         required=False
     )
+    default._type = (unicode, str)
 
     index = schema.Choice(
         title=_("Catalog index"),
@@ -67,12 +89,14 @@ class IWidgetEdit(Interface):
         title=_(u'Position'),
         description=_(u"Widget position in page"),
         vocabulary="eea.faceted.vocabularies.WidgetPositions",
+        required=False
     )
 
     section = schema.Choice(
         title=_(u"Section"),
         description=_("Display widget in section"),
         vocabulary="eea.faceted.vocabularies.WidgetSections",
+        required=False
     )
 
     hidden = schema.Bool(
@@ -104,7 +128,7 @@ class DefaultSchemata(group.Group):
     """ Schemata default
     """
     label = "default"
-    fields = field.Fields(IWidgetEdit).select(
+    fields = field.Fields(ISchema).select(
         'title',
         'default',
         'index'
@@ -115,7 +139,7 @@ class LayoutSchemata(group.Group):
     """ Schemata layout
     """
     label = "layout"
-    fields = field.Fields(IWidgetEdit).select(
+    fields = field.Fields(ISchema).select(
         'position',
         'section',
         'hidden'
@@ -126,7 +150,7 @@ class CountableSchemata(group.Group):
     """ Schemata countable
     """
     label = "countable"
-    fields = field.Fields(IWidgetEdit).select(
+    fields = field.Fields(ISchema).select(
         'count',
         'sortcountable',
         'hidezerocount'
