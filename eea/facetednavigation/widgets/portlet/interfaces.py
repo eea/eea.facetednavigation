@@ -5,39 +5,30 @@ from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
-from eea.facetednavigation.interfaces import IWidget
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-class IResultsFilterWidget(IWidget):
-    """ Results Filter widget
-    """
-
-
-class IResultsFilterSchema(ISchema):
+class IPortletSchema(ISchema):
     """ Schema
     """
-    default = schema.TextLine(
-        title=_(u'Results Filter'),
-        description=_(u'Default tal expression for query value'),
-        required=False,
-        default=u'python:hasattr(brain, "Title")',
+    macro = schema.TextLine(
+        title=_(u'Portlet macro'),
+        description=_(u'Path to portlet macro'),
     )
-    default._type = (unicode, str)
+    macro._type = (unicode, str)
 
 
 class DefaultSchemata(DS):
     """ Schemata default
     """
-    fields = field.Fields(IResultsFilterSchema).select(
+    fields = field.Fields(IPortletSchema).select(
         'title',
         'default',
+        'macro',
     )
 
-
 __all__ = [
-    IResultsFilterWidget.__name__,
-    IResultsFilterSchema.__name__,
+    IPortletSchema.__name__,
     DefaultSchemata.__name__,
     LayoutSchemata.__name__,
 ]

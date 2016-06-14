@@ -22,7 +22,7 @@ FacetedEdit.ResultsPerPageWidget.prototype = {
     query.redirect = '';
     query.updateCriterion_button = 'Save';
     query.cid = this.wid;
-    query[this.wid + '_default'] = value;
+    query['form.' + this.wid + '.default'] = value;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){

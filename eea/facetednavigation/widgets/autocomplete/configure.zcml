@@ -3,7 +3,10 @@
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="eea">
 
-  <faceted:widget factory=".widget.Widget" />
+  <faceted:widget
+    factory=".widget.Widget"
+    schema=".interfaces.IAutocompleteSchema"
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.autocomplete.view.js"

@@ -71,8 +71,8 @@ FacetedEdit.CheckboxesWidget.prototype = {
     this.selected.each(function(){
       value.push(jQuery(this).val());
     });
-    query[this.wid + '_default'] = value.length ? value : '';
-    query[this.wid + '_operator'] = this.operatorValue;
+    query['form.' + this.wid + '.default'] = value.length ? value : '';
+    query['form.' + this.wid + '.operator'] = this.operatorValue;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){

@@ -1,4 +1,4 @@
-""" Alphabetic widget interfaces
+""" Widget interfaces and schema
 """
 from zope import schema
 from z3c.form import field

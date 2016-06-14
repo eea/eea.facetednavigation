@@ -8,30 +8,31 @@ from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-class ITextSchema(ISchema):
+class IAutocompleteSchema(ISchema):
     """ Schema
     """
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
         vocabulary="eea.faceted.vocabularies.TextCatalogIndexes",
-        required=True
+    )
+
+    autocomplete_view = schema.Choice(
+        title=_(u"Autocomplete"),
+        description=_(u'Select the source of the autocomplete suggestions'),
+        vocabulary='eea.faceted.vocabularies.AutocompleteViews',
     )
 
     onlyallelements = schema.Bool(
-        title=_("Search in all elements only"),
+        title=_(u'Search in all elements only'),
         description=_(u'If this checkbox is checked, hides the choice to '
                       u'filter in all items or in current items only'),
         required=False
     )
 
-    wildcard = schema.Bool(
-            title=_(u'Wildcard search'),
-            description=_(u"If this checkbox is checked, the system will "
-                          u"automatically do a wildcard search by appending "
-                          u"a '*' to the search term so "
-                          u"searching for 'budget' will also return elements "
-                          u"containing 'budgetary'."),
+    multivalued = schema.Bool(
+        title=_(u'Can select several elements'),
+        description=_(u"Can select multiple values"),
         required=False
     )
 
@@ -39,17 +40,18 @@ class ITextSchema(ISchema):
 class DefaultSchemata(DS):
     """ Schemata default
     """
-    fields = field.Fields(ITextSchema).select(
+    fields = field.Fields(IAutocompleteSchema).select(
         'title',
         'default',
         'index',
+        'autocomplete_view',
         'onlyallelements',
-        'wildcard'
+        'multivalued'
     )
 
 
 __all__ = [
-    ITextSchema.__name__,
+    IAutocompleteSchema.__name__,
     DefaultSchemata.__name__,
     LayoutSchemata.__name__,
 ]

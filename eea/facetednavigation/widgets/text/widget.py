@@ -1,4 +1,4 @@
-""" Text widget
+""" Widget
 """
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile

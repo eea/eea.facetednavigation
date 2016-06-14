@@ -1,27 +1,14 @@
-""" Text widget
+""" Widget
 """
 import logging
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
 from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
 
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation.widgets.portlet.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.portlet.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
 logger = logging.getLogger('eea.facetednavigation.widgets.portlet')
-
-EditSchema = Schema((
-    StringField('macro',
-        schemata="default",
-        required=True,
-        widget=StringWidget(
-            label=_(u'Portlet macro'),
-            description=_(u'Path to portlet macro'),
-            i18n_domain="eea"
-        )
-    ),
-))
 
 class Widget(AbstractWidget):
     """ Widget
@@ -33,10 +20,10 @@ class Widget(AbstractWidget):
     view_css = '++resource++eea.facetednavigation.widgets.portlet.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.portlet.edit.css'
 
+    groups = (DefaultSchemata, LayoutSchemata)
+
     index = ZopeTwoPageTemplateFile('widget.pt', globals())
 
-    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    # edit_schema['title'].default = 'Portlet'
 
     @property
     def macro(self):

@@ -13,7 +13,7 @@ Faceted.DateRangeWidget = function(wid){
   this.usePloneFormat = jQuery('input[name=usePloneFormat]', this.widget).val();
   this.usePloneFormat = this.usePloneFormat == "True" ? true : false;
   this.dateFormat = jQuery('input[name=dateFormat]', this.widget).val();
-  this.language = jQuery('input[name=language]', this.widget).val();
+  this.language = jQuery('input[name=language]', this.widget).val() || 'en';
 
   var start = this.start.val();
   var end = this.end.val();
@@ -123,8 +123,8 @@ Faceted.DateRangeWidget.prototype = {
     var start_date;
     var end_date;
     if (this.usePloneFormat){
-      start_date = $.datepicker.parseDate(this.dateFormat, start);
-      end_date = $.datepicker.parseDate(this.dateFormat, end);
+      start_date = jQuery.datepicker.parseDate(this.dateFormat, start);
+      end_date = jQuery.datepicker.parseDate(this.dateFormat, end);
     }else{
       start_date = new Date(start.replace(/-/g, '/'));
       end_date = new Date(end.replace(/-/g, '/'));
@@ -237,8 +237,8 @@ Faceted.DateRangeWidget.prototype = {
     var start_date;
     var end_date;
     if (this.usePloneFormat){
-      start_date = $.datepicker.parseDate(this.dateFormat, start);
-      end_date = $.datepicker.parseDate(this.dateFormat, end);
+      start_date = jQuery.datepicker.parseDate(this.dateFormat, start);
+      end_date = jQuery.datepicker.parseDate(this.dateFormat, end);
     }else{
       start_date = new Date(start.replace(/-/g, '/'));
       end_date = new Date(end.replace(/-/g, '/'));

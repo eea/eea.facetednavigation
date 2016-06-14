@@ -1,4 +1,4 @@
-""" Text widget
+""" Widget
 """
 import json
 import urllib
@@ -6,76 +6,19 @@ from zope.component import queryUtility
 
 from lxml import etree
 
-from Products.Archetypes.Field import BooleanField
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import SelectionWidget
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.Widget import BooleanWidget
 from Products.Five import BrowserView
 
 from eea.faceted.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.autocomplete.interfaces import (
+    DefaultSchemata,
+    LayoutSchemata
+)
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.config import HAS_SOLR
 
 from zope.interface import implements
-
-EditSchema = Schema((
-    StringField(
-        'index',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.TextCatalogIndexes',
-        widget=SelectionWidget(
-            label=_(u'Catalog index'),
-            description=_(u'Catalog index to use for search'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField(
-        'default',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label=_(u'Default value'),
-            description=_(u'Default string to search for'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField(
-        'autocomplete_view',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.AutocompleteViews',
-        widget=SelectionWidget(
-            label=_(u"Autocomplete"),
-            description=_(
-                u'Select the source of the autocomplete suggestions'
-            ),
-        )
-    ),
-    BooleanField(
-        'onlyallelements',
-        schemata="default",
-        widget=BooleanWidget(
-            label=_(u'Search in all elements only'),
-            description=_(u'If this checkbox is checked, hides the choice to '
-                          'filter in all items or in current items only'),
-            i18n_domain="eea"
-        )
-    ),
-
-    BooleanField(
-        'multivalued',
-        schemata="default",
-        default=True,
-        widget=BooleanWidget(
-            label=_(u'Can select several elements'),
-        )
-    ),
-))
 
 
 class Widget(AbstractWidget):
@@ -89,7 +32,7 @@ class Widget(AbstractWidget):
     view_css = '++resource++eea.facetednavigation.widgets.autocomplete.view.css'
 
     index = ViewPageTemplateFile('widget.pt')
-    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    groups = (DefaultSchemata, LayoutSchemata)
 
     def quotestring(self, string):
         """ Quote given string

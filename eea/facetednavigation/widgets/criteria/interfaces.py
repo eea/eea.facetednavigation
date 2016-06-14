@@ -5,39 +5,33 @@ from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
-from eea.facetednavigation.interfaces import IWidget
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-class IResultsFilterWidget(IWidget):
-    """ Results Filter widget
-    """
-
-
-class IResultsFilterSchema(ISchema):
+class ICriteriaSchema(ISchema):
     """ Schema
     """
-    default = schema.TextLine(
-        title=_(u'Results Filter'),
-        description=_(u'Default tal expression for query value'),
+    hidecriteriaenabled = schema.Bool(
+        title=_(u'Enable hide/show criteria'),
+        description=_(u"Uncheck this box if you don't want hide/show "
+                      u"criteria feature enabled on this widget"),
         required=False,
-        default=u'python:hasattr(brain, "Title")',
+        default=True
     )
-    default._type = (unicode, str)
 
 
 class DefaultSchemata(DS):
     """ Schemata default
     """
-    fields = field.Fields(IResultsFilterSchema).select(
+    fields = field.Fields(ICriteriaSchema).select(
         'title',
         'default',
+        'hidecriteriaenabled'
     )
 
 
 __all__ = [
-    IResultsFilterWidget.__name__,
-    IResultsFilterSchema.__name__,
+    ICriteriaSchema.__name__,
     DefaultSchemata.__name__,
     LayoutSchemata.__name__,
 ]

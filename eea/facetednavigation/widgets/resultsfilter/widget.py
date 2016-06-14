@@ -1,19 +1,9 @@
 """ Results Filter widget
 """
-# Python
 import logging
-
-# Zope2
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
+from zope.interface import implementer
 from Products.Archetypes.interfaces import IBaseObject
 from Products.CMFCore.utils import getToolByName
-
-# Zope3
-from zope.interface import implements
-
-# Package
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
 from eea.facetednavigation.widgets import ViewPageTemplateFile
@@ -21,24 +11,13 @@ from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets.resultsfilter.interfaces import (
     IResultsFilterWidget,
+    DefaultSchemata,
+    LayoutSchemata,
 )
-
-
 logger = logging.getLogger('eea.facetednavigation.widgets.resultsfilter')
 
-EditSchema = Schema((
-    StringField('default',
-        schemata="default",
-        default='python:hasattr(brain, "Title")',
-        widget=StringWidget(
-            label=_(u'Results Filter'),
-            description=_(u'Default tal expression for query value'),
-            i18n_domain="eea"
-        )
-    ),
-))
 
-
+@implementer(IResultsFilterWidget)
 class Widget(AbstractWidget):
     """ Results Filter widget
 
@@ -53,7 +32,6 @@ class Widget(AbstractWidget):
     brain     -- Catalog brain
 
     """
-    implements(IResultsFilterWidget)
     widget_type = 'resultsfilter'
     widget_label = _('Results Filter')
     edit_css = (
@@ -61,12 +39,8 @@ class Widget(AbstractWidget):
     edit_js = (
         '++resource++eea.facetednavigation.widgets.resultsfilter.edit.js')
 
+    groups = (DefaultSchemata, LayoutSchemata)
     index = ViewPageTemplateFile('widget.pt')
-
-    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    # edit_schema['title'].default = 'Results Filter'
-    # edit_schema['hidden'].default = True
-    # edit_schema['hidden'].schemata = 'hidden'
 
     def referer(self, path=None):
         """ Extract referer from request or return self.context

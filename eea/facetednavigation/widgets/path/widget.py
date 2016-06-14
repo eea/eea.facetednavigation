@@ -2,79 +2,20 @@
 """
 import logging
 from Products.CMFPlone.utils import safeToInt
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.public import SelectionWidget
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation.widgets.path.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.path.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.path.interfaces import DisplaySchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
 logger = logging.getLogger('eea.facetednavigation.widgets.path')
 
-EditSchema = Schema((
-    StringField('index',
-        schemata="default",
-        required=True,
-        default='path',
-        vocabulary_factory='eea.faceted.vocabularies.PathCatalogIndexes',
-        widget=SelectionWidget(
-            format='select',
-            label=_(u'Catalog index'),
-            description=_(u'Catalog index to use for search'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('root',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label=_(u'Root folder'),
-            description=_(u'Navigation js-tree starting point '
-                        u'(relative to plone site. ex: SITE/data-and-maps)'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('default',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label=_(u'Default value'),
-            description=_(u"Default path to search in (relative to "
-                           "root folder)"),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('depth',
-        schemata="default",
-        default=0,
-        widget=StringWidget(
-            size=25,
-            label=_(u'Search Depth'),
-            description=_(u'Depth to search the path. 0=this level, '
-                        u'-1=all subfolders recursive, and any other positive '
-                        u'integer count the subfolder-levels to search.'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('theme',
-        schemata="display",
-        default='green',
-        vocabulary_factory='eea.faceted.vocabularies.JsTreeThemes',
-        widget=SelectionWidget(
-            format='select',
-            label=_(u'Navigation tree theme'),
-            description=_(u'Theme to be used with this widget'),
-            i18n_domain="eea"
-        )
-    ),
-))
 
 class Widget(AbstractWidget):
     """ Widget
     """
-    # Widget properties
     widget_type = 'path'
     widget_label = _('Path')
     view_js = (
@@ -88,10 +29,9 @@ class Widget(AbstractWidget):
     view_css = '++resource++eea.facetednavigation.widgets.path.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.path.edit.css'
 
-    index = ViewPageTemplateFile('widget.pt')
+    groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
 
-    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    # edit_schema['title'].default = 'Search in'
+    index = ViewPageTemplateFile('widget.pt')
 
     @property
     def data_root(self):

@@ -3,7 +3,10 @@
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="eea">
 
-  <faceted:widget factory=".widget.Widget" />
+  <faceted:widget
+    factory=".widget.Widget"
+    schema=".interfaces.IDebugSchema"
+    />
 
   <browser:page
     for="eea.facetednavigation.interfaces.IFacetedNavigable"
@@ -48,22 +51,22 @@
   <browser:resource
     name="eea.facetednavigation.widgets.debug.edit.js"
     file="./edit.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.debug.view.js"
     file="./view.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.debug.view.css"
     file="./view.css"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.debug.edit.css"
     file="./edit.css"
-   />
+    />
 
   <utility
     component=".vocabulary.CurrentUserVocabularyFactory"

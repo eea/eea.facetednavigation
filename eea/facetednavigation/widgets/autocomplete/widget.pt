@@ -17,8 +17,7 @@
 <fieldset class="widget-fieldset"
   tal:define="title python:view.data.get('title', '')">
   <legend tal:content="python:view.translate(title)" i18n:translate="">Text Widget with autocomplete</legend>
-  <form action="." method="get"
-    >
+  <form action="." method="get" tal:on-error="structure python:error_view(error=error, cid=wid)">
   <label class="text-field"
     tal:attributes="for wid"
     tal:content="python:view.translate(title)" />
