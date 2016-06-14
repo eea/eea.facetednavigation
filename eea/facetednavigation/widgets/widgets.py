@@ -21,7 +21,8 @@ class WidgetsInfo(object):
     def __call__(self, key):
         """ Get widget by key or raise
         """
-        return self._widgets.get(key)
+        return self.widgets.get(key)
+
 
 class WidgetData(object):
     """ Get data to populate widget with
@@ -31,6 +32,7 @@ class WidgetData(object):
 
     def __getattr__(self, name, default=None):
         return getattr(self.context, name, default)
+
 
 def WidgetDirective(_context, factory=None, schema=None,
                     accessor=WidgetData, criterion=ICriterion, **kwargs):
@@ -47,15 +49,12 @@ def WidgetDirective(_context, factory=None, schema=None,
     WidgetsInfo._widgets[name] = factory
 
     if schema is None:
-        # raise TypeError(
-        #     "No schema provided for faceted widget type '%s'" % name)
-        import logging
-        logger = logging.getLogger("eea.facetednavigation")
-        logger.warn("No schema provided for faceted widget type '%s'" % name)
-    else:
-        adapter(
-            _context=_context,
-            provides=schema,
-            factory=(accessor,),
-            for_=(criterion,)
-        )
+        raise TypeError(
+            "No schema provided for faceted widget type '%s'" % name)
+
+    adapter(
+        _context=_context,
+        provides=schema,
+        factory=(accessor,),
+        for_=(criterion,)
+    )
