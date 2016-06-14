@@ -1,6 +1,6 @@
 """ Faceted events
 """
-from zope.interface import implements
+from zope.interface import implementer
 from zope.component.interfaces import ObjectEvent
 from eea.facetednavigation.interfaces import (
     IFacetedEvent,
@@ -12,34 +12,39 @@ from eea.facetednavigation.interfaces import (
     IQueryWillBeExecutedEvent,
 )
 
+@implementer(IFacetedEvent)
 class FacetedEvent(ObjectEvent):
     """ Abstract faceted event. All faceted events should inherit from it """
-    implements(IFacetedEvent)
 
+
+@implementer(IFacetedGlobalSettingsChangedEvent)
 class FacetedGlobalSettingsChangedEvent(FacetedEvent):
     """ Sent if faceted navigation global settings were changed """
-    implements(IFacetedGlobalSettingsChangedEvent)
 
+
+@implementer(IFacetedWillBeEnabledEvent)
 class FacetedWillBeEnabledEvent(FacetedEvent):
     """ Event triggered if faceted navigation is going to be enabled """
-    implements(IFacetedWillBeEnabledEvent)
 
+
+@implementer(IFacetedEnabledEvent)
 class FacetedEnabledEvent(FacetedEvent):
     """ Event triggered if faceted navigation was enabled """
-    implements(IFacetedEnabledEvent)
 
+
+@implementer(IFacetedWillBeDisabledEvent)
 class FacetedWillBeDisabledEvent(FacetedEvent):
     """ Event triggered if faceted navigation is goinf to be disabled """
-    implements(IFacetedWillBeDisabledEvent)
 
+
+@implementer(IFacetedDisabledEvent)
 class FacetedDisabledEvent(FacetedEvent):
     """ Event triggered if faceted navigation was disabled """
-    implements(IFacetedDisabledEvent)
 
 
+@implementer(IQueryWillBeExecutedEvent)
 class QueryWillBeExecutedEvent(FacetedEvent):
     """Event triggered before a query is executed."""
-    implements(IQueryWillBeExecutedEvent)
 
     def __init__(self, obj, query):
         self.object = obj

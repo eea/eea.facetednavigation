@@ -2,7 +2,7 @@
 """
 import logging
 from zope.event import notify
-from zope.interface import implements
+from zope.interface import implementer
 from Products.CMFCore.utils import getToolByName
 from BTrees.IIBTree import IIBucket
 from eea.facetednavigation.events import QueryWillBeExecutedEvent
@@ -20,11 +20,11 @@ except ImportError:
 
 logger = logging.getLogger('eea.facetednavigation.search.catalog')
 
+
+@implementer(IFacetedCatalog)
 class FacetedCatalog(object):
     """ Custom faceted adapter for portal_catalog
     """
-    implements(IFacetedCatalog)
-
     def _apply_index(self, index, value):
         """ Default portal_catalog index _apply_index
         """

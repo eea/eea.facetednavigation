@@ -1,5 +1,6 @@
 """ Widget interfaces and schema
 """
+from zope.interface import Interface
 from zope import schema
 from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
@@ -7,6 +8,13 @@ from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
+try:
+    from collective.solr import interfaces
+    ISolrConnectionManager = interfaces.ISolrConnectionManager
+except ImportError:
+    class ISolrConnectionManager(Interface):
+        """ collective.solr not installed
+        """
 
 class IAutocompleteSchema(ISchema):
     """ Schema

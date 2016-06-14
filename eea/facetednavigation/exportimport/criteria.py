@@ -4,7 +4,7 @@ import logging
 from Acquisition import aq_inner
 from Acquisition import aq_parent
 from zope.component import queryMultiAdapter
-from zope.interface import implements
+from zope.interface import implementer
 from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.utils import XMLAdapterBase
 from eea.facetednavigation.interfaces import IFacetedNavigable
@@ -13,11 +13,10 @@ from Products.GenericSetup.interfaces import ISetupEnviron
 logger = logging.getLogger('eea.facetednavigation.exportimport.criteria')
 
 
+@implementer(ISetupEnviron)
 class CriteriaContext(BaseContext):
     """ Criteria import environ
     """
-    implements(ISetupEnviron)
-
     def __init__(self, tool, encoding='utf-8'):
         self._tool = tool
         self._site = aq_parent(aq_inner(tool.context))

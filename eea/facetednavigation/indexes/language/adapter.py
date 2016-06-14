@@ -1,18 +1,18 @@
 """ Adapters
 """
 import logging
-from zope.interface import implements
+from zope.interface import implementer
 from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.indexes.language.interfaces import (
     ILanguageWidgetAdapter,
 )
 logger = logging.getLogger('eea.facetednavigation.language')
 
+
+@implementer(ILanguageWidgetAdapter)
 class LanguageWidgetAdapter(object):
     """ Handler for language widgets
     """
-    implements(ILanguageWidgetAdapter)
-
     def __init__(self, widget, context):
         self.widget = widget
         self.context = context

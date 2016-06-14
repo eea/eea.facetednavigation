@@ -1,13 +1,13 @@
 """ Adapters
 """
-from zope.interface import implements
+from zope.interface import implementer
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
 
+
+@implementer(IWidgetFilterBrains)
 class WidgetFilterBrains(object):
     """ Filter brains after query
     """
-    implements(IWidgetFilterBrains)
-
     def __init__(self, context):
         self.widget = context
 

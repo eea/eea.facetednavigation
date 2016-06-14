@@ -1,7 +1,7 @@
 """ Faceted configure
 """
 import logging
-from zope.interface import implements
+from zope.interface import implementer
 from zope.event import notify
 from zope.component import getUtility
 from zope.component import getMultiAdapter
@@ -56,11 +56,10 @@ class FacetedBasicHandler(BrowserView):
                     for key, val in form.items())
 
 
+@implementer(interfaces.IFacetedCriteriaHandler)
 class FacetedCriteriaHandler(FacetedBasicHandler):
     """ Edit criteria
     """
-    implements(interfaces.IFacetedCriteriaHandler)
-
     def add(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
@@ -107,11 +106,11 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
             handler.delete(cid)
         return self._redirect(_(u"Filters deleted"), to=self.redirect)
 
+
+@implementer(interfaces.IFacetedCriterionHandler)
 class FacetedCriterionHandler(FacetedBasicHandler):
     """ Edit criterion
     """
-    implements(interfaces.IFacetedCriterionHandler)
-
     def extractData(self, widget):
         """ Extract form
         """
@@ -168,11 +167,11 @@ class FacetedCriterionHandler(FacetedBasicHandler):
             msg = _(u'Filter deleted')
         return self._redirect(msg=msg)
 
+
+@implementer(interfaces.IFacetedPositionHandler)
 class FacetedPositionHandler(FacetedBasicHandler):
     """ Edit criteria position
     """
-    implements(interfaces.IFacetedPositionHandler)
-
     def _request_form(self, form):
         """ Fix keys
         """
@@ -207,11 +206,11 @@ class FacetedPositionHandler(FacetedBasicHandler):
         ICriteria(self.context).down(cid)
         return self._redirect('Position changed', to=self.redirect)
 
+
+@implementer(interfaces.IFacetedFormHandler)
 class FacetedFormHandler(FacetedBasicHandler):
     """ Edit criteria using a static form
     """
-    implements(interfaces.IFacetedFormHandler)
-
     def __call__(self, **kwargs):
         """ This method is called from a form with more than one submit buttons
         """
@@ -285,7 +284,8 @@ class FacetedFormHandler(FacetedBasicHandler):
 
         # Return
         self._redirect('Nothing changed', to=self.redirect)
-#
+
+
 # View
 #
 class FacetedConfigureView(object):

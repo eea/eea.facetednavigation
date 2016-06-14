@@ -69,7 +69,7 @@
     />
 
   <utility
-    component=".vocabulary.CurrentUserVocabularyFactory"
+    factory=".vocabulary.CurrentUserVocabulary"
     name="eea.faceted.vocabularies.CurrentUser"
     />
 

@@ -1,34 +1,33 @@
 """ Alphabet widget
 """
 import logging
-from zope.interface import implements
+from zope.interface import implementer
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation.widgets.alphabetic.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.alphabetic.interfaces import LayoutSchemata
+from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets.alphabetic.alphabets import (
     unicode_character_map,
 )
 from eea.facetednavigation.widgets.alphabetic.interfaces import (
     IAlphabeticWidget,
 )
-from eea.facetednavigation import EEAMessageFactory as _
-
 logger = logging.getLogger('eea.facetednavigation.widgets.alphabetic')
 
+
+@implementer(IAlphabeticWidget)
 class Widget(CountableWidget):
     """ Widget
     """
-    implements(IAlphabeticWidget)
-
-    # Widget properties
     widget_type = 'alphabetic'
     widget_label = _('Alphabetic')
     view_js = '++resource++eea.facetednavigation.widgets.alphabets.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.alphabets.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.alphabets.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.alphabets.edit.css'
+
     groups = (DefaultSchemata, LayoutSchemata)
 
     index = ViewPageTemplateFile('widget.pt')

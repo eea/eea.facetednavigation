@@ -2,6 +2,8 @@
 """
 import json
 import urllib
+from zope.interface import Interface
+from zope.interface import implementer
 from zope.component import queryUtility
 
 from lxml import etree
@@ -12,13 +14,11 @@ from eea.faceted.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.autocomplete.interfaces import (
+    ISolrConnectionManager,
     DefaultSchemata,
     LayoutSchemata
 )
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation.config import HAS_SOLR
-
-from zope.interface import implements
 
 
 class Widget(AbstractWidget):
@@ -103,23 +103,19 @@ class Widget(AbstractWidget):
         return view_name
 
 
+@implementer(IAutocompleteSuggest)
 class SolrSuggest(BrowserView):
     """ Solr Autocomplete view
     """
-
-    implements(IAutocompleteSuggest)
-
     label = _("solr")
 
     def __call__(self):
         result = []
         term = self.request.get('term')
-        if not HAS_SOLR or not term:
-            return json.dumps(result)
-
-        # we import c.solr here, because we checked, if it is available earlier
-        from collective.solr.interfaces import ISolrConnectionManager
         manager = queryUtility(ISolrConnectionManager)
+        if not manager or not term:
+            return json.dump(result)
+
         connection = manager.getConnection()
         # XXX this should really go into c.solr
         request = urllib.urlencode({'q': term}, doseq=True)

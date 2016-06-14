@@ -2,7 +2,7 @@
 """
 from persistent.list import PersistentList
 from zope.component import getUtility
-from zope.interface import implements
+from zope.interface import implementer
 from zope.annotation.interfaces import IAnnotations
 from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation.config import ANNO_CRITERIA
@@ -13,11 +13,10 @@ from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from eea.facetednavigation.criteria.interfaces import ICriteria
 
 
+@implementer(ICriteria)
 class Criteria(object):
     """ Handle criteria
     """
-    implements(ICriteria)
-
     def __init__(self, context):
         """ Handle criteria
         """

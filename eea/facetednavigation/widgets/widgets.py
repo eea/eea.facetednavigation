@@ -1,15 +1,15 @@
 """ Faceted widgets
 """
-from zope import interface
+from zope.interface import implementer
 from zope.component.zcml import adapter
 from eea.facetednavigation.widgets.interfaces import ICriterion
 from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
 
 
+@implementer(IWidgetsInfo)
 class WidgetsInfo(object):
     """ Widgets registry
     """
-    interface.implements(IWidgetsInfo)
     _widgets = {}
 
     @property

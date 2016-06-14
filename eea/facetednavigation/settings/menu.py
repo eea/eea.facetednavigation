@@ -1,6 +1,6 @@
 """ Faceted settings
 """
-from zope.interface import implements, alsoProvides, noLongerProvides
+from zope.interface import implementer, alsoProvides, noLongerProvides
 from zope.security import checkPermission
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
@@ -14,6 +14,7 @@ from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from eea.facetednavigation import EEAMessageFactory as _
+
 
 class SettingsMenu(BrowserSubMenuItem):
     """ Faceted settings menu
@@ -41,6 +42,7 @@ class SettingsMenu(BrowserSubMenuItem):
         """ Is this item selected?
         """
         return False
+
 
 class SettingsMenuItems(BrowserMenu):
     """ Faceted global settings menu items
@@ -125,11 +127,11 @@ class SettingsMenuItems(BrowserMenu):
 
         return menu
 
+
+@implementer(ISettingsHandler)
 class SettingsHandler(BrowserView):
     """ Edit faceted global settings
     """
-    implements(ISettingsHandler)
-
     def _redirect(self, msg=''):
         """ Redirect
         """
