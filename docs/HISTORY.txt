@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.3.dev0 - (unreleased)
+-----------------------
+
 9.2 - (2016-06-16)
 ------------------
 * Bugfix: fixed language adapter language property for context which does not
