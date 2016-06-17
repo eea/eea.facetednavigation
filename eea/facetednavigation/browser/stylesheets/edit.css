@@ -180,6 +180,7 @@ table.listing {
 #faceted-edit-widgets-ajax {
   text-align: right;
   clear: both;
+  overflow: hidden;
   margin-top: 1em;
 }
 

@@ -41,8 +41,11 @@ class LanguageWidgetAdapter(object):
     def language(self):
         """ Get context language
         """
-        lang = self.context.getLanguage()
-        return lang or self.context.request.get('LANGUAGE', '')
+        try:
+            lang = self.context.getLanguage()
+        except AttributeError:
+            lang = ''
+        return lang or self.context.REQUEST.get('LANGUAGE', '')
 
     def __call__(self, form):
         """
