@@ -3,5 +3,5 @@
 def setupVarious(context):
     """ Do some various setup.
     """
-    if context.readDataFile('eeafacetednavigation.txt') is None:
+    if context.readDataFile('eea.facetednavigation.txt') is None:
         return

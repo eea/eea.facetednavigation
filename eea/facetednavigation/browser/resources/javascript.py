@@ -105,10 +105,10 @@ class ViewJavascript(Javascript):
     def __call__(self, *args, **kwargs):
         """ view.js
         """
-        self.request.RESPONSE.setHeader('content-type', 'text/javascript')
+        self.request.response.setHeader('content-type', 'text/javascript')
         expires = rfc1123_date((DateTime() + 365).timeTime())
-        self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader(
+        self.request.response.setHeader('Expires', expires)
+        self.request.response.setHeader(
             'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()
 
@@ -143,9 +143,9 @@ class EditJavascript(Javascript):
     def __call__(self, *args, **kwargs):
         """ edit.js
         """
-        self.request.RESPONSE.setHeader('content-type', 'text/javascript')
+        self.request.response.setHeader('content-type', 'text/javascript')
         expires = rfc1123_date((DateTime() + 365).timeTime())
-        self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader(
+        self.request.response.setHeader('Expires', expires)
+        self.request.response.setHeader(
             'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()

@@ -1,0 +1,13 @@
+.*.cfg
+src
+parts
+*eggs
+bootstrap*
+bin
+lib*
+var
+local
+secret.cfg
+include
+.Python
+.idea

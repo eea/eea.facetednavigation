@@ -5,12 +5,12 @@
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="eea">
 
-  <five:registerPackage package="."/>
+  <five:registerPackage package="." initialize=".initialize" />
 
   <genericsetup:registerProfile
       zcml:condition="have plone-5"
       name="default"
-      directory="profiles/default"
+      directory="profiles/plone5"
       title="EEA Faceted Navigation"
       description="Extension profile for EEA Faceted Navigation."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -19,7 +19,7 @@
   <genericsetup:registerProfile
       zcml:condition="not-have plone-5"
       name="default"
-      directory="profiles/bbb"
+      directory="profiles/plone4"
       title="EEA Faceted Navigation"
       description="Extension profile for EEA Faceted Navigation."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -34,9 +34,19 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="uninstall"
+      directory="profiles/uninstall"
+      title="Uninstall EEA Faceted Navigation"
+      description="Uninstall to remove EEA Faceted Navigation support"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:importStep
     name="eea.facetednavigation.various"
     title="EEA Faceted Navigation setup" description="Setup EEA Faceted Navigation"
     handler="eea.facetednavigation.setuphandlers.setupVarious" />
+
+  <utility factory=".HiddenProfiles" name="eea.facetednavigation" />
 
 </configure>
