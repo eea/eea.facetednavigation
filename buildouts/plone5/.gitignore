@@ -1,3 +1,4 @@
+pip-selfcheck.json
 .*.cfg
 src
 parts
@@ -7,6 +8,7 @@ bin
 lib*
 var
 local
+share
 secret.cfg
 include
 .Python

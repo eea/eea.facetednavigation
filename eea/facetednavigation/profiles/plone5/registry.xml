@@ -1,21 +1,5 @@
 <?xml version="1.0"?>
 <registry>
-  <records prefix="plone.bundles/facetednavigation-jquery"
-           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-    <value key="resources">
-      <element>browser</element>
-      <element>ajaxfileupload</element>
-      <element>bbq</element>
-      <element>jstree</element>
-      <element>select2uislider</element>
-      <element>tagcloud</element>
-    </value>
-    <value key="depends">jqueryui</value>
-    <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
-    <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
-    <value key="compile">False</value>
-    <value key="enabled">True</value>
-  </records>
 
   <records prefix="plone.bundles/facetednavigation-jquery"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
