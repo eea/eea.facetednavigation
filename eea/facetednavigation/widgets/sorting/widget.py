@@ -1,5 +1,9 @@
 """ Sorting widget
 """
+from plone.app.querystring.interfaces import IQuerystringRegistryReader
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
+
 from Products.CMFCore.utils import getToolByName
 from Products.ATContentTypes.criteria import _criterionRegistry
 
@@ -79,17 +83,17 @@ class Widget(AbstractWidget):
         """
         return criteriaType in self.criteriaByIndexId(indexId)
 
-    def listFields(self):
-        """Return a list of fields from portal_catalog.
-        """
-        tool = getToolByName(self.context, 'portal_atct')
-        return tool.getEnabledFields()
-
     def listSortFields(self):
         """Return a list of available fields for sorting."""
-        fields = [field for field in self.listFields()
-                  if self.validateAddCriterion(field[0], 'ATSortCriterion')]
-        return fields
+
+        registry = getUtility(IRegistry)
+        config = IQuerystringRegistryReader(registry)()
+        indexes = config.get('sortable_indexes', {})
+
+        for name, index in indexes.items():
+            title = index.get('title', name)
+            description = index.get('description', title)
+            yield (name, title, description)
 
     def vocabulary(self, **kwargs):
         """ Return data vocabulary
@@ -97,7 +101,7 @@ class Widget(AbstractWidget):
         vocab = self.portal_vocabulary()
         sort_fields = self.listSortFields()
         if not vocab:
-            return sort_fields
+            return [field for field in sort_fields]
 
         vocab_fields = [field[0].replace('term.', '', 1) for field in vocab]
         return [f for f in sort_fields if f[0] in vocab_fields]
