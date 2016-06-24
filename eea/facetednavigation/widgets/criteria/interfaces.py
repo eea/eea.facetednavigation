@@ -24,9 +24,8 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(ICriteriaSchema).select(
-        'title',
-        'default',
-        'hidecriteriaenabled'
+        u'title',
+        u'hidecriteriaenabled'
     )
 
 

@@ -1,8 +1,9 @@
 """ Widget interfaces and schema
 """
 from zope import schema
-from z3c.form import field, group
+from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
@@ -14,7 +15,7 @@ class IDateRangeSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.DateRangeCatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.DateRangeCatalogIndexes",
     )
 
     calYearRange = schema.TextLine(
@@ -50,19 +51,19 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IDateRangeSchema).select(
-        'title',
-        'default',
-        'index',
+        u'title',
+        u'default',
+        u'index',
     )
 
 
-class DisplaySchemata(group.Group):
+class DisplaySchemata(FacetedSchemata):
     """ Schemata display
     """
-    label = "display"
+    label = u"display"
     fields = field.Fields(IDateRangeSchema).select(
-        'calYearRange',
-        'usePloneDateFormat',
+        u'calYearRange',
+        u'usePloneDateFormat',
     )
 
 

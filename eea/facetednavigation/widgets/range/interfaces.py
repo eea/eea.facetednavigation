@@ -14,7 +14,7 @@ class IRangeSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.RangeCatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.RangeCatalogIndexes",
     )
 
 
@@ -22,9 +22,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IRangeSchema).select(
-        'title',
-        'default',
-        'index',
+        u'title',
+        u'default',
+        u'index',
     )
 
 

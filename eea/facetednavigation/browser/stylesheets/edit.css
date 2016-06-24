@@ -82,6 +82,8 @@ table.listing {
 ========== */
 #content .faceted-widget fieldset, .faceted-widget fieldset {
   border: none;
+  padding: 0 1em 1em;
+  margin: 1em 0;
 }
 
 .faceted-widget {
@@ -118,6 +120,7 @@ table.listing {
   margin-right: -0.9em;
 }
 
+.faceted-section-tabs ul.formTabs,
 .faceted-widget-edit ul.formTabs {
   background-color: #ddd;
   border: 0.3em solid #ddd;
@@ -132,16 +135,19 @@ table.listing {
   -moz-border-radius-topright: 0.5em;
 }
 
+.faceted-section-tabs li.formTab,
 .faceted-widget-edit li.formTab {
     display: inline;
     margin-right:0.25em;
 }
 
+.faceted-section-tabs li.formTab a,
 .faceted-widget-edit li.formTab a {
     /* this isn't supported by all browsers, so we keep it in a separate rule */
     display: inline-block;
 }
 
+.faceted-section-tabs li.formTab a,
 .faceted-widget-edit li.formTab a {
     line-height: 2em;
     padding: 0 0.75em;
@@ -149,11 +155,13 @@ table.listing {
     border: none;
     margin: 0 ;
 }
-
+.faceted-section-tabs li.formTab a.selected,
 .faceted-widget-edit li.formTab a.current {
     font-weight: bold;
 }
 
+.faceted-section-tabs li.formTab a.selected,
+.faceted-section-tabs li.formTab a:hover,
 .faceted-widget-edit li.formTab a.current,
 .faceted-widget-edit li.formTab a:hover {
     background: White;
@@ -312,6 +320,10 @@ table.listing {
   border-color: #95b229;
   border-style: solid;
   border-width: 1px 2px 2px 1px;
+}
+
+#main-container .faceted-add-button span {
+  padding: 0.6em;
 }
 
 .faceted-add-button .ui-icon {

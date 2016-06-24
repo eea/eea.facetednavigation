@@ -1,8 +1,8 @@
 """ Widget interfaces and schema
 """
 from zope import schema
-from z3c.form import field, group
-from eea.facetednavigation.widgets.interfaces import ISchema
+from z3c.form import field
+from eea.facetednavigation.widgets.interfaces import ISchema, FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
@@ -44,19 +44,19 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IResultsPerPageSchema).select(
-        'title',
-        'default',
+        u'title',
+        u'default',
     )
 
 
-class DisplaySchemata(group.Group):
+class DisplaySchemata(FacetedSchemata):
     """ Schemata display
     """
-    label = 'display'
+    label = u'display'
     fields = field.Fields(IResultsPerPageSchema).select(
-        'start',
-        'end',
-        'step'
+        u'start',
+        u'end',
+        u'step'
     )
 
 

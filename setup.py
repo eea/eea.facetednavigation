@@ -43,7 +43,7 @@ setup(name=NAME,
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'eea.faceted.vocabularies > 5.2',
+          'eea.faceted.vocabularies > 5.9',
           'collective.js.jqueryui',
           'eea.jquery > 8.6',
       ],

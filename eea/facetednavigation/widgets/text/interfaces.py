@@ -14,12 +14,12 @@ class ITextSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.TextCatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.TextCatalogIndexes",
         required=True
     )
 
     onlyallelements = schema.Bool(
-        title=_("Search in all elements only"),
+        title=_(u"Search in all elements only"),
         description=_(u'If this checkbox is checked, hides the choice to '
                       u'filter in all items or in current items only'),
         required=False
@@ -40,11 +40,11 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(ITextSchema).select(
-        'title',
-        'default',
-        'index',
-        'onlyallelements',
-        'wildcard'
+        u'title',
+        u'default',
+        u'index',
+        u'onlyallelements',
+        u'wildcard'
     )
 
 

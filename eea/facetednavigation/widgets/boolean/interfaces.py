@@ -15,7 +15,7 @@ class IBooleanSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.SimpleFieldCatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.SimpleFieldCatalogIndexes",
         required=True
     )
 
@@ -24,9 +24,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IBooleanSchema).select(
-        'title',
-        'default',
-        'index',
+        u'title',
+        u'default',
+        u'index',
     )
 
 
@@ -34,7 +34,7 @@ class CountableSchemata(CS):
     """ Schemata countable
     """
     fields = field.Fields(ISchema).select(
-        'count'
+        u'count'
     )
 
 

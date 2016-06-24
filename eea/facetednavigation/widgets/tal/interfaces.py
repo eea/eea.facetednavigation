@@ -14,7 +14,7 @@ class ITalSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary='eea.faceted.vocabularies.SortingCatalogIndexes'
+        vocabulary=u'eea.faceted.vocabularies.SortingCatalogIndexes'
     )
 
     default = schema.TextLine(
@@ -30,9 +30,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(ITalSchema).select(
-        'title',
-        'index',
-        'default',
+        u'title',
+        u'index',
+        u'default',
     )
 
 

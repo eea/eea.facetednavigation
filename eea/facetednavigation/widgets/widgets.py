@@ -31,7 +31,16 @@ class WidgetData(object):
         self.context = context
 
     def __getattr__(self, name, default=None):
-        return getattr(self.context, name, default)
+        # XXX
+        # XXX !!! Ugly hack !!! Use schema fields to get the right value type
+        # XXX
+        value = self.context.get(name, default)
+        if isinstance(value, (str, unicode)):
+            try:
+                value = int(value)
+            except Exception:
+                pass
+        return value
 
 
 def WidgetDirective(_context, factory=None, schema=None,

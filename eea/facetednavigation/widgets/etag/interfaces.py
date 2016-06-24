@@ -31,9 +31,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IETagSchema).select(
-        'title',
-        'default',
-        'hidden',
+        u'title',
+        u'default',
+        u'hidden',
     )
 
 
@@ -41,8 +41,8 @@ class LayoutSchemata(LS):
     """ Schemata default
     """
     fields = field.Fields(IETagSchema).select(
-        'position',
-        'section',
+        u'position',
+        u'section',
     )
 
 

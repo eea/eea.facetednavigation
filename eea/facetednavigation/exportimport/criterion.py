@@ -56,17 +56,17 @@ class CriterionXMLAdapter(XMLAdapterBase):
             if child.nodeName != 'property':
                 continue
 
-            key = child.getAttribute('name').encode('utf-8')
+            key = child.getAttribute('name')
             elements = []
             for element in child.childNodes:
                 if element.nodeName != 'element':
                     continue
-                elements.append(element.getAttribute('value').encode('utf-8'))
+                elements.append(element.getAttribute('value'))
 
             if elements:
                 properties[key] = elements
             else:
-                properties[key] = self._getNodeText(child).encode('utf-8')
+                properties[key] = self._getNodeText(child)
         self.environ._tool.edit(self.context.getId(), **properties)
 
     node = property(_exportNode, _importNode)

@@ -22,9 +22,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IPortletSchema).select(
-        'title',
-        'default',
-        'macro',
+        u'title',
+        u'default',
+        u'macro',
     )
 
 __all__ = [

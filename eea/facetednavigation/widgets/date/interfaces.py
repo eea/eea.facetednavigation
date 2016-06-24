@@ -14,7 +14,7 @@ class IDateSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.DateRangeCatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.DateRangeCatalogIndexes",
         required=True
     )
 
@@ -23,9 +23,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IDateSchema).select(
-        'title',
-        'default',
-        'index',
+        u'title',
+        u'default',
+        u'index',
     )
 
 

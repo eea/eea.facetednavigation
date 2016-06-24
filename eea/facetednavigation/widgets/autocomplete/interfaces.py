@@ -22,13 +22,13 @@ class IAutocompleteSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.TextCatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.TextCatalogIndexes",
     )
 
     autocomplete_view = schema.Choice(
         title=_(u"Autocomplete"),
         description=_(u'Select the source of the autocomplete suggestions'),
-        vocabulary='eea.faceted.vocabularies.AutocompleteViews',
+        vocabulary=u'eea.faceted.vocabularies.AutocompleteViews',
     )
 
     onlyallelements = schema.Bool(
@@ -49,12 +49,12 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IAutocompleteSchema).select(
-        'title',
-        'default',
-        'index',
-        'autocomplete_view',
-        'onlyallelements',
-        'multivalued'
+        u'title',
+        u'default',
+        u'index',
+        u'autocomplete_view',
+        u'onlyallelements',
+        u'multivalued'
     )
 
 

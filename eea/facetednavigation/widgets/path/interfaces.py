@@ -1,8 +1,9 @@
 """ Widget interfaces and schema
 """
 from zope import schema
-from z3c.form import field, group
+from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
@@ -14,9 +15,9 @@ class IPathSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.PathCatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.PathCatalogIndexes",
         required=True,
-        default='path',
+        default=u'path',
     )
 
     root = schema.TextLine(
@@ -34,12 +35,13 @@ class IPathSchema(ISchema):
                       u'integer count the subfolder-levels to search.'),
         required=False
     )
+    depth._type = (unicode, str)
 
     theme = schema.Choice(
         title=_(u'Navigation tree theme'),
         description=_(u'Theme to be used with this widget'),
-        vocabulary='eea.faceted.vocabularies.JsTreeThemes',
-        default='green',
+        vocabulary=u'eea.faceted.vocabularies.JsTreeThemes',
+        default=u'green',
         required=False
     )
 
@@ -48,20 +50,20 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IPathSchema).select(
-        'title',
-        'default',
-        'index',
-        'root',
-        'depth',
+        u'title',
+        u'default',
+        u'index',
+        u'root',
+        u'depth',
     )
 
 
-class DisplaySchemata(group.Group):
+class DisplaySchemata(FacetedSchemata):
     """ Schemata display
     """
-    label = 'display'
+    label = u'display'
     fields = field.Fields(IPathSchema).select(
-        'theme'
+        u'theme'
     )
 
 __all__ = [

@@ -49,7 +49,7 @@ FacetedEdit.AlphabeticalWidget.prototype = {
     if(value == 'all'){
       value = '';
     }
-    query['form.' + this.wid + '.default'] = value;
+    query['faceted.' + this.wid + '.default'] = value;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){

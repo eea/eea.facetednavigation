@@ -2,17 +2,18 @@
 """
 from zope import schema
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from z3c.form import field, group
+from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation import EEAMessageFactory as _
 
 TagsCloudVocabulary = SimpleVocabulary([
-    SimpleTerm(u'list', u'list', _("List")),
-    SimpleTerm(u'sphere', u'sphere', _("Sphere")),
-    SimpleTerm(u'cloud', u'cloud', _("Cloud"))
+    SimpleTerm(u'list', u'list', _(u"List")),
+    SimpleTerm(u'sphere', u'sphere', _(u"Sphere")),
+    SimpleTerm(u'cloud', u'cloud', _(u"Cloud"))
 ])
 
 
@@ -22,13 +23,13 @@ class ITagsCloudSchema(ISchema):
     index = schema.Choice(
         title=_(u'Catalog index'),
         description=_(u'Catalog index to use for search'),
-        vocabulary="eea.faceted.vocabularies.CatalogIndexes",
+        vocabulary=u"eea.faceted.vocabularies.CatalogIndexes",
     )
 
     vocabulary = schema.Choice(
         title=_(u"Vocabulary"),
         description=_(u'Vocabulary to use to render widget items'),
-        vocabulary='eea.faceted.vocabularies.PortalVocabularies',
+        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
         required=False
     )
 
@@ -36,7 +37,7 @@ class ITagsCloudSchema(ISchema):
         title=_(u'Catalog'),
         description=_(u"Get unique values from catalog "
                       u"as an alternative for vocabulary"),
-        vocabulary='eea.faceted.vocabularies.UseCatalog',
+        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
         required=False
     )
 
@@ -83,7 +84,7 @@ class ITagsCloudSchema(ISchema):
     colormax._type = (unicode, str)
 
     cloud = schema.Choice(
-        title=_('Cloud type'),
+        title=_(u'Cloud type'),
         description=_(u'Type of the cloud'),
         vocabulary=TagsCloudVocabulary
     )
@@ -114,35 +115,35 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(ITagsCloudSchema).select(
-        'title',
-        'index',
-        'vocabulary',
-        'catalog',
-        'default'
+        u'title',
+        u'index',
+        u'vocabulary',
+        u'catalog',
+        u'default'
     )
 
-class DisplaySchemata(group.Group):
+class DisplaySchemata(FacetedSchemata):
     """ Schemata display
     """
-    label = 'display'
+    label = u'display'
     fields = field.Fields(ITagsCloudSchema).select(
-        'maxitems',
-        'maxchars',
-        'colormin',
-        'colormax',
-        'sortreversed',
+        u'maxitems',
+        u'maxchars',
+        u'colormin',
+        u'colormax',
+        u'sortreversed',
     )
 
 
-class GeometrySchemata(group.Group):
+class GeometrySchemata(FacetedSchemata):
     """ Schemata geometry
     """
-    label = 'geometry'
+    label = u'geometry'
     fields = field.Fields(ITagsCloudSchema).select(
-        'cloud',
-        'sizemin',
-        'sizemax',
-        'height'
+        u'cloud',
+        u'sizemin',
+        u'sizemax',
+        u'height'
     )
 
 

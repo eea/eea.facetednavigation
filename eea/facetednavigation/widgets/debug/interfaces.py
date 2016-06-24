@@ -14,7 +14,7 @@ class IDebugSchema(ISchema):
     user = schema.Choice(
         title=_(u'Visible to'),
         description=_(u'Widget will be visible only for selected user'),
-        vocabulary='eea.faceted.vocabularies.CurrentUser',
+        vocabulary=u'eea.faceted.vocabularies.CurrentUser',
     )
 
 
@@ -22,9 +22,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IDebugSchema).select(
-        'title',
-        'default',
-        'user',
+        u'title',
+        u'default',
+        u'user',
     )
 
 __all__ = [

@@ -59,7 +59,10 @@ class Widget(group.GroupForm, form.Form):
     def prefix(self):
         """ Form prefix
         """
-        return self.data.getId()
+        cid = self.data.getId()
+        if isinstance(cid, unicode):
+            cid = cid.encode('utf-8')
+        return cid
 
     def getContent(self):
         """ Content

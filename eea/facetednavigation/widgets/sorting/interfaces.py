@@ -15,7 +15,7 @@ class ISortingSchema(ISchema):
         title=_(u'Filter from vocabulary'),
         description=_(u'Vocabulary to use to filter sorting criteria. '
                       u'Leave empty for default sorting criteria.'),
-        vocabulary='eea.faceted.vocabularies.PortalVocabularies',
+        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
         required=False
     )
 
@@ -24,9 +24,9 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(ISortingSchema).select(
-        'title',
-        'vocabulary',
-        'default'
+        u'title',
+        u'vocabulary',
+        u'default'
     )
 
 

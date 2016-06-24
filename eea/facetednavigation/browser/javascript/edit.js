@@ -295,7 +295,7 @@ FacetedEdit.FormWidgets = {
       // Add widget buttons
       var addbutton = jQuery('<span>');
       addbutton.attr('title', 'Add widget here');
-      addbutton.text(' ');
+      addbutton.text(' + ');
       addbutton.attr('class', 'ui-icon ui-icon-plus ui-corner-all');
       jQuery('.faceted-widgets').each(function(){
         var container = jQuery(this);
@@ -424,10 +424,10 @@ FacetedEdit.FormWidgets = {
 
     if(widget.hasClass('faceted-widget-hidden')){
       this.show_widget(widget_id);
-      query['form.' + criterion_id + '.hidden-empty-marker'] = 1;
+      query['faceted.' + criterion_id + '.hidden-empty-marker'] = 1;
     }else{
       this.hide_widget(widget_id);
-      query['form.' + criterion_id + '.hidden'] = 'selected';
+      query['faceted.' + criterion_id + '.hidden'] = 'selected';
     }
 
     jQuery.post(action, query, function(data){
@@ -503,7 +503,7 @@ FacetedEdit.FormEditWidget = {
       context.form.html(data);
 
       //jQuery('.field-c0-form-c0-default').remove();
-      var selector = '.field-' + context.cid + '-form-' + context.cid;
+      var selector = '.field-' + context.cid + '-faceted-' + context.cid;
       jQuery(selector + '-default').remove();
 
       var catalog = jQuery(selector + '-index select');
@@ -609,7 +609,7 @@ FacetedEdit.FormAddWidgets = {
     jQuery.get(FacetedEdit.BASEURL + '@@faceted_schema', faceted_query, function(data) {
       FacetedEdit.FormMessage.custom_message('Loading...', 'faceted-widget-type');
       context.details.html(data);
-      var selector = '.field-c0-form-c0';
+      var selector = '.field-c0-faceted-c0';
       jQuery(selector + '-default').hide();
       var catalog = jQuery(selector + '-index select');
       var operator = jQuery(selector + '-operator select');

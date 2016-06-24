@@ -36,29 +36,29 @@ class IWidgetDirective(Interface):
     Register a widget
     """
     factory = GlobalObject(
-        title=_("Factory"),
-        description=_("Python name of a factory which can create the"
-                      " implementation object.  This must identify an"
-                      " object in a module using the full dotted name."),
+        title=_(u"Factory"),
+        description=_(u"Python name of a factory which can create the"
+                      u" implementation object.  This must identify an"
+                      u" object in a module using the full dotted name."),
         required=True,
     )
 
     schema = GlobalInterface(
-        title=_("Schema interface"),
-        description=_("An interface describing schema to be used"
-                      " within z3c.form"),
+        title=_(u"Schema interface"),
+        description=_(u"An interface describing schema to be used"
+                      u" within z3c.form"),
         required=False
     )
 
     accessor = GlobalObject(
-        title=_("Accessor"),
-        description=_("Accessor to extract data for faceted widget."),
+        title=_(u"Accessor"),
+        description=_(u"Accessor to extract data for faceted widget."),
         required=False
     )
 
     criterion = GlobalInterface(
-        title=_("Criterion interface"),
-        description=_("Criterion interface"),
+        title=_(u"Criterion interface"),
+        description=_(u"Criterion interface"),
         required=False
     )
 
@@ -80,22 +80,22 @@ class ISchema(Interface):
     default._type = (unicode, str)
 
     index = schema.Choice(
-        title=_("Catalog index"),
+        title=_(u"Catalog index"),
         description=_(u'Catalog index to be used'),
-        vocabulary="eea.faceted.vocabularies.CatalogIndexes"
+        vocabulary=u"eea.faceted.vocabularies.CatalogIndexes"
     )
 
     position = schema.Choice(
         title=_(u'Position'),
         description=_(u"Widget position in page"),
-        vocabulary="eea.faceted.vocabularies.WidgetPositions",
+        vocabulary=u"eea.faceted.vocabularies.WidgetPositions",
         required=False
     )
 
     section = schema.Choice(
         title=_(u"Section"),
-        description=_("Display widget in section"),
-        vocabulary="eea.faceted.vocabularies.WidgetSections",
+        description=_(u"Display widget in section"),
+        vocabulary=u"eea.faceted.vocabularies.WidgetSections",
         required=False
     )
 
@@ -123,35 +123,39 @@ class ISchema(Interface):
         required=False
     )
 
+class FacetedSchemata(group.Group):
+    """ Faceted Schemata
+    """
+    prefix = 'faceted'
 
-class DefaultSchemata(group.Group):
+class DefaultSchemata(FacetedSchemata):
     """ Schemata default
     """
-    label = "default"
+    label = u"default"
     fields = field.Fields(ISchema).select(
-        'title',
-        'default',
-        'index'
+        u'title',
+        u'default',
+        u'index'
     )
 
 
-class LayoutSchemata(group.Group):
+class LayoutSchemata(FacetedSchemata):
     """ Schemata layout
     """
-    label = "layout"
+    label = u"layout"
     fields = field.Fields(ISchema).select(
-        'position',
-        'section',
-        'hidden'
+        u'position',
+        u'section',
+        u'hidden'
     )
 
 
-class CountableSchemata(group.Group):
+class CountableSchemata(FacetedSchemata):
     """ Schemata countable
     """
-    label = "countable"
+    label = u"countable"
     fields = field.Fields(ISchema).select(
-        'count',
-        'sortcountable',
-        'hidezerocount'
+        u'count',
+        u'sortcountable',
+        u'hidezerocount'
     )

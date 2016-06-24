@@ -2,8 +2,8 @@
 """
 from zope import schema
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from z3c.form import field, group
-from eea.facetednavigation.widgets.interfaces import ISchema
+from z3c.form import field
+from eea.facetednavigation.widgets.interfaces import ISchema, FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
@@ -14,14 +14,22 @@ from eea.facetednavigation import EEAMessageFactory as _
 class ICheckboxSchema(ISchema):
     """ Schema
     """
+    default = schema.List(
+        title=_(u'Default value'),
+        description=_(u'Default items (one per line)'),
+        required=False,
+        unique=True,
+        value_type=schema.TextLine(title=u'Item'),
+    )
+
     operator = schema.Choice(
         title=_(u'Default operator'),
         description=_(u'Search with AND/OR between elements'),
         vocabulary=SimpleVocabulary([
-            SimpleTerm('or', 'or', 'OR'),
-            SimpleTerm('and', 'and', 'AND')
+            SimpleTerm(u'or', u'or', u'OR'),
+            SimpleTerm(u'and', u'and', u'AND')
         ]),
-        default='or'
+        default=u'or'
     )
 
     operator_visible = schema.Bool(
@@ -35,7 +43,7 @@ class ICheckboxSchema(ISchema):
     vocabulary = schema.Choice(
         title=_(u"Vocabulary"),
         description=_(u'Vocabulary to use to render widget items'),
-        vocabulary='eea.faceted.vocabularies.PortalVocabularies',
+        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
         required=False
     )
 
@@ -43,7 +51,7 @@ class ICheckboxSchema(ISchema):
         title=_(u'Catalog'),
         description=_(u"Get unique values from catalog "
                       u"as an alternative for vocabulary"),
-        vocabulary='eea.faceted.vocabularies.UseCatalog',
+        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
         required=False
     )
 
@@ -65,22 +73,22 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(ICheckboxSchema).select(
-        'title',
-        'index',
-        'operator',
-        'operator_visible',
-        'vocabulary',
-        'catalog',
-        'default'
+        u'title',
+        u'index',
+        u'operator',
+        u'operator_visible',
+        u'vocabulary',
+        u'catalog',
+        u'default'
     )
 
-class DisplaySchemata(group.Group):
+class DisplaySchemata(FacetedSchemata):
     """ Schemata display
     """
-    label = 'display'
+    label = u'display'
     fields = field.Fields(ICheckboxSchema).select(
-        'maxitems',
-        'sortreversed',
+        u'maxitems',
+        u'sortreversed',
     )
 
 

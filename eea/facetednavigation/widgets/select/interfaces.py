@@ -1,8 +1,9 @@
 """ Widget interfaces and schema
 """
 from zope import schema
-from z3c.form import field, group
+from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
@@ -15,7 +16,7 @@ class ISelectSchema(ISchema):
     vocabulary = schema.Choice(
         title=_(u"Vocabulary"),
         description=_(u'Vocabulary to use to render widget items'),
-        vocabulary='eea.faceted.vocabularies.PortalVocabularies',
+        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
         required=False
     )
 
@@ -23,7 +24,7 @@ class ISelectSchema(ISchema):
         title=_(u'Catalog'),
         description=_(u"Get unique values from catalog "
                       u"as an alternative for vocabulary"),
-        vocabulary='eea.faceted.vocabularies.UseCatalog',
+        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
         required=False
     )
 
@@ -38,20 +39,20 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(ISelectSchema).select(
-        'title',
-        'index',
-        'vocabulary',
-        'catalog',
-        'default'
+        u'title',
+        u'index',
+        u'vocabulary',
+        u'catalog',
+        u'default'
     )
 
 
-class DisplaySchemata(group.Group):
+class DisplaySchemata(FacetedSchemata):
     """ Schemata display
     """
-    label = 'display'
+    label = u'display'
     fields = field.Fields(ISelectSchema).select(
-        'sortreversed',
+        u'sortreversed',
     )
 
 

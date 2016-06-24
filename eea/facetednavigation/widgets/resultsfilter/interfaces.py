@@ -21,7 +21,7 @@ class IResultsFilterSchema(ISchema):
         title=_(u'Results Filter'),
         description=_(u'Default tal expression for query value'),
         required=False,
-        default=u'python:hasattr(brain, "Title")',
+        default=u'python:hasattr(brain, u"Title")',
     )
     default._type = (unicode, str)
 
@@ -30,8 +30,8 @@ class DefaultSchemata(DS):
     """ Schemata default
     """
     fields = field.Fields(IResultsFilterSchema).select(
-        'title',
-        'default',
+        u'title',
+        u'default',
     )
 
 

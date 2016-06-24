@@ -73,7 +73,7 @@ class IFacetedDisabledEvent(IFacetedEvent):
 
 
 class IEEASettings(Interface):
-    """Registry settings for eea.facetednavigation product
+    """ Registry settings for eea.facetednavigation product
     """
 
     disable_diazo_rules_ajax = schema.Bool(
@@ -82,10 +82,10 @@ class IEEASettings(Interface):
 
 
 class IQueryWillBeExecutedEvent(IFacetedEvent):
-    """Catalog query event.
+    """ Catalog query event.
     """
 
-    # query = Attribute("The query that will be done.")
+    # query = Attribute(u"The query that will be done.")
 
 
 # pylint, pyflakes
