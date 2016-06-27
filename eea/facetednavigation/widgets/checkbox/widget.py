@@ -3,7 +3,6 @@
 from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 
-from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.faceted.vocabularies.utils import compare
 from eea.facetednavigation.widgets.checkbox.interfaces import (
@@ -56,7 +55,7 @@ class Widget(CountableWidget):
 
         if isinstance(default, (str, unicode)):
             default = [default, ]
-        return default
+        return [x.encode('utf-8') for x in default]
 
     def selected(self, key):
         """ Return True if key in self.default
@@ -102,8 +101,6 @@ class Widget(CountableWidget):
             value = self.default
         else:
             value = form.get(self.data.getId(), '')
-
-        value = atdx_normalize(value)
 
         if not value:
             return query

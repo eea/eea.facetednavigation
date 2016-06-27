@@ -6,7 +6,7 @@
    <property name="title">Created</property>
    <property name="position">top</property>
    <property name="section">advanced</property>
-   <property name="hidden">0</property>
+   <property name="hidden">False</property>
    <property name="index">Date</property>
    <property name="default"></property>
    <property name="calYearRange">c-10:c+10</property>

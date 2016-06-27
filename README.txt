@@ -26,6 +26,12 @@ it covers same functionality and it adds a lot more features.
 
 **FacetedNav can also be used as an advanced search for your site**.
 
+.. warning ::
+
+  **Latest releases of this package (10.0+)** introduced a lot of **major changes**
+  in order to make it work with **Plone 5**.
+  Thus, please intensively test it before upgrading on Plone 4 deployments.
+
 
 .. contents::
 

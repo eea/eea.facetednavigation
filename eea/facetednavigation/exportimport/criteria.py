@@ -67,7 +67,10 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                 sect = [s for s in child.getElementsByTagName('property')
                         if s.getAttribute('name') == 'section']
                 section = sect and sect[0].childNodes[0].nodeValue or 'default'
-                cid = self.context.add('text', position, section, _cid_=name)
+                widget = [w for w in child.getElementsByTagName('property')
+                        if w.getAttribute('name') == 'widget']
+                widget = widget and widget[0].childNodes[0].nodeValue or 'text'
+                cid = self.context.add(widget, position, section, _cid_=name)
             except KeyError:
                 # element already exists, we log and we continue
                 # this could be the case if should_purge is False

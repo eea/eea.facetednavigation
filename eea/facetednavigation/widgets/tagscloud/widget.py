@@ -4,7 +4,6 @@ import random
 from Products.CMFPlone.utils import safeToInt
 
 from eea.faceted.vocabularies.utils import compare
-from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.tagscloud.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.tagscloud.interfaces import LayoutSchemata
@@ -35,6 +34,13 @@ class Widget(CountableWidget):
     )
 
     index = ViewPageTemplateFile('widget.pt')
+
+    @property
+    def default(self):
+        """ Get default values
+        """
+        default = super(Widget, self).default or u''
+        return default.encode('utf-8')
 
     @property
     def maxitems(self):
@@ -98,7 +104,6 @@ class Widget(CountableWidget):
         if compare(value, 'all') == 0:
             return query
 
-        value = atdx_normalize(value)
         query[index] = value
         return query
 

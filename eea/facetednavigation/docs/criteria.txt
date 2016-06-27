@@ -48,13 +48,13 @@ Get criteria
 ------------
 
     >>> ICriteria(sandbox).keys()
-    ['c0', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7']
+    [u'c0', u'c1', u'c2', u'c3', u'c4', u'c5', u'c6', u'c7']
 
     >>> ICriteria(sandbox).values()
     [<eea.facetednavigation.widgets.storage.Criterion object at...>, ...]
 
     >>> ICriteria(sandbox).items()
-    [('c0', <eea.facetednavigation.widgets.storage.Criterion object at...>), ...]
+    [(u'c0', <eea.facetednavigation.widgets.storage.Criterion object at...>), ...]
 
     >>> ICriteria(sandbox).get('c0')
     <eea.facetednavigation.widgets.storage.Criterion object at...>
@@ -64,7 +64,7 @@ Edit criterion
 
   Alphabetic criterion
 
-    >>> ICriteria(sandbox).edit('c0', title='Alphabetic', index='Title', hidden='0')
+    >>> ICriteria(sandbox).edit('c0', title='Alphabetic', index='Title', hidden=False)
     >>> criterion = ICriteria(sandbox).get('c0')
     >>> criterion.get('title')
     u'Alphabetic'
@@ -80,7 +80,7 @@ Edit criterion
     ...    index='portal_type',
     ...    vocabulary='eea.faceted.vocabularies.FacetedPortalTypes',
     ...    catalog='portal_catalog',
-    ...    maxitems=4, hidden='1'
+    ...    maxitems=4, hidden=True
     ... )
     >>> criterion = ICriteria(sandbox).get('c1')
     >>> criterion.get('title')
@@ -97,7 +97,7 @@ Delete criteria
     >>> ICriteria(sandbox).delete('c1')
     >>> ICriteria(sandbox).delete('c2')
     >>> ICriteria(sandbox).keys()
-    ['c3', 'c4', 'c5', 'c6', 'c7']
+    [u'c3', u'c4', u'c5', u'c6', u'c7']
 
 Move up/down
 ------------
@@ -105,7 +105,7 @@ Move up/down
     >>> ICriteria(sandbox).down('c4')
     >>> ICriteria(sandbox).up('c5')
     >>> ICriteria(sandbox).keys()
-    ['c5', 'c3', 'c4', 'c6', 'c7']
+    [u'c5', u'c3', u'c4', u'c6', u'c7']
 
 Change position
 ---------------
@@ -117,7 +117,7 @@ Change position
     ...     right=[]
     ... )
     >>> ICriteria(sandbox).keys()
-    ['c7', 'c6', 'c5', 'c4', 'c3']
+    [u'c7', u'c6', u'c5', u'c4', u'c3']
     >>> ICriteria(sandbox).get('c4').get('position')
     u'left'
 
@@ -131,4 +131,4 @@ Add criteria to specific sections
     >>> ICriteria(sandbox).get('c1').get('section')
     u'default'
     >>> ICriteria(sandbox).keys()
-    ['c7', 'c6', 'c1', 'c2', 'c5', 'c4', 'c3']
+    [u'c7', u'c6', u'c1', u'c2', u'c5', u'c4', u'c3']

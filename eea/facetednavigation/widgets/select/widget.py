@@ -1,6 +1,5 @@
 """ Select widget
 """
-from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.select.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.select.interfaces import LayoutSchemata
@@ -28,6 +27,13 @@ class Widget(CountableWidget):
 
     index = ViewPageTemplateFile('widget.pt')
 
+    @property
+    def default(self):
+        """ Get default values
+        """
+        default = super(Widget, self).default or u''
+        return default.encode('utf-8')
+
     def query(self, form):
         """ Get value from form and return a catalog dict query
         """
@@ -45,6 +51,5 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-        value = atdx_normalize(value)
         query[index] = value
         return query

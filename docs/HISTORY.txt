@@ -1,8 +1,12 @@
 Changelog
 =========
 
-9.3.dev0 - (unreleased)
------------------------
+10.0.dev0 - (unreleased)
+------------------------
+* Change: Plone 5 full support
+  [avoinea #90]
+* Change: Dropped Archetypes dependency and upgraded to z3c.form schema.
+  [avoinea #87]
 
 9.2 - (2016-06-16)
 ------------------
@@ -23,7 +27,7 @@ Changelog
   the same way as before to allow special years (like '0001').
   [laulaz refs #99]
 * Feature: The daterange widget automatically restricts date range in end date
-  calendar. 
+  calendar.
   [laulaz refs #98]
 * Bug fix: Fix pylint warnings
   [ichim-david refs #71940]

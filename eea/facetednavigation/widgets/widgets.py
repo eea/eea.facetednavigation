@@ -11,12 +11,29 @@ class WidgetsInfo(object):
     """ Widgets registry
     """
     _widgets = {}
+    _schemas = {}
 
     @property
     def widgets(self):
         """ Widgets
         """
         return self._widgets
+
+    @property
+    def schemas(self):
+        """ Widgets schemas
+        """
+        return self._schemas
+
+    def widget(self, name, default=None):
+        """ Get widget by name
+        """
+        return self.widgets.get(name, default)
+
+    def schema(self, name, default=None):
+        """ Return widget schema by name
+        """
+        return self.schemas.get(name, default)
 
     def __call__(self, key):
         """ Get widget by key or raise
@@ -31,17 +48,7 @@ class WidgetData(object):
         self.context = context
 
     def __getattr__(self, name, default=None):
-        # XXX
-        # XXX !!! Ugly hack !!! Use schema fields to get the right value type
-        # XXX
-        value = self.context.get(name, default)
-        if isinstance(value, (str, unicode)):
-            try:
-                value = int(value)
-            except Exception:
-                pass
-        return value
-
+        return self.context.get(name, default)
 
 def WidgetDirective(_context, factory=None, schema=None,
                     accessor=WidgetData, criterion=ICriterion, **kwargs):
@@ -61,6 +68,7 @@ def WidgetDirective(_context, factory=None, schema=None,
         raise TypeError(
             "No schema provided for faceted widget type '%s'" % name)
 
+    WidgetsInfo._schemas[name] = schema
     adapter(
         _context=_context,
         provides=schema,

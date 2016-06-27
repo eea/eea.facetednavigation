@@ -28,7 +28,6 @@ class Criterion(object):
             raise KeyError(u'Id is already in use')
         if isinstance(cid, str):
             cid = cid.decode('utf-8')
-
         self.__name__ = cid
         self.update(**kwargs)
 

@@ -47,7 +47,7 @@ Export empty criteria
 
     >>> print exporter.body
     <?xml version="1.0"?>
-    <object name="sandbox" meta_type="ATFolder">
+    <object name="sandbox" meta_type="...">
      <criteria/>
     </object>
 
@@ -59,48 +59,47 @@ Checkboxes
 
     >>> _ = handler(addPropertiesWidget_button='Add',
     ...     wtype='checkbox', wposition='left',
-    ...     c0_title="Type d'element",
-    ...     c0_index='portal_type', c0_default=['Folder', 'Document'],
-    ...     c0_count=True)
+    ...     title="Type d'element",
+    ...     index='portal_type', default=[u'Folder', u'Document'],
+    ...     count=True)
 
     >>> _ = handler(addPropertiesWidget_button='Add',
     ...     wtype='tagscloud', wposition='right',
-    ...     c0_title="Meta-type d'element",
-    ...     c0_index='meta_type', c0_default='ATFolder',
-    ...     c0_cloud='sphere', sizemin=15, sizemax=25,
-    ...     c0_count=False)
+    ...     title="Meta-type d'element",
+    ...     index='meta_type',
+    ...     cloud='sphere', sizemin=15, sizemax=25,
+    ...     count=False)
 
     >>> print exporter.body
     <?xml version="1.0"?>
-    <object name="sandbox" meta_type="ATFolder">
+    <object name="sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
        </property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">True</property>
       </criterion>
       <criterion name="c1">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
-       <property name="position">right</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count">0</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
+       <property name="position">right</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
@@ -131,35 +130,34 @@ Let's check exported
     >>> importer.body = exporter.body
     >>> print importer.body
     <?xml version="1.0"?>
-    <object name="new_sandbox" meta_type="ATFolder">
+    <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
        </property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">True</property>
       </criterion>
       <criterion name="c1">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
-       <property name="position">right</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
+       <property name="position">right</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
@@ -180,30 +178,30 @@ Add one widget
     >>> handler = new_sandbox.unrestrictedTraverse('@@faceted_configure')
     >>> _ = handler(addPropertiesWidget_button='Add',
     ...     wtype='tagscloud', wposition='right',
-    ...     c0_title="Meta-type d'element",
-    ...     c0_index='meta_type', c0_default='ATFolder',
-    ...     c0_cloud='sphere', sizemin=15, sizemax=25,
-    ...     c0_count=False)
+    ...     title="Meta-type d'element",
+    ...     index='portal_type', default='Folder',
+    ...     cloud='sphere', sizemin=15, sizemax=25,
+    ...     count=False)
 
 Check configuration
 
     >>> print importer.body
     <?xml version="1.0"?>
-    <object name="new_sandbox" meta_type="ATFolder">
+    <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
+       <property name="index">portal_type</property>
+       <property name="vocabulary"></property>
+       <property name="default">Folder</property>
        <property name="position">right</property>
        <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count">0</property>
-       <property name="index">meta_type</property>
-       <property name="vocabulary"></property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
@@ -214,35 +212,34 @@ Now update it
     >>> importer.body = exporter.body
     >>> print importer.body
     <?xml version="1.0"?>
-    <object name="new_sandbox" meta_type="ATFolder">
+    <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
        </property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">True</property>
       </criterion>
       <criterion name="c1">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
-       <property name="position">right</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
+       <property name="position">right</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
        <property name="cloud">sphere</property>
        <property name="sizemin">15</property>
        <property name="sizemax">25</property>
-       <property name="default">ATFolder</property>
       </criterion>
      </criteria>
     </object>
@@ -286,33 +283,33 @@ Let's see our new configuration
     ... }
     >>> print view(**query)
     <?xml version="1.0"?>
-    <object name="new_sandbox" meta_type="ATFolder">
+    <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
-       <property name="position">top</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
-       <property name="cloud">sphere</property>
        <property name="default">ATFolder</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
+       <property name="cloud">sphere</property>
       </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">1</property>
-       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
        </property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">True</property>
+       <property name="count">True</property>
       </criterion>
      </criteria>
     </object>
@@ -337,43 +334,43 @@ Import a xml file with purge set to False, new criteria will be added to existin
     ... }
     >>> print view(**query)
     <?xml version="1.0"?>
-    <object name="new_sandbox" meta_type="ATFolder">
+    <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
-       <property name="position">top</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
-       <property name="cloud">sphere</property>
        <property name="default">ATFolder</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
+       <property name="cloud">sphere</property>
       </criterion>
       <criterion name="c10">
-        <property name="widget">daterange</property>
-        <property name="title">Modified</property>
-        <property name="position">top</property>
-        <property name="section">advanced</property>
-        <property name="hidden">0</property>
-        <property name="index">Date</property>
-        <property name="default"></property>
-        <property name="calYearRange">c-10:c+10</property>
-       </criterion>
+       <property name="widget">daterange</property>
+       <property name="title">Modified</property>
+       <property name="index">Date</property>
+       <property name="default"></property>
+       <property name="position">top</property>
+       <property name="section">advanced</property>
+       <property name="hidden">False</property>
+       <property name="calYearRange">c-10:c+10</property>
+      </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">1</property>
-       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
        </property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">True</property>
+       <property name="count">True</property>
       </criterion>
      </criteria>
     </object>
@@ -394,43 +391,43 @@ Importing an already existing criterion will not fail, it is just ignored and a 
 
     >>> print view(**query)
     <?xml version="1.0"?>
-    <object name="new_sandbox" meta_type="ATFolder">
+    <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
-       <property name="position">top</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
-       <property name="cloud">sphere</property>
        <property name="default">ATFolder</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
+       <property name="cloud">sphere</property>
       </criterion>
       <criterion name="c10">
         <property name="widget">daterange</property>
         <property name="title">Modified</property>
-        <property name="position">top</property>
-        <property name="section">advanced</property>
-        <property name="hidden">0</property>
         <property name="index">Date</property>
         <property name="default"></property>
+        <property name="position">top</property>
+        <property name="section">advanced</property>
+        <property name="hidden">False</property>
         <property name="calYearRange">c-10:c+10</property>
        </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">1</property>
-       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
        </property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">True</property>
+       <property name="count">True</property>
       </criterion>
      </criteria>
     </object>
@@ -451,17 +448,17 @@ Import a xml file with purge set to True (default), existing criteria are remove
     ... }
     >>> print view(**query)
     <?xml version="1.0"?>
-    <object name="new_sandbox" meta_type="ATFolder">
+    <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c22">
-        <property name="widget">daterange</property>
-        <property name="title">Created</property>
-        <property name="position">top</property>
-        <property name="section">advanced</property>
-        <property name="hidden">0</property>
-        <property name="index">Date</property>
-        <property name="default"></property>
-        <property name="calYearRange">c-10:c+10</property>
-       </criterion>
+       <property name="widget">daterange</property>
+       <property name="title">Created</property>
+       <property name="index">Date</property>
+       <property name="default"></property>
+       <property name="position">top</property>
+       <property name="section">advanced</property>
+       <property name="hidden">False</property>
+       <property name="calYearRange">c-10:c+10</property>
+      </criterion>
      </criteria>
     </object>

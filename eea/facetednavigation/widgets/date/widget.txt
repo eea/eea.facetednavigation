@@ -49,7 +49,7 @@ Add hidden text widget
 
     >>> _ = handler(addWidget_button=True, wtype='text')
     >>> _ = handler(updateCriterion_button='Save', cid='c0',
-    ...     c0_default='Relative date', c0_index='Title', c0_hidden=True)
+    ...     default='Relative date', index='Title', hidden=True)
 
 Add test folders
 ----------------
@@ -106,16 +106,16 @@ Get some results (default set)
 
 All before now
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now-past=>now-0')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now-past=>now-0')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['now', 'past_n', 'past']
 
 All before last week
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now-past=>now-7')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now-past=>now-7')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['past']
@@ -123,48 +123,48 @@ All before last week
 
 All before yesterday
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now-past=>now-1')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now-past=>now-1')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['past_n', 'past']
 
 Last week
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now-7=>now-0')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now-7=>now-0')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['now', 'past_n']
 
 Today
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now-0=>now-0')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now-0=>now-0')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['now']
 
 Next week
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now-0=>now+7')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now-0=>now+7')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['future_n', 'now']
 
 All after next week
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now+7=>now+future')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now+7=>now+future')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['future']
 
 All after now
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=True,
-    ...     c1_index='effective', c1_default='now-0=>now+future')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=True,
+    ...     index='effective', default='now-0=>now+future')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     ['future', 'future_n', 'now']
@@ -172,8 +172,8 @@ All after now
 Get some results (no default)
 ------------------------------
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c1', c1_hidden=False,
-    ...     c1_index='effective')
+    >>> _ = handler(updateCriterion_button='Save', cid='c1', hidden=False,
+    ...     index='effective')
 
 All before now
 

@@ -51,8 +51,18 @@ class FacetedVersion(BrowserView):
             return ''
 
         return md5(cPickle.dumps(query)).hexdigest()
+    #
+    # Public interface
+    #
+    @property
+    def key(self):
+        """ Get version key
+        """
+        anno = IAnnotations(self.context)
+        return anno.get(ANNO_FACETED_VERSION, '')
 
-    def _set(self, value=None):
+    @key.setter
+    def key(self, value=None):
         """ Set version key
         """
         key = self._digest()
@@ -62,16 +72,6 @@ class FacetedVersion(BrowserView):
         anno = IAnnotations(self.context)
         anno[ANNO_FACETED_VERSION] = key
         return key
-
-    def _get(self):
-        """ Get version key
-        """
-        anno = IAnnotations(self.context)
-        return anno.get(ANNO_FACETED_VERSION, '')
-    #
-    # Public interface
-    #
-    key = property(_get, _set)
 
     def __call__(self, **kwargs):
         return self.key

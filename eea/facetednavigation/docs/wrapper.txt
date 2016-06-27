@@ -70,7 +70,7 @@ call it. Optionally you can pass some keywords to be used within overwritten met
 
 Now our wrapper has everything from sandbox
 
-    >>> print wrapper.index_html
+    print wrapper.index_html
     <FSPageTemplate at ...>
 
 And it still overwrite python scripts and methods

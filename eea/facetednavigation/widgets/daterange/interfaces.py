@@ -52,8 +52,8 @@ class DefaultSchemata(DS):
     """
     fields = field.Fields(IDateRangeSchema).select(
         u'title',
-        u'default',
         u'index',
+        u'default',
     )
 
 

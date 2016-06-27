@@ -24,7 +24,8 @@ class CriterionXMLAdapter(XMLAdapterBase):
         widget = info(widget_id)
 
         properties = ['widget']
-        properties.extend(widget.fields.keys())
+        for group in widget.groups:
+            properties.extend(group.fields.keys())
         for key in properties:
             value = self.context.get(key, None)
             if value is None:
@@ -40,7 +41,7 @@ class CriterionXMLAdapter(XMLAdapterBase):
                     prop.appendChild(element)
             else:
                 if isinstance(value, (int, bool)):
-                    value = str(int(value))
+                    value = str(value)
                 elif not isinstance(value, basestring):
                     value = str(value)
                 child = self._doc.createTextNode(value)
@@ -67,6 +68,7 @@ class CriterionXMLAdapter(XMLAdapterBase):
                 properties[key] = elements
             else:
                 properties[key] = self._getNodeText(child)
+
         self.environ._tool.edit(self.context.getId(), **properties)
 
     node = property(_exportNode, _importNode)
