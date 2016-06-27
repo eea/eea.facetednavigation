@@ -1,4 +1,3 @@
-<metal:block use-macro="here/global_defines/macros/defines" />
 <metal:block tal:define="plone_view python:context.restrictedTraverse('@@plone')">
 <tal:main define="
   batch_base_url here/absolute_url;

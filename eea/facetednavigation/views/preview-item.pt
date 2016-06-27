@@ -1,6 +1,6 @@
 <div class="photoAlbumEntry"
   tal:define="portal_type context/portal_type;
-              useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings;
+              useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings|python:[];
               useView python:portal_type in useViewTypes;">
   <a tal:define="
       description context/Description|string:;

@@ -1,4 +1,3 @@
-<metal:block use-macro="here/global_defines/macros/defines" />
 <div class="faceted-widget faceted-portlet-widget" style="display: none"
      i18n:domain="eea" tal:define="
   error_view nocall:context/@@faceted.widget.error;
