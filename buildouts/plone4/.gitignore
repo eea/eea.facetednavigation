@@ -2,6 +2,7 @@
 src
 parts
 *eggs
+*-dev.yml
 bootstrap.*
 bin
 lib*

@@ -6,6 +6,7 @@ from zope.component import queryAdapter
 from plone.app.contentmenu.menu import DisplayMenu
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser import BrowserView
+from eea.facetednavigation.plonex import addTokenToUrl
 from eea.facetednavigation.layout.interfaces import ILayoutMenuHandler
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
@@ -45,8 +46,8 @@ class FacetedDisplayMenu(DisplayMenu):
             layout['extra'] = template['extra'].copy()
             layout['extra']['id'] = name
             layout['title'] = label
-            layout['action'] = '%s/@@faceted_layout?layout=%s' % (
-                obj.absolute_url(), name)
+            url = '%s/@@faceted_layout?layout=%s' % (obj.absolute_url(), name)
+            layout['action'] = addTokenToUrl(url, request)
 
             if name == current:
                 layout['selected'] = True

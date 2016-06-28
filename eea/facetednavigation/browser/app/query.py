@@ -8,9 +8,9 @@ from zope.component import queryAdapter
 
 from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.PloneBatch import Batch
-from Products.Five.browser import BrowserView
 from plone.registry.interfaces import IRegistry
 
+from eea.facetednavigation.plonex import FolderView
 from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import cacheKeyFacetedNavigation
 from eea.facetednavigation.interfaces import IFacetedLayout, IEEASettings
@@ -20,15 +20,6 @@ from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.interfaces import IFacetedWrapper
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
 from plone.app.contentlisting.interfaces import IContentListing
-
-try:
-    from plone.app.contenttypes.browser import folder
-    FolderView = folder.FolderView
-except ImportError:
-    # BBB Plone 4
-    class FolderView(BrowserView):
-        """ Fallback Folder View
-        """
 
 logger = logging.getLogger('eea.facetednavigation.browser.app.query')
 

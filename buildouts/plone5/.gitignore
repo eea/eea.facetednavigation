@@ -3,6 +3,7 @@ pip-selfcheck.json
 src
 parts
 *eggs
+*-dev.yml
 bootstrap*
 bin
 lib*

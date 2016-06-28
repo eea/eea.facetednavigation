@@ -1,4 +1,4 @@
-plone4:
+instance:
     image: plone/plone:4
     ports:
     - "8080"

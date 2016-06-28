@@ -5,10 +5,10 @@ from zope.event import notify
 from zope.interface import implementer
 from Products.CMFCore.utils import getToolByName
 from BTrees.IIBTree import IIBucket
+from plone.app.collection.interfaces import ICollection
 from eea.facetednavigation.events import QueryWillBeExecutedEvent
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
-from eea.facetednavigation.search.interfaces import ICollection
-from eea.facetednavigation.search import parseFormquery
+from eea.facetednavigation.plonex import parseFormquery
 
 try:
     from plone.app.contenttypes import interfaces as PACI

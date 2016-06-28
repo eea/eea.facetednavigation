@@ -9,10 +9,16 @@
     destination="10.0"
     profile="eea.facetednavigation:default">
 
-  <genericsetup:upgradeStep
+    <genericsetup:upgradeStep
       title="Upgrade Faceted Navigation Criteria to validate zope.schema"
       handler="eea.facetednavigation.upgrades.evolve100.fix_criteria"
       />
+
+    <genericsetup:upgradeDepends
+      title="Import profile steps with changes: actions"
+      import_steps="actions"
+      />
+
   </genericsetup:upgradeSteps>
 
   <genericsetup:upgradeSteps

@@ -1,7 +1,7 @@
 """ Faceted configure
 """
 import logging
-from zope.interface import implementer
+from zope.interface import implementer, alsoProvides
 from zope.event import notify
 from zope.component import getUtility
 from zope.component import getMultiAdapter
@@ -10,6 +10,7 @@ from zope.schema.interfaces import IVocabularyFactory
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 
+from eea.facetednavigation.plonex import IDisableCSRFProtection
 from eea.facetednavigation.interfaces import IWidgetsInfo
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.browser import interfaces
@@ -185,6 +186,11 @@ class FacetedPositionHandler(FacetedBasicHandler):
 class FacetedFormHandler(FacetedBasicHandler):
     """ Edit criteria using a static form
     """
+    def __init__(self, context, request):
+        super(FacetedFormHandler, self).__init__(context, request)
+        # XXX Quick fix until we figure out how to enable CSRF Protection
+        alsoProvides(request, IDisableCSRFProtection)
+
     def __call__(self, **kwargs):
         """ This method is called from a form with more than one submit buttons
         """

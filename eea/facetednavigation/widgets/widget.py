@@ -4,7 +4,7 @@ import re
 import logging
 import operator
 from zope import interface
-from z3c.form import form, group, field
+from z3c.form import form, group
 from z3c.form.interfaces import IGroup
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
@@ -17,6 +17,7 @@ from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
 
+from eea.facetednavigation.plonex import ISolrSearch
 from eea.facetednavigation.interfaces import IFacetedCatalog
 from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
@@ -243,25 +244,24 @@ class Widget(group.GroupForm, form.Form):
         if catalog:
             mapping = dict(mapping)
             values = []
-            try:
-                from collective.solr.interfaces import ISearch
-                searchutility = queryUtility(ISearch, None)
-                if searchutility is not None:
-                    index = self.data.get('index', None)
-                    kw = {'facet': 'on',
-                      'facet.field': index,    # facet on index
-                      'facet.limit': -1,       # show unlimited results
-                      'rows':0}                # no results needed
-                    result = searchutility.search('*:*', **kw)
-                    try:
-                        values = result.facet_counts[
-                            'facet_fields'][index].keys()
-                    except (AttributeError, KeyError):
-                        pass
-            except ImportError:
-                pass
+
+            # get values from SOLR if collective.solr is present
+            searchutility = queryUtility(ISolrSearch, None)
+            if searchutility is not None:
+                index = self.data.get('index', None)
+                kw = {'facet': 'on',
+                  'facet.field': index,    # facet on index
+                  'facet.limit': -1,       # show unlimited results
+                  'rows':0}                # no results needed
+                result = searchutility.search('*:*', **kw)
+                try:
+                    values = result.facet_counts['facet_fields'][index].keys()
+                except (AttributeError, KeyError):
+                    pass
+
             if not values:
                 values = self.catalog_vocabulary()
+
             res = [(val, mapping.get(val, val)) for val in values]
             res.sort(key=operator.itemgetter(1), cmp=compare)
         else:
