@@ -4,136 +4,45 @@ import re
 import logging
 import operator
 from zope import interface
+from z3c.form import form, group
+from z3c.form.interfaces import IGroup
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
 from zope.i18nmessageid.message import Message
 from zope.schema.interfaces import IVocabularyFactory
 from zope.component import queryUtility
 from BTrees.IIBTree import weightedIntersection, IISet
-from zExceptions import NotFound
 
 from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
-from Products.Five.browser import BrowserView
 from Products.CMFPlone.utils import safeToInt
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.public import BooleanField
-from Products.Archetypes.public import BooleanWidget
-from Products.Archetypes.public import SelectionWidget
 
+from eea.facetednavigation.plonex import ISolrSearch
 from eea.facetednavigation.interfaces import IFacetedCatalog
-
-from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.widgets.interfaces import IWidget
+from eea.facetednavigation.widgets.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.interfaces import CountableSchemata
+logger = logging.getLogger('eea.facetednavigation')
 
 def compare(a, b):
     """ Compare lower values
     """
     return cmp(a.lower(), b.lower())
 
-logger = logging.getLogger('eea.facetednavigation.widgets.widget')
-
-CommonEditSchema = Schema((
-    StringField('title',
-        schemata="default",
-        required=True,
-        widget=StringWidget(
-            size=25,
-            label=_(u"Friendly name"),
-            description=_(u"Title for widget to display in view page"),
-        )
-    ),
-    StringField('position',
-        schemata="layout",
-        vocabulary_factory="eea.faceted.vocabularies.WidgetPositions",
-        widget=SelectionWidget(
-            format='select',
-            label=_(u'Position'),
-            description=_(u"Widget position in page"),
-        )
-    ),
-    StringField('section',
-        schemata="layout",
-        vocabulary_factory="eea.faceted.vocabularies.WidgetSections",
-        widget=SelectionWidget(
-            format='select',
-            label=_(u"Section"),
-            description=_("Display widget in section"),
-        )
-    ),
-    BooleanField('hidden',
-        schemata="layout",
-        widget=BooleanWidget(
-            label=_(u'Hidden'),
-            description=_(u"Hide widget"),
-        )
-    ),
-))
-
-class SimpleATAccessor(object):
-    """ Simple AT Accessor
-    """
-    def __init__(self, widget, key):
-        self.widget = widget
-        self.data = widget.data
-        self.key = key
-
-    def __call__(self):
-        value = self.data.get(self.key, None)
-        if value is not None:
-            return value
-
-        field = self.widget.edit_schema.get(self.key)
-        return getattr(field, 'default', None)
-#
-# Widget wrapper for Archetypes Widgets
-#
-class ATWidget(BrowserView):
-    """ Archetypes Widget
-    """
-    view_schema = Schema()
-    edit_schema = CommonEditSchema.copy()
-
-    def get_macro(self, field, schema='view'):
-        """ Get edit macro from archetypes schema by given field name
-        """
-        field = self.get_field(field, schema)
-        try:
-            return field.widget('edit', self.context)
-        except NotFound:
-            # This hack makes this work for dexterity items - they do not
-            # implement dict access (getitem), therefore we get a NotFound
-            # when trying to get the 'at_widget_%s' customization element
-            # - see Products/Archetypes/generator/widget.py
-            # Trick Archetypes into avoid trying to get the 'at_widget_%s'
-            # macro:
-            field.widget.macro = field.widget.macro + '|dummy'
-            return field.widget('edit', self.context)
-
-    def get_field(self, field, schema='view'):
-        """ Get field from archetypes schema by given field name
-        """
-        if schema == 'view':
-            return self.view_schema[field]
-        return self.edit_schema[field]
-
-    def accessor(self, key):
-        """ Returns a value accessor
-        """
-        return SimpleATAccessor(self, key)
 #
 # Faceted Widget
 #
-class Widget(ATWidget):
+@interface.implementer(IWidget)
+class Widget(group.GroupForm, form.Form):
     """ All faceted widgets should inherit from this class
     """
-    interface.implements(IWidget)
+    # z3c.form
+    groups = (DefaultSchemata, LayoutSchemata)
 
-    # Widget properties
+    # Faceted Widget properties
     widget_type = 'abstract'
     widget_label = 'Abstract'
     view_css = ()
@@ -146,6 +55,34 @@ class Widget(ATWidget):
         self.request = request
         self.request.debug = False
         self.data = data
+
+    @property
+    def prefix(self):
+        """ Form prefix
+        """
+        cid = self.data.getId()
+        if isinstance(cid, unicode):
+            cid = cid.encode('utf-8')
+        return cid
+
+    def getContent(self):
+        """ Content
+        """
+        return self.data
+
+    def update(self):
+        """ Update
+        """
+        self.updateWidgets(prefix=self.prefix)
+        groups = []
+        for groupClass in self.groups:
+            if IGroup.providedBy(groupClass):
+                group = groupClass
+            else:
+                group = groupClass(self.data, self.request, self)
+            group.updateWidgets(prefix=self.prefix)
+            groups.append(group)
+        self.groups = tuple(groups)
 
     @property
     def template(self):
@@ -307,25 +244,24 @@ class Widget(ATWidget):
         if catalog:
             mapping = dict(mapping)
             values = []
-            try:
-                from collective.solr.interfaces import ISearch
-                searchutility = queryUtility(ISearch, None)
-                if searchutility is not None:
-                    index = self.data.get('index', None)
-                    kw = {'facet': 'on',
-                      'facet.field': index,    # facet on index
-                      'facet.limit': -1,       # show unlimited results
-                      'rows':0}                # no results needed
-                    result = searchutility.search('*:*', **kw)
-                    try:
-                        values = result.facet_counts[
-                            'facet_fields'][index].keys()
-                    except (AttributeError, KeyError):
-                        pass
-            except ImportError:
-                pass
+
+            # get values from SOLR if collective.solr is present
+            searchutility = queryUtility(ISolrSearch, None)
+            if searchutility is not None:
+                index = self.data.get('index', None)
+                kw = {'facet': 'on',
+                  'facet.field': index,    # facet on index
+                  'facet.limit': -1,       # show unlimited results
+                  'rows':0}                # no results needed
+                result = searchutility.search('*:*', **kw)
+                try:
+                    values = result.facet_counts['facet_fields'][index].keys()
+                except (AttributeError, KeyError):
+                    pass
+
             if not values:
                 values = self.catalog_vocabulary()
+
             res = [(val, mapping.get(val, val)) for val in values]
             res.sort(key=operator.itemgetter(1), cmp=compare)
         else:
@@ -340,38 +276,10 @@ class Widget(ATWidget):
         """
         return self.template
 
-
-CountableWidgetSchema = Schema((
-    BooleanField('count',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u"Count results"),
-            description=_(u"Display number of results near each option"),
-        )
-    ),
-    BooleanField('sortcountable',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u"Sort by countable"),
-            description=_(u"Use the results counter for sorting"),
-        )
-    ),
-    BooleanField('hidezerocount',
-        schemata="countable",
-        widget=BooleanWidget(
-            label=_(u'Hide items with zero results'),
-            description=_(u"This option works only if 'count results' "
-                           "is enabled"),
-            i18n_domain="eea"
-        )
-    ),
-))
-
 class CountableWidget(Widget):
     """ Defines useful methods for countable widgets
     """
-    # Widget properties
-    edit_schema = Widget.edit_schema.copy() + CountableWidgetSchema.copy()
+    groups = Widget.groups + (CountableSchemata,)
 
     @property
     def countable(self):

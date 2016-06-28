@@ -38,8 +38,8 @@ Let's add some configuration
 
     >>> handler = sandbox.unrestrictedTraverse('@@faceted_configure')
     >>> _ = handler(addPropertiesWidget_button='Add',
-    ...   wtype='text', wposition='left', c0_title='Text widget',
-    ...   c0_index='Title', c0_default='water')
+    ...   wtype='text', wposition='left', title='Text widget',
+    ...   index='Title', default='water')
 
 Now let's try to get faceted navigation configuration from french
 
@@ -70,8 +70,8 @@ Ok, what if I edit or add a widget elsewhere than the canonical?
 
     >>> ro_handler = ro.unrestrictedTraverse('@@faceted_configure')
     >>> _ = ro_handler(addPropertiesWidget_button='Add',
-    ...   wtype='select', wposition='right', c0_title='Select widget',
-    ...   c0_index='portal_types', c0_default='Folder')
+    ...   wtype='select', wposition='right', title='Select widget',
+    ...   index='portal_types', default='Folder')
     >>> [widget for widget in ro_view.get_widgets()]
     [<eea.facetednavigation.widgets.text.widget.Widget object at...>, <eea.facetednavigation.widgets.select.widget.Widget object at...>]
 

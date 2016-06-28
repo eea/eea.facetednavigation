@@ -6,7 +6,7 @@
    <property name="title">Results per page</property>
    <property name="position">right</property>
    <property name="section">default</property>
-   <property name="hidden">1</property>
+   <property name="hidden">True</property>
    <property name="start">0</property>
    <property name="end">20</property>
    <property name="step">5</property>
@@ -17,15 +17,15 @@
    <property name="title">Portal type</property>
    <property name="position">right</property>
    <property name="section">default</property>
-   <property name="hidden">0</property>
+   <property name="hidden">False</property>
    <property name="index">portal_type</property>
    <property
       name="vocabulary">eea.faceted.vocabularies.FacetedPortalTypes</property>
    <property name="catalog"></property>
    <property name="maxitems">5</property>
    <property name="sortreversed">1</property>
-   <property name="count">1</property>
-   <property name="hidezerocount">0</property>
+   <property name="count">True</property>
+   <property name="hidezerocount">False</property>
    <property name="default">
     <element value="Document"/>
    </property>
@@ -35,7 +35,7 @@
    <property name="title">Sort on</property>
    <property name="position">right</property>
    <property name="section">default</property>
-   <property name="hidden">1</property>
+   <property name="hidden">True</property>
    <property name="vocabulary"></property>
    <property name="default">effective(reverse)</property>
   </criterion>
@@ -44,7 +44,7 @@
    <property name="title">Current search</property>
    <property name="position">center</property>
    <property name="section">default</property>
-   <property name="hidden">0</property>
+   <property name="hidden">False</property>
   </criterion>
  </criteria>
 </object>

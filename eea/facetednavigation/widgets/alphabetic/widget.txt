@@ -53,6 +53,11 @@ Add widget
     >>> _ = handler(addPropertiesWidget_button=True, wtype='alphabetic',
     ...             wposition='top', title='Alpha',
     ...             hidden=True, index='Title', default='Z')
+    >>> ICriteria(sandbox).keys()
+    [u'c0']
+
+    >>> ICriteria(sandbox).get('c0').__dict__
+    {...'default': u'Z'...}
 
 Query
 -----
@@ -69,3 +74,23 @@ Query
     >>> brains = query.query(c0='Z')
     >>> [brain.getId for brain in brains]
     ['a-folder']
+
+Update widget
+-------------
+
+    >>> _ = handler(updateCriterion_button=True, cid='c0',
+    ...             wposition='bottom', default='X', hidden=True)
+
+    >>> ICriteria(sandbox).get('c0').__dict__
+    {...'default': u'X'...}
+
+    >>> brains = query.query()
+    >>> [brain.getId for brain in brains]
+    []
+
+Delete widget
+-------------
+
+    >>> _ = handler(deleteWidget_button=True, cid='c0')
+    >>> ICriteria(sandbox).keys()
+    []

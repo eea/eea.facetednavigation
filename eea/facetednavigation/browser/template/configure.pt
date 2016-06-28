@@ -26,7 +26,7 @@
       tal:attributes="action string:${context/absolute_url}/@@faceted_configure"
       i18n:attributes="title">
       <div id="faceted-widget-type">
-        <div class="field"  id="archetypes-fieldname-wtype">
+        <div class="field"  id="faceted-field-wtype">
           <label for="wtype" i18n:translate="">Type</label>
           <div class="formHelp" i18n:translate="">
             Type of the widget.
@@ -38,7 +38,7 @@
             </tal:option>
           </select>
         </div>
-        <div class="field" id="archetypes-fieldname-wposition">
+        <div class="field" id="faceted-field-wposition">
           <label for="wposition" i18n:translate="">Position</label>
           <div class="formHelp" i18n:translate="">
             Position of the widget.
@@ -50,7 +50,7 @@
             </tal:position>
           </select>
         </div>
-        <div class="field" id="archetypes-fieldname-wsection">
+        <div class="field" id="faceted-field-wsection">
           <label for="wsection" i18n:translate="">Section</label>
           <div class="formHelp" i18n:translate="">
             Display widget in section.

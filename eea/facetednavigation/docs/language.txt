@@ -77,11 +77,11 @@ Add some content to search
 Configure faceted settings
 
     >>> _ = config(addPropertiesWidget_button='Add',
-    ...   wtype='text', wposition='left', c0_title='Default search for title',
-    ...   c0_index='Title', c0_default='faceted language', c0_hidden=True)
+    ...   wtype='text', wposition='left', title='Default search for title',
+    ...   index='Title', default='faceted language', hidden=True)
     >>> _ = config(addPropertiesWidget_button='Add',
-    ...   wtype='sorting', wposition='left', c0_title='Default sort',
-    ...   c0_default='sortable_title', c0_hidden=True)
+    ...   wtype='sorting', wposition='left', title='Default sort',
+    ...   default='sortable_title', hidden=True)
 
 
 1. No widget defined
@@ -106,8 +106,8 @@ French
   a) No default value set
 
     >>> _ = config(addPropertiesWidget_button='Add',
-    ...   wtype='select', wposition='left', c0_title='Language',
-    ...   c0_index='Language', c0_default='', c0_hidden=True)
+    ...   wtype='select', wposition='left', title='Language',
+    ...   index='Language', default='', hidden=True)
 
     >>> brains = search_en.query()
     >>> [brain.getId for brain in brains]
@@ -119,8 +119,8 @@ French
 
     >>> ICriteria(sandbox).delete('c2')
     >>> _ = config(addPropertiesWidget_button='Add',
-    ...   wtype='select', wposition='left', c0_title='Language',
-    ...   c0_index='Language', c0_default='fr', c0_hidden=True)
+    ...   wtype='select', wposition='left', title='Language',
+    ...   index='Language', default='fr', hidden=True)
 
     English
 
@@ -141,8 +141,8 @@ French
 
     >>> ICriteria(sandbox).delete('c2')
     >>> _ = config(addPropertiesWidget_button='Add',
-    ...   wtype='select', wposition='left', c0_title='Language',
-    ...   c0_index='Language', c0_default='fr', c0_hidden=False)
+    ...   wtype='select', wposition='left', title='Language',
+    ...   index='Language', default='fr', hidden=False)
 
     >>> brains = search_en.query()
     >>> [brain.getId for brain in brains]

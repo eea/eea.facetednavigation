@@ -75,19 +75,8 @@ class CSS(object):
     def helper_css(self):
         """ Helper css
         """
-        info = getUtility(IWidgetsInfo).widgets
-        res = []
-        for widget in info.values():
-            schema = widget.view_schema
-            atfields = schema.fields()
-            for atfield in atfields:
-                atwidget = atfield.widget
-                helper = getattr(atwidget, 'helper_css', None)
-                 # We expect the attribute value to be a iterable.
-                if not helper:
-                    continue
-                res.extend(item for item in helper if item not in res)
-        return res
+        return []
+
 
 class ViewCSS(CSS):
     """ CSS libs used in view mode

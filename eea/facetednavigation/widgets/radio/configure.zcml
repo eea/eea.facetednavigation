@@ -3,21 +3,24 @@
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="eea">
 
-  <faceted:widget factory=".widget.Widget" />
+  <faceted:widget
+    factory=".widget.Widget"
+    schema=".interfaces.IRadioSchema"
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.radio.view.js"
     file="./view.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.radio.edit.js"
     file="./edit.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.radio.view.css"
     file="./view.css"
-   />
+    />
 
 </configure>

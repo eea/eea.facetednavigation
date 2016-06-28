@@ -1,12 +1,13 @@
 """ Faceted settings
 """
-from zope.interface import implements, alsoProvides, noLongerProvides
+from zope.interface import implementer, alsoProvides, noLongerProvides
 from zope.security import checkPermission
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 
-from eea.facetednavigation.settings import BrowserMenu
-from eea.facetednavigation.settings import BrowserSubMenuItem
+from eea.facetednavigation.plonex import addTokenToUrl
+from eea.facetednavigation.plonex import BrowserMenu
+from eea.facetednavigation.plonex import BrowserSubMenuItem
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.settings.interfaces import ISettingsHandler
 from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
@@ -15,11 +16,13 @@ from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from eea.facetednavigation import EEAMessageFactory as _
 
+
+
 class SettingsMenu(BrowserSubMenuItem):
     """ Faceted settings menu
     """
-    title = _(u'Faceted settings')
-    description = _(u'Faceted global settings')
+    title = _(u'Faceted navigation')
+    description = _(u'Faceted navigation settings')
 
     submenuId = 'faceted_settings_actions'
     order = 5
@@ -42,6 +45,7 @@ class SettingsMenu(BrowserSubMenuItem):
         """
         return False
 
+
 class SettingsMenuItems(BrowserMenu):
     """ Faceted global settings menu items
     """
@@ -52,20 +56,35 @@ class SettingsMenuItems(BrowserMenu):
         # use format to avoid messing with url with "%" in them like
         # 'http://foo/stones-1/foo%20bar%20moo/@@faceted_settings/%s'
         action = url + '/@@faceted_settings/{0}'
+        action = addTokenToUrl(action, request)
 
         left_hidden = IHidePloneLeftColumn.providedBy(context)
         right_hidden = IHidePloneRightColumn.providedBy(context)
         smart_hidden = IDisableSmartFacets.providedBy(context)
 
+        configure = url + '/configure_faceted.html'
+
         menu = [
+            {
+                'title': _('Configure'),
+                'description': 'Configure faceted navigation',
+                'action': addTokenToUrl(configure, request),
+                'selected': 'configure_faceted' in request.URL,
+                'icon': '',
+                'extra': {
+                    'id': 'configure_faceted_navigation',
+                    'separator': None,
+                    'class': ''
+                    },
+                'submenu': None,
+            },
             {
                 'title': (_('Enable left portlets') if left_hidden
                      else _('Disable left portlets')),
                 'description': '',
                 'action': action.format('toggle_left_column'),
                 'selected': not left_hidden,
-                'icon': ('++resource++faceted_images/show.png' if left_hidden
-                    else '++resource++faceted_images/hide.png'),
+                'icon': '',
                 'extra': {
                     'id': 'toggle_left_column',
                     'separator': None,
@@ -79,8 +98,7 @@ class SettingsMenuItems(BrowserMenu):
                 'description': '',
                 'action': action.format('toggle_right_column'),
                 'selected': not right_hidden,
-                'icon': ('++resource++faceted_images/show.png' if right_hidden
-                    else '++resource++faceted_images/hide.png'),
+                'icon': '',
                 'extra': {
                     'id': 'toggle_right_column',
                     'separator': None,
@@ -94,8 +112,7 @@ class SettingsMenuItems(BrowserMenu):
                 'description': '',
                 'action': action.format('toggle_smart_facets'),
                 'selected': not smart_hidden,
-                'icon': ('++resource++faceted_images/show.png' if smart_hidden
-                    else '++resource++faceted_images/hide.png'),
+                'icon': '',
                 'extra': {
                     'id': 'disable_smart_facets',
                     'separator': None,
@@ -125,11 +142,11 @@ class SettingsMenuItems(BrowserMenu):
 
         return menu
 
+
+@implementer(ISettingsHandler)
 class SettingsHandler(BrowserView):
     """ Edit faceted global settings
     """
-    implements(ISettingsHandler)
-
     def _redirect(self, msg=''):
         """ Redirect
         """

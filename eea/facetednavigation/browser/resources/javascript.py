@@ -74,19 +74,7 @@ class Javascript(object):
     def helper_js(self):
         """ Helper js
         """
-        info = getUtility(IWidgetsInfo).widgets
-        res = []
-        for widget in info.values():
-            schema = widget.view_schema
-            atfields = schema.fields()
-            for atfield in atfields:
-                atwidget = atfield.widget
-                helper = getattr(atwidget, 'helper_js', None)
-                # We expect the attribute value to be a iterable.
-                if not helper:
-                    continue
-                res.extend(item for item in helper if item not in res)
-        return res
+        return []
 
 class ViewJavascript(Javascript):
     """ Javascript libs used in view mode
@@ -117,10 +105,10 @@ class ViewJavascript(Javascript):
     def __call__(self, *args, **kwargs):
         """ view.js
         """
-        self.request.RESPONSE.setHeader('content-type', 'text/javascript')
+        self.request.response.setHeader('content-type', 'text/javascript')
         expires = rfc1123_date((DateTime() + 365).timeTime())
-        self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader(
+        self.request.response.setHeader('Expires', expires)
+        self.request.response.setHeader(
             'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()
 
@@ -155,9 +143,9 @@ class EditJavascript(Javascript):
     def __call__(self, *args, **kwargs):
         """ edit.js
         """
-        self.request.RESPONSE.setHeader('content-type', 'text/javascript')
+        self.request.response.setHeader('content-type', 'text/javascript')
         expires = rfc1123_date((DateTime() + 365).timeTime())
-        self.request.RESPONSE.setHeader('Expires', expires)
-        self.request.RESPONSE.setHeader(
+        self.request.response.setHeader('Expires', expires)
+        self.request.response.setHeader(
             'Cache-Control', 'max-age=%d' % self.duration)
         return self.get_content()

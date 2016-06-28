@@ -4,7 +4,7 @@ from hashlib import md5
 import cPickle
 import logging
 from zope.component import queryAdapter
-from zope.interface import implements
+from zope.interface import implementer
 from Products.Five.browser import BrowserView
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.versions.interfaces import IFacetedVersion
@@ -13,11 +13,12 @@ from zope.annotation.interfaces import IAnnotations
 
 logger = logging.getLogger('eea.facetednavigation.cache.proxy')
 
+
+@implementer(IFacetedVersion)
 class FacetedVersion(BrowserView):
     """ Generate a unique key to be added to faceted query/counter in order to
     invalidate cached urls when faceted settings are changed.
     """
-    implements(IFacetedVersion)
     #
     # Private
     #
@@ -50,8 +51,18 @@ class FacetedVersion(BrowserView):
             return ''
 
         return md5(cPickle.dumps(query)).hexdigest()
+    #
+    # Public interface
+    #
+    @property
+    def key(self):
+        """ Get version key
+        """
+        anno = IAnnotations(self.context)
+        return anno.get(ANNO_FACETED_VERSION, '')
 
-    def _set(self, value=None):
+    @key.setter
+    def key(self, value=None):
         """ Set version key
         """
         key = self._digest()
@@ -61,16 +72,6 @@ class FacetedVersion(BrowserView):
         anno = IAnnotations(self.context)
         anno[ANNO_FACETED_VERSION] = key
         return key
-
-    def _get(self):
-        """ Get version key
-        """
-        anno = IAnnotations(self.context)
-        return anno.get(ANNO_FACETED_VERSION, '')
-    #
-    # Public interface
-    #
-    key = property(_get, _set)
 
     def __call__(self, **kwargs):
         return self.key

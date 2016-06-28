@@ -41,5 +41,5 @@ class IFacetedSubtyper(Interface):
         """
 
     def disable():
-        """Disable faceted navigation
+        """ Disable faceted navigation
         """

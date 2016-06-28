@@ -4,18 +4,16 @@ from Acquisition import Implicit
 from AccessControl import ClassSecurityInfo
 from App.class_init import InitializeClass
 
+from zope.interface import implementer
 from zope.traversing.interfaces import ITraversable
 from zope.traversing.adapters import DefaultTraversable
-
-from zope.interface import implements
 from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
 
 
+@implementer(IFacetedWrapper, ITraversable)
 class FacetedWrapper(Implicit):
     """ Wrap faceted navigable container
     """
-    implements(IFacetedWrapper, ITraversable)
-
     security = ClassSecurityInfo()
 
     def __init__(self, context):

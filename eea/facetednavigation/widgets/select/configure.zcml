@@ -3,21 +3,24 @@
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="eea">
 
-  <faceted:widget factory=".widget.Widget" />
+  <faceted:widget
+    factory=".widget.Widget"
+    schema=".interfaces.ISelectSchema"
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.select.view.js"
     file="./view.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.select.edit.js"
     file="./edit.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.select.view.css"
     file="./view.css"
-   />
+    />
 
 </configure>

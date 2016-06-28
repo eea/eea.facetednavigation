@@ -4,7 +4,7 @@ import logging
 from Acquisition import aq_inner
 from Acquisition import aq_parent
 from zope.component import queryMultiAdapter
-from zope.interface import implements
+from zope.interface import implementer
 from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.utils import XMLAdapterBase
 from eea.facetednavigation.interfaces import IFacetedNavigable
@@ -13,11 +13,10 @@ from Products.GenericSetup.interfaces import ISetupEnviron
 logger = logging.getLogger('eea.facetednavigation.exportimport.criteria')
 
 
+@implementer(ISetupEnviron)
 class CriteriaContext(BaseContext):
     """ Criteria import environ
     """
-    implements(ISetupEnviron)
-
     def __init__(self, tool, encoding='utf-8'):
         self._tool = tool
         self._site = aq_parent(aq_inner(tool.context))
@@ -68,7 +67,10 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                 sect = [s for s in child.getElementsByTagName('property')
                         if s.getAttribute('name') == 'section']
                 section = sect and sect[0].childNodes[0].nodeValue or 'default'
-                cid = self.context.add('text', position, section, _cid_=name)
+                widget = [w for w in child.getElementsByTagName('property')
+                        if w.getAttribute('name') == 'widget']
+                widget = widget and widget[0].childNodes[0].nodeValue or 'text'
+                cid = self.context.add(widget, position, section, _cid_=name)
             except KeyError:
                 # element already exists, we log and we continue
                 # this could be the case if should_purge is False

@@ -26,7 +26,7 @@ FacetedEdit.ResultsFilterWidget.prototype = {
     query.redirect = '';
     query.updateCriterion_button = 'Save';
     query.cid = self.wid;
-    query[self.wid + '_default'] = value;
+    query['faceted.' + self.wid + '.default'] = value;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){

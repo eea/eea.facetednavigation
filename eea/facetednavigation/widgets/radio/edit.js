@@ -46,7 +46,7 @@ FacetedEdit.RadioWidget.prototype = {
     query.cid = this.wid;
     this.selected = jQuery('input[type=radio]:checked', this.widget);
     var value = this.selected.val();
-    query[this.wid + '_default'] = value;
+    query['faceted.' + this.wid + '.default'] = value;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){

@@ -60,7 +60,7 @@ Query
     >>> [brain.getId for brain in brains]
     ['a-folder']
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c0', c0_default='python:"xx" in brain.Title')
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', default='python:"xx" in brain.Title')
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]
     []

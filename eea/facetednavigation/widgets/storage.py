@@ -3,65 +3,63 @@
 from zope import interface
 from eea.facetednavigation.widgets.interfaces import ICriterion
 
+@interface.implementer(ICriterion)
 class Criterion(object):
     """ Search criteria
     """
-    interface.implements(ICriterion)
-
     widget = None
-    title = ''
-    index = ''
-    vocabulary = ''
-    position = 'right'
+    title = u''
+    index = u''
+    vocabulary = u''
+    position = u'right'
     catalog = None
     _hidden = False
     default = None
-    section = 'default'
-
-    def hidden(self=None):
-        """ Hidden property
-        """
-        def fget(self):
-            """ Getter
-            """
-            hidden = getattr(self, '_hidden', None)
-            if not hidden:
-                return False
-
-            if hidden in ('0', 'False', 'false', 'none', 'None'):
-                return False
-            return True
-
-        def fset(self, value):
-            """ Setter
-            """
-            if value in ('0', 'False', 'false', 'none', 'None'):
-                value = False
-            self._hidden = value and True or False
-        return property(fget, fset, doc='Hidden property')
-    hidden = hidden()
+    section = u'default'
 
     def __init__(self, **kwargs):
-        taken_ids = set(kwargs.pop('_taken_ids_', []))
-        cid = kwargs.pop('_cid_', None)
+        taken_ids = set(kwargs.pop(u'_taken_ids_', []))
+        cid = kwargs.pop(u'_cid_', None)
         if not cid:
-            free_ids = set('c%d' % uid for uid in range(len(taken_ids)+1))
+            free_ids = set(u'c%d' % uid for uid in range(len(taken_ids)+1))
             cid = free_ids.difference(taken_ids)
             cid = cid.pop()
         elif cid in taken_ids:
-            raise KeyError('Id is already in use')
+            raise KeyError(u'Id is already in use')
+        if isinstance(cid, str):
+            cid = cid.decode('utf-8')
         self.__name__ = cid
         self.update(**kwargs)
+
+    @property
+    def hidden(self):
+        """ Hidden getter
+        """
+        hidden = getattr(self, u'_hidden', None)
+        if not hidden:
+            return False
+
+        if hidden in (u'0', u'False', u'false', u'none', u'None'):
+            return False
+        return True
+
+    @hidden.setter
+    def hidden(self, value):
+        """ Hidden setter
+        """
+        if value in (u'0', u'False', u'false', u'none', u'None'):
+            value = False
+        self._hidden = value and True or False
 
     def update(self, **kwargs):
         """ Update criterion properties
         """
         for key, value in kwargs.items():
+            if isinstance(key, str):
+                key = key.decode('utf-8')
+
             if isinstance(value, str):
                 value = value.decode('utf-8', 'replace')
-
-            if value == u'0':
-                value = u""
 
             setattr(self, key, value)
 

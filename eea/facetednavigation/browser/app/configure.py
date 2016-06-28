@@ -1,7 +1,7 @@
 """ Faceted configure
 """
 import logging
-from zope.interface import implements
+from zope.interface import implementer, alsoProvides
 from zope.event import notify
 from zope.component import getUtility
 from zope.component import getMultiAdapter
@@ -10,11 +10,11 @@ from zope.schema.interfaces import IVocabularyFactory
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 
+from eea.facetednavigation.plonex import IDisableCSRFProtection
 from eea.facetednavigation.interfaces import IWidgetsInfo
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.browser import interfaces
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
-
 from eea.facetednavigation import EEAMessageFactory as _
 
 
@@ -44,29 +44,14 @@ class FacetedBasicHandler(BrowserView):
         self.request.response.redirect(to)
         return msg
 
-    def _request_form(self, form):
-        """ Update kwargs from self.request.form
-        """
-        if getattr(self.request, 'form', None):
-            form.update(self.request.form)
 
-        # jQuery >= 1.4 adds type to params keys
-        # $.param({ a: [2,3,4] }) // "a[]=2&a[]=3&a[]=4"
-        # Let's fix this
-        return dict((key.replace('[]', ''), val)
-                    for key, val in form.items())
-
-
+@implementer(interfaces.IFacetedCriteriaHandler)
 class FacetedCriteriaHandler(FacetedBasicHandler):
     """ Edit criteria
     """
-    implements(interfaces.IFacetedCriteriaHandler)
-
     def add(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
-        kwargs = self._request_form(kwargs)
-
         wid = kwargs.pop('wtype', None)
         position = kwargs.pop('wposition', 'right')
         section = kwargs.pop('wsection', 'default')
@@ -81,8 +66,6 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
     def edit(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
-        kwargs = self._request_form(kwargs)
-
         criteria = ICriteria(self.context)
         handler = getMultiAdapter((self.context, self.request),
                                   name=u'faceted_update_criterion')
@@ -99,8 +82,6 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
     def delete(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
-        kwargs = self._request_form(kwargs)
-
         to_delete = kwargs.get('paths', kwargs.get('ids', ()))
         handler = getMultiAdapter((self.context, self.request),
                                   name=u'faceted_update_criterion')
@@ -108,39 +89,53 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
             handler.delete(cid)
         return self._redirect(_(u"Filters deleted"), to=self.redirect)
 
+
+@implementer(interfaces.IFacetedCriterionHandler)
 class FacetedCriterionHandler(FacetedBasicHandler):
     """ Edit criterion
     """
-    implements(interfaces.IFacetedCriterionHandler)
+    def extractData(self, widget, **kwargs):
+        """ Extract form
+        """
+        widget.update()
+        form, _errors = widget.extractData()
+        form.update(kwargs)
+        return form
 
     def add(self, **kwargs):
         """ See IFacetedCriterionHandler
         """
-        kwargs = self._request_form(kwargs)
-
-        wid = kwargs.pop('wtype', None)
-        position = kwargs.pop('wposition', 'right')
-        section = kwargs.pop('wsection', 'default')
+        wid = kwargs.pop('wtype',
+                         self.request.get('wtype', None))
+        position = kwargs.pop('wposition',
+                              self.request.get('wposition', 'right'))
+        section = kwargs.pop('wsection',
+                             self.request.get('wsection', 'default'))
 
         criteria = ICriteria(self.context)
         cid = criteria.add(wid, position, section)
-        return self.edit(cid, **kwargs)
+        return self.edit(cid, __new__=True, **kwargs)
 
     def edit(self, cid, **kwargs):
         """ See IFacetedCriterionHandler
         """
-        kwargs = self._request_form(kwargs)
-
         criteria = ICriteria(self.context)
         widget = criteria.widget(cid=cid)
-        fields = widget.edit_schema.keys()[:]
-        update = {}
+        criterion = criteria.get(cid)
+        if kwargs.pop('__new__', False):
+            criterion = criterion.__class__(cid='c0')
+        widget = widget(self.context, self.request, criterion)
 
-        for prop in fields:
-            new_value = kwargs.get(prop, None)
-            if new_value is None:
+        wid = kwargs.pop('widget', None)
+        properties = self.extractData(widget, **kwargs)
+        if wid:
+            properties['widget'] = wid
+
+        update = {}
+        for prop, value in properties.items():
+            if value is None:
                 continue
-            update[prop] = new_value
+            update[prop] = value
 
         if update:
             criteria.edit(cid, **update)
@@ -162,30 +157,15 @@ class FacetedCriterionHandler(FacetedBasicHandler):
             msg = _(u'Filter deleted')
         return self._redirect(msg=msg)
 
+
+@implementer(interfaces.IFacetedPositionHandler)
 class FacetedPositionHandler(FacetedBasicHandler):
     """ Edit criteria position
     """
-    implements(interfaces.IFacetedPositionHandler)
-
-    def _request_form(self, form):
-        """ Fix keys
-        """
-        form = super(FacetedPositionHandler, self)._request_form(form)
-        newform = {}
-        for key, value in form.items():
-            if not value:
-                continue
-            if isinstance(value, (str, unicode)):
-                value = [value]
-            newform[key] = value
-        return newform
-
     def update(self, **kwargs):
         """ Update position by given slots
         """
         logger.debug(kwargs)
-        kwargs = self._request_form(kwargs)
-
         ICriteria(self.context).position(**kwargs)
         return self._redirect('Position changed')
 
@@ -201,15 +181,23 @@ class FacetedPositionHandler(FacetedBasicHandler):
         ICriteria(self.context).down(cid)
         return self._redirect('Position changed', to=self.redirect)
 
+
+@implementer(interfaces.IFacetedFormHandler)
 class FacetedFormHandler(FacetedBasicHandler):
     """ Edit criteria using a static form
     """
-    implements(interfaces.IFacetedFormHandler)
+    def __init__(self, context, request):
+        super(FacetedFormHandler, self).__init__(context, request)
+        # XXX Quick fix until we figure out how to enable CSRF Protection
+        alsoProvides(request, IDisableCSRFProtection)
 
     def __call__(self, **kwargs):
         """ This method is called from a form with more than one submit buttons
         """
-        kwargs = self._request_form(kwargs)
+        form = getattr(self.request, 'form', {})
+        kwargs.update(form)
+        kwargs = dict((key.replace('[]', ''), val)
+                      for key, val in kwargs.items())
         #
         # Criteria
         #
@@ -233,26 +221,17 @@ class FacetedFormHandler(FacetedBasicHandler):
         handler = getMultiAdapter((self.context, self.request),
                                   name=u'faceted_update_criterion')
         # Add button clicked
-        if kwargs.get('addPropertiesWidget_button', None):
-            properties = {}
-            for key, value in kwargs.items():
-                key = key.replace('c0_', '', 1)
-                properties[key] = value
-            return handler.add(**properties)
+        if kwargs.pop('addPropertiesWidget_button', None):
+            return handler.add(**kwargs)
 
         # Delete button clicked
-        if kwargs.get('deleteWidget_button', None):
+        if kwargs.pop('deleteWidget_button', None):
             cid = kwargs.pop('path', kwargs.pop('cid', ''))
             return handler.delete(cid=cid, **kwargs)
 
         # Save button clicked
-        if kwargs.get('updateCriterion_button', None):
-            cid = kwargs.get('cid', '')
-            properties = {}
-            for key, value in kwargs.items():
-                key = key.replace(cid + '_', '', 1)
-                properties[key] = value
-            return handler.edit(**properties)
+        if kwargs.pop('updateCriterion_button', None):
+            return handler.edit(**kwargs)
         #
         # Position
         #
@@ -264,14 +243,14 @@ class FacetedFormHandler(FacetedBasicHandler):
             return handler.update(**kwargs)
 
         # Move up button clicked
-        move_up = [k for k in kwargs.keys()
+        move_up = [k for k in kwargs
                    if k.startswith('moveUp_button')]
         if move_up:
             cid = move_up[0].split('+++')[1]
             return handler.move_up(cid)
 
         # Move down button clicked
-        move_down = [k for k in kwargs.keys()
+        move_down = [k for k in kwargs
                    if k.startswith('moveDown_button')]
         if move_down:
             cid = move_down[0].split('+++')[1]
@@ -279,7 +258,8 @@ class FacetedFormHandler(FacetedBasicHandler):
 
         # Return
         self._redirect('Nothing changed', to=self.redirect)
-#
+
+
 # View
 #
 class FacetedConfigureView(object):

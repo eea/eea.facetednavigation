@@ -1,6 +1,6 @@
 """ Subtyping support
 """
-from zope.interface import implements
+from zope.interface import implementer
 from zope.interface import alsoProvides, noLongerProvides
 from zope.event import notify
 from zope.publisher.interfaces import NotFound
@@ -24,12 +24,11 @@ from eea.facetednavigation.events import (
 from eea.facetednavigation import EEAMessageFactory as _
 
 
+@implementer(IFacetedSubtyper)
 class FacetedPublicSubtyper(BrowserView):
     """ Public support for subtyping objects
         view for non IPossibleFacetedNavigable objects
     """
-    implements(IFacetedSubtyper)
-
     def __init__(self, context, request):
         self.context = context
         self.request = request

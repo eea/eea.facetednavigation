@@ -29,9 +29,6 @@ Setup sandbox
     >>> default = [widget for widget in view.get_widgets()]
     >>> cids = [widget.data.getId() for widget in default]
     >>> _ = handler(deleteWidgets_button='Delete', paths=cids)
-    >>> _ = handler(addPropertiesWidget_button='Add',
-    ...         wtype='select', wposition='left', c0_title='Language',
-    ...         c0_index='Language', c0_default='', c0_hidden=1)
 
 Alphabetic
 ----------
@@ -39,9 +36,9 @@ Calling counter for alphabetic widget will return a json object with all
 starting letters as keys and number of results per each.
 
     >>> _ = handler(addPropertiesWidget_button='Add',
-    ...         wtype='alphabetic', wposition='top', c0_title='Alphabetic',
-    ...         c0_index='Title', c0_default='A')
-    >>> counter(cid='c1')
+    ...         wtype='alphabetic', wposition='top', title='Alphabetic',
+    ...         index='Title', default='A')
+    >>> counter(cid='c0')
     '{..."W":...}'
 
 Checkbox
@@ -50,10 +47,10 @@ Counting on checkbox widget will return a json object with keys from
 widget.vocabulary and number of cataloged objects per each
 
     >>> _ = handler(addPropertiesWidget_button='Add',
-    ...         wtype='checkbox', wposition='left', c0_title='Checkbox',
-    ...         c0_catalog='portal_catalog',
-    ...         c0_index='portal_type', c0_default='Folder')
-    >>> counter(cid='c2')
+    ...         wtype='checkbox', wposition='left', title='Checkbox',
+    ...         catalog='portal_catalog',
+    ...         index='portal_type', default=[u'Folder'])
+    >>> counter(cid='c1')
     '{..."Document": 1...}'
 
 Radio
@@ -61,10 +58,10 @@ Radio
 Same as for checkbox
 
     >>> _ = handler(addPropertiesWidget_button='Add',
-    ...         wtype='radio', wposition='right', c0_title='Radio',
-    ...         c0_catalog='portal_catalog',
-    ...         c0_index='portal_type')
-    >>> counter(cid='c3')
+    ...         wtype='radio', wposition='right', title='Radio',
+    ...         catalog='portal_catalog',
+    ...         index='portal_type')
+    >>> counter(cid='c2')
     '{..."Document": 1...}'
 
 Select
@@ -72,8 +69,8 @@ Select
 Same as for checkbox.
 
     >>> _ = handler(addPropertiesWidget_button='Add',
-    ...         wtype='select', wposition='center', c0_title='Select',
-    ...         c0_catalog='portal_catalog',
-    ...         c0_index='portal_type')
-    >>> counter(cid='c4')
+    ...         wtype='select', wposition='center', title='Select',
+    ...         catalog='portal_catalog',
+    ...         index='portal_type')
+    >>> counter(cid='c3')
     '{..."Document": 1...}'

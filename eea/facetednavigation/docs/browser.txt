@@ -121,7 +121,7 @@ Edit (no AJAX)
     True
     >>> cids = browser.getControl(name='paths:list').options
     >>> browser.getControl(name='paths:list').value = cids
-    >>> browser.getControl('Delete').click()
+    >>> browser.getControl(name='deleteWidgets_button').click()
     >>> 'name="paths:list"' in browser.contents
     False
 
@@ -153,19 +153,19 @@ Edit (no AJAX)
 
   Save
 
-    >>> browser.getControl(name='c0_title').value = 'C0 title changed'
-    >>> browser.getControl(name='c0_position').value = ['left']
-    >>> browser.getControl(name='c1_title').value = 'C1 title changed'
-    >>> browser.getControl(name='c1_position').value = ['right']
+    >>> browser.getControl(name='faceted.c0.title').value = 'C0 title changed'
+    >>> browser.getControl(name='faceted.c0.position:list').value = ['left']
+    >>> browser.getControl(name='faceted.c1.title').value = 'C1 title changed'
+    >>> browser.getControl(name='faceted.c1.position:list').value = ['right']
     >>> browser.getControl('Save').click()
 
-    >>> browser.getControl(name='c0_title').value
+    >>> browser.getControl(name='faceted.c0.title').value
     'C0 title changed'
-    >>> browser.getControl(name='c0_position').value
+    >>> browser.getControl(name='faceted.c0.position:list').value
     ['left']
-    >>> browser.getControl(name='c1_title').value
+    >>> browser.getControl(name='faceted.c1.title').value
     'C1 title changed'
-    >>> browser.getControl(name='c1_position').value
+    >>> browser.getControl(name='faceted.c1.position:list').value
     ['right']
 
   Import
@@ -179,33 +179,33 @@ Edit (no AJAX)
     >>> browser.getControl('Export').click()
     >>> print browser.contents
     <?xml version="1.0"?>
-    <object name="sandbox" meta_type="ATFolder">
+    <object name="sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d'element</property>
-       <property name="position">top</property>
-       <property name="section">default</property>
-       <property name="hidden">0</property>
-       <property name="count"></property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
-       <property name="cloud">sphere</property>
        <property name="default">ATFolder</property>
+       <property name="position">top</property>
+       <property name="section">default</property>
+       <property name="hidden">False</property>
+       <property name="count">False</property>
+       <property name="cloud">sphere</property>
       </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
        <property name="title">Type d'element</property>
-       <property name="position">left</property>
-       <property name="section">default</property>
-       <property name="hidden">1</property>
-       <property name="count">1</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
         <element value="Folder"/>
         <element value="Document"/>
        </property>
+       <property name="position">left</property>
+       <property name="section">default</property>
+       <property name="hidden">True</property>
+       <property name="count">True</property>
       </criterion>
      </criteria>
     </object>
@@ -238,7 +238,7 @@ we can reproduce the ajax calls.
     ...                                 '&wposition=top'
     ...                                 '&wsection=default'
     ...                                 '&redirect='
-    ...                                 '&c0_title=Test+widget+%s') % (wtype, wtype))
+    ...                                 '&faceted.c0.title=Test+widget+%s') % (wtype, wtype))
 
     >>> browser.open(sandbox_url + '/@@configure_faceted.html')
     >>> browser.getControl(name='paths:list').options
@@ -282,17 +282,10 @@ we can reproduce the ajax calls.
     ...                             'updateCriterion_button=Save'
     ...                             '&redirect='
     ...                             '&cid=c0'
-    ...                             '&c0_title=C0+title+changed'
-    ...                             '&c0_section=advanced'
-    ...                             '&c0_hidden=1'
-    ...                             '&c0_position=right'))
+    ...                             '&faceted.c0.title=C0+title+changed'
+    ...                             '&faceted.c0.section=advanced'
+    ...                             '&faceted.c0.hidden=selected'
+    ...                             '&faceted.c0.position=right'))
     >>> browser.open(sandbox_url + '/@@faceted_widgets')
-    >>> print browser.contents
-    <div ...>
-    ...
-    ...right---advanced---section...
-    ...
-    <fieldset ...
-    <legend>C0 title changed</legend>
-   	...
-    <BLANKLINE>
+    >>> 'C0 title changed' in browser.contents
+    True

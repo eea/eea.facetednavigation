@@ -1,16 +1,9 @@
-""" Text widget
+""" Widget
 """
 import logging
 
 from DateTime import DateTime
 from datetime import datetime
-
-from Products.Archetypes.public import BooleanField
-from Products.Archetypes.public import BooleanWidget
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import SelectionWidget
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
 
 from collective.js.jqueryui.utils import get_datepicker_date_format
 from collective.js.jqueryui.utils import get_python_date_format
@@ -18,9 +11,10 @@ from collective.js.jqueryui.viewlet import L10nDatepicker
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata
 from eea.facetednavigation import EEAMessageFactory as _
-
-
 logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
 
 
@@ -60,67 +54,9 @@ def convert_to_padded_digits(start, end):
     return bounds['start'], bounds['end']
 
 
-EditSchema = Schema((
-    StringField('index',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.DateRangeCatalogIndexes',
-        widget=SelectionWidget(
-            format='select',
-            label=_(u'Catalog index'),
-            description=_(u'Catalog index to use for search'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('default',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label=_(u'Default value'),
-            description=_(u"Default daterange (e.g. '2009/12/01=>2009/12/31')"),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('calYearRange',
-        schemata="display",
-        default="c-10:c+10",
-        widget=StringWidget(
-            size=25,
-            label=_(u'UI Calendar years range'),
-            description=_(u'Control the range of years'
-                          'displayed in the year drop-down: '
-                          'either relative to today\'s year '
-                          '(-nn:+nn), relative to the '
-                          'currently selected year (c-nn:c+nn'
-                          '), absolute (nnnn:nnnn), or '
-                          'combinations of these formats '
-                          '(nnnn:-nn).'),
-            i18n_domain="eea"
-        )
-    ),
-    BooleanField('usePloneDateFormat',
-        schemata="display",
-        default=False,
-        widget=BooleanWidget(
-            label=_(u'Reuse date format and language used by Plone'),
-            description=_(u'Reuse the same date format and the '
-                          'the same language that Plone uses '
-                          'elsewhere. Otherwise, the format will '
-                          'be "yy-mm-dd" and the language "English". '
-                          'Note that this default format allows '
-                          'you to encode very old or big years '
-                          '(example : 0001 will not be converted '
-                          'to 1901). Other formats do not.'),
-            i18n_domain="eea"
-        )
-    ),
-))
-
-
 class Widget(AbstractWidget, L10nDatepicker):
     """ Widget
     """
-    # Widget properties
     widget_type = 'daterange'
     widget_label = _('Date range')
     view_js = '++resource++eea.facetednavigation.widgets.daterange.view.js'
@@ -128,8 +64,9 @@ class Widget(AbstractWidget, L10nDatepicker):
     view_css = '++resource++eea.facetednavigation.widgets.daterange.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.daterange.edit.css'
 
+    groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
+
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
 
     @property
     def default(self):
@@ -219,12 +156,12 @@ class Widget(AbstractWidget, L10nDatepicker):
     @property
     def cal_year_range(self):
         """Return the stored value of calYearRange."""
-        return self.accessor('calYearRange')()
+        return self.data.get('calYearRange', u"c-10:c+10")
 
     @property
     def use_plone_date_format(self):
         """Return the stored value of usePloneDateFormat."""
-        return self.accessor('usePloneDateFormat')()
+        return self.data.get('usePloneDateFormat', False)
 
     @property
     def js_date_format(self):

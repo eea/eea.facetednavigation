@@ -1,0 +1,9 @@
+instance:
+    image: plone/plone:5
+    ports:
+    - "8080"
+    volumes:
+    - ../../:/plone/instance/src/eea.facetednavigation
+    environment:
+    - BUILDOUT_EGGS=eea.facetednavigation plone.app.testing
+    - BUILDOUT_DEVELOP=src/eea.facetednavigation

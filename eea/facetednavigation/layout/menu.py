@@ -1,16 +1,15 @@
 """ Menu
 """
-from zope import interface
 import logging
+from zope.interface import implementer
 from zope.component import queryAdapter
 from plone.app.contentmenu.menu import DisplayMenu
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser import BrowserView
-
+from eea.facetednavigation.plonex import addTokenToUrl
 from eea.facetednavigation.layout.interfaces import ILayoutMenuHandler
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
-
 logger = logging.getLogger('eea.facetednavigation.layout.menu')
 
 class FacetedDisplayMenu(DisplayMenu):
@@ -47,8 +46,8 @@ class FacetedDisplayMenu(DisplayMenu):
             layout['extra'] = template['extra'].copy()
             layout['extra']['id'] = name
             layout['title'] = label
-            layout['action'] = '%s/@@faceted_layout?layout=%s' % (
-                obj.absolute_url(), name)
+            url = '%s/@@faceted_layout?layout=%s' % (obj.absolute_url(), name)
+            layout['action'] = addTokenToUrl(url, request)
 
             if name == current:
                 layout['selected'] = True
@@ -58,11 +57,11 @@ class FacetedDisplayMenu(DisplayMenu):
 
         return new
 
+
+@implementer(ILayoutMenuHandler)
 class LayoutMenuHandler(BrowserView):
     """ Layout support
     """
-    interface.implements(ILayoutMenuHandler)
-
     def _redirect(self, msg):
         """ Set status message to msg and redirect to context absolute_url
         """

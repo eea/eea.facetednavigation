@@ -2,7 +2,7 @@
 """
 import json
 from Products.Five import BrowserView
-from zope.interface import implements
+from zope.interface import implementer
 
 from eea.faceted.vocabularies.autocomplete import IAutocompleteSuggest
 
@@ -12,10 +12,11 @@ vocab = [
     ('Folder', u"Folder"),
 ]
 
-class TypesSuggest(BrowserView):
-    """ Types Autocomplete view """
-    implements(IAutocompleteSuggest)
 
+@implementer(IAutocompleteSuggest)
+class TypesSuggest(BrowserView):
+    """ Types Autocomplete view
+    """
     label = u"Types"
 
     def __call__(self):

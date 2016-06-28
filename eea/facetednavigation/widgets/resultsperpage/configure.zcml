@@ -3,16 +3,19 @@
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="eea">
 
-  <faceted:widget factory=".widget.Widget" />
+  <faceted:widget
+    factory=".widget.Widget"
+    schema=".interfaces.IResultsPerPageSchema"
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.resultsperpage.view.js"
     file="./view.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.resultsperpage.edit.js"
     file="./edit.js"
-   />
+    />
 
 </configure>

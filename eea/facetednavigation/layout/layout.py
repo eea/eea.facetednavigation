@@ -1,17 +1,17 @@
 """ Layout adapters
 """
-from zope import interface
+from zope.interface import implementer
 from zope.component import getUtility, queryMultiAdapter
 from zope.annotation.interfaces import IAnnotations
 from eea.facetednavigation.interfaces import IViewsInfo
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 
+
+@implementer(IFacetedLayout)
 class FacetedLayout(object):
     """ Faceted Layout
     """
-    interface.implements(IFacetedLayout)
-
     def __init__(self, context):
         self.context = context
     #

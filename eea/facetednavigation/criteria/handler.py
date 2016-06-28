@@ -2,7 +2,7 @@
 """
 from persistent.list import PersistentList
 from zope.component import getUtility
-from zope.interface import implements
+from zope.interface import implementer
 from zope.annotation.interfaces import IAnnotations
 from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation.config import ANNO_CRITERIA
@@ -13,11 +13,10 @@ from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from eea.facetednavigation.criteria.interfaces import ICriteria
 
 
+@implementer(ICriteria)
 class Criteria(object):
     """ Handle criteria
     """
-    implements(ICriteria)
-
     def __init__(self, context):
         """ Handle criteria
         """
@@ -93,8 +92,8 @@ class Criteria(object):
         criteria = self.criteria
         taken_ids = [criterion.getId() for criterion in criteria]
         properties['_taken_ids_'] = taken_ids
-        properties.update(kwargs)
-
+        if '_cid_' in kwargs:
+            properties['_cid_'] = kwargs.pop('_cid_')
         criterion = Criterion(widget=wid, position=position,
                               section=section, **properties)
 
@@ -117,7 +116,11 @@ class Criteria(object):
                 insert_index = index
                 break
         criteria.insert(insert_index, criterion)
-        return criterion.getId()
+
+        cid = criterion.getId()
+        if kwargs:
+            self.edit(cid, **kwargs)
+        return cid
 
     def delete(self, cid):
         """ Delete criteria by given ids
@@ -139,7 +142,21 @@ class Criteria(object):
         if not criterion:
             raise KeyError(cid)
 
-        criterion.update(**properties)
+        wid = properties.get('widget', None)
+        schema = self.schema(wid=wid, cid=cid)
+
+        criteria = {}
+        for key, value in properties.items():
+            if key not in schema:
+                continue
+            if isinstance(value, (list, tuple)):
+                value_type = schema[key].value_type
+                value = [value_type.fromUnicode(x) for x in value]
+            elif isinstance(value, (str, unicode)):
+                value = schema[key].fromUnicode(value)
+            criteria[key] = value
+
+        criterion.update(**criteria)
         self.criteria._p_changed = 1
     #
     # Position
@@ -185,6 +202,8 @@ class Criteria(object):
                      for term in voc(self.context))
         res = []
         for position, cids in positions:
+            if isinstance(cids, (str, unicode)):
+                cids = [cids]
             for cid in cids:
                 criterion = self.get(cid)
                 criterion.update(position=position)
@@ -203,4 +222,15 @@ class Criteria(object):
                 raise KeyError(cid)
             wid = criterion.get('widget')
         info = getUtility(IWidgetsInfo)
-        return info.widgets.get(wid, None)
+        return info.widget(wid)
+
+    def schema(self, wid=None, cid=None):
+        """ Return widget schema by given wid or from criterion by given cid
+        """
+        if not wid:
+            criterion = self.get(cid)
+            if not criterion:
+                raise KeyError(cid)
+            wid = criterion.get('widget')
+        info = getUtility(IWidgetsInfo)
+        return info.schema(wid)

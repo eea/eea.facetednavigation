@@ -2,46 +2,17 @@
 """
 # Python
 import logging
-
-# Zope2
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.interfaces import IBaseObject
 from Products.CMFCore.utils import getToolByName
-
-# Package
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
+from eea.facetednavigation.widgets.tal.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.tal.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
-
-
 logger = logging.getLogger('eea.facetednavigation.widgets.tal')
 
-EditSchema = Schema((
-    StringField('index',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.SortingCatalogIndexes',
-        widget=SelectionWidget(
-            label=_(u'Catalog index'),
-            description=_(u'Catalog index to use for search'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('default',
-        schemata="default",
-        default='string:',
-        widget=StringWidget(
-            label=_(u'Tal Expression'),
-            description=_(u'Default tal expression for query value'),
-            i18n_domain="eea"
-        )
-    ),
-))
 
 class Widget(AbstractWidget):
     """ TAL Expression widget
@@ -62,10 +33,13 @@ class Widget(AbstractWidget):
     edit_js = '++resource++eea.facetednavigation.widgets.tal.edit.js'
 
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'TAL Expression'
-    edit_schema['hidden'].default = True
-    edit_schema['hidden'].schemata = 'hidden'
+
+    groups = (DefaultSchemata, LayoutSchemata)
+
+    # edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
+    # edit_schema['title'].default = 'TAL Expression'
+    # edit_schema['hidden'].default = True
+    # edit_schema['hidden'].schemata = 'hidden'
 
     def referer(self, path=None):
         """ Extract referer from request or return self.context

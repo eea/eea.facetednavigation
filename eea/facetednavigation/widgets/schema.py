@@ -1,16 +1,16 @@
 """ Schemas
 """
 from zope.i18nmessageid.message import MessageFactory
-from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
-from Products.Five.browser import BrowserView
+from zope.publisher.browser import BrowserPage
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 
-PMF = MessageFactory('plone')
+_ = MessageFactory('plone')
 
 
-class Schema(BrowserView):
+class Schema(BrowserPage):
     """ Handle widgets in edit mode
     """
-    index = ZopeTwoPageTemplateFile('schema.pt', globals())
+    template = ViewPageTemplateFile('schema.pt')
 
     def __init__(self, context, request, widget, data):
         self.context = context
@@ -20,11 +20,12 @@ class Schema(BrowserView):
         self.data = data
 
     def __call__(self, **kwargs):
-        return self.index()
+        self.widget.update()
+        return self.template()
 
     def getTranslatedSchemaLabel(self, schema):
         """Get message for schemata
         """
         label = u"label_schema_%s" % schema
         default = unicode(schema).capitalize()
-        return PMF(label, default=default)
+        return _(label, default=default)

@@ -10,11 +10,11 @@ class IFacetedLayout(interface.Interface):
     """ Utility to get available layouts, current layout.
     """
 
-    layout = interface.Attribute("""Current layout""")
-    layouts = interface.Attribute("""Available layouts""")
-    default_layouts = interface.Attribute("""et container default layouts""")
+    layout = interface.Attribute(u"Current layout")
+    layouts = interface.Attribute(u"Available layouts")
+    default_layouts = interface.Attribute(u"container default layouts")
 
-    def get_macro(self, template_id=None, macro='content-core'):
+    def get_macro(self, template_id=None, macro=u'content-core'):
         """ Get macro from layout
         """
 

@@ -1,14 +1,15 @@
 """ Faceted Views meta directives
 """
-from zope.interface import Interface, implements
+from zope.interface import Interface, implementer
 from eea.facetednavigation.views.interfaces import IViewsInfo
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from Products.Five.browser.metaconfigure import page
 
+
+@implementer(IViewsInfo)
 class ViewsInfo(object):
     """ Faceted views registry
     """
-    implements(IViewsInfo)
     _views = {}
 
     @property

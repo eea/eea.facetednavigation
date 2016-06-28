@@ -4,11 +4,11 @@
   <criterion name="c7">
    <property name="widget">checkbox</property>
    <property name="position">left</property>
-   <property name="hidden">1</property>
+   <property name="hidden">True</property>
    <property name="title">Type d'element</property>
    <property name="index">portal_type</property>
    <property name="vocabulary"></property>
-   <property name="count">1</property>
+   <property name="count">True</property>
    <property name="default">
     <element value="Folder"/>
     <element value="Document"/>
@@ -17,12 +17,12 @@
   <criterion name="c2">
    <property name="widget">tagscloud</property>
    <property name="position">top</property>
-   <property name="hidden">0</property>
+   <property name="hidden">False</property>
    <property name="title">Meta-type d'element</property>
    <property name="index">meta_type</property>
    <property name="vocabulary"></property>
    <property name="cloud">sphere</property>
-   <property name="count">0</property>
+   <property name="count">False</property>
    <property name="default">ATFolder</property>
   </criterion>
  </criteria>

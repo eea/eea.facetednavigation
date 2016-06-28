@@ -1,46 +1,19 @@
-""" Text widget
+""" Widget
 """
 import logging
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.public import SelectionWidget
 from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation.widgets.range.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.range.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
-
-
 logger = logging.getLogger('eea.facetednavigation.widgets.range')
 
-EditSchema = Schema((
-    StringField('index',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.RangeCatalogIndexes',
-        widget=SelectionWidget(
-            format='select',
-            label=_(u'Catalog index'),
-            description=_(u'Catalog index to use for search'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('default',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label=_(u'Default value'),
-            description=_(u"Default range (e.g. '1 => 3')"),
-            i18n_domain="eea"
-        )
-    ),
-))
 
 class Widget(AbstractWidget):
     """ Widget
     """
-    # Widget properties
     widget_type = 'range'
     widget_label = _('Range')
     view_js = '++resource++eea.facetednavigation.widgets.range.view.js'
@@ -48,8 +21,9 @@ class Widget(AbstractWidget):
     view_css = '++resource++eea.facetednavigation.widgets.range.view.css'
     edit_css = '++resource++eea.facetednavigation.widgets.range.edit.css'
 
+    groups = (DefaultSchemata, LayoutSchemata)
+
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
 
     @property
     def default(self):
@@ -96,5 +70,3 @@ class Widget(AbstractWidget):
             'range': 'min:max'
         }
         return query
-
-

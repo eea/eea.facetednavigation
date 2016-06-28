@@ -1,68 +1,28 @@
-""" Text widget
+""" Widget
 """
 import logging
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import IntegerField
-from Products.Archetypes.public import IntegerWidget
-
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
-
-
+from eea.facetednavigation.widgets.resultsperpage.interfaces import (
+    DefaultSchemata,
+    LayoutSchemata,
+    DisplaySchemata,
+)
 logger = logging.getLogger('eea.facetednavigation.widgets.resultsperpage')
 
-EditSchema = Schema((
-    IntegerField('start',
-        schemata="display",
-        default=0,
-        widget=IntegerWidget(
-            label=_(u'Start'),
-            description=_(u'Results per page starting value'),
-            i18n_domain="eea"
-        )
-    ),
-    IntegerField('end',
-        schemata="display",
-        default=50,
-        widget=IntegerWidget(
-            label=_(u'End'),
-            description=_(u'Results per page ending value'),
-            i18n_domain="eea"
-        )
-    ),
-    IntegerField('step',
-        schemata="display",
-        default=5,
-        widget=IntegerWidget(
-            label=_(u'Step'),
-            description=_(u'Results per page step'),
-            i18n_domain="eea"
-        )
-    ),
-    IntegerField('default',
-        schemata="default",
-        default=20,
-        widget=IntegerWidget(
-            label=_(u'Default value'),
-            description=_(u'Default results per page'),
-            i18n_domain="eea"
-        )
-    ),
-))
 
 class Widget(AbstractWidget):
     """ Widget
     """
-    # Widget properties
     widget_type = 'resultsperpage'
     widget_label = _('Results per page')
     view_js = '++resource++eea.facetednavigation.widgets.resultsperpage.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.resultsperpage.edit.js'
 
+    groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
+
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'Results per page'
 
     @property
     def default(self):

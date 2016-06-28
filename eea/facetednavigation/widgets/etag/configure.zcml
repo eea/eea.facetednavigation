@@ -3,16 +3,19 @@
   xmlns:faceted="http://namespaces.zope.org/faceted"
   i18n_domain="eea">
 
-  <faceted:widget factory=".widget.Widget" />
+  <faceted:widget
+    factory=".widget.Widget"
+    schema=".interfaces.IETagSchema"
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.etag.edit.js"
     file="./edit.js"
-   />
+    />
 
   <browser:resource
     name="eea.facetednavigation.widgets.etag.edit.css"
     file="./edit.css"
-   />
+    />
 
 </configure>

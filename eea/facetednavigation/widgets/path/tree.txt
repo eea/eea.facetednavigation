@@ -150,7 +150,7 @@ Set up
 
   In view mode navigation tree is language dependent
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=0,
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=False,
     ...             root='/english', default='/english-child')
 
     English
@@ -190,7 +190,7 @@ Set up
 
   Let's get deeper
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=0,
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=False,
     ...             root='/english/english-child', default='/english-nephew')
 
   English
@@ -245,7 +245,7 @@ Set up
     >>> breadcrumbs_fr = getMultiAdapter((french, request), name=u'faceted.path.breadcrumbs.json')
     >>> breadcrumbs_it = getMultiAdapter((italian, request), name=u'faceted.path.breadcrumbs.json')
 
-    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=0,
+    >>> _ = handler(updateCriterion_button='Save', cid='c0', hidden=False,
     ...             root='/english', default='/english-child')
 
     English

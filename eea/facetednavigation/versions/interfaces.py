@@ -8,6 +8,7 @@ class IFacetedVersion(Interface):
     invalidate server proxy cache.
     """
     key = schema.TextLine(title=u'Version key')
+    key._type = (unicode, str)
 
     def __call__():
         """ Get version key

@@ -1,53 +1,31 @@
 """ Sorting widget
 """
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.public import SelectionWidget
+from plone.app.querystring.interfaces import IQuerystringRegistryReader
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
+
 from Products.CMFCore.utils import getToolByName
 from Products.ATContentTypes.criteria import _criterionRegistry
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.sorting.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.sorting.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-EditSchema = Schema((
-    StringField('vocabulary',
-        schemata="default",
-        vocabulary_factory='eea.faceted.vocabularies.PortalVocabularies',
-        widget=SelectionWidget(
-            label=_(u'Filter from vocabulary'),
-            description=_(u'Vocabulary to use to filter sorting criteria. '
-                        u'Leave empty for default sorting criteria.'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('default',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label=_(u'Default value'),
-            description=_(u"Default sorting index "
-                        u"(e.g. 'effective' or 'effective(reverse)')"),
-            i18n_domain="eea"
-        )
-    ),
-))
-
 class Widget(AbstractWidget):
     """ Widget
     """
-    # Widget properties
     widget_type = 'sorting'
     widget_label = _('Sorting')
     view_js = '++resource++eea.facetednavigation.widgets.sorting.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.sorting.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.sorting.view.css'
 
+    groups = (DefaultSchemata, LayoutSchemata)
+
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
-    edit_schema['title'].default = 'Sort on'
 
     @property
     def default(self):
@@ -105,17 +83,17 @@ class Widget(AbstractWidget):
         """
         return criteriaType in self.criteriaByIndexId(indexId)
 
-    def listFields(self):
-        """Return a list of fields from portal_catalog.
-        """
-        tool = getToolByName(self.context, 'portal_atct')
-        return tool.getEnabledFields()
-
     def listSortFields(self):
         """Return a list of available fields for sorting."""
-        fields = [field for field in self.listFields()
-                  if self.validateAddCriterion(field[0], 'ATSortCriterion')]
-        return fields
+
+        registry = getUtility(IRegistry)
+        config = IQuerystringRegistryReader(registry)()
+        indexes = config.get('sortable_indexes', {})
+
+        for name, index in indexes.items():
+            title = index.get('title', name)
+            description = index.get('description', title)
+            yield (name, title, description)
 
     def vocabulary(self, **kwargs):
         """ Return data vocabulary
@@ -123,7 +101,7 @@ class Widget(AbstractWidget):
         vocab = self.portal_vocabulary()
         sort_fields = self.listSortFields()
         if not vocab:
-            return sort_fields
+            return [field for field in sort_fields]
 
         vocab_fields = [field[0].replace('term.', '', 1) for field in vocab]
         return [f for f in sort_fields if f[0] in vocab_fields]

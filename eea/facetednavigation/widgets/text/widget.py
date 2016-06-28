@@ -1,72 +1,24 @@
-""" Text widget
+""" Widget
 """
-from Products.Archetypes.Field import BooleanField
-from Products.Archetypes.public import Schema
-from Products.Archetypes.public import SelectionWidget
-from Products.Archetypes.public import StringField
-from Products.Archetypes.public import StringWidget
-from Products.Archetypes.Widget import BooleanWidget
-
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from eea.facetednavigation.widgets.text.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.text.interfaces import DefaultSchemata
 
-
-EditSchema = Schema((
-    StringField('index',
-        schemata="default",
-        required=True,
-        vocabulary_factory='eea.faceted.vocabularies.TextCatalogIndexes',
-        widget=SelectionWidget(
-            label=_(u'Catalog index'),
-            description=_(u'Catalog index to use for search'),
-            i18n_domain="eea"
-        )
-    ),
-    StringField('default',
-        schemata="default",
-        widget=StringWidget(
-            size=25,
-            label=_(u'Default value'),
-            description=_(u'Default string to search for'),
-            i18n_domain="eea"
-        )
-    ),
-    BooleanField('onlyallelements',
-        schemata="default",
-        widget=BooleanWidget(
-            label=_(u'Search in all elements only'),
-            description=_(u'If this checkbox is checked, hides the choice to '
-                          u'filter in all items or in current items only'),
-            i18n_domain="eea"
-        )
-    ),
-    BooleanField('wildcard',
-        schemata="default",
-        widget=BooleanWidget(
-            label=_(u'Wildcard search'),
-            description=_(u"If this checkbox is checked, the system will "
-                          u"automatically do a wildcard search by appending "
-                          u"a '*' to the search term so "
-                          u"searching for 'budget' will also return elements "
-                          u"containing 'budgetary'."),
-            i18n_domain="eea"
-        )
-    ),
-))
 
 class Widget(AbstractWidget):
     """ Widget
     """
-    # Widget properties
     widget_type = 'text'
     widget_label = _('Text field')
     view_js = '++resource++eea.facetednavigation.widgets.text.view.js'
     edit_js = '++resource++eea.facetednavigation.widgets.text.edit.js'
     view_css = '++resource++eea.facetednavigation.widgets.text.view.css'
 
+    groups = (DefaultSchemata, LayoutSchemata)
+
     index = ViewPageTemplateFile('widget.pt')
-    edit_schema = AbstractWidget.edit_schema.copy() + EditSchema
 
     def quotestring(self, string):
         """ Quote given string

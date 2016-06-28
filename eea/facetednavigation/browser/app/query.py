@@ -10,6 +10,7 @@ from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.PloneBatch import Batch
 from plone.registry.interfaces import IRegistry
 
+from eea.facetednavigation.plonex import FolderView
 from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import cacheKeyFacetedNavigation
 from eea.facetednavigation.interfaces import IFacetedLayout, IEEASettings
@@ -18,15 +19,16 @@ from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.interfaces import IFacetedWrapper
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
+from plone.app.contentlisting.interfaces import IContentListing
 
 logger = logging.getLogger('eea.facetednavigation.browser.app.query')
 
-class FacetedQueryHandler(object):
+
+class FacetedQueryHandler(FolderView):
     """ Faceted Query
     """
     def __init__(self, context, request):
-        self.context = context
-        self.request = request
+        super(FacetedQueryHandler, self).__init__(context, request)
         if request.get('HTTP_X_REQUESTED_WITH', '') == 'XMLHttpRequest':
             registry = getUtility(IRegistry)
             settings = registry.forInterface(IEEASettings, check=False)
@@ -172,6 +174,14 @@ class FacetedQueryHandler(object):
             brains = [brain for brain in brains]
 
         return Batch(brains, num_per_page, b_start, orphan=orphans)
+
+    def results(self, **kwargs):
+        """ Faceted results
+        """
+        kwargs['batch'] = False
+        results = self.query(**kwargs)
+        results = IContentListing(results)
+        return results
 
     @ramcache(cacheKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
     def __call__(self, *args, **kwargs):
