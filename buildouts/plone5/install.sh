@@ -1,7 +1,4 @@
 #!/bin/sh
-curl -O -k https://bootstrap.pypa.io/bootstrap-buildout.py
-chmod u+x bootstrap-buildout.py
-virtualenv --no-site-packages .
-source bin/activate
-bin/python bootstrap-buildout.py
-bin/buildout
+curl -o "bootstrap.sh" -k https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/install.sh
+chmod u+x bootstrap.sh
+./bootstrap.sh
