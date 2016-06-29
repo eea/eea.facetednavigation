@@ -364,6 +364,9 @@
       <element>faceted-widgets-portlet-view</element>
     </value>
     <value key="depends">faceted-jquery</value>
+    <value key="csscompilation">++plone++static/faceted-view.min.css</value>
+    <value key="jscompilation">++plone++static/faceted-view.min.js</value>
+    <value key="compile">False</value>
     <value key="enabled">True</value>
   </records>
 
@@ -391,6 +394,10 @@
       <element>faceted-widgets-portlet-edit</element>
     </value>
     <value key="depends">faceted-jquery</value>
+    <value key="csscompilation">++plone++static/faceted-edit.min.css</value>
+    <value key="jscompilation">++plone++static/faceted-edit.min.js</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
     <value key="expression">python:'configure_faceted.html' in request.URL0</value>
   </records>
 
