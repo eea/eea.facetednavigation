@@ -102,6 +102,9 @@ class ViewCSS(CSS):
                 res.extend(css for css in view_css if css not in res)
             elif view_css not in res:
                 res.append(view_css)
+        print "==============="
+        from pprint import pprint
+        pprint(res)
         return res
 
     def __call__(self, *args, **kwargs):
@@ -139,6 +142,9 @@ class EditCSS(CSS):
                 res.extend(css for css in edit_css if css not in res)
             elif edit_css not in res:
                 res.append(edit_css)
+        print "==============="
+        from pprint import pprint
+        pprint(res)
         return res
 
     def __call__(self, *args, **kwargs):

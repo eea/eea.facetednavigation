@@ -100,6 +100,9 @@ class ViewJavascript(Javascript):
                 res.extend(js for js in view_js if js not in res)
             elif view_js not in res:
                 res.append(view_js)
+        print "==============="
+        from pprint import pprint
+        pprint(res)
         return res
 
     def __call__(self, *args, **kwargs):
@@ -138,6 +141,9 @@ class EditJavascript(Javascript):
                 res.extend(js for js in edit_js if js not in res)
             elif edit_js not in res:
                 res.append(edit_js)
+        print "==============="
+        from pprint import pprint
+        pprint(res)
         return res
 
     def __call__(self, *args, **kwargs):
