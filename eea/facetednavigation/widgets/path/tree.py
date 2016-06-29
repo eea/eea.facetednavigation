@@ -178,6 +178,8 @@ class FacetedTree(BrowserView):
 class FacetedTreeStrategy(DefaultNavtreeStrategy):
     """ Custom strategy
     """
+    bottomLevel = -1
+
     def nodeFilter(self, node):
         """ Filter node
         """
