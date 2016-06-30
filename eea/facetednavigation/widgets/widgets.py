@@ -1,5 +1,6 @@
 """ Faceted widgets
 """
+import warnings
 from zope.interface import implementer
 from zope.component.zcml import adapter
 from eea.facetednavigation.widgets.interfaces import ICriterion
@@ -75,3 +76,52 @@ def WidgetDirective(_context, factory=None, schema=None,
         factory=(accessor,),
         for_=(criterion,)
     )
+
+    #
+    # Ensure custom Faceted Navigation widgets were upgraded
+    #
+    edit_schema = getattr(factory, 'edit_schema', None)
+    if edit_schema is not None:
+        warnings.warn(
+            "'edit_schema' attribute is deprecated. "
+            "Please remove it from your custom Faceted Widget: %s" % name,
+            DeprecationWarning)
+
+    view_schema = getattr(factory, 'view_schema', None)
+    if view_schema is not None:
+        warnings.warn(
+            "'view_schema' attribute is deprecated. "
+            "Please remove it from your custom Faceted Widget: %s" % name,
+            DeprecationWarning)
+
+    view_css = getattr(factory, 'view_css', None)
+    if view_css is not None:
+        warnings.warn(
+            "'view_css' attribute is deprecated. "
+            "Please remove it from your custom Faceted Widget: %s "
+            "and register it within registry.xml/cssregistry,xml" % name,
+            DeprecationWarning)
+
+    edit_css = getattr(factory, 'edit_css', None)
+    if edit_css is not None:
+        warnings.warn(
+            "'edit_css' attribute is deprecated. "
+            "Please remove it from your custom Faceted Widget: %s "
+            "and register it within registry.xml/cssregistry,xml" % name,
+            DeprecationWarning)
+
+    view_js = getattr(factory, 'view_js', None)
+    if view_js is not None:
+        warnings.warn(
+            "'view_js' attribute is deprecated. "
+            "Please remove it from your custom Faceted Widget: %s "
+            "and register it within registry.xml/jsregistry,xml" % name,
+            DeprecationWarning)
+
+    edit_js = getattr(factory, 'edit_js', None)
+    if edit_js is not None:
+        warnings.warn(
+            "'edit_js' attribute is deprecated. "
+            "Please remove it from your custom Faceted Widget: %s "
+            "and register it within registry.xml/jsregistry,xml" % name,
+            DeprecationWarning)

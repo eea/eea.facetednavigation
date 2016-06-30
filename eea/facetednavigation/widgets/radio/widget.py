@@ -15,9 +15,6 @@ class Widget(CountableWidget):
     # Widget properties
     widget_type = 'radio'
     widget_label = _('Radio')
-    view_js = '++resource++eea.facetednavigation.widgets.radio.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.radio.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.radio.view.css'
 
     groups = (
         DefaultSchemata,

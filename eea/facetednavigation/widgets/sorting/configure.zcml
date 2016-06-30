@@ -23,4 +23,9 @@
     file="./view.css"
    />
 
+  <browser:resource
+    name="eea.facetednavigation.widgets.sorting.edit.css"
+    file="./edit.css"
+   />
+
 </configure>

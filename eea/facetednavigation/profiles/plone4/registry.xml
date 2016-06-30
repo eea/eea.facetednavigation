@@ -1,0 +1,11 @@
+<registry>
+  <record interface="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings"
+          field="resourceBundlesForThemes">
+    <value purge="false">
+      <element key="(default)" purge="false">
+        <element>faceted-view</element>
+        <element>faceted-edit</element>
+      </element>
+    </value>
+  </record>
+</registry>

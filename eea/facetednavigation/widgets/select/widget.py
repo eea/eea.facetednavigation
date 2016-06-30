@@ -14,9 +14,6 @@ class Widget(CountableWidget):
     """
     widget_type = 'select'
     widget_label = _('Select')
-    view_js = '++resource++eea.facetednavigation.widgets.select.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.select.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.select.view.css'
 
     groups = (
         DefaultSchemata,

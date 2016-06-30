@@ -1,7 +1,328 @@
 <?xml version="1.0"?>
 <registry>
 
-  <records prefix="plone.bundles/facetednavigation-jquery"
+  <!-- Faceted Navigation -->
+  <records prefix="plone.resources/faceted-navigation-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.faceted-navigation.css</element>
+    </value>
+    <value key="js">++resource++eea.faceted-navigation.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-navigation-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.faceted-navigation-edit.css</element>
+    </value>
+    <value key="js">++resource++eea.faceted-navigation-edit.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-navigation-expand"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++resource++eea.faceted-navigation-expand.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-navigation-independent"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++resource++eea.faceted-navigation-independent.js</value>
+  </records>
+
+
+  <!-- checkbox widget -->
+  <records prefix="plone.resources/faceted-widgets-checkbox-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.checkbox.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.checkbox.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-checkbox-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.checkbox.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.checkbox.edit.js</value>
+  </records>
+
+
+  <!-- sorting widget -->
+  <records prefix="plone.resources/faceted-widgets-sorting-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.sorting.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.sorting.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-sorting-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.sorting.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.sorting.edit.js</value>
+  </records>
+
+
+  <!-- text widget -->
+  <records prefix="plone.resources/faceted-widgets-text-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.text.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.text.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-text-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.text.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.text.edit.js</value>
+  </records>
+
+
+  <!-- daterange widget -->
+  <records prefix="plone.resources/faceted-widgets-daterange-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.daterange.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.daterange.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-daterange-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.daterange.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.daterange.edit.js</value>
+  </records>
+
+
+  <!-- alphabets widget -->
+  <records prefix="plone.resources/faceted-widgets-alphabets-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.alphabets.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.alphabets.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-alphabets-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.alphabets.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.alphabets.edit.js</value>
+  </records>
+
+
+  <!-- tagscloud widget -->
+  <records prefix="plone.resources/faceted-widgets-tagscloud-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.tagscloud.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.tagscloud.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-tagscloud-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.tagscloud.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.tagscloud.edit.js</value>
+  </records>
+
+
+  <!-- autocomplete widget -->
+  <records prefix="plone.resources/faceted-widgets-autocomplete-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.autocomplete.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.autocomplete.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-autocomplete-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.autocomplete.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.autocomplete.edit.js</value>
+  </records>
+
+
+  <!-- debug widget -->
+  <records prefix="plone.resources/faceted-widgets-debug-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.debug.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.debug.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-debug-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.debug.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.debug.edit.js</value>
+  </records>
+
+
+  <!-- range widget -->
+  <records prefix="plone.resources/faceted-widgets-range-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.range.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.range.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-range-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.range.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.range.edit.js</value>
+  </records>
+
+
+  <!-- radio widget -->
+  <records prefix="plone.resources/faceted-widgets-radio-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.radio.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.radio.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-radio-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.radio.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.radio.edit.js</value>
+  </records>
+
+
+  <!-- criteria widget -->
+  <records prefix="plone.resources/faceted-widgets-criteria-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.criteria.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.criteria.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-criteria-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.criteria.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.criteria.edit.js</value>
+  </records>
+
+
+  <!-- date widget -->
+  <records prefix="plone.resources/faceted-widgets-date-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.date.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.date.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-date-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.date.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.date.edit.js</value>
+  </records>
+
+
+  <!-- resultsperpage widget -->
+  <records prefix="plone.resources/faceted-widgets-resultsperpage-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.resultsperpage.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.resultsperpage.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-resultsperpage-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.resultsperpage.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.resultsperpage.edit.js</value>
+  </records>
+
+
+  <!-- path widget -->
+  <records prefix="plone.resources/faceted-widgets-path-tree"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++resource++eea.facetednavigation.widgets.path.tree.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-path-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.path.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.path.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-path-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.path.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.path.edit.js</value>
+  </records>
+
+
+  <!-- select widget -->
+  <records prefix="plone.resources/faceted-widgets-select-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.select.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.select.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-select-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.select.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.select.edit.js</value>
+  </records>
+
+
+  <!-- portlet widget -->
+  <records prefix="plone.resources/faceted-widgets-portlet-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.portlet.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.portlet.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-portlet-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.portlet.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.portlet.edit.js</value>
+  </records>
+
+
+  <records prefix="plone.bundles/faceted-jquery"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
       <element>browser</element>
@@ -12,51 +333,72 @@
       <element>tagcloud</element>
     </value>
     <value key="depends">jqueryui</value>
-    <value key="csscompilation">++plone++static/facetednavigation-compiled.css</value>
-    <value key="jscompilation">++plone++static/facetednavigation-compiled.js</value>
+    <value key="csscompilation">++plone++static/faceted-navigation-jquery.min.css</value>
+    <value key="jscompilation">++plone++static/faceted-navigation-jquery.min.js</value>
     <value key="compile">False</value>
     <value key="enabled">True</value>
   </records>
 
-  <!-- TODO faceted_view.js fails when compiled/minified so put it in a separate
-       bundle and treat the source as if it were already compiled until it can
-       be fixed -->
-  <records prefix="plone.resources/facetednavigation-view"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="css">
-      <element>faceted_view.css</element>
-    </value>
-    <value key="js">faceted_view.js</value>
-  </records>
-  <records prefix="plone.bundles/facetednavigation-view"
+  <records prefix="plone.bundles/faceted-view"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>facetednavigation-view</element>
+      <element>faceted-navigation-view</element>
+      <element>faceted-navigation-expand</element>
+      <element>faceted-navigation-independent</element>
+      <element>faceted-widgets-checkbox-view</element>
+      <element>faceted-widgets-sorting-view</element>
+      <element>faceted-widgets-text-view</element>
+      <element>faceted-widgets-daterange-view</element>
+      <element>faceted-widgets-alphabets-view</element>
+      <element>faceted-widgets-tagscloud-view</element>
+      <element>faceted-widgets-autocomplete-view</element>
+      <element>faceted-widgets-debug-view</element>
+      <element>faceted-widgets-range-view</element>
+      <element>faceted-widgets-radio-view</element>
+      <element>faceted-widgets-criteria-view</element>
+      <element>faceted-widgets-date-view</element>
+      <element>faceted-widgets-resultsperpage-view</element>
+      <element>faceted-widgets-path-tree</element>
+      <element>faceted-widgets-path-view</element>
+      <element>faceted-widgets-select-view</element>
+      <element>faceted-widgets-portlet-view</element>
     </value>
-    <value key="depends">facetednavigation-jquery</value>
+    <value key="depends">faceted-jquery</value>
+    <value key="csscompilation">++plone++static/faceted-view.min.css</value>
+    <value key="jscompilation">++plone++static/faceted-view.min.js</value>
+    <value key="compile">False</value>
     <value key="enabled">True</value>
-    <value key="csscompilation">faceted_view.css</value>
-    <value key="jscompilation">faceted_view.js</value>
   </records>
 
-  <records prefix="plone.resources/facetednavigation-edit"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="css">
-      <element>faceted_edit.css</element>
-    </value>
-    <value key="js">faceted_edit.js</value>
-  </records>
-  <records prefix="plone.bundles/facetednavigation-edit"
+  <records prefix="plone.bundles/faceted-edit"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>facetednavigation-edit</element>
+      <element>faceted-navigation-edit</element>
+      <element>faceted-navigation-expand</element>
+      <element>faceted-widgets-checkbox-edit</element>
+      <element>faceted-widgets-sorting-edit</element>
+      <element>faceted-widgets-text-edit</element>
+      <element>faceted-widgets-daterange-edit</element>
+      <element>faceted-widgets-alphabets-edit</element>
+      <element>faceted-widgets-tagscloud-edit</element>
+      <element>faceted-widgets-autocomplete-edit</element>
+      <element>faceted-widgets-debug-edit</element>
+      <element>faceted-widgets-range-edit</element>
+      <element>faceted-widgets-radio-edit</element>
+      <element>faceted-widgets-criteria-edit</element>
+      <element>faceted-widgets-date-edit</element>
+      <element>faceted-widgets-resultsperpage-edit</element>
+      <element>faceted-widgets-path-tree</element>
+      <element>faceted-widgets-path-edit</element>
+      <element>faceted-widgets-select-edit</element>
+      <element>faceted-widgets-portlet-edit</element>
     </value>
-    <value key="depends">facetednavigation-view</value>
+    <value key="depends">faceted-jquery</value>
+    <value key="csscompilation">++plone++static/faceted-edit.min.css</value>
+    <value key="jscompilation">++plone++static/faceted-edit.min.js</value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
     <value key="expression">python:'configure_faceted.html' in request.URL0</value>
-    <value key="csscompilation">++plone++static/facetednavigation-edit-compiled.css</value>
-    <value key="jscompilation">++plone++static/facetednavigation-edit-compiled.js</value>
-    <value key="compile">False</value>
-    <value key="enabled">True</value>
   </records>
 
 </registry>

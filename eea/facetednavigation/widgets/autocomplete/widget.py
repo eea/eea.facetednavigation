@@ -27,9 +27,6 @@ class Widget(AbstractWidget):
     # Widget properties
     widget_type = 'autocomplete'
     widget_label = _('Text field with suggestions')
-    view_js = '++resource++eea.facetednavigation.widgets.autocomplete.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.autocomplete.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.autocomplete.view.css'
 
     index = ViewPageTemplateFile('widget.pt')
     groups = (DefaultSchemata, LayoutSchemata)

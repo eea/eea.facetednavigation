@@ -12,12 +12,8 @@ class Widget(AbstractWidget):
     """
     widget_type = 'text'
     widget_label = _('Text field')
-    view_js = '++resource++eea.facetednavigation.widgets.text.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.text.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.text.view.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     def quotestring(self, string):

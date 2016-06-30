@@ -19,12 +19,8 @@ class Widget(AbstractWidget):
     """
     widget_type = 'sorting'
     widget_label = _('Sorting')
-    view_js = '++resource++eea.facetednavigation.widgets.sorting.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.sorting.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.sorting.view.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     @property

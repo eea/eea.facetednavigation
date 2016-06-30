@@ -17,11 +17,8 @@ class Widget(AbstractWidget):
     """
     widget_type = 'resultsperpage'
     widget_label = _('Results per page')
-    view_js = '++resource++eea.facetednavigation.widgets.resultsperpage.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.resultsperpage.edit.js'
 
     groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     @property

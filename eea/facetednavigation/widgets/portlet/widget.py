@@ -16,14 +16,9 @@ class Widget(AbstractWidget):
     # Widget properties
     widget_type = 'portlet'
     widget_label = _('Plone portlet')
-    view_js = '++resource++eea.facetednavigation.widgets.portlet.view.js'
-    view_css = '++resource++eea.facetednavigation.widgets.portlet.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.portlet.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ZopeTwoPageTemplateFile('widget.pt', globals())
-
 
     @property
     def macro(self):

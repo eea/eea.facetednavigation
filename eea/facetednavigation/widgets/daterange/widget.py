@@ -59,13 +59,8 @@ class Widget(AbstractWidget, L10nDatepicker):
     """
     widget_type = 'daterange'
     widget_label = _('Date range')
-    view_js = '++resource++eea.facetednavigation.widgets.daterange.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.daterange.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.daterange.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.daterange.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     @property

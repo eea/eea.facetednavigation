@@ -23,6 +23,11 @@
     file="./view.css"
    />
 
+  <browser:resource
+    name="eea.facetednavigation.widgets.autocomplete.edit.css"
+    file="./edit.css"
+   />
+
   <browser:view
     for="*"
     provides="eea.faceted.vocabularies.autocomplete.IAutocompleteSuggest"

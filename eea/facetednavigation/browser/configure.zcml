@@ -4,8 +4,6 @@
   xmlns:zcml="http://namespaces.zope.org/zcml"
   i18n_domain="eea">
 
-  <include package=".resources" />
-
   <browser:page
     for="..interfaces.IFacetedNavigable"
     name="facetednavigation_view"
