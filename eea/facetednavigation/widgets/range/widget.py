@@ -16,13 +16,8 @@ class Widget(AbstractWidget):
     """
     widget_type = 'range'
     widget_label = _('Range')
-    view_js = '++resource++eea.facetednavigation.widgets.range.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.range.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.range.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.range.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     @property

@@ -15,10 +15,6 @@ class Widget(CountableWidget):
     # Widget properties
     widget_type = 'boolean'
     widget_label = _('Boolean')
-    view_js = '++resource++eea.facetednavigation.widgets.checkbox.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.checkbox.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.checkbox.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.checkbox.edit.css'
     groups = (DefaultSchemata, LayoutSchemata, CountableSchemata)
 
     index = ViewPageTemplateFile('widget.pt')

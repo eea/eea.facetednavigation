@@ -7,6 +7,11 @@ Changelog
   [avoinea #90]
 * Change: Dropped Archetypes dependency and upgraded to z3c.form schema.
   [avoinea #87]
+* Change: Re-organized JS/CSS resources in bundles.
+  [avoinea #88]
+* Change: Dropped auto-generated CSS/JS `faceted_view.js`, `faceted_edit.js`,
+  `faceted_view.css`, `faceted_edit.css` resources
+  [avoinea #88]
 
 9.2 - (2016-06-16)
 ------------------

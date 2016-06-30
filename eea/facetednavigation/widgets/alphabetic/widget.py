@@ -23,13 +23,8 @@ class Widget(CountableWidget):
     """
     widget_type = 'alphabetic'
     widget_label = _('Alphabetic')
-    view_js = '++resource++eea.facetednavigation.widgets.alphabets.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.alphabets.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.alphabets.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.alphabets.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     # Widget custom API

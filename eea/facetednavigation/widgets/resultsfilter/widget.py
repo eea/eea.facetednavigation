@@ -34,10 +34,6 @@ class Widget(AbstractWidget):
     """
     widget_type = 'resultsfilter'
     widget_label = _('Results Filter')
-    edit_css = (
-        '++resource++eea.facetednavigation.widgets.resultsfilter.edit.css')
-    edit_js = (
-        '++resource++eea.facetednavigation.widgets.resultsfilter.edit.js')
 
     groups = (DefaultSchemata, LayoutSchemata)
     index = ViewPageTemplateFile('widget.pt')

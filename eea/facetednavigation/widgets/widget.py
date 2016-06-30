@@ -45,10 +45,6 @@ class Widget(group.GroupForm, form.Form):
     # Faceted Widget properties
     widget_type = 'abstract'
     widget_label = 'Abstract'
-    view_css = ()
-    edit_css = ()
-    view_js = ()
-    edit_js = ()
 
     def __init__(self, context, request, data=None):
         self.context = context

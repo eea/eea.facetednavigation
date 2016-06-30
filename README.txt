@@ -35,6 +35,16 @@ it covers same functionality and it adds a lot more features.
 
 .. contents::
 
+Upgrade to version 10.0+
+========================
+* Within "Plone > Site setup > Add-ons" click on upgrade button available for
+  EEA Faceted Navigation;
+* Only if the above step didn't work for you. Within "Plone > Site setup > Add-ons"
+  uninstall EEA Faceted Navigation and Install it again;
+* If you have third-party Faceted Navigation Widgets (registered outside
+  eea.facetednavigation package) you will need to upgrade them to z3c.form
+  and explicitly register JS/CSS resources within registry.xml/cssregistry.xml/jsregistry,xml
+  Take `faceted text widget <https://github.com/collective/eea.facetednavigation/tree/master/eea/facetednavigation/widgets/text>`_  as an example;
 
 Main features
 =============

@@ -20,10 +20,6 @@ class Widget(CountableWidget):
     # Widget properties
     widget_type = 'tagscloud'
     widget_label = _('Tags Cloud')
-    view_js = '++resource++eea.facetednavigation.widgets.tagscloud.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.tagscloud.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.tagscloud.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.tagscloud.edit.css'
 
     groups = (
         DefaultSchemata,

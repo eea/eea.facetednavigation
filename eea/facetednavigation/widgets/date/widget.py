@@ -44,13 +44,8 @@ class Widget(AbstractWidget):
     # Widget properties
     widget_type = 'date'
     widget_label = _('Date')
-    view_js = '++resource++eea.facetednavigation.widgets.date.view.js'
-    edit_js = '++resource++eea.facetednavigation.widgets.date.edit.js'
-    view_css = '++resource++eea.facetednavigation.widgets.date.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.date.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     @property

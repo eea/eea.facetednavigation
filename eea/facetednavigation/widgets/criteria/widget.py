@@ -12,10 +12,6 @@ class Widget(AbstractWidget):
     """
     widget_type = 'criteria'
     widget_label = _('Filters')
-    view_js = '++resource++eea.facetednavigation.widgets.criteria.view.js'
-    view_css = '++resource++eea.facetednavigation.widgets.criteria.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.criteria.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ViewPageTemplateFile('widget.pt')

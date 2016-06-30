@@ -4,12 +4,19 @@ Browser views
 Imports
 -------
 
+    >>> import re
     >>> from zope.component import getMultiAdapter
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
     >>> from eea.facetednavigation.tests.utils import preparefile
 
     >>> from plone.testing.z2 import Browser
     >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
+    >>> try:
+    ...     from Products.CMFPlone.interfaces import IBundleRegistry
+    ... except ImportError:
+    ...     PLONE = 4
+    ... else:
+    ...     PLONE = 5
 
 Set up
 ------
@@ -56,14 +63,20 @@ CSS
 
   View css
 
-    >>> browser.open(sandbox_url + '/@@faceted_view.css')
-    >>> '/* - ++resource++eea.faceted-navigation.css - */' in browser.contents
+    >>> browser.open(sandbox_url)
+    >>> if PLONE == 5:
+    ...     'faceted-view.min.css' in browser.contents
+    ... else:
+    ...     re.search("eea.faceted-navigation-cachekey-.*.css", browser.contents) is not None
     True
 
   Edit css
 
-    >>> browser.open(sandbox_url + '/@@faceted_edit.css')
-    >>> '/* - ++resource++eea.faceted-navigation-edit.css - */' in browser.contents
+    >>> browser.open(sandbox_url + '/configure_faceted.html')
+    >>> if PLONE == 5:
+    ...    'faceted-edit.min.css' in browser.contents
+    ... else:
+    ...    re.search("eea.faceted-navigation-edit-cachekey-.*.js", browser.contents) is not None
     True
 
 Javascript
@@ -71,14 +84,20 @@ Javascript
 
   View js
 
-    >>> browser.open(sandbox_url + '/@@faceted_view.js')
-    >>> '/* - ++resource++eea.faceted-navigation.js - */' in browser.contents
+    >>> browser.open(sandbox_url)
+    >>> if PLONE == 5:
+    ...     'faceted-view.min.js' in browser.contents
+    ... else:
+    ...     re.search("eea.faceted-navigation-cachekey-.*.js", browser.contents) is not None
     True
 
   Edit js
 
-    >>> browser.open(sandbox_url + '/@@faceted_edit.js')
-    >>> '/* - ++resource++eea.faceted-navigation-edit.js - */' in browser.contents
+    >>> browser.open(sandbox_url + '/configure_faceted.html')
+    >>> if PLONE == 5:
+    ...    'faceted-edit.min.js' in browser.contents
+    ... else:
+    ...    re.search("eea.faceted-navigation-edit-cachekey-.*.js", browser.contents) is not None
     True
 
 Views used by AJAX framework

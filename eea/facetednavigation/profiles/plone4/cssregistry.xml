@@ -1,6 +1,122 @@
 <?xml version="1.0"?>
 <object name="portal_css" meta_type="Stylesheets Registry">
- <stylesheet id="faceted_view.css" />
- <stylesheet id="faceted_edit.css"
-  expression="python:'configure_faceted.html' in request.URL0" />
+
+ <!-- Cleanup -->
+ <stylesheet id="faceted_view.css" remove="True" />
+ <stylesheet id="faceted_edit.css" remove="True" />
+
+ <!-- Faceted View -->
+ <stylesheet id="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.checkbox.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.sorting.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.text.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.daterange.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.alphabets.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.tagscloud.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.autocomplete.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.debug.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.range.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.radio.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.criteria.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.date.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.path.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.select.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.portlet.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
+
+ <!-- Faceted Edit -->
+ <stylesheet id="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.checkbox.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.sorting.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.text.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.daterange.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.alphabets.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.tagscloud.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.autocomplete.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.debug.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.range.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.radio.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.criteria.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.date.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.path.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.select.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.portlet.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+
 </object>

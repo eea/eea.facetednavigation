@@ -10,9 +10,6 @@ class Widget(AbstractWidget):
     """
     widget_type = 'etag'
     widget_label = 'ETag'
-    edit_js = '++resource++eea.facetednavigation.widgets.etag.edit.js'
-    edit_css = '++resource++eea.facetednavigation.widgets.etag.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata)
-
     index = ViewPageTemplateFile('widget.pt')

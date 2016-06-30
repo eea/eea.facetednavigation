@@ -18,19 +18,8 @@ class Widget(AbstractWidget):
     """
     widget_type = 'path'
     widget_label = _('Path')
-    view_js = (
-        '++resource++eea.facetednavigation.widgets.path.tree.js',
-        '++resource++eea.facetednavigation.widgets.path.view.js',
-    )
-    edit_js = (
-        '++resource++eea.facetednavigation.widgets.path.tree.js',
-        '++resource++eea.facetednavigation.widgets.path.edit.js',
-    )
-    view_css = '++resource++eea.facetednavigation.widgets.path.view.css'
-    edit_css = '++resource++eea.facetednavigation.widgets.path.edit.css'
 
     groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
-
     index = ViewPageTemplateFile('widget.pt')
 
     @property
