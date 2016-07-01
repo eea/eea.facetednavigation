@@ -189,7 +189,7 @@ Faceted.Form = {
   initialize_paginator: function() {
     var context = this;
     Faceted.b_start_changed = false;
-    jQuery('.listingBar a').each(function(i){
+    jQuery('.pagination a').each(function(i){
       jQuery(this).click(function(){
         var href = jQuery(this).attr('href');
         var regex = new RegExp('b_start\\:int=(\\d+)');

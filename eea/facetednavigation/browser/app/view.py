@@ -127,7 +127,7 @@ class DisplayCriteriaCheckerView(BrowserView):
     def check(self, faceted_html):
         """ Check
         """
-        if 'listingBar' in faceted_html:
+        if 'pagination' in faceted_html:
             return True
         elif self.language_present():
             return True

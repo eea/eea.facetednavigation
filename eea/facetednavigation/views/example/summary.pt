@@ -40,9 +40,9 @@
           <div metal:use-macro="context/batch_macros/macros/navigation" />
 
       Still, there is a trick you can do to avoid the batch macro. Just
-      add a HTML element with class="listingBar" like::
+      add a HTML element with class="pagination" like::
 
-          <div class="listingBar" style="display: none"></div>
+          <div class="pagination" style="display: none"></div>
 
     -->
     </tal:comment>
