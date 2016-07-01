@@ -98,10 +98,10 @@ We will need also to add those indexes to the catalog and atct.
   >>> catalog.reindexIndex('getRangea', portal.REQUEST)
   >>> catalog.reindexIndex('getRangen', portal.REQUEST)
   >>> [x for x in catalog.Indexes['getRangea'].uniqueValues()]
-  ['aa', 'bb', 'cc']
+  ['', 'aa', 'bb', 'cc']
 
   >>> [x for x in catalog.Indexes['getRangen'].uniqueValues()]
-  [2, 4, 6]
+  [None, 2, 4, 6]
 
   >>> atct.addIndex('getRangea', friendlyName='rangea', enabled=True, criteria=['ATSimpleStringCriterion', 'ATSimpleCriterion'])
   >>> atct.addIndex('getRangen', friendlyName='rangen', enabled=True, criteria=['ATSimpleStringCriterion', 'ATSimpleCriterion'])
