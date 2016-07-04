@@ -325,7 +325,6 @@
   <records prefix="plone.bundles/faceted-jquery"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>browser</element>
       <element>ajaxfileupload</element>
       <element>bbq</element>
       <element>jstree</element>

@@ -1,8 +1,10 @@
 """ Export / Import faceted configuration
 """
+from zope.interface import alsoProvides
 from zope.component import queryMultiAdapter
 from Products.GenericSetup.interfaces import IBody
 from Products.statusmessages.interfaces import IStatusMessage
+from eea.facetednavigation.plonex import IDisableCSRFProtection
 from Products.GenericSetup.context import SnapshotExportContext
 from Products.GenericSetup.context import SnapshotImportContext
 
@@ -15,6 +17,8 @@ class FacetedExportImport(object):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        # XXX Quick fix until we figure out how to enable CSRF Protection
+        alsoProvides(request, IDisableCSRFProtection)
 
     def _redirect(self, msg='', to='configure_faceted.html'):
         """ Set status message and redirect
