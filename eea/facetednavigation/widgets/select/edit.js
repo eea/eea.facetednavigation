@@ -4,7 +4,6 @@ FacetedEdit.SelectWidget = function(wid){
   this.elements = jQuery('option', this.widget);
   this.select = jQuery('#' + this.wid);
   var value = this.select.val();
-  this.selected = jQuery('option[value='+ value +']', this.widget);
 
   // Handle change
   var js_widget = this;
@@ -31,13 +30,15 @@ FacetedEdit.SelectWidget.prototype = {
 
   set_default: function(element){
     var value = this.select.val();
-    this.selected = jQuery('option[value='+ value +']', this.widget);
 
     var query = {};
     query.redirect = '';
     query.updateCriterion_button = 'Save';
     query.cid = this.wid;
     query['faceted.' + this.wid + '.default'] = value;
+    if(!value){
+      query['faceted.' + this.wid + '.default-empty-marker'] = 1;
+    }
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){
