@@ -332,16 +332,16 @@ table.listing {
 
 /* Errors
 =========  */
-.faceted-widget-error {
+#faceted-edit-widgets .faceted-widget-error {
   display: block;
 }
 
-.faceted-widget-error div {
+#faceted-edit-widgets .faceted-widget-error div {
   text-align: center;
   color: red;
 }
 
-.faceted-widget-error dd {
+#faceted-edit-widgets .faceted-widget-error dd {
   margin-left: 2em;
   padding-bottom:0;
 }
