@@ -67,12 +67,16 @@ FacetedEdit.CheckboxesWidget.prototype = {
 
     this.selected = this.widget.find('form input[type=checkbox]:checked');
 
-    var value = [];
+    var value = "";
     this.selected.each(function(){
-      value.push(jQuery(this).val());
+      value += jQuery(this).val() + "\n";
     });
-    query['faceted.' + this.wid + '.default'] = value.length ? value : '';
-    query['faceted.' + this.wid + '.operator'] = this.operatorValue;
+    if(value) {
+      query['faceted.' + this.wid + '.default'] = value;
+      query['faceted.' + this.wid + '.operator'] = this.operatorValue;
+    } else {
+      query['faceted.' + this.wid + '.default-empty-marker'] = 1;
+    }
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){
