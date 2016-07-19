@@ -19,6 +19,11 @@ class IBooleanSchema(ISchema):
         required=True
     )
 
+    default = schema.Bool(
+        title=_(u'Default value'),
+        description=_(u'Default value'),
+    )
+
 
 class DefaultSchemata(DS):
     """ Schemata default

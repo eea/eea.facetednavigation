@@ -5,6 +5,7 @@ FacetedEdit.CheckboxesWidget = function(wid){
   this.fieldset = jQuery('.widget-fieldset', this.widget);
   this.elements = jQuery('input[type=checkbox]', this.widget);
   this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
+  this.boolean = this.widget.hasClass('faceted-boolean-widget');
 
   this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
   if(this.maxitems){
@@ -65,17 +66,25 @@ FacetedEdit.CheckboxesWidget.prototype = {
     query.updateCriterion_button = 'Save';
     query.cid = this.wid;
 
-    this.selected = this.widget.find('form input[type=checkbox]:checked');
+    this.selected = this.widget.find('input[type=checkbox]:checked');
 
     var value = "";
-    this.selected.each(function(){
-      value += jQuery(this).val() + "\n";
+    this.selected.each(function(idx){
+      if(idx > 0){
+        value += "\n";
+      }
+      value += jQuery(this).val();
     });
-    if(value) {
+
+    if(this.boolean){
+      if(!value) {
+        query['faceted.' + this.wid + '.default-empty-marker'] = 1;
+      } else {
+        query['faceted.' + this.wid + '.default'] = value;
+      }
+    } else {
       query['faceted.' + this.wid + '.default'] = value;
       query['faceted.' + this.wid + '.operator'] = this.operatorValue;
-    } else {
-      query['faceted.' + this.wid + '.default-empty-marker'] = 1;
     }
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});

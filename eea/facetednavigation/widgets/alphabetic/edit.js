@@ -46,9 +46,10 @@ FacetedEdit.AlphabeticalWidget.prototype = {
       this.letter_select(letter);
     }
 
-    if(value == 'all'){
-      value = '';
+    if(value == "all"){
+      value = "";
     }
+
     query['faceted.' + this.wid + '.default'] = value;
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});

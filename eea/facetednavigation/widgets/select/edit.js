@@ -36,9 +36,6 @@ FacetedEdit.SelectWidget.prototype = {
     query.updateCriterion_button = 'Save';
     query.cid = this.wid;
     query['faceted.' + this.wid + '.default'] = value;
-    if(!value){
-      query['faceted.' + this.wid + '.default-empty-marker'] = 1;
-    }
 
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
     jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){

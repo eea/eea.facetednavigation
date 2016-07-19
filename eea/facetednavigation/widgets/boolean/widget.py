@@ -1,5 +1,6 @@
 """ Checkbox widget
 """
+from plone.i18n.normalizer import urlnormalizer as normalizer
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
@@ -8,6 +9,7 @@ from eea.facetednavigation.widgets.boolean.interfaces import (
     LayoutSchemata,
     CountableSchemata
 )
+
 
 class Widget(CountableWidget):
     """ Widget
@@ -20,10 +22,13 @@ class Widget(CountableWidget):
     index = ViewPageTemplateFile('widget.pt')
 
     @property
-    def default(self):
-        """ Get default values
+    def css_class(self):
+        """ Widget specific css class
         """
-        return bool(self.data.get('default', None))
+        css_type = self.widget_type
+        css_title = normalizer.normalize(self.data.title)
+        return ('faceted-checkboxes-widget '
+                'faceted-{0}-widget section-{1}').format(css_type, css_title)
 
     def selected(self):
         """ Return True if True by default

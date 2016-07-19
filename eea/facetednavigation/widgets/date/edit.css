@@ -14,6 +14,10 @@
   border-color: #95b229;
 }
 
+#faceted-edit-widgets .faceted-date-widget-form .ui-widget-content .ui-state-default {
+    margin: inherit;
+}
+
 .faceted-date-widget-form .ui-widget-header {
   background-image: none;
   background-color: #e9efcd;
