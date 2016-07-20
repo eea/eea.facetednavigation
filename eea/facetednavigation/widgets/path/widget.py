@@ -29,7 +29,8 @@ class Widget(AbstractWidget):
         site = self.context.portal_url.getPortalObject()
         site_url = '/'.join(site.getPhysicalPath())
         site_url = site_url.strip('/')
-        data_root = self.data.get('root', '').strip().strip('/')
+        data_root = self.data.get('root', '') or ''
+        data_root = data_root.strip().strip('/')
         if isinstance(data_root, unicode):
             data_root = data_root.encode('utf-8')
         if data_root.startswith(site_url):
