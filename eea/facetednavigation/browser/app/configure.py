@@ -195,12 +195,16 @@ class FacetedFormHandler(FacetedBasicHandler):
     def __call__(self, **kwargs):
         """ This method is called from a form with more than one submit buttons
         """
-        form = getattr(self.request, 'form', {})
-        if ['' in key for key in form]:
-            form = dict((key.replace('[]', ''), val)
-                        for key, val in form.items())
-            self.request.form = form
-        kwargs.update(form)
+        sanitized_form = {}
+        for key, value in getattr(self.request, 'form', {}).items():
+            key = key.replace('[]', '')
+            if isinstance(value, str):
+                value = value.decode('utf-8')
+            sanitized_form[key] = value
+
+        if sanitized_form:
+            self.request.form = sanitized_form
+            kwargs.update(sanitized_form)
         #
         # Criteria
         #
