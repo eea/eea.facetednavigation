@@ -4,8 +4,8 @@ Faceted.SelectWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + this.wid + '_widget');
   this.widget.show();
-  this.title = jQuery('legend', this.widget).html();
-  this.elements = jQuery('option', this.widget);
+  this.title = this.widget.find('legend').html();
+  this.elements = this.widget.find('option');
   this.select = jQuery('#' + this.wid);
   this.selected = [];
 
@@ -29,7 +29,7 @@ Faceted.SelectWidget = function(wid){
   // Default value
   var value = this.select.val();
   if(value){
-    this.selected = jQuery("option[value='" + value + "']", js_widget.widget);
+    this.selected = js_widget.widget.find('option:selected');
     Faceted.Query[this.wid] = [value];
   }
 
@@ -68,7 +68,7 @@ Faceted.SelectWidget.prototype = {
       return Faceted.Form.do_query(this.wid, []);
     }else{
       var value = jQuery(element).val();
-      this.selected = jQuery("#" + this.wid + "_widget option[value='" + value + "']");
+      this.selected = this.widget.find('option:selected');
       return Faceted.Form.do_query(this.wid, value);
     }
   },
@@ -87,7 +87,7 @@ Faceted.SelectWidget.prototype = {
 
     var context = this;
     jQuery.each(value, function(){
-      var selected = jQuery("option[value='" + value + "']", context.widget);
+      var selected = context.widget.find('option:selected');
       if(!selected.length){
         context.reset();
       }else{
