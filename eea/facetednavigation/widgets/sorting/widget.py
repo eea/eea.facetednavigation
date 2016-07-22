@@ -64,7 +64,10 @@ class Widget(AbstractWidget):
         """ Get criteria by index id
         """
         catalog_tool = getToolByName(self.context, 'portal_catalog')
-        indexObj = catalog_tool.Indexes[indexId]
+        try:
+            indexObj = catalog_tool.Indexes[indexId]
+        except KeyError:
+            return []
         # allow DateRecurringIndex that is unknown to atct.
         # events in plone.app.contenttypes use it for start and end
         if indexObj.meta_type == "DateRecurringIndex":
