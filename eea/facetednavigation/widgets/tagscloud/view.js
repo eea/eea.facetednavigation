@@ -106,7 +106,7 @@ Faceted.TagsCloudWidget.prototype = {
   },
 
   do_query: function(tag){
-    var value=jQuery(tag).attr('id').replace(this.wid, '');
+    var value = jQuery(tag).attr('id').replace(this.wid, '');
     value = value.replace(/_-_/g, ' ');
     var selected_value = '';
     if(this.selected.length){

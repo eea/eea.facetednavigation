@@ -69,7 +69,7 @@ Faceted.AlphabeticalWidget.prototype = {
   },
 
   do_query: function(letter){
-    var value=jQuery(letter).attr('id').split('-')[1];
+    var value = jQuery(letter).attr('id').split('-')[1];
     var selected_value = '';
     if(this.selected.length){
       selected_value = jQuery(this.selected[0]).attr('id').split('-')[1];

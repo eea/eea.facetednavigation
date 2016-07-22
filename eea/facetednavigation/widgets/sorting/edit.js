@@ -6,7 +6,6 @@ FacetedEdit.SortingWidget = function(wid, context){
   this.select = jQuery('#' + this.wid);
 
   var value = this.select.val();
-  this.selected = jQuery('option[value=' + value + ']', this.widget);
 
   // Handle select change
   var js_widget = this;
@@ -22,7 +21,6 @@ FacetedEdit.SortingWidget = function(wid, context){
 FacetedEdit.SortingWidget.prototype = {
   set_default: function(element){
     var value = this.select.val();
-    this.selected = jQuery('option[value=' + value + ']', this.widget);
     if(this.reverse.attr('checked')){
       value += '(reverse)';
     }
