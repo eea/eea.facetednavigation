@@ -2,15 +2,16 @@
   width: 99%;
 }
 
-.tree {
+.faceted-path-widget .tree {
   position: absolute ! important;
   background-color: #FFFFFF;
   border: 1px dotted #CCCCCC;
+  z-index: 1;
 }
-.tree > .ltr > li {
+.faceted-path-widget .tree > .ltr > li {
   display: block ! important;
 }
 
-.tree li a {
+.faceted-path-widget .tree li a {
   border: none ! important;
 }
