@@ -7,19 +7,26 @@ Faceted.TextWidget = function(wid){
   this.title = jQuery('legend', this.widget).html();
   this.selected = [];
   this.button = jQuery('input[type=submit]', this.widget);
+  this.input = jQuery('#' + this.wid);
+  this.value = '';
 
   // Handle text change
   var js_widget = this;
-  jQuery('form', this.widget).submit(function(){
+  var form = this.widget.find('form');
+  form.submit(function(){
     js_widget.text_change(js_widget.button);
     return false;
   });
 
+  this.input.change(function(evt){
+    form.submit();
+  });
+
   // Default value
-  var input = jQuery('#' + this.wid);
-  var value = input.val();
+  var value = this.input.val();
   if(value){
-    this.selected = input;
+    this.selected = [input];
+    this.value = value;
     Faceted.Query[this.wid] = [value];
   }
 
@@ -34,20 +41,25 @@ Faceted.TextWidget = function(wid){
 
 Faceted.TextWidget.prototype = {
   text_change: function(element, evt){
+    if(this.value === this.input.val()){
+      return;
+    }
+
     this.do_query(element);
     jQuery(element).removeClass("submitting");
   },
 
   do_query: function(element){
-    var input = jQuery('#' + this.wid);
-    var value = input.val();
+    var value = this.input.val();
     value = value ? [value] : [];
 
     if(!element){
       this.selected = [];
+      this.value = '';
       return Faceted.Form.do_query(this.wid, []);
     }
-    this.selected = [input];
+    this.selected = [this.input];
+    this.value = this.input.val();
 
     var where = jQuery('input[type=radio]:checked', this.widget);
     where = where.length == 1 ? where.val() : 'all';
@@ -65,6 +77,7 @@ Faceted.TextWidget.prototype = {
 
   reset: function(){
     this.selected = [];
+    this.value = '';
     jQuery('#' + this.wid).val('');
   },
 
@@ -75,9 +88,9 @@ Faceted.TextWidget.prototype = {
       return;
     }
 
-    var input = jQuery('#' + this.wid);
-    input.attr('value', value);
-    this.selected = [input];
+    this.input.val(value);
+    this.selected = [this.input];
+    this.value = this.input.val();
   },
 
   criteria: function(){
@@ -143,9 +156,10 @@ Faceted.TextWidget.prototype = {
   },
 
   criteria_remove: function(value){
-    jQuery('#' + this.wid).val('');
+    this.input.val('');
     if(!value){
       this.selected = [];
+      this.value = '';
       this.do_query();
       return;
     }
