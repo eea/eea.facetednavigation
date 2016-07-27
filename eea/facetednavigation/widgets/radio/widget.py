@@ -48,7 +48,5 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-
-
         query[index] = value
         return query
