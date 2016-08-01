@@ -41,7 +41,7 @@ setup(name=NAME,
           # -*- Extra requirements: -*-
           'eea.faceted.vocabularies > 5.9',
           'collective.js.jqueryui',
-          'eea.jquery > 9.0',
+          'eea.jquery > 9.1',
       ],
       extras_require={
           'test': [
