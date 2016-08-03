@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
 "POT-Creation-Date: 2016-02-23 12:02+0000\n"
-"PO-Revision-Date: 2013-12-31 23:42+0800\n"
+"PO-Revision-Date: 2016-08-03 12:22+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -82,15 +82,15 @@ msgstr "確定要刪除 ${widget} 嗎?"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.py:53
 msgid "Autocomplete"
-msgstr ""
+msgstr "自動輸入"
 
 #: ../../facetednavigation/widgets/boolean/widget.py:44
 msgid "Boolean"
-msgstr ""
+msgstr "布林選項"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.py:75
 msgid "Can select several elements"
-msgstr ""
+msgstr "可選擇數個元素"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/widget.py:70
@@ -271,7 +271,7 @@ msgstr "搜尋的深度: 0 代表同一層 -1 代表所有子目錄 其他正整
 
 #: ../../facetednavigation/interfaces.py:80
 msgid "Disable diazo rules on ajax requests"
-msgstr ""
+msgstr "停用 Diazo 規則"
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Disable faceted navigation"
@@ -434,7 +434,7 @@ msgstr "Faceted 導覽設定"
 
 #: ../../facetednavigation/views/example/configure.zcml:13
 msgid "Faceted summary view"
-msgstr ""
+msgstr "Faceted Summary View"
 
 #: ../../facetednavigation/widgets/interfaces.py:31
 msgid "Factory"
@@ -808,7 +808,7 @@ msgstr "選擇方框"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.pt:1
 msgid "Select a value"
-msgstr ""
+msgstr "選擇設定值"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:112
@@ -888,7 +888,7 @@ msgstr "文字欄位"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.py:86
 msgid "Text field with suggestions"
-msgstr ""
+msgstr "文字欄位搭配建議值"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.py:68

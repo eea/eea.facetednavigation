@@ -12,6 +12,8 @@ Changelog
 * Change: Dropped auto-generated CSS/JS `faceted_view.js`, `faceted_edit.js`,
   `faceted_view.css`, `faceted_edit.css` resources
   [avoinea #88]
+* Feature: Traditional Chinese translation updates
+  [l34marr]
 
 9.2 - (2016-06-16)
 ------------------
