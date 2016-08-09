@@ -111,7 +111,7 @@ class SolrSuggest(BrowserView):
         term = self.request.get('term')
         manager = queryUtility(ISolrConnectionManager)
         if not manager or not term:
-            return json.dump(result)
+            return json.dumps(result)
 
         connection = manager.getConnection()
         # XXX this should really go into c.solr
