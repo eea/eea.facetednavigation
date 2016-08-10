@@ -14,6 +14,11 @@ Changelog
   [avoinea #88]
 * Feature: Traditional Chinese translation updates
   [l34marr]
+* Bug fix: Fix 'This site encountered an error trying to fulfill your request'
+  error with autocomplete criterion when typing characters slowly and so
+  aborting previous requests. Set select2 params global: False to not execute
+  the globally registered ajaxError. This avoid to have the large spinner too.
+  [vincentfretin]
 
 9.2 - (2016-06-16)
 ------------------
