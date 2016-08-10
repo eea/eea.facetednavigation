@@ -3,6 +3,11 @@ Changelog
 
 9.3.dev0 - (unreleased)
 -----------------------
+* Bug fix: Fix 'This site encountered an error trying to fulfill your request'
+  error with autocomplete criterion when typing characters slowly and so
+  aborting previous requests. Set select2 params global: False to not execute
+  the globally registered ajaxError. This avoid to have the large spinner too.
+  [vincentfretin]
 
 9.2 - (2016-06-16)
 ------------------

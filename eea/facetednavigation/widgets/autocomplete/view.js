@@ -180,6 +180,9 @@ Faceted.initializeAutocompleteWidget = function(evt){
         url: autocomplete_view,
         delay: 250,
         dataType: 'json',
+        params: {
+           global: false,
+        },
         data: function (term, page) {
             return {
                 term: term,
