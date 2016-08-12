@@ -1,6 +1,6 @@
 # How to contribute
 
-To start, is important to mention that we keep all EEA pacakges under EEA Organisation
+To start, is important to mention that we keep all EEA packages under EEA Organisation
 on GitHub (https://github.com/eea) and we fork them to Collective so everyone can
 contribute to them. We keep the repositories from Collective and EEA in sync.
 
