@@ -148,17 +148,9 @@ class FacetedQueryHandler(FolderView):
             query.pop('sort_order', None)
 
         catalog = getUtility(IFacetedCatalog)
-        try:
-            brains = catalog(self.context, **query)
-        except Exception, err:
-            logger.exception(err)
-            return Batch([], 20, 0)
-        if not brains:
-            return Batch([], 20, 0)
-
-        # Apply after query (filter) on brains
         num_per_page = 20
         criteria = ICriteria(self.context)
+        brains_filters = []
         for cid, criterion in criteria.items():
             widgetclass = criteria.widget(cid=cid)
             widget = widgetclass(self.context, self.request, criterion)
@@ -168,13 +160,29 @@ class FacetedQueryHandler(FolderView):
 
             brains_filter = queryAdapter(widget, IWidgetFilterBrains)
             if brains_filter:
-                brains = brains_filter(brains, kwargs)
-
-        if not batch:
-            return brains
+                brains_filters.append(brains_filter)
 
         b_start = safeToInt(kwargs.get('b_start', 0))
         orphans = num_per_page * 20 / 100 # orphans = 20% of items per page
+        if batch and not brains_filters:
+            # add b_start and b_size to query to use better sort algorithm
+            query['b_start'] = b_start
+            query['b_size'] = num_per_page + orphans
+
+        try:
+            brains = catalog(self.context, **query)
+        except Exception, err:
+            logger.exception(err)
+            return Batch([], 20, 0)
+        if not brains:
+            return Batch([], 20, 0)
+
+        # Apply after query (filter) on brains
+        for brains_filter in brains_filters:
+            brains = brains_filter(brains, kwargs)
+
+        if not batch:
+            return brains
 
         if isinstance(brains, GeneratorType):
             brains = [brain for brain in brains]
