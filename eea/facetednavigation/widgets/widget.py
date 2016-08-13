@@ -343,7 +343,7 @@ class CountableWidget(Widget):
         if not ctool:
             return res
 
-        brains = IISet(brain.getRID() for brain in brains)
+        brains = IISet(brains._seq)
         res[""] = res['all'] = len(brains)
         for value in sequence:
             if not value:

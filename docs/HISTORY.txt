@@ -14,6 +14,9 @@ Changelog
   [avoinea #88]
 * Feature: Traditional Chinese translation updates
   [l34marr]
+* Change: For ZCatalog counter queries, don't do unnecessary sort and brains
+  instantiation.
+  [vincentfretin]
 * Bug fix: Fix 'This site encountered an error trying to fulfill your request'
   error with autocomplete criterion when typing characters slowly and so
   aborting previous requests. Set select2 params global: False to not execute
