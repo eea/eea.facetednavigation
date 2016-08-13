@@ -139,6 +139,12 @@ class FacetedQueryHandler(object):
                       for key, val in kwargs.items())
 
         query = self.criteria(sort=sort, **kwargs)
+        # We don't want to do an unnecessary sort for a counter query
+        counter_query = kwargs.pop('counter_query', False)
+        if counter_query:
+            query.pop('sort_on', None)
+            query.pop('sort_order', None)
+
         catalog = getUtility(IFacetedCatalog)
         try:
             brains = catalog(self.context, **query)
