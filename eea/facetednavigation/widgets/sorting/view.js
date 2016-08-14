@@ -69,7 +69,7 @@ Faceted.SortingWidget.prototype = {
 
     var value = null;
     if(jQuery(element).attr('type') == 'checkbox'){
-      value = jQuery(element).attr('checked') ? 'on' : [];
+      value = element.checked ? 'on' : [];
       if(!this.selected.length){
         Faceted.Query.reversed = value;
         return;
@@ -116,7 +116,7 @@ Faceted.SortingWidget.prototype = {
 
     var context = this;
     jQuery.each(value, function(){
-      var selected = this.widget.find('option:selected');
+      var selected = context.widget.find('option:selected');
       if(!selected.length){
         context.reset(reversed_value);
       }else{
