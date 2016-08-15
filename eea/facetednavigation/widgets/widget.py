@@ -16,6 +16,7 @@ from BTrees.IIBTree import weightedIntersection, IISet
 from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
+from Products.ZCatalog.Lazy import LazyMap
 
 from eea.facetednavigation.plonex import ISolrSearch
 from eea.facetednavigation.interfaces import IFacetedCatalog
@@ -343,7 +344,11 @@ class CountableWidget(Widget):
         if not ctool:
             return res
 
-        brains = IISet(brains._seq)
+        if isinstance(brains, LazyMap):
+            brains = IISet(brains._seq)
+        else:
+            brains = IISet(brain.getRID() for brain in brains)
+
         res[""] = res['all'] = len(brains)
         for value in sequence:
             if not value:
