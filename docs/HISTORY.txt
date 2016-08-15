@@ -8,7 +8,7 @@ Changelog
   [vincentfretin]
 
 * Change: For ZCatalog counter queries, don't do unnecessary sort and brains
-  instantiation.
+  instantiation when there are no post filters.
   [vincentfretin]
 
 * Bug fix: Fix 'This site encountered an error trying to fulfill your request'
