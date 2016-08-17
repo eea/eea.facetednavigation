@@ -3,6 +3,8 @@ Changelog
 
 9.4.dev0 - (unreleased)
 -----------------------
+* New egg release
+  [alecghica refs #74877]
 
 9.3 - (2016-08-17)
 ------------------
