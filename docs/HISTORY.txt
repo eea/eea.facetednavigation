@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.3.dev0 - (unreleased)
------------------------
+9.3 - (2016-08-17)
+------------------
 * Bug fix: Fix 'This site encountered an error trying to fulfill your request'
   error with autocomplete criterion when typing characters slowly and so
   aborting previous requests. Set select2 params global: False to not execute
