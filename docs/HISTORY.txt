@@ -19,7 +19,7 @@ Changelog
 
 9.2 - (2016-06-16)
 ------------------
-* Bugfix: fixed language adapter language property for context which does not
+* Bug fix: fixed language adapter language property for context which does not
   have getLanguage
   [ichim-david]
 
