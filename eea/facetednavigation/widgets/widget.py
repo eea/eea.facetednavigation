@@ -22,6 +22,7 @@ from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import BooleanField
 from Products.Archetypes.public import BooleanWidget
 from Products.Archetypes.public import SelectionWidget
+from Products.ZCatalog.Lazy import LazyMap
 
 from eea.facetednavigation.interfaces import IFacetedCatalog
 
@@ -439,7 +440,11 @@ class CountableWidget(Widget):
         if not ctool:
             return res
 
-        brains = IISet(brain.getRID() for brain in brains)
+        if isinstance(brains, LazyMap):
+            brains = IISet(brains._seq)
+        else:
+            brains = IISet(brain.getRID() for brain in brains)
+
         res[""] = res['all'] = len(brains)
         for value in sequence:
             if not value:

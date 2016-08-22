@@ -49,6 +49,7 @@ class FacetedQueryCounter(object):
 
         if criterion.get('index', '') == 'Language':
             kwargs['_language_count_'] = True
+        kwargs['counter_query'] = True
         brains = handler.query(batch=False, sort=False, **kwargs)
 
         # Get index
