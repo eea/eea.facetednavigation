@@ -21,7 +21,7 @@ FacetedEdit.SortingWidget = function(wid, context){
 FacetedEdit.SortingWidget.prototype = {
   set_default: function(element){
     var value = this.select.val();
-    if(this.reverse.attr('checked')){
+    if(this.reverse.is(':checked')){
       value += '(reverse)';
     }
 
