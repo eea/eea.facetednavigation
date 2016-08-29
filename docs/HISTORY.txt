@@ -1,12 +1,11 @@
 Changelog
 =========
 
-9.5.dev0 - (unreleased)
------------------------
+9.5 - (2016-08-29)
+------------------
 * Change: To use better sort algorithm, add b_start and b_size to query when
   there are no post filters.
   [vincentfretin]
-
 * Change: For ZCatalog counter queries, don't do unnecessary sort and brains
   instantiation when there are no post filters.
   [vincentfretin]
