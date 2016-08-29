@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.6.dev0 - (unreleased)
+-----------------------
+
 9.5 - (2016-08-29)
 ------------------
 * Change: To use better sort algorithm, add b_start and b_size to query when
