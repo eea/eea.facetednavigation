@@ -3,6 +3,9 @@ Changelog
 
 10.0.dev0 - (unreleased)
 ------------------------
+* Bug fix: fix faceted count when _seq is a list of tuple values instead
+  of ints which could happen with ZCatalog 3 within a Plone 4 site
+  [ichim-david refs #75384]
 * Change: Plone 5 full support
   [avoinea #90]
 * Change: Dropped Archetypes dependency and upgraded to z3c.form schema.
