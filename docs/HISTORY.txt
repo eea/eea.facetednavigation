@@ -3,6 +3,9 @@ Changelog
 
 9.6.dev0 - (unreleased)
 -----------------------
+* Bug fix: fix faceted count when _seq is a list of tuple values instead
+  of ints which could happen with ZCatalog 3 within a Plone 4 site
+  [ichim-david refs #75384]
 
 9.5 - (2016-08-29)
 ------------------
