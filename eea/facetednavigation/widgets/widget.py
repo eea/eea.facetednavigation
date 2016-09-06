@@ -442,8 +442,8 @@ class CountableWidget(Widget):
 
         if isinstance(brains, LazyMap):
             values = brains._seq
-             # 75384 seq might be a pair of tuples instead of ints
-             # if you upgrade to ZCatalog 3
+            # 75384 seq might be a pair of tuples instead of ints
+            # if you upgrade to ZCatalog 3
             if isinstance(values[0], tuple):
                 values = [v[1] for v in values]
             brains = IISet(values)
