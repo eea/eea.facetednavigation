@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.7.dev0 - (unreleased)
+-----------------------
+
 9.6 - (2016-09-13)
 ------------------
 * Bug fix: fix faceted count when _seq is a list of tuple values instead
