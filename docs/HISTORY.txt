@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.9.dev0 - (unreleased)
+-----------------------
+
 9.8 - (2016-10-03)
 ------------------
 * Feature: make boolean index work well with radio widget.
