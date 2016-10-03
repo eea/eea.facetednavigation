@@ -3,6 +3,8 @@ Changelog
 
 10.0.dev0 - (unreleased)
 ------------------------
+* Feature: make boolean index work well with radio widget.
+  [cedricmessiant]
 * Bug fix: fix faceted count when _seq is a list of tuple values instead
   of ints which could happen with ZCatalog 3 within a Plone 4 site
   [ichim-david refs #75384]

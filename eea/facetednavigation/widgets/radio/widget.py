@@ -1,5 +1,7 @@
 """ Checkbox widget
 """
+from Products.CMFCore.utils import getToolByName
+
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.radio.interfaces import DefaultSchemata
@@ -47,6 +49,14 @@ class Widget(CountableWidget):
             value = form.get(self.data.getId(), '')
         if not value:
             return query
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+        if index in catalog.Indexes:
+            if catalog.Indexes[index].meta_type == 'BooleanIndex':
+                if value == 'False':
+                    value = False
+                elif value == 'True':
+                    value = True
 
         query[index] = value
         return query
