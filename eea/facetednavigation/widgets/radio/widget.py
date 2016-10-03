@@ -8,6 +8,7 @@ from Products.Archetypes.public import StringWidget
 from Products.Archetypes.public import IntegerWidget
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
+from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
@@ -114,6 +115,14 @@ class Widget(CountableWidget):
             return query
 
         value = atdx_normalize(value)
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+        if index in catalog.Indexes:
+            if catalog.Indexes[index].meta_type == 'BooleanIndex':
+                if value == 'False':
+                    value = False
+                elif value == 'True':
+                    value = True
 
         query[index] = value
         return query
