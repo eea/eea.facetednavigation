@@ -6,5 +6,7 @@ parts
 bootstrap.*
 bin
 lib*
+local
 secret.cfg
 include
+var
