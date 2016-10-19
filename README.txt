@@ -192,6 +192,7 @@ Live demo
 - `EEA Publications <http://www.eea.europa.eu/publications>`_
 - `EEA Multimedia <http://www.eea.europa.eu/multimedia/all-videos>`_
 - `University of Minnesota - Explore Books <http://upress.umn.edu/explore>`_
+- `The Mountaineers <https://mountaineers.org/explore/activities>`_
 
 
 Buildout installation
@@ -199,6 +200,7 @@ Buildout installation
 
 - `Plone 2 and 3 <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone3>`_
 - `Plone 4+ <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone4>`_
+- `Plone 5+ <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone5>`_
 
 
 Source code
@@ -206,6 +208,7 @@ Source code
 
 - `Plone 2 and 3 on github <https://github.com/collective/eea.facetednavigation/tree/plone3>`_
 - `Plone 4+ on github <https://github.com/collective/eea.facetednavigation>`_
+- `Plone 5+ on github <https://github.com/collective/eea.facetednavigation>`_
 
 
 Eggs repository
