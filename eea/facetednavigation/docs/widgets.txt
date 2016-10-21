@@ -1,0 +1,10 @@
+Widgets related documentation and tests can be found within every widget directory:
+
+* Alphabetic: eea/facetednavigation/widgets/alphabetic/widget.txt
+* Autocomplete: eea/facetednavigation/widgets/autocomplete/widget.txt
+* Date: eea/facetednavigation/widgets/date/widget.txt
+* Date Range: eea/facetednavigation/widgets/daterange/widget.txt
+* Path: eea/facetednavigation/widgets/path/widget.txt
+* Results Filter: eea/facetednavigation/widgets/resultsfilter/widget.txt
+* TAL Expression: eea/facetednavigation/widgets/tal/widget.txt
+* Text: eea/facetednavigation/widgets/text/widget.txt
