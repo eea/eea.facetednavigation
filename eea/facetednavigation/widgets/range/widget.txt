@@ -1,7 +1,7 @@
-Date range widget
-=================
+Range widget
+============
 
-Implementation of ATContentTypes date range criteria for facted navigation usage.
+Implementation of range criteria for facted navigation usage.
 
 Imports
 -------
