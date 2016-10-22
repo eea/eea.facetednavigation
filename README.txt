@@ -91,6 +91,7 @@ Install
   re-run buildout. You can download a sample buildout from:
 
   - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
+  - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone5
 
 * Install *EEA Faceted Navigation* within Site Setup > Add-ons
 
