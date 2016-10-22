@@ -148,6 +148,32 @@ class Criteria(object):
 
         wid = properties.get('widget', None)
         schema = self.schema(wid=wid, cid=cid)
+
+        criteria = {}
+        for key, value in properties.items():
+            if key not in schema:
+                continue
+            if isinstance(value, (list, tuple)):
+                value_type = schema[key].value_type
+                value = [fix_string(x) for x in value]
+                value = [value_type.fromUnicode(x) for x in value]
+            elif isinstance(value, (str, unicode)):
+                value = schema[key].fromUnicode(value)
+            criteria[key] = value
+
+        criterion.update(**criteria)
+        self.criteria._p_changed = 1
+
+    def upgrade(self, cid):
+        """ Upgrade criterion properties
+        """
+        criterion = self.get(cid)
+        if not criterion:
+            return
+        properties = criterion.__dict__
+
+        wid = properties.get('widget', None)
+        schema = self.schema(wid=wid, cid=cid)
         if not schema:
             return
 
@@ -173,15 +199,17 @@ class Criteria(object):
                     logger.exception(err)
                     # Cleanup OLD broken values from criterion
                     if getattr(criterion, key, None) == value:
-                        logger.info(
+                        logger.warn(
                             "%s: Cleaning up broken %s:%s from criterion %s",
                             self.context.absolute_url(), key, value, cid)
                         delattr(criterion, key)
                     continue
                 except Exception, err:
+                    logger.warn(
+                        "%s: Could not upgrade %s: %s from criterion %s",
+                        self.context.absolute_url(), key, value, cid)
                     logger.exception(err)
-                    import ipdb; ipdb.set_trace()
-                    raise
+                    continue
             criteria[key] = value
 
         criterion.update(**criteria)

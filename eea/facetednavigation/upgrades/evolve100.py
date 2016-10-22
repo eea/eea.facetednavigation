@@ -22,8 +22,7 @@ def fix_criteria(context):
     for brain in brains:
         doc = brain.getObject()
         criteria = queryAdapter(doc, ICriteria)
-        for cid, criterion in criteria.items():
+        for cid in criteria.keys():
             logger.info('Fixing faceted criteria for %s', brain.getURL())
-            properties = criterion.__dict__
-            criteria.edit(cid, **properties)
+            criteria.upgrade(cid)
     logger.info('Done fixing faceted navigable criteria')
