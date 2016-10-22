@@ -31,6 +31,10 @@ class FacetedLayout(object):
         layouts = self.default_layouts
         res = []
         for template_id, title in layouts:
+            # TODO These templates don't work with FacetedNavigation.
+            # Disabling them for now
+            if template_id in ['album_view', 'event_listing']:
+                continue
             if not self.get_macro(template_id):
                 continue
             res.append((template_id, title))
