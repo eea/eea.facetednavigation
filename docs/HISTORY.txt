@@ -3,6 +3,10 @@ Changelog
 
 10.0.dev0 - (unreleased)
 ------------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation. If this fails
+  uninstall EEA Faceted Navigation and Install it again
+  [avoinea refs #115]
 * Feature: make boolean index work well with radio widget.
   [cedricmessiant]
 * Bug fix: fix faceted count when _seq is a list of tuple values instead
@@ -25,6 +29,42 @@ Changelog
 * Change: For ZCatalog counter queries, don't do unnecessary sort and brains
   instantiation when there are no post filters.
   [vincentfretin]
+* Bug fix: Fix 'This site encountered an error trying to fulfill your request'
+  error with autocomplete criterion when typing characters slowly and so
+  aborting previous requests. Set select2 params global: False to not execute
+  the globally registered ajaxError. This avoid to have the large spinner too.
+  [vincentfretin]
+
+9.8 - (2016-10-03)
+------------------
+* Feature: make boolean index work well with radio widget.
+  [cedricmessiant]
+
+9.7 - (2016-09-13)
+------------------
+
+9.6 - (2016-09-13)
+------------------
+* Bug fix: fix faceted count when _seq is a list of tuple values instead
+  of ints which could happen with ZCatalog 3 within a Plone 4 site
+  [ichim-david refs #75384]
+
+9.5 - (2016-08-29)
+------------------
+* Change: To use better sort algorithm, add b_start and b_size to query when
+  there are no post filters.
+  [vincentfretin]
+* Change: For ZCatalog counter queries, don't do unnecessary sort and brains
+  instantiation when there are no post filters.
+  [vincentfretin]
+
+9.4 - (2016-08-17)
+------------------
+* New egg release
+  [alecghica refs #74877]
+
+9.3 - (2016-08-17)
+------------------
 * Bug fix: Fix 'This site encountered an error trying to fulfill your request'
   error with autocomplete criterion when typing characters slowly and so
   aborting previous requests. Set select2 params global: False to not execute

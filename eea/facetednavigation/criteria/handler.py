@@ -1,16 +1,19 @@
 """ Low level faceted criteria API
 """
+import logging
 from persistent.list import PersistentList
 from zope.component import getUtility
 from zope.interface import implementer
 from zope.annotation.interfaces import IAnnotations
 from zope.schema.interfaces import IVocabularyFactory
+from eea.facetednavigation.criteria.utils import fix_string
 from eea.facetednavigation.config import ANNO_CRITERIA
 from eea.facetednavigation.widgets.storage import Criterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
-
 from eea.facetednavigation.criteria.interfaces import ICriteria
+
+logger = logging.getLogger("eea.facetednavigation")
 
 
 @implementer(ICriteria)
@@ -151,9 +154,19 @@ class Criteria(object):
                 continue
             if isinstance(value, (list, tuple)):
                 value_type = schema[key].value_type
+                value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
             elif isinstance(value, (str, unicode)):
-                value = schema[key].fromUnicode(value)
+                try:
+                    value = schema[key].fromUnicode(value)
+                except ValueError, err:
+                    logger.exception(err)
+                    # Cleanup OLD broken values from criterion
+                    if getattr(criterion, key, None) == value:
+                        logger.info("%s: Cleaning up broken %s:%s from criterion %s",
+                                    self.context.absolute_url(), key, value, cid)
+                        delattr(criterion, key)
+                    continue
             criteria[key] = value
 
         criterion.update(**criteria)
