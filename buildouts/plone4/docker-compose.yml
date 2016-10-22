@@ -1,9 +1,9 @@
 faceted_navigation:
-    image: plone/plone:4
+    image: plone:4
     ports:
     - "8080"
     volumes:
     - ../../:/plone/instance/src/eea.facetednavigation
     environment:
-    - BUILDOUT_EGGS=eea.facetednavigation plone.app.testing
-    - BUILDOUT_DEVELOP=src/eea.facetednavigation
+      ADDONS: "eea.facetednavigation plone.app.testing"
+      DEVELOP: "src/eea.facetednavigation"
