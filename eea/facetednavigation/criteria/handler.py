@@ -6,6 +6,7 @@ from zope.component import getUtility
 from zope.interface import implementer
 from zope.annotation.interfaces import IAnnotations
 from zope.schema.interfaces import IVocabularyFactory
+from zope.schema.interfaces import ConstraintNotSatisfied
 from eea.facetednavigation.criteria.utils import fix_string
 from eea.facetednavigation.config import ANNO_CRITERIA
 from eea.facetednavigation.widgets.storage import Criterion
@@ -147,6 +148,8 @@ class Criteria(object):
 
         wid = properties.get('widget', None)
         schema = self.schema(wid=wid, cid=cid)
+        if not schema:
+            return
 
         criteria = {}
         for key, value in properties.items():
@@ -157,8 +160,15 @@ class Criteria(object):
                 value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
             elif isinstance(value, (str, unicode)):
+                value = fix_string(value)
                 try:
                     value = schema[key].fromUnicode(value)
+                except ConstraintNotSatisfied, err:
+                    logger.exception(err)
+                    continue
+                except AttributeError, err:
+                    value_type = schema[key].value_type
+                    value = [value_type.fromUnicode(value)]
                 except ValueError, err:
                     logger.exception(err)
                     # Cleanup OLD broken values from criterion
@@ -168,6 +178,10 @@ class Criteria(object):
                             self.context.absolute_url(), key, value, cid)
                         delattr(criterion, key)
                     continue
+                except Exception, err:
+                    logger.exception(err)
+                    import ipdb; ipdb.set_trace()
+                    raise
             criteria[key] = value
 
         criterion.update(**criteria)
