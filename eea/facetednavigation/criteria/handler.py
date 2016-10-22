@@ -163,8 +163,9 @@ class Criteria(object):
                     logger.exception(err)
                     # Cleanup OLD broken values from criterion
                     if getattr(criterion, key, None) == value:
-                        logger.info("%s: Cleaning up broken %s:%s from criterion %s",
-                                    self.context.absolute_url(), key, value, cid)
+                        logger.info(
+                            "%s: Cleaning up broken %s:%s from criterion %s",
+                            self.context.absolute_url(), key, value, cid)
                         delattr(criterion, key)
                     continue
             criteria[key] = value

@@ -133,7 +133,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
 
         update = {}
         for prop, value in properties.items():
-            form_key =  'faceted.%s.%s' % (cid, prop)
+            form_key = 'faceted.%s.%s' % (cid, prop)
             if form_key not in kwargs and value is None:
                 continue
             update[prop] = value

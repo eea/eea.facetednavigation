@@ -4,7 +4,8 @@ import re
 import logging
 import operator
 from zope import interface
-from z3c.form import form, group
+from z3c.form.group import GroupForm
+from z3c.form.form import Form
 from z3c.form.interfaces import IGroup
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
@@ -37,7 +38,7 @@ def compare(a, b):
 # Faceted Widget
 #
 @interface.implementer(IWidget)
-class Widget(group.GroupForm, form.Form):
+class Widget(GroupForm, Form):
     """ All faceted widgets should inherit from this class
     """
     # z3c.form

@@ -100,3 +100,11 @@ try:
 except (ImportError, AttributeError):
     # BBB Plone < 4.3
     from zope.app.publisher.browser.menu import BrowserMenu
+
+__all__ = [
+    ViewPageTemplateFile,
+    TrustedZopeContext,
+    TrustedEngine,
+    BrowserSubMenuItem,
+    BrowserMenu
+]

@@ -40,7 +40,8 @@ class EEAFixture(PloneSandboxLayer):
         # Add default Plone content
         try:
             applyProfile(portal, 'plone.app.contenttypes:plone-content')
-            # portal.portal_workflow.setDefaultChain('simple_publication_workflow')
+            # portal.portal_workflow.setDefaultChain(
+            #     'simple_publication_workflow')
         except KeyError:
             # BBB Plone 4
             setuphandlers.setupPortalContent(portal)

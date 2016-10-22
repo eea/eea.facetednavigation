@@ -2,7 +2,6 @@
 """
 import json
 import urllib
-from zope.interface import Interface
 from zope.interface import implementer
 from zope.component import queryUtility
 
