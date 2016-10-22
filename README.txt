@@ -87,11 +87,12 @@ It comes with plenty of configuration options and features like:
 Install
 =======
 
-- Add eea.facetednavigation to your eggs section in your buildout and
-  re-run buildout.
-  You can download a sample buildout from
-  https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
-- Install *EEA Faceted Navigation* within Site Setup > Add-ons
+* Add eea.facetednavigation to your eggs section in your buildout and
+  re-run buildout. You can download a sample buildout from:
+
+  - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
+
+* Install *EEA Faceted Navigation* within Site Setup > Add-ons
 
 Getting started
 ===============
