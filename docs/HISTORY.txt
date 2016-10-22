@@ -3,6 +3,9 @@ Changelog
 
 10.0.dev0 - (unreleased)
 ------------------------
+* Bug fix: fix `b_start[]` in `@@faceted_query` parameters which
+  resulted in double `b_start`: `b_start[]` and `b_start:int`.
+  [david-batranu refs #114]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.facetednavigation. If this fails
   uninstall EEA Faceted Navigation and Install it again
@@ -883,4 +886,3 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
-

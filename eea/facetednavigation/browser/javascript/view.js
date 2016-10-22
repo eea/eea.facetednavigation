@@ -237,6 +237,9 @@ Faceted.Form = {
       }
 
       var query = Faceted.SortedQuery();
+      // avoid "[]" in b_start parameter name (eg. ?b_start[]=0)
+      // this fixes double b_start in the request (eg. ?b_start[]=0&b_start:int=0)
+      query.b_start = query.b_start[0];
       if(context.version){
         query.version = context.version;
       }
