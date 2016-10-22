@@ -3,6 +3,8 @@ Changelog
 
 10.0.dev0 - (unreleased)
 ------------------------
+* Feature: updated documentation for Plone 5
+  [alecghica]
 * Bug fix: fix `b_start[]` in `@@faceted_query` parameters which
   resulted in double `b_start`: `b_start[]` and `b_start:int`.
   [david-batranu refs #114]
