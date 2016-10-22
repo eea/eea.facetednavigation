@@ -23,7 +23,7 @@
       name="vocabulary">eea.faceted.vocabularies.FacetedPortalTypes</property>
    <property name="catalog"></property>
    <property name="maxitems">5</property>
-   <property name="sortreversed">1</property>
+   <property name="sortreversed">True</property>
    <property name="count">True</property>
    <property name="hidezerocount">False</property>
    <property name="default">
