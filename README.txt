@@ -98,9 +98,9 @@ Install
 Getting started
 ===============
 
-1. Go to your working space and add a **Folder** and within **Actions** menu
-   click on **Enable faceted navigation**.
-   See more on the dedicated youtube channel: `EEA Web Systems Training`_
+* Go to your working space and add a **Folder** and within **Actions** menu
+  click on **Enable faceted navigation**.
+  See more on the dedicated youtube channel: `EEA Web Systems Training`_
 
 Faceted settings
 ================
@@ -190,7 +190,6 @@ See more `FacetedNavigationScreenshots <http://taskman.eionet.europa.eu/projects
 Live demo
 =========
 
-- `EEA Web Systems Training`_
 - `EEA Publications <http://www.eea.europa.eu/publications>`_
 - `EEA Multimedia <http://www.eea.europa.eu/multimedia/all-videos>`_
 - `University of Minnesota - Explore Books <http://upress.umn.edu/explore>`_
@@ -216,12 +215,13 @@ Source code
 Eggs repository
 ===============
 
+- https://pypi.python.org/pypi/eea.facetednavigation
 - http://eggrepo.eea.europa.eu/simple
 
 
 Plone versions
 ==============
-It has been developed and tested for Plone 2, 3 and 4. See buildouts section above.
+It has been developed and tested for Plone 2, 3, 4 and 5. See buildouts section above.
 
 
 Known bugs and ongoing development
