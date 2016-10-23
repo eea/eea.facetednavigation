@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.0.dev0 - (unreleased)
-------------------------
+10.0 - (2016-10-23)
+-------------------
 * Feature: updated documentation for Plone 5
   [alecghica]
 * Bug fix: fix `b_start[]` in `@@faceted_query` parameters which
@@ -888,3 +888,4 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
+
