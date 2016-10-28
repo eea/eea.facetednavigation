@@ -12,7 +12,7 @@ setup(name=NAME,
       version=VERSION,
       description="EEA Faceted Navigation",
       long_description=(
-          open("README.txt").read() + "\n" +
+          open("README.rst").read() + "\n" +
           open(os.path.join("docs", "HISTORY.txt")).read()
       ),
       classifiers=[
