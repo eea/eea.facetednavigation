@@ -1,10 +1,12 @@
 ======================
 EEA Faceted Navigation
 ======================
-.. image:: http://ci.eionet.europa.eu/job/eea.facetednavigation-www/badge/icon
-  :target: http://ci.eionet.europa.eu/job/eea.facetednavigation-www/lastBuild
+.. image:: http://ci.eionet.europa.eu/job/eea.facetednavigation-plone5/badge/icon
+  :target: http://ci.eionet.europa.eu/job/eea.facetednavigation-plone5/lastBuild
 .. image:: http://ci.eionet.europa.eu/job/eea.facetednavigation-plone4/badge/icon
   :target: http://ci.eionet.europa.eu/job/eea.facetednavigation-plone4/lastBuild
+.. image:: http://ci.eionet.europa.eu/job/eea.facetednavigation-www/badge/icon
+  :target: http://ci.eionet.europa.eu/job/eea.facetednavigation-www/lastBuild
 
 The EEA Faceted Navigation **(FacetedNav)** gives you a
 **very powerful interface to improve search within large collections of items.**
@@ -26,9 +28,25 @@ it covers same functionality and it adds a lot more features.
 
 **FacetedNav can also be used as an advanced search for your site**.
 
+.. warning ::
+
+  **Latest releases of this package (10.0+)** introduced a lot of **major changes**
+  in order to make it work with **Plone 5**.
+  Thus, please intensively test it before upgrading on Plone 4 deployments.
+
 
 .. contents::
 
+Upgrade to version 10.0+
+========================
+* Within "Plone > Site setup > Add-ons" click on upgrade button available for
+  EEA Faceted Navigation;
+* Only if the above step didn't work for you. Within "Plone > Site setup > Add-ons"
+  uninstall EEA Faceted Navigation and Install it again;
+* If you have third-party Faceted Navigation Widgets (registered outside
+  eea.facetednavigation package) you will need to upgrade them to z3c.form
+  and explicitly register JS/CSS resources within registry.xml/cssregistry.xml/jsregistry,xml
+  Take `faceted text widget <https://github.com/collective/eea.facetednavigation/tree/master/eea/facetednavigation/widgets/text>`_  as an example;
 
 Main features
 =============
@@ -69,19 +87,20 @@ It comes with plenty of configuration options and features like:
 Install
 =======
 
-- Add eea.facetednavigation to your eggs section in your buildout and
-  re-run buildout.
-  You can download a sample buildout from
-  https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
-- Install *EEA Faceted Navigation* within Site Setup > Add-ons
+* Add eea.facetednavigation to your eggs section in your buildout and
+  re-run buildout. You can download a sample buildout from:
+
+  - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
+  - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone5
+
+* Install *EEA Faceted Navigation* within Site Setup > Add-ons
 
 Getting started
 ===============
 
-1. Go to your working space and add a **Folder** and within **Actions** menu
-   click on **Enable faceted navigation**.
-   See more on the dedicated youtube channel: `EEA Web Systems Training`_
-
+* Go to your working space and add a **Folder** and within **Actions** menu
+  click on **Enable faceted navigation**.
+  See more on the dedicated youtube channel: `EEA Web Systems Training`_
 
 Faceted settings
 ================
@@ -110,6 +129,13 @@ Enable/disable smart facets hiding
 Hide facets criteria if there is only one page of results.
 
 Default: **disabled** (*starting with version 5.2*)
+
+Autocomplete widget
+-------------------
+To include a specific select2 locale, French for instance, you can add a resource `++resource++select2/select2_locale_fr.js` in portal_javascripts (Plone 4). It needs to be after the select2.min.js resource. (You need eea.jquery 8.7 minimum)
+
+You can add a new autocomplete source by registering a IAutocompleteSuggest browser view, you can see an example in
+`eea/facetednavigation/tests/autocomplete.py` and `eea/facetednavigation/tests/autocomplete.zcml`
 
 Extra
 =====
@@ -164,10 +190,10 @@ See more `FacetedNavigationScreenshots <http://taskman.eionet.europa.eu/projects
 Live demo
 =========
 
-- `EEA Web Systems Training`_
 - `EEA Publications <http://www.eea.europa.eu/publications>`_
 - `EEA Multimedia <http://www.eea.europa.eu/multimedia/all-videos>`_
 - `University of Minnesota - Explore Books <http://upress.umn.edu/explore>`_
+- `The Mountaineers <https://mountaineers.org/explore/activities>`_
 
 
 Buildout installation
@@ -175,6 +201,7 @@ Buildout installation
 
 - `Plone 2 and 3 <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone3>`_
 - `Plone 4+ <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone4>`_
+- `Plone 5+ <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone5>`_
 
 
 Source code
@@ -182,17 +209,19 @@ Source code
 
 - `Plone 2 and 3 on github <https://github.com/collective/eea.facetednavigation/tree/plone3>`_
 - `Plone 4+ on github <https://github.com/collective/eea.facetednavigation>`_
+- `Plone 5+ on github <https://github.com/collective/eea.facetednavigation>`_
 
 
 Eggs repository
 ===============
 
+- https://pypi.python.org/pypi/eea.facetednavigation
 - http://eggrepo.eea.europa.eu/simple
 
 
 Plone versions
 ==============
-It has been developed and tested for Plone 2, 3 and 4. See buildouts section above.
+It has been developed and tested for Plone 2, 3, 4 and 5. See buildouts section above.
 
 
 Known bugs and ongoing development
@@ -233,6 +262,7 @@ Temple Place, Suite 330, Boston, MA 02111-1307 USA.
 The Initial Owner of the Original Code is European Environment Agency (EEA).
 Portions created by Eau de Web are Copyright (C) 2009 by
 European Environment Agency. All Rights Reserved.
+
 
 Funding
 =======
