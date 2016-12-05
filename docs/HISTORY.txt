@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.9 - (2016-12-05)
-------------------
+9.9.dev0 - (unreleased)
+-----------------------
 * Bug fix: Fix BooleanIndex in CountableWidget.
   [cedricmessiant]
 
