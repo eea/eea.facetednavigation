@@ -6,6 +6,7 @@ from Products.Archetypes.public import StringField
 from Products.Archetypes.public import SelectionWidget
 from Products.Archetypes.public import BooleanWidget
 
+from plone.i18n.normalizer import urlnormalizer as normalizer
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
@@ -48,6 +49,15 @@ class Widget(CountableWidget):
     edit_css = '++resource++eea.facetednavigation.widgets.checkbox.edit.css'
     edit_schema = BooleanEditSchema
     index = ViewPageTemplateFile('widget.pt')
+
+    @property
+    def css_class(self):
+        """ Widget specific css class
+        """
+        css_type = self.widget_type
+        css_title = normalizer.normalize(self.data.title)
+        return ('faceted-checkboxes-widget '
+                'faceted-{0}-widget section-{1}').format(css_type, css_title)
 
     @property
     def default(self):
