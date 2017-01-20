@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.11.dev0 - (unreleased)
+------------------------
+
 9.10 - (2017-01-20)
 -------------------
 * Bug fix: Fix Boolean Widget in view mode
