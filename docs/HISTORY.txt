@@ -1,7 +1,7 @@
 Changelog
 =========
 
-10.0 - (2017-01-20)
+9.10 - (2017-01-20)
 -------------------
 * Bug fix: Fix Boolean Widget in view mode
   [avoinea refs #120]
