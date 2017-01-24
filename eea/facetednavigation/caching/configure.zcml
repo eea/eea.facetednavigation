@@ -1,4 +1,5 @@
-<configure xmlns="http://namespaces.zope.org/zope">
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
 
   <subscriber
     for="..interfaces.IFacetedNavigable
@@ -7,6 +8,7 @@
     />
 
   <subscriber
+    zcml:condition="installed Products.Archetypes"
     for="Products.Archetypes.interfaces.IBaseContent
          zope.lifecycleevent.interfaces.IObjectModifiedEvent"
     handler=".cache.invalidateFacetedCache"

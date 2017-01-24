@@ -5,13 +5,18 @@ from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 
 from Products.CMFCore.utils import getToolByName
-from Products.ATContentTypes.criteria import _criterionRegistry
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.sorting.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.sorting.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
+
+try:
+    from Products.ATContentTypes.criteria import _criterionRegistry
+    HAS_ATCT = True
+except ImportError:
+    HAS_ATCT = False
 
 
 class Widget(AbstractWidget):
@@ -62,6 +67,8 @@ class Widget(AbstractWidget):
 
     def criteriaByIndexId(self, indexId):
         """ Get criteria by index id
+
+        XXX: this method is probaly orphaned code
         """
         catalog_tool = getToolByName(self.context, 'portal_catalog')
         try:
@@ -79,8 +86,12 @@ class Widget(AbstractWidget):
 
     def validateAddCriterion(self, indexId, criteriaType):
         """Is criteriaType acceptable criteria for indexId
+
+        XXX: this method is probaly orphaned code
         """
-        return criteriaType in self.criteriaByIndexId(indexId)
+        if HAS_ATCT:
+            return criteriaType in self.criteriaByIndexId(indexId)
+        return True
 
     def listSortFields(self):
         """Return a list of available fields for sorting."""

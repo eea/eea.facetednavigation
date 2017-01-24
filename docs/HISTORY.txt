@@ -3,6 +3,8 @@ Changelog
 
 10.1.dev0 - (unreleased)
 ------------------------
+* Change: Make it work in a completly Archetypes free Plone 5.1.
+  [jensens]
 
 10.0 - (2016-10-23)
 -------------------

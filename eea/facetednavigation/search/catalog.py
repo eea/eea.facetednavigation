@@ -5,10 +5,18 @@ from zope.event import notify
 from zope.interface import implementer
 from Products.CMFCore.utils import getToolByName
 from BTrees.IIBTree import IIBucket
-from plone.app.collection.interfaces import ICollection
 from eea.facetednavigation.events import QueryWillBeExecutedEvent
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.plonex import parseFormquery
+from zope.interface import Interface
+
+try:
+    from plone.app.collection.interfaces import ICollection
+except ImportError:
+
+    class ICollection(Interface):
+        pass
+
 
 try:
     from plone.app.contenttypes import interfaces as PACI

@@ -24,7 +24,7 @@
   </class>
 
   <class class="plone.app.folder.folder.ATFolder"
-    zcml:condition="installed plone.app.folder">
+    zcml:condition="installed Products.ATContentTypes">
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 

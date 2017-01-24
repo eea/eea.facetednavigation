@@ -2,7 +2,7 @@
 """
 import logging
 from zope.interface import implementer
-from Products.Archetypes.interfaces import IBaseObject
+from zope.interface import Interface
 from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
@@ -15,6 +15,13 @@ from eea.facetednavigation.widgets.resultsfilter.interfaces import (
     LayoutSchemata,
 )
 logger = logging.getLogger('eea.facetednavigation.widgets.resultsfilter')
+
+try:
+    from Products.Archetypes.interfaces import IBaseObject
+except ImportError:
+
+    class IBaseObject(Interface):
+        pass
 
 
 @implementer(IResultsFilterWidget)
