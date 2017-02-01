@@ -1,6 +1,12 @@
 Changelog
 =========
 
+10.1.dev1 - (unreleased)
+------------------------
+* Bug fix: Updated the sorting widget to use the term title value from
+  the vocabulary (if selected) rather than the index titles.
+  [tsimkins]
+
 10.1.dev0 - (unreleased)
 ------------------------
 * Change: Make it work in a completly Archetypes free Plone 5.1.

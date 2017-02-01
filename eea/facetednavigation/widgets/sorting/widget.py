@@ -109,9 +109,12 @@ class Widget(AbstractWidget):
         """ Return data vocabulary
         """
         vocab = self.portal_vocabulary()
-        sort_fields = self.listSortFields()
-        if not vocab:
-            return [field for field in sort_fields]
+        sort_fields = [x for x in self.listSortFields()]
 
-        vocab_fields = [field[0].replace('term.', '', 1) for field in vocab]
-        return [f for f in sort_fields if f[0] in vocab_fields]
+        if not vocab:
+            return sort_fields
+
+        vocab_fields = [(x[0], x[1], '') for x in vocab]
+        sort_field_ids = [x[0] for x in sort_fields]
+
+        return [f for f in vocab_fields if f[0] in sort_field_ids]
