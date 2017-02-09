@@ -114,7 +114,7 @@ class Widget(AbstractWidget):
         if not vocab:
             return sort_fields
 
-        vocab_fields = [(x[0], x[1], '') for x in vocab]
+        vocab_fields = [(x[0].replace('term.', '', 1), x[1], '') for x in vocab]
         sort_field_ids = [x[0] for x in sort_fields]
 
         return [f for f in vocab_fields if f[0] in sort_field_ids]
