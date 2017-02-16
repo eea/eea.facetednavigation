@@ -3,9 +3,11 @@ Changelog
 
 10.1.dev2 - (unreleased)
 ------------------------
-* Bug fix: Updated to previous change: restored replace of 'term.' in 
+* Bug fix: Updated to previous change: restored replace of 'term.' in
   vocabulary id for Products.ATVocabularyManager compatibility.
   [tsimkins]
+* Bug fix: Do not use a name to query collective.solr search utility
+  [tschorr]
 
 10.1.dev1 - (unreleased)
 ------------------------
