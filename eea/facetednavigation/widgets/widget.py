@@ -244,7 +244,7 @@ class Widget(GroupForm, Form):
             values = []
 
             # get values from SOLR if collective.solr is present
-            searchutility = queryUtility(ISolrSearch, None)
+            searchutility = queryUtility(ISolrSearch)
             if searchutility is not None:
                 index = self.data.get('index', None)
                 kw = {'facet': 'on',
