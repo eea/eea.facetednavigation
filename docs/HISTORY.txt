@@ -3,6 +3,8 @@ Changelog
 
 9.11.dev0 - (unreleased)
 ------------------------
+* Feature: Protect against slow IWidgetFilterBrains adapters
+  [avoinea refs #83219]
 
 9.10 - (2017-01-20)
 -------------------
