@@ -8,6 +8,8 @@ Changelog
   [tsimkins]
 * Bug fix: Do not use a name to query collective.solr search utility
   [tschorr]
+* Feature: Protect against slow IWidgetFilterBrains adapters
+  [avoinea refs #83219]
 
 10.1.dev1 - (unreleased)
 ------------------------

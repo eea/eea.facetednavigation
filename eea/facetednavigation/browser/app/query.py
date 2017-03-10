@@ -1,5 +1,6 @@
 """ Faceted query
 """
+import time
 import logging
 from types import GeneratorType
 from zope.component import queryMultiAdapter
@@ -21,7 +22,7 @@ from eea.facetednavigation.interfaces import IFacetedWrapper
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
 from plone.app.contentlisting.interfaces import IContentListing
 
-logger = logging.getLogger('eea.facetednavigation.browser.app.query')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 class FacetedQueryHandler(FolderView):
@@ -178,6 +179,7 @@ class FacetedQueryHandler(FolderView):
             return Batch([], 20, 0)
 
         # Apply after query (filter) on brains
+        start = time.time()
         for brains_filter in brains_filters:
             brains = brains_filter(brains, kwargs)
 
@@ -187,6 +189,10 @@ class FacetedQueryHandler(FolderView):
         if isinstance(brains, GeneratorType):
             brains = [brain for brain in brains]
 
+        delta = time.time() - start
+        if delta > 30:
+            logger.warn("Very slow IWidgetFilterBrains adapters: %s at %s",
+                brains_filters, self.context.absolute_url())
         return Batch(brains, num_per_page, b_start, orphan=orphans)
 
     def results(self, **kwargs):
