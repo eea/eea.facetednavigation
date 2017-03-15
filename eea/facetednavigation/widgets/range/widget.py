@@ -8,7 +8,7 @@ from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.range.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.range.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
-logger = logging.getLogger('eea.facetednavigation.widgets.range')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 class Widget(AbstractWidget):

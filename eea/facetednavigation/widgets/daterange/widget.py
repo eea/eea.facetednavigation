@@ -15,7 +15,7 @@ from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata
 from eea.facetednavigation import EEAMessageFactory as _
-logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 def formated_time(datestr):

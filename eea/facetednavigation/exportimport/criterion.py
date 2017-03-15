@@ -5,8 +5,8 @@ from zope.component import getUtility
 from Products.GenericSetup.utils import XMLAdapterBase
 from eea.facetednavigation.widgets.interfaces import ICriterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
+logger = logging.getLogger('eea.facetednavigation')
 
-logger = logging.getLogger('eea.facetednavigation.exportimport.criterion')
 
 class CriterionXMLAdapter(XMLAdapterBase):
     """ GenericSetup XML Adapter for faceted criterion

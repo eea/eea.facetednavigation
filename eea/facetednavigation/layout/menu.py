@@ -10,7 +10,7 @@ from eea.facetednavigation.plonex import addTokenToUrl
 from eea.facetednavigation.layout.interfaces import ILayoutMenuHandler
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
-logger = logging.getLogger('eea.facetednavigation.layout.menu')
+logger = logging.getLogger('eea.facetednavigation')
 
 class FacetedDisplayMenu(DisplayMenu):
     """ Overrides display menu

@@ -14,14 +14,13 @@ from eea.facetednavigation.widgets.resultsfilter.interfaces import (
     DefaultSchemata,
     LayoutSchemata,
 )
-logger = logging.getLogger('eea.facetednavigation.widgets.resultsfilter')
-
 try:
     from Products.Archetypes.interfaces import IBaseObject
 except ImportError:
-
     class IBaseObject(Interface):
-        pass
+        """ Fallback IBaseObject """
+
+logger = logging.getLogger('eea.facetednavigation')
 
 
 @implementer(IResultsFilterWidget)

@@ -4,7 +4,8 @@ import logging
 from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from zope.component.interface import interfaceToName
-logger = logging.getLogger("eea.facetednavigation.upgrades")
+logger = logging.getLogger("eea.facetednavigation")
+
 
 def fix_layout(context):
     """ Fix layout for old style IFacetedNavigable objects

@@ -9,7 +9,7 @@ from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import  cacheCounterKeyFacetedNavigation
 from eea.facetednavigation.interfaces import ICriteria
 
-logger = logging.getLogger('eea.facetednavigation.browser.app.counter')
+logger = logging.getLogger('eea.facetednavigation')
 
 class FacetedQueryCounter(object):
     """ Count results per query

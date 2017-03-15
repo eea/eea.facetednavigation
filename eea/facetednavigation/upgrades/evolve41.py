@@ -12,7 +12,7 @@ from eea.facetednavigation.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 
-logger = logging.getLogger("eea.facetednavigation.upgrades => 4.1")
+logger = logging.getLogger("eea.facetednavigation")
 
 def hide_portlets(context):
     """ As eea.design changed, we need to hide left and right plone portlets

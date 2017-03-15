@@ -9,13 +9,11 @@ from eea.facetednavigation.events import QueryWillBeExecutedEvent
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.plonex import parseFormquery
 from zope.interface import Interface
-
 try:
     from plone.app.collection.interfaces import ICollection
 except ImportError:
-
     class ICollection(Interface):
-        pass
+        """ Fallback ICollection """
 
 
 try:
@@ -26,7 +24,7 @@ try:
 except ImportError:
     HAS_PAT = False
 
-logger = logging.getLogger('eea.facetednavigation.search.catalog')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 @implementer(IFacetedCatalog)

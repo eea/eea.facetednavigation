@@ -11,14 +11,13 @@ from eea.facetednavigation.widgets.tal.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.tal.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
-logger = logging.getLogger('eea.facetednavigation.widgets.tal')
-
 try:
     from Products.Archetypes.interfaces import IBaseObject
 except ImportError:
-
     class IBaseObject(Interface):
-        pass
+        """ Fallback IBaseObject """
+
+logger = logging.getLogger('eea.facetednavigation')
 
 
 class Widget(AbstractWidget):

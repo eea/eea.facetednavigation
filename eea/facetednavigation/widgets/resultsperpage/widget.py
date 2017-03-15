@@ -9,7 +9,7 @@ from eea.facetednavigation.widgets.resultsperpage.interfaces import (
     LayoutSchemata,
     DisplaySchemata,
 )
-logger = logging.getLogger('eea.facetednavigation.widgets.resultsperpage')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 class Widget(AbstractWidget):

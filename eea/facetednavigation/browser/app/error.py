@@ -6,7 +6,7 @@ from zope.component import queryAdapter
 from eea.facetednavigation.interfaces import ICriteria
 from Products.Five.browser import BrowserView
 
-logger = logging.getLogger('eea.facetednavigation.browser.error')
+logger = logging.getLogger('eea.facetednavigation')
 
 class FacetedError(BrowserView):
     """ Render an error message when something is wrong with widgets

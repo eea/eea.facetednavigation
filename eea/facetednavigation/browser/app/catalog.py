@@ -5,7 +5,7 @@ import logging
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser import BrowserView
 from eea.facetednavigation.caching import ramcache
-logger = logging.getLogger('eea.facetednavigation.browser.catalog')
+logger = logging.getLogger('eea.facetednavigation')
 
 def cacheKey(method, self, *args, **kwargs):
     """ Generate unique cache id for faceted catalog indexes types

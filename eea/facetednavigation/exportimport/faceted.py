@@ -6,7 +6,8 @@ from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.utils import XMLAdapterBase
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.interfaces import ICriteria
-logger = logging.getLogger('eea.facetednavigation.exportimport.faceted')
+logger = logging.getLogger('eea.facetednavigation')
+
 
 class FacetedNavigableXMLAdapter(XMLAdapterBase):
     """ GenericSetup XML Adapter for faceted navigable context

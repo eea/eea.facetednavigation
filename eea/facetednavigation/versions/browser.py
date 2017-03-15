@@ -11,7 +11,7 @@ from eea.facetednavigation.versions.interfaces import IFacetedVersion
 from eea.facetednavigation.config import ANNO_FACETED_VERSION
 from zope.annotation.interfaces import IAnnotations
 
-logger = logging.getLogger('eea.facetednavigation.cache.proxy')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 @implementer(IFacetedVersion)

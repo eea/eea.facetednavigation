@@ -9,7 +9,7 @@ from eea.facetednavigation.widgets.date.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.date.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
-logger = logging.getLogger('eea.facetednavigation.widgets.daterange')
+logger = logging.getLogger('eea.facetednavigation')
 
 PAST = (
     (730, _('2 years ago')),

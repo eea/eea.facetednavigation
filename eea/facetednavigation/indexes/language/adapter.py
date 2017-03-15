@@ -6,7 +6,7 @@ from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.indexes.language.interfaces import (
     ILanguageWidgetAdapter,
 )
-logger = logging.getLogger('eea.facetednavigation.language')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 @implementer(ILanguageWidgetAdapter)

@@ -18,7 +18,7 @@ from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-logger = logging.getLogger('eea.facetednavigation.browser.app.configure')
+logger = logging.getLogger('eea.facetednavigation')
 #
 # Controllers
 #

@@ -14,7 +14,7 @@ from eea.facetednavigation.widgets.alphabetic.alphabets import (
 from eea.facetednavigation.widgets.alphabetic.interfaces import (
     IAlphabeticWidget,
 )
-logger = logging.getLogger('eea.facetednavigation.widgets.alphabetic')
+logger = logging.getLogger('eea.facetednavigation')
 
 
 @implementer(IAlphabeticWidget)
