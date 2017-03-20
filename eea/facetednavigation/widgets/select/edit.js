@@ -4,7 +4,7 @@ FacetedEdit.SelectWidget = function(wid){
   this.elements = jQuery('option', this.widget);
   this.select = jQuery('#' + this.wid);
   var value = this.select.val();
-  this.selected = jQuery('option[value='+ value +']', this.widget);
+  this.selected = jQuery('option[value="'+ value +'"]', this.widget);
 
   // Handle change
   var js_widget = this;
@@ -31,7 +31,7 @@ FacetedEdit.SelectWidget.prototype = {
 
   set_default: function(element){
     var value = this.select.val();
-    this.selected = jQuery('option[value='+ value +']', this.widget);
+    this.selected = jQuery('option[value="'+ value +'"]', this.widget);
 
     var query = {};
     query.redirect = '';

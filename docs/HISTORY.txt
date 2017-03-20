@@ -3,6 +3,11 @@ Changelog
 
 9.11.dev0 - (unreleased)
 ------------------------
+* Bug fix: Wrapped option values with quotes to avoid jQuery selector errors
+  with values containing spaces (jQuery >= 1.5.0) and empty values
+  (jQuery >=2.0.0)
+  [pdpotter]
+
 * Feature: Protect against slow IWidgetFilterBrains adapters
   [avoinea refs #83219]
 
