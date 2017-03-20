@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.12.dev0 - (unreleased)
+------------------------
+
 9.11 - (2017-03-20)
 -------------------
 * Bug fix: Wrapped option values with quotes to avoid jQuery selector errors
