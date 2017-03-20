@@ -1,8 +1,8 @@
 Changelog
 =========
 
-10.1.dev2 - (unreleased)
-------------------------
+10.1 - (2017-03-20)
+-------------------
 * Bug fix: Updated to previous change: restored replace of 'term.' in
   vocabulary id for Products.ATVocabularyManager compatibility.
   [tsimkins]
@@ -10,15 +10,9 @@ Changelog
   [tschorr]
 * Feature: Protect against slow IWidgetFilterBrains adapters
   [avoinea refs #83219]
-
-10.1.dev1 - (unreleased)
-------------------------
 * Change: Updated the sorting widget to use the term title value from
   the vocabulary (if selected) rather than the index titles.
   [tsimkins]
-
-10.1.dev0 - (unreleased)
-------------------------
 * Change: Make it work in a completly Archetypes free Plone 5.1.
   [jensens]
 
