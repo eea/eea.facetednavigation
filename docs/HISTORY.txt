@@ -3,6 +3,8 @@ Changelog
 
 9.12.dev0 - (unreleased)
 ------------------------
+* Change: updated package information
+  [alecghica]
 
 9.11 - (2017-03-20)
 -------------------
