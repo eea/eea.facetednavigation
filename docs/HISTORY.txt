@@ -3,6 +3,8 @@ Changelog
 
 9.13.dev0 - (unreleased)
 ------------------------
+* Bug fix: fixed location of faceted-operator position
+  [ichim-david]
 
 9.12 - (2017-03-28)
 -------------------
