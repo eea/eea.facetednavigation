@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.14.dev0 - (unreleased)
+------------------------
+
 9.13 - (2017-04-19)
 -------------------
 * Bug fix: fixed location of faceted-operator position
