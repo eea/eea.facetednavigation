@@ -3,6 +3,8 @@ Changelog
 
 9.14.dev0 - (unreleased)
 ------------------------
+* Change: updated package information
+  [alecghica]
 
 9.13 - (2017-04-19)
 -------------------
