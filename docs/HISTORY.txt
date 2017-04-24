@@ -4,7 +4,7 @@ Changelog
 10.2.dev0 - (unreleased)
 ------------------------
 * Change: updated package information
-[eduard-fironda]
+  [eduard-fironda]
 
 10.1 - (2017-03-20)
 -------------------
