@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.14.dev0 - (unreleased)
-------------------------
+10.0 - (2017-04-24)
+-------------------
 * Change: updated package information
   [alecghica]
 
@@ -22,7 +22,6 @@ Changelog
   with values containing spaces (jQuery >= 1.5.0) and empty values
   (jQuery >=2.0.0)
   [pdpotter]
-
 * Feature: Protect against slow IWidgetFilterBrains adapters
   [avoinea refs #83219]
 
