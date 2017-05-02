@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.3.dev0 - (unreleased)
+------------------------
+
 10.2 - (2017-05-02)
 -------------------
 * Change: updated package information
