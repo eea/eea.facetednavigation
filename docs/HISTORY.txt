@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.14.dev0 - (unreleased)
-------------------------
+9.14 - (2017-05-02)
+-------------------
 * Change: updated package information
   [alecghica]
 
