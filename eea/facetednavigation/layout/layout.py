@@ -96,4 +96,3 @@ class FacetedLayout(object):
 
         IAnnotations(self.context)[ANNO_FACETED_LAYOUT] = layout
         return ''
-

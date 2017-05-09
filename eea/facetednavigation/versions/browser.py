@@ -5,11 +5,11 @@ import cPickle
 import logging
 from zope.component import queryAdapter
 from zope.interface import implementer
+from zope.annotation.interfaces import IAnnotations
 from Products.Five.browser import BrowserView
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.versions.interfaces import IFacetedVersion
 from eea.facetednavigation.config import ANNO_FACETED_VERSION
-from zope.annotation.interfaces import IAnnotations
 
 logger = logging.getLogger('eea.facetednavigation')
 

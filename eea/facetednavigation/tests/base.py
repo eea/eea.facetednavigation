@@ -1,11 +1,11 @@
 """ Base test cases
 """
+from Products.CMFPlone import setuphandlers
 from plone.testing import z2
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
-from Products.CMFPlone import setuphandlers
 from plone.app.testing import setRoles
 try:
     from Products import LinguaPlone

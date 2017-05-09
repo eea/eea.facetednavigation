@@ -1,8 +1,8 @@
 """ Faceted Views meta directives
 """
 from zope.interface import Interface, implementer
-from eea.facetednavigation.views.interfaces import IViewsInfo
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+from eea.facetednavigation.views.interfaces import IViewsInfo
 from Products.Five.browser.metaconfigure import page
 
 

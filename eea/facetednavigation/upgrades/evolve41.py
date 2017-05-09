@@ -1,12 +1,11 @@
 """ Upgrade scripts to version 4.1
 """
 import logging
-from zope.interface import noLongerProvides, alsoProvides
 from Products.CMFCore.utils import getToolByName
+from zope.interface import noLongerProvides, alsoProvides
 from zope.component import queryAdapter, getUtility
 from zope.component.interface import interfaceToName
 from zope.annotation.interfaces import IAnnotations
-
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.interfaces import IHidePloneRightColumn

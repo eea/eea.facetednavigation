@@ -3,6 +3,8 @@ Changelog
 
 10.3.dev0 - (unreleased)
 ------------------------
+* Change: fixed PyLint warnings and errors
+  [eduard-fironda refs #84949]
 
 10.2 - (2017-05-02)
 -------------------

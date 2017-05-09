@@ -7,9 +7,9 @@ from zope.component import queryMultiAdapter
 from zope.interface import implementer
 from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.utils import XMLAdapterBase
-from eea.facetednavigation.interfaces import IFacetedNavigable
 from Products.GenericSetup.context import BaseContext
 from Products.GenericSetup.interfaces import ISetupEnviron
+from eea.facetednavigation.interfaces import IFacetedNavigable
 logger = logging.getLogger('eea.facetednavigation')
 
 
