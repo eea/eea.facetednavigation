@@ -70,8 +70,8 @@ class Widget(AbstractWidget):
 
         if self.hidden:
             default = self.default
-            sort_on = len(default) > 0 and default[0] or None
-            reverse = len(default) > 1 and default[1] or False
+            sort_on = default[0] if default else None
+            reverse = default[1] if len(default) > 1 else False
         else:
             sort_on = form.get(self.data.getId(), '')
             reverse = form.get('reversed', False)

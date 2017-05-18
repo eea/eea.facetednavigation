@@ -3,7 +3,8 @@ Changelog
 
 9.15.dev0 - (unreleased)
 ------------------------
-
+* Change: fixed PyLint warnings and errors
+  [valipod refs #84949]
 
 9.14 - (2017-05-02)
 -------------------

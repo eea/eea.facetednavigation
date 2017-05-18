@@ -7,9 +7,11 @@ from zope.component import queryMultiAdapter
 from zope.interface import implements
 from Products.GenericSetup.interfaces import IBody
 from Products.GenericSetup.utils import XMLAdapterBase
-from eea.facetednavigation.interfaces import IFacetedNavigable
 from Products.GenericSetup.context import BaseContext
 from Products.GenericSetup.interfaces import ISetupEnviron
+
+from eea.facetednavigation.interfaces import IFacetedNavigable
+
 logger = logging.getLogger('eea.facetednavigation.exportimport.criteria')
 
 
@@ -64,10 +66,10 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                 # it is used to sort criteria when the criterion is added
                 pos = [s for s in child.getElementsByTagName('property')
                        if s.getAttribute('name') == 'position']
-                position = pos and pos[0].childNodes[0].nodeValue or 'top'
+                position = pos[0].childNodes[0].nodeValue if pos else 'top'
                 sect = [s for s in child.getElementsByTagName('property')
                         if s.getAttribute('name') == 'section']
-                section = sect and sect[0].childNodes[0].nodeValue or 'default'
+                section = sect[0].childNodes[0].nodeValue if sect else 'default'
                 cid = self.context.add('text', position, section, _cid_=name)
             except KeyError:
                 # element already exists, we log and we continue

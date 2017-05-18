@@ -1,9 +1,9 @@
 """ Text widget
 """
 import logging
+from datetime import datetime
 
 from DateTime import DateTime
-from datetime import datetime
 
 from Products.Archetypes.public import BooleanField
 from Products.Archetypes.public import BooleanWidget
@@ -231,21 +231,18 @@ class Widget(AbstractWidget, L10nDatepicker):
         """Return the date format to use with JS datepicker"""
         if self.use_plone_date_format:
             return get_datepicker_date_format(self.request)
-        else:
-            return "yy-mm-dd"
+        return "yy-mm-dd"
 
     @property
     def python_date_format(self):
         """Return the date format to use in python"""
         if self.use_plone_date_format:
             return get_python_date_format(self.request)
-        else:
-            return "%Y-%m-%d"
+        return "%Y-%m-%d"
 
     @property
     def js_language(self):
         """Return the language to use with JS code"""
         if self.use_plone_date_format:
             return self.jq_language()
-        else:
-            return ""
+        return ""

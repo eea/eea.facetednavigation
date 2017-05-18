@@ -13,12 +13,13 @@ from eea.facetednavigation.search import parseFormquery
 try:
     from plone.app.contenttypes import interfaces as PACI
     from plone.app.contenttypes.behaviors.collection import \
-            ICollection as ICollection_behavior
+        ICollection as ICollection_behavior
     HAS_PAT = True
 except ImportError:
     HAS_PAT = False
 
 logger = logging.getLogger('eea.facetednavigation.search.catalog')
+
 
 class FacetedCatalog(object):
     """ Custom faceted adapter for portal_catalog
@@ -60,7 +61,7 @@ class FacetedCatalog(object):
 
         # Also get query from Topic
         buildQuery = getattr(context, 'buildQuery', None)
-        newquery = buildQuery and buildQuery() or {}
+        newquery = buildQuery() if buildQuery else {}
         formquery = None
 
         # Get query from Collection

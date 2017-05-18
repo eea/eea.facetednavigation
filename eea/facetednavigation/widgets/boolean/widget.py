@@ -96,5 +96,4 @@ class Widget(CountableWidget):
 
         if value:
             return {index: True}
-        else:
-            return {}
+        return {}

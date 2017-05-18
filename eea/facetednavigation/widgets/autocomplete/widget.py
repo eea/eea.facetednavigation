@@ -2,9 +2,9 @@
 """
 import json
 import urllib
-from zope.component import queryUtility
-
 from lxml import etree
+from zope.component import queryUtility
+from zope.interface import implements
 
 from Products.Archetypes.Field import BooleanField
 from Products.Archetypes.public import Schema
@@ -20,7 +20,6 @@ from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.config import HAS_SOLR
 
-from zope.interface import implements
 
 EditSchema = Schema((
     StringField(
@@ -178,13 +177,13 @@ class SolrSuggest(BrowserView):
         from collective.solr.interfaces import ISolrConnectionManager
         manager = queryUtility(ISolrConnectionManager)
         connection = manager.getConnection()
-        # XXX this should really go into c.solr
+        # this should really go into c.solr
         request = urllib.urlencode({'q': term}, doseq=True)
         response = connection.doPost(
             connection.solrBase + '/suggest', request, connection.formheaders)
         root = etree.fromstring(response.read())
         suggestion = root.xpath("//arr[@name='suggestion']")
-        if len(suggestion):
+        if suggestion:
             suggestions = suggestion[0].findall('str')
             result = [{'id': s.text, 'text': s.text} for s in suggestions]
 

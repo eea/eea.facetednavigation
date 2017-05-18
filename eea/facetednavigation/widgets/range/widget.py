@@ -96,5 +96,3 @@ class Widget(AbstractWidget):
             'range': 'min:max'
         }
         return query
-
-

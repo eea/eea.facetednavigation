@@ -5,13 +5,14 @@ from plone.app.testing import TEST_USER_ID
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
-from Products.CMFPlone import setuphandlers
 from plone.app.testing import setRoles
+from Products.CMFPlone import setuphandlers
 try:
     from Products import LinguaPlone
     LinguaPlone = True if LinguaPlone else False
 except ImportError:
     LinguaPlone = False
+
 
 class EEAFixture(PloneSandboxLayer):
     """ EEA Testing Policy
@@ -42,7 +43,6 @@ class EEAFixture(PloneSandboxLayer):
 
         # Create testing environment
         portal.invokeFactory("Folder", "sandbox", title="Sandbox")
-
 
     def tearDownZope(self, app):
         """ Uninstall Zope
