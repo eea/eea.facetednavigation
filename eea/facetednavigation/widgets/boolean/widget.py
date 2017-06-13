@@ -35,7 +35,7 @@ class Widget(CountableWidget):
         """
         return self.default or False
 
-    def vocabulary(self):
+    def vocabulary(self, **kwargs):
         """ Vocabulary
         """
         return [(1, 1)]
@@ -61,5 +61,4 @@ class Widget(CountableWidget):
 
         if value:
             return {index: True}
-        else:
-            return {}
+        return {}

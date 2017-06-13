@@ -61,9 +61,8 @@ class LanguageWidgetAdapter(object):
             if not self.widget.default:
                 # "All" languages
                 return {'Language': self.all_languages}
-            else:
-                # Context or Session language
-                return {'Language': self.language}
+            # Context or Session language
+            return {'Language': self.language}
 
         # Non AJAX call
         if not form.get('ajax', True):

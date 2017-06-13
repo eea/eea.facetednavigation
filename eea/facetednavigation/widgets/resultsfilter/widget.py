@@ -3,7 +3,6 @@
 import logging
 from zope.interface import implementer
 from zope.interface import Interface
-from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
 from eea.facetednavigation.widgets import ViewPageTemplateFile
@@ -14,6 +13,7 @@ from eea.facetednavigation.widgets.resultsfilter.interfaces import (
     DefaultSchemata,
     LayoutSchemata,
 )
+from Products.CMFCore.utils import getToolByName
 try:
     from Products.Archetypes.interfaces import IBaseObject
 except ImportError:

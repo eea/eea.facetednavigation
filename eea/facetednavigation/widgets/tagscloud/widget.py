@@ -57,9 +57,10 @@ class Widget(CountableWidget):
             return text
         return '%s...' % text[0:maxchars]
 
-    def vocabulary(self, oll=False, **kwargs):
+    def vocabulary(self, **kwargs):
         """ Return a limited number of results
         """
+        oll = kwargs.get('oll', False)
         voc = list(super(Widget, self).vocabulary())
 
         if oll:

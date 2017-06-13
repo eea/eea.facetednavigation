@@ -63,13 +63,13 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                 # it is used to sort criteria when the criterion is added
                 pos = [s for s in child.getElementsByTagName('property')
                        if s.getAttribute('name') == 'position']
-                position = pos and pos[0].childNodes[0].nodeValue or 'top'
+                position = pos[0].childNodes[0].nodeValue if pos else 'top'
                 sect = [s for s in child.getElementsByTagName('property')
                         if s.getAttribute('name') == 'section']
-                section = sect and sect[0].childNodes[0].nodeValue or 'default'
+                section = sect[0].childNodes[0].nodeValue if sect else 'default'
                 widget = [w for w in child.getElementsByTagName('property')
                         if w.getAttribute('name') == 'widget']
-                widget = widget and widget[0].childNodes[0].nodeValue or 'text'
+                widget = widget[0].childNodes[0].nodeValue if widget else 'text'
                 cid = self.context.add(widget, position, section, _cid_=name)
             except KeyError:
                 # element already exists, we log and we continue

@@ -119,7 +119,7 @@ class SolrSuggest(BrowserView):
             connection.solrBase + '/suggest', request, connection.formheaders)
         root = etree.fromstring(response.read())
         suggestion = root.xpath("//arr[@name='suggestion']")
-        if len(suggestion):
+        if suggestion:
             suggestions = suggestion[0].findall('str')
             result = [{'id': s.text, 'text': s.text} for s in suggestions]
 

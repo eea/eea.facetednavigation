@@ -4,14 +4,14 @@ import re
 import logging
 import operator
 from zope import interface
-from z3c.form.group import GroupForm
-from z3c.form.form import Form
-from z3c.form.interfaces import IGroup
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
 from zope.i18nmessageid.message import Message
 from zope.schema.interfaces import IVocabularyFactory
 from zope.component import queryUtility
+from z3c.form.group import GroupForm
+from z3c.form.form import Form
+from z3c.form.interfaces import IGroup
 from BTrees.IIBTree import weightedIntersection, IISet
 
 from plone.i18n.normalizer import urlnormalizer as normalizer
@@ -130,23 +130,24 @@ class Widget(GroupForm, Form):
         """
         if not message:
             return ''
-        elif isinstance(message, Message):
+
+        if isinstance(message, Message):
             # message is an i18n message
             return translate(message, context=self.request)
-        else:
-            # message is a simple msgid
-            for domain in ['eea', 'plone']:
-                if isinstance(message, str):
-                    try:
-                        message = message.decode('utf-8')
-                    except Exception, err:
-                        logger.exception(err)
-                        continue
 
-                value = translate(message, domain=domain, context=self.request)
-                if value != message:
-                    return value
-            return message
+        # message is a simple msgid
+        for domain in ['eea', 'plone']:
+            if isinstance(message, str):
+                try:
+                    message = message.decode('utf-8')
+                except Exception, err:
+                    logger.exception(err)
+                    continue
+
+            value = translate(message, domain=domain, context=self.request)
+            if value != message:
+                return value
+        return message
 
     def cleanup(self, string):
         """ Quote string

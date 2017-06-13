@@ -49,7 +49,7 @@ class Criterion(object):
         """
         if value in (u'0', u'False', u'false', u'none', u'None'):
             value = False
-        self._hidden = value and True or False
+        self._hidden = True if value else False
 
     def update(self, **kwargs):
         """ Update criterion properties

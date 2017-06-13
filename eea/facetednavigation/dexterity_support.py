@@ -10,8 +10,7 @@ except pkg_resources.DistributionNotFound:
         """
         if isinstance(value, unicode):
             return value.encode('utf-8')
-        else:
-            return value
+        return value
     #pyflakes
     normalize = _normalize
 else:
@@ -20,5 +19,4 @@ else:
         """
         if isinstance(value, str):
             return value.decode('utf-8')
-        else:
-            return value
+        return value
