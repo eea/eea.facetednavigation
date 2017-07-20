@@ -96,9 +96,7 @@ Faceted.DateRangeWidget.prototype = {
     if(!start_date){
       return;
     }
-    var min_end_date = new Date(start_date.getTime());
-    min_end_date.setDate(start_date.getDate() + 1);
-    this.end.datepicker("option", "minDate", min_end_date);
+    this.end.datepicker("option", "minDate", start_date);
   },
 
   do_query: function(element){
