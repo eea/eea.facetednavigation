@@ -3,6 +3,9 @@ Changelog
 
 10.4.dev0 - (unreleased)
 ------------------------
+* Bug fix: The daterange widget restriction on end date must be the start date and not the day after.
+           The dates in range can be the same day (as before).
+  [sgeulette]
 
 10.3 - (2017-05-22)
 -------------------
@@ -916,4 +919,3 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
-
