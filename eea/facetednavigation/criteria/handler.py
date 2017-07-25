@@ -153,8 +153,6 @@ class Criteria(object):
         for key, value in properties.items():
             if key not in schema:
                 continue
-            if not value:
-                continue
             if isinstance(value, (list, tuple)):
                 value_type = schema[key].value_type
                 value = [fix_string(x) for x in value]
