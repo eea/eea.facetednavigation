@@ -3,10 +3,8 @@ Changelog
 
 10.4.dev0 - (unreleased)
 ------------------------
-* Bug fix: Import was failing with List has not attrinute .fromUnicode
-  [gogobd]
 * Bug fix: The daterange widget restriction on end date must be the start date and not the day after.
-  The dates in range can be the same day (as before).
+           The dates in range can be the same day (as before).
   [sgeulette]
 
 10.3 - (2017-05-22)
