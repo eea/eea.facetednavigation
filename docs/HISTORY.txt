@@ -6,6 +6,8 @@ Changelog
 * Bug fix: The daterange widget restriction on end date must be the start date and not the day after.
            The dates in range can be the same day (as before).
   [sgeulette]
+* Bug fix W3C compliance modifications
+  [valipod refs #86295]
 
 9.15 - (2017-05-22)
 -------------------
