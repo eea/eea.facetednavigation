@@ -1,6 +1,6 @@
 # How to contribute
 
-To start, is important to mention that we keep all EEA packages under EEA Organisation
+To start, is important to mention that we keep all EEA pacakges under EEA Organisation
 on GitHub (https://github.com/eea) and we fork them to Collective so everyone can
 contribute to them. We keep the repositories from Collective and EEA in sync.
 
@@ -15,7 +15,6 @@ top of things.
 * If you need to submit a ticket do it under EEA Organisation area (https://github.com/eea)
   under the respective package, e.g. https://github.com/eea/eea.facetednavigation/issues
 * Submit a ticket for your issue, assuming one does not already exist.
-  * Check that issue/feature is not already reported under EEA official issues register for Zope/Plone at http://taskman.eionet.europa.eu/projects/zope
   * Clearly describe the issue including steps to reproduce when it is a bug.
   * If case state the browser and operating system used.
 * We also keep a discussion lists for most of the public packages under Google Groups.
@@ -30,14 +29,9 @@ EEA will work directly on the Plone community's requests when they coincide with
 EEA's planned projects. In this case we will transfer the ticket to the EEA
 official issue register.
 
-EEA sprints are managed at http://taskman.eionet.europa.eu/projects/zope.
-
 ## Making Changes
 
-* The pull requests and changes must be done on packages found on Collective
-  e.g. https://github.com/collective/eea.facetednavigation
-* Fork the repository from Collective not from EEA (as stated above they
-  will be synced in automatic)
+* Fork the repository from EEA or directly commit within Collective fork
 * Make sure you added an entry under HISTORY.txt describing your changes
 * Make sure you have added the necessary tests for your changes (do not forget major browsers).
 * Make sure you have updated and added documentation when necessary.
@@ -46,10 +40,10 @@ EEA sprints are managed at http://taskman.eionet.europa.eu/projects/zope.
 ## Submitting Changes
 
 * Push your changes in your fork of the repository.
-* Submit a pull request to the repository in the Collective organization.
+* Submit a pull request to the upstream repository (EEA).
 
 # Additional Resources
 
 * [General GitHub documentation](http://help.github.com/)
 * [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
-* [EEA packages](http://eea.github.com/)
+* [EEA packages](http://eea.github.io/docs/IT-systems/)
