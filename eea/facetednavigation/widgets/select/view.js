@@ -29,7 +29,7 @@ Faceted.SelectWidget = function(wid){
   // Default value
   var value = this.select.val();
   if(value){
-    this.selected = jQuery("option[value='" + value + "']", js_widget.widget);
+    this.selected = jQuery('option[value="' + value + '"]', js_widget.widget);
     Faceted.Query[this.wid] = [value];
   }
 
@@ -68,7 +68,7 @@ Faceted.SelectWidget.prototype = {
       return Faceted.Form.do_query(this.wid, []);
     }else{
       var value = jQuery(element).val();
-      this.selected = jQuery("#" + this.wid + "_widget option[value='" + value + "']");
+      this.selected = jQuery('#' + this.wid + '_widget option[value="' + value + '"]');
       return Faceted.Form.do_query(this.wid, value);
     }
   },
@@ -87,7 +87,7 @@ Faceted.SelectWidget.prototype = {
 
     var context = this;
     jQuery.each(value, function(){
-      var selected = jQuery("option[value='" + value + "']", context.widget);
+      var selected = jQuery('option[value="' + value + '"]', context.widget);
       if(!selected.length){
         context.reset();
       }else{

@@ -3,6 +3,7 @@
 from zope import interface
 from eea.facetednavigation.widgets.interfaces import ICriterion
 
+
 class Criterion(object):
     """ Search criteria
     """
@@ -37,7 +38,7 @@ class Criterion(object):
             """
             if value in ('0', 'False', 'false', 'none', 'None'):
                 value = False
-            self._hidden = value and True or False
+            self._hidden = True if value else False
         return property(fget, fset, doc='Hidden property')
     hidden = hidden()
 
@@ -45,7 +46,7 @@ class Criterion(object):
         taken_ids = set(kwargs.pop('_taken_ids_', []))
         cid = kwargs.pop('_cid_', None)
         if not cid:
-            free_ids = set('c%d' % uid for uid in range(len(taken_ids)+1))
+            free_ids = set('c%d' % uid for uid in range(len(taken_ids) + 1))
             cid = free_ids.difference(taken_ids)
             cid = cid.pop()
         elif cid in taken_ids:

@@ -57,4 +57,3 @@ class IFacetedFormHandler(Interface):
     def __call__():
         """ Run appropiate handler
         """
-

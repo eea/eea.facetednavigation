@@ -1,8 +1,50 @@
 Changelog
 =========
 
-9.9.dev0 - (unreleased)
------------------------
+9.16.dev0 - (unreleased)
+------------------------
+* Bug fix: The daterange widget restriction on end date must be the start date and not the day after.
+           The dates in range can be the same day (as before).
+  [sgeulette]
+* Bug fix W3C compliance modifications
+  [valipod refs #86295]
+
+9.15 - (2017-05-22)
+-------------------
+* Change: fixed PyLint warnings and errors
+  [valipod refs #84949]
+
+9.14 - (2017-05-02)
+-------------------
+* Change: updated package information
+  [alecghica]
+
+9.13 - (2017-04-19)
+-------------------
+* Bug fix: fixed location of faceted-operator position
+  [ichim-david]
+
+9.12 - (2017-03-28)
+-------------------
+* Change: updated package information
+  [alecghica]
+
+9.11 - (2017-03-20)
+-------------------
+* Bug fix: Wrapped option values with quotes to avoid jQuery selector errors
+  with values containing spaces (jQuery >= 1.5.0) and empty values
+  (jQuery >=2.0.0)
+  [pdpotter]
+* Feature: Protect against slow IWidgetFilterBrains adapters
+  [avoinea refs #83219]
+
+9.10 - (2017-01-20)
+-------------------
+* Bug fix: Fix Boolean Widget in view mode
+  [avoinea refs #120]
+
+9.9 - (2016-12-05)
+------------------
 * Bug fix: Fix BooleanIndex in CountableWidget.
   [cedricmessiant]
 
@@ -854,4 +896,3 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
-

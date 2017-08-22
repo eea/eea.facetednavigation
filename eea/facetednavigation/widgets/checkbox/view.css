@@ -34,9 +34,11 @@
 
 /* faceted operator start */
 .faceted-operator {
-  text-align: right;
-  margin-top: -20px;
+    color: #FFF;
+    margin-top: -35px;
+    margin-right: 1em;
 }
+
 
 .faceted-operator label {
   font-weight: normal;
@@ -48,5 +50,11 @@
   color: #95B229;
   border: none;
   text-decoration: none;
+  background-color: white;
+  padding: 0.1em 0.4em;
+  border-radius: 5px;
+}
+#content .faceted-operator a {
+  color: #205c90;
 }
 /* faceted operator end */

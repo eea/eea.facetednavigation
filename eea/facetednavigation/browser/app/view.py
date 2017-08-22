@@ -12,6 +12,7 @@ from eea.facetednavigation.interfaces import IFacetedSearchMode
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from Products.Five.browser import BrowserView
 
+
 class FacetedContainerView(object):
     """ Faceted view
     """
@@ -25,7 +26,7 @@ class FacetedContainerView(object):
         """ Display mode
         """
         if (IFacetedSearchMode.providedBy(self.canonical) or
-            IFacetedSearchMode.providedBy(self.context)):
+                IFacetedSearchMode.providedBy(self.context)):
             return 'search'
         return 'view'
 
@@ -131,8 +132,7 @@ class DisplayCriteriaCheckerView(BrowserView):
             return True
         elif self.language_present():
             return True
-        else:
-            return False
+        return False
 
     def language_present(self):
         """ Is there any widget for Language index?

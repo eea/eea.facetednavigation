@@ -199,20 +199,19 @@ class Widget(ATWidget):
         elif isinstance(message, Message):
             # message is an i18n message
             return translate(message, context=self.request)
-        else:
-            # message is a simple msgid
-            for domain in ['eea', 'plone']:
-                if isinstance(message, str):
-                    try:
-                        message = message.decode('utf-8')
-                    except Exception, err:
-                        logger.exception(err)
-                        continue
+        # message is a simple msgid
+        for domain in ['eea', 'plone']:
+            if isinstance(message, str):
+                try:
+                    message = message.decode('utf-8')
+                except Exception, err:
+                    logger.exception(err)
+                    continue
 
-                value = translate(message, domain=domain, context=self.request)
-                if value != message:
-                    return value
-            return message
+            value = translate(message, domain=domain, context=self.request)
+            if value != message:
+                return value
+        return message
 
     def cleanup(self, string):
         """ Quote string

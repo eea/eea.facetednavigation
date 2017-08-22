@@ -3,6 +3,7 @@
 from zope import interface
 from zope.component import getUtility, queryMultiAdapter
 from zope.annotation.interfaces import IAnnotations
+
 from eea.facetednavigation.interfaces import IViewsInfo
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
@@ -92,4 +93,3 @@ class FacetedLayout(object):
 
         IAnnotations(self.context)[ANNO_FACETED_LAYOUT] = layout
         return ''
-

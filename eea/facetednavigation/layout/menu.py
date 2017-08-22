@@ -1,7 +1,8 @@
 """ Menu
 """
-from zope import interface
 import logging
+
+from zope import interface
 from zope.component import queryAdapter
 from plone.app.contentmenu.menu import DisplayMenu
 from Products.statusmessages.interfaces import IStatusMessage
@@ -12,6 +13,7 @@ from eea.facetednavigation.layout.interfaces import IFacetedLayout
 from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
 
 logger = logging.getLogger('eea.facetednavigation.layout.menu')
+
 
 class FacetedDisplayMenu(DisplayMenu):
     """ Overrides display menu
@@ -57,6 +59,7 @@ class FacetedDisplayMenu(DisplayMenu):
             new.append(layout)
 
         return new
+
 
 class LayoutMenuHandler(BrowserView):
     """ Layout support

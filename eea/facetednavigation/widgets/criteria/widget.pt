@@ -10,7 +10,7 @@
 <fieldset class="widget-fieldset faceted-criteria">
   <legend  tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">Current filters</legend>
-  <dl tal:attributes="id wid"><dt></dt></dl>
+  <dl tal:attributes="id wid"></dl>
 
   <div class="faceted-criteria-hide-show" tal:condition="view/data/hidecriteriaenabled|python:1">
     <a href="#" class="faceted-criteria-hide">

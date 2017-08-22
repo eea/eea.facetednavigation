@@ -1,9 +1,11 @@
 """ Faceted Views meta directives
 """
 from zope.interface import Interface, implements
-from eea.facetednavigation.views.interfaces import IViewsInfo
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from Products.Five.browser.metaconfigure import page
+
+from eea.facetednavigation.views.interfaces import IViewsInfo
+
 
 class ViewsInfo(object):
     """ Faceted views registry
@@ -26,6 +28,7 @@ class ViewsInfo(object):
         """ Faceted view label or key
         """
         return self.views.get(key, key)
+
 
 def ViewDirective(_context, name, permission, for_=Interface,
                   layer=IDefaultBrowserLayer, template=None, class_=None,

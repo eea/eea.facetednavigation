@@ -147,9 +147,8 @@ class SettingsHandler(BrowserView):
         if IHidePloneLeftColumn.providedBy(self.context):
             noLongerProvides(self.context, IHidePloneLeftColumn)
             return self._redirect(_('Portlets left column is visible now'))
-        else:
-            alsoProvides(self.context, IHidePloneLeftColumn)
-            return self._redirect(_('Portlets left column is hidden now'))
+        alsoProvides(self.context, IHidePloneLeftColumn)
+        return self._redirect(_('Portlets left column is hidden now'))
 
     def toggle_right_column(self, **kwargs):
         """ Show / hide plone portlets left column
@@ -157,9 +156,8 @@ class SettingsHandler(BrowserView):
         if IHidePloneRightColumn.providedBy(self.context):
             noLongerProvides(self.context, IHidePloneRightColumn)
             return self._redirect(_('Portlets right column is visible now'))
-        else:
-            alsoProvides(self.context, IHidePloneRightColumn)
-            return self._redirect(_('Portlets right column is hidden now'))
+        alsoProvides(self.context, IHidePloneRightColumn)
+        return self._redirect(_('Portlets right column is hidden now'))
 
     def toggle_smart_facets(self, **kwargs):
         """ Enable/Disable 'smart facets hiding'
@@ -167,9 +165,8 @@ class SettingsHandler(BrowserView):
         if IDisableSmartFacets.providedBy(self.context):
             noLongerProvides(self.context, IDisableSmartFacets)
             return self._redirect(_('Smart facets hiding is now enabled'))
-        else:
-            alsoProvides(self.context, IDisableSmartFacets)
-            return self._redirect(_('Smart facets hiding is now disabled'))
+        alsoProvides(self.context, IDisableSmartFacets)
+        return self._redirect(_('Smart facets hiding is now disabled'))
 
     def toggle_inherit_config(self, **kwargs):
         """ Enable/Disable 'inheriting configuration'
@@ -178,7 +175,6 @@ class SettingsHandler(BrowserView):
             noLongerProvides(self.context, IDontInheritConfiguration)
             return self._redirect(
                 _('Inheriting configuration if is now enabled'))
-        else:
-            alsoProvides(self.context, IDontInheritConfiguration)
-            return self._redirect(
-                _('Inheriting configuration is now disabled'))
+        alsoProvides(self.context, IDontInheritConfiguration)
+        return self._redirect(
+            _('Inheriting configuration is now disabled'))
