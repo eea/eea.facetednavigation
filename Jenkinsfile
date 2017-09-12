@@ -35,7 +35,7 @@ NAME="$BUILD_TAG-plone4"
 docker run -i --net=host --name="$NAME" -v /plone/instance/parts -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" eeacms/plone-test:4 -v -vv -s $GIT_NAME
 docker rm -v $NAME'''
             }
-          }
+          },
 
           "Plone5": {
             node(label: 'docker-1.13') {
