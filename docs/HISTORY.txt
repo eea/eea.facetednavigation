@@ -3,6 +3,8 @@ Changelog
 
 10.5.dev0 - (unreleased)
 ------------------------
+* Change: Remove Sphinx generated documentation
+  [petchesi-iulian refs #88212]
 
 10.4 - (2017-08-22)
 -------------------
