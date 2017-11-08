@@ -3,6 +3,8 @@ Changelog
 
 10.7.dev0 - (unreleased)
 ------------------------
+* Change: remove unused css
+  [petchesi-iulian refs #88382]
 
 10.6 - (2017-11-15)
 -------------------
