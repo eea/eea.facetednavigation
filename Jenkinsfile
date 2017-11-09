@@ -14,7 +14,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-www" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" eeacms/www-devel /debug.sh bin/test -v -vv -s $GIT_NAME'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-www" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/www-devel /debug.sh bin/test -v -vv -s $GIT_NAME'''
                 } finally {
                   sh '''docker rm -v $BUILD_TAG-www'''
                 }
@@ -26,7 +26,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-kgs" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" eeacms/kgs-devel /debug.sh bin/test --test-path /plone/instance/src/$GIT_NAME -v -vv -s $GIT_NAME'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-kgs" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/kgs-devel /debug.sh bin/test --test-path /plone/instance/src/$GIT_NAME -v -vv -s $GIT_NAME'''
                 } finally {
                   sh '''docker rm -v $BUILD_TAG-kgs'''
                 }
@@ -38,7 +38,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-plone4" -v /plone/instance/parts -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" eeacms/plone-test:4 -v -vv -s $GIT_NAME'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-plone4" -v /plone/instance/parts -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:4 -v -vv -s $GIT_NAME'''
                 } finally {
                   sh '''docker rm -v $BUILD_TAG-plone4'''
                 }
@@ -70,7 +70,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-zptlint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/zptlint'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-zptlint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/zptlint'''
                 } finally {
                   sh '''docker rm -v $BUILD_TAG-zptlint'''
                 }
@@ -82,7 +82,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/jslint4java'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/jslint4java'''
                 } finally {
                   sh '''docker rm -v $BUILD_TAG-jslint'''
                 }
@@ -94,7 +94,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-pyflakes" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/pyflakes'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-pyflakes" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/pyflakes'''
                 } finally {
                   sh '''docker rm -v $BUILD_TAG-pyflakes'''
                 }
@@ -106,7 +106,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name=$BUILD_TAG-i18n -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/i18ndude'''
+                  sh '''docker run -i --net=host --name=$BUILD_TAG-i18n -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/i18ndude'''
                 } finally {
                   sh '''docker rm -v $BUILD_TAG-i18n'''
                 }
@@ -125,7 +125,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-jshint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/jshint'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-jshint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/jshint'''
                 } catch (err) {
                   echo "Unstable: ${err}"
                 } finally {
@@ -139,7 +139,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-csslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/csslint'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-csslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/csslint'''
                 } catch (err) {
                   echo "Unstable: ${err}"
                 } finally {
@@ -153,7 +153,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-pep8" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/pep8'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-pep8" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/pep8'''
                 } catch (err) {
                   echo "Unstable: ${err}"
                 } finally {
@@ -167,7 +167,7 @@ pipeline {
             node(label: 'docker-1.13') {
               script {
                 try {
-                  sh '''docker run -i --net=host --name="$BUILD_TAG-pylint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git --branch=$BRANCH_NAME" eeacms/pylint'''
+                  sh '''docker run -i --net=host --name="$BUILD_TAG-pylint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/pylint'''
                 } catch (err) {
                   echo "Unstable: ${err}"
                 } finally {
