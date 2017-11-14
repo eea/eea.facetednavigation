@@ -1,6 +1,9 @@
 Changelog
 =========
 
+9.18.dev0 - (unreleased)
+------------------------
+
 9.17 - (2017-11-15)
 -------------------
 * Change: Remove Sphinx generated documentation
