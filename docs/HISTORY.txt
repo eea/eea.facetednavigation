@@ -1,6 +1,9 @@
 Changelog
 =========
 
+10.6.dev0 - (unreleased)
+------------------------
+
 10.5 - (2017-11-14)
 -------------------
 * Change: Remove Sphinx generated documentation
