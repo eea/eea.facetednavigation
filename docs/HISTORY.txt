@@ -5,6 +5,8 @@ Changelog
 ------------------------
 * Change: Update jstree to work with eea.jquery 10.3+
   [avoinea refs eea.jquery#7]
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation.
 
 10.5 - (2017-11-14)
 -------------------
