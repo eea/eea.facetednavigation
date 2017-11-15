@@ -3,6 +3,8 @@ Changelog
 
 10.6.dev0 - (unreleased)
 ------------------------
+* Change: Update jstree to work with eea.jquery 10.3+
+  [avoinea refs eea.jquery#7]
 
 10.5 - (2017-11-14)
 -------------------
