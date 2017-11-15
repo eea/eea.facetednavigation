@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.18.dev0 - (unreleased)
-------------------------
+9.18 - (2017-11-15)
+-------------------
 * Change: Update jstree to work with eea.jquery 10.3+
   [avoinea refs eea.jquery#7]
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
