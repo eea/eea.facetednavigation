@@ -72,7 +72,7 @@ FacetedTree.JsTree = function(wid, container, mode){
 FacetedTree.JsTree.prototype = {
   initialize: function(static_tree){
     var js_tree = this;
-    js_tree.area.tree({
+    js_tree.area.jstree({
       ui: {
         theme_name: js_tree.theme.attr('title'),
         theme_path: js_tree.theme.text()
