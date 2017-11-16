@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
- <version>10.0</version>
+ <version>10.6</version>
  <dependencies>
   <dependency>profile-eea.facetednavigation:universal</dependency>
  </dependencies>

@@ -5,6 +5,18 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="10.0"
+    destination="10.6"
+    profile="eea.facetednavigation:default">
+
+    <genericsetup:upgradeDepends
+       title="Import all steps from eea.facetednavigation default profile"
+       import_profile="eea.facetednavigation:default"
+      />
+
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="*"
     destination="10.0"
     profile="eea.facetednavigation:default">

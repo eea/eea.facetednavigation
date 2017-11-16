@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
- <version>10.0</version>
+ <version>10.6</version>
  <dependencies>
   <dependency>profile-collective.js.jqueryui:default</dependency>
   <dependency>profile-eea.jquery:03-ajaxfileupload</dependency>
