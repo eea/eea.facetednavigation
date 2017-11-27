@@ -3,6 +3,7 @@ pipeline {
 
   environment {
         GIT_NAME = "eea.facetednavigation"
+        FTEST_DIR = "eea/facetednavigation/ftests"
     }
 
   stages {
