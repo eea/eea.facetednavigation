@@ -186,7 +186,8 @@ class Criteria(object):
                 value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
             elif isinstance(value, (str, unicode)):
-                value = fix_string(value)
+                _type = getattr(schema[key], "_type", None)
+                value = fix_string(value, _type)
                 try:
                     value = schema[key].fromUnicode(value)
                 except ConstraintNotSatisfied, err:

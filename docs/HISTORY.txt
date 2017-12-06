@@ -3,6 +3,8 @@ Changelog
 
 10.7.dev0 - (unreleased)
 ------------------------
+* Bug fix: Fix ICriteria upgrade boolean schema (count, reverse, etc.)
+  [avoinea refs #89955]
 * Bug fix: Fix ICriteria upgrade empty default to [u'']
   [avoinea refs #89955]
 * Change: remove unused css
