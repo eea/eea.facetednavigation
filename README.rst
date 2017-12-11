@@ -1,8 +1,12 @@
 ======================
 EEA Faceted Navigation
 ======================
+.. image:: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/develop/badge/icon
+  :target: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/develop/display/redirect
+  :alt: Develop
 .. image:: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/master/badge/icon
   :target: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/master/display/redirect
+  :alt: Master
 
 The EEA Faceted Navigation **(FacetedNav)** gives you a
 **very powerful interface to improve search within large collections of items.**
