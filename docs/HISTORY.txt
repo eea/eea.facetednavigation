@@ -3,6 +3,8 @@ Changelog
 
 10.7.dev0 - (unreleased)
 ------------------------
+* Change: Replace eeacms/zptlint with eeacms/plone-test:4 zptlint
+  [avoinea refs #90415]
 * Bug fix: Fix JS Error for Text Widget with default value
   [avoinea refs #89955]
 * Bug fix: Fix ICriteria upgrade boolean schema (count, reverse, etc.)
