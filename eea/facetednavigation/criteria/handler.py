@@ -186,7 +186,8 @@ class Criteria(object):
                 value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
             elif isinstance(value, (str, unicode)):
-                value = fix_string(value)
+                _type = getattr(schema[key], "_type", None)
+                value = fix_string(value, _type)
                 try:
                     value = schema[key].fromUnicode(value)
                 except ConstraintNotSatisfied, err:
@@ -194,7 +195,13 @@ class Criteria(object):
                     continue
                 except AttributeError, err:
                     value_type = schema[key].value_type
-                    value = [value_type.fromUnicode(value)]
+                    if value:
+                        value = [value_type.fromUnicode(value)]
+                    else:
+                        logger.warn(
+                            "%s: Cleaning up empty %s:%s from criterion %s",
+                            self.context.absolute_url(), key, value, cid)
+                        delattr(criterion, key)
                 except ValueError, err:
                     logger.exception(err)
                     # Cleanup OLD broken values from criterion

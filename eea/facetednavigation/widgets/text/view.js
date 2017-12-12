@@ -25,7 +25,7 @@ Faceted.TextWidget = function(wid){
   // Default value
   var value = this.input.val();
   if(value){
-    this.selected = [input];
+    this.selected = [this.input];
     this.value = value;
     Faceted.Query[this.wid] = [value];
   }
