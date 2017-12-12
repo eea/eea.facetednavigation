@@ -1,0 +1,12 @@
+language: python
+python: 2.7
+sudo: required
+services:
+  - docker
+env:
+  matrix:
+    - PLONE_VERSION=4
+    - PLONE_VERSION=5
+script:
+  - docker run -i --rm -e ADDONS="eea.facetednavigation" -e GIT_BRANCH="$TRAVIS_BRANCH" -e DEVELOP="src/eea.facetednavigation" eeacms/plone-test:$PLONE_VERSION -s eea.facetednavigation
+
