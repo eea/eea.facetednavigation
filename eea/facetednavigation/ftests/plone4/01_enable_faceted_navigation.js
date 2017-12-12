@@ -62,6 +62,11 @@ casper.test.begin('Faceted Navigation Enable', function(test) {
            test.assertExists("[name='form.button.save']");
    });
 
+   casper.wait(1000);
+   casper.then(function() {
+          this.captureSelector("screenshot_faceted.png", "html");
+    });
+
    casper.waitForSelector("[id='plone-contentmenu-actions-faceted.enable']",
        function success() {
            test.assertExists("[id='plone-contentmenu-actions-faceted.enable']");
