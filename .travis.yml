@@ -18,12 +18,9 @@ jobs:
           - CHECK=jslint4java
           - CHECK=pyflakes
           - CHECK=i18ndude
-          - CHECK=plone-test:4 zptlint
+          - CHECK=zptlint
       script:
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
+        - docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/$CHECK
     - stage: test
       env:
         matrix:
