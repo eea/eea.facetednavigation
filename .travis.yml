@@ -1,5 +1,3 @@
-language: python
-python: 2.7
 sudo: required
 services:
   - docker
@@ -7,6 +5,14 @@ env:
   matrix:
     - PLONE_VERSION=4
     - PLONE_VERSION=5
+install:
+  - export GIT_OWNER=${TRAVIS_REPO_SLUG%/*}
+  - export GIT_NAME=${TRAVIS_REPO_SLUG#*/}
+  - export GIT_CHANGE_ID=${TRAVIS_PULL_REQUEST#false}
+  - export GIT_SRC=https://github.com/${TRAVIS_REPO_SLUG}.git
 script:
-  - docker run -i --rm -e ADDONS="eea.facetednavigation" -e GIT_BRANCH="$TRAVIS_BRANCH" -e DEVELOP="src/eea.facetednavigation" eeacms/plone-test:$PLONE_VERSION -s eea.facetednavigation
-
+  - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/jslint4java
+  - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/pyflakes
+  - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/i18ndude
+  - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:4 zptlint
+  - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:$PLONE_VERSION -s $GIT_NAME
