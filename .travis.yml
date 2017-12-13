@@ -9,15 +9,37 @@ install:
   - export GIT_NAME=${TRAVIS_REPO_SLUG#*/}
   - export GIT_CHANGE_ID=${TRAVIS_PULL_REQUEST#false}
   - export GIT_SRC=https://github.com/${TRAVIS_REPO_SLUG}.git
+  - export CODE_CMD='docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/$CHECK'
+  - export TEST_CMD='docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:$PLONE -s $GIT_NAME'
 
 jobs:
   include:
     - stage: code
-      script: docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/jslint4java
-      script: docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/pyflakes
-      script: docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/i18ndude
-      script: docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/zptlint
+      env:
+        - CHECK=jslint4java
+      script: $CODE_CMD
+
+    - stage: code
+      env:
+        - CHECK=pyflakes
+      script: $CODE_CMD
+
+    - stage: code
+      env:
+        - CHECK=i18ndude
+      script: $CODE_CMD
+
+    - stage: code
+      env:
+        - CHECK=zptlint
+      script: $CODE_CMD
 
     - stage: test
-      script: docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:4 -s $GIT_NAME
-      script: docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:5 -s $GIT_NAME
+      env:
+        - PLONE=4
+      script: $TEST_CMD
+
+    - stage: test
+      env:
+        - PLONE=5
+      script: $TEST_CMD
