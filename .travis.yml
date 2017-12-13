@@ -13,14 +13,21 @@ install:
 jobs:
   include:
     - stage: code
+      env:
+        matrix:
+          - CHECK=jslint4java
+          - CHECK=pyflakes
+          - CHECK=i18ndude
+          - CHECK=plone-test:4 zptlint
       script:
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/jslint4java
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/pyflakes
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/i18ndude
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:4 zptlint
+        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
+        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
+        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e GIT_SRC="$GIT_SRC" -e GIT_NAME="$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
+        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK
     - stage: test
       env:
-        - PLONE_VERSION=4
-        - PLONE_VERSION=5
+        matrix:
+          - PLONE_VERSION=4
+          - PLONE_VERSION=5
       script:
         - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:$PLONE_VERSION -s $GIT_NAME
