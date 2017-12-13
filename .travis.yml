@@ -14,17 +14,16 @@ jobs:
   include:
     - stage: code
       env:
-        matrix:
-          - CHECK=jslint4java
-          - CHECK=pyflakes
-          - CHECK=i18ndude
-          - CHECK=zptlint
+        - CHECK=jslint4java
+        - CHECK=pyflakes
+        - CHECK=i18ndude
+        - CHECK=zptlint
       script:
         - docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/$CHECK
+
     - stage: test
       env:
-        matrix:
-          - PLONE_VERSION=4
-          - PLONE_VERSION=5
+        - PLONE=4
+        - PLONE=5
       script:
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:$PLONE_VERSION -s $GIT_NAME
+        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:$PLONE -s $GIT_NAME
