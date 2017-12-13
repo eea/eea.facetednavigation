@@ -4,14 +4,6 @@ sudo: required
 services:
   - docker
 
-env:
-  - CHECK=jslint4java
-  - CHECK=pyflakes
-  - CHECK=i18ndude
-  - CHECK=zptlint
-  - PLONE=4
-  - PLONE=5
-
 install:
   - export GIT_OWNER=${TRAVIS_REPO_SLUG%/*}
   - export GIT_NAME=${TRAVIS_REPO_SLUG#*/}
@@ -22,12 +14,17 @@ jobs:
   include:
     - stage: code
       env:
-        - PLONE=all
+        matrix:
+          - CHECK=jslint4java
+          - CHECK=pyflakes
+          - CHECK=i18ndude
+          - CHECK=zptlint
       script:
         - docker run -i --rm -e GIT_BRANCH=$TRAVIS_BRANCH -e GIT_SRC=$GIT_SRC -e GIT_NAME=$GIT_NAME -e GIT_CHANGE_ID=$GIT_CHANGE_ID eeacms/$CHECK
-
     - stage: test
       env:
-        - CHECK=plone-test
+        matrix:
+          - PLONE_VERSION=4
+          - PLONE_VERSION=5
       script:
-        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/$CHECK:$PLONE -s $GIT_NAME
+        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" eeacms/plone-test:$PLONE_VERSION -s $GIT_NAME
