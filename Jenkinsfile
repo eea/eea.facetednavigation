@@ -7,6 +7,38 @@ pipeline {
     }
 
   stages {
+
+    stage('Code') {
+      steps {
+        parallel(
+
+          "ZPT Lint": {
+            node(label: 'docker-1.13') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-zptlint" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:4 zptlint'''
+            }
+          },
+
+          "JS Lint": {
+            node(label: 'docker-1.13') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/jslint4java'''
+            }
+          },
+
+          "PyFlakes": {
+            node(label: 'docker-1.13') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-pyflakes" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/pyflakes'''
+            }
+          },
+
+          "i18n": {
+            node(label: 'docker-1.13') {
+              sh '''docker run -i --rm --name=$BUILD_TAG-i18n -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/i18ndude'''
+            }
+          }
+        )
+      }
+    }
+
     stage('Tests') {
       steps {
         parallel(
@@ -109,37 +141,6 @@ pipeline {
        }
     }
 
-    stage('Code') {
-      steps {
-        parallel(
-
-          "ZPT Lint": {
-            node(label: 'docker-1.13') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-zptlint" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:4 zptlint'''
-            }
-          },
-
-          "JS Lint": {
-            node(label: 'docker-1.13') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/jslint4java'''
-            }
-          },
-
-          "PyFlakes": {
-            node(label: 'docker-1.13') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-pyflakes" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/pyflakes'''
-            }
-          },
-
-          "i18n": {
-            node(label: 'docker-1.13') {
-              sh '''docker run -i --rm --name=$BUILD_TAG-i18n -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/i18ndude'''
-            }
-          }
-        )
-      }
-    }
-
     stage('Cosmetics') {
       steps {
         parallel(
@@ -193,6 +194,41 @@ pipeline {
           }
 
         )
+      }
+    }
+
+    stage('Pull Request') {
+      when {
+        not {
+          environment name: 'CHANGE_ID', value: ''
+        }
+        environment name: 'CHANGE_TARGET', value: 'master'
+      }
+      steps {
+        node(label: 'docker-1.13') {
+          script {
+            if ( env.CHANGE_BRANCH != "develop" &&  !( env.CHANGE_BRANCH.startsWith("hotfix")) ) {
+                error "Pipeline aborted due to PR not made from develop or hotfix branch"
+            }
+            sh '''docker run -i --rm --name="$BUILD_TAG-gitflow-pr" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e GIT_ORG="$GIT_ORG" -e GIT_VERSIONFILE="$GIT_VERSIONFILE" -e GIT_HISTORYFILE="$GIT_HISTORYFILE" -e GIT_NAME="$GIT_NAME" eeacms/gitflow'''
+          }
+        }
+      }
+    }
+
+    stage('Release') {
+      when {
+        allOf {
+          environment name: 'CHANGE_ID', value: ''
+          branch 'master'
+        }
+      }
+      steps {
+        node(label: 'docker-1.13') {
+          withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'eea-jenkins', usernameVariable: 'EGGREPO_USERNAME', passwordVariable: 'EGGREPO_PASSWORD'],string(credentialsId: 'eea-jenkins-token', variable: 'GITHUB_TOKEN')]) {
+            sh '''docker run -i --rm --name="$BUILD_TAG-gitflow-master" -e GIT_BRANCH="$BRANCH_NAME" -e EGGREPO_USERNAME="$EGGREPO_USERNAME" -e EGGREPO_PASSWORD="$EGGREPO_PASSWORD" -e GIT_NAME="$GIT_NAME" -e GIT_VERSIONFILE="$GIT_VERSIONFILE" -e GIT_ORG="$GIT_ORG" -e GIT_TOKEN="$GITHUB_TOKEN" eeacms/gitflow'''
+          }
+        }
       }
     }
 
