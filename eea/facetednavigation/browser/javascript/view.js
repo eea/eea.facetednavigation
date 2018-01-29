@@ -147,8 +147,9 @@ Faceted.Form = {
     }
 
     // Handle errors
-    this.area.ajaxError(function(event, request, settings){
-      jQuery(this).html('' +
+    var area =  this.area;
+    $(document).ajaxError(function(event, request, settings){
+      jQuery(area).html('' +
       '<h3>This site encountered an error trying to fulfill your request</h3>' +
       '<p>' +
         'If the error persists please contact the site maintainer. ' +

@@ -3,6 +3,8 @@ Changelog
 
 10.8 - (2018-01-26)
 -------------------
+* Change: cleaned jQuery migrate warnings
+  [ichim-david refs #91577]
 * Change: view.css css cleanup of empty selectors and removed
   overflow from left-area and right-area
   [ichim-david refs #91590]
