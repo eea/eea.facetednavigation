@@ -36,7 +36,7 @@ Faceted.SortingWidget = function(wid){
     this.selected = this.widget.find('option:selected');
     Faceted.Query[this.wid] = [value];
 
-    var reverse = this.reverse.attr('checked');
+    var reverse = this.reverse.prop('checked');
     if(reverse){
       Faceted.Query.reversed = 'on';
     }
@@ -185,7 +185,7 @@ Faceted.SortingWidget.prototype = {
     jQuery('<span>').text(label).appendTo(span);
     html.append(span);
 
-    if(this.reverse.attr('checked')){
+    if(this.reverse.prop('checked')){
       var rid = this.reverse.attr('id');
       var rlabel = jQuery('label[for=' + rid + ']' ).html();
       html.append('<span>(' + rlabel + ')</span>');
