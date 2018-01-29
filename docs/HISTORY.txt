@@ -1,8 +1,14 @@
 Changelog
 =========
 
-10.7.dev0 - (unreleased)
-------------------------
+10.8 - (2018-01-26)
+-------------------
+* Change: view.css css cleanup of empty selectors and removed
+  overflow from left-area and right-area
+  [ichim-david refs #91590]
+
+10.7 - (2017-12-12)
+-------------------
 * Change: Replace eeacms/zptlint with eeacms/plone-test:4 zptlint
   [avoinea refs #90415]
 * Bug fix: Fix JS Error for Text Widget with default value
@@ -944,3 +950,4 @@ Changelog
 1.0 (2009-10-30)
 ----------------
 * Initial release
+
