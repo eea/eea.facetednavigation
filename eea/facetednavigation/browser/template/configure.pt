@@ -12,7 +12,7 @@
       FacetedEdit.Load(evt, '${context/absolute_url}/');
     });"></script>
   <script type="text/javascript"
-    tal:content="string:jQuery(window).unload(FacetedEdit.Unload);"></script>
+    tal:content="string:jQuery(window).on('unload', FacetedEdit.Unload);"></script>
 </metal:jsslot>
 
 <body>
