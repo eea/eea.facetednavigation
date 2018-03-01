@@ -34,6 +34,20 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      zcml:condition="not-have plone-5"
+      name="uninstall"
+      directory="profiles/uninstall"
+      title="Uninstall EEA Faceted Navigation"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <genericsetup:registerProfile
+      name="uninstall-universal"
+      directory="profiles/uninstall-common"
+      title="Uninstall EEA Faceted Navigation Common Configuration"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <genericsetup:importStep
     name="eea.facetednavigation.various"
     title="EEA Faceted Navigation setup" description="Setup EEA Faceted Navigation"

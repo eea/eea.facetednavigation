@@ -4,6 +4,9 @@ Changelog
 9.19.dev0 - (unreleased)
 ------------------------
 
+* Add Plone 4 uninstall profile.
+  [thet]
+
 9.18 - (2017-11-15)
 -------------------
 * Change: Update jstree to work with eea.jquery 10.3+
