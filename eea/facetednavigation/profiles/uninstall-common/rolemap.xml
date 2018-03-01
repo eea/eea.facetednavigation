@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <permission remove="True" name="eea.facetednavigation: Configure faceted"/>
+  </permissions>
+</rolemap>

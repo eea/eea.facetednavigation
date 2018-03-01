@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool">
+  <object name="object" meta_type="CMF Action Category">
+    <object remove="True" name="faceted.configure" meta_type="CMF Action"/>
+  </object>
+</object>

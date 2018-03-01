@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool">
+  <object name="object_buttons" meta_type="CMF Action Category">
+    <object remove="True" name="faceted.sync" meta_type="CMF Action"/>
+    <object remove="True" name="faceted.disable" meta_type="CMF Action"/>
+    <object remove="True" name="faceted.enable" meta_type="CMF Action"/>
+    <object remove="True" name="faceted.search.disable" meta_type="CMF Action"/>
+    <object remove="True" name="faceted.search.enable" meta_type="CMF Action"/>
+  </object>
+</object>
