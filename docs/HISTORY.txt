@@ -3,6 +3,8 @@ Changelog
 
 10.9 - (unreleased)
 -------------------
+* Encode the seach value to utf-8.
+  [thet]
 * Change: cleaned jQuery migrate warnings
   [ichim-david refs #91577]
 

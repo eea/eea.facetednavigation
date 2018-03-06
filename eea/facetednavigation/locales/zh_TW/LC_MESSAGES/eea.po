@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
 "POT-Creation-Date: 2017-09-12 14:10+0000\n"
-"PO-Revision-Date: 2016-08-03 12:22+0800\n"
+"PO-Revision-Date: 2017-11-08 15:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr "確定要刪除 ${widget} 嗎?"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:22
 msgid "Autocomplete"
-msgstr "自動輸入"
+msgstr "自動完成器"
 
 #: ../../facetednavigation/widgets/boolean/widget.py:19
 msgid "Boolean"
@@ -110,11 +110,11 @@ msgstr "布林選項"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:36
 msgid "Can select multiple values"
-msgstr ""
+msgstr "勾選的話，可選擇多個選項。"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:35
 msgid "Can select several elements"
-msgstr "可選擇數個元素"
+msgstr "可複選"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:51
@@ -132,7 +132,7 @@ msgstr "Catalog 索引"
 
 #: ../../facetednavigation/widgets/interfaces.py:84
 msgid "Catalog index to be used"
-msgstr ""
+msgstr "選用的 Catalog 索引"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
@@ -175,7 +175,7 @@ msgstr "設定值已匯入"
 
 #: ../../facetednavigation/settings/menu.py:69
 msgid "Configure"
-msgstr ""
+msgstr "設定"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:107
@@ -245,7 +245,7 @@ msgstr "預設的操作元"
 
 #: ../../facetednavigation/widgets/interfaces.py:77
 msgid "Default query"
-msgstr ""
+msgstr "預設的查詢值"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:37
@@ -355,7 +355,7 @@ msgstr "啟用 Smart Facets Hiding"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:15
 msgid "Enabled (hidden)"
-msgstr ""
+msgstr "隱藏並啟用"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -498,7 +498,7 @@ msgstr "隱藏數量為零的結果"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:16
 msgid "Hide this widget in order for e-tag to be used"
-msgstr ""
+msgstr "隱藏 Widget 並讓 E-Tag 生效"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/interfaces.py:104
@@ -508,7 +508,7 @@ msgstr "隱藏方框"
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "If this checkbox is checked, hides the \"All\" option"
-msgstr ""
+msgstr "勾選的話，會隱藏「所有項目」的選項。"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:29
 #: ../../facetednavigation/widgets/text/interfaces.py:23
@@ -517,7 +517,7 @@ msgstr "勾選的話，會隱藏「所有項目」或「在現行結果裡」的
 
 #: ../../facetednavigation/widgets/text/interfaces.py:30
 msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
-msgstr ""
+msgstr "勾選的話，會自動在關鍵詞後方加上 '*' 符號，並啟用模糊比對。"
 
 #: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
@@ -563,7 +563,7 @@ msgstr "最大字元數"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:79
 msgid "Maximum color"
-msgstr ""
+msgstr "最大值的顏色"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
@@ -584,7 +584,7 @@ msgstr "最大尺寸"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:71
 msgid "Minimum color"
-msgstr ""
+msgstr "最小值的顏色"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
@@ -773,7 +773,7 @@ msgstr "搜尋結果每頁的間距"
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:37
 msgid "Reuse date format and language used by Plone"
-msgstr ""
+msgstr "沿用 Plone 的日期與語系設定值"
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:38
 msgid "Reuse the same date format and the the same language that Plone uses elsewhere. Otherwise, the format will be \"yy-mm-dd\" and the language \"English\". Note that this default format allows you to encode very old or big years (example : 0001 will not be converted to 1901). Other formats do not."
@@ -844,7 +844,7 @@ msgstr "全選"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:23
 msgid "Select the source of the autocomplete suggestions"
-msgstr ""
+msgstr "指定自動完成器的選項"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:22
 msgid "Show filters"
@@ -1029,7 +1029,7 @@ msgstr "只有特定使用者看得到方框"
 
 #: ../../facetednavigation/widgets/text/interfaces.py:29
 msgid "Wildcard search"
-msgstr ""
+msgstr "萬用字元搜尋"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "Yesterday"
@@ -1067,4 +1067,4 @@ msgstr "符合 Any/All 過濾條件"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.py:106
 msgid "solr"
-msgstr ""
+msgstr "Apache Solr"
