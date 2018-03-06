@@ -12,7 +12,7 @@
         Faceted.Load(evt, '${context/absolute_url}/');
     });"></script>
   <script type="text/javascript"
-    tal:content="string:jQuery(window).unload(function(){
+    tal:content="string:jQuery(window).on('unload', function(){
         Faceted.Unload();
     });"></script>
 </metal:jsslot>
