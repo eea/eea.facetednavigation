@@ -1,6 +1,13 @@
 Changelog
 =========
 
+10.9 - (unreleased)
+-------------------
+
+- Encode the seach value to utf-8.
+  [thet]
+
+
 10.8 - (2018-01-26)
 -------------------
 * Change: view.css css cleanup of empty selectors and removed
