@@ -81,7 +81,7 @@ Faceted.RadioWidget.prototype = {
   },
 
   reset: function(){
-    jQuery(this.elements[0]).attr('checked', true);
+    jQuery(this.elements[0]).prop('checked', true);
     this.selected = [];
   },
 
@@ -102,7 +102,7 @@ Faceted.RadioWidget.prototype = {
         context.reset();
       }else{
         context.selected = radio;
-        context.selected.attr('checked', true);
+        context.selected.prop('checked', true);
       }
     });
   },
@@ -169,7 +169,7 @@ Faceted.RadioWidget.prototype = {
 
   criteria_remove: function(){
     var element = jQuery(this.elements[0]);
-    element.attr('checked', true);
+    element.prop('checked', true);
     this.do_query();
   },
 
@@ -221,9 +221,9 @@ Faceted.RadioWidget.prototype = {
         if(context.widget.hasClass('faceted-zero-count-hidden')){
           li.addClass('faceted-radio-item-zerocount');
         }
-        input.attr('disabled', 'disabled');
+        input.prop('disabled', 'disabled');
       }else{
-        input.attr('disabled', false);
+        input.prop('disabled', false);
         input.click(function(evt){
           context.radio_click(this, evt);
         });

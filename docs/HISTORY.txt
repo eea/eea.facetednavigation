@@ -1,6 +1,13 @@
 Changelog
 =========
 
+10.9 - (2018-03-14)
+-------------------
+* Encode the seach value to utf-8.
+  [thet]
+* Change: cleaned jQuery migrate warnings
+  [ichim-david refs #91577]
+
 10.8 - (2018-01-26)
 -------------------
 * Change: view.css css cleanup of empty selectors and removed
