@@ -11,7 +11,7 @@ EEA Faceted Navigation
 The EEA Faceted Navigation **(FacetedNav)** gives you a
 **very powerful interface to improve search within large collections of items.**
 No programming skills are required by the website manager to configure the
-faceted navigation interface, `configuration is done TTW <http://svn.eionet.europa.eu/projects/Zope/attachment/wiki/FacetedNavigationScreenshots/screenshot7.png>`_.
+faceted navigation interface, configuration is done TTW.
 It lets you gradually select and explore different facets (metadata/properties)
 of the site content and narrow down you search quickly and dynamically.
 
@@ -182,11 +182,6 @@ Go to "configuration registry" on control panel, select the key "Disable diazo r
 and set it True. Be sure you do not actually need it.
 
 
-Screenshots
-===========
-See more `FacetedNavigationScreenshots <http://taskman.eionet.europa.eu/projects/zope/wiki/FacetedNavigationScreenshots>`_.
-
-
 Live demo
 =========
 
@@ -224,13 +219,9 @@ Plone versions
 It has been developed and tested for Plone 2, 3, 4 and 5. See buildouts section above.
 
 
-Known bugs and ongoing development
-==================================
-Bugs and new features are entered on our Trac server at EEA.
-
-- `open bugs / tasks <http://taskman.eionet.europa.eu/projects/zope/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=category_id&op%5Bcategory_id%5D=%3D&v%5Bcategory_id%5D%5B%5D=120&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=1&v%5Btracker_id%5D%5B%5D=4&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=tracker&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=done_ratio&c%5B%5D=fixed_version&c%5B%5D=project&c%5B%5D=category&c%5B%5D=parent&c%5B%5D=author&c%5B%5D=updated_on&c%5B%5D=start_date&c%5B%5D=due_date&c%5B%5D=estimated_hours&c%5B%5D=created_on&c%5B%5D=closed_on&c%5B%5D=relations&c%5B%5D=cf_4&group_by=>`_
-- `complete list of bugs / features including fixed and open <http://taskman.eionet.europa.eu/projects/zope/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=category_id&op%5Bcategory_id%5D=%3D&v%5Bcategory_id%5D%5B%5D=120&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=2&v%5Btracker_id%5D%5B%5D=1&v%5Btracker_id%5D%5B%5D=4&f%5B%5D=&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=tracker&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=done_ratio&c%5B%5D=fixed_version&c%5B%5D=project&c%5B%5D=category&c%5B%5D=parent&c%5B%5D=author&c%5B%5D=updated_on&c%5B%5D=start_date&c%5B%5D=due_date&c%5B%5D=estimated_hours&c%5B%5D=created_on&c%5B%5D=closed_on&c%5B%5D=relations&c%5B%5D=cf_4&group_by=>`_
-- `open bugs / tasks on collective <https://github.com/eea/eea.facetednavigation/issues?sort=updated&state=open>`_
+How to contribute
+=================
+See the `contribution guidelines (CONTRIBUTING.md) <https://github.com/eea/eea.facetednavigation/blob/master/CONTRIBUTING.md>`_.
 
 Other resources
 ===============
