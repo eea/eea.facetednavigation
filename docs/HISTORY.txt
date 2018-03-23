@@ -1,6 +1,11 @@
 Changelog
 =========
 
+11.0 - (2018-03-23)
+-------------------
+* Cleanup: Remove broken links and added contribution section
+  [demarant]
+
 10.9 - (2018-03-14)
 -------------------
 * Encode the seach value to utf-8.
