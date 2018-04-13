@@ -1,11 +1,11 @@
 ======================
 EEA Faceted Navigation
 ======================
-.. image:: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/develop/badge/icon
-  :target: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/develop/display/redirect
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.facetednavigation/develop
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/develop/display/redirect
   :alt: Develop
-.. image:: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/master/badge/icon
-  :target: http://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/master/display/redirect
+.. image:: https://ci.eionet.europa.eu/buildStatus/icon?job=eea/eea.facetednavigation/master
+  :target: https://ci.eionet.europa.eu/job/eea/job/eea.facetednavigation/job/master/display/redirect
   :alt: Master
 
 The EEA Faceted Navigation **(FacetedNav)** gives you a
