@@ -1,7 +1,7 @@
 Changelog
 =========
 
-11.1 - (unreleased)
+11.1 - (2018-05-14)
 -------------------
 * Encode index before apply if necessary
   [tomgross]
