@@ -1,6 +1,11 @@
 Changelog
 =========
 
+11.1 - (unreleased)
+-------------------
+* Encode index before apply if necessary
+  [tomgross]
+
 11.0 - (2018-03-23)
 -------------------
 * Cleanup: Remove broken links and added contribution section
