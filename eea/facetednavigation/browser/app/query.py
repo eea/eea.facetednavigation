@@ -147,7 +147,7 @@ class FacetedQueryHandler(object):
             query.pop('sort_order', None)
 
         catalog = getUtility(IFacetedCatalog)
-        num_per_page = 20
+        num_per_page = query.get('b_size', 20)
         criteria = ICriteria(self.context)
         brains_filters = []
         for cid, criterion in criteria.items():
@@ -161,7 +161,8 @@ class FacetedQueryHandler(object):
             if brains_filter:
                 brains_filters.append(brains_filter)
 
-        b_start = safeToInt(kwargs.get('b_start', 0))
+        b_start = safeToInt(kwargs.get('b_start', 0)) or query.get('b_start', 0)
+
         orphans = num_per_page * 20 / 100 # orphans = 20% of items per page
         if batch and not brains_filters:
             # add b_start and b_size to query to use better sort algorithm
@@ -191,6 +192,7 @@ class FacetedQueryHandler(object):
         if delta > 30:
             logger.warn("Very slow IWidgetFilterBrains adapters: %s at %s",
                 brains_filters, self.context.absolute_url())
+
         return Batch(brains, num_per_page, b_start, orphan=orphans)
 
     @ramcache(cacheKeyFacetedNavigation, dependencies=['eea.facetednavigation'])
