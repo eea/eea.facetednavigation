@@ -1,8 +1,8 @@
 Changelog
 =========
 
-9.19.dev0 - (unreleased)
-------------------------
+9.19 - (2018-09-07)
+-------------------
 * Bug fix: allow b_size and b_start to be set by a custom widget.
   [thomasdesvenain]
 
