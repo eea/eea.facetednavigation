@@ -1,6 +1,11 @@
 Changelog
 =========
 
+11.2 - (unreleased)
+-------------------
+* Completed french translations.
+  [gbastien]
+
 11.1 - (2018-05-14)
 -------------------
 * Encode index before apply if necessary

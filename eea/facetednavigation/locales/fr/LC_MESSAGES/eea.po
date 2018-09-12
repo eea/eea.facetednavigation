@@ -65,11 +65,11 @@ msgstr "il y a 6 mois"
 
 #: ../../facetednavigation/widgets/interfaces.py:54
 msgid "Accessor"
-msgstr ""
+msgstr "Accessor"
 
 #: ../../facetednavigation/widgets/interfaces.py:55
 msgid "Accessor to extract data for faceted widget."
-msgstr ""
+msgstr "Accessor to extract data for faceted widget."
 
 #: ../../facetednavigation/browser/template/configure.pt:68
 msgid "Add"
@@ -99,7 +99,7 @@ msgstr "Alphabet"
 
 #: ../../facetednavigation/widgets/interfaces.py:48
 msgid "An interface describing schema to be used within z3c.form"
-msgstr ""
+msgstr "An interface describing schema to be used within z3c.form"
 
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
@@ -115,7 +115,7 @@ msgstr "Booléen"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:36
 msgid "Can select multiple values"
-msgstr ""
+msgstr "Peut sélectionner plusieurs valeurs"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:35
 msgid "Can select several elements"
@@ -137,7 +137,7 @@ msgstr "Index du catalogue"
 
 #: ../../facetednavigation/widgets/interfaces.py:84
 msgid "Catalog index to be used"
-msgstr ""
+msgstr "Index du catalogue à utiliser"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
@@ -180,7 +180,7 @@ msgstr "Configuration importée"
 
 #: ../../facetednavigation/settings/menu.py:69
 msgid "Configure"
-msgstr ""
+msgstr "Configurer"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:107
@@ -206,7 +206,7 @@ msgstr "Détails du critère"
 
 #: ../../facetednavigation/widgets/interfaces.py:60
 msgid "Criterion interface"
-msgstr ""
+msgstr "Criterion interface"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:35
 msgid "Current configuration"
@@ -231,7 +231,7 @@ msgstr "Débogueur"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:23
 msgid "Default e-tag"
-msgstr ""
+msgstr "e-tag par défaut"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:19
@@ -250,7 +250,7 @@ msgstr "Opérateur"
 
 #: ../../facetednavigation/widgets/interfaces.py:77
 msgid "Default query"
-msgstr ""
+msgstr "Default query"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:37
@@ -314,7 +314,7 @@ msgstr "Afficher le nombre de résultats de chaque valeur"
 #. Default: ""
 #: ../../facetednavigation/widgets/interfaces.py:97
 msgid "Display widget in section"
-msgstr "Section de la widget"
+msgstr "Section de le widget"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:55
@@ -360,7 +360,7 @@ msgstr "Activer le masquage intelligent des facettes"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:15
 msgid "Enabled (hidden)"
-msgstr ""
+msgstr "Activé (caché)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -399,23 +399,23 @@ msgstr "Paramètres généraux de la navigation à facettes"
 
 #: ../../facetednavigation/views/configure.zcml:20
 msgid "Faceted items preview"
-msgstr ""
+msgstr "Vue facettes prévisualisation"
 
 #: ../../facetednavigation/views/example/configure.zcml:21
 msgid "Faceted listing view"
-msgstr ""
+msgstr "Vue facettes listing"
 
 #: ../../facetednavigation/dexterity.zcml:11
 msgid "Faceted navigable"
-msgstr ""
+msgstr "Navigation par facettes"
 
 #: ../../facetednavigation/settings/menu.py:24
 msgid "Faceted navigation"
-msgstr ""
+msgstr "Navigation par facettes"
 
 #: ../../facetednavigation/dexterity.zcml:11
 msgid "Faceted navigation can be activated on the instances of this content type."
-msgstr ""
+msgstr "La navigation par facettes peut être activées sur les éléments de ce type."
 
 #: ../../facetednavigation/subtypes/subtyper.py:142
 msgid "Faceted navigation disabled"
@@ -427,7 +427,7 @@ msgstr "Navigation par facettes activée"
 
 #: ../../facetednavigation/settings/menu.py:25
 msgid "Faceted navigation settings"
-msgstr ""
+msgstr "Paramètres de la navigation par facettes"
 
 #: ../../facetednavigation/subtypes/subtyper.py:174
 msgid "Faceted search disabled"
@@ -439,7 +439,7 @@ msgstr "Recherche à facettes activée"
 
 #: ../../facetednavigation/views/example/configure.zcml:13
 msgid "Faceted summary view"
-msgstr ""
+msgstr "Vue facettes sommaire"
 
 #: ../../facetednavigation/widgets/interfaces.py:39
 msgid "Factory"
@@ -503,17 +503,17 @@ msgstr "Masquer les éléments sans résultat"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:16
 msgid "Hide this widget in order for e-tag to be used"
-msgstr ""
+msgstr "Cacher ce widget afin d'utiliser les e-tags"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/interfaces.py:104
 msgid "Hide widget"
-msgstr "Masquer la widget"
+msgstr "Masquer le widget"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "If this checkbox is checked, hides the \"All\" option"
-msgstr ""
+msgstr "Si cette case est cochée, l'option \"Tous\" sera cachée"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:29
 #: ../../facetednavigation/widgets/text/interfaces.py:23
@@ -568,7 +568,7 @@ msgstr "Nombre de caractères maximum"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:79
 msgid "Maximum color"
-msgstr ""
+msgstr "Couleur maximum"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
@@ -589,7 +589,7 @@ msgstr "Taille maximale"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:71
 msgid "Minimum color"
-msgstr ""
+msgstr "Couleur minimum"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
@@ -669,7 +669,7 @@ msgstr "Aucune action fournie"
 #: ../../facetednavigation/widgets/radio/interfaces.py:39
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:52
 msgid "Number of items visible in widget"
-msgstr "Nombre maximum d'éléments visibles dans la widget"
+msgstr "Nombre maximum d'éléments visibles dans le widget"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:36
 msgid "Operator visible"
@@ -730,7 +730,7 @@ msgstr "Position"
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:43
 msgid "Position of the widget."
-msgstr "Position de la widget"
+msgstr "Position de le widget"
 
 #: ../../facetednavigation/widgets/interfaces.py:40
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
@@ -778,11 +778,11 @@ msgstr "Étape des valeurs pour le nombre de résultats par page"
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:37
 msgid "Reuse date format and language used by Plone"
-msgstr ""
+msgstr "Utiliser le format de date et la langue définis dans Plone"
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:38
 msgid "Reuse the same date format and the the same language that Plone uses elsewhere. Otherwise, the format will be \"yy-mm-dd\" and the language \"English\". Note that this default format allows you to encode very old or big years (example : 0001 will not be converted to 1901). Other formats do not."
-msgstr ""
+msgstr "Réutilise le même format de date et la même langue que Plone utilise partout.  Sinon, le format sera \"aa-mm-jj\" et la langue sera l'anglais.  Ce format par défaut vous permet d'encoder de très anciennes dates (par exemple : 0001 sera convertit en 1901).  Les autres formats ne le permette pas."
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
@@ -806,7 +806,7 @@ msgstr "Sauver"
 
 #: ../../facetednavigation/widgets/interfaces.py:47
 msgid "Schema interface"
-msgstr ""
+msgstr "Schema interface"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.pt:32
 #: ../../facetednavigation/widgets/text/widget.pt:25
@@ -910,11 +910,11 @@ msgstr "Nuage de tags"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:80
 msgid "Tagscloud max color"
-msgstr ""
+msgstr "Couleur pour les éléments les plus nombreux du nuage de tags"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:72
 msgid "Tagscloud minimum color"
-msgstr ""
+msgstr "Couleur pour les éléments les moins nombreux du nuage de tags"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tal/interfaces.py:21
