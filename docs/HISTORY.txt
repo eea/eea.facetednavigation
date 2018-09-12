@@ -1,8 +1,8 @@
 Changelog
 =========
 
-11.2-dev0 - (unreleased)
-----------------------
+11.2 - (2018-09-12)
+-------------------
 * Completed french translations.
   [gbastien]
 * Change: updated URLs pointing to eea.europa.eu with https://
