@@ -61,7 +61,7 @@ Right now our wrapper doesn't inherit our object methods as it's a simple adapte
     >>> print wrapper.index_html
     Traceback (most recent call last):
     ...
-    AttributeError: index_html
+    AttributeError: ...index_html...
 
 So to have all sandbox methods and attributes available in our wrapper we have to
 call it. Optionally you can pass some keywords to be used within overwritten methods.
