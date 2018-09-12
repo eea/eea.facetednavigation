@@ -46,4 +46,4 @@ official issue register.
 
 * [General GitHub documentation](http://help.github.com/)
 * [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
-* [EEA packages](http://eea.github.io/docs/IT-systems/)
+* [EEA packages](https://eea.github.io/docs/IT-systems/)
