@@ -2,7 +2,9 @@ Changelog
 =========
 
 11.2-dev0 - (unreleased)
----------------------
+----------------------
+* Completed french translations.
+  [gbastien]
 * Change: updated URLs pointing to eea.europa.eu with https://
   [alecghica refs #95849]
 
