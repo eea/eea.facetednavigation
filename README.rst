@@ -185,8 +185,8 @@ and set it True. Be sure you do not actually need it.
 Live demo
 =========
 
-- `EEA Publications <http://www.eea.europa.eu/publications>`_
-- `EEA Multimedia <http://www.eea.europa.eu/multimedia/all-videos>`_
+- `EEA Publications <https://www.eea.europa.eu/publications>`_
+- `EEA Multimedia <https://www.eea.europa.eu/multimedia/all-videos>`_
 - `University of Minnesota - Explore Books <http://upress.umn.edu/explore>`_
 - `The Mountaineers <https://mountaineers.org/explore/activities>`_
 
@@ -260,5 +260,5 @@ Funding
 
 EEA_ - European Environment Agency (EU)
 
-.. _EEA: http://www.eea.europa.eu/
+.. _EEA: https://www.eea.europa.eu/
 .. _`EEA Web Systems Training`: http://www.youtube.com/user/eeacms/videos?view=1
