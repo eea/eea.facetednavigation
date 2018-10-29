@@ -3,6 +3,8 @@ Changelog
 
 11.3-dev0 - (unreleased)
 ---------------------
+* Bug fix: Fix preview item templates for orphan brains
+  [avoinea refs #99847]
 
 11.2 - (2018-09-12)
 -------------------
