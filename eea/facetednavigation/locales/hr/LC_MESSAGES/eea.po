@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-12 14:10+0000\n"
+"POT-Creation-Date: 2018-11-08 04:13+0000\n"
 "PO-Revision-Date: 2012-04-26 17:32+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -697,6 +697,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.py:18
 msgid "Range"
+msgstr ""
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:29
+msgid "Relevance"
 msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:32

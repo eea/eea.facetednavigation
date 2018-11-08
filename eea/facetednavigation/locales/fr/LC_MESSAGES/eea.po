@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-09-12 14:10+0000\n"
+"POT-Creation-Date: 2018-11-08 04:13+0000\n"
 "PO-Revision-Date: 2016-02-23 12:06+0100\n"
 "Last-Translator: Vincent Fretin <vincent.fretin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -743,6 +743,10 @@ msgstr "Bouton radio"
 #: ../../facetednavigation/widgets/range/widget.py:18
 msgid "Range"
 msgstr "Interval"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:29
+msgid "Relevance"
+msgstr "Pertinence"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:32
 msgid "Remove all"

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-12 14:10+0000\n"
+"POT-Creation-Date: 2018-11-08 04:13+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -740,6 +740,10 @@ msgstr "Radio"
 #: ../../facetednavigation/widgets/range/widget.py:18
 msgid "Range"
 msgstr "Spectru"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:29
+msgid "Relevance"
+msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:32
 msgid "Remove all"
