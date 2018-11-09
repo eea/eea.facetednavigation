@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2017-09-12 14:10+0000\n"
+"POT-Creation-Date: 2018-11-08 04:13+0000\n"
 "PO-Revision-Date: 2017-11-08 15:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -738,6 +738,10 @@ msgstr "單選圓鈕"
 #: ../../facetednavigation/widgets/range/widget.py:18
 msgid "Range"
 msgstr "範圍"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:29
+msgid "Relevance"
+msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:32
 msgid "Remove all"
