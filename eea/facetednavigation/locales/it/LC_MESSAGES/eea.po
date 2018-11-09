@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2017-09-12 14:10+0000\n"
+"POT-Creation-Date: 2018-11-08 04:13+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -738,6 +738,10 @@ msgstr "Radio"
 #: ../../facetednavigation/widgets/range/widget.py:18
 msgid "Range"
 msgstr "Distnza"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:29
+msgid "Relevance"
+msgstr ""
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:32
 msgid "Remove all"
