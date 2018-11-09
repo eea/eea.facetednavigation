@@ -1,6 +1,9 @@
 Changelog
 =========
 
+11.5-dev0 - (unreleased)
+---------------------
+
 11.4 - (2018-11-09)
 ------------------------
 * Change: display translated 'Relevance' instead nothing in the sorting widget
