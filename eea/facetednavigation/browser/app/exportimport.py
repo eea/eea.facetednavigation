@@ -37,7 +37,7 @@ class FacetedExportImport(object):
         upload_file = kwargs.get('import_file', None)
         if getattr(upload_file, 'read', None):
             upload_file = upload_file.read()
-        xml = upload_file or ''
+        xml = upload_file or b''
         if not xml.startswith(b'<?xml version="1.0"'):
             return _('Please provide a valid xml file')
 

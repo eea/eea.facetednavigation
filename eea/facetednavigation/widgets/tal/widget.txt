@@ -33,14 +33,14 @@ String
 
     >>> widget.data.update(default=u'string:a/path')
     >>> widget.query(form={})
-    {'path': u'a/path'}
+    {'path': 'a/path'}
 
 Python
 ~~~~~~
 
   Integer
 
-    >>> widget.data.update(default=u'python: (100+10)/2')
+    >>> widget.data.update(default=u'python: (100+10)//2')
     >>> widget.query(form={})
     {'path': 55}
 
@@ -122,7 +122,7 @@ context
 
     >>> widget.data.update(default=u'string:${context/absolute_url}')
     >>> widget.query(form={})
-    {'path': u'http://nohost/plone/sandbox'}
+    {'path': 'http://nohost/plone/sandbox'}
 
     >>> widget.data.update(default=u'python:context.absolute_url(1)')
     >>> widget.query(form={})
@@ -133,7 +133,7 @@ referer
 
     >>> widget.data.update(default=u'string:${referer/absolute_url}')
     >>> widget.query(form={})
-    {'path': u'http://nohost/plone/sandbox'}
+    {'path': 'http://nohost/plone/sandbox'}
 
     >>> widget.data.update(default=u'python:referer.absolute_url(1)')
     >>> widget.query(form={})
@@ -147,7 +147,7 @@ referer
 
     >>> widget.data.update(default=u'string:${referer/absolute_url}')
     >>> widget.query(form={})
-    {'path': u'http://nohost/plone/sandbox'}
+    {'path': 'http://nohost/plone/sandbox'}
 
     >>> widget.data.update(default=u'python:referer.absolute_url(1)')
     >>> widget.query(form={})
@@ -172,4 +172,4 @@ criterion
 
     >>> widget.data.update(default=u'python:criterion.title', index='sortable_title')
     >>> widget.query(form={})
-    {'sortable_title': u'A Title'}
+    {'sortable_title': 'A Title'}

@@ -34,7 +34,7 @@ RSS2
     ... else:
     ...     res = u'<?xml version="1.0"?>\n<rss version="2.0">\n</rss>\n'
     >>> res
-    u'<?xml version="1.0"?>...<rss...version="2.0"...</rss>...'
+    '<?xml version="1.0"?>...<rss...version="2.0"...</rss>...'
 
 SKOS
 ----

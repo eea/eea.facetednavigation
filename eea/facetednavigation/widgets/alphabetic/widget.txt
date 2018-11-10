@@ -54,10 +54,10 @@ Add widget
     ...             wposition='top', title='Alpha',
     ...             hidden=True, index='Title', default='Z')
     >>> ICriteria(sandbox).keys()
-    [u'c0']
+    ['c0']
 
     >>> ICriteria(sandbox).get('c0').__dict__
-    {...'default': u'Z'...}
+    {...'default': 'Z'...}
 
 Query
 -----
@@ -82,7 +82,7 @@ Update widget
     ...             wposition='bottom', default='X', hidden=True)
 
     >>> ICriteria(sandbox).get('c0').__dict__
-    {...'default': u'X'...}
+    {...'default': 'X'...}
 
     >>> brains = query.query()
     >>> [brain.getId for brain in brains]

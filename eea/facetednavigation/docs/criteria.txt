@@ -48,13 +48,13 @@ Get criteria
 ------------
 
     >>> ICriteria(sandbox).keys()
-    [u'c0', u'c1', u'c2', u'c3', u'c4', u'c5', u'c6', u'c7']
+    ['c0', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7']
 
     >>> ICriteria(sandbox).values()
     [<eea.facetednavigation.widgets.storage.Criterion object at...>, ...]
 
     >>> ICriteria(sandbox).items()
-    [(u'c0', <eea.facetednavigation.widgets.storage.Criterion object at...>), ...]
+    [('c0', <eea.facetednavigation.widgets.storage.Criterion object at...>), ...]
 
     >>> ICriteria(sandbox).get('c0')
     <eea.facetednavigation.widgets.storage.Criterion object at...>
@@ -67,11 +67,11 @@ Edit criterion
     >>> ICriteria(sandbox).edit('c0', title='Alphabetic', index='Title', hidden=False)
     >>> criterion = ICriteria(sandbox).get('c0')
     >>> criterion.get('title')
-    u'Alphabetic'
+    'Alphabetic'
     >>> criterion.hidden
     False
     >>> criterion.get('index')
-    u'Title'
+    'Title'
 
   Checkbox criterion
 
@@ -84,7 +84,7 @@ Edit criterion
     ... )
     >>> criterion = ICriteria(sandbox).get('c1')
     >>> criterion.get('title')
-    u'Check boxes'
+    'Check boxes'
     >>> criterion.hidden
     True
     >>> criterion.get('maxitems')
@@ -97,7 +97,7 @@ Delete criteria
     >>> ICriteria(sandbox).delete('c1')
     >>> ICriteria(sandbox).delete('c2')
     >>> ICriteria(sandbox).keys()
-    [u'c3', u'c4', u'c5', u'c6', u'c7']
+    ['c3', 'c4', 'c5', 'c6', 'c7']
 
 Move up/down
 ------------
@@ -105,7 +105,7 @@ Move up/down
     >>> ICriteria(sandbox).down('c4')
     >>> ICriteria(sandbox).up('c5')
     >>> ICriteria(sandbox).keys()
-    [u'c5', u'c3', u'c4', u'c6', u'c7']
+    ['c5', 'c3', 'c4', 'c6', 'c7']
 
 Change position
 ---------------
@@ -117,9 +117,9 @@ Change position
     ...     right=[]
     ... )
     >>> ICriteria(sandbox).keys()
-    [u'c7', u'c6', u'c5', u'c4', u'c3']
+    ['c7', 'c6', 'c5', 'c4', 'c3']
     >>> ICriteria(sandbox).get('c4').get('position')
-    u'left'
+    'left'
 
 Add criteria to specific sections
 ---------------------------------
@@ -127,8 +127,8 @@ Add criteria to specific sections
     >>> _ = ICriteria(sandbox).add('alphabetic', 'top', section='advanced')
     >>> _ = ICriteria(sandbox).add('alphabetic', 'top')
     >>> ICriteria(sandbox).get('c2').get('section')
-    u'advanced'
+    'advanced'
     >>> ICriteria(sandbox).get('c1').get('section')
-    u'default'
+    'default'
     >>> ICriteria(sandbox).keys()
-    [u'c7', u'c6', u'c1', u'c2', u'c5', u'c4', u'c3']
+    ['c7', 'c6', 'c1', 'c2', 'c5', 'c4', 'c3']

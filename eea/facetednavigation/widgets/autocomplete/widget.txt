@@ -59,7 +59,7 @@ Faceted navigation
 
     >>> _ = configure(addPropertiesWidget_button='Add', wtype='text',
     ...               wposition='top', title='Autocomplete',
-    ...               index='Subject', default='\xc5\x9etire', hidden=True)
+    ...               index='Subject', default=u'\u015etire', hidden=True)
     >>> brains = query.query(batch=False)
     >>> for brain in brains:
     ...     print(brain.Title)
@@ -68,7 +68,7 @@ Faceted navigation
   Make it visible
 
     >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=False)
-    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> brains = query.query(batch=False, c0=u'\u015etire')
     >>> for brain in brains:
     ...     print(brain.Title)
     Distance-to-target (Kyoto Protocol) for new Member States countries
@@ -76,7 +76,7 @@ Faceted navigation
   As we said before, you can search using multiple queries. This is used in real
   world to search in current query
 
-    >>> brains = query.query(batch=False, c0=['\xc5\x9etire', '\xc5\x9etire politica'])
+    >>> brains = query.query(batch=False, c0=[u'\u015etire', u'\u015etire politica'])
     >>> for brain in brains:
     ...     print(brain.Title)
     Distance-to-target (Kyoto Protocol) for new Member States countries

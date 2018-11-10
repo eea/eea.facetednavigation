@@ -66,9 +66,9 @@ Update criteria properties
     >>> criteria = config.get_criteria()
     >>> criterion = criteria[0]
     >>> criterion.widget, criterion.title, criterion.index, criterion.position
-    (u'checkbox', u'Test widget', u'Title', u'top')
+    ('checkbox', 'Test widget', 'Title', 'top')
     >>> criterion.catalog, criterion.vocabulary
-    (True, u'')
+    (True, '')
 
 Change criteria order
 =====================
@@ -79,7 +79,7 @@ Change criteria order
 
     >>> criteria = config.get_criteria()
     >>> [x.widget for x in criteria]
-    [u'checkbox', u'text', u'alphabetic', u'sorting']
+    ['checkbox', 'text', 'alphabetic', 'sorting']
 
     >>> alphabetic_id = criteria[2].getId()
     >>> checkbox_id = criteria[0].getId()
@@ -100,7 +100,7 @@ Delete criteria
     ... )
     >>> criteria = config.get_criteria()
     >>> [x.widget for x in criteria]
-    [u'text', u'sorting']
+    ['text', 'sorting']
 
 Default criteria
 ================
@@ -110,4 +110,4 @@ Default criteria
 
     >>> _ = handler(wtype='text', addPropertiesWidget_button=True, default='Water')
     >>> query_handler.default_criteria
-    {'c2': u'Water'}
+    {'c2': 'Water'}

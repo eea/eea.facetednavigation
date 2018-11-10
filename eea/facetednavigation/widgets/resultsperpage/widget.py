@@ -9,6 +9,7 @@ from eea.facetednavigation.widgets.resultsperpage.interfaces import (
     LayoutSchemata,
     DisplaySchemata,
 )
+from six.moves import range
 logger = logging.getLogger('eea.facetednavigation')
 
 
