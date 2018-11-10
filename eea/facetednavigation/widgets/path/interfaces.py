@@ -7,6 +7,7 @@ from eea.facetednavigation.widgets.interfaces import FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 
 class IPathSchema(ISchema):
@@ -26,7 +27,7 @@ class IPathSchema(ISchema):
                       u'(relative to plone site. ex: SITE/data-and-maps)'),
         required=False
     )
-    root._type = (unicode, str)
+    root._type = (six.text_type, str)
 
     depth = schema.TextLine(
         title=_(u'Search Depth'),
@@ -35,7 +36,7 @@ class IPathSchema(ISchema):
                       u'integer count the subfolder-levels to search.'),
         required=False
     )
-    depth._type = (unicode, str)
+    depth._type = (six.text_type, str)
 
     theme = schema.Choice(
         title=_(u'Navigation tree theme'),

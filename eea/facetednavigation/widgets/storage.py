@@ -2,6 +2,9 @@
 """
 from zope import interface
 from eea.facetednavigation.widgets.interfaces import ICriterion
+from Products.CMFPlone.utils import safe_unicode
+from six.moves import range
+
 
 @interface.implementer(ICriterion)
 class Criterion(object):
@@ -21,13 +24,12 @@ class Criterion(object):
         taken_ids = set(kwargs.pop(u'_taken_ids_', []))
         cid = kwargs.pop(u'_cid_', None)
         if not cid:
-            free_ids = set(u'c%d' % uid for uid in range(len(taken_ids)+1))
+            free_ids = set(u'c%d' % uid for uid in list(range(len(taken_ids)+1)))
             cid = free_ids.difference(taken_ids)
             cid = cid.pop()
         elif cid in taken_ids:
             raise KeyError(u'Id is already in use')
-        if isinstance(cid, str):
-            cid = cid.decode('utf-8')
+        cid = safe_unicode(cid)
         self.__name__ = cid
         self.update(**kwargs)
 
@@ -55,13 +57,7 @@ class Criterion(object):
         """ Update criterion properties
         """
         for key, value in kwargs.items():
-            if isinstance(key, str):
-                key = key.decode('utf-8')
-
-            if isinstance(value, str):
-                value = value.decode('utf-8', 'replace')
-
-            setattr(self, key, value)
+            setattr(self, safe_unicode(key), safe_unicode(value))
 
     def getId(self):
         """ Get criterion id

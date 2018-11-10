@@ -2,7 +2,6 @@
 """
 import re
 import logging
-import operator
 from zope import interface
 from zope.component import queryMultiAdapter
 from zope.i18n import translate
@@ -17,6 +16,7 @@ from BTrees.IIBTree import weightedIntersection, IISet
 from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
+from Products.CMFPlone.utils import safe_unicode
 from Products.ZCatalog.Lazy import LazyMap
 
 from eea.facetednavigation.plonex import ISolrSearch
@@ -27,12 +27,13 @@ from eea.facetednavigation.widgets.interfaces import IWidget
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
+import six
+from six.moves import range
 logger = logging.getLogger('eea.facetednavigation')
 
-def compare(a, b):
-    """ Compare lower values
-    """
-    return cmp(a.lower(), b.lower())
+
+def lowercase(value):
+    return value[1].lower()
 
 #
 # Faceted Widget
@@ -59,7 +60,7 @@ class Widget(GroupForm, Form):
         """ Form prefix
         """
         cid = self.data.getId()
-        if isinstance(cid, unicode):
+        if six.PY2 and isinstance(cid, six.text_type):
             cid = cid.encode('utf-8')
         return cid
 
@@ -137,10 +138,10 @@ class Widget(GroupForm, Form):
 
         # message is a simple msgid
         for domain in ['eea', 'plone']:
-            if isinstance(message, str):
+            if isinstance(message, six.binary_type):
                 try:
                     message = message.decode('utf-8')
-                except Exception, err:
+                except Exception as err:
                     logger.exception(err)
                     continue
 
@@ -167,7 +168,7 @@ class Widget(GroupForm, Form):
         list_text = text.split(' ')
         res = []
         for word in list_text:
-            word = [word[i:i + nchars] for i in xrange(0, len(word), nchars)]
+            word = [word[i:i + nchars] for i in range(0, len(word), nchars)]
             word = insert.join(word)
             res.append(word)
         return ' '.join(res)
@@ -191,11 +192,13 @@ class Widget(GroupForm, Form):
         res = []
         for val in index.uniqueValues():
             if isinstance(val, (int, float)):
-                val = unicode(str(val), 'utf-8')
+                val = str(val)
+                if six.PY2 and isinstance(val, six.binary_type):
+                    val = val.decode('utf-8')
 
-            elif not isinstance(val, unicode):
+            elif not isinstance(val, six.text_type):
                 try:
-                    val = unicode(val, 'utf-8')
+                    val = safe_unicode(str(val))
                 except Exception:
                     continue
 
@@ -222,7 +225,7 @@ class Widget(GroupForm, Form):
                 values = []
                 for term in voc(self.context):
                     value = term.value
-                    if isinstance(value, str):
+                    if isinstance(value, six.binary_type):
                         value = value.decode('utf-8')
                     values.append((value, (term.title or term.token or value)))
                 return values
@@ -230,7 +233,7 @@ class Widget(GroupForm, Form):
 
         terms = voc.getDisplayList(self.context)
         if hasattr(terms, 'items'):
-            return terms.items()
+            return list(terms.items())
         return terms
 
     def vocabulary(self, **kwargs):
@@ -251,10 +254,10 @@ class Widget(GroupForm, Form):
                 kw = {'facet': 'on',
                   'facet.field': index,    # facet on index
                   'facet.limit': -1,       # show unlimited results
-                  'rows':0}                # no results needed
+                  'rows': 0}                # no results needed
                 result = searchutility.search('*:*', **kw)
                 try:
-                    values = result.facet_counts['facet_fields'][index].keys()
+                    values = list(result.facet_counts['facet_fields'][index].keys())
                 except (AttributeError, KeyError):
                     pass
 
@@ -262,7 +265,7 @@ class Widget(GroupForm, Form):
                 values = self.catalog_vocabulary()
 
             res = [(val, mapping.get(val, val)) for val in values]
-            res.sort(key=operator.itemgetter(1), cmp=compare)
+            res.sort(key=lowercase)
         else:
             res = mapping
 
@@ -313,9 +316,9 @@ class CountableWidget(Widget):
                 facet_field = facet_fields.get(index_id, {})
                 for value, num in facet_field.items():
                     normalized_value = atdx_normalize(value)
-                    if isinstance(value, unicode):
+                    if isinstance(value, six.text_type):
                         res[value] = num
-                    elif isinstance(normalized_value, unicode):
+                    elif isinstance(normalized_value, six.text_type):
                         res[normalized_value] = num
                     else:
                         unicode_value = value.decode('utf-8')
@@ -365,9 +368,9 @@ class CountableWidget(Widget):
             rset = ctool.apply_index(self.context, index, normalized_value)[0]
             rset = IISet(rset)
             rset = weightedIntersection(brains, rset)[1]
-            if isinstance(value, unicode):
+            if isinstance(value, six.text_type):
                 res[value] = len(rset)
-            elif isinstance(normalized_value, unicode):
+            elif isinstance(normalized_value, six.text_type):
                 res[normalized_value] = len(rset)
             else:
                 unicode_value = value.decode('utf-8')

@@ -5,6 +5,7 @@ from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.text.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.text.interfaces import DefaultSchemata
+import six
 
 
 class Widget(AbstractWidget):
@@ -33,9 +34,9 @@ class Widget(AbstractWidget):
         """ Process string values to be used in catalog query
         """
         # Ensure words are string instances as ZCatalog requires strings
-        if isinstance(value, str):
+        if isinstance(value, six.binary_type):
             value = value.decode('utf-8')
-        if isinstance(value, unicode):
+        if six.PY2 and isinstance(value, six.text_type):
             value = value.encode('utf-8')
         if self.data.get('wildcard', False) and not value.endswith("*"):
             value = value + "*"
@@ -52,7 +53,7 @@ class Widget(AbstractWidget):
         """
         if isinstance(value, (tuple, list)):
             value = self.normalize_list(value)
-        elif isinstance(value, (str, unicode)):
+        elif isinstance(value, (str, six.text_type)):
             value = self.normalize_string(value)
         return value
 
@@ -61,7 +62,8 @@ class Widget(AbstractWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 

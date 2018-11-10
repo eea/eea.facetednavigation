@@ -1,7 +1,8 @@
 """ Test utilities
 """
 import os
-from StringIO import StringIO
+from six import BytesIO
+
 
 def loadfile(rel_filename):
     """ Open a file relative to this module
@@ -21,7 +22,7 @@ def preparefile(rel_filename, ctype='text/xml'):
     """ Prepare a file for upload
     """
     ofile = loadfile(rel_filename)
-    fp = StringIO(ofile.get('data'))
+    fp = BytesIO(ofile.get('data'))
     fp.filename = ofile.get('name')
     return fp
 

@@ -6,6 +6,7 @@ from z3c.form import group, field
 from zope.configuration.fields import GlobalObject
 from zope.configuration.fields import GlobalInterface
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 
 class ICriterion(Interface):
@@ -70,14 +71,14 @@ class ISchema(Interface):
         title=_(u"Friendly name"),
         description=_(u"Title for widget to display in view page"),
     )
-    title._type = (unicode, str)
+    title._type = (six.text_type, str)
 
     default = schema.TextLine(
         title=_(u"Default value"),
         description=_(u"Default query"),
         required=False
     )
-    default._type = (unicode, str)
+    default._type = (six.text_type, str)
 
     index = schema.Choice(
         title=_(u"Catalog index"),

@@ -33,7 +33,7 @@ def add_sorting_widget(context):
                  title='Sort on', default='effective(reverse)',
                  hidden=True
             )
-        except Exception, err:
+        except Exception as err:
             logger.exception(err)
         else:
             logger.info('Added sorting widget for: %s', doc.absolute_url())

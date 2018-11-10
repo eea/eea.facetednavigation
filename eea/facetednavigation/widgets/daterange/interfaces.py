@@ -7,6 +7,7 @@ from eea.facetednavigation.widgets.interfaces import FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 
 class IDateRangeSchema(ISchema):
@@ -31,7 +32,7 @@ class IDateRangeSchema(ISchema):
         required=False,
         default=u"c-10:c+10"
     )
-    calYearRange._type = (str, unicode)
+    calYearRange._type = (str, six.text_type)
 
     usePloneDateFormat = schema.Bool(
         title=_(u'Reuse date format and language used by Plone'),

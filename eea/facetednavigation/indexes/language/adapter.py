@@ -33,7 +33,7 @@ class LanguageWidgetAdapter(object):
         ltool = getToolByName(self.context, 'portal_languages', None)
         if ltool is not None:
             lang = ltool.getAvailableLanguages()
-            codes = lang.keys()
+            codes = list(lang.keys())
             codes.append('')
         return codes
 

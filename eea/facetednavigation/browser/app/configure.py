@@ -17,6 +17,7 @@ from eea.facetednavigation.browser import interfaces
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 from eea.facetednavigation import EEAMessageFactory as _
 
+import six
 
 logger = logging.getLogger('eea.facetednavigation')
 #
@@ -57,7 +58,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
         section = kwargs.pop('wsection', 'default')
         try:
             ICriteria(self.context).add(wid, position, section)
-        except NameError, err:
+        except NameError as err:
             msg = err
         else:
             msg = _(u'Filter added')
@@ -142,7 +143,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
             criteria.edit(cid, **update)
             if widget.hidden:
                 notify(FacetedGlobalSettingsChangedEvent(self.context))
-            elif set(['hidden', 'operator']).intersection(update.keys()):
+            elif set(['hidden', 'operator']).intersection(list(update.keys())):
                 notify(FacetedGlobalSettingsChangedEvent(self.context))
 
         return self._redirect('Changes saved')
@@ -152,7 +153,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
         """
         try:
             ICriteria(self.context).delete(cid)
-        except (TypeError, KeyError), err:
+        except (TypeError, KeyError) as err:
             msg = err
         else:
             msg = _(u'Filter deleted')
@@ -198,7 +199,7 @@ class FacetedFormHandler(FacetedBasicHandler):
         sanitized_form = {}
         for key, value in getattr(self.request, 'form', {}).items():
             key = key.replace('[]', '')
-            if isinstance(value, str):
+            if isinstance(value, six.binary_type):
                 value = value.decode('utf-8')
             sanitized_form[key] = value
 
@@ -303,11 +304,11 @@ class FacetedConfigureView(object):
         info = getUtility(IWidgetsInfo)
         res = [x for x in info.widgets.values()]
 
-        def compare(x, y):
+        def compare(x):
             """ Compare """
-            return cmp(x.widget_label, y.widget_label)
+            return x.widget_label
 
-        res.sort(cmp=compare)
+        res.sort(key=compare)
         return res
 
     def get_schema(self, criterion):
@@ -320,4 +321,4 @@ class FacetedConfigureView(object):
     def get_criteria(self):
         """ Get criteria
         """
-        return ICriteria(self.context).values()
+        return list(ICriteria(self.context).values())

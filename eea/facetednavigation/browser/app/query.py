@@ -22,6 +22,8 @@ from eea.facetednavigation.interfaces import IFacetedWrapper
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
 from plone.app.contentlisting.interfaces import IContentListing
 
+import six
+
 logger = logging.getLogger('eea.facetednavigation')
 
 
@@ -62,7 +64,9 @@ class FacetedQueryHandler(FolderView):
             default = widget.default
             if not default:
                 continue
-            query[cid.encode('utf-8')] = default
+            if six.PY2:
+                cid = cid.encode('utf-8')
+            query[cid] = default
         return query
 
     def get_context(self, content=None):
@@ -113,7 +117,7 @@ class FacetedQueryHandler(FolderView):
                 query.update(language_widget(kwargs))
 
         # Add default sorting criteria
-        if sort and not query.has_key('sort_on'):
+        if sort and 'sort_on' not in query:
             query['sort_on'] = 'effective'
             query['sort_order'] = 'reverse'
 
@@ -172,7 +176,7 @@ class FacetedQueryHandler(FolderView):
 
         try:
             brains = catalog(self.context, **query)
-        except Exception, err:
+        except Exception as err:
             logger.exception(err)
             return Batch([], 20, 0)
         if not brains:

@@ -198,7 +198,7 @@ Edit (no AJAX)
   Export
 
     >>> browser.getControl('Export').click()
-    >>> print browser.contents
+    >>> print(browser.contents)
     <?xml version="1.0"?>
     <object name="sandbox" meta_type="...">
      <criteria>

@@ -6,6 +6,7 @@ from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 
 class IPortletSchema(ISchema):
@@ -15,7 +16,7 @@ class IPortletSchema(ISchema):
         title=_(u'Portlet macro'),
         description=_(u'Path to portlet macro'),
     )
-    macro._type = (unicode, str)
+    macro._type = (six.text_type, str)
 
 
 class DefaultSchemata(DS):

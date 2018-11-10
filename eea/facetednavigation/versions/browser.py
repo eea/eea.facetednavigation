@@ -1,7 +1,7 @@
 """ Proxy caching (squid, etc)
 """
 from hashlib import md5
-import cPickle
+import six.moves.cPickle
 import logging
 from zope.component import queryAdapter
 from zope.interface import implementer
@@ -31,7 +31,7 @@ class FacetedVersion(BrowserView):
             return ''
 
         query = {}
-        criteria = config.values()
+        criteria = list(config.values())
         for criterion in criteria:
             cid = criterion.getId()
             operator = criterion.get('operator', '')
@@ -50,7 +50,7 @@ class FacetedVersion(BrowserView):
         if not query:
             return ''
 
-        return md5(cPickle.dumps(query)).hexdigest()
+        return md5(six.moves.cPickle.dumps(query)).hexdigest()
     #
     # Public interface
     #

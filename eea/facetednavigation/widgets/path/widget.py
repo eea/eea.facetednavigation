@@ -9,6 +9,7 @@ from eea.facetednavigation.widgets.path.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.path.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.path.interfaces import DisplaySchemata
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 logger = logging.getLogger('eea.facetednavigation')
 
@@ -31,7 +32,7 @@ class Widget(AbstractWidget):
         site_url = site_url.strip('/')
         data_root = self.data.get('root', '') or ''
         data_root = data_root.strip().strip('/')
-        if isinstance(data_root, unicode):
+        if six.PY2 and isinstance(data_root, six.text_type):
             data_root = data_root.encode('utf-8')
         if data_root.startswith(site_url):
             data_root = '/' + data_root
@@ -79,7 +80,7 @@ class Widget(AbstractWidget):
         if not data_default:
             return ''
 
-        if isinstance(data_default, unicode):
+        if six.PY2 and isinstance(data_default, six.text_type):
             data_default = data_default.encode('utf-8')
 
         data_list = [d for d in data_default.strip().strip('/').split('/') if d]
@@ -116,7 +117,8 @@ class Widget(AbstractWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 

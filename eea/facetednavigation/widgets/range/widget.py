@@ -8,6 +8,9 @@ from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.range.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.range.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
+
+import six
+
 logger = logging.getLogger('eea.facetednavigation')
 
 
@@ -40,7 +43,8 @@ class Widget(AbstractWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 

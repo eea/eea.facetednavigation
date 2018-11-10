@@ -4,7 +4,6 @@ from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.faceted.vocabularies.utils import compare
 from eea.facetednavigation.widgets.checkbox.interfaces import (
     DefaultSchemata,
     LayoutSchemata,
@@ -13,6 +12,7 @@ from eea.facetednavigation.widgets.checkbox.interfaces import (
 )
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 
 class Widget(CountableWidget):
@@ -39,7 +39,6 @@ class Widget(CountableWidget):
         return ('faceted-checkboxes-widget '
                 'faceted-{0}-widget section-{1}').format(css_type, css_title)
 
-
     @property
     def default(self):
         """ Get default values
@@ -48,9 +47,11 @@ class Widget(CountableWidget):
         if not default:
             return []
 
-        if isinstance(default, (str, unicode)):
+        if isinstance(default, (str, six.text_type)):
             default = [default, ]
-        return [x.encode('utf-8') for x in default]
+        if six.PY2:
+            default = [x.encode('utf-8') for x in default]
+        return default
 
     def selected(self, key):
         """ Return True if key in self.default
@@ -59,7 +60,7 @@ class Widget(CountableWidget):
         if not default:
             return False
         for item in default:
-            if compare(key, item) == 0:
+            if key.lower() == item.lower():
                 return True
         return False
 
@@ -80,14 +81,16 @@ class Widget(CountableWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
 
         if not self.operator_visible:
             operator = self.operator
         else:
             operator = form.get(self.data.getId() + '-operator', self.operator)
 
-        operator = operator.encode('utf-8', 'replace')
+        if six.PY2:
+            operator = operator.encode('utf-8', 'replace')
 
         if not index:
             return query

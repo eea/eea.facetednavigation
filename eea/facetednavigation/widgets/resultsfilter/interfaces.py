@@ -7,6 +7,7 @@ from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.interfaces import IWidget
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 
 class IResultsFilterWidget(IWidget):
@@ -23,7 +24,7 @@ class IResultsFilterSchema(ISchema):
         required=False,
         default=u'python:hasattr(brain, u"Title")',
     )
-    default._type = (unicode, str)
+    default._type = (six.text_type, str)
 
 
 class DefaultSchemata(DS):
