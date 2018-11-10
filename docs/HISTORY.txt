@@ -3,6 +3,9 @@ Changelog
 
 11.5-dev0 - (unreleased)
 ---------------------
+* Change: make spinner easy to override by defining a CSS background-image
+  instead rendering an image
+  [gbastien]
 
 11.4 - (2018-11-09)
 ------------------------
