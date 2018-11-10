@@ -23,7 +23,6 @@
     for="zope.interface.Interface"
     class=".subtyper.FacetedPublicSubtyper"
     permission="zope.Public"
-    allowed_interface=".interfaces.IFacetedSubtyper"
     />
 
   <browser:page
@@ -31,7 +30,6 @@
     for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
     class=".subtyper.FacetedSubtyper"
     permission="eea.faceted.configure"
-    allowed_interface=".interfaces.IFacetedSubtyper"
     />
 
   <browser:page
@@ -39,7 +37,6 @@
     for="zope.interface.Interface"
     class=".subtyper.FacetedPublicSubtyper"
     permission="zope.Public"
-    allowed_interface=".interfaces.IFacetedSubtyper"
     />
 
   <browser:page
@@ -47,7 +44,6 @@
     for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
     class=".subtyper.FacetedSearchSubtyper"
     permission="eea.faceted.configure"
-    allowed_interface=".interfaces.IFacetedSubtyper"
     />
 
 </configure>
