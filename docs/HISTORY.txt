@@ -1,6 +1,12 @@
 Changelog
 =========
 
+12.0 - (unreleased)
+-------------------
+
+* Add support or Python 3 and Plone 5.2.
+  [pbauer]
+
 11.3 - (2018-10-29)
 ---------------------
 * Bug fix: Fix preview item templates for orphan brains
