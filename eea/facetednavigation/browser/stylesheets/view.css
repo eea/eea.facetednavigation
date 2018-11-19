@@ -111,7 +111,8 @@
 ---------------- */
 
 .faceted_loading {
-  text-align: center;
+  background: url(../../++resource++faceted_images/ajax-loader.gif) no-repeat 50% 1.5em;
+  height: 200px;
 }
 
 /* Sections
