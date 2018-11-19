@@ -3,6 +3,8 @@ Changelog
 
 11.5-dev0 - (unreleased)
 ---------------------
+* Change : set Faceted.Options.FADE_SPEED to 'fast' instead 'slow' by default
+  [gbastien]
 
 11.4 - (2018-11-09)
 ------------------------

@@ -54,7 +54,7 @@ Faceted.BASEURL = '';
  */
 Faceted.Options = {};
 Faceted.Options.SHOW_SPINNER = true;
-Faceted.Options.FADE_SPEED = 'slow';
+Faceted.Options.FADE_SPEED = 'fast';
 
 /* Return minimal and sorted query
 */
