@@ -54,7 +54,7 @@ Faceted.BASEURL = '';
  */
 Faceted.Options = {};
 Faceted.Options.SHOW_SPINNER = true;
-Faceted.Options.FADE_SPEED = 'slow';
+Faceted.Options.FADE_SPEED = 'fast';
 
 /* Return minimal and sorted query
 */
@@ -231,8 +231,7 @@ Faceted.Form = {
     jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_QUERY_START);
     context.area.fadeOut('fast', function(){
       if(Faceted.Options.SHOW_SPINNER){
-        var loading = '<div class="faceted_loading"><img src="' +
-        Faceted.BASEURL + '++resource++faceted_images/ajax-loader.gif" /></div>';
+        var loading = '<div class="faceted_loading"></div>';
         context.area.html(loading);
         context.area.fadeIn(Faceted.Options.FADE_SPEED);
       }

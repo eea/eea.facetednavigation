@@ -4,7 +4,7 @@ from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.faceted.vocabularies.utils import compare
+from eea.facetednavigation.widgets.widget import compare
 from eea.facetednavigation.widgets.checkbox.interfaces import (
     DefaultSchemata,
     LayoutSchemata,
