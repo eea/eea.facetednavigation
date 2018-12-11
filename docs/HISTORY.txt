@@ -6,6 +6,10 @@ Changelog
 
 11.5 - (2018-11-19)
 ---------------------
+* Complete basque translation
+  [erral]
+* Fix alphabetic bar for basque language
+  [erral]
 * Change : set Faceted.Options.FADE_SPEED to 'fast' instead 'slow' by default
   [gbastien]
 * Change: make spinner easy to override by defining a CSS background-image
