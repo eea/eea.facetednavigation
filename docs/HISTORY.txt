@@ -1,6 +1,13 @@
 Changelog
 =========
 
+11.6 - (2018-12-11)
+---------------------
+* Complete basque translation
+  [erral]
+* Fix alphabetic bar for basque language
+  [erral]
+
 11.5 - (2018-11-19)
 ---------------------
 * Change : set Faceted.Options.FADE_SPEED to 'fast' instead 'slow' by default

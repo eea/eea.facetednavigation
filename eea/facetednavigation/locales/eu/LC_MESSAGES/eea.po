@@ -2,26 +2,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
 "POT-Creation-Date: 2018-11-08 04:13+0000\n"
-"PO-Revision-Date: 2013-11-19 08:24+0100\n"
+"PO-Revision-Date: 2018-12-10 12:34+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
-"X-Poedit-Language: Basque\n"
+"Language: eu\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:21
 msgid "&#8711;"
-msgstr ""
+msgstr "&#8711;"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "&#916;"
-msgstr ""
+msgstr "&#916;"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 month ago"
@@ -61,11 +62,11 @@ msgstr "Duela 6 hilabete"
 
 #: ../../facetednavigation/widgets/interfaces.py:54
 msgid "Accessor"
-msgstr ""
+msgstr "Atzipen metodoa"
 
 #: ../../facetednavigation/widgets/interfaces.py:55
 msgid "Accessor to extract data for faceted widget."
-msgstr ""
+msgstr "Widgetetik datuak ateratzeko atzipen metodoa"
 
 #: ../../facetednavigation/browser/template/configure.pt:68
 msgid "Add"
@@ -95,7 +96,7 @@ msgstr "Alfabetikoki"
 
 #: ../../facetednavigation/widgets/interfaces.py:48
 msgid "An interface describing schema to be used within z3c.form"
-msgstr ""
+msgstr "z3c.form barruan erabiliko den eskema deskribatzen duen interfazea"
 
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
@@ -103,19 +104,19 @@ msgstr "${widget} widgeta ezabatu nahi duzu?"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:22
 msgid "Autocomplete"
-msgstr ""
+msgstr "Berez betetzekoa"
 
 #: ../../facetednavigation/widgets/boolean/widget.py:19
 msgid "Boolean"
-msgstr ""
+msgstr "Boolearra"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:36
 msgid "Can select multiple values"
-msgstr ""
+msgstr "Hainbat elementu aukeratu daitezke"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:35
 msgid "Can select several elements"
-msgstr ""
+msgstr "Hainbat elementu aukeratu daitezke"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:51
@@ -133,7 +134,7 @@ msgstr "Katalogoko indizea"
 
 #: ../../facetednavigation/widgets/interfaces.py:84
 msgid "Catalog index to be used"
-msgstr ""
+msgstr "Erabiliko den katalogoko indizea"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
@@ -148,7 +149,7 @@ msgstr "Katalogoko kontsulta"
 
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
-msgstr "Aukeratzeko-kutxak"
+msgstr "Aukeraketa-kutxa (checkbox)"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:16
 msgid "Cloud"
@@ -176,7 +177,7 @@ msgstr "Konfigurazioa ondo inportatu da"
 
 #: ../../facetednavigation/settings/menu.py:69
 msgid "Configure"
-msgstr ""
+msgstr "Konfiguratu"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:107
@@ -202,7 +203,7 @@ msgstr "Irizpideen ezaugarriak"
 
 #: ../../facetednavigation/widgets/interfaces.py:60
 msgid "Criterion interface"
-msgstr ""
+msgstr "Irizpidearen interfazea"
 
 #: ../../facetednavigation/widgets/debug/widget.pt:35
 msgid "Current configuration"
@@ -227,7 +228,7 @@ msgstr "Araztailea"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:23
 msgid "Default e-tag"
-msgstr ""
+msgstr "Defektuzko e-tag balioa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:19
@@ -246,7 +247,7 @@ msgstr "Eragilea"
 
 #: ../../facetednavigation/widgets/interfaces.py:77
 msgid "Default query"
-msgstr ""
+msgstr "Defektuzko kontsulta"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:37
@@ -276,7 +277,7 @@ msgstr "Bidea bilatzeko sakonera. 0=maila hau, -1=errekurtsiboki azpi-karpeta gu
 
 #: ../../facetednavigation/interfaces.py:80
 msgid "Disable diazo rules on ajax requests"
-msgstr ""
+msgstr "Diazo erregelak desaktibatu ajax eskaeretan"
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Disable faceted navigation"
@@ -319,11 +320,11 @@ msgstr "Widgeta atala baten erakutsi"
 
 #: ../../facetednavigation/profiles.zcml:17
 msgid "EEA Faceted Navigation"
-msgstr ""
+msgstr "EEA Faceted Navigation"
 
 #: ../../facetednavigation/profiles.zcml:35
 msgid "EEA Faceted Navigation Common Configuration"
-msgstr ""
+msgstr "EEA Faceted Navigation Oinarrizko Konfigurazioa"
 
 #: ../../facetednavigation/profiles/common/actions.xml
 msgid "Enable faceted navigation"
@@ -340,7 +341,7 @@ msgstr "Gaitu ezkutatzeko / erakusteko irizpideak"
 
 #: ../../facetednavigation/settings/menu.py:130
 msgid "Enable inheriting configuration "
-msgstr "Aktibatu konfigurazioa heredatzea"
+msgstr "Aktibatu konfigurazioa heredatzea "
 
 #: ../../facetednavigation/settings/menu.py:82
 msgid "Enable left portlets"
@@ -356,7 +357,7 @@ msgstr "Sailkapen argiak ezkutatzea aktibatu"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:15
 msgid "Enabled (hidden)"
-msgstr ""
+msgstr "Aktibatuta (ezkutuan)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/range/widget.pt:28
@@ -382,11 +383,11 @@ msgstr "Esportatu"
 
 #: ../../facetednavigation/profiles.zcml:35
 msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
-msgstr ""
+msgstr "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
 
 #: ../../facetednavigation/profiles.zcml:17
 msgid "Extension profile for EEA Faceted Navigation."
-msgstr ""
+msgstr "Extension profile for EEA Faceted Navigation."
 
 #. Default: ""
 #: ../../facetednavigation/settings/configure.zcml:19
@@ -395,23 +396,23 @@ msgstr "Sailkapenen konfigurazioa orokorra"
 
 #: ../../facetednavigation/views/configure.zcml:20
 msgid "Faceted items preview"
-msgstr ""
+msgstr "Elementuen aurrebista"
 
 #: ../../facetednavigation/views/example/configure.zcml:21
 msgid "Faceted listing view"
-msgstr ""
+msgstr "Elementuen zerrenda bista"
 
 #: ../../facetednavigation/dexterity.zcml:11
 msgid "Faceted navigable"
-msgstr ""
+msgstr "Sailkapen bidez nabigatu daiteke"
 
 #: ../../facetednavigation/settings/menu.py:24
 msgid "Faceted navigation"
-msgstr ""
+msgstr "Sailkapen bidezko nabigazioa"
 
 #: ../../facetednavigation/dexterity.zcml:11
 msgid "Faceted navigation can be activated on the instances of this content type."
-msgstr ""
+msgstr "Sailkapen bidezko nabigazioa elementu-mota honetako objektuetan aktibatu daiteke."
 
 #: ../../facetednavigation/subtypes/subtyper.py:142
 msgid "Faceted navigation disabled"
@@ -423,7 +424,7 @@ msgstr "Sailkapen bidezko nabigazioa aktibatu egin da"
 
 #: ../../facetednavigation/settings/menu.py:25
 msgid "Faceted navigation settings"
-msgstr ""
+msgstr "Sailkapen bidezko nabigazioaren ezarpenak"
 
 #: ../../facetednavigation/subtypes/subtyper.py:174
 msgid "Faceted search disabled"
@@ -435,7 +436,7 @@ msgstr "Sailkapen bidezko bilaketa aktibatuta"
 
 #: ../../facetednavigation/views/example/configure.zcml:13
 msgid "Faceted summary view"
-msgstr ""
+msgstr "Elementuen mosaiko bista"
 
 #: ../../facetednavigation/widgets/interfaces.py:39
 msgid "Factory"
@@ -499,7 +500,7 @@ msgstr "Ezkutatu emaitzarik ez duten elementuak"
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:16
 msgid "Hide this widget in order for e-tag to be used"
-msgstr ""
+msgstr "Ezkutatu widget hau e-tag erabili ahal izateko"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/interfaces.py:104
@@ -509,7 +510,7 @@ msgstr "Widgeta ezkutatu"
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "If this checkbox is checked, hides the \"All\" option"
-msgstr ""
+msgstr "Aukeratuta badago, \"Guztiak\" aukera ezkutatzen du"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:29
 #: ../../facetednavigation/widgets/text/interfaces.py:23
@@ -518,7 +519,7 @@ msgstr "Aukeratuta badago, elementu guztien artean edo uneko elementuen artean b
 
 #: ../../facetednavigation/widgets/text/interfaces.py:30
 msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
-msgstr ""
+msgstr "Aukeratuta badago, sistemak automatikoki '*' gehituko du testuaren bukaeran. Horrela 'gauza' bilatuz gero 'gauzak' ere aurkituko du."
 
 #: ../../facetednavigation/browser/template/configure.pt:83
 msgid "Import"
@@ -564,7 +565,7 @@ msgstr "Karaktere kopuru maximoa"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:79
 msgid "Maximum color"
-msgstr ""
+msgstr "Kolore maximoa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
@@ -585,7 +586,7 @@ msgstr "Tamaina maximoa"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:71
 msgid "Minimum color"
-msgstr ""
+msgstr "Kolore minimoa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
@@ -742,7 +743,7 @@ msgstr "Sorta"
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:29
 msgid "Relevance"
-msgstr ""
+msgstr "Errelebantzia"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:32
 msgid "Remove all"
@@ -778,11 +779,11 @@ msgstr "Emaitzak orrialdeko urratsa"
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:37
 msgid "Reuse date format and language used by Plone"
-msgstr ""
+msgstr "Berrerabili Ploneren data-formatu eta hizkuntza"
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:38
 msgid "Reuse the same date format and the the same language that Plone uses elsewhere. Otherwise, the format will be \"yy-mm-dd\" and the language \"English\". Note that this default format allows you to encode very old or big years (example : 0001 will not be converted to 1901). Other formats do not."
-msgstr ""
+msgstr "Berrerabili Plonek beste lekuetan erabiltzen duen data-formatu eta hizkuntza. Bestela formatua \"uu-hh-ee\" izango da eta hizkuntza \"Ingelesa\". Kontuan izan formatu honek urte zenbaki oso zahar edo oso handiak erabiltzen uzten dizula (adibidez: 0001 ez da 1901 izatera bihurtuko). Beste formatu batzuk ez dute hau eskaintzen."
 
 #: ../../facetednavigation/widgets/sorting/widget.pt:50
 msgid "Reverse"
@@ -793,7 +794,7 @@ msgstr "Alderantzizkoa"
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 #: ../../facetednavigation/widgets/select/interfaces.py:32
 msgid "Reverse options"
-msgstr "Alderantzizko aukerak"
+msgstr "Aukerak alderantzikatu"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/interfaces.py:24
@@ -806,7 +807,7 @@ msgstr "Gorde"
 
 #: ../../facetednavigation/widgets/interfaces.py:47
 msgid "Schema interface"
-msgstr ""
+msgstr "Eskemaren interfazea"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.pt:32
 #: ../../facetednavigation/widgets/text/widget.pt:25
@@ -836,11 +837,11 @@ msgstr "Atala"
 
 #: ../../facetednavigation/widgets/select/widget.py:16
 msgid "Select"
-msgstr "Aukeraketa-kutxa"
+msgstr "Aukeraketa-kutxa (select)"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.pt:1
 msgid "Select a value"
-msgstr ""
+msgstr "Balio bat aukeratu"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:112
@@ -849,7 +850,7 @@ msgstr "Elementu guztiak aukeratu"
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:23
 msgid "Select the source of the autocomplete suggestions"
-msgstr ""
+msgstr "Berez betetzeko iradokizunak nondik ekarri aukeratu"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:22
 msgid "Show filters"
@@ -872,7 +873,7 @@ msgstr "Kontagarri direnen arabera ordenatu"
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 #: ../../facetednavigation/widgets/select/interfaces.py:33
 msgid "Sort options reversed"
-msgstr "Alderantzikako ordenazio-aukerak"
+msgstr "Balioak alderantziz ordenatu"
 
 #: ../../facetednavigation/widgets/sorting/widget.py:23
 msgid "Sorting"
@@ -911,11 +912,11 @@ msgstr "Etiketa lainoa"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:80
 msgid "Tagscloud max color"
-msgstr ""
+msgstr "Etiketa lainoaren kolore maximoa"
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:72
 msgid "Tagscloud minimum color"
-msgstr ""
+msgstr "Etiketa lainoaren kolore minimoa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/tal/interfaces.py:21
@@ -928,7 +929,7 @@ msgstr "Testu-eremua"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.py:28
 msgid "Text field with suggestions"
-msgstr ""
+msgstr "Iradokizunak dituen testu kutxa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/interfaces.py:42
@@ -937,7 +938,7 @@ msgstr "Widget honekin erabili beharreko itxura"
 
 #: ../../facetednavigation/widgets/interfaces.py:122
 msgid "This option works only if 'count results' is enabled"
-msgstr "Aukera honek \"Emaitza kopurua erakutsi\" aktibatuta dagoenean bakarrik balio du."
+msgstr "Aukera honek \"Emaitza kopurua erakutsi\" aktibatuta dagoenean bakarrik balio du"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/widget.pt:29
@@ -986,11 +987,11 @@ msgstr "Desaktibatu kutxa hau ez baduzu widget honetan erakutsi/ezkutatu aukera 
 
 #: ../../facetednavigation/profiles.zcml:43
 msgid "Uninstall EEA Faceted Navigation"
-msgstr ""
+msgstr "EEA Faceted Navigation kendu"
 
 #: ../../facetednavigation/profiles.zcml:43
 msgid "Uninstall to remove EEA Faceted Navigation support"
-msgstr ""
+msgstr "EEA Faceted Navigation kendu"
 
 #: ../../facetednavigation/widgets/interfaces.py:116
 msgid "Use the results counter for sorting"
@@ -1036,7 +1037,7 @@ msgstr "Widgeta aukeratutako erabiltzaileak bakarrik ikusiko du"
 
 #: ../../facetednavigation/widgets/text/interfaces.py:29
 msgid "Wildcard search"
-msgstr ""
+msgstr "Edozer bilatzea"
 
 #: ../../facetednavigation/widgets/date/widget.py:24
 msgid "Yesterday"
@@ -1044,7 +1045,7 @@ msgstr "Atzo"
 
 #: ../../facetednavigation/widgets/criteria/widget.pt:31
 msgid "[X]"
-msgstr ""
+msgstr "[X]"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:29
 msgid "all"
@@ -1074,4 +1075,4 @@ msgstr "Beheko filtro guztiak/edozein bat-etorri"
 
 #: ../../facetednavigation/widgets/autocomplete/widget.py:106
 msgid "solr"
-msgstr ""
+msgstr "solr"
