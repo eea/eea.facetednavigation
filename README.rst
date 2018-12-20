@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Feea%2Feea.facetednavigation.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Feea%2Feea.facetednavigation?ref=badge_shield)
+
 ======================
 EEA Faceted Navigation
 ======================
@@ -262,3 +264,7 @@ EEA_ - European Environment Agency (EU)
 
 .. _EEA: https://www.eea.europa.eu/
 .. _`EEA Web Systems Training`: http://www.youtube.com/user/eeacms/videos?view=1
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Feea%2Feea.facetednavigation.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Feea%2Feea.facetednavigation?ref=badge_large)
