@@ -8,154 +8,6 @@ pipeline {
 
   stages {
 
-    stage('Code') {
-      steps {
-        parallel(
-
-          "SonarQube analysis": {
-   	    node(label: 'swarm'){
-  	      script{
-	        if (env.BRANCH_NAME == "develop" || env.BRANCH_NAME == "master") {
-	  	   checkout scm
-		   def scannerHome = tool 'SonarQubeScanner';
-		   def nodeJS = tool 'NodeJS11';
-		   withSonarQubeEnv('Sonarqube') {
-		      sh "${scannerHome}/bin/sonar-scanner -Dsonar.nodejs.executable=${nodeJS}/bin/node -Dsonar.sources=./eea -Dsonar.projectKey=$GIT_NAME-$BRANCH_NAME -Dsonar.projectVersion=$BRANCH_NAME-$BUILD_NUMBER"
-	           }
-                }
-              }
- 	    }
-	  },
-	
-          "ZPT Lint": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-zptlint" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:4 zptlint'''
-            }
-          },
-
-          "JS Lint": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/jslint4java'''
-            }
-          },
-
-          "PyFlakes": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-pyflakes" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/pyflakes'''
-            }
-          },
-
-          "i18n": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name=$BUILD_TAG-i18n -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/i18ndude'''
-            }
-          }
-        )
-      }
-    }
-
-    stage('Tests') {
-      steps {
-        parallel(
-
-          "WWW": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-www" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/www-devel /debug.sh bin/test -v -vv -s $GIT_NAME'''
-            }
-          },
-
-          "KGS": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-kgs" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/kgs-devel /debug.sh bin/test --test-path /plone/instance/src/$GIT_NAME -v -vv -s $GIT_NAME'''
-            }
-          },
-
-          "Plone4": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-plone4" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:4 -v -vv -s $GIT_NAME'''
-            }
-          },
-
-          "Plone5": {
-            node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-plone5" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:5 -v -vv -s $GIT_NAME'''
-            }
-          }
-        )
-      }
-    }
-
-    stage('Functional tests') {
-       steps {
-         parallel(
-           "WWW": {
-             node(label: 'docker') {
-               script {
-                 try {
-                   checkout scm
-                   sh '''docker run -d -e ADDONS=$GIT_NAME -e DEVELOP=src/$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" --name=$BUILD_TAG-ft-www eeacms/www-devel /debug.sh bin/instance fg'''
-                   sh '''timeout 600  wget --retry-connrefused --tries=60 --waitretry=10 -q http://$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-www):8080/'''
-                   sh '''casperjs test $FTEST_DIR/eea/*.js --url=$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-www):8080 --xunit=ftestsreport.xml'''
-                 } catch (err) {
-                  sh '''docker logs --tail=100 $BUILD_TAG-ft-www'''
-                  throw err
-                 } finally {
-                   sh '''docker stop $BUILD_TAG-ft-www'''
-                   sh '''docker rm -v $BUILD_TAG-ft-www'''
-                 }
-                 archiveArtifacts '*.png'
-                 junit 'ftestsreport.xml'
-              }
-            }
-           },
-
-           "KGS": {
-             node(label: 'docker') {
-               script {
-                 try {
-                   checkout scm
-                   sh '''docker run -d -e ADDONS=$GIT_NAME -e DEVELOP=src/$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" --name=$BUILD_TAG-ft-kgs eeacms/kgs-devel /debug.sh bin/instance fg'''
-                   sh '''timeout 600  wget --retry-connrefused --tries=60 --waitretry=10 -q http://$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-kgs):8080/'''
-                   sh '''casperjs test $FTEST_DIR/kgs/*.js --url=$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-kgs):8080 --xunit=ftestsreport.xml'''
-                 } catch (err) {
-                  sh '''docker logs --tail=100 $BUILD_TAG-ft-kgs'''
-                  throw err
-                 } finally {
-                   sh '''docker stop $BUILD_TAG-ft-kgs'''
-                   sh '''docker rm -v $BUILD_TAG-ft-kgs'''
-                 }
-                archiveArtifacts '*.png'
-                junit 'ftestsreport.xml'
-              }
-             }
-           },
-
-           "Plone4": {
-             node(label: 'docker') {
-               script {
-                 try {
-                   checkout scm
-                   sh '''docker run -d -e ADDONS=$GIT_NAME -e DEVELOP=src/$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" --name=$BUILD_TAG-ft-plone4 eeacms/plone-test:4'''
-                   sh '''timeout 600  wget --retry-connrefused --tries=60 --waitretry=10 -q http://$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-plone4):8080/'''
-                   sh '''casperjs test $FTEST_DIR/plone4/*.js --url=$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-plone4):8080 --xunit=ftestsreport.xml'''
-                 } catch (err) {
-                  sh '''docker logs --tail=100 $BUILD_TAG-ft-plone4'''
-                  throw err
-                 } finally {
-                   sh '''docker stop $BUILD_TAG-ft-plone4'''
-                   sh '''docker rm -v $BUILD_TAG-ft-plone4'''
-                 }
-                }
-                archiveArtifacts '*.png'
-                junit 'ftestsreport.xml'
-               }
-
-             }
-
-           )
-       }
-    }
-
     stage('Cosmetics') {
       steps {
         parallel(
@@ -209,6 +61,184 @@ pipeline {
           }
 
         )
+      }
+    }
+
+    stage('Code') {
+      steps {
+        parallel(
+
+          "ZPT Lint": {
+            node(label: 'docker') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-zptlint" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:4 zptlint'''
+            }
+          },
+
+          "JS Lint": {
+            node(label: 'docker') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/jslint4java'''
+            }
+          },
+
+          "PyFlakes": {
+            node(label: 'docker') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-pyflakes" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/pyflakes'''
+            }
+          },
+
+          "i18n": {
+            node(label: 'docker') {
+              sh '''docker run -i --rm --name=$BUILD_TAG-i18n -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/i18ndude'''
+            }
+          }
+        )
+      }
+    }
+
+    stage('Tests') {
+      steps {
+        parallel(
+
+          "WWW": {
+            node(label: 'docker') {
+              script {
+                try {
+                  sh '''docker run -i --name="$BUILD_TAG-www" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/www-devel /debug.sh coverage'''
+                  sh '''mkdir -p xunit-reports; docker cp $BUILD_TAG-www:/plone/instance/parts/xmltestreport/testreports/. xunit-reports/'''
+                  stash name: "xunit-reports", includes: "xunit-reports/*.xml"
+                  sh '''mkdir -p xunit-coverage; docker cp $BUILD_TAG-www:/plone/instance/src/$GIT_NAME/coverage.xml xunit-coverage/coverage.xml'''
+                  stash name: "xunit-coverage", includes: "xunit-coverage/*.xml"
+                } finally {
+                  sh '''docker rm -v $BUILD_TAG-www'''
+                }
+                junit 'xunit-reports/*.xml'
+              }
+            }
+          },
+
+
+          "KGS": {
+            node(label: 'docker') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-kgs" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/kgs-devel /debug.sh bin/test --test-path /plone/instance/src/$GIT_NAME -v -vv -s $GIT_NAME'''
+            }
+          },
+
+          "Plone4": {
+            node(label: 'docker') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-plone4" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:4 -v -vv -s $GIT_NAME'''
+            }
+          },
+
+          "Plone5": {
+            node(label: 'docker') {
+              sh '''docker run -i --rm --name="$BUILD_TAG-plone5" -e GIT_BRANCH="$BRANCH_NAME" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/plone-test:5 -v -vv -s $GIT_NAME'''
+            }
+          }
+        )
+      }
+    }
+
+    stage('Functional tests') {
+       steps {
+         parallel(
+          "WWW": {
+            node(label: 'docker') {
+              script {
+                try {
+                  checkout scm
+                  sh '''mkdir -p xunit-functional'''
+                  sh '''docker run -d -e ADDONS=$GIT_NAME -e DEVELOP=src/$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" --name=$BUILD_TAG-ft-www eeacms/www-devel /debug.sh bin/instance fg'''
+                  sh '''timeout 600  wget --retry-connrefused --tries=60 --waitretry=10 -q http://$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-www):8080/'''
+                  sh '''casperjs test $FTEST_DIR/eea/*.js --url=$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-www):8080 --xunit=xunit-functional/ftestsreport.xml'''
+                  stash name: "xunit-functional", includes: "xunit-functional/*.xml"
+                } catch (err) {
+                  sh '''docker logs --tail=100 $BUILD_TAG-ft-www'''
+                  throw err
+                } finally {
+                  sh '''docker stop $BUILD_TAG-ft-www'''
+                  sh '''docker rm -v $BUILD_TAG-ft-www'''
+                }
+                archiveArtifacts 'screenshot_eea.png'
+                junit 'xunit-functional/ftestsreport.xml'
+              }
+            }
+          },
+
+          "KGS": {
+            node(label: 'docker') {
+              script {
+                try {
+                  checkout scm
+                  sh '''docker run -d -e ADDONS=$GIT_NAME -e DEVELOP=src/$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" --name=$BUILD_TAG-ft-kgs eeacms/kgs-devel /debug.sh bin/instance fg'''
+                  sh '''timeout 600  wget --retry-connrefused --tries=60 --waitretry=10 -q http://$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-kgs):8080/'''
+                  sh '''casperjs test $FTEST_DIR/kgs/*.js --url=$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-kgs):8080 --xunit=ftestsreport.xml'''
+                } catch (err) {
+                sh '''docker logs --tail=100 $BUILD_TAG-ft-kgs'''
+                throw err
+                } finally {
+                  sh '''docker stop $BUILD_TAG-ft-kgs'''
+                  sh '''docker rm -v $BUILD_TAG-ft-kgs'''
+                }
+              archiveArtifacts '*.png'
+              junit 'ftestsreport.xml'
+            }
+            }
+          },
+
+          "Plone4": {
+            node(label: 'docker') {
+              script {
+                try {
+                  checkout scm
+                  sh '''docker run -d -e ADDONS=$GIT_NAME -e DEVELOP=src/$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" --name=$BUILD_TAG-ft-plone4 eeacms/plone-test:4'''
+                  sh '''timeout 600  wget --retry-connrefused --tries=60 --waitretry=10 -q http://$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-plone4):8080/'''
+                  sh '''casperjs test $FTEST_DIR/plone4/*.js --url=$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-plone4):8080 --xunit=ftestsreport.xml'''
+                } catch (err) {
+                sh '''docker logs --tail=100 $BUILD_TAG-ft-plone4'''
+                throw err
+                } finally {
+                  sh '''docker stop $BUILD_TAG-ft-plone4'''
+                  sh '''docker rm -v $BUILD_TAG-ft-plone4'''
+                }
+              }
+              archiveArtifacts '*.png'
+              junit 'ftestsreport.xml'
+              }
+
+            }
+
+          )
+       }
+    }
+
+    stage('Report') {
+      when {
+        allOf {
+          environment name: 'CHANGE_ID', value: ''
+        }
+      }
+      steps {
+        node(label: 'docker') {
+          script{
+            checkout scm
+            dir("xunit-reports") {
+              unstash "xunit-reports"
+            }
+            dir('xunit-coverage') {
+              unstash "xunit-coverage"
+            }
+            dir('xunit-functional') {
+              unstash "xunit-functional"
+            }
+            def scannerHome = tool 'SonarQubeScanner';
+            def nodeJS = tool 'NodeJS11';
+            withSonarQubeEnv('Sonarqube') {
+                sh '''sed -i "s|/plone/instance/src/$GIT_NAME|$(pwd)|g" xunit-coverage/coverage.xml'''
+                sh '''mv xunit-functional/*.xml xunit-reports/'''
+                sh "export PATH=$PATH:${scannerHome}/bin:${nodeJS}/bin; sonar-scanner -Dsonar.python.xunit.skipDetails=true -Dsonar.python.xunit.reportPath=xunit-reports/*.xml -Dsonar.python.coverage.reportPath=xunit-coverage/coverage.xml -Dsonar.sources=./eea -Dsonar.projectKey=$GIT_NAME-$BRANCH_NAME -Dsonar.projectVersion=$BRANCH_NAME-$BUILD_NUMBER"
+            }
+          }
+        }
       }
     }
 
