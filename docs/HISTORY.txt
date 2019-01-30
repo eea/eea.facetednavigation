@@ -1,6 +1,11 @@
 Changelog
 =========
 
+11.7 - (2019-01-30)
+---------------------
+* Jenkins: Add sonarqube step
+  [avoinea refs #101552]
+
 11.6 - (2018-12-11)
 ---------------------
 * Complete basque translation
