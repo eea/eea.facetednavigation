@@ -1,7 +1,7 @@
 Changelog
 =========
 
-11.7-dev0 - (unreleased)
+11.7 - (2019-01-30)
 ---------------------
 * Jenkins: Add sonarqube step
   [avoinea refs #101552]
