@@ -159,7 +159,7 @@ pipeline {
                   sh '''docker stop $BUILD_TAG-ft-www'''
                   sh '''docker rm -v $BUILD_TAG-ft-www'''
                 }
-                archiveArtifacts 'screenshot_eea.png'
+                archiveArtifacts '*.png'
                 junit 'xunit-functional/ftestsreport.xml'
               }
             }
