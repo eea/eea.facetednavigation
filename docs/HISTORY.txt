@@ -3,6 +3,8 @@ Changelog
 
 11.8-dev0 - (unreleased)
 ---------------------
+* Change : display message 'No results were found.' when no results found
+  [gbastien]
 
 11.7 - (2019-01-30)
 ---------------------
