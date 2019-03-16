@@ -201,6 +201,15 @@
   color: #95B229;
 }
 
+.eea-preview-items .photoAlbumEntryWrapper {
+  display: block;
+}
+
+.eea-preview-items .photoAlbumEntryTitle {
+  display: block;
+  padding: 0.5em;
+}
+
 .eea-preview-items:after {
   content: '.';
   display: block;

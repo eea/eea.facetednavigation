@@ -22,6 +22,10 @@
               <tal:preview tal:condition="exists:doc/@@faceted-preview-item" tal:replace="structure doc/@@faceted-preview-item" />
             </tal:entry>
           </tal:entries>
+          <span tal:condition="not: batch/sequence_length"
+                class="table_faceted_no_results"
+                i18n:domain="plone"
+                i18n:translate="description_no_results_found">No results were found.</span>
         </div>
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />
