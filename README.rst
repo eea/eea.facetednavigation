@@ -167,21 +167,24 @@ You can extend faceted navigation functionality by installing the following add-
 
 * Relations
 
-  - `eea.relations <https://github.com/eea/eea.relations>`_
+  - `eea.relations <https://pypi.org/project/eea.relations>`_ (Plone 4)
 
 * Extensions
 
-  - `eea.faceted.tool <https://github.com/eea/eea.faceted.tool>`_
-  - `eea.faceted.inheritance <https://github.com/eea/eea.faceted.inheritance>`_
+  - `eea.faceted.inheritance <https://pypi.org/project/eea.faceted.inheritance>`_
+  - `eea.facetednavigationtaxonomiccheckbox <https://pypi.org/project/eea.facetednavigationtaxonomiccheckbox>`_
   - `collective.eeafaceted.collectionwidget <https://pypi.org/project/collective.eeafaceted.collectionwidget>`_
   - `collective.eeafaceted.layoutwidget <https://pypi.org/project/collective.eeafaceted.layoutwidget>`_
   - `collective.eeafaceted.batchactions <https://pypi.org/project/collective.eeafaceted.batchactions>`_
   - `collective.eeafaceted.dashboard <https://pypi.org/project/collective.eeafaceted.dashboard>`_
   - `collective.eeafaceted.z3ctable <https://pypi.org/project/collective.eeafaceted.z3ctable>`_
+  - `collective.faceted.datewidget <https://pypi.org/project/collective.faceted.datewidget/>`_
+  - `collective.geo.faceted <https://pypi.org/project/collective.geo.faceted/>`_
+  - `collective.contact.facetednav <https://pypi.org/project/collective.contact.facetednav>`_
 
 * Themes
 
-  - `eea.faceted.blue <https://pypi.org/project/eea.faceted.blue/>`_
+  - `eea.faceted.blue <https://pypi.org/project/eea.faceted.blue/>`_ (Plone 4)
 
 Diazo
 =====
