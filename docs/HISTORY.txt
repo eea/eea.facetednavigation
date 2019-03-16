@@ -5,6 +5,8 @@ Changelog
 ---------------------
 * Change : display message 'No results were found.' when no results found
   [gbastien]
+* Change: Update README and Plone 4/5 sample buildouts
+  [avoinea]
 
 11.7 - (2019-01-30)
 ---------------------
