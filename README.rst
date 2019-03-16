@@ -88,10 +88,20 @@ Install
 =======
 
 * Add eea.facetednavigation to your eggs section in your buildout and
-  re-run buildout. You can download a sample buildout from:
+  re-run buildout::
+
+    [buildout]
+    eggs +=
+      eea.facetednavigation
+
+* You can download a sample buildout from:
 
   - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
   - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone5
+
+* Or via docker::
+
+    $ docker run --rm -p 8080:8080 -e ADDONS="eea.facetednavigation" plone
 
 * Install *EEA Faceted Navigation* within Site Setup > Add-ons
 
@@ -139,40 +149,39 @@ You can add a new autocomplete source by registering a IAutocompleteSuggest brow
 
 Extra
 =====
-You can extend faceted navigation functionality by installing the following
-addons:
+You can extend faceted navigation functionality by installing the following add-ons:
 
 * Customized vocabularies
 
-  - Products.ATVocabularyManager
+  - `collective.taxonomy <https://github.com/collective/collective.taxonomy>`_
+  - `Products.ATVocabularyManager <https://pypi.org/project/Products.ATVocabularyManager>`_ (Plone 4)
 
 * Multilingual/translation solution
 
-  - Products.LinguaPlone
-
-* Syndication
-
-  - Products.basesyndication
-  - Products.fatsyndication
-  - bda.feed
+  - `plone.app.multilingual <https://pypi.org/project/plone.app.multilingual/>`_
+  - `Products.LinguaPlone <https://pypi.org/project/Products.LinguaPlone/>`_ (Plone 3 & 4)
 
 * Cache (memcache)
 
-  - plone.memoize
-  - eea.cache
+  - `eea.cache <https://github.com/eea/eea.cache>`_
 
 * Relations
 
-  - eea.relations
+  - `eea.relations <https://github.com/eea/eea.relations>`_
 
-* Faceted extensions
+* Extensions
 
-  - eea.faceted.tool
-  - eea.faceted.inheritance
+  - `eea.faceted.tool <https://github.com/eea/eea.faceted.tool>`_
+  - `eea.faceted.inheritance <https://github.com/eea/eea.faceted.inheritance>`_
+  - `collective.eeafaceted.collectionwidget <https://pypi.org/project/collective.eeafaceted.collectionwidget>`_
+  - `collective.eeafaceted.layoutwidget <https://pypi.org/project/collective.eeafaceted.layoutwidget>`_
+  - `collective.eeafaceted.batchactions <https://pypi.org/project/collective.eeafaceted.batchactions>`_
+  - `collective.eeafaceted.dashboard <https://pypi.org/project/collective.eeafaceted.dashboard>`_
+  - `collective.eeafaceted.z3ctable <https://pypi.org/project/collective.eeafaceted.z3ctable>`_
 
-* Faceted themes
+* Themes
 
-  - eea.faceted.blue
+  - `eea.faceted.blue <https://pypi.org/project/eea.faceted.blue/>`_
 
 Diazo
 =====
@@ -194,17 +203,17 @@ Live demo
 Buildout installation
 =====================
 
-- `Plone 2 and 3 <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone3>`_
-- `Plone 4+ <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone4>`_
-- `Plone 5+ <https://github.com/collective/eea.facetednavigation/tree/master/buildouts/plone5>`_
+- `Plone 2 and 3 <https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone3>`_
+- `Plone 4+ <https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4>`_
+- `Plone 5+ <https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone5>`_
 
 
 Source code
 ===========
 
-- `Plone 2 and 3 on github <https://github.com/collective/eea.facetednavigation/tree/plone3>`_
-- `Plone 4+ on github <https://github.com/collective/eea.facetednavigation>`_
-- `Plone 5+ on github <https://github.com/collective/eea.facetednavigation>`_
+- `Plone 2 and 3 on github <https://github.com/eea/eea.facetednavigation/tree/plone3>`_
+- `Plone 4+ on github <https://github.com/eea/eea.facetednavigation>`_
+- `Plone 5+ on github <https://github.com/eea/eea.facetednavigation>`_
 
 
 Eggs repository
