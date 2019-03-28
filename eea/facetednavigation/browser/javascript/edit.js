@@ -1,5 +1,5 @@
 var FacetedEdit = {version: '2.0'};
-FacetedEdit.loading = '<div class="faceted_loading"><img src="++resource++faceted_images/ajax-loader.gif" /></div>';
+FacetedEdit.loading = '<div class="faceted_loading"></div>';
 
 // Widgets
 FacetedEdit.Widgets = {};
