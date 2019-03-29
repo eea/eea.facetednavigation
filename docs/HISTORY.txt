@@ -3,6 +3,8 @@ Changelog
 
 11.9-dev0 - (unreleased)
 ---------------------
+* Change: Update theme colors to fit Plone 5 default theme colors
+  [avoinea]
 * Bug fix: Remove double loading spinner within edit mode
   [avoinea]
 

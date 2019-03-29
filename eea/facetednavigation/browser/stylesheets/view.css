@@ -139,7 +139,7 @@
 */
 #faceted-form .ui-accordion .ui-state-default {
   border: none;
-  background: #95b229 none;
+  background: #007bb1 none;
   margin: 0 0.5em;
 }
 
@@ -150,18 +150,18 @@
 
 #faceted-form .ui-accordion .ui-state-default a:hover {
   border: none;
-  color: #e9efcd;
+  color: #007bb1;
 }
 
 /* Active state
 */
 #faceted-form .ui-accordion .ui-state-active {
   border: none;
-  background: #e9efcd none;
+  background: #007bb1 none;
   margin: 0 0.5em;
 }
 
-#faceted-form .ui-accordion .ui-state-active a{
+#faceted-form .ui-accordion .ui-state-active a {
   color: #8e004d;
   font-weight: bold;
 }
@@ -173,7 +173,7 @@
 
 /* Lock - Unlock
 */
-.faceted-widget-locked legend{
+.faceted-widget-locked legend {
   color: #CCC;
 }
 
@@ -198,7 +198,7 @@
 
 #faceted-form .faceted-sections-buttons a {
   display: none;
-  color: #95B229;
+  color: #007bb1;
 }
 
 .eea-preview-items .photoAlbumEntryWrapper {
@@ -220,4 +220,11 @@
 
 .icon-faceted_settings:before {
   content: '\e812';
+}
+
+.table_faceted_no_results {
+  display: block;
+  text-align: center;
+  margin-top: 2em;
+  color: #b2b2b2;
 }

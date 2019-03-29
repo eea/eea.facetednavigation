@@ -99,40 +99,39 @@ table.listing {
 
 .ui-widget-header {
   margin-bottom: 1em;
-  margin-right: -0.5em;
-  margin-left: -0.5em;
-  margin-top: 5px;
   text-align: left;
-  padding-left: 0.5em;
-  padding-bottom: 0.3em;
-  background: #CDE2A7;
+  padding: 1em;
+  font-size: 120%;
+  font-weight: lighter;
+  background: #9acee6;
   border: none;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#CDE2A7));
-  background-image: -webkit-linear-gradient(center top , #FFFFFF, #CDE2A7);
-  background-image: -moz-linear-gradient(center top , #FFFFFF, #CDE2A7);
-  background-image: -ms-linear-gradient(center top , #FFFFFF, #CDE2A7);
-  background-image: -o-linear-gradient(center top , #FFFFFF, #CDE2A7);
+}
+
+.ui-draggable .ui-dialog-titlebar {
+  background: transparent;
+  border-bottom: 1px dotted #E6E6E6;
+  border-radius: initial;
 }
 
 .faceted-widget .ui-widget-header {
   margin-top: -0.9em;
   margin-left: -0.9em;
   margin-right: -0.9em;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
 }
 
 .faceted-section-tabs ul.formTabs,
 .faceted-widget-edit ul.formTabs {
-  background-color: #ddd;
-  border: 0.3em solid #ddd;
+  background-color: #E6E6E6;
+  border: 0.3em solid #E6E6E6;
   display: block;
   border-style: solid solid none solid;
   margin-left: 0;
   border-top-right-radius: 0.5em;
   border-top-left-radius: 0.5em;
-  -webkit-border-top-right-radius: 0.5em;
-  -webkit-border-top-left-radius: 0.5em;
-  -moz-border-radius-topleft: 0.5em;
-  -moz-border-radius-topright: 0.5em;
+  font-size: 125%;
+  font-weight: lighter
 }
 
 .faceted-section-tabs li.formTab,
@@ -143,7 +142,6 @@ table.listing {
 
 .faceted-section-tabs li.formTab a,
 .faceted-widget-edit li.formTab a {
-    /* this isn't supported by all browsers, so we keep it in a separate rule */
     display: inline-block;
 }
 
@@ -154,10 +152,6 @@ table.listing {
     text-decoration: none;
     border: none;
     margin: 0 ;
-}
-.faceted-section-tabs li.formTab a.selected,
-.faceted-widget-edit li.formTab a.current {
-    font-weight: bold;
 }
 
 .faceted-section-tabs li.formTab a.selected,
@@ -174,11 +168,6 @@ table.listing {
 
 .faceted-widget-hidden div.ui-widget-header {
   background: #E6E6E6 ! important;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#E6E6E6)) ! important;
-  background-image: -webkit-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
-  background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
-  background-image: -ms-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
-  background-image: -o-linear-gradient(center top , #FFFFFF, #E6E6E6) ! important;
 }
 
 .faceted-widget-hidden fieldset {
@@ -217,54 +206,87 @@ table.listing {
 .faceted-empty-column {
   font-size: 200%;
   opacity: 0.8;
-  color: #CDE2A7;
+  color: #9acee6;
   text-align: center;
   padding-bottom: 0.5em;
 }
 
 /* Top
 */
-#faceted-top-column {
-  background: transparent url(../../++resource++faceted_images/top-widgets.png) no-repeat;
-  background-position: center top;
-  border-width: 0px 1px 1px 1px;
-  padding-left: 2px;
+#faceted-top-column::before {
+  content: "Top widgets";
+  text-align: center;
+  width: 100%;
+  color: #9acee6;
+  float: right;
+  font-weight: lighter;
+  margin-top: 1em;
+  height: 0;
 }
 
 /* Left
 */
-#faceted-left-column {
-  background: transparent url(../../++resource++faceted_images/left-widgets.png) no-repeat;
-  background-position: center top;
+#faceted-left-column::before {
+  content: "Left widgets";
+  text-align: center;
+  width: 100%;
+  color: #9acee6;
+  float: right;
+  font-weight: lighter;
+  margin-top: 1em;
+  height: 0;
 }
 
 /* Right
 */
-#faceted-right-column {
-  background: transparent url(../../++resource++faceted_images/right-widgets.png) no-repeat;
-  background-position: center top;
+#faceted-right-column::before {
+  content: "Right widgets";
+  text-align: center;
+  width: 100%;
+  color: #9acee6;
+  float: right;
+  font-weight: lighter;
+  margin-top: 1em;
+  height: 0;
 }
 
 /* Center top
 */
-#faceted-center-column {
-  background: transparent url(../../++resource++faceted_images/center-widgets.png) no-repeat;
-  background-position: center top;
+#faceted-center-column::before {
+  content: "Center top";
+  text-align: center;
+  width: 100%;
+  color: #9acee6;
+  float: right;
+  font-weight: lighter;
+  margin-top: 1em;
+  height: 0;
 }
 
 /* Center bottom
 */
-#faceted-bottomcenter-column {
-  background: transparent url(../../++resource++faceted_images/bottomcenter-widgets.png) no-repeat;
-  background-position: center top;
+#faceted-bottomcenter-column::before {
+  content: "Center bottom";
+  text-align: center;
+  width: 100%;
+  color: #9acee6;
+  float: right;
+  font-weight: lighter;
+  margin-top: 1em;
+  height: 0;
 }
 
 /* Bottom
 */
-#faceted-bottom-column {
-  background: transparent url(../../++resource++faceted_images/bottom-widgets.png) no-repeat;
-  background-position: center top;
-  clear: both;
+#faceted-bottom-column::before {
+  content: "Bottom widgets";
+  text-align: center;
+  width: 100%;
+  color: #9acee6;
+  float: right;
+  font-weight: lighter;
+  margin-top: 1em;
+  height: 0;
 }
 
 /* Sections
@@ -317,17 +339,13 @@ table.listing {
 }
 
 .faceted-add-button span {
-  border-color: #95b229;
+  border-color: #007bb1;
   border-style: solid;
-  border-width: 1px 2px 2px 1px;
+  border-width: 1px;
 }
 
 #main-container .faceted-add-button span {
   padding: 0.6em;
-}
-
-.faceted-add-button .ui-icon {
-  background-image: url(../../++resource++faceted_images/ui-icons_222222_256x240-green.png) ! important;
 }
 
 /* Errors
@@ -348,4 +366,30 @@ table.listing {
 
 .ui-dialog .ui-dialog-titlebar-close {
   right: 1em;
+  background: transparent;
+  border: none;
+}
+
+#faceted-portal-status-message {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background: #E6E6E6;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  text-align: center !important;
+  width: 100% !important;
+  border-radius: 0;
+  font-family: sans-serif;
+  font-size: 80%;
+  padding: 0.5em;
+}
+
+#faceted-portal-status-message .ui-icon {
+  margin: 0 !important;
+}
+
+#faceted-portal-status-message dt {
+  display: none;
 }
