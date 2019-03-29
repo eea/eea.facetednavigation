@@ -1,6 +1,11 @@
 Changelog
 =========
 
+12.0.dev0 - (unreleased)
+------------------------
+* Feature: Added MultiSelect Faceted Widget
+  [avoinea]
+
 11.9 - (2019-03-29)
 ---------------------
 * Change: Update theme colors to fit Plone 5 default theme colors
