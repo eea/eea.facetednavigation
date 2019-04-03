@@ -133,27 +133,17 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   reset: function(){
-    this.select.val("");
+    this.select.val(null).trigger("change");;
     this.selected = [];
   },
 
   synchronize: function(){
     var value = Faceted.Query[this.wid];
-    if(!value){
-      this.reset();
-      return;
+    if(value){
+      this.select.val(value).trigger("change");
+      this.selected = this.widget.find('option:selected');
     }
 
-    var context = this;
-    jQuery.each(value, function(){
-      var selected = context.widget.find('option:selected');
-      if(!selected.length){
-        context.reset();
-      }else{
-        context.selected = selected;
-        context.select.val(value);
-      }
-    });
     var operator = Faceted.Query[this.wid + '-operator'];
     if(this.operatorVisible && operator){
       operator = operator[0];
@@ -269,6 +259,9 @@ Faceted.MultiSelectWidget.prototype = {
     var current_val = select.val();
     jQuery(options).each(function(){
       var option = jQuery(this);
+      if(!option.attr('title')){
+        return;
+      }
       option.removeClass('faceted-select-item-disabled');
       option.attr('disabled', false);
       var key = option.val();
