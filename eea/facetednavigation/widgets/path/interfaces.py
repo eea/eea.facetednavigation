@@ -41,7 +41,7 @@ class IPathSchema(ISchema):
         title=_(u'Navigation tree theme'),
         description=_(u'Theme to be used with this widget'),
         vocabulary=u'eea.faceted.vocabularies.JsTreeThemes',
-        default=u'green',
+        default=u'apple',
         required=False
     )
 

@@ -7,7 +7,7 @@
 }
 
 .faceted_letter {
-  color: #95B229;
+  color: #007bb1;
   font-weight: bold;
   font-size: 1.2em;
   cursor: pointer;
@@ -17,11 +17,9 @@
 
 .faceted_letter:hover{
   color: orange;
-  background-color: #ccc;
 }
 
 .faceted_letter_selected {
-  background-color: #ccc;
   color: orange;
   font-size: 1.7em;
 }

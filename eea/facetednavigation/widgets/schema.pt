@@ -27,7 +27,6 @@
           <div class="fieldErrorBox" tal:condition="widget/error" tal:content="structure widget/error/render" />
           <span class="formHelp" tal:condition="widget/label" tal:content="widget/field/description">Widget description</span>
           <tal:widget tal:replace="structure widget/render">Widget</tal:widget>
-          <span class="formHelp" tal:condition="not:widget/label" tal:content="widget/field/description">Widget description</span>
         </div>
       </tal:widget>
     </div>

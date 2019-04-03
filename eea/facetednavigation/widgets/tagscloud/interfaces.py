@@ -70,7 +70,7 @@ class ITagsCloudSchema(ISchema):
     colormin = schema.TextLine(
         title=_(u'Minimum color'),
         description=_(u'Tagscloud minimum color'),
-        default=u"A1BE7E",
+        default=u"9acee6",
         required=False
     )
     colormin._type = (unicode, str)
@@ -78,7 +78,7 @@ class ITagsCloudSchema(ISchema):
     colormax = schema.TextLine(
         title=_(u'Maximum color'),
         description=_(u'Tagscloud max color'),
-        default=u"95B229",
+        default=u"007bb3",
         required=False
     )
     colormax._type = (unicode, str)

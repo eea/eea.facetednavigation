@@ -1,6 +1,13 @@
 Changelog
 =========
 
+11.9 - (2019-03-29)
+---------------------
+* Change: Update theme colors to fit Plone 5 default theme colors
+  [avoinea]
+* Bug fix: Remove double loading spinner within edit mode
+  [avoinea]
+
 11.8 - (2019-03-05)
 ---------------------
 * Change : display message 'No results were found.' when no results found
