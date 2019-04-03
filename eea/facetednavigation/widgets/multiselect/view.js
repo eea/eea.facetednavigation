@@ -133,7 +133,7 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   reset: function(){
-    this.select.val(null).trigger("change");;
+    this.select.val(null).trigger("change");
     this.selected = [];
   },
 
