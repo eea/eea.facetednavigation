@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2019-04-04 17:43+0000\n"
+"POT-Creation-Date: 2019-04-04 19:03+0000\n"
 "PO-Revision-Date: 2011-05-23 13:46+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgid "After query filters"
 msgstr "Filter nach Abfrage"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
-#: ../../facetednavigation/widgets/radio/widget.pt:33
+#: ../../facetednavigation/widgets/radio/widget.pt:34
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "Alle"
@@ -559,6 +559,11 @@ msgstr ""
 msgid "Label (start range)"
 msgstr ""
 
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "Less"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:31
 msgid "Less filters"
@@ -610,6 +615,11 @@ msgstr "Minimum font-size (px)"
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:93
 msgid "Minimum size"
 msgstr "Minimale Größe"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "More"
+msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:30
@@ -1121,7 +1131,7 @@ msgstr "Gestern"
 msgid "[X]"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:32
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr ""
@@ -1131,7 +1141,7 @@ msgstr ""
 msgid "all items"
 msgstr "Alle Einträge"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:32
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr ""
@@ -1141,12 +1151,12 @@ msgstr ""
 msgid "in current results"
 msgstr "in aktuellen Ergebnissen"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
 #: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2019-04-04 17:43+0000\n"
+"POT-Creation-Date: 2019-04-04 19:03+0000\n"
 "PO-Revision-Date: 2017-11-08 15:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -83,7 +83,7 @@ msgid "After query filters"
 msgstr "位於查詢條件之後"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
-#: ../../facetednavigation/widgets/radio/widget.pt:33
+#: ../../facetednavigation/widgets/radio/widget.pt:34
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "全選"
@@ -565,6 +565,11 @@ msgstr ""
 msgid "Label (start range)"
 msgstr ""
 
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "Less"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:31
 msgid "Less filters"
@@ -618,6 +623,11 @@ msgstr "字元最小尺寸 (px)"
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:93
 msgid "Minimum size"
 msgstr "最小尺寸"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "More"
+msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:30
@@ -1128,7 +1138,7 @@ msgstr "昨天"
 msgid "[X]"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:32
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr "全部"
@@ -1138,7 +1148,7 @@ msgstr "全部"
 msgid "all items"
 msgstr "所有項目"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:32
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr "任何"
@@ -1148,12 +1158,12 @@ msgstr "任何"
 msgid "in current results"
 msgstr "在現行結果裡"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
 #: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr "符合"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr "符合 Any/All 過濾條件"

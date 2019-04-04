@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-04 17:43+0000\n"
+"POT-Creation-Date: 2019-04-04 19:03+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -86,7 +86,7 @@ msgid "After query filters"
 msgstr "După filtre de interogare"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
-#: ../../facetednavigation/widgets/radio/widget.pt:33
+#: ../../facetednavigation/widgets/radio/widget.pt:34
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "Toate"
@@ -567,6 +567,11 @@ msgstr "Etichetă (de la)"
 msgid "Label (start range)"
 msgstr "Etichetă (de la)"
 
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "Less"
+msgstr "Mai puțin"
+
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:31
 msgid "Less filters"
@@ -620,6 +625,11 @@ msgstr "Mărime font minimă (px)"
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:93
 msgid "Minimum size"
 msgstr "Mărime minimă"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "More"
+msgstr "Mai mult"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:30
@@ -1129,7 +1139,7 @@ msgstr "Ieri"
 msgid "[X]"
 msgstr "[X]"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:32
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr "toate"
@@ -1139,7 +1149,7 @@ msgstr "toate"
 msgid "all items"
 msgstr "toate elementele"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:32
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr "oricare"
@@ -1149,12 +1159,12 @@ msgstr "oricare"
 msgid "in current results"
 msgstr "în rezultatele curente"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
 #: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr "conţine"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr "filtrează elementele care conţin toate sau oricare dintre filtrele de mai jos"
