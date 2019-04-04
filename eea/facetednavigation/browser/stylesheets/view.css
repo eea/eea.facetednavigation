@@ -228,3 +228,8 @@
   margin-top: 2em;
   color: #b2b2b2;
 }
+
+#content-core .faceted-sections-buttons a,
+.faceted-sections-buttons a {
+  border-bottom: none;
+}
