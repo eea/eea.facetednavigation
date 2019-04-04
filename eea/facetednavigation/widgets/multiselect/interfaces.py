@@ -89,6 +89,7 @@ class DisplaySchemata(FacetedSchemata):
     label = u'display'
     fields = field.Fields(IMultiSelectSchema).select(
         u'sortreversed',
+        u'placeholder'
     )
 
 

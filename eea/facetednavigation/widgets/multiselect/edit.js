@@ -6,9 +6,10 @@ FacetedEdit.MultiSelectWidget = function(wid){
   this.elements = jQuery('option', this.widget);
   this.select = jQuery('#' + this.wid);
   this.multiple = this.select.attr("multiple") ? true : false;
+  this.placeholder = this.widget.data('placeholder');
 
   this.select.select2({
-    placeholder: this.title,
+    placeholder: this.placeholder,
     allowClear: true
   });
 
