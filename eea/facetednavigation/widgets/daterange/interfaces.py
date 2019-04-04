@@ -47,28 +47,28 @@ class IDateRangeSchema(ISchema):
     )
 
     labelStart = schema.TextLine(
-        title=_(u"Start date label"),
+        title=_(u"Label (start date)"),
         description=_(u"Text to be displayed as start date input label"),
         required=False
     )
     labelStart._type = (str, unicode)
 
     labelEnd = schema.TextLine(
-        title=_(u"End date label"),
+        title=_(u"Label (end date)"),
         description=_(u"Text to be displayed as end date input label"),
         required=False
     )
     labelEnd._type = (str, unicode)
 
     placeholderStart = schema.TextLine(
-        title=_(u"Start date placeholder"),
+        title=_(u"Placeholder (start date)"),
         description=_(u"Text to be displayed as start date input placeholder"),
         required=False
     )
     placeholderStart._type = (str, unicode)
 
     placeholderEnd = schema.TextLine(
-        title=_(u"End date placeholder"),
+        title=_(u"Placeholder (end date)"),
         description=_(u"Text to be displayed as end date input placeholder"),
         required=False
     )
