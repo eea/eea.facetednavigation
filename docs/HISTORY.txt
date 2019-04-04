@@ -5,6 +5,8 @@ Changelog
 ------------------------
 * Feature: Added MultiSelect Faceted Widget
   [avoinea]
+* Feature: Add editable placeholder on facets with text inputs
+  [avoinea]
 
 11.9 - (2019-03-29)
 ---------------------

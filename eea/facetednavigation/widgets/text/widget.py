@@ -5,6 +5,7 @@ from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.text.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.text.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.text.interfaces import DisplaySchemata
 
 
 class Widget(AbstractWidget):
@@ -13,7 +14,7 @@ class Widget(AbstractWidget):
     widget_type = 'text'
     widget_label = _('Text field')
 
-    groups = (DefaultSchemata, LayoutSchemata)
+    groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
     index = ViewPageTemplateFile('widget.pt')
 
     def quotestring(self, string):
