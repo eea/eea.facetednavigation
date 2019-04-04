@@ -7,6 +7,8 @@ Changelog
   [avoinea]
 * Feature: Add editable placeholder on facets with text inputs
   [avoinea]
+* Bug fix: Fix Checkboxes/Radio widget More/Less i18n
+  [avoinea]
 
 11.9 - (2019-03-29)
 ---------------------

@@ -65,7 +65,9 @@ Faceted.CheckboxesWidget = function(wid){
   if(this.maxitems){
     this.fieldset.collapsible({
       maxitems: this.maxitems,
-      elements: 'li:not(.faceted-checkbox-item-zerocount)'
+      elements: 'li:not(.faceted-checkbox-item-zerocount)',
+      more: this.widget.data("more"),
+      less: this.widget.data("less")
     });
   }
 

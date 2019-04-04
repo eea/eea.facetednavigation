@@ -10,7 +10,9 @@ FacetedEdit.CheckboxesWidget = function(wid){
   this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
   if(this.maxitems){
     this.fieldset.collapsible({
-      maxitems: this.maxitems
+      maxitems: this.maxitems,
+      more: this.widget.data("more"),
+      less: this.widget.data("less")
     });
   }
 
