@@ -170,6 +170,24 @@
   </records>
 
 
+  <!-- multiselect widget -->
+  <records prefix="plone.resources/faceted-widgets-multiselect-view"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.multiselect.view.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.multiselect.view.js</value>
+  </records>
+
+  <records prefix="plone.resources/faceted-widgets-multiselect-edit"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++resource++eea.facetednavigation.widgets.multiselect.edit.css</element>
+    </value>
+    <value key="js">++resource++eea.facetednavigation.widgets.multiselect.edit.js</value>
+  </records>
+
+
   <!-- path widget -->
   <records prefix="plone.resources/faceted-widgets-path-tree"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
@@ -300,7 +318,6 @@
     <value key="js">++resource++eea.facetednavigation.widgets.select.edit.js</value>
   </records>
 
-
   <!-- sorting widget -->
   <records prefix="plone.resources/faceted-widgets-sorting-view"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
@@ -354,6 +371,7 @@
     <value key="js">++resource++eea.facetednavigation.widgets.tal.edit.js</value>
   </records>
 
+
   <!-- text widget -->
   <records prefix="plone.resources/faceted-widgets-text-view"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
@@ -402,6 +420,7 @@
       <element>faceted-widgets-daterange-view</element>
       <element>faceted-widgets-debug-view</element>
       <element>faceted-widgets-etag-view</element>
+      <element>faceted-widgets-multiselect-view</element>
       <element>faceted-widgets-path-tree</element>
       <element>faceted-widgets-path-view</element>
       <element>faceted-widgets-portlet-view</element>
@@ -435,6 +454,7 @@
       <element>faceted-widgets-daterange-edit</element>
       <element>faceted-widgets-debug-edit</element>
       <element>faceted-widgets-etag-edit</element>
+      <element>faceted-widgets-multiselect-edit</element>
       <element>faceted-widgets-path-tree</element>
       <element>faceted-widgets-path-edit</element>
       <element>faceted-widgets-portlet-edit</element>

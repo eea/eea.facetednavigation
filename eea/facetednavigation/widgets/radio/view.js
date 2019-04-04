@@ -56,7 +56,9 @@ Faceted.RadioWidget = function(wid){
   if(this.maxitems){
     this.fieldset.collapsible({
       maxitems: this.maxitems,
-      elements: 'li:not(.faceted-radio-item-zerocount)'
+      elements: 'li:not(.faceted-radio-item-zerocount)',
+      more: this.widget.data("more"),
+      less: this.widget.data("less")
     });
   }
 };

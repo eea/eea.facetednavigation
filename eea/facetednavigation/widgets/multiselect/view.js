@@ -1,15 +1,23 @@
-/* Checkboxes Widget
+/* Select Widget
 */
-Faceted.CheckboxesWidget = function(wid){
+Faceted.MultiSelectWidget = function(wid){
   var self = this;
   this.wid = wid;
-  this.widget = jQuery('#' + wid + '_widget');
+  this.widget = jQuery('#' + this.wid + '_widget');
   this.widget.show();
-  this.fieldset = jQuery('.widget-fieldset', this.widget);
-  this.title = jQuery('legend', this.widget).html();
-  this.elements = jQuery('form input[type=checkbox]', this.widget);
-  this.maxitems = parseInt(jQuery('span', this.widget).text(), 10);
+  this.title = this.widget.find('legend').html();
+  this.elements = this.widget.find('option');
+  this.select = jQuery('#' + this.wid);
+  this.multiple = this.select.attr("multiple") ? true: false;
+  this.placeholder = this.widget.data('placeholder');
+  this.selected = [];
 
+  this.select.select2({
+    placeholder: this.placeholder,
+    allowClear: true
+  });
+
+  // Faceted operator
   this.operatorElem = this.widget.find('.faceted-operator a');
   this.operatorVisible = this.operatorElem.length ? true: false;
 
@@ -29,8 +37,6 @@ Faceted.CheckboxesWidget = function(wid){
     this.operator = this.widget.data('operator');
   }
 
-  this.selected = [];
-
   // Faceted version
   this.version = '';
   var version = jQuery('#faceted-version');
@@ -38,62 +44,57 @@ Faceted.CheckboxesWidget = function(wid){
     this.version = version.text();
   }
 
+  // Handle change
   jQuery('form', this.widget).submit(function(){
     return false;
   });
 
-  // Handle checkbox click
-  this.elements.click(function(evt){
-    self.checkbox_click(this, evt);
+  var js_widget = this;
+  this.select.change(function(evt){
+    js_widget.select_change(this, evt);
   });
 
-  // Default values
-  var selected = this.widget.find('form input[type=checkbox]:checked');
-  if(selected.length){
-    this.selected = selected;
-    Faceted.Query[this.wid] = [];
-    selected.each(function(){
-      Faceted.Query[self.wid].push(jQuery(this).val());
-    });
+  // Default value
+  var value = this.select.val();
+  if(value){
+    this.selected = js_widget.widget.find('option:selected');
+    if(this.multiple) {
+      Faceted.Query[this.wid] = value;
+    } else {
+      Faceted.Query[this.wid] = [value];
+    }
   }
 
   if(this.operatorVisible){
     Faceted.Query[self.wid + '-operator'] = self.operator;
   }
 
-  // Handle More/Less buttons click
-  if(this.maxitems){
-    this.fieldset.collapsible({
-      maxitems: this.maxitems,
-      elements: 'li:not(.faceted-checkbox-item-zerocount)',
-      more: this.widget.data("more"),
-      less: this.widget.data("less")
-    });
-  }
-
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
-    self.synchronize();
+    js_widget.synchronize();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
-    self.reset();
+    js_widget.reset();
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
     jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
-      self.count(sortcountable);
+      js_widget.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
       if(self.operator != 'and' && (data.wid == self.wid || data.wid == 'b_start')){
         return;
       }
-      self.count(sortcountable);
+      js_widget.count(sortcountable);
     });
   }
 };
 
-Faceted.CheckboxesWidget.prototype = {
-  checkbox_click: function(element, evt){
+Faceted.MultiSelectWidget.prototype = {
+  select_change: function(element, evt){
+    if(!jQuery(element).val()){
+      element = null;
+    }
     this.do_query(element);
   },
 
@@ -122,26 +123,26 @@ Faceted.CheckboxesWidget.prototype = {
   },
 
   do_query: function(element){
-    this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
-    var value = [];
-    this.selected.each(function(i){
-      value.push(jQuery(this).val());
-    });
-    Faceted.Form.do_query(this.wid, value);
+    if(!element){
+      this.selected = [];
+      return Faceted.Form.do_query(this.wid, []);
+    }else{
+      var value = jQuery(element).val();
+      this.selected = this.widget.find('option:selected');
+      return Faceted.Form.do_query(this.wid, value);
+    }
   },
 
   reset: function(){
-    // This is done by form.reset, so do nothing
+    this.select.val(null).trigger("change");
     this.selected = [];
-    jQuery(this.elements).attr('checked', false);
   },
 
   synchronize: function(){
-    this.elements.attr('checked', false);
-    var checked = Faceted.Query[this.wid];
-    if(checked){
-      jQuery('form input[type=checkbox]', this.widget).val(checked);
-      this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
+    var value = Faceted.Query[this.wid];
+    if(value){
+      this.select.val(value).trigger("change");
+      this.selected = this.widget.find('option:selected');
     }
 
     var operator = Faceted.Query[this.wid + '-operator'];
@@ -170,6 +171,7 @@ Faceted.CheckboxesWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
+
     var link = jQuery('<a href="#">[X]</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
@@ -182,7 +184,7 @@ Faceted.CheckboxesWidget.prototype = {
     var html = jQuery('<dt>');
     html.attr('id', 'criteria_' + this.wid + '_label');
     html.append(link);
-    html.append('<span>' + this.title + ' ' + this.operator_label() + '</span>');
+    html.append('<span>' + this.title + '</span>');
     return html;
   },
 
@@ -196,17 +198,15 @@ Faceted.CheckboxesWidget.prototype = {
     html.attr('id', 'criteria_' + this.wid + '_entries');
 
     widget.selected.each(function(i){
-      var span = jQuery('<span class="faceted-checkbox-criterion">');
+      var span = jQuery('<span class="faceted-multiselect-criterion">');
       var element = jQuery(this);
       var id = element.attr('id');
       var value = element.val();
-      var label = jQuery('label[for=' + id + ']', widget.widget);
-      var title = label.attr('title');
-      label = label.text();
+      var label = element.attr("title");
 
       var link = jQuery('<a href="#">[X]</a>');
       link.attr('id', 'criteria_' + id);
-      link.attr('title', 'Remove ' + title + ' filter');
+      link.attr('title', 'Remove ' + label + ' filter');
       link.click(function(evt){
         widget.criteria_remove(value, element);
         return false;
@@ -220,16 +220,19 @@ Faceted.CheckboxesWidget.prototype = {
     return html;
   },
 
+
   criteria_remove: function(value, element){
     // Remove all
     if(!value){
-      this.elements.attr('checked', false);
+      this.select.val(null).trigger("change");
       this.do_query();
     }else{
-      element.attr('checked', false);
-      this.do_query();
+      element.attr('selected', false);
+      this.select.trigger("change");
+      this.do_query(this.select);
     }
   },
+
 
   count: function(sortcountable){
     var query = Faceted.SortedQuery();
@@ -252,65 +255,54 @@ Faceted.CheckboxesWidget.prototype = {
 
   count_update: function(data, sortcountable){
     var context = this;
-    var lis = jQuery('li', context.widget);
-    jQuery(lis).each(function(){
-      var li = jQuery(this);
-      li.removeClass('faceted-checkbox-item-disabled');
-      li.removeClass('faceted-checkbox-item-zerocount');
-      var input = jQuery('input', li);
-      input.unbind();
-      var key = input.val();
-
-      var span = jQuery('span', li);
-      if(!span.length){
-        var label = jQuery('label', li);
-        label.append(' ');
-        label.append(jQuery('<span>'));
-        span = jQuery('span', li);
+    var select = jQuery('select', context.widget);
+    var options = jQuery('option', context.widget);
+    var current_val = select.val();
+    jQuery(options).each(function(){
+      var option = jQuery(this);
+      if(!option.attr('title')){
+        return;
       }
+      option.removeClass('faceted-select-item-disabled');
+      option.attr('disabled', false);
+      var key = option.val();
 
       var value = data[key];
       value = value ? value : 0;
-      span.text('(' + data[key] + ')');
+      var option_txt = option.attr('title');
+      option_txt += ' (' + value + ')';
+
+      option.html(option_txt);
       if(sortcountable){
-        li.data('count', value);
+        option.data('count', value);
       }
       if(!value){
-        li.addClass('faceted-checkbox-item-disabled');
-        if(context.widget.hasClass('faceted-zero-count-hidden')){
-          li.addClass('faceted-checkbox-item-zerocount');
-        }
-        input.attr('disabled', 'disabled');
-      }else{
-        input.attr('disabled', false);
-        input.click(function(evt){
-          context.checkbox_click(this, evt);
-        });
+        option.attr('disabled', 'disabled');
+        option.addClass('faceted-select-item-disabled');
       }
     });
     if(sortcountable){
-      lis.detach().sort(function(x, y) {
+      options.detach().sort(function(x, y) {
         var a = jQuery(x).data('count');
         var b = jQuery(y).data('count');
         return b - a;
       });
+      select.append(options);
+      select.val(current_val);
     }
-    jQuery('ul', context.widget).append(lis);
-    // Update expand/colapse
-    context.fieldset.trigger('widget-refresh');
   }
 };
 
-Faceted.initializeCheckboxesWidget = function(evt){
-  jQuery('div.faceted-checkboxes-widget').each(function(){
+Faceted.initializeMultiSelectWidget = function(evt){
+  jQuery('div.faceted-multiselect-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];
-    Faceted.Widgets[wid] = new Faceted.CheckboxesWidget(wid);
+    Faceted.Widgets[wid] = new Faceted.MultiSelectWidget(wid);
   });
 };
 
 jQuery(document).ready(function(){
   jQuery(Faceted.Events).bind(
     Faceted.Events.INITIALIZE,
-    Faceted.initializeCheckboxesWidget);
+    Faceted.initializeMultiSelectWidget);
 });

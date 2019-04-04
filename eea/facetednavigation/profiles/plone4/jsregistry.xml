@@ -38,6 +38,9 @@
   <javascript id="++resource++eea.facetednavigation.widgets.etag.view.js"
               insert-after="++resource++eea.faceted-navigation.js"
               bundle="faceted-view" />
+  <javascript id="++resource++eea.facetednavigation.widgets.multiselect.view.js"
+              insert-after="++resource++eea.faceted-navigation.js"
+              bundle="faceted-view" />
   <javascript id="++resource++eea.facetednavigation.widgets.path.tree.js"
               insert-after="++resource++eea.faceted-navigation.js"
               bundle="faceted-view" />
@@ -108,6 +111,10 @@
               expression="python:'configure_faceted.html' in request.URL0"
               bundle="faceted-edit" />
   <javascript id="++resource++eea.facetednavigation.widgets.etag.edit.js"
+              insert-after="++resource++eea.faceted-navigation-edit.js"
+              expression="python:'configure_faceted.html' in request.URL0"
+              bundle="faceted-edit" />
+  <javascript id="++resource++eea.facetednavigation.widgets.multiselect.edit.js"
               insert-after="++resource++eea.faceted-navigation-edit.js"
               expression="python:'configure_faceted.html' in request.URL0"
               bundle="faceted-edit" />

@@ -1,0 +1,62 @@
+<div class="faceted-widget faceted-multiselect-widget" style="display: none" i18n:domain="eea" tal:define="
+  error_view nocall:context/@@faceted.widget.error;
+  wid python:view.data.getId();
+  hidden python:view.hidden;
+  multiple python:'multiple' if view.data.get('multiple', False) else None;
+  hidezerocount python:view.hidezerocount;
+  sortcountable python:view.sortcountable;
+  default_value python:view.data.get('default', u'');
+  placeholder python:view.data.get('placeholder', 'Select a value');
+  css string:faceted-widget ${view/css_class};
+  css python:hidden and css + ' faceted-widget-hidden' or css;
+  css python:view.countable and css + ' faceted-count' or css;
+  css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
+  css python:sortcountable and css + ' faceted-sortcountable' or css;
+  operator python:view.operator;
+  operator_visible python:view.operator_visible;
+  operator_lable python: 'any' if operator == 'or' else 'all';
+  vocabulary view/vocabulary;"
+  tal:condition="vocabulary"
+  tal:attributes="
+    id string:${wid}_widget;
+    class css;
+    data-placeholder python:view.translate(placeholder);
+    data-operator python:operator;">
+
+<fieldset class="widget-fieldset" tal:define="title python:view.data.get('title', '')">
+  <legend tal:content="python:view.translate(title)" i18n:translate="">HTML Widget</legend>
+
+  <tal:facet on-error="structure python:error_view(error=error, cid=wid)">
+
+  <form action="." method="get">
+    <label class="multiselect-field"
+      tal:attributes="for wid"
+      tal:content="python:view.translate(title)" />
+    <select tal:attributes="name wid; id wid; multiple multiple" class="faceted_multiselect">
+      <option tal:condition="not:multiple"></option>
+      <tal:option repeat="term vocabulary">
+        <option tal:define="
+          term_id python:term[0];
+          term_label python:term[1];
+          term_label python:view.translate(term_label);
+          chbox_id string:${wid}_${term_id};
+          chbox_id python:view.cleanup(chbox_id);"
+          tal:attributes="
+          selected python:view.selected(term_id);
+          value term_id;
+          title term_label;"
+          tal:content="term_label" />
+      </tal:option>
+    </select>
+  </form>
+  <div class="faceted-operator" tal:condition="operator_visible" title="match any/all filters bellow" i18n:attributes="title">
+    <label tal:attributes="for string:$wid-operator" i18n:translate="">match</label>
+    <a data-or="any" data-and="all" data-name="operator" i18n:attributes="data-or; data-and" tal:attributes="
+        href string:#$wid-operator=$operator;
+        data-value string:$operator;
+        "
+      tal:content="operator_lable" />
+  </div>
+  </tal:facet>
+</fieldset>
+</div>

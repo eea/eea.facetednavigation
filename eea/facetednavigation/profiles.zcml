@@ -29,8 +29,7 @@
       name="universal"
       directory="profiles/common"
       title="EEA Faceted Navigation Common Configuration"
-      description="Extension profile for EEA Faceted Navigation settings that
-                   aren't version dependent."
+      description="Extension profile for EEA Faceted Navigation settings that aren't version dependent."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
