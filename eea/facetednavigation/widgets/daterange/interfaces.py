@@ -46,6 +46,34 @@ class IDateRangeSchema(ISchema):
         required=False
     )
 
+    labelStart = schema.TextLine(
+        title=_(u"Start date label"),
+        description=_(u"Text to be displayed as start date input label"),
+        required=False
+    )
+    labelStart._type = (str, unicode)
+
+    labelEnd = schema.TextLine(
+        title=_(u"End date label"),
+        description=_(u"Text to be displayed as end date input label"),
+        required=False
+    )
+    labelEnd._type = (str, unicode)
+
+    placeholderStart = schema.TextLine(
+        title=_(u"Start date placeholder"),
+        description=_(u"Text to be displayed as start date input placeholder"),
+        required=False
+    )
+    placeholderStart._type = (str, unicode)
+
+    placeholderEnd = schema.TextLine(
+        title=_(u"End date placeholder"),
+        description=_(u"Text to be displayed as end date input placeholder"),
+        required=False
+    )
+    placeholderEnd._type = (str, unicode)
+
 
 class DefaultSchemata(DS):
     """ Schemata default
@@ -53,7 +81,7 @@ class DefaultSchemata(DS):
     fields = field.Fields(IDateRangeSchema).select(
         u'title',
         u'index',
-        u'default',
+        u'default'
     )
 
 
@@ -64,6 +92,10 @@ class DisplaySchemata(FacetedSchemata):
     fields = field.Fields(IDateRangeSchema).select(
         u'calYearRange',
         u'usePloneDateFormat',
+        u'labelStart',
+        u'labelEnd',
+        u'placeholderStart',
+        u'placeholderEnd'
     )
 
 

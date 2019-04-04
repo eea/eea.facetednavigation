@@ -3,6 +3,7 @@
 from zope import schema
 from z3c.form import field
 from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
@@ -17,6 +18,34 @@ class IRangeSchema(ISchema):
         vocabulary=u"eea.faceted.vocabularies.RangeCatalogIndexes",
     )
 
+    labelStart = schema.TextLine(
+        title=_(u"Start range label"),
+        description=_(u"Text to be displayed as start range input label"),
+        required=False
+    )
+    labelStart._type = (str, unicode)
+
+    labelEnd = schema.TextLine(
+        title=_(u"End range label"),
+        description=_(u"Text to be displayed as end range input label"),
+        required=False
+    )
+    labelEnd._type = (str, unicode)
+
+    placeholderStart = schema.TextLine(
+        title=_(u"Start range placeholder"),
+        description=_(u"Text to be displayed as start range input placeholder"),
+        required=False
+    )
+    placeholderStart._type = (str, unicode)
+
+    placeholderEnd = schema.TextLine(
+        title=_(u"End range placeholder"),
+        description=_(u"Text to be displayed as end range input placeholder"),
+        required=False
+    )
+    placeholderEnd._type = (str, unicode)
+
 
 class DefaultSchemata(DS):
     """ Schemata default
@@ -27,9 +56,20 @@ class DefaultSchemata(DS):
         u'index',
     )
 
+class DisplaySchemata(FacetedSchemata):
+    """ Schemata display
+    """
+    label = u"display"
+    fields = field.Fields(IRangeSchema).select(
+        u'labelStart',
+        u'labelEnd',
+        u'placeholderStart',
+        u'placeholderEnd'
+    )
 
 __all__ = [
     IRangeSchema.__name__,
     DefaultSchemata.__name__,
+    DisplaySchemata.__name__,
     LayoutSchemata.__name__,
 ]
