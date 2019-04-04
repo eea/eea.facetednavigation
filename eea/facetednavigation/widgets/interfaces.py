@@ -73,7 +73,7 @@ class ISchema(Interface):
     title._type = (unicode, str)
 
     placeholder = schema.TextLine(
-        title=_(u"Input field placeholder"),
+        title=_(u"Placeholder"),
         description=_(u"Text to be displayed as input placeholder"),
         required=False
     )

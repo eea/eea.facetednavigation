@@ -19,28 +19,28 @@ class IRangeSchema(ISchema):
     )
 
     labelStart = schema.TextLine(
-        title=_(u"Start range label"),
+        title=_(u"Label (start range)"),
         description=_(u"Text to be displayed as start range input label"),
         required=False
     )
     labelStart._type = (str, unicode)
 
     labelEnd = schema.TextLine(
-        title=_(u"End range label"),
+        title=_(u"Label (end range)"),
         description=_(u"Text to be displayed as end range input label"),
         required=False
     )
     labelEnd._type = (str, unicode)
 
     placeholderStart = schema.TextLine(
-        title=_(u"Start range placeholder"),
+        title=_(u"Placeholder (start range)"),
         description=_(u"Text to be displayed as start range input placeholder"),
         required=False
     )
     placeholderStart._type = (str, unicode)
 
     placeholderEnd = schema.TextLine(
-        title=_(u"End range placeholder"),
+        title=_(u"Placeholder (end range)"),
         description=_(u"Text to be displayed as end range input placeholder"),
         required=False
     )
