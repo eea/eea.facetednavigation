@@ -6,6 +6,8 @@ jQuery.fn.collapsible = function(settings){
   var options = {
     maxitems: 0,
     elements: 'li',
+    more: 'More',
+    less: 'Less',
 
     events: {
       refresh: 'widget-refresh',
@@ -28,9 +30,9 @@ jQuery.fn.collapsible = function(settings){
       }
 
       if(self.colapsed){
-        jQuery('a', self.button).text('More');
+        jQuery('a', self.button).text(options.more);
       }else{
-        jQuery('a', self.button).text('Less');
+        jQuery('a', self.button).text(options.less);
       }
       self.button.show();
 

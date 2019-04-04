@@ -1,0 +1,55 @@
+.faceted-multiselect-item-disabled {
+  color: gray;
+}
+
+.faceted-zero-count-hidden .faceted-multiselect-item-disabled {
+  display: none;
+}
+
+.faceted-multiselect-widget label.multiselect-field {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.faceted_multiselect {
+  width: 100%;
+}
+
+.faceted-multiselect-widget .faceted-operator {
+  margin-top: 0;
+}
+
+.faceted-multiselect-widget .select2-container .select2-choice {
+  background-image: none;
+  font-weight: normal;
+}
+
+.faceted-multiselect-widget .select2-container .select2-choice abbr {
+  top: 6px;
+}
+
+.faceted-multiselect-widget .select2-container .select2-choice .select2-arrow {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+}
+
+
+.faceted-multiselect-widget .select2-container-multi .select2-choices .select2-search-choice {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-weight: normal;
+}
+
+.faceted-multiselect-widget .faceted-operator a,
+.faceted-multiselect-widget .select2-search-choice-close,
+#content-core .faceted-multiselect-widget .faceted-operator a,
+#content-core .faceted-multiselect-widget .select2-search-choice-close {
+  border-bottom: none;
+}

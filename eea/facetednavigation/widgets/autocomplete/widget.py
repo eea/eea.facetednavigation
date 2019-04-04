@@ -12,11 +12,10 @@ from Products.Five import BrowserView
 from eea.faceted.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.autocomplete.interfaces import (
-    ISolrConnectionManager,
-    DefaultSchemata,
-    LayoutSchemata
-)
+from eea.facetednavigation.widgets.autocomplete.interfaces import ISolrConnectionManager
+from eea.facetednavigation.widgets.autocomplete.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.autocomplete.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.autocomplete.interfaces import DisplaySchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
 
@@ -28,7 +27,7 @@ class Widget(AbstractWidget):
     widget_label = _('Text field with suggestions')
 
     index = ViewPageTemplateFile('widget.pt')
-    groups = (DefaultSchemata, LayoutSchemata)
+    groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
 
     def quotestring(self, string):
         """ Quote given string

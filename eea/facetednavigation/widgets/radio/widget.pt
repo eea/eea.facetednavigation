@@ -14,7 +14,8 @@
   maxitems python:view.data.get('maxitems', 0) or 0;
   vocabulary view/vocabulary;"
   tal:condition="vocabulary"
-  tal:attributes="id string:${wid}_widget; class css">
+  tal:attributes="id string:${wid}_widget; class css"
+  data-more="More" data-less="Less" i18n:attributes="data-more; data-less">
 
 <fieldset class="widget-fieldset">
   <legend tal:define="title python:view.data.get('title', '')" tal:content="

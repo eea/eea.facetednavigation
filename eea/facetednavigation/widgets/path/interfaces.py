@@ -63,7 +63,8 @@ class DisplaySchemata(FacetedSchemata):
     """
     label = u'display'
     fields = field.Fields(IPathSchema).select(
-        u'theme'
+        u'theme',
+        u'placeholder'
     )
 
 __all__ = [

@@ -42,6 +42,7 @@
   font-weight: normal;
 }
 
+#content-core .faceted-operator a,
 .faceted-operator a,
 .faceted-operator a:visited,
 .faceted-operator a:hover {
@@ -50,3 +51,8 @@
   text-decoration: none;
 }
 /* faceted operator end */
+
+#content-core .faceted-checkbox-more a,
+.faceted-checkbox-more a {
+  border-bottom: none;
+}

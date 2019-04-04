@@ -6,6 +6,7 @@
   theme python:view.data.get('theme', 'green');
   theme_url string:${site_url}/++resource++jquery.jstree/themes/${theme}/style.css;
   hidden python:view.hidden;
+  placeholder python:view.data.get('placeholder', '');
   default_value python:view.default or '';
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;"
@@ -19,6 +20,7 @@
     <input type="text" tal:attributes="
       name string:${wid};
       id string:${wid};
+      placeholder python:view.translate(placeholder);
       value default_value;" />
     <span style="display: none"
       tal:attributes="

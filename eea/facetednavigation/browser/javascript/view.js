@@ -137,7 +137,7 @@ Faceted.Form = {
     this.form = jQuery('#faceted-form');
     // Handle form submit event
     this.area = jQuery('#faceted-results');
-    this.mode = this.form.attr('data-mode') || 'view';
+    this.mode = this.form.data('mode') || 'view';
 
     // Faceted version
     this.version = '';
