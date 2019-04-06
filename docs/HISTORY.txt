@@ -2,7 +2,9 @@ Changelog
 =========
 
 12.1-dev0 - (unreleased)
----------------------
+------------------------
+* Bug fix: Fix MultiSelect UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 4
+  [avoinea]
 
 12.0 - (2019-04-04)
 ---------------------
