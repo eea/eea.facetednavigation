@@ -29,7 +29,9 @@ class Widget(CountableWidget):
         """ Get default values
         """
         default = super(Widget, self).default or u''
-        return default.encode('utf-8')
+        if isinstance(default, unicode):
+            default = default.encode('utf-8')
+        return default
 
     def query(self, form):
         """ Get value from form and return a catalog dict query
