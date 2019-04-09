@@ -1,7 +1,7 @@
 Changelog
 =========
 
-12.1-dev0 - (unreleased)
+12.1 - (2019-04-09)
 ------------------------
 * Bug fix: Fix default language select on translations other than english
   [avoinea refs #103094]
