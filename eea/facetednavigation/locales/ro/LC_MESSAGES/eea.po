@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-10 10:22+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2011-09-08 12:00+0000\n"
 "Last-Translator: Alin Voinea <alin@eaudeweb.ro>\n"
 "Language-Team: Bogdan Ciobanu <bogdan.ciobanu@eaudeweb.ro>\n"
@@ -358,7 +358,7 @@ msgid "Enabled (hidden)"
 msgstr "Activ (ascuns)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Până la"
@@ -542,6 +542,10 @@ msgstr "Navigarea fațetată moștenită a fost dezactivată"
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Vocabularul selectat pentru acest widget este invalid sau lipseşte. Lăsaţi spaţiu gol pentru o sortare implicită."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr "Intervalul selectat nu este valid"
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -934,7 +938,7 @@ msgid "Sphere"
 msgstr "Sferă"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "De la"

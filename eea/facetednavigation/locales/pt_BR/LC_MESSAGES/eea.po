@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-10 10:22+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2013-05-12 19:29-0300\n"
 "Last-Translator: Gustavo Lepri <gustavolepri@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -336,7 +336,7 @@ msgstr "Habilitar facetas inteligentes escondendo"
 msgid "Enabled (hidden)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Final"
@@ -513,6 +513,10 @@ msgstr ""
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Vocabulário inválido ou vazio previsto para este widget. Deixe em branco para critérios de classificação padrão."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -880,7 +884,7 @@ msgstr "Ordenando"
 msgid "Sphere"
 msgstr "Esfera"
 
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Iniciar"

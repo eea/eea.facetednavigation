@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2019-04-10 10:22+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2011-05-23 13:46+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -352,7 +352,7 @@ msgstr "Smart Facetten versteckt"
 msgid "Enabled (hidden)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Ende"
@@ -534,6 +534,10 @@ msgstr "Vererbung der Einstellungen von der Hauptsprache ist nun deaktiviert"
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Das für dieses Widget angegebene Vokabular ist leer oder ungültig. Feld Leer lassen, wenn die Vorgabe-Sortierkritierien gelten sollen."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -925,7 +929,7 @@ msgid "Sphere"
 msgstr "Sphäre"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Start"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-10 10:22+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -335,7 +335,7 @@ msgstr "Разрешаване на умни аспекти крие"
 msgid "Enabled (hidden)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Край "
@@ -512,6 +512,10 @@ msgstr ""
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Невалидни или празни речник е предвидено за тази джаджа. Оставете празно за критерии по подразбиране за сортиране."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -879,7 +883,7 @@ msgstr "Сортиране"
 msgid "Sphere"
 msgstr "Сфера"
 
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Стартиране  "

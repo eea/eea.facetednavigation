@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2019-04-10 10:22+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2011-05-23 13:30+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -355,7 +355,7 @@ msgid "Enabled (hidden)"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Koniec"
@@ -539,6 +539,10 @@ msgstr ""
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Nieprawidłowy lub pusty słownictwo przewidziano tego widgetu. Pozostaw puste dla kryterium sortowania domyślnych."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -931,7 +935,7 @@ msgid "Sphere"
 msgstr "Kula"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Uruchomienie"
