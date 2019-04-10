@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-04-04 19:03+0000\n"
+"POT-Creation-Date: 2019-04-10 10:22+0000\n"
 "PO-Revision-Date: 2012-04-25 17:20+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,14 +13,6 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:21
-msgid "&#8711;"
-msgstr ""
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:17
-msgid "&#916;"
-msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 month ago"
@@ -467,7 +459,7 @@ msgstr ""
 msgid "Hide 'All' option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:18
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "Hide filters"
 msgstr ""
 
@@ -762,11 +754,11 @@ msgstr ""
 msgid "Relevance"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:32
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
 msgid "Remove all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:28
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
 msgid "Remove all filters"
 msgstr ""
 
@@ -857,7 +849,7 @@ msgstr ""
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:22
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr ""
 
@@ -1068,11 +1060,7 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:31
-msgid "[X]"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr ""
@@ -1082,7 +1070,7 @@ msgstr ""
 msgid "all items"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr ""
@@ -1092,12 +1080,12 @@ msgstr ""
 msgid "in current results"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 #: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
 #: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr ""
