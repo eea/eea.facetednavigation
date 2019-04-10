@@ -79,6 +79,7 @@ Faceted.TextWidget.prototype = {
     this.selected = [];
     this.value = '';
     jQuery('#' + this.wid).val('');
+    this.widget.removeClass("faceted-widget-active");
   },
 
   synchronize: function(){
@@ -91,6 +92,7 @@ Faceted.TextWidget.prototype = {
     this.input.val(value);
     this.selected = [this.input];
     this.value = this.input.val();
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){

@@ -62,6 +62,7 @@ Faceted.RangeWidget.prototype = {
 
   reset: function(){
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
     this.start.val('');
     this.end.val('');
   },
@@ -88,6 +89,7 @@ Faceted.RangeWidget.prototype = {
     this.start.val(start);
     this.end.val(end);
     this.selected = [this.start, this.end];
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){

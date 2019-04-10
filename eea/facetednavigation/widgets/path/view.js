@@ -54,6 +54,7 @@ Faceted.PathWidget.prototype = {
 
   reset: function(){
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
     this.input.val('');
   },
 
@@ -64,6 +65,7 @@ Faceted.PathWidget.prototype = {
       return;
     }
     this.selected = [this.input];
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){

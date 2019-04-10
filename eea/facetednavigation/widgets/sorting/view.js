@@ -94,6 +94,7 @@ Faceted.SortingWidget.prototype = {
     this.select.val("");
     this.reverse.attr('checked', reversed);
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
   },
 
   synchronize: function(){
@@ -123,6 +124,7 @@ Faceted.SortingWidget.prototype = {
         context.selected = selected;
         context.select.val(value);
         context.reverse.attr('checked', reversed_value);
+        context.widget.addClass("faceted-widget-active");
       }
     });
   },

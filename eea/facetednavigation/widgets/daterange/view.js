@@ -142,6 +142,7 @@ Faceted.DateRangeWidget.prototype = {
     this.selected = [];
     this.start.val('');
     this.end.val('');
+    this.widget.removeClass("faceted-widget-active");
     this.end.datepicker("option", "minDate", null);
   },
 
@@ -186,6 +187,7 @@ Faceted.DateRangeWidget.prototype = {
     this.start.val(start);
     this.end.val(end);
     this.selected = [this.start, this.end];
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){

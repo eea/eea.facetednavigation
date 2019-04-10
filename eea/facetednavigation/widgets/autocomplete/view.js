@@ -65,6 +65,7 @@ Faceted.AutocompleteWidget.prototype = {
 
   reset: function(){
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
     jQuery('#' + this.wid).val('');
   },
 
@@ -78,6 +79,7 @@ Faceted.AutocompleteWidget.prototype = {
     var input = jQuery('#value_' + this.wid);
     input.attr('value', value);
     this.selected = [input];
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){

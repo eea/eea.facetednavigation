@@ -57,6 +57,7 @@ Faceted.AlphabeticalWidget.prototype = {
 
   letter_unselect: function(letter){
     jQuery(letter).removeClass('faceted_letter_selected');
+    this.widget.removeClass("faceted-widget-active");
     this.selected = [];
   },
 
@@ -64,6 +65,7 @@ Faceted.AlphabeticalWidget.prototype = {
     this.letter_unselect(this.letters);
     jQuery(letter).addClass('faceted_letter_selected');
     if(jQuery(letter).attr('id').split('-')[1] != 'all'){
+      this.widget.addClass("faceted-widget-active");
       this.selected = [letter];
     }
   },

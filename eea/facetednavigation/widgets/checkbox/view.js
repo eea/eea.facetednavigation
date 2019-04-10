@@ -133,6 +133,7 @@ Faceted.CheckboxesWidget.prototype = {
   reset: function(){
     // This is done by form.reset, so do nothing
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
     jQuery(this.elements).attr('checked', false);
   },
 
@@ -142,6 +143,7 @@ Faceted.CheckboxesWidget.prototype = {
     if(checked){
       jQuery('form input[type=checkbox]', this.widget).val(checked);
       this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
+      this.widget.addClass("faceted-widget-active");
     }
 
     var operator = Faceted.Query[this.wid + '-operator'];

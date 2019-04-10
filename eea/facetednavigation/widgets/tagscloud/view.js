@@ -95,6 +95,7 @@ Faceted.TagsCloudWidget.prototype = {
   unselect: function(tag){
     jQuery(tag).removeClass('faceted-tag-selected');
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
   },
 
   select: function(tag){
@@ -102,6 +103,9 @@ Faceted.TagsCloudWidget.prototype = {
     jQuery(tag).addClass('faceted-tag-selected');
     if(jQuery(tag).attr('id').replace(this.wid, '') != 'all'){
       this.selected = [tag];
+      this.widget.addClass("faceted-widget-active");
+    } else {
+      this.widget.removeClass("faceted-widget-active");
     }
   },
 

@@ -76,6 +76,7 @@ Faceted.DateWidget.prototype = {
     this.selected = [];
     this.select_from.val('now-past');
     this.select_to.val('now_future');
+    this.widget.removeClass("faceted-widget-active");
   },
 
   reset_ui: function(){
@@ -101,6 +102,7 @@ Faceted.DateWidget.prototype = {
 
     this.select_from.val(q_value[0]).trigger('change');
     this.select_to.val(q_value[1]).trigger('change');
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){

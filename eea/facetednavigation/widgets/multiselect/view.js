@@ -136,6 +136,7 @@ Faceted.MultiSelectWidget.prototype = {
   reset: function(){
     this.select.val(null).trigger("change");
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
   },
 
   synchronize: function(){
@@ -143,6 +144,9 @@ Faceted.MultiSelectWidget.prototype = {
     if(value){
       this.select.val(value).trigger("change");
       this.selected = this.widget.find('option:selected');
+      this.widget.addClass("faceted-widget-active");
+    } else {
+      this.reset();
     }
 
     var operator = Faceted.Query[this.wid + '-operator'];

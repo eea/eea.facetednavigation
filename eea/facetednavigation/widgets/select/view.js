@@ -76,6 +76,7 @@ Faceted.SelectWidget.prototype = {
   reset: function(){
     this.select.val("");
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
   },
 
   synchronize: function(){
@@ -93,6 +94,7 @@ Faceted.SelectWidget.prototype = {
       }else{
         context.selected = selected;
         context.select.val(value);
+        context.widget.addClass("faceted-widget-active");
       }
     });
   },

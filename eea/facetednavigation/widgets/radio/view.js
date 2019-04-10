@@ -85,6 +85,7 @@ Faceted.RadioWidget.prototype = {
   reset: function(){
     jQuery(this.elements[0]).prop('checked', true);
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
   },
 
   synchronize: function(){
@@ -105,6 +106,7 @@ Faceted.RadioWidget.prototype = {
       }else{
         context.selected = radio;
         context.selected.prop('checked', true);
+        context.widget.addClass("faceted-widget-active");
       }
     });
   },
