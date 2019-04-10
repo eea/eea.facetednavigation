@@ -121,7 +121,7 @@ Faceted.DateWidget.prototype = {
       return '';
     }
 
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -150,7 +150,7 @@ Faceted.DateWidget.prototype = {
     var html = jQuery('<dd>');
     html.attr('id', 'criteria_' + this.wid + '_entries');
     var span = jQuery('<span class="faceted-date-criterion">');
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
 
     link.attr('id', 'criteria_' + this.wid + '_');
     link.attr('title', 'Remove ' + label + ' filter');

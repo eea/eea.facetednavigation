@@ -172,7 +172,7 @@ Faceted.MultiSelectWidget.prototype = {
       return '';
     }
 
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -204,7 +204,7 @@ Faceted.MultiSelectWidget.prototype = {
       var value = element.val();
       var label = element.attr("title");
 
-      var link = jQuery('<a href="#">[X]</a>');
+      var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + label + ' filter');
       link.click(function(evt){

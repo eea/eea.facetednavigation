@@ -98,7 +98,7 @@ Faceted.AutocompleteWidget.prototype = {
       return '';
     }
 
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -127,7 +127,7 @@ Faceted.AutocompleteWidget.prototype = {
       var label = this.toString();
       if(label.length>0){
           var span = jQuery('<span class="faceted-autocomplete-criterion">');
-          var link = jQuery('<a href="#">[X]</a>');
+          var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
           link.attr('id', 'criteria_' + widget.wid + '_' + label);
           link.attr('title', 'Remove ' + label + ' filter');
           link.click(function(evt){

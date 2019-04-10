@@ -156,7 +156,7 @@ Faceted.TagsCloudWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -178,7 +178,7 @@ Faceted.TagsCloudWidget.prototype = {
     }
     var tag_id = jQuery(this.selected[0]).attr('id');
     var label = jQuery(this.selected[0]).attr('title');
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + tag_id);
     link.attr('title', 'Remove ' + label + ' filter');
 

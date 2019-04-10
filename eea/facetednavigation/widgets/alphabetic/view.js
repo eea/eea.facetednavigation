@@ -118,7 +118,7 @@ Faceted.AlphabeticalWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -139,7 +139,7 @@ Faceted.AlphabeticalWidget.prototype = {
       return '';
     }
     var label=jQuery(this.selected[0]).attr('id').split('-')[1];
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid + '_' + label);
     link.attr('title', 'Remove ' + label + ' filter');
 

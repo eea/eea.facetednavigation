@@ -126,7 +126,7 @@ Faceted.RadioWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -155,7 +155,7 @@ Faceted.RadioWidget.prototype = {
     var label = jQuery('label[for=' + id + ']');
     var title = label.attr('title');
     label = label.text();
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     var span = jQuery('<span class="facted-radio-criterion">');
     link.attr('id', 'criteria_' + id);
     link.attr('title', 'Remove ' + title + ' filter');

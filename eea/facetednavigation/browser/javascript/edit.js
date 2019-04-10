@@ -357,10 +357,10 @@ FacetedEdit.FormWidgets = {
 
         // Hide/show widget button
         var header_hide_button = jQuery('<div>');
-        var css = 'ui-icon-hide';
+        var css = 'ui-icon-unlocked';
         if(jQuery('#' + wid).hasClass('faceted-widget-hidden')){
           header_hide_button.attr('title', 'Show widget');
-          css = 'ui-icon-show';
+          css = 'ui-icon-locked';
         }else{
           header_hide_button.attr('title', 'Hide widget');
         }
@@ -416,7 +416,7 @@ FacetedEdit.FormWidgets = {
 
   hide_button_click: function(widget_id, criterion_id){
     var widget = jQuery('#' + widget_id);
-    var button = jQuery('#' + widget_id + ' div.ui-icon-hide, div.ui-icon-show');
+    var button = jQuery('#' + widget_id + ' div.ui-icon-unlocked, div.ui-icon-locked');
     var action = FacetedEdit.BASEURL + '@@faceted_configure';
     var query = {};
     query.redirect = '';
@@ -438,19 +438,19 @@ FacetedEdit.FormWidgets = {
 
   hide_widget: function(widget_id){
     var widget = jQuery('#' + widget_id);
-    var button = jQuery('#' + widget_id + ' div.ui-icon-hide');
+    var button = jQuery('#' + widget_id + ' div.ui-icon-unlocked');
     button.attr('title', 'Show widget');
-    button.removeClass('ui-icon-hide');
-    button.addClass('ui-icon-show');
+    button.removeClass('ui-icon-unlocked');
+    button.addClass('ui-icon-locked');
     jQuery('#' + widget_id).addClass('faceted-widget-hidden');
   },
 
   show_widget: function(widget_id){
     var widget = jQuery('#' + widget_id);
-    var button = jQuery('#' + widget_id + ' div.ui-icon-show');
+    var button = jQuery('#' + widget_id + ' div.ui-icon-locked');
     button.attr('title', 'Hide widget');
-    button.removeClass('ui-icon-show');
-    button.addClass('ui-icon-hide');
+    button.removeClass('ui-icon-locked');
+    button.addClass('ui-icon-unlocked');
     jQuery('#' + widget_id).removeClass('faceted-widget-hidden');
   }
 };

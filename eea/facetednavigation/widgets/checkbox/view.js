@@ -170,7 +170,7 @@ Faceted.CheckboxesWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -204,7 +204,7 @@ Faceted.CheckboxesWidget.prototype = {
       var title = label.attr('title');
       label = label.text();
 
-      var link = jQuery('<a href="#">[X]</a>');
+      var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + title + ' filter');
       link.click(function(evt){

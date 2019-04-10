@@ -46,6 +46,18 @@
   display: none;
 }
 
+.faceted-criteria-show:before {
+  content: "+";
+}
+
+.faceted-criteria-hide:before {
+  content: "-";
+}
+
+.faceted-criteria-reset a:before {
+  content: "x"
+}
+
 .faceted-criteria-count {
   display: none;
 }

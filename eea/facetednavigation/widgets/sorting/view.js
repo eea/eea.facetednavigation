@@ -145,7 +145,7 @@ Faceted.SortingWidget.prototype = {
       return '';
     }
 
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -173,7 +173,7 @@ Faceted.SortingWidget.prototype = {
     var element = jQuery(this.selected);
     var value = element.val();
     var label = element.html();
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
 
     link.attr('id', 'criteria_' + this.wid + '_' + value);
     link.attr('title', 'Remove ' + label + ' filter');

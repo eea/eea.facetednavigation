@@ -233,3 +233,12 @@
 .faceted-sections-buttons a {
   border-bottom: none;
 }
+
+.faceted-remove {
+  font-size: 0px;
+}
+
+.faceted-remove::before {
+  font-size: small;
+  content: "x";
+}
