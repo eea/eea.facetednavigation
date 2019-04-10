@@ -12,7 +12,9 @@
   placeholderEnd python:view.data.get('placeholderEnd', '');
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;"
-  tal:attributes="id string:${wid}_widget; class css">
+  tal:attributes="id string:${wid}_widget; class css"
+  data-invalid-range-msg="Invalid range"
+  i18n:attributes="data-invalid-range-msg">
 
 <fieldset class="widget-fieldset">
 <legend tal:define="title python:view.data.get('title', '')" tal:content="
