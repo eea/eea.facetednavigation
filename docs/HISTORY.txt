@@ -1,6 +1,9 @@
 Changelog
 =========
 
+12.2-dev0 - (unreleased)
+---------------------
+
 12.1 - (2019-04-09)
 ------------------------
 * Feature: Added "faceted-widget-active" CSS class on widget with selected criteria
