@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2019-04-04 19:03+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2017-11-08 15:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -13,14 +13,6 @@ msgstr ""
 "Language-Name: Traditional Chinese\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea\n"
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:21
-msgid "&#8711;"
-msgstr ""
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:17
-msgid "&#916;"
-msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 month ago"
@@ -364,7 +356,7 @@ msgid "Enabled (hidden)"
 msgstr "隱藏並啟用"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "結束"
@@ -493,7 +485,7 @@ msgstr "隱藏"
 msgid "Hide 'All' option"
 msgstr "隱藏 'All' 選項"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:18
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "Hide filters"
 msgstr "隱藏條件"
 
@@ -548,6 +540,10 @@ msgstr "設定沿用功能已停用"
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "這個方框的詞彙表並不正確，預設的排序條件因此留空。"
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -805,11 +801,11 @@ msgstr "範圍"
 msgid "Relevance"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:32
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
 msgid "Remove all"
 msgstr "刪除全部"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:28
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
 msgid "Remove all filters"
 msgstr "删除全部過濾條件"
 
@@ -909,7 +905,7 @@ msgstr "全選"
 msgid "Select the source of the autocomplete suggestions"
 msgstr "指定自動完成器的選項"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:22
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "顯示過濾條件"
 
@@ -941,7 +937,7 @@ msgid "Sphere"
 msgstr "標籤球"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "起始"
@@ -1134,11 +1130,7 @@ msgstr "萬用字元搜尋"
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:31
-msgid "[X]"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr "全部"
@@ -1148,7 +1140,7 @@ msgstr "全部"
 msgid "all items"
 msgstr "所有項目"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr "任何"
@@ -1158,12 +1150,12 @@ msgstr "任何"
 msgid "in current results"
 msgstr "在現行結果裡"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 #: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr "符合"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
 #: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr "符合 Any/All 過濾條件"

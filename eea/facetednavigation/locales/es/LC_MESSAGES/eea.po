@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2019-04-04 19:03+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2012-11-27 16:24+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -15,14 +15,6 @@ msgstr ""
 "Domain: DOMAIN\n"
 "X-Poedit-Language: es\n"
 "X-Poedit-Country: SPAIN\n"
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:21
-msgid "&#8711;"
-msgstr ""
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:17
-msgid "&#916;"
-msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 month ago"
@@ -367,7 +359,7 @@ msgid "Enabled (hidden)"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Final"
@@ -496,7 +488,7 @@ msgstr "Oculto"
 msgid "Hide 'All' option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:18
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "Hide filters"
 msgstr "Ocultar filtros"
 
@@ -551,6 +543,10 @@ msgstr ""
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Se ha configurado un vocabulario no válido o vacío para este widget. Dejar en blanco para los criterios de ordenación por defecto."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -808,11 +804,11 @@ msgstr "Rango"
 msgid "Relevance"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:32
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
 msgid "Remove all"
 msgstr "Eliminar todo"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:28
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
 msgid "Remove all filters"
 msgstr "Eliminar todos los filtros"
 
@@ -912,7 +908,7 @@ msgstr "Seleccionar todos los elementos"
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:22
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "Mostrar filtros"
 
@@ -944,7 +940,7 @@ msgid "Sphere"
 msgstr "Esfera"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Comienzo"
@@ -1138,11 +1134,7 @@ msgstr ""
 msgid "Yesterday"
 msgstr "Ayer"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:31
-msgid "[X]"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr ""
@@ -1152,7 +1144,7 @@ msgstr ""
 msgid "all items"
 msgstr "todos los elementos"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr ""
@@ -1162,12 +1154,12 @@ msgstr ""
 msgid "in current results"
 msgstr "en los resultados actuales"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 #: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
 #: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr ""

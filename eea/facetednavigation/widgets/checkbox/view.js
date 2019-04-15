@@ -133,6 +133,7 @@ Faceted.CheckboxesWidget.prototype = {
   reset: function(){
     // This is done by form.reset, so do nothing
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
     jQuery(this.elements).attr('checked', false);
   },
 
@@ -142,6 +143,7 @@ Faceted.CheckboxesWidget.prototype = {
     if(checked){
       jQuery('form input[type=checkbox]', this.widget).val(checked);
       this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
+      this.widget.addClass("faceted-widget-active");
     }
 
     var operator = Faceted.Query[this.wid + '-operator'];
@@ -170,7 +172,7 @@ Faceted.CheckboxesWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -204,7 +206,7 @@ Faceted.CheckboxesWidget.prototype = {
       var title = label.attr('title');
       label = label.text();
 
-      var link = jQuery('<a href="#">[X]</a>');
+      var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + title + ' filter');
       link.click(function(evt){

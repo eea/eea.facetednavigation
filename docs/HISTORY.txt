@@ -1,20 +1,36 @@
 Changelog
 =========
 
+12.1 - (2019-04-09)
+------------------------
+* Feature: Added "faceted-widget-active" CSS class on widget with selected criteria
+  [avoinea]
+* Change: Moved helper html entities like [X] to CSS
+  [avoinea refs #96]
+* Bug fix: Fixed default language select on translations other than english
+  [avoinea refs #103094]
+* Bug fix: Fixed MultiSelect UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 4
+  [avoinea]
+* Bug fix: Fixed date range widget validation
+  [avoinea refs #145]
+
 12.0 - (2019-04-04)
 ---------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation.
+  [avoinea]
 * Feature: Added MultiSelect Faceted Widget
   [avoinea]
-* Feature: Add editable placeholder on facets with text inputs
+* Feature: Added editable placeholder on facets with text inputs
   [avoinea]
-* Bug fix: Fix Checkboxes/Radio widget More/Less i18n
+* Bug fix: Fixed Checkboxes/Radio widget More/Less i18n
   [avoinea]
 
 11.9 - (2019-03-29)
 ---------------------
-* Change: Update theme colors to fit Plone 5 default theme colors
+* Change: Updated theme colors to fit Plone 5 default theme colors
   [avoinea]
-* Bug fix: Remove double loading spinner within edit mode
+* Bug fix: Removed double loading spinner within edit mode
   [avoinea]
 
 11.8 - (2019-03-05)

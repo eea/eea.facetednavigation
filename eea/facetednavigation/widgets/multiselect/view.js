@@ -136,6 +136,7 @@ Faceted.MultiSelectWidget.prototype = {
   reset: function(){
     this.select.val(null).trigger("change");
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
   },
 
   synchronize: function(){
@@ -143,6 +144,9 @@ Faceted.MultiSelectWidget.prototype = {
     if(value){
       this.select.val(value).trigger("change");
       this.selected = this.widget.find('option:selected');
+      this.widget.addClass("faceted-widget-active");
+    } else {
+      this.reset();
     }
 
     var operator = Faceted.Query[this.wid + '-operator'];
@@ -172,7 +176,7 @@ Faceted.MultiSelectWidget.prototype = {
       return '';
     }
 
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -204,7 +208,7 @@ Faceted.MultiSelectWidget.prototype = {
       var value = element.val();
       var label = element.attr("title");
 
-      var link = jQuery('<a href="#">[X]</a>');
+      var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + label + ' filter');
       link.click(function(evt){

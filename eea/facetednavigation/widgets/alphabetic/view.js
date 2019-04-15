@@ -57,6 +57,7 @@ Faceted.AlphabeticalWidget.prototype = {
 
   letter_unselect: function(letter){
     jQuery(letter).removeClass('faceted_letter_selected');
+    this.widget.removeClass("faceted-widget-active");
     this.selected = [];
   },
 
@@ -64,6 +65,7 @@ Faceted.AlphabeticalWidget.prototype = {
     this.letter_unselect(this.letters);
     jQuery(letter).addClass('faceted_letter_selected');
     if(jQuery(letter).attr('id').split('-')[1] != 'all'){
+      this.widget.addClass("faceted-widget-active");
       this.selected = [letter];
     }
   },
@@ -118,7 +120,7 @@ Faceted.AlphabeticalWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -139,7 +141,7 @@ Faceted.AlphabeticalWidget.prototype = {
       return '';
     }
     var label=jQuery(this.selected[0]).attr('id').split('-')[1];
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid + '_' + label);
     link.attr('title', 'Remove ' + label + ' filter');
 

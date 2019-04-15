@@ -54,6 +54,7 @@ Faceted.PathWidget.prototype = {
 
   reset: function(){
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
     this.input.val('');
   },
 
@@ -64,6 +65,7 @@ Faceted.PathWidget.prototype = {
       return;
     }
     this.selected = [this.input];
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){
@@ -83,7 +85,7 @@ Faceted.PathWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;

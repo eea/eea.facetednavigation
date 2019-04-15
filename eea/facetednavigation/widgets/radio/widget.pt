@@ -5,7 +5,7 @@
   hidden python:view.hidden;
   hidezerocount python:view.hidezerocount;
   sortcountable python:view.sortcountable;
-  default_value python:view.data.get('default', u'');
+  default_value python:view.default or '';
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;

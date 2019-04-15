@@ -39,7 +39,6 @@ class Widget(CountableWidget):
         return ('faceted-multiselect-widget '
                 'faceted-{0}-widget section-{1}').format(css_type, css_title)
 
-
     @property
     def default(self):
         """ Get default values
@@ -50,7 +49,13 @@ class Widget(CountableWidget):
 
         if isinstance(default, (str, unicode)):
             default = [default, ]
-        return [x.encode('utf-8') for x in default]
+
+        res = []
+        for x in default:
+            if isinstance(x, unicode):
+                x = x.encode('utf-8')
+            res.append(x)
+        return res
 
     def selected(self, key):
         """ Return True if key in self.default

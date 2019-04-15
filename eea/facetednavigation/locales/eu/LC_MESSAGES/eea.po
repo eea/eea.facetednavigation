@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2019-04-04 19:03+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2018-12-10 12:34+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: eu <eu@li.org>\n"
@@ -15,14 +15,6 @@ msgstr ""
 "Domain: DOMAIN\n"
 "Language: eu\n"
 "X-Generator: Poedit 2.0.6\n"
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:21
-msgid "&#8711;"
-msgstr "&#8711;"
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:17
-msgid "&#916;"
-msgstr "&#916;"
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 month ago"
@@ -366,7 +358,7 @@ msgid "Enabled (hidden)"
 msgstr "Aktibatuta (ezkutuan)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:35
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Amaiera"
@@ -495,7 +487,7 @@ msgstr "Ezkutuan"
 msgid "Hide 'All' option"
 msgstr "Ezkutatu 'guztiak' aukera"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:18
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "Hide filters"
 msgstr "Filtroak ezkutatu"
 
@@ -550,6 +542,10 @@ msgstr "Konfigurazioa heredatzea desaktibatu da"
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Widget honentzat aukeratu duzun hiztegiak ez du balio edo hutsik dago. Utzi hutsik defektuzko ordenazio-irizpidea erabiltzeko."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/daterange/interfaces.py:57
 msgid "Label (end date)"
@@ -807,11 +803,11 @@ msgstr "Sorta"
 msgid "Relevance"
 msgstr "Errelebantzia"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:32
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
 msgid "Remove all"
 msgstr "Guztiak ezabatu"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:28
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
 msgid "Remove all filters"
 msgstr "Kendu iragazki guztiak"
 
@@ -911,7 +907,7 @@ msgstr "Elementu guztiak aukeratu"
 msgid "Select the source of the autocomplete suggestions"
 msgstr "Berez betetzeko iradokizunak nondik ekarri aukeratu"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:22
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "Erakutsi filtroak"
 
@@ -943,7 +939,7 @@ msgid "Sphere"
 msgstr "Esfera"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:26
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Hasiera"
@@ -1138,11 +1134,7 @@ msgstr "Edozer bilatzea"
 msgid "Yesterday"
 msgstr "Atzo"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:31
-msgid "[X]"
-msgstr "[X]"
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr "guztiak"
@@ -1152,7 +1144,7 @@ msgstr "guztiak"
 msgid "all items"
 msgstr "elementu guztiak"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:32
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
 #: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr "edozein"
@@ -1162,12 +1154,12 @@ msgstr "edozein"
 msgid "in current results"
 msgstr "uneko elementuetan"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
 #: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr "bat-etorri"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
 #: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr "Beheko filtro guztiak/edozein bat-etorri"

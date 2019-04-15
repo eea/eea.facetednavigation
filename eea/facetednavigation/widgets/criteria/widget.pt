@@ -14,11 +14,9 @@
 
   <div class="faceted-criteria-hide-show" tal:condition="view/data/hidecriteriaenabled|python:1">
     <a href="#" class="faceted-criteria-hide">
-      <tal:block i18n:translate="">&#916;</tal:block>
       <tal:block i18n:translate="">Hide filters</tal:block>
     </a>
     <a href="#" class="faceted-criteria-show">
-      <tal:block i18n:translate="">&#8711;</tal:block>
       <tal:block i18n:translate="">Show filters</tal:block>
     </a>
     <span class="faceted-criteria-count">(0)</span>
@@ -28,7 +26,6 @@
     <a href="#" tal:attributes="id string:${wid}_reset"
       title="Remove all filters"
       i18n:attributes="title">
-      <tal:block i18n:translate="">[X]</tal:block>
       <tal:block i18n:translate="">Remove all</tal:block>
     </a>
   </div>

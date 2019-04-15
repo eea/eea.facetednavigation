@@ -142,6 +142,7 @@ Faceted.DateRangeWidget.prototype = {
     this.selected = [];
     this.start.val('');
     this.end.val('');
+    this.widget.removeClass("faceted-widget-active");
     this.end.datepicker("option", "minDate", null);
   },
 
@@ -186,6 +187,7 @@ Faceted.DateRangeWidget.prototype = {
     this.start.val(start);
     this.end.val(end);
     this.selected = [this.start, this.end];
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){
@@ -206,7 +208,7 @@ Faceted.DateRangeWidget.prototype = {
       return '';
     }
 
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -243,7 +245,7 @@ Faceted.DateRangeWidget.prototype = {
     }
 
     var label = this.criteria_label(start_date, end_date);
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
 
     link.attr('id', 'criteria_' + this.wid + '_');
     link.attr('title', 'Remove ' + label + ' filter');
