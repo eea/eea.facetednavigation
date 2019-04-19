@@ -5,5 +5,5 @@ faceted_navigation:
     volumes:
     - ../../:/plone/instance/src/eea.facetednavigation
     environment:
-      ADDONS: "eea.facetednavigation plone.app.testing"
+      ADDONS: "eea.facetednavigation[test]"
       DEVELOP: "src/eea.facetednavigation"

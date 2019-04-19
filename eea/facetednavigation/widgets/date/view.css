@@ -10,15 +10,15 @@
 .faceted-date-widget-form .ui-state-default,
 .faceted-date-widget-form .ui-widget-content .ui-state-default {
   background-image: none;
-  background-color: #e9efcd;
-  border-color: #95b229;
+  background-color: #007bb1;
+  border-color: #007bb1;
   border-width: 1px;
   border-style: solid;
   margin: 0;
 }
 
 .faceted-date-widget-form .ui-slider {
-  border: 1px solid #95b229;
+  border: 1px solid #007bb1;
 }
 
 .faceted-date-widget-form .ui-slider-tooltip {
@@ -31,5 +31,5 @@
 
 .faceted-date-widget-form .ui-widget-header {
   background-image: none;
-  background-color: #e9efcd;
+  background-color: #007bb1;
 }

@@ -1,14 +1,77 @@
 Changelog
 =========
 
-12.0 - (unreleased)
+13.0 - (unreleased)
 -------------------
-
 * Add support or Python 3 and Plone 5.2.
   [pbauer]
 
-11.3 - (2018-10-29)
+12.1 - (2019-04-09)
+------------------------
+* Feature: Added "faceted-widget-active" CSS class on widget with selected criteria
+  [avoinea]
+* Change: Moved helper html entities like [X] to CSS
+  [avoinea refs #96]
+* Bug fix: Fixed default language select on translations other than english
+  [avoinea refs #103094]
+* Bug fix: Fixed MultiSelect UnicodeDecodeError: 'ascii' codec can't decode byte 0xc4 in position 4
+  [avoinea]
+* Bug fix: Fixed date range widget validation
+  [avoinea refs #145]
+
+12.0 - (2019-04-04)
 ---------------------
+* Upgrade step: Within "Plone > Site setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation.
+  [avoinea]
+* Feature: Added MultiSelect Faceted Widget
+  [avoinea]
+* Feature: Added editable placeholder on facets with text inputs
+  [avoinea]
+* Bug fix: Fixed Checkboxes/Radio widget More/Less i18n
+  [avoinea]
+
+11.9 - (2019-03-29)
+---------------------
+* Change: Updated theme colors to fit Plone 5 default theme colors
+  [avoinea]
+* Bug fix: Removed double loading spinner within edit mode
+  [avoinea]
+
+11.8 - (2019-03-05)
+---------------------
+* Change : display message 'No results were found.' when no results found
+  [gbastien]
+* Change: Update README and Plone 4/5 sample buildouts
+  [avoinea]
+
+11.7 - (2019-01-30)
+---------------------
+* Jenkins: Add sonarqube step
+  [avoinea refs #101552]
+
+11.6 - (2018-12-11)
+---------------------
+* Complete basque translation
+  [erral]
+* Fix alphabetic bar for basque language
+  [erral]
+
+11.5 - (2018-11-19)
+---------------------
+* Change : set Faceted.Options.FADE_SPEED to 'fast' instead 'slow' by default
+  [gbastien]
+* Change: make spinner easy to override by defining a CSS background-image
+  instead rendering an image
+  [gbastien]
+
+11.4 - (2018-11-09)
+------------------------
+* Change: display translated 'Relevance' instead nothing in the sorting widget
+  [gbastien]
+
+11.3 - (2018-10-29)
+-------------------
 * Bug fix: Fix preview item templates for orphan brains
   [avoinea refs #99847]
 

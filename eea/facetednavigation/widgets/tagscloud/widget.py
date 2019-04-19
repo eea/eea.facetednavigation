@@ -2,7 +2,6 @@
 """
 import random
 from Products.CMFPlone.utils import safeToInt
-
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.tagscloud.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.tagscloud.interfaces import LayoutSchemata

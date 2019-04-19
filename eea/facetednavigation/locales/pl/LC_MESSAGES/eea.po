@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2017-09-12 14:10+0000\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
 "PO-Revision-Date: 2011-05-23 13:30+0100\n"
 "Last-Translator: Jens W. Klein <jens@bluedynamics.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,14 +13,6 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:21
-msgid "&#8711;"
-msgstr ""
-
-#: ../../facetednavigation/widgets/criteria/widget.pt:17
-msgid "&#916;"
-msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:19
 msgid "1 month ago"
@@ -83,10 +75,14 @@ msgid "After query filters"
 msgstr "Po filtrów zapytania"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:23
-#: ../../facetednavigation/widgets/radio/widget.pt:33
+#: ../../facetednavigation/widgets/radio/widget.pt:34
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
 msgstr "Wszystkie"
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:45
+msgid "Allow multiple selections"
+msgstr ""
 
 #: ../../facetednavigation/widgets/alphabetic/widget.py:25
 msgid "Alphabetic"
@@ -100,7 +96,7 @@ msgstr ""
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Czy na pewno chcesz usunąć $ {widget} widget?"
 
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:22
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:23
 msgid "Autocomplete"
 msgstr ""
 
@@ -108,35 +104,35 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:36
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:37
 msgid "Can select multiple values"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:35
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:36
 msgid "Can select several elements"
 msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:51
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
 #: ../../facetednavigation/widgets/radio/interfaces.py:24
-#: ../../facetednavigation/widgets/select/interfaces.py:24
 msgid "Catalog"
 msgstr "Katalog"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/interfaces.py:26
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:16
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:17
 #: ../../facetednavigation/widgets/boolean/interfaces.py:16
 msgid "Catalog index"
 msgstr "Indeks katalogowy"
 
-#: ../../facetednavigation/widgets/interfaces.py:84
+#: ../../facetednavigation/widgets/interfaces.py:91
 msgid "Catalog index to be used"
 msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:17
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:18
 #: ../../facetednavigation/widgets/boolean/interfaces.py:17
 msgid "Catalog index to use for search"
 msgstr "Indeks katalogowy używać do wyszukiwania"
@@ -187,7 +183,7 @@ msgid "Control the range of yearsdisplayed in the year drop-down: either relativ
 msgstr "Kontrolować zakres yearsdisplayed w roku rozwijanej: albo w stosunku do dzisiejszego roku (-nn: + nn), w stosunku do aktualnie wybranego roku (c-nn: c + nn), absolutną (nnnn: nnnn), lub kombinacji z tych formatów (nnnn:-nn)."
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:109
+#: ../../facetednavigation/widgets/interfaces.py:116
 msgid "Count results"
 msgstr "Zliczanie rekordów"
 
@@ -230,6 +226,7 @@ msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:19
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:19
 msgid "Default items (one per line)"
 msgstr "Elementy domyślne (jeden na linię)"
 
@@ -240,10 +237,11 @@ msgstr "Domyślnie list do wyboru"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:26
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
 msgid "Default operator"
 msgstr "Operator"
 
-#: ../../facetednavigation/widgets/interfaces.py:77
+#: ../../facetednavigation/widgets/interfaces.py:84
 msgid "Default query"
 msgstr ""
 
@@ -302,12 +300,12 @@ msgid "Disable smart facets hiding"
 msgstr "Wyłącz inteligentne aspekty ukrywanie"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:110
+#: ../../facetednavigation/widgets/interfaces.py:117
 msgid "Display number of results near each option"
 msgstr "Wyświetlanie liczby wyników w pobliżu każdej z opcji"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:97
+#: ../../facetednavigation/widgets/interfaces.py:104
 msgid "Display widget in section"
 msgstr "Ostatnia widget w dziale"
 
@@ -320,7 +318,7 @@ msgstr "Ostatnia widżet w sekcji."
 msgid "EEA Faceted Navigation"
 msgstr ""
 
-#: ../../facetednavigation/profiles.zcml:35
+#: ../../facetednavigation/profiles.zcml:34
 msgid "EEA Faceted Navigation Common Configuration"
 msgstr ""
 
@@ -337,7 +335,7 @@ msgid "Enable hide/show criteria"
 msgstr "Włącz ukryć / pokazać kryteria"
 
 #: ../../facetednavigation/settings/menu.py:130
-msgid "Enable inheriting configuration "
+msgid "Enable inheriting configuration"
 msgstr ""
 
 #: ../../facetednavigation/settings/menu.py:82
@@ -357,12 +355,12 @@ msgid "Enabled (hidden)"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:28
+#: ../../facetednavigation/widgets/range/widget.pt:37
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Koniec"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:32
+#: ../../facetednavigation/widgets/daterange/widget.pt:39
 msgid "End date"
 msgstr "Data końcowa"
 
@@ -378,8 +376,8 @@ msgstr "Wartość błędu:"
 msgid "Export"
 msgstr "Eksport"
 
-#: ../../facetednavigation/profiles.zcml:35
-msgid "Extension profile for EEA Faceted Navigation settings that                    aren't version dependent."
+#: ../../facetednavigation/profiles.zcml:34
+msgid "Extension profile for EEA Faceted Navigation settings that aren't version dependent."
 msgstr ""
 
 #: ../../facetednavigation/profiles.zcml:17
@@ -471,13 +469,13 @@ msgstr "Przyszłość."
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:52
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:59
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
-#: ../../facetednavigation/widgets/select/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Zdobądź unikalne wartości z katalogu jako alternatywa dla słownika"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:103
+#: ../../facetednavigation/widgets/interfaces.py:110
 msgid "Hidden"
 msgstr "Ukryte"
 
@@ -486,12 +484,12 @@ msgstr "Ukryte"
 msgid "Hide 'All' option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:18
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
 msgid "Hide filters"
 msgstr "Ukryj filtry"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:121
+#: ../../facetednavigation/widgets/interfaces.py:128
 msgid "Hide items with zero results"
 msgstr "Ukrywanie elementów z zerową wyników"
 
@@ -500,7 +498,7 @@ msgid "Hide this widget in order for e-tag to be used"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:104
+#: ../../facetednavigation/widgets/interfaces.py:111
 msgid "Hide widget"
 msgstr "Ukryj widget"
 
@@ -509,12 +507,12 @@ msgstr "Ukryj widget"
 msgid "If this checkbox is checked, hides the \"All\" option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:29
-#: ../../facetednavigation/widgets/text/interfaces.py:23
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:30
+#: ../../facetednavigation/widgets/text/interfaces.py:24
 msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
 msgstr ""
 
-#: ../../facetednavigation/widgets/text/interfaces.py:30
+#: ../../facetednavigation/widgets/text/interfaces.py:31
 msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
 msgstr ""
 
@@ -542,12 +540,38 @@ msgstr ""
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Nieprawidłowy lub pusty słownictwo przewidziano tego widgetu. Pozostaw puste dla kryterium sortowania domyślnych."
 
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:57
+msgid "Label (end date)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:29
+msgid "Label (end range)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:50
+msgid "Label (start date)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:22
+msgid "Label (start range)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "Less"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:31
 msgid "Less filters"
 msgstr "Mniej filtrów"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:37
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:37
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr ""
 
@@ -595,6 +619,11 @@ msgstr "Minimalny rozmiar czcionki (px)"
 msgid "Minimum size"
 msgstr "Minimalny rozmiar"
 
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "More"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/browser/template/view.pt:30
 msgid "More filters"
@@ -607,6 +636,14 @@ msgstr "Przesuń w dół"
 #: ../../facetednavigation/browser/template/configure.pt:155
 msgid "Move Up"
 msgstr "Przesuń w górę"
+
+#: ../../facetednavigation/widgets/multiselect/widget.py:22
+msgid "Multi Select"
+msgstr ""
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
+msgid "Multiselect"
+msgstr ""
 
 #: ../../facetednavigation/widgets/path/interfaces.py:25
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
@@ -666,6 +703,7 @@ msgid "Number of items visible in widget"
 msgstr "Liczba elementów widocznych w widgecie"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:36
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
 msgid "Operator visible"
 msgstr ""
 
@@ -685,6 +723,26 @@ msgstr "Ścieżka"
 #: ../../facetednavigation/widgets/portlet/interfaces.py:16
 msgid "Path to portlet macro"
 msgstr "Ścieżka do portletu makro"
+
+#: ../../facetednavigation/widgets/interfaces.py:76
+msgid "Placeholder"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:71
+msgid "Placeholder (end date)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:43
+msgid "Placeholder (end range)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:64
+msgid "Placeholder (start date)"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:36
+msgid "Placeholder (start range)"
+msgstr ""
 
 #: ../../facetednavigation/browser/app/exportimport.py:41
 msgid "Please provide a valid xml file"
@@ -717,7 +775,7 @@ msgstr "Kolumna prawa portletów jest widoczny teraz"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:42
-#: ../../facetednavigation/widgets/interfaces.py:89
+#: ../../facetednavigation/widgets/interfaces.py:96
 msgid "Position"
 msgstr "Stanowisko/Funkcja"
 
@@ -734,15 +792,19 @@ msgstr "Nazwa Python z fabryki, które można utworzyć obiekt implementacji. To
 msgid "Radio"
 msgstr "Radio"
 
-#: ../../facetednavigation/widgets/range/widget.py:18
+#: ../../facetednavigation/widgets/range/widget.py:19
 msgid "Range"
 msgstr "Zakres"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:32
+#: ../../facetednavigation/widgets/sorting/widget.pt:29
+msgid "Relevance"
+msgstr ""
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
 msgid "Remove all"
 msgstr "Usuń wszystko"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:28
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
 msgid "Remove all filters"
 msgstr "Usuń wszystkie filtry"
 
@@ -784,8 +846,8 @@ msgstr "Strona odwrotna (Rewers)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
-#: ../../facetednavigation/widgets/select/interfaces.py:32
 msgid "Reverse options"
 msgstr "Opcje tylnej"
 
@@ -802,8 +864,8 @@ msgstr "Save (zapisz)"
 msgid "Schema interface"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:32
-#: ../../facetednavigation/widgets/text/widget.pt:25
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:35
+#: ../../facetednavigation/widgets/text/widget.pt:27
 msgid "Search"
 msgstr "Search"
 
@@ -812,18 +874,19 @@ msgstr "Search"
 msgid "Search Depth"
 msgstr "Głębokość wyszukiwania"
 
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:28
-#: ../../facetednavigation/widgets/text/interfaces.py:22
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:29
+#: ../../facetednavigation/widgets/text/interfaces.py:23
 msgid "Search in all elements only"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:27
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:27
 msgid "Search with AND/OR between elements"
 msgstr "Szukaj z AND / OR między elementami"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:54
-#: ../../facetednavigation/widgets/interfaces.py:96
+#: ../../facetednavigation/widgets/interfaces.py:103
 msgid "Section"
 msgstr "Rozdział"
 
@@ -831,20 +894,16 @@ msgstr "Rozdział"
 msgid "Select"
 msgstr "Wybierz"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:1
-msgid "Select a value"
-msgstr ""
-
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:112
 msgid "Select all items"
 msgstr "Zaznacz wszystkie elementy"
 
-#: ../../facetednavigation/widgets/autocomplete/interfaces.py:23
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:24
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:22
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
 msgid "Show filters"
 msgstr "Pokaż filtry"
 
@@ -856,14 +915,14 @@ msgstr "Inteligentne ukrywanie aspektów jest teraz wyłączony"
 msgid "Smart facets hiding is now enabled"
 msgstr "Inteligentne ukrywanie aspektów jest teraz włączony"
 
-#: ../../facetednavigation/widgets/interfaces.py:115
+#: ../../facetednavigation/widgets/interfaces.py:122
 msgid "Sort by countable"
 msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
-#: ../../facetednavigation/widgets/select/interfaces.py:33
 msgid "Sort options reversed"
 msgstr "Opcje sortowania odwrócone"
 
@@ -876,12 +935,12 @@ msgid "Sphere"
 msgstr "Kula"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:20
+#: ../../facetednavigation/widgets/range/widget.pt:28
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Uruchomienie"
 
-#: ../../facetednavigation/widgets/daterange/widget.pt:24
+#: ../../facetednavigation/widgets/daterange/widget.pt:30
 msgid "Start date"
 msgstr "Data rozpoczęcia"
 
@@ -915,12 +974,48 @@ msgstr ""
 msgid "Tal Expression"
 msgstr "Tal Expression"
 
-#: ../../facetednavigation/widgets/text/widget.py:14
+#: ../../facetednavigation/widgets/text/widget.py:15
 msgid "Text field"
 msgstr "Pole tekstowe"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:28
+#: ../../facetednavigation/widgets/autocomplete/widget.py:27
 msgid "Text field with suggestions"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:58
+msgid "Text to be displayed as end date input label"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:72
+msgid "Text to be displayed as end date input placeholder"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:30
+msgid "Text to be displayed as end range input label"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:44
+msgid "Text to be displayed as end range input placeholder"
+msgstr ""
+
+#: ../../facetednavigation/widgets/interfaces.py:77
+msgid "Text to be displayed as input placeholder"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:51
+msgid "Text to be displayed as start date input label"
+msgstr ""
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:65
+msgid "Text to be displayed as start date input placeholder"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:23
+msgid "Text to be displayed as start range input label"
+msgstr ""
+
+#: ../../facetednavigation/widgets/range/interfaces.py:37
+msgid "Text to be displayed as start range input placeholder"
 msgstr ""
 
 #. Default: ""
@@ -928,12 +1023,12 @@ msgstr ""
 msgid "Theme to be used with this widget"
 msgstr "Motyw do użytku z tym widgetem"
 
-#: ../../facetednavigation/widgets/interfaces.py:122
+#: ../../facetednavigation/widgets/interfaces.py:129
 msgid "This option works only if 'count results' is enabled"
 msgstr "Opcja ta działa tylko wtedy, gdy 'wyniki liczyć' jest włączona"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/widget.pt:29
+#: ../../facetednavigation/widgets/path/widget.pt:31
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
 msgstr "Ten widget będą ignorowane zgodnie korzeń jest nieosiągalny lub nie ma ona folderish dzieci."
 
@@ -976,15 +1071,15 @@ msgstr "UI lata kalendarzowe wahać"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Usuń zaznaczenie tego pola, jeśli nie chcesz, ukryj / kryteria pokaż wyposażone włączona widgetu"
 
-#: ../../facetednavigation/profiles.zcml:43
+#: ../../facetednavigation/profiles.zcml:42
 msgid "Uninstall EEA Faceted Navigation"
 msgstr ""
 
-#: ../../facetednavigation/profiles.zcml:43
+#: ../../facetednavigation/profiles.zcml:42
 msgid "Uninstall to remove EEA Faceted Navigation support"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:116
+#: ../../facetednavigation/widgets/interfaces.py:123
 msgid "Use the results counter for sorting"
 msgstr ""
 
@@ -995,8 +1090,8 @@ msgstr "Widoczne"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:44
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
 #: ../../facetednavigation/widgets/radio/interfaces.py:17
-#: ../../facetednavigation/widgets/select/interfaces.py:17
 msgid "Vocabulary"
 msgstr "słownictwem."
 
@@ -1007,13 +1102,13 @@ msgstr "Słownictwo używać do filtrowania kryteria sortowania. Pozostaw puste 
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:45
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:52
 #: ../../facetednavigation/widgets/radio/interfaces.py:18
-#: ../../facetednavigation/widgets/select/interfaces.py:18
 msgid "Vocabulary to use to render widget items"
 msgstr "Słownik używany do renderowania elementów widget"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:90
+#: ../../facetednavigation/widgets/interfaces.py:97
 msgid "Widget position in page"
 msgstr "Stanowisko Widget na stronie"
 
@@ -1026,7 +1121,7 @@ msgstr "Typ Widget"
 msgid "Widget will be visible only for selected user"
 msgstr "Widget będzie widoczny tylko dla wybranego użytkownika"
 
-#: ../../facetednavigation/widgets/text/interfaces.py:29
+#: ../../facetednavigation/widgets/text/interfaces.py:30
 msgid "Wildcard search"
 msgstr ""
 
@@ -1034,36 +1129,36 @@ msgstr ""
 msgid "Yesterday"
 msgstr "Yesterday"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:31
-msgid "[X]"
-msgstr ""
-
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:42
-#: ../../facetednavigation/widgets/text/widget.pt:35
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:45
+#: ../../facetednavigation/widgets/text/widget.pt:37
 msgid "all items"
 msgstr "Wszystkie zagadnienia"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:51
-#: ../../facetednavigation/widgets/text/widget.pt:44
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:54
+#: ../../facetednavigation/widgets/text/widget.pt:46
 msgid "in current results"
 msgstr "Dalsze wyszukiwanie "
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/multiselect/widget.pt:53
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:27
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/multiselect/widget.pt:52
 msgid "match any/all filters bellow"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:106
+#: ../../facetednavigation/widgets/autocomplete/widget.py:105
 msgid "solr"
 msgstr ""

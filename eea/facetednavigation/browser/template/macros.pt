@@ -34,7 +34,6 @@
       </div>
       <div tal:attributes="
         id string:${position}---${section_value}---widgets;
-        title section_title;
         class string:faceted-drag-drop faceted-widgets faceted-${section_value}-widgets faceted-${position}-widgets;">
         <tal:widget repeat="widget widgets">
           <div tal:replace="structure widget"> Widget </div>

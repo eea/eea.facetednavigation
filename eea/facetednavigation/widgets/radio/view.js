@@ -56,7 +56,9 @@ Faceted.RadioWidget = function(wid){
   if(this.maxitems){
     this.fieldset.collapsible({
       maxitems: this.maxitems,
-      elements: 'li:not(.faceted-radio-item-zerocount)'
+      elements: 'li:not(.faceted-radio-item-zerocount)',
+      more: this.widget.data("more"),
+      less: this.widget.data("less")
     });
   }
 };
@@ -83,6 +85,7 @@ Faceted.RadioWidget.prototype = {
   reset: function(){
     jQuery(this.elements[0]).prop('checked', true);
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
   },
 
   synchronize: function(){
@@ -103,6 +106,7 @@ Faceted.RadioWidget.prototype = {
       }else{
         context.selected = radio;
         context.selected.prop('checked', true);
+        context.widget.addClass("faceted-widget-active");
       }
     });
   },
@@ -124,7 +128,7 @@ Faceted.RadioWidget.prototype = {
     if(!this.selected.length){
       return '';
     }
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -153,7 +157,7 @@ Faceted.RadioWidget.prototype = {
     var label = jQuery('label[for=' + id + ']');
     var title = label.attr('title');
     label = label.text();
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     var span = jQuery('<span class="facted-radio-criterion">');
     link.attr('id', 'criteria_' + id);
     link.attr('title', 'Remove ' + title + ' filter');

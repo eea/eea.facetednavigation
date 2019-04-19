@@ -12,6 +12,8 @@ Faceted.RangeWidget = function(wid){
   this.end = jQuery('input[name=end]', this.widget);
   this.selected = [];
 
+  this.invalidRangeMsg = this.widget.data("invalid-range-msg");
+
   var start = this.start.val();
   var end = this.end.val();
   if(start && end){
@@ -43,16 +45,19 @@ Faceted.RangeWidget.prototype = {
 
   do_query: function(element){
     var start = this.start.val();
+    start = parseFloat(start) || start;
     var end = this.end.val();
+    end = parseFloat(end) || end;
+
     if(!start || !end){
       this.selected = [];
       return false;
     }
 
-    var value = [start, end];
+    var value = [this.start.val(), this.end.val()];
+
     if(end<start){
-      var msg = 'Invalid range';
-      Faceted.Form.raise_error(msg, this.wid + '_errors', []);
+      Faceted.Form.raise_error(this.invalidRangeMsg, this.wid + '_errors', []);
     }else{
       this.selected = [this.start, this.end];
       Faceted.Form.clear_errors(this.wid + '_errors', []);
@@ -62,6 +67,7 @@ Faceted.RangeWidget.prototype = {
 
   reset: function(){
     this.selected = [];
+    this.widget.removeClass("faceted-widget-active");
     this.start.val('');
     this.end.val('');
   },
@@ -88,6 +94,7 @@ Faceted.RangeWidget.prototype = {
     this.start.val(start);
     this.end.val(end);
     this.selected = [this.start, this.end];
+    this.widget.addClass("faceted-widget-active");
   },
 
   criteria: function(){
@@ -108,7 +115,7 @@ Faceted.RangeWidget.prototype = {
       return '';
     }
 
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
@@ -135,7 +142,7 @@ Faceted.RangeWidget.prototype = {
     var end = this.end.val();
 
     var label = start + ' - ' + end;
-    var link = jQuery('<a href="#">[X]</a>');
+    var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
 
     link.attr('id', 'criteria_' + this.wid + '_');
     link.attr('title', 'Remove ' + label + ' filter');

@@ -7,6 +7,7 @@ from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.range.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.range.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.range.interfaces import DisplaySchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
 import six
@@ -20,7 +21,7 @@ class Widget(AbstractWidget):
     widget_type = 'range'
     widget_label = _('Range')
 
-    groups = (DefaultSchemata, LayoutSchemata)
+    groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
     index = ViewPageTemplateFile('widget.pt')
 
     @property

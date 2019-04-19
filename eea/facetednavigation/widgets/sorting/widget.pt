@@ -26,7 +26,7 @@
 
 <tal:sorting condition="vocabulary">
   <select tal:attributes="name wid; id wid">
-    <option value=""></option>
+    <option value="" i18n:translate="">Relevance</option>
     <tal:option repeat="term vocabulary">
       <option tal:define="
         term_id python:term[0];

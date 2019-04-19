@@ -32,6 +32,9 @@
  <stylesheet id="++resource++eea.facetednavigation.widgets.etag.view.css"
              insert-after="++resource++eea.faceted-navigation.css"
              bundle="faceted-view" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.multiselect.view.css"
+             insert-after="++resource++eea.faceted-navigation.css"
+             bundle="faceted-view" />
  <stylesheet id="++resource++eea.facetednavigation.widgets.path.view.css"
              insert-after="++resource++eea.faceted-navigation.css"
              bundle="faceted-view" />
@@ -99,6 +102,10 @@
              expression="python:'configure_faceted.html' in request.URL0"
              bundle="faceted-edit" />
  <stylesheet id="++resource++eea.facetednavigation.widgets.etag.edit.css"
+             insert-after="++resource++eea.faceted-navigation-edit.css"
+             expression="python:'configure_faceted.html' in request.URL0"
+             bundle="faceted-edit" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.multiselect.edit.css"
              insert-after="++resource++eea.faceted-navigation-edit.css"
              expression="python:'configure_faceted.html' in request.URL0"
              bundle="faceted-edit" />

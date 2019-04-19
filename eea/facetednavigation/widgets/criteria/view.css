@@ -13,13 +13,13 @@
 }
 
 .faceted-criteria a {
-  color: #95B229 !important;
+  color: #007bb1 !important;
   text-decoration: none !important;
   border: none !important;
 }
 
 .faceted-criteria a:visited {
-  color: #95B229 !important;
+  color: #007bb1 !important;
   text-decoration: none !important;
   border: none !important;
 }
@@ -44,6 +44,18 @@
 
 .faceted-criteria-show {
   display: none;
+}
+
+.faceted-criteria-show:before {
+  content: "+";
+}
+
+.faceted-criteria-hide:before {
+  content: "-";
+}
+
+.faceted-criteria-reset a:before {
+  content: "x"
 }
 
 .faceted-criteria-count {

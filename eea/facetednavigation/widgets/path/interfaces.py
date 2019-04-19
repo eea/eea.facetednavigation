@@ -42,7 +42,7 @@ class IPathSchema(ISchema):
         title=_(u'Navigation tree theme'),
         description=_(u'Theme to be used with this widget'),
         vocabulary=u'eea.faceted.vocabularies.JsTreeThemes',
-        default=u'green',
+        default=u'apple',
         required=False
     )
 
@@ -64,7 +64,8 @@ class DisplaySchemata(FacetedSchemata):
     """
     label = u'display'
     fields = field.Fields(IPathSchema).select(
-        u'theme'
+        u'theme',
+        u'placeholder'
     )
 
 __all__ = [

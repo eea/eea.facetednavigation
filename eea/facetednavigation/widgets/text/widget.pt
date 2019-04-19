@@ -4,6 +4,7 @@
   wid python:view.data.getId();
   hidden python:view.hidden;
   default_value python:view.default or '';
+  placeholder python:view.data.get('placeholder', '');
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;"
   tal:attributes="id string:${wid}_widget; class css">
@@ -20,6 +21,7 @@
   <input type="text" tal:attributes="
     name string:${wid};
     id string:${wid};
+    placeholder python:view.translate(placeholder);
     value default_value;
   "/>
   <input type="submit" class="searchButton" value="Search" tal:attributes="

@@ -32,7 +32,8 @@ class Widget(CountableWidget):
         """
         default = super(Widget, self).default or u''
         if six.PY2:
-            default = default.encode('utf-8')
+            if isinstance(default, six.text_type):
+                default = default.encode('utf-8')
         return default
 
     def query(self, form):
