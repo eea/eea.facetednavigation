@@ -78,7 +78,7 @@ class ISchema(Interface):
         description=_(u"Text to be displayed as input placeholder"),
         required=False
     )
-    placeholder._type = (str, unicode)
+    placeholder._type = (str, six.text_type)
 
     default = schema.TextLine(
         title=_(u"Default value"),
