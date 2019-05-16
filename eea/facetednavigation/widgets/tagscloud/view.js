@@ -135,7 +135,7 @@ Faceted.TagsCloudWidget.prototype = {
     if(!value){
       this.reset();
     }else{
-      value = value[0].replace(/ /g, '_-_').replace(/\//g, '_--_');
+      value = value[0].replace(/\s/g, '_-_').replace(/\//g, '_--_');
       var tag = jQuery('#' + this.wid + value, this.widget);
       if(tag.length){
         this.select(tag[0]);
