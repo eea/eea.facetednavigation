@@ -1,7 +1,7 @@
 Changelog
 =========
 
-12.2-dev0 - (unreleased)
+12.2 - (2019-05-20)
 ---------------------
 * Bug fix: Allow path within Tags Cloud facet
   [avoinea]
