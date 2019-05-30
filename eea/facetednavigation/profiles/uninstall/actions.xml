@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+ xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <object name="object_buttons" meta_type="CMF Action Category">
+  <object name="faceted.sync" remove="True"></object>
+  <object name="faceted.disable" remove="True"></object>
+  <object name="faceted.enable" remove="True"></object>
+  <object name="faceted.search.disable" remove="True"></object>
+  <object name="faceted.search.enable" remove="True"></object>
+ </object>
+</object>

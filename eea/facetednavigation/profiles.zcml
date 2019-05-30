@@ -39,6 +39,7 @@
       title="Uninstall EEA Faceted Navigation"
       description="Uninstall to remove EEA Faceted Navigation support"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall_faceted"
       />
 
   <genericsetup:importStep
