@@ -26,6 +26,7 @@ def setupVarious(context):
 def uninstall_faceted(context):
     """ Custom script to remove interface traces on uninstall """
     remove_annotations(context)
+    remove_default_views(context)
     remove_assigned_interfaces(context)
 
 
@@ -62,3 +63,18 @@ def remove_annotations(context):
         if ANNO_CRITERIA in annotations:
             del annotations[ANNO_CRITERIA]
             log.info("Removed criteria configuration from {0}".format(brain.getPath()))
+
+
+def remove_default_views(context):
+    portal_catalog = getToolByName(context, "portal_catalog")
+    brains = portal_catalog(object_provides=IFacetedNavigable.__identifier__)
+    for brain in brains:
+        item = brain.getObject()
+        if (
+            item.hasProperty("layout")
+            and item.getProperty("layout") == "facetednavigation_view"
+        ):
+            item.manage_delProperties(["layout"])
+            log.info(
+                "Removed facetednavigation_view layout from {0}".format(brain.getPath())
+            )
