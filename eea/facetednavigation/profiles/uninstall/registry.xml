@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="eea.facetednavigation.interfaces.IEEASettings.disable_diazo_rules_ajax"
+          interface="eea.facetednavigation.interfaces.IEEASettings"
+          field="disable_diazo_rules_ajax"
+          remove="True">
+  </record>
+  <record interface="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings"
+          field="resourceBundlesForThemes" remove="True">
+  </record>
+</registry>
