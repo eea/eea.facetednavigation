@@ -33,10 +33,10 @@ String
 
     >>> widget.data.update(default=u'string:a/path')
     >>> query = widget.query(form={})
-    >>> 'path' in 'query
+    >>> 'path' in query
     True
 
-    >>> print(query['path']
+    >>> print(query['path'])
     a/path
 
 

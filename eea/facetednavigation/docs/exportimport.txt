@@ -71,7 +71,7 @@ Checkboxes
     ...     count=False)
 
     >>> print(exporter.body.decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
@@ -129,7 +129,7 @@ Let's check exported
     >>> importer = queryMultiAdapter((new_sandbox, DummySetupEnviron()), IBody)
     >>> importer.body = exporter.body
     >>> print(importer.body.decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
@@ -186,7 +186,7 @@ Add one widget
 Check configuration
 
     >>> print(importer.body.decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...>
     <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
@@ -211,7 +211,7 @@ Now update it
 
     >>> importer.body = exporter.body
     >>> print(importer.body.decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c0">
@@ -282,7 +282,7 @@ Let's see our new configuration
     ...   'redirect': '',
     ... }
     >>> print(view(**query).decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
@@ -333,7 +333,7 @@ Import a xml file with purge set to False, new criteria will be added to existin
     ...   'redirect': '',
     ... }
     >>> print(view(**query).decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
@@ -390,7 +390,7 @@ Importing an already existing criterion will not fail, it is just ignored and a 
     ... }
 
     >>> print(view(**query).decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
@@ -447,7 +447,7 @@ Import a xml file with purge set to True (default), existing criteria are remove
     ...   'redirect': '',
     ... }
     >>> print(view(**query).decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="new_sandbox" meta_type="...">
      <criteria>
       <criterion name="c22">
