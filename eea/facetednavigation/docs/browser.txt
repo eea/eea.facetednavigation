@@ -198,7 +198,7 @@ Edit (no AJAX)
   Export
 
     >>> browser.getControl('Export').click()
-    >>> print(browser.contents)
+    >>> print(browser.contents).strip()
     <?xml version="1.0" encoding="utf-8"?>
     <object name="sandbox" meta_type="...">
      <criteria>
@@ -230,7 +230,6 @@ Edit (no AJAX)
       </criterion>
      </criteria>
     </object>
-    ...
 
 
 Edit (AJAX)
