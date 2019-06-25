@@ -46,7 +46,7 @@ XML Export
 Export empty criteria
 
     >>> print(exporter.body.decode('utf-8').strip())
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml...?>
     <object name="sandbox" meta_type="...">
      <criteria/>
     </object>

@@ -1,7 +1,6 @@
 """ Faceted events
 """
 from zope.interface import implementer
-from zope.interface.interfaces import ObjectEvent
 from eea.facetednavigation.interfaces import (
     IFacetedEvent,
     IFacetedGlobalSettingsChangedEvent,
@@ -11,6 +10,12 @@ from eea.facetednavigation.interfaces import (
     IFacetedDisabledEvent,
     IQueryWillBeExecutedEvent,
 )
+
+try:
+    from zope.interface.interfaces import ObjectEvent
+except ImportError:
+    # very old zope.interface (Plone 4 only)
+    from zope.component.interfaces import ObjectEvent
 
 
 @implementer(IFacetedEvent)
