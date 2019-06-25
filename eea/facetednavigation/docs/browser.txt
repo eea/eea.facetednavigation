@@ -230,6 +230,7 @@ Edit (no AJAX)
       </criterion>
      </criteria>
     </object>
+    ...
 
 
 Edit (AJAX)
