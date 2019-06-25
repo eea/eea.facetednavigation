@@ -15,16 +15,23 @@ setup(name=NAME,
           open("README.rst").read() + "\n" +
           open(os.path.join("docs", "HISTORY.txt")).read()
       ),
-      # https://pypi.python.org/pypi?%3Aaction=list_classifiers
+      # https://pypi.org/pypi?%3Aaction=list_classifiers
       classifiers=[
+          "Framework :: Zope",
           "Framework :: Zope2",
+          "Framework :: Zope :: 2",
+          "Framework :: Zope :: 4 ",
           "Framework :: Plone",
+          "Framework :: Plone :: Addon",
           "Framework :: Plone :: 4.3",
           "Framework :: Plone :: 5.0",
           "Framework :: Plone :: 5.1",
+          "Framework :: Plone :: 5.2",
           "Programming Language :: Zope",
           "Programming Language :: Python",
           "Programming Language :: Python :: 2.7",
+          "Programming Language :: Python :: 3.6",
+          "Programming Language :: Python :: 3.7",
           "Topic :: Software Development :: Libraries :: Python Modules",
           "License :: OSI Approved :: GNU General Public License (GPL)",
       ],
