@@ -17,7 +17,6 @@ from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.utils import safe_unicode
-from ZTUtils.Lazy import LazyMap
 
 from eea.facetednavigation.plonex import ISolrSearch
 from eea.facetednavigation.interfaces import IFacetedCatalog
@@ -29,6 +28,12 @@ from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 import six
 from six.moves import range
+
+try:
+    from ZTUtils.Lazy import LazyMap
+except ImportError:
+    from Products.ZCatalog.Lazy import LazyMap
+
 logger = logging.getLogger('eea.facetednavigation')
 
 
