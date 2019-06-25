@@ -53,8 +53,8 @@ Add widget
     >>> _ = handler(addPropertiesWidget_button=True, wtype='alphabetic',
     ...             wposition='top', title='Alpha',
     ...             hidden=True, index='Title', default='Z')
-    >>> ICriteria(sandbox).keys()
-    ['c0']
+    >>> print(ICriteria(sandbox).keys()[0])
+    'c0'
 
     >>> ICriteria(sandbox).get('c0').__dict__
     {...'default': 'Z'...}
