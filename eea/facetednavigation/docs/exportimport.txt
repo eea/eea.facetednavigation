@@ -50,6 +50,7 @@ Export empty criteria
     <object name="sandbox" meta_type="...">
      <criteria/>
     </object>
+    ...
 
 Let's add some criteria
 

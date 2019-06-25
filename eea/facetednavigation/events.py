@@ -1,7 +1,7 @@
 """ Faceted events
 """
 from zope.interface import implementer
-from zope.component.interfaces import ObjectEvent
+from zope.interface.interfaces import ObjectEvent
 from eea.facetednavigation.interfaces import (
     IFacetedEvent,
     IFacetedGlobalSettingsChangedEvent,
@@ -11,6 +11,7 @@ from eea.facetednavigation.interfaces import (
     IFacetedDisabledEvent,
     IQueryWillBeExecutedEvent,
 )
+
 
 @implementer(IFacetedEvent)
 class FacetedEvent(ObjectEvent):

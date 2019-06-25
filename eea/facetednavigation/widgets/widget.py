@@ -17,7 +17,7 @@ from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.utils import safe_unicode
-from Products.ZCatalog.Lazy import LazyMap
+from ZUtils.Lazy import LazyMap
 
 from eea.facetednavigation.plonex import ISolrSearch
 from eea.facetednavigation.interfaces import IFacetedCatalog

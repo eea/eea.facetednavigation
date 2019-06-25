@@ -3,8 +3,9 @@ Changelog
 
 13.0 - (unreleased)
 -------------------
+
 * Add support or Python 3 and Plone 5.2.
-  [pbauer]
+  [pbauer, jensens]
 
 12.1 - (2019-04-09)
 ------------------------
