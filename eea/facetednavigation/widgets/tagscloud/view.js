@@ -20,7 +20,7 @@ Faceted.TagsCloudWidget = function(wid){
   var selected = jQuery('.faceted-tag-selected', this.widget);
   if(selected.length){
     var value = selected.attr('id').replace(this.wid, '');
-    value = value.replace(/_-_/g, ' ');
+    value = value.replace(/_-_/g, ' ').replace(/_--_/g, '/');
     Faceted.Query[this.wid] = [value];
     this.synchronize();
   }
@@ -111,11 +111,11 @@ Faceted.TagsCloudWidget.prototype = {
 
   do_query: function(tag){
     var value = jQuery(tag).attr('id').replace(this.wid, '');
-    value = value.replace(/_-_/g, ' ');
+    value = value.replace(/_-_/g, ' ').replace(/_--_/g, '/');
     var selected_value = '';
     if(this.selected.length){
       selected_value = jQuery(this.selected[0]).attr('id').replace(this.wid, '');
-      selected_value = selected_value.replace(/_-_/g, ' ');
+      selected_value = selected_value.replace(/_-_/g, ' ').replace(/_--_/g, '/');
     }
     if(value == selected_value){
       this.select(jQuery('#' + this.wid + 'all', this.widget));
@@ -135,7 +135,7 @@ Faceted.TagsCloudWidget.prototype = {
     if(!value){
       this.reset();
     }else{
-      value = value[0].replace(/ /g, '_-_');
+      value = value[0].replace(/\s/g, '_-_').replace(/\//g, '_--_');
       var tag = jQuery('#' + this.wid + value, this.widget);
       if(tag.length){
         this.select(tag[0]);

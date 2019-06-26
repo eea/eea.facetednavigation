@@ -84,11 +84,11 @@ FacetedEdit.TagsCloudWidget.prototype = {
     query.cid = this.wid;
 
     var value = jQuery(tag).attr('id').replace(this.wid, '');
-    value = value.replace(/_-_/g, ' ');
+    value = value.replace(/_-_/g, ' ').replace(/_--_/g, '/');
     var selected_value = '';
     if(this.selected.length){
       selected_value = jQuery(this.selected[0]).attr('id').replace(this.wid, '');
-      selected_value = selected_value.replace(/_-_/g, ' ');
+      selected_value = selected_value.replace(/_-_/g, ' ').replace(/_--_/g, '/');
     }
     if(value == selected_value){
       this.select(jQuery('#' + this.wid + 'all', this.widget));

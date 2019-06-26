@@ -3,9 +3,15 @@ Changelog
 
 13.0 - (unreleased)
 -------------------
-
-* Add support or Python 3 and Plone 5.2.
+* Change: Add support or Python 3 and Plone 5.2.
   [pbauer, jensens]
+
+12.2 - (2019-05-20)
+---------------------
+* Feature: Provide an uninstall profile
+  [erral]
+* Bug fix: Allow path within Tags Cloud facet
+  [avoinea]
 
 12.1 - (2019-04-09)
 ------------------------
