@@ -2,10 +2,11 @@
 """
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation.widgets.text.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.text.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.text.interfaces import DisplaySchemata
+from eea.facetednavigation.widgets.text.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+from Products.CMFCore.utils import getToolByName
 import six
 
 
@@ -76,6 +77,12 @@ class Widget(AbstractWidget):
         if not value:
             return query
 
-        value = self.normalize(value)
-        query[index] = {'query': value, 'operator': 'and'}
+        query[index] = {}
+        query[index]['query'] = self.normalize(value)
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+        catalog_index = catalog.Indexes.get(index)
+        if 'operator' in getattr(catalog_index, 'query_options', []):
+            query[index]['operator'] = 'and'
+
         return query

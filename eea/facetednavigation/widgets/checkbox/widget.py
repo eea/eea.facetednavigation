@@ -104,12 +104,18 @@ class Widget(CountableWidget):
             return query
 
         catalog = getToolByName(self.context, 'portal_catalog')
-        if index in catalog.Indexes:
-            if catalog.Indexes[index].meta_type == 'BooleanIndex':
+        catalog_index = catalog.Indexes.get(index)
+        operator_supported = True
+        if catalog_index:
+            if catalog_index.meta_type == 'BooleanIndex':
                 if value == 'False':
                     value = False
                 elif value == 'True':
                     value = True
+            operator_supported = 'operator' in getattr(
+                catalog_index, 'query_options', [])
 
-        query[index] = {'query': value, 'operator': operator}
+        query[index] = {'query': value}
+        if operator_supported:
+            query[index]['operator'] = operator
         return query
