@@ -1,10 +1,10 @@
 Changelog
 =========
 
-12.3-dev0 - (unreleased)
+12.3 - (2019-07-01)
 ---------------------
 
-13.0 - (unreleased)
+13.0 - (2019-07-01)
 -------------------
 * Change: Add support or Python 3 and Plone 5.2.
   [pbauer, jensens]
