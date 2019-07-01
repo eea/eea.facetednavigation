@@ -8,6 +8,8 @@ from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
+import six
+
 
 class IDateRangeSchema(ISchema):
     """ Schema
@@ -31,7 +33,7 @@ class IDateRangeSchema(ISchema):
         required=False,
         default=u"c-10:c+10"
     )
-    calYearRange._type = (str, unicode)
+    calYearRange._type = (str, six.text_type)
 
     usePloneDateFormat = schema.Bool(
         title=_(u'Reuse date format and language used by Plone'),
@@ -51,28 +53,28 @@ class IDateRangeSchema(ISchema):
         description=_(u"Text to be displayed as start date input label"),
         required=False
     )
-    labelStart._type = (str, unicode)
+    labelStart._type = (str, six.text_type)
 
     labelEnd = schema.TextLine(
         title=_(u"Label (end date)"),
         description=_(u"Text to be displayed as end date input label"),
         required=False
     )
-    labelEnd._type = (str, unicode)
+    labelEnd._type = (str, six.text_type)
 
     placeholderStart = schema.TextLine(
         title=_(u"Placeholder (start date)"),
         description=_(u"Text to be displayed as start date input placeholder"),
         required=False
     )
-    placeholderStart._type = (str, unicode)
+    placeholderStart._type = (str, six.text_type)
 
     placeholderEnd = schema.TextLine(
         title=_(u"Placeholder (end date)"),
         description=_(u"Text to be displayed as end date input placeholder"),
         required=False
     )
-    placeholderEnd._type = (str, unicode)
+    placeholderEnd._type = (str, six.text_type)
 
 
 class DefaultSchemata(DS):

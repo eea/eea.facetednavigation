@@ -5,6 +5,7 @@ from zope.component import getUtility
 from Products.GenericSetup.utils import XMLAdapterBase
 from eea.facetednavigation.widgets.interfaces import ICriterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
+import six
 logger = logging.getLogger('eea.facetednavigation')
 
 
@@ -25,7 +26,7 @@ class CriterionXMLAdapter(XMLAdapterBase):
 
         properties = ['widget']
         for group in widget.groups:
-            properties.extend(group.fields.keys())
+            properties.extend(list(group.fields.keys()))
         for key in properties:
             value = self.context.get(key, None)
             if value is None:
@@ -42,7 +43,7 @@ class CriterionXMLAdapter(XMLAdapterBase):
             else:
                 if isinstance(value, (int, bool)):
                     value = str(value)
-                elif not isinstance(value, basestring):
+                elif not isinstance(value, six.string_types):
                     value = str(value)
                 child = self._doc.createTextNode(value)
                 prop.appendChild(child)

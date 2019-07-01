@@ -13,6 +13,7 @@ from eea.facetednavigation.widgets.storage import Criterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from eea.facetednavigation.criteria.interfaces import ICriteria
+import six
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -157,7 +158,7 @@ class Criteria(object):
                 value_type = schema[key].value_type
                 value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
-            elif isinstance(value, (str, unicode)):
+            elif isinstance(value, (str, six.text_type)):
                 value = schema[key].fromUnicode(value)
             criteria[key] = value
 
@@ -185,15 +186,15 @@ class Criteria(object):
                 value_type = schema[key].value_type
                 value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
-            elif isinstance(value, (str, unicode)):
+            elif isinstance(value, (str, six.text_type)):
                 _type = getattr(schema[key], "_type", None)
                 value = fix_string(value, _type)
                 try:
                     value = schema[key].fromUnicode(value)
-                except ConstraintNotSatisfied, err:
+                except ConstraintNotSatisfied as err:
                     logger.exception(err)
                     continue
-                except AttributeError, err:
+                except AttributeError as err:
                     value_type = schema[key].value_type
                     if value:
                         value = [value_type.fromUnicode(value)]
@@ -202,7 +203,7 @@ class Criteria(object):
                             "%s: Cleaning up empty %s:%s from criterion %s",
                             self.context.absolute_url(), key, value, cid)
                         delattr(criterion, key)
-                except ValueError, err:
+                except ValueError as err:
                     logger.exception(err)
                     # Cleanup OLD broken values from criterion
                     if getattr(criterion, key, None) == value:
@@ -211,7 +212,7 @@ class Criteria(object):
                             self.context.absolute_url(), key, value, cid)
                         delattr(criterion, key)
                     continue
-                except Exception, err:
+                except Exception as err:
                     logger.warn(
                         "%s: Could not upgrade %s: %s from criterion %s",
                         self.context.absolute_url(), key, value, cid)
@@ -265,7 +266,7 @@ class Criteria(object):
                      for term in voc(self.context))
         res = []
         for position, cids in positions:
-            if isinstance(cids, (str, unicode)):
+            if isinstance(cids, (str, six.text_type)):
                 cids = [cids]
             for cid in cids:
                 criterion = self.get(cid)

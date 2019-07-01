@@ -198,8 +198,8 @@ Edit (no AJAX)
   Export
 
     >>> browser.getControl('Export').click()
-    >>> print browser.contents
-    <?xml version="1.0"?>
+    >>> print(browser.contents).strip()
+    <?xml version="1.0"...?>
     <object name="sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">

@@ -8,6 +8,8 @@ from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
+import six
+
 
 class IRangeSchema(ISchema):
     """ Schema
@@ -23,28 +25,28 @@ class IRangeSchema(ISchema):
         description=_(u"Text to be displayed as start range input label"),
         required=False
     )
-    labelStart._type = (str, unicode)
+    labelStart._type = (str, six.text_type)
 
     labelEnd = schema.TextLine(
         title=_(u"Label (end range)"),
         description=_(u"Text to be displayed as end range input label"),
         required=False
     )
-    labelEnd._type = (str, unicode)
+    labelEnd._type = (str, six.text_type)
 
     placeholderStart = schema.TextLine(
         title=_(u"Placeholder (start range)"),
         description=_(u"Text to be displayed as start range input placeholder"),
         required=False
     )
-    placeholderStart._type = (str, unicode)
+    placeholderStart._type = (str, six.text_type)
 
     placeholderEnd = schema.TextLine(
         title=_(u"Placeholder (end range)"),
         description=_(u"Text to be displayed as end range input placeholder"),
         required=False
     )
-    placeholderEnd._type = (str, unicode)
+    placeholderEnd._type = (str, six.text_type)
 
 
 class DefaultSchemata(DS):

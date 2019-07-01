@@ -7,6 +7,7 @@ from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 class IAlphabeticWidget(IWidget):
     """ Alphabetic widget
@@ -20,7 +21,7 @@ class IAlphabeticSchema(ISchema):
         description=_(u"Default letter to be selected"),
         required=False
     )
-    default._type = (unicode, str)
+    default._type = (six.text_type, str)
 
     index = schema.Choice(
         title=_(u"Catalog index"),

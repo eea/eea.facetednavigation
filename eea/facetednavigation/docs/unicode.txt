@@ -8,7 +8,6 @@ Imports
     >>> from eea.facetednavigation.interfaces import ICriteria
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
     >>> from Products.CMFCore.utils import getToolByName
-    >>> from Products.Archetypes.public import StringWidget, LinesWidget
 
 Set up
 ------
@@ -57,20 +56,20 @@ Checkbox widget
     ...               index='Subject', default=[u'\u015etire'], hidden=True)
     >>> brains = query.query(batch=False)
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Visible
 
     >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=False)
-    >>> brains = query.query(batch=False, c0=['\xc5\x9etire'])
+    >>> brains = query.query(batch=False, c0=[u'\u015etire'])
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Render
 
-    >>> print widgets()
+    >>> print(widgets())
     <BLANKLINE>
     ...<legend>Checkbox</legend>
     ...
@@ -91,20 +90,20 @@ Radio widget
     ...               index='Subject', default=u'\u015etire', hidden=True)
     >>> brains = query.query(batch=False)
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Visible
 
     >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=False)
-    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> brains = query.query(batch=False, c0=u'\u015etire')
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Render
 
-    >>> print widgets()
+    >>> print(widgets())
     <BLANKLINE>
     ...<legend>Radio</legend>
     ...
@@ -124,20 +123,20 @@ Select widget
     ...               index='Subject', default=u'\u015etire', hidden=True)
     >>> brains = query.query(batch=False)
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Visible
 
     >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=False)
-    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> brains = query.query(batch=False, c0=u'\u015etire')
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Render
 
-    >>> print widgets()
+    >>> print(widgets())
     <BLANKLINE>
     ...<legend>Select</legend>
     ...
@@ -158,20 +157,20 @@ TagsCloud widget
     ...               index='Subject', default=u'\u015etire', hidden=True)
     >>> brains = query.query(batch=False)
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Visible
 
     >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=False)
-    >>> brains = query.query(batch=False, c0='\xc5\x9etire')
+    >>> brains = query.query(batch=False, c0=u'\u015etire')
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Render
 
-    >>> print widgets()
+    >>> print(widgets())
     <BLANKLINE>
     ...<legend>Tags</legend>
     ...
@@ -192,7 +191,7 @@ Text widget
     ...               index='Subject', default=u'\u015etire', hidden=True)
     >>> brains = query.query(batch=False)
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Visible
@@ -200,19 +199,19 @@ Text widget
     >>> _ = configure(updateCriterion_button='Save', cid='c0', hidden=False)
     >>> brains = query.query(batch=False, c0=u'\u015etire')
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Search in current results
 
-    >>> brains = query.query(batch=False, c0=['\xc5\x9etire'])
+    >>> brains = query.query(batch=False, c0=[u'\u015etire'])
     >>> for brain in brains:
-    ...     print brain.Title
+    ...     print(brain.Title)
     NON-ASCII Folder
 
   Render
 
-    >>> print widgets()
+    >>> print(widgets())
     <BLANKLINE>
     ...<legend>Text</legend>
     ...

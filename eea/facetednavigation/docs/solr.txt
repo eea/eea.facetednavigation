@@ -30,8 +30,8 @@ Solr count
     >>> data = {'index': 'tags'}
     >>> widget = CountableWidget(portal, request, data=data)
     >>> dummyresponse = DummySolrResponse({'tags': {'foo': 10, 'bar': 7}})
-    >>> widget.count(dummyresponse)
-    {'': 1, 'all': 1, u'foo': 10, u'bar': 7}
+    >>> widget.count(dummyresponse) == {'': 1, 'all': 1, 'foo': 10, 'bar': 7}
+    True
 
 
 Widget

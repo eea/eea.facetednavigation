@@ -9,6 +9,8 @@ from eea.facetednavigation.widgets.date.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.date.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 
+import six
+
 logger = logging.getLogger('eea.facetednavigation')
 
 PAST = (
@@ -96,7 +98,8 @@ class Widget(AbstractWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 
@@ -136,7 +139,7 @@ class Widget(AbstractWidget):
         else:
             try:
                 from_delta = int(from_val)
-            except (ValueError, TypeError), err:
+            except (ValueError, TypeError) as err:
                 logger.exception(err)
             else:
                 from_date = now + from_delta
@@ -149,7 +152,7 @@ class Widget(AbstractWidget):
         else:
             try:
                 to_delta = int(to_val)
-            except (ValueError, TypeError), err:
+            except (ValueError, TypeError) as err:
                 logger.exception(err)
             else:
                 to_date = now + to_delta

@@ -10,6 +10,7 @@ from plone.app.layout.navigation.navtree import buildFolderTree
 from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import cacheTreeKeyFacetedNavigation
 from eea.facetednavigation.interfaces import ICriteria
+import six
 
 class FacetedTree(BrowserView):
     """ Create jstree response used by faceted path widget
@@ -78,7 +79,7 @@ class FacetedTree(BrowserView):
             query['Language'] = language
 
         self.rootPath = url
-        if isinstance(url, unicode):
+        if six.PY2 and isinstance(url, six.text_type):
             url = url.encode('utf-8')
         obj = self.context.unrestrictedTraverse(url.strip('/'), None)
         if not obj:

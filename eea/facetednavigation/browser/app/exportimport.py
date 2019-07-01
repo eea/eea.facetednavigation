@@ -27,7 +27,8 @@ class FacetedExportImport(object):
             return msg
 
         if msg:
-            IStatusMessage(self.request).addStatusMessage(str(msg), type='info')
+            IStatusMessage(self.request).addStatusMessage(
+                str(msg), type='info')
         self.request.response.redirect(to)
 
     def _import_xml(self, **kwargs):
@@ -36,8 +37,8 @@ class FacetedExportImport(object):
         upload_file = kwargs.get('import_file', None)
         if getattr(upload_file, 'read', None):
             upload_file = upload_file.read()
-        xml = upload_file or ''
-        if not xml.startswith('<?xml version="1.0"'):
+        xml = upload_file or b''
+        if not xml.startswith(b'<?xml version="1.0"'):
             return _('Please provide a valid xml file')
 
         environ = SnapshotImportContext(self.context, 'utf-8')
@@ -66,7 +67,8 @@ class FacetedExportImport(object):
         """
         exporter = self._export_xml(**kwargs)
         if not exporter:
-            return self._redirect('No adapter found',
+            return self._redirect(
+                'No adapter found',
                 kwargs.get('redirect', 'configure_faceted.html'))
 
         self.request.response.setHeader(

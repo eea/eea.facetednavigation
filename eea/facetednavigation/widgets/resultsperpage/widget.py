@@ -9,6 +9,7 @@ from eea.facetednavigation.widgets.resultsperpage.interfaces import (
     LayoutSchemata,
     DisplaySchemata,
 )
+from six.moves import range
 logger = logging.getLogger('eea.facetednavigation')
 
 
@@ -28,7 +29,7 @@ class Widget(AbstractWidget):
         value = self.data.get('default', 0) or 0
         try:
             return int(value)
-        except (TypeError, ValueError), err:
+        except (TypeError, ValueError) as err:
             logger.exception(err)
             return 0
 
@@ -45,7 +46,7 @@ class Widget(AbstractWidget):
 
         try:
             value = int(value)
-        except (TypeError, ValueError), err:
+        except (TypeError, ValueError) as err:
             logger.exception(err)
             return default
 
@@ -56,17 +57,17 @@ class Widget(AbstractWidget):
         """
         try:
             start = int(self.data.get('start', 0) or 0)
-        except (TypeError, ValueError), err:
+        except (TypeError, ValueError) as err:
             logger.exception(err)
             start = 0
         try:
             end = int(self.data.get('end', 21)) + 1
-        except (TypeError, ValueError), err:
+        except (TypeError, ValueError) as err:
             logger.exception(err)
             end = 21
         try:
             step = int(self.data.get('step', 1))
-        except (TypeError, ValueError), err:
+        except (TypeError, ValueError) as err:
             logger.exception(err)
             step = 1
 

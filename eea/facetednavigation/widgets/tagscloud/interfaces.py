@@ -9,6 +9,7 @@ from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 TagsCloudVocabulary = SimpleVocabulary([
     SimpleTerm(u'list', u'list', _(u"List")),
@@ -73,7 +74,7 @@ class ITagsCloudSchema(ISchema):
         default=u"9acee6",
         required=False
     )
-    colormin._type = (unicode, str)
+    colormin._type = (six.text_type, str)
 
     colormax = schema.TextLine(
         title=_(u'Maximum color'),
@@ -81,7 +82,7 @@ class ITagsCloudSchema(ISchema):
         default=u"007bb3",
         required=False
     )
-    colormax._type = (unicode, str)
+    colormax._type = (six.text_type, str)
 
     cloud = schema.Choice(
         title=_(u'Cloud type'),

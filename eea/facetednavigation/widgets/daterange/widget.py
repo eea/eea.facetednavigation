@@ -15,6 +15,9 @@ from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata
 from eea.facetednavigation import EEAMessageFactory as _
+
+import six
+
 logger = logging.getLogger('eea.facetednavigation')
 
 
@@ -28,7 +31,7 @@ def formated_time(datestr):
             datestr = datetime.strptime(datestr, '%Y-%m-%d')
         elif '/' in datestr:
             datestr = datetime.strptime(datestr, '%Y/%m/%d')
-    except Exception, err:
+    except Exception as err:
         logger.warn(err)
     return DateTime(datestr)
 
@@ -85,7 +88,7 @@ class Widget(AbstractWidget, L10nDatepicker):
             start = DateTime(datetime.strptime(start,
                                                self.python_date_format))
             start = start.strftime(self.python_date_format)
-        except Exception, err:
+        except Exception as err:
             logger.exception('%s => Start date: %s', err, start)
             start = ''
 
@@ -93,7 +96,7 @@ class Widget(AbstractWidget, L10nDatepicker):
             end = DateTime(datetime.strptime(end,
                                              self.python_date_format))
             end = end.strftime(self.python_date_format)
-        except Exception, err:
+        except Exception as err:
             logger.exception('%s => End date: %s', err, end)
             end = ''
         return (start, end)
@@ -103,7 +106,8 @@ class Widget(AbstractWidget, L10nDatepicker):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 
@@ -124,7 +128,7 @@ class Widget(AbstractWidget, L10nDatepicker):
                                                    self.python_date_format))
                 end = DateTime(datetime.strptime(end,
                                                  self.python_date_format))
-            except Exception, err:
+            except Exception as err:
                 logger.exception(err)
                 return query
         else:
@@ -134,7 +138,7 @@ class Widget(AbstractWidget, L10nDatepicker):
                 # not to be transformed in current years (eg: 0001 -> 1901)
                 start = formated_time(start)
                 end = formated_time(end)
-            except Exception, err:
+            except Exception as err:
                 logger.exception(err)
                 return query
 

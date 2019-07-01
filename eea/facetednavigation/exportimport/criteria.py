@@ -49,7 +49,7 @@ class CriteriaXMLAdapter(XMLAdapterBase):
         if node.getAttribute('purge'):
             should_purge = self._convertToBoolean(node.getAttribute('purge'))
         if should_purge:
-            cids = self.context.keys()
+            cids = list(self.context.keys())
             for cid in cids:
                 self.context.delete(cid)
 

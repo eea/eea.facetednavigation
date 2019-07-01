@@ -6,6 +6,7 @@ from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata as LS
 from eea.facetednavigation import EEAMessageFactory as _
+import six
 
 
 class IETagSchema(ISchema):
@@ -24,7 +25,7 @@ class IETagSchema(ISchema):
         required=False,
         default=u"1.0"
     )
-    default._type = (unicode, str)
+    default._type = (six.text_type, str)
 
 
 class DefaultSchemata(DS):

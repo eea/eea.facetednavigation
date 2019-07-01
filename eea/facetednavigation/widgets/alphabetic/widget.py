@@ -14,6 +14,7 @@ from eea.facetednavigation.widgets.alphabetic.alphabets import (
 from eea.facetednavigation.widgets.alphabetic.interfaces import (
     IAlphabeticWidget,
 )
+import six
 logger = logging.getLogger('eea.facetednavigation')
 
 
@@ -33,7 +34,7 @@ class Widget(CountableWidget):
         """
         try:
             lang = lang.split('-')[0].lower()
-        except Exception, err:
+        except Exception as err:
             logger.exception(err)
             lang = 'en'
         return unicode_character_map.get(lang,
@@ -57,9 +58,9 @@ class Widget(CountableWidget):
             xval = getattr(brain, index_id, None)
             if not xval:
                 continue
-            if not isinstance(xval, (str, unicode)):
+            if not isinstance(xval, (six.binary_type, six.text_type)):
                 continue
-            if isinstance(xval, str):
+            if isinstance(xval, six.binary_type):
                 xval = xval.decode('utf-8', 'replace')
             letter = xval[0].upper()
             count = res.get(letter, 0)

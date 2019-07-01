@@ -4,9 +4,10 @@ import operator
 from zope.component import getMultiAdapter
 from Products.Five import BrowserView
 from eea.facetednavigation.caching import ramcache
-from eea.facetednavigation.caching import  cacheCounterKeyFacetedNavigation
+from eea.facetednavigation.caching import cacheCounterKeyFacetedNavigation
 from eea.facetednavigation.interfaces import ICriteria
-from eea.facetednavigation.widgets.widget import compare
+from eea.facetednavigation.widgets.widget import lowercase
+
 
 class TagsCloudCounter(BrowserView):
     """ Count results per query for tags cloud widget
@@ -38,17 +39,17 @@ class TagsCloudCounter(BrowserView):
 
         # Count
         count = getattr(widget, 'count', lambda brains, sequence: {})
-        res = count(brains, sequence=vocabulary.keys())
+        res = count(brains, sequence=list(vocabulary.keys()))
         res.pop("", 0)
         oll = res.pop('all', 0)
 
-        res = res.items()
+        res = list(res.items())
         res.sort(key=operator.itemgetter(1), reverse=True)
 
         maxitems = widget.maxitems
         if maxitems:
             res = res[:maxitems]
-        res.sort(key=operator.itemgetter(0), cmp=compare)
+        res.sort(key=lowercase)
 
         # Return a of list of three items tuples (key, label, count)
         res = [(key, vocabulary.get(key, key), value) for key, value in res]
