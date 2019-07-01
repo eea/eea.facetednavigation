@@ -36,7 +36,7 @@
     <tal:tag repeat="tag python:vocabulary">
       <li tal:define="
         tag_id python:tag[0];
-        tag_id python:tag_id.replace(' ', '_-_');
+        tag_id python:tag_id.replace(' ', '_-_').replace('/', '_--_');
         tag_label python:tag[1];
         tag_label python:view.translate(tag_label);
         tag_count python:(tag[2] == -1) and view.randint or tag[2]+1;"
