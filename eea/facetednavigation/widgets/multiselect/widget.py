@@ -4,7 +4,6 @@ from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import lowercase
 from eea.facetednavigation.widgets.multiselect.interfaces import (
     DefaultSchemata,
     LayoutSchemata,
@@ -65,7 +64,7 @@ class Widget(CountableWidget):
         if not default:
             return False
         for item in default:
-            if lowercase(key) == lowercase(item):
+            if key.lower() == item.lower():
                 return True
         return False
 
