@@ -22,24 +22,13 @@ from eea.facetednavigation.events import (
     FacetedEnabledEvent,
 )
 from eea.facetednavigation import EEAMessageFactory as _
-from zope.publisher.interfaces import IPublishTraverse
 
 
-@implementer(IPublishTraverse)
 @implementer(IFacetedSubtyper)
 class FacetedPublicSubtyper(BrowserView):
     """ Public support for subtyping objects
         view for non IPossibleFacetedNavigable objects
     """
-    def publishTraverse(self, request, name):
-        if name == 'enable':
-            self.enable()
-            return self
-        if name == 'disable':
-            self.disable()
-            return self
-        raise NotFound(self, name, request)
-
     def _redirect(self, msg=''):
         """ Redirect
         """
@@ -82,11 +71,6 @@ class FacetedPublicSubtyper(BrowserView):
         """ See IFacetedSubtyper
         """
         raise NotFound(self.context, 'disable', self.request)
-
-    def __call__(self):
-        """ Allow redirection
-        """
-        return ''
 
 
 class FacetedSubtyper(FacetedPublicSubtyper):
