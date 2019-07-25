@@ -1,5 +1,4 @@
 language: python
-python: 2.7
 sudo: required
 services:
   - docker
@@ -45,5 +44,11 @@ jobs:
     - stage: test
       env:
         - PLONE=5
+      script:
+        - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" -e GIT_USER="$GIT_OWNER" eeacms/plone-test:$PLONE -s $GIT_NAME
+
+    - stage: test
+      env:
+        - PLONE=5-python3
       script:
         - docker run -i --rm -e GIT_BRANCH="$TRAVIS_BRANCH" -e ADDONS="$GIT_NAME" -e DEVELOP="src/$GIT_NAME" -e GIT_CHANGE_ID="$GIT_CHANGE_ID" -e GIT_USER="$GIT_OWNER" eeacms/plone-test:$PLONE -s $GIT_NAME

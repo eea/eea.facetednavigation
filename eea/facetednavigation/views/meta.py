@@ -21,7 +21,7 @@ class ViewsInfo(object):
     def keys(self):
         """ Faceted views names
         """
-        return self.views.keys()
+        return list(self.views.keys())
 
     def label(self, key):
         """ Faceted view label or key

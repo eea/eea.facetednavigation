@@ -1,6 +1,11 @@
 Changelog
 =========
 
+13.0 - (2019-07-01)
+-------------------
+* Change: Add support or Python 3 and Plone 5.2.
+  [pbauer, jensens, avoinea - refs #158]
+
 12.2 - (2019-05-20)
 ---------------------
 * Feature: Provide an uninstall profile

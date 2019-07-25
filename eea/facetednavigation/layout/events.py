@@ -47,7 +47,7 @@ def add_default_widgets(context):
             return
 
     # Criteria already changed, we don't want to mess them
-    if criteria.keys():
+    if list(criteria.keys()):
         return
 
     widgets = context.unrestrictedTraverse('@@default_widgets.xml')

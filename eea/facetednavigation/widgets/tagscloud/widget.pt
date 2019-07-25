@@ -25,7 +25,7 @@
 
 <tal:widget tal:on-error="structure python:error_view(error=error, cid=wid)" define="
   vocabulary python:kwargs.get('vocabulary', view.vocabulary());
-  all python:vocabulary.next();">
+  all python:next(vocabulary);">
   <ul tal:attributes="id string:${wid}" class="tags-cloud">
       <li tal:attributes="
        class python:default_value == '' and 'faceted-tag-selected' or '';

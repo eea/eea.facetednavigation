@@ -198,13 +198,13 @@ Edit (no AJAX)
   Export
 
     >>> browser.getControl('Export').click()
-    >>> print browser.contents
-    <?xml version="1.0"?>
+    >>> print(browser.contents.strip())
+    <?xml version="1.0"...?>
     <object name="sandbox" meta_type="...">
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="default">ATFolder</property>
@@ -216,7 +216,7 @@ Edit (no AJAX)
       </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
+       <property name="title">Type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">

@@ -29,10 +29,6 @@ class FacetedPublicSubtyper(BrowserView):
     """ Public support for subtyping objects
         view for non IPossibleFacetedNavigable objects
     """
-    def __init__(self, context, request):
-        self.context = context
-        self.request = request
-
     def _redirect(self, msg=''):
         """ Redirect
         """
@@ -140,6 +136,7 @@ class FacetedSubtyper(FacetedPublicSubtyper):
         noLongerProvides(self.context, IFacetedNavigable)
         notify(FacetedDisabledEvent(self.context))
         self._redirect(_('Faceted navigation disabled'))
+
 
 class FacetedSearchSubtyper(FacetedSubtyper):
     """ Support for subtyping objects as faceted search form (no default items

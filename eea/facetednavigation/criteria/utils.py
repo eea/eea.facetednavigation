@@ -1,5 +1,6 @@
 """ Utils
 """
+import six
 
 
 def fix_string(value, _type=None):
@@ -7,6 +8,6 @@ def fix_string(value, _type=None):
     """
     if _type == bool and value == u"1":
         return u"True"
-    if isinstance(value, str):
+    if isinstance(value, six.binary_type):
         return value.decode("utf-8")
     return value

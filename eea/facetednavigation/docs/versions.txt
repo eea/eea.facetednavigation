@@ -71,33 +71,42 @@ If there is no hidden widget there is no version
 Let's hide/unhide widgets
 
     >>> _ = handler(updateCriterion_button='Update', cid='c1', hidden=True)
-    >>> version.key
-    '9177f18ee46b80b602dcc60081bb62e5'
+    >>> a = version.key
+    >>> a != ''
+    True
 
     >>> _ = handler(updateCriterion_button='Update', cid='c0', hidden=True)
-    >>> version.key
-    '89f7e43d82d4733203cad57ddf48c916'
+    >>> b = version.key
+    >>> b != a
+    True
 
     >>> _ = handler(updateCriterion_button='Update', cid='c0', hidden=False)
-    >>> version.key
-    '9177f18ee46b80b602dcc60081bb62e5'
+    >>> c = version.key
+    >>> c == a
+    True
+
+    >>> c != b
+    True
 
 Version key is computed by widget visibility and default value. So let's check
 version remain the same if we change other widget properties:
 
     >>> _ = handler(updateCriterion_button='Update', cid='c1', title='Another title')
-    >>> version.key
-    '9177f18ee46b80b602dcc60081bb62e5'
+    >>> d = version.key
+    >>> d == c
+    True
 
     >>> _ = handler(updateCriterion_button='Update', cid='c1', catalog='')
-    >>> version.key
-    '9177f18ee46b80b602dcc60081bb62e5'
+    >>> e = version.key
+    >>> e == d
+    True
 
 Ok, now let's change the default value
 
     >>> _ = handler(updateCriterion_button='Update', cid='c1', default='Document')
-    >>> version.key
-    'f5675c2802f4b9f10d4be10d7f5d4e40'
+    >>> f = version.key
+    >>> f != e
+    True
 
 Also, if there is no default value for hidden widgets there is no version
 
@@ -118,16 +127,20 @@ even if they are visible widgets
     ...   wtype='checkbox', wposition='left', title='Checkbox widget',
     ...   index='object_provides', operator='and',
     ...   catalog='portal_catalog')
-    >>> version.key
-    'c2da37ef6aaa93fcc395201b68eb7c69'
+    >>> g = version.key
 
     >>> _ = handler(updateCriterion_button='Update', cid='c2', operator='or')
-    >>> version.key
-    'd1dd769a8b107846ddd988d3379bc02d'
+    >>> h = version.key
+    >>> h != g
+    True
 
     >>> _ = handler(updateCriterion_button='Update', cid='c2', operator='and')
-    >>> version.key
-    'c2da37ef6aaa93fcc395201b68eb7c69'
+    >>> i = version.key
+    >>> i != h
+    True
+
+    >>> i == g
+    True
 
 ETag widget
 -----------
@@ -137,22 +150,26 @@ generate another version id.
     >>> _ = handler(addPropertiesWidget_button='Add',
     ...   wtype='etag', wposition='left', title='ETag',
     ...   default='1.0', hidden=True)
-    >>> version.key
-    '67bc1954130e3f8b31c9a9fcc72fea6f'
+    >>> j = version.key
+    >>> j != i
+    True
 
 It is not displayed in view mode even if it's not hidden but in order to be
 used by versioning generator it has to be hidden.
 
     >>> _ = handler(updateCriterion_button='Update', cid='c3', hidden=False)
-    >>> version.key
-    'c2da37ef6aaa93fcc395201b68eb7c69'
+    >>> k = version.key
+    >>> k != j
+    True
 
     >>> _ = handler(updateCriterion_button='Update', cid='c3', hidden=True)
-    >>> version.key
-    '67bc1954130e3f8b31c9a9fcc72fea6f'
+    >>> l = version.key
+    >>> l == j
+    True
 
 Changing it's default value will generate another version id, of course
 
     >>> _ = handler(updateCriterion_button='Update', cid='c3', default='1.1')
-    >>> version.key
-    'ba957e546deecfbb5f9b05dc6aea8652'
+    >>> m = version.key
+    >>> m != l
+    True

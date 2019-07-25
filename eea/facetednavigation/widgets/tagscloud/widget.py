@@ -2,8 +2,6 @@
 """
 import random
 from Products.CMFPlone.utils import safeToInt
-
-from eea.facetednavigation.widgets.widget import compare
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.tagscloud.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.tagscloud.interfaces import LayoutSchemata
@@ -12,6 +10,8 @@ from eea.facetednavigation.widgets.tagscloud.interfaces import DisplaySchemata
 from eea.facetednavigation.widgets.tagscloud.interfaces import GeometrySchemata
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
+
+import six
 
 
 class Widget(CountableWidget):
@@ -36,7 +36,9 @@ class Widget(CountableWidget):
         """ Get default values
         """
         default = super(Widget, self).default or u''
-        return default.encode('utf-8')
+        if six.PY2:
+            default = default.encode('utf-8')
+        return default
 
     @property
     def maxitems(self):
@@ -87,7 +89,8 @@ class Widget(CountableWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 
@@ -98,7 +101,7 @@ class Widget(CountableWidget):
         if not value:
             return query
 
-        if compare(value, 'all') == 0:
+        if value.lower() == 'all':
             return query
 
         query[index] = value

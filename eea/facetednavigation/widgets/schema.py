@@ -3,6 +3,7 @@
 from zope.i18nmessageid.message import MessageFactory
 from zope.publisher.browser import BrowserPage
 from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
+from Products.CMFPlone.utils import safe_unicode
 
 _ = MessageFactory('plone')
 
@@ -27,5 +28,5 @@ class Schema(BrowserPage):
         """Get message for schemata
         """
         label = u"label_schema_%s" % schema
-        default = unicode(schema).capitalize()
+        default = safe_unicode(schema).capitalize()
         return _(label, default=default)

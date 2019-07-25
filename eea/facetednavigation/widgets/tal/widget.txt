@@ -32,15 +32,20 @@ String
 ~~~~~~
 
     >>> widget.data.update(default=u'string:a/path')
-    >>> widget.query(form={})
-    {'path': u'a/path'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    a/path
+
 
 Python
 ~~~~~~
 
   Integer
 
-    >>> widget.data.update(default=u'python: (100+10)/2')
+    >>> widget.data.update(default=u'python: (100+10)//2')
     >>> widget.query(form={})
     {'path': 55}
 
@@ -121,23 +126,39 @@ context
 ~~~~~~~
 
     >>> widget.data.update(default=u'string:${context/absolute_url}')
-    >>> widget.query(form={})
-    {'path': u'http://nohost/plone/sandbox'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    http://nohost/plone/sandbox
 
     >>> widget.data.update(default=u'python:context.absolute_url(1)')
-    >>> widget.query(form={})
-    {'path': 'plone/sandbox'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    plone/sandbox
 
 referer
 ~~~~~~~
 
     >>> widget.data.update(default=u'string:${referer/absolute_url}')
-    >>> widget.query(form={})
-    {'path': u'http://nohost/plone/sandbox'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    http://nohost/plone/sandbox
 
     >>> widget.data.update(default=u'python:referer.absolute_url(1)')
-    >>> widget.query(form={})
-    {'path': 'plone/sandbox'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    plone/sandbox
 
     This is the same as context, let's see what happends if faceted is loaded
     from another place
@@ -146,30 +167,50 @@ referer
     >>> widget = Widget(sandbox, request, criterion)
 
     >>> widget.data.update(default=u'string:${referer/absolute_url}')
-    >>> widget.query(form={})
-    {'path': u'http://nohost/plone/sandbox'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    http://nohost/plone/sandbox
 
     >>> widget.data.update(default=u'python:referer.absolute_url(1)')
-    >>> widget.query(form={})
-    {'path': 'plone/sandbox'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    plone/sandbox
 
 request
 ~~~~~~~
 
     >>> widget.data.update(default=u'python:request.URL', index='path')
-    >>> widget.query(form={})
-    {'path': 'http://nohost'}
+    >>> query = widget.query(form={})
+    >>> 'path' in query
+    True
+
+    >>> print(query['path'])
+    http://nohost
 
 widget
 ~~~~~~
 
     >>> widget.data.update(default=u'python:widget.widget_type', index='type')
-    >>> widget.query(form={})
-    {'type': 'tal'}
+    >>> query = widget.query(form={})
+    >>> 'type' in query
+    True
+
+    >>> print(query['type'])
+    tal
 
 criterion
 ~~~~~~~~~
 
     >>> widget.data.update(default=u'python:criterion.title', index='sortable_title')
-    >>> widget.query(form={})
-    {'sortable_title': u'A Title'}
+    >>> query = widget.query(form={})
+    >>> 'sortable_title' in query
+    True
+
+    >>> print(query['sortable_title'])
+    A Title

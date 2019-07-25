@@ -11,6 +11,9 @@ from eea.facetednavigation.widgets.tal.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
 from Products.CMFCore.utils import getToolByName
+
+import six
+
 try:
     from Products.Archetypes.interfaces import IBaseObject
 except ImportError:
@@ -101,13 +104,14 @@ class Widget(AbstractWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 
         try:
             value = self.talexpr(form=form)
-        except Exception, err:
+        except Exception as err:
             logger.exception(err)
             return query
 

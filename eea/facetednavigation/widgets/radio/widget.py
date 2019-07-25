@@ -10,6 +10,8 @@ from eea.facetednavigation.widgets.radio.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.radio.interfaces import DisplaySchemata
 from eea.facetednavigation.widgets.widget import CountableWidget
 
+import six
+
 
 class Widget(CountableWidget):
     """ Widget
@@ -32,8 +34,9 @@ class Widget(CountableWidget):
         """ Get default values
         """
         default = super(Widget, self).default or u''
-        if isinstance(default, unicode):
-            default = default.encode('utf-8')
+        if six.PY2:
+            if isinstance(default, six.text_type):
+                default = default.encode('utf-8')
         return default
 
     def query(self, form):
@@ -41,7 +44,8 @@ class Widget(CountableWidget):
         """
         query = {}
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 

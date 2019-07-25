@@ -9,6 +9,7 @@ from eea.facetednavigation.events import QueryWillBeExecutedEvent
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.plonex import parseFormquery
 from zope.interface import Interface
+import six
 try:
     from plone.app.collection.interfaces import ICollection
 except ImportError:
@@ -40,7 +41,7 @@ class FacetedCatalog(object):
         if not apply_index:
             return IIBucket(), (index_id,)
 
-        if isinstance(value, unicode):
+        if six.PY2 and isinstance(value, six.text_type):
             value = value.encode('utf-8', 'replace')
         rset = apply_index({index_id: value})
 

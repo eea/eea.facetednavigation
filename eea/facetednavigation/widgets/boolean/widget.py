@@ -10,6 +10,8 @@ from eea.facetednavigation.widgets.boolean.interfaces import (
     CountableSchemata
 )
 
+import six
+
 
 class Widget(CountableWidget):
     """ Widget
@@ -49,7 +51,8 @@ class Widget(CountableWidget):
         """ Get value from form and return a catalog dict query
         """
         index = self.data.get('index', '')
-        index = index.encode('utf-8', 'replace')
+        if six.PY2:
+            index = index.encode('utf-8', 'replace')
 
         if not index:
             return {}
