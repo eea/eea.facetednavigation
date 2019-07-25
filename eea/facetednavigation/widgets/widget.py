@@ -38,8 +38,10 @@ logger = logging.getLogger('eea.facetednavigation')
 
 
 def lowercase(value):
-    return value[1].lower()
-
+    try:
+        return value[1].lower()
+    except AttributeError:
+        return value[1]
 
 #
 # Faceted Widget

@@ -26,7 +26,7 @@ class Criterion(object):
         if not cid:
             free_ids = set(u'c%d' % uid for uid in list(range(len(taken_ids)+1)))
             cid = free_ids.difference(taken_ids)
-            cid = cid.pop()
+            cid = sorted(cid).pop()
         elif cid in taken_ids:
             raise KeyError(u'Id is already in use')
         cid = safe_unicode(cid)

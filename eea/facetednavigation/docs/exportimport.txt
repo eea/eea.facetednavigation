@@ -76,7 +76,7 @@ Checkboxes
      <criteria>
       <criterion name="c0">
        <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
+       <property name="title">Type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
@@ -90,7 +90,7 @@ Checkboxes
       </criterion>
       <criterion name="c1">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="position">right</property>
@@ -134,7 +134,7 @@ Let's check exported
      <criteria>
       <criterion name="c0">
        <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
+       <property name="title">Type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
@@ -148,7 +148,7 @@ Let's check exported
       </criterion>
       <criterion name="c1">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="position">right</property>
@@ -191,7 +191,7 @@ Check configuration
      <criteria>
       <criterion name="c0">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">Folder</property>
@@ -216,7 +216,7 @@ Now update it
      <criteria>
       <criterion name="c0">
        <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
+       <property name="title">Type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
@@ -230,7 +230,7 @@ Now update it
       </criterion>
       <criterion name="c1">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="position">right</property>
@@ -287,7 +287,7 @@ Let's see our new configuration
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="default">ATFolder</property>
@@ -299,7 +299,7 @@ Let's see our new configuration
       </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
+       <property name="title">Type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
@@ -338,7 +338,7 @@ Import a xml file with purge set to False, new criteria will be added to existin
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="default">ATFolder</property>
@@ -360,7 +360,7 @@ Import a xml file with purge set to False, new criteria will be added to existin
       </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
+       <property name="title">Type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
@@ -395,7 +395,7 @@ Importing an already existing criterion will not fail, it is just ignored and a 
      <criteria>
       <criterion name="c2">
        <property name="widget">tagscloud</property>
-       <property name="title">Meta-type d'element</property>
+       <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
        <property name="default">ATFolder</property>
@@ -417,7 +417,7 @@ Importing an already existing criterion will not fail, it is just ignored and a 
        </criterion>
       <criterion name="c7">
        <property name="widget">checkbox</property>
-       <property name="title">Type d'element</property>
+       <property name="title">Type d...element</property>
        <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="default">
