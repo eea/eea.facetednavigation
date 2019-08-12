@@ -3,6 +3,9 @@ Changelog
 
 13.1-dev0 - (unreleased)
 ---------------------
+* Feature: added Faceted.Events.CLEANUP_COMPLETED event triggered after faceted
+  events cleanup is called
+  [ichim-david refs #106884]
 
 13.0 - (2019-07-01)
 -------------------

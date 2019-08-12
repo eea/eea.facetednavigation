@@ -205,11 +205,6 @@
   display: block;
 }
 
-.eea-preview-items .photoAlbumEntryTitle {
-  display: block;
-  padding: 0.5em;
-}
-
 .eea-preview-items:after {
   content: '.';
   display: block;
