@@ -15,29 +15,31 @@
   <fieldset class="widget-fieldset">
     <legend tal:define="title python:view.data.get('title', '')" tal:content="
       python:view.translate(title)" i18n:translate="">Alphabetic widget</legend>
-    <p tal:define="
-      lang python:view.request.get('LANGUAGE', 'en');
-      alph python:view.getAlphabet(lang);"
-      tal:on-error="structure python:error_view(error=error, cid=wid)"
-      tal:attributes="id wid">
-      <span class="faceted_letter" tal:define="
-          letter_css python:default_value == '' and 'faceted_letter faceted_letter_selected' or 'faceted_letter'"
-          tal:attributes="
-            class letter_css;
-            title string:All;
-            id string:${wid}-all" i18n:translate="" i18n:attributes="title">All</span>
-      <tal:letters repeat="letter alph">
-        <span class="faceted_letter" tal:define="
-          letter_id python:letter[0];
-          capital_letter python:letter[1];
-          letter_css string:faceted_letter;
-          letter_css python:capital_letter == default_value and letter_css + ' faceted_letter_selected' or letter_css;"
-          tal:content="capital_letter"
-          tal:attributes="
-            class letter_css;
-            title capital_letter;
-            id string:${wid}-${capital_letter}"/>
-      </tal:letters>
-    </p>
+      <div class="widget-body">
+        <p tal:define="
+          lang python:view.request.get('LANGUAGE', 'en');
+          alph python:view.getAlphabet(lang);"
+          tal:on-error="structure python:error_view(error=error, cid=wid)"
+          tal:attributes="id wid">
+          <span class="faceted_letter" tal:define="
+              letter_css python:default_value == '' and 'faceted_letter faceted_letter_selected' or 'faceted_letter'"
+              tal:attributes="
+                class letter_css;
+                title string:All;
+                id string:${wid}-all" i18n:translate="" i18n:attributes="title">All</span>
+          <tal:letters repeat="letter alph">
+            <span class="faceted_letter" tal:define="
+              letter_id python:letter[0];
+              capital_letter python:letter[1];
+              letter_css string:faceted_letter;
+              letter_css python:capital_letter == default_value and letter_css + ' faceted_letter_selected' or letter_css;"
+              tal:content="capital_letter"
+              tal:attributes="
+                class letter_css;
+                title capital_letter;
+                id string:${wid}-${capital_letter}"/>
+          </tal:letters>
+        </p>
+      </div>
   </fieldset>
 </div>

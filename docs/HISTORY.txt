@@ -3,6 +3,9 @@ Changelog
 
 13.1-dev0 - (unreleased)
 ---------------------
+* Change: added widget-body div wrapping content of criteria and alphabetic
+  widget making it easier to add margin or padding to widget body
+  [ichim-david refs #108460]
 * Feature: added Faceted.Events.CLEANUP_COMPLETED event triggered after faceted
   events cleanup is called
   [ichim-david refs #106884]

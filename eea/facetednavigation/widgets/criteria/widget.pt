@@ -10,25 +10,27 @@
 <fieldset class="widget-fieldset faceted-criteria">
   <legend  tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">Current filters</legend>
-  <dl tal:attributes="id wid"><dt></dt></dl>
+    <div class="widget-body">
+        <dl tal:attributes="id wid"><dt></dt></dl>
 
-  <div class="faceted-criteria-hide-show" tal:condition="view/data/hidecriteriaenabled|python:1">
-    <a href="#" class="faceted-criteria-hide">
-      <tal:block i18n:translate="">Hide filters</tal:block>
-    </a>
-    <a href="#" class="faceted-criteria-show">
-      <tal:block i18n:translate="">Show filters</tal:block>
-    </a>
-    <span class="faceted-criteria-count">(0)</span>
-  </div>
+        <div class="faceted-criteria-hide-show" tal:condition="view/data/hidecriteriaenabled|python:1">
+            <a href="#" class="faceted-criteria-hide">
+                <tal:block i18n:translate="">Hide filters</tal:block>
+            </a>
+            <a href="#" class="faceted-criteria-show">
+                <tal:block i18n:translate="">Show filters</tal:block>
+            </a>
+            <span class="faceted-criteria-count">(0)</span>
+        </div>
 
-  <div class="faceted-criteria-reset">
-    <a href="#" tal:attributes="id string:${wid}_reset"
-      title="Remove all filters"
-      i18n:attributes="title">
-      <tal:block i18n:translate="">Remove all</tal:block>
-    </a>
-  </div>
+        <div class="faceted-criteria-reset">
+            <a href="#" tal:attributes="id string:${wid}_reset"
+               title="Remove all filters"
+                     i18n:attributes="title">
+                <tal:block i18n:translate="">Remove all</tal:block>
+            </a>
+        </div>
+    </div>
 
 </fieldset>
 </div>
