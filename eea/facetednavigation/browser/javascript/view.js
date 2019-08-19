@@ -17,6 +17,7 @@ Faceted.Events.AJAX_ERROR = 'FACETED-AJAX-ERROR';
 Faceted.Events.REDRAW = 'FACETED-REDRAW';
 Faceted.Events.HASHCHANGE = 'hashchange.FACETED-HASHCHANGE';
 Faceted.Events.DO_UPDATE = 'FACETED-DO_UPDATE';
+Faceted.Events.CLEANUP_COMPLETED = 'FACETED-CLEANUP-COMPLETED';
 
 /* Unbind events
 */
@@ -35,6 +36,8 @@ Faceted.Events.cleanup = function(){
   jQuery(Faceted.Events).unbind(Faceted.Events.REDRAW);
   jQuery(Faceted.Events).unbind(Faceted.Events.DO_UPDATE);
   jQuery(window).unbind(Faceted.Events.HASHCHANGE); /* jQuery.bbq events */
+  /* trigger cleanup completed event once events cleanup is done */
+  jQuery(Faceted.Events).trigger(Faceted.Events.CLEANUP_COMPLETED);
 };
 
 /* Widgets

@@ -1,13 +1,22 @@
 Changelog
 =========
 
+13.1 - (2019-08-19)
+--------------------------
+* Change: added widget-body div wrapping content of criteria and alphabetic
+  widget making it easier to add margin or padding to widget body
+  [ichim-david refs #108460]
+* Feature: added Faceted.Events.CLEANUP_COMPLETED event triggered after faceted
+  events cleanup is called
+  [ichim-david refs #106884]
+
 13.0 - (2019-07-01)
 -------------------
 * Change: Add support or Python 3 and Plone 5.2.
   [pbauer, jensens, avoinea - refs #158]
 
 12.2 - (2019-05-20)
----------------------
+--------------------------
 * Feature: Provide an uninstall profile
   [erral]
 * Bug fix: Allow path within Tags Cloud facet
@@ -27,7 +36,7 @@ Changelog
   [avoinea refs #145]
 
 12.0 - (2019-04-04)
----------------------
+--------------------------
 * Upgrade step: Within "Plone > Site setup > Add-ons" click on
   upgrade button available for eea.facetednavigation.
   [avoinea]
@@ -39,33 +48,33 @@ Changelog
   [avoinea]
 
 11.9 - (2019-03-29)
----------------------
+--------------------------
 * Change: Updated theme colors to fit Plone 5 default theme colors
   [avoinea]
 * Bug fix: Removed double loading spinner within edit mode
   [avoinea]
 
 11.8 - (2019-03-05)
----------------------
+--------------------------
 * Change : display message 'No results were found.' when no results found
   [gbastien]
 * Change: Update README and Plone 4/5 sample buildouts
   [avoinea]
 
 11.7 - (2019-01-30)
----------------------
+--------------------------
 * Jenkins: Add sonarqube step
   [avoinea refs #101552]
 
 11.6 - (2018-12-11)
----------------------
+--------------------------
 * Complete basque translation
   [erral]
 * Fix alphabetic bar for basque language
   [erral]
 
 11.5 - (2018-11-19)
----------------------
+--------------------------
 * Change : set Faceted.Options.FADE_SPEED to 'fast' instead 'slow' by default
   [gbastien]
 * Change: make spinner easy to override by defining a CSS background-image
