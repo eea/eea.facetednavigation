@@ -1,7 +1,7 @@
 Changelog
 =========
 
-13.1-dev0 - (unreleased)
+13.1 - (2019-08-19)
 --------------------------
 * Change: added widget-body div wrapping content of criteria and alphabetic
   widget making it easier to add margin or padding to widget body
