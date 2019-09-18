@@ -1,6 +1,12 @@
 Changelog
 =========
 
+13.2 - (unreleased)
+--------------------------
+* Feature: The daterange widget automatically restricts date range in start date
+  calendar.
+  [daggelpop]
+
 13.1 - (2019-08-19)
 --------------------------
 * Change: added widget-body div wrapping content of criteria and alphabetic
