@@ -29,7 +29,7 @@ Faceted.DateRangeWidget = function(wid){
     dateFormat: this.dateFormat,
     yearRange: this.yearRange,
     onSelect: function(date, cal){
-      js_widget.force_range();
+      js_widget.force_start_range();
       js_widget.select_change(js_widget.start);
     }
   });
@@ -40,12 +40,16 @@ Faceted.DateRangeWidget = function(wid){
     yearRange: this.yearRange,
     dateFormat: this.dateFormat,
     onSelect: function(date, cal){
+      js_widget.force_end_range();
       js_widget.select_change(js_widget.end);
     }
   });
 
-  if(start){
-    js_widget.force_range();
+  if (start) {
+    js_widget.force_start_range();
+  }
+  if (end) {
+    js_widget.force_end_range();
   }
 
   /**
@@ -91,12 +95,18 @@ Faceted.DateRangeWidget.prototype = {
     this.do_query(element);
   },
 
-  force_range: function(){
+  force_start_range: function(){
     var start_date = this.start.datepicker("getDate");
-    if(!start_date){
-      return;
+    if(start_date){
+      this.end.datepicker("option", "minDate", start_date);
     }
-    this.end.datepicker("option", "minDate", start_date);
+  },
+
+  force_end_range: function(){
+    var end_date = this.end.datepicker("getDate");
+    if(end_date){
+      this.start.datepicker("option", "maxDate", end_date);
+    }
   },
 
   do_query: function(element){
@@ -143,6 +153,7 @@ Faceted.DateRangeWidget.prototype = {
     this.start.val('');
     this.end.val('');
     this.widget.removeClass("faceted-widget-active");
+    this.start.datepicker("option", "maxDate", null);
     this.end.datepicker("option", "minDate", null);
   },
 
