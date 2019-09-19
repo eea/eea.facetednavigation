@@ -2,7 +2,13 @@ Changelog
 =========
 
 13.2-dev0 - (unreleased)
----------------------------
+--------------------------
+* Feature: The daterange widget automatically restricts date range in start date
+  calendar.
+  [daggelpop]
+* Fix an issue with select widget where the synchronized value is ignored
+  on the selected value section when value came from the URL
+  [mpeeters]
 
 13.1 - (2019-08-19)
 --------------------------

@@ -88,7 +88,7 @@ Faceted.SelectWidget.prototype = {
 
     var context = this;
     jQuery.each(value, function(){
-      var selected = context.widget.find('option:selected');
+      var selected = context.widget.find('option[value="'+ this + '"]');
       if(!selected.length){
         context.reset();
       }else{
