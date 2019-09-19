@@ -1,6 +1,12 @@
 Changelog
 =========
 
+13.2 - (unreleased)
+--------------------------
+* Fix an issue with select widget where the synchronized value is ignored
+  on the selected value section when value came from the URL
+  [mpeeters]
+
 13.1 - (2019-08-19)
 --------------------------
 * Change: added widget-body div wrapping content of criteria and alphabetic
