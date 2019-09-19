@@ -1,7 +1,7 @@
 Changelog
 =========
 
-13.2-dev0 - (unreleased)
+13.2 - (2019-09-19)
 --------------------------
 * Feature: The daterange widget automatically restricts date range in start date
   calendar.
