@@ -134,7 +134,7 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   reset: function(){
-    this.select.val(null).trigger("change");
+    this.select.val(null).trigger("change.select2");
     this.selected = [];
     this.widget.removeClass("faceted-widget-active");
   },
@@ -142,7 +142,7 @@ Faceted.MultiSelectWidget.prototype = {
   synchronize: function(){
     var value = Faceted.Query[this.wid];
     if(value){
-      this.select.val(value).trigger("change");
+      this.select.val(value).trigger("change.select2");
       this.selected = this.widget.find('option:selected');
       this.widget.addClass("faceted-widget-active");
     } else {
@@ -228,11 +228,11 @@ Faceted.MultiSelectWidget.prototype = {
   criteria_remove: function(value, element){
     // Remove all
     if(!value){
-      this.select.val(null).trigger("change");
+      this.select.val(null).trigger("change.select2");
       this.do_query();
     }else{
       element.attr('selected', false);
-      this.select.trigger("change");
+      this.select.trigger("change.select2");
       this.do_query(this.select);
     }
   },

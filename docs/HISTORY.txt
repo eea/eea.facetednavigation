@@ -3,6 +3,8 @@ Changelog
 
 13.3-dev0 - (unreleased)
 ---------------------------
+* Bug fix: Fix MultiSelect scope of the JS change event side effects on TagsCloud
+  [avoinea]
 
 13.2 - (2019-09-19)
 --------------------------
