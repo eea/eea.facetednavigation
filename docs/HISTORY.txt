@@ -1,8 +1,12 @@
 Changelog
 =========
 
+13.3 - (2019-10-02)
+---------------------------
 * Completed catalan translations.
   [allusa]
+* Bug fix: Fix MultiSelect scope of the JS change event side effects on TagsCloud
+  [avoinea]
 
 13.2 - (2019-09-19)
 --------------------------
