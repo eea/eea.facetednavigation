@@ -1,0 +1,1100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-04-10 21:10+0000\n"
+"PO-Revision-Date: 2019-10-07 14:24+0200\n"
+"Last-Translator: Aleix Llusà Serra <a.llusa@iskra.cat>\n"
+"Language-Team: Català <ca@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: ca\n"
+"Language-Name: Catalan\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Is-Fallback-For: ca-ad ca-es ca-fr ca-it\n"
+
+#: ../../facetednavigation/widgets/date/widget.py:19
+msgid "1 month ago"
+msgstr "Fa un mes"
+
+#: ../../facetednavigation/widgets/date/widget.py:21
+msgid "1 week ago"
+msgstr "Fa una setmana"
+
+#: ../../facetednavigation/widgets/date/widget.py:16
+msgid "1 year ago"
+msgstr "Fa un any"
+
+#: ../../facetednavigation/widgets/date/widget.py:23
+msgid "2 days ago"
+msgstr "Fa dos dies"
+
+#: ../../facetednavigation/widgets/date/widget.py:20
+msgid "2 weeks ago"
+msgstr "Fa dues setmanes"
+
+#: ../../facetednavigation/widgets/date/widget.py:15
+msgid "2 years ago"
+msgstr "Fa dos anys"
+
+#: ../../facetednavigation/widgets/date/widget.py:18
+msgid "3 months ago"
+msgstr "Fa tres mesos"
+
+#: ../../facetednavigation/widgets/date/widget.py:22
+msgid "5 days ago"
+msgstr "Fa cinc dies"
+
+#: ../../facetednavigation/widgets/date/widget.py:17
+msgid "6 months ago"
+msgstr "Fa sis mesos"
+
+#: ../../facetednavigation/widgets/interfaces.py:54
+msgid "Accessor"
+msgstr "Accessor"
+
+#: ../../facetednavigation/widgets/interfaces.py:55
+msgid "Accessor to extract data for faceted widget."
+msgstr "Accessor que extreu les dades per al giny facetat."
+
+#: ../../facetednavigation/browser/template/configure.pt:68
+msgid "Add"
+msgstr "Afegeix"
+
+#: ../../facetednavigation/browser/template/configure.pt:24
+msgid "Add new filter"
+msgstr "Afegeix un filtre"
+
+#: ../../facetednavigation/browser/template/configure.pt:25
+msgid "Add widget"
+msgstr "Afegeix un giny"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:25
+msgid "After query filters"
+msgstr "Després de cercar els filtres"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/radio/widget.pt:34
+#: ../../facetednavigation/widgets/select/widget.pt:28
+msgid "All"
+msgstr "Tots"
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:45
+msgid "Allow multiple selections"
+msgstr "Permet selecció múltiple"
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:25
+msgid "Alphabetic"
+msgstr "Alfabètic"
+
+#: ../../facetednavigation/widgets/interfaces.py:48
+msgid "An interface describing schema to be used within z3c.form"
+msgstr "La interfície que indica l'schema que cal usar d'entre els z3c.form"
+
+#: ../../facetednavigation/browser/template/configure.pt:97
+msgid "Are you sure you want to delete ${widget} widget?"
+msgstr "Confirmeu que voleu eliminar el giny ${widget}?"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:23
+msgid "Autocomplete"
+msgstr "Autocompleció"
+
+#: ../../facetednavigation/widgets/boolean/widget.py:19
+msgid "Boolean"
+msgstr "Booleà"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:37
+msgid "Can select multiple values"
+msgstr "Permet la selecció múltiple"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:36
+msgid "Can select several elements"
+msgstr "Es poden seleccionar diversos valors"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:51
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+#: ../../facetednavigation/widgets/radio/interfaces.py:24
+msgid "Catalog"
+msgstr "Catàleg"
+
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:26
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:17
+#: ../../facetednavigation/widgets/boolean/interfaces.py:16
+msgid "Catalog index"
+msgstr "Índex del catàleg"
+
+#: ../../facetednavigation/widgets/interfaces.py:91
+msgid "Catalog index to be used"
+msgstr "Escolliu l'índex del catàleg"
+
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:18
+#: ../../facetednavigation/widgets/boolean/interfaces.py:17
+msgid "Catalog index to use for search"
+msgstr "Índex del catàleg que s'utilitza per a cercar"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:19
+msgid "Catalog query"
+msgstr "Cerca al catàleg"
+
+#: ../../facetednavigation/widgets/checkbox/widget.py:22
+msgid "Checkboxes"
+msgstr "Selecció amb caselles"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:16
+msgid "Cloud"
+msgstr "Núvol"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:107
+msgid "Cloud height"
+msgstr "Alçada del núvol"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:108
+msgid "Cloud height (px)"
+msgstr "Alçada del núvol (px)"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:87
+msgid "Cloud type"
+msgstr "Tipus de núvol"
+
+#: ../../facetednavigation/browser/app/exportimport.py:49
+msgid "Configuration imported"
+msgstr "S'ha importat la configuració"
+
+#: ../../facetednavigation/settings/menu.py:69
+msgid "Configure"
+msgstr "Configura"
+
+#: ../../facetednavigation/browser/template/configure.pt:107
+msgid "Content listing"
+msgstr "Llista dels continguts"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:23
+msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
+msgstr "Controla l'interval d'anys que es mostren en el desplegable: relativament a l'any actual (-nn:+nn), relativament a l'any seleccionat (c-nn:c+nn), absolutament (nnnn:nnnn), o combinacions d'aquests formats (nnnn:-nn)."
+
+#: ../../facetednavigation/widgets/interfaces.py:116
+msgid "Count results"
+msgstr "Compta els resultats"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:30
+msgid "Counters"
+msgstr "Comptadors"
+
+#: ../../facetednavigation/browser/template/configure.pt:123
+msgid "Criterion details"
+msgstr "Detalls del filtre"
+
+#: ../../facetednavigation/widgets/interfaces.py:60
+msgid "Criterion interface"
+msgstr "Interfície del criteri"
+
+#: ../../facetednavigation/widgets/debug/widget.pt:35
+msgid "Current configuration"
+msgstr "Configuració actual"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:59
+msgid "Cut long phrases to provided number of characters"
+msgstr "Talla les frases llargues a partir del nombre de caràcters donat"
+
+#: ../../facetednavigation/widgets/date/widget.py:46
+msgid "Date"
+msgstr "Data"
+
+#: ../../facetednavigation/widgets/daterange/widget.py:61
+msgid "Date range"
+msgstr "Data amb interval"
+
+#: ../../facetednavigation/widgets/debug/widget.py:14
+msgid "Debugger"
+msgstr "Depurador"
+
+#: ../../facetednavigation/widgets/etag/interfaces.py:23
+msgid "Default e-tag"
+msgstr "e-tag per defecte"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:19
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:19
+msgid "Default items (one per line)"
+msgstr "Elements per defecte (un per línia)"
+
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:20
+msgid "Default letter to be selected"
+msgstr "Lletra seleccionada per defecte"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:26
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
+msgid "Default operator"
+msgstr "Operador per defecte"
+
+#: ../../facetednavigation/widgets/interfaces.py:84
+msgid "Default query"
+msgstr "Consulta per defecte"
+
+#: ../../facetednavigation/widgets/resultsperpage/interfaces.py:37
+msgid "Default results per page"
+msgstr "Quantitat de resultats per pàgina per defecte"
+
+#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:22
+#: ../../facetednavigation/widgets/tal/interfaces.py:22
+msgid "Default tal expression for query value"
+msgstr "Expressió TAL de recerca per defecte"
+
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:19
+#: ../../facetednavigation/widgets/boolean/interfaces.py:23
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:18
+msgid "Default value"
+msgstr "Valor per defecte"
+
+#: ../../facetednavigation/browser/template/configure.pt:181
+msgid "Delete"
+msgstr "Suprimeix"
+
+#: ../../facetednavigation/widgets/path/interfaces.py:33
+msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
+msgstr "Profunditat de cerca dins de la ruta. 0=aquest nivell, -1=totes les subcarpetes recursivament, i qualsevol altre enter positiu indica fins a quin nivell de subcarpetes s'ha de cercar."
+
+#: ../../facetednavigation/interfaces.py:80
+msgid "Disable diazo rules on ajax requests"
+msgstr "Desactiva les regles de Diazo per a les sol·licituds AJAX"
+
+#: ../../facetednavigation/profiles/common/actions.xml
+msgid "Disable faceted navigation"
+msgstr "Desactiva la navegació facetada"
+
+#: ../../facetednavigation/profiles/common/actions.xml
+msgid "Disable faceted search"
+msgstr "Desactiva la cerca facetada"
+
+#: ../../facetednavigation/settings/menu.py:128
+msgid "Disable inheriting configuration"
+msgstr "Desactiva la configuració heretada"
+
+#: ../../facetednavigation/settings/menu.py:83
+msgid "Disable left portlets"
+msgstr "Amaga els portlets de l'esquerra"
+
+#: ../../facetednavigation/settings/menu.py:97
+msgid "Disable right portlets"
+msgstr "Amaga els portlets de la dreta"
+
+#: ../../facetednavigation/settings/menu.py:111
+msgid "Disable smart facets hiding"
+msgstr "Desactiva l'amagament intel·ligent dels filtres"
+
+#: ../../facetednavigation/widgets/interfaces.py:117
+msgid "Display number of results near each option"
+msgstr "Mostra el nombre de resultats al costat de cada opció"
+
+#: ../../facetednavigation/widgets/interfaces.py:104
+msgid "Display widget in section"
+msgstr "Secció en què es mostra el giny"
+
+#: ../../facetednavigation/browser/template/configure.pt:55
+msgid "Display widget in section."
+msgstr "Secció en què es mostra el giny."
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "EEA Faceted Navigation"
+msgstr "EEA navegació facetada"
+
+#: ../../facetednavigation/profiles.zcml:34
+msgid "EEA Faceted Navigation Common Configuration"
+msgstr "EEA configuració estàndard de la navegació facetada"
+
+#: ../../facetednavigation/profiles/common/actions.xml
+msgid "Enable faceted navigation"
+msgstr "Activa la navegació facetada"
+
+#: ../../facetednavigation/profiles/common/actions.xml
+msgid "Enable faceted search"
+msgstr "Activa la cerca facetada"
+
+#: ../../facetednavigation/widgets/criteria/interfaces.py:15
+msgid "Enable hide/show criteria"
+msgstr "Permet amagar/mostrar els filtres"
+
+#: ../../facetednavigation/settings/menu.py:130
+msgid "Enable inheriting configuration"
+msgstr "Activa la configuració heretada"
+
+#: ../../facetednavigation/settings/menu.py:82
+msgid "Enable left portlets"
+msgstr "Mostra els portlets de l'esquerra"
+
+#: ../../facetednavigation/settings/menu.py:96
+msgid "Enable right portlets"
+msgstr "Mostra els portlets de la dreta"
+
+#: ../../facetednavigation/settings/menu.py:110
+msgid "Enable smart facets hiding"
+msgstr "Amaga intel·ligentment els filtres"
+
+#: ../../facetednavigation/widgets/etag/interfaces.py:15
+msgid "Enabled (hidden)"
+msgstr "Activat (s'amaga)"
+
+#: ../../facetednavigation/widgets/range/widget.pt:37
+#: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
+msgid "End"
+msgstr "Final"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:39
+msgid "End date"
+msgstr "Data final"
+
+#: ../../facetednavigation/browser/template/error.pt:10
+msgid "Error type:"
+msgstr "Tipus d'error:"
+
+#: ../../facetednavigation/browser/template/error.pt:12
+msgid "Error value:"
+msgstr "Valor de l'error:"
+
+#: ../../facetednavigation/browser/template/configure.pt:86
+msgid "Export"
+msgstr "Exporta"
+
+#: ../../facetednavigation/profiles.zcml:34
+msgid "Extension profile for EEA Faceted Navigation settings that aren't version dependent."
+msgstr "Perfil d'instal·lació per a la configuració de la navegació facetada EEA que no depèn de versions."
+
+#: ../../facetednavigation/profiles.zcml:17
+msgid "Extension profile for EEA Faceted Navigation."
+msgstr "Perfil d'instal·lació de la navegació facetada EEA"
+
+#: ../../facetednavigation/settings/configure.zcml:19
+msgid "Faceted global settings"
+msgstr "Configuració global de la cerca facetada"
+
+#: ../../facetednavigation/views/configure.zcml:20
+msgid "Faceted items preview"
+msgstr "Vista prèvia facetada"
+
+#: ../../facetednavigation/views/example/configure.zcml:21
+msgid "Faceted listing view"
+msgstr "Vista estàndard facetada"
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigable"
+msgstr "Navegació per facetes"
+
+#: ../../facetednavigation/settings/menu.py:24
+msgid "Faceted navigation"
+msgstr "Navegació facetada"
+
+#: ../../facetednavigation/dexterity.zcml:11
+msgid "Faceted navigation can be activated on the instances of this content type."
+msgstr "Permet que s'activi la navegació facetada en els elements d'aquest tipus."
+
+#: ../../facetednavigation/subtypes/subtyper.py:142
+msgid "Faceted navigation disabled"
+msgstr "S'ha desactivat la navegació facetada"
+
+#: ../../facetednavigation/subtypes/subtyper.py:131
+msgid "Faceted navigation enabled"
+msgstr "S'ha activat la navegació facetada"
+
+#: ../../facetednavigation/settings/menu.py:25
+msgid "Faceted navigation settings"
+msgstr "Configuració de la navegació facetada"
+
+#: ../../facetednavigation/subtypes/subtyper.py:174
+msgid "Faceted search disabled"
+msgstr "S'ha desactivat la cerca facetada"
+
+#: ../../facetednavigation/subtypes/subtyper.py:166
+msgid "Faceted search enabled"
+msgstr "S'ha activat la cerca facetada"
+
+#: ../../facetednavigation/views/example/configure.zcml:13
+msgid "Faceted summary view"
+msgstr "Vista resum facetada"
+
+#: ../../facetednavigation/widgets/interfaces.py:39
+msgid "Factory"
+msgstr "Factory"
+
+#: ../../facetednavigation/browser/app/configure.py:63
+msgid "Filter added"
+msgstr "S'ha afegit el filtre"
+
+#: ../../facetednavigation/browser/app/configure.py:158
+msgid "Filter deleted"
+msgstr "S'ha suprimit el filtre"
+
+#: ../../facetednavigation/widgets/sorting/interfaces.py:15
+msgid "Filter from vocabulary"
+msgstr "Vocabulari de les opcions de filtre"
+
+#: ../../facetednavigation/widgets/criteria/widget.py:14
+msgid "Filters"
+msgstr "Filtres"
+
+#: ../../facetednavigation/browser/app/configure.py:90
+msgid "Filters deleted"
+msgstr "S'han suprimit els filtres"
+
+#: ../../facetednavigation/widgets/interfaces.py:70
+msgid "Friendly name"
+msgstr "Nom visible"
+
+#: ../../facetednavigation/widgets/date/widget.py:91
+msgid "Future"
+msgstr "Futur"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:52
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:59
+#: ../../facetednavigation/widgets/radio/interfaces.py:25
+msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr "Utilitza, com a vocabulari, els valors únics indexats al catàleg"
+
+#: ../../facetednavigation/widgets/interfaces.py:110
+msgid "Hidden"
+msgstr "Amagat"
+
+#: ../../facetednavigation/widgets/radio/interfaces.py:32
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:45
+msgid "Hide 'All' option"
+msgstr "Amaga l'opció 'Tots'"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:17
+msgid "Hide filters"
+msgstr "Amaga els filtres"
+
+#: ../../facetednavigation/widgets/interfaces.py:128
+msgid "Hide items with zero results"
+msgstr "Amaga els elements sense cap resultat"
+
+#: ../../facetednavigation/widgets/etag/interfaces.py:16
+msgid "Hide this widget in order for e-tag to be used"
+msgstr "Amaga aquest giny per tal d'utilitzar les e-tag"
+
+#: ../../facetednavigation/widgets/interfaces.py:111
+msgid "Hide widget"
+msgstr "Amaga el giny"
+
+#: ../../facetednavigation/widgets/radio/interfaces.py:33
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
+msgid "If this checkbox is checked, hides the \"All\" option"
+msgstr "Si està seleccionat, s'amaga l'opció \"Tots\""
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:30
+#: ../../facetednavigation/widgets/text/interfaces.py:24
+msgid "If this checkbox is checked, hides the choice to filter in all items or in current items only"
+msgstr "Si està seleccionat, amaga l'opció per a filtrar entre tots els elements o només entre els elements actuals"
+
+#: ../../facetednavigation/widgets/text/interfaces.py:31
+msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
+msgstr "Si està seleccionat, se cerca afegint automàticament un '*' al text de cerca; així per exemple si se cerca 'pressupost' també hi haurà resultats d'elements que continguin 'pressupostos'."
+
+#: ../../facetednavigation/browser/template/configure.pt:83
+msgid "Import"
+msgstr "Importa"
+
+#: ../../facetednavigation/browser/template/configure.pt:75
+msgid "Import - Export configuration"
+msgstr "Configuració d'importació/exportació"
+
+#: ../../facetednavigation/browser/template/configure.pt:76
+msgid "Import configuration"
+msgstr "Configuració d'importació"
+
+#: ../../facetednavigation/settings/menu.py:197
+msgid "Inheriting configuration if is now enabled"
+msgstr "S'ha activat la configuració heretada"
+
+#: ../../facetednavigation/settings/menu.py:201
+msgid "Inheriting configuration is now disabled"
+msgstr "S'ha desactivat la configuració heretada"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:21
+msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
+msgstr "S'ha introduït un vocabulari invàlid o buit per a aquest giny. Deixeu-lo en blanc per als criteris d'ordenació per defecte."
+
+#: ../../facetednavigation/widgets/range/widget.pt:1
+msgid "Invalid range"
+msgstr "Interval invàlid"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:57
+msgid "Label (end date)"
+msgstr "Etiqueta (data final)"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:29
+msgid "Label (end range)"
+msgstr "Etiqueta (final de l'interval)"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:50
+msgid "Label (start date)"
+msgstr "Etiqueta (data inicial)"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:22
+msgid "Label (start range)"
+msgstr "Etiqueta (inici de l'interval)"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "Less"
+msgstr "Mostra'n menys"
+
+#: ../../facetednavigation/browser/template/view.pt:31
+msgid "Less filters"
+msgstr "Mostra menys filtres"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:37
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:37
+msgid "Let the end-user choose to search with AND or OR between elements"
+msgstr "Permet que l'usuari esculli si vol cercar conjuntivament (AND) o disjuntivament (OR)"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:14
+msgid "List"
+msgstr "Llista"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:58
+msgid "Maximum characters"
+msgstr "Límit màxim de caràcters"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:79
+msgid "Maximum color"
+msgstr "Color màxim"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
+msgid "Maximum font-size (px)"
+msgstr "Mida màxima de la lletra (px)"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:59
+#: ../../facetednavigation/widgets/radio/interfaces.py:38
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:51
+msgid "Maximum items"
+msgstr "Quantitat màxima d'elements"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:100
+msgid "Maximum size"
+msgstr "Mida màxima"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:71
+msgid "Minimum color"
+msgstr "Color mínim"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
+msgid "Minimum font-size (px)"
+msgstr "Mida mínima de la lletra (px)"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:93
+msgid "Minimum size"
+msgstr "Mida mínima"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:1
+#: ../../facetednavigation/widgets/radio/widget.pt:1
+msgid "More"
+msgstr "Mostra'n més"
+
+#: ../../facetednavigation/browser/template/view.pt:30
+msgid "More filters"
+msgstr "Mostra més filtres"
+
+#: ../../facetednavigation/browser/template/configure.pt:164
+msgid "Move Down"
+msgstr "Mou avall"
+
+#: ../../facetednavigation/browser/template/configure.pt:155
+msgid "Move Up"
+msgstr "Mou amunt"
+
+#: ../../facetednavigation/widgets/multiselect/widget.py:22
+msgid "Multi Select"
+msgstr "Selecció múltiple"
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
+msgid "Multiselect"
+msgstr "Selecció múltiple"
+
+#: ../../facetednavigation/widgets/path/interfaces.py:25
+msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
+msgstr "Punt d'inici de la navegació en arbre (relatiu al portal plone, p.ex: PORTAL/dades-i-mapes)"
+
+#: ../../facetednavigation/widgets/path/interfaces.py:41
+msgid "Navigation tree theme"
+msgstr "Tema de l'arbre de navegació"
+
+#: ../../facetednavigation/widgets/date/widget.py:29
+msgid "Next 2 days"
+msgstr "D'aquí a dos dies"
+
+#: ../../facetednavigation/widgets/date/widget.py:32
+msgid "Next 2 weeks"
+msgstr "D'aquí a dues setmanes"
+
+#: ../../facetednavigation/widgets/date/widget.py:37
+msgid "Next 2 years"
+msgstr "D'aquí a dos anys"
+
+#: ../../facetednavigation/widgets/date/widget.py:34
+msgid "Next 3 months"
+msgstr "D'aquí a tres mesos"
+
+#: ../../facetednavigation/widgets/date/widget.py:30
+msgid "Next 5 days"
+msgstr "D'aquí a cinc dies"
+
+#: ../../facetednavigation/widgets/date/widget.py:35
+msgid "Next 6 months"
+msgstr "D'aquí a sis mesos"
+
+#: ../../facetednavigation/widgets/date/widget.py:33
+msgid "Next month"
+msgstr "D'aquí a un mes"
+
+#: ../../facetednavigation/widgets/date/widget.py:31
+msgid "Next week"
+msgstr "D'aquí a una setmana"
+
+#: ../../facetednavigation/widgets/date/widget.py:36
+msgid "Next year"
+msgstr "D'aquí a un any"
+
+#: ../../facetednavigation/browser/app/exportimport.py:88
+msgid "No action provided"
+msgstr "No s'ha indicat cap acció"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:60
+#: ../../facetednavigation/widgets/radio/interfaces.py:39
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:52
+msgid "Number of items visible in widget"
+msgstr "Nombre d'elements visibles dins del giny"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:36
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
+msgid "Operator visible"
+msgstr "Operador visible"
+
+#: ../../facetednavigation/browser/template/configure.pt:124
+msgid "Order"
+msgstr "Ordre"
+
+#: ../../facetednavigation/widgets/date/widget.py:78
+msgid "Past"
+msgstr "Passat"
+
+#: ../../facetednavigation/widgets/path/widget.py:20
+msgid "Path"
+msgstr "Ubicació"
+
+#: ../../facetednavigation/widgets/portlet/interfaces.py:16
+msgid "Path to portlet macro"
+msgstr "Ubicació de la macro del portlet"
+
+#: ../../facetednavigation/widgets/interfaces.py:76
+msgid "Placeholder"
+msgstr "Text d'exemple"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:71
+msgid "Placeholder (end date)"
+msgstr "Text d'exemple (data final)"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:43
+msgid "Placeholder (end range)"
+msgstr "Text d'exemple (final de l'interval)"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:64
+msgid "Placeholder (start date)"
+msgstr "Text d'exemple (data inicial)"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:36
+msgid "Placeholder (start range)"
+msgstr "Text d'exemple (inici de l'interval)"
+
+#: ../../facetednavigation/browser/app/exportimport.py:41
+msgid "Please provide a valid xml file"
+msgstr "Cal que sigui un fitxer XML vàlid"
+
+#: ../../facetednavigation/widgets/portlet/widget.py:18
+msgid "Plone portlet"
+msgstr "Portlet de Plone"
+
+#: ../../facetednavigation/widgets/portlet/interfaces.py:15
+msgid "Portlet macro"
+msgstr "Macro del portlet"
+
+#: ../../facetednavigation/settings/menu.py:169
+msgid "Portlets left column is hidden now"
+msgstr "S'ha amagat la columna esquerra de portlets"
+
+#: ../../facetednavigation/settings/menu.py:166
+msgid "Portlets left column is visible now"
+msgstr "S'ha fet visible la columna esquerra de portlets"
+
+#: ../../facetednavigation/settings/menu.py:179
+msgid "Portlets right column is hidden now"
+msgstr "S'ha amagat la columna dreta de portlets"
+
+#: ../../facetednavigation/settings/menu.py:176
+msgid "Portlets right column is visible now"
+msgstr "S'ha fet visible la columna dreta de portlets"
+
+#: ../../facetednavigation/browser/template/configure.pt:42
+#: ../../facetednavigation/widgets/interfaces.py:96
+msgid "Position"
+msgstr "Posició"
+
+#: ../../facetednavigation/browser/template/configure.pt:43
+msgid "Position of the widget."
+msgstr "Posició del giny"
+
+#: ../../facetednavigation/widgets/interfaces.py:40
+msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
+msgstr "El nom Python d'una factory que pot crear una implementació de l'objecte. Cal que aquest nom identifiqui un objecte dins d'un mòdul."
+
+#: ../../facetednavigation/widgets/radio/widget.py:19
+msgid "Radio"
+msgstr "Selecció amb botons"
+
+#: ../../facetednavigation/widgets/range/widget.py:19
+msgid "Range"
+msgstr "Interval"
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:29
+msgid "Relevance"
+msgstr "Rellevància"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:29
+msgid "Remove all"
+msgstr "Esborra'ls tots"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:26
+msgid "Remove all filters"
+msgstr "Esborra tots els filtres"
+
+#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:21
+#: ../../facetednavigation/widgets/resultsfilter/widget.py:42
+msgid "Results Filter"
+msgstr "Filtre entre els resultats"
+
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:19
+msgid "Results per page"
+msgstr "Resultats per pàgina"
+
+#: ../../facetednavigation/widgets/resultsperpage/interfaces.py:23
+msgid "Results per page ending value"
+msgstr "Extrem final de la seqüència de resultats per pàgina"
+
+#: ../../facetednavigation/widgets/resultsperpage/interfaces.py:16
+msgid "Results per page starting value"
+msgstr "Extrem inicial de la seqüència de resultats per pàgina"
+
+#: ../../facetednavigation/widgets/resultsperpage/interfaces.py:30
+msgid "Results per page step"
+msgstr "Pas de la seqüència de resultats per pàgina"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:37
+msgid "Reuse date format and language used by Plone"
+msgstr "Format i idioma de les dates definit a Plone"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:38
+msgid "Reuse the same date format and the the same language that Plone uses elsewhere. Otherwise, the format will be \"yy-mm-dd\" and the language \"English\". Note that this default format allows you to encode very old or big years (example : 0001 will not be converted to 1901). Other formats do not."
+msgstr "Utilitza el mateix format i el mateix idioma que Plone utilitza a tot arreu. Sinó el format és \"yy-mm-dd\" i l'idioma és l'anglès. Noteu que aquest format per defecte permet codificar dates antigues (per exemple: 0001 no es converteix a 1901). Altres formats no ho permeten."
+
+#: ../../facetednavigation/widgets/sorting/widget.pt:50
+msgid "Reverse"
+msgstr "Invers"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+#: ../../facetednavigation/widgets/radio/interfaces.py:45
+msgid "Reverse options"
+msgstr "Opcions invertides"
+
+#: ../../facetednavigation/widgets/path/interfaces.py:24
+msgid "Root folder"
+msgstr "Carpeta arrel"
+
+#: ../../facetednavigation/browser/template/configure.pt:180
+msgid "Save"
+msgstr "Desa"
+
+#: ../../facetednavigation/widgets/interfaces.py:47
+msgid "Schema interface"
+msgstr "Interfície de schema"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:35
+#: ../../facetednavigation/widgets/text/widget.pt:27
+msgid "Search"
+msgstr "Cerca"
+
+#: ../../facetednavigation/widgets/path/interfaces.py:32
+msgid "Search Depth"
+msgstr "Profunditat de la cerca"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:29
+#: ../../facetednavigation/widgets/text/interfaces.py:23
+msgid "Search in all elements only"
+msgstr "Cerca només en tots els elements"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:27
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:27
+msgid "Search with AND/OR between elements"
+msgstr "Cerca mitjançant conjunció (AND) o disjunció (OR)"
+
+#: ../../facetednavigation/browser/template/configure.pt:54
+#: ../../facetednavigation/widgets/interfaces.py:103
+msgid "Section"
+msgstr "Secció"
+
+#: ../../facetednavigation/widgets/select/widget.py:16
+msgid "Select"
+msgstr "Selecció"
+
+#: ../../facetednavigation/browser/template/configure.pt:112
+msgid "Select all items"
+msgstr "Selecciona tots els elements"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:24
+msgid "Select the source of the autocomplete suggestions"
+msgstr "Seleccioneu la font per als suggeriments d'autocompleció"
+
+#: ../../facetednavigation/widgets/criteria/widget.pt:20
+msgid "Show filters"
+msgstr "Mostra els filtres"
+
+#: ../../facetednavigation/settings/menu.py:189
+msgid "Smart facets hiding is now disabled"
+msgstr "S'ha desactivat l'amagament intel·ligent dels filtres"
+
+#: ../../facetednavigation/settings/menu.py:186
+msgid "Smart facets hiding is now enabled"
+msgstr "S'ha activat l'amagament intel·ligent dels filtres"
+
+#: ../../facetednavigation/widgets/interfaces.py:122
+msgid "Sort by countable"
+msgstr "Ordena segons els comptadors"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/radio/interfaces.py:46
+msgid "Sort options reversed"
+msgstr "Mostra les opcions en ordre invers"
+
+#: ../../facetednavigation/widgets/sorting/widget.py:23
+msgid "Sorting"
+msgstr "Ordenació"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:15
+msgid "Sphere"
+msgstr "Esfera"
+
+#: ../../facetednavigation/widgets/range/widget.pt:28
+#: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
+msgid "Start"
+msgstr "Inici"
+
+#: ../../facetednavigation/widgets/daterange/widget.pt:30
+msgid "Start date"
+msgstr "Data inicial"
+
+#: ../../facetednavigation/widgets/resultsperpage/interfaces.py:29
+msgid "Step"
+msgstr "Pas"
+
+#: ../../facetednavigation/profiles/common/actions.xml
+msgid "Sync faceted translations"
+msgstr "Sincronitza les traduccions facetades"
+
+#: ../../facetednavigation/widgets/tal/widget.py:37
+msgid "TAL Expression"
+msgstr "Expressió TAL"
+
+#: ../../facetednavigation/widgets/tagscloud/widget.py:22
+msgid "Tags Cloud"
+msgstr "Núvol d'etiquetes"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:80
+msgid "Tagscloud max color"
+msgstr "Color màxim del núvol d'etiquetes"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:72
+msgid "Tagscloud minimum color"
+msgstr "Color mínim del núvol d'etiquetes"
+
+#: ../../facetednavigation/widgets/tal/interfaces.py:21
+msgid "Tal Expression"
+msgstr "Expressió TAL"
+
+#: ../../facetednavigation/widgets/text/widget.py:15
+msgid "Text field"
+msgstr "Text"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:27
+msgid "Text field with suggestions"
+msgstr "Text amb autocompleció"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:58
+msgid "Text to be displayed as end date input label"
+msgstr "Text que es mostra a l'etiqueta del camp de data final"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:72
+msgid "Text to be displayed as end date input placeholder"
+msgstr "Text que es mostra com a pista dins del camp de data final"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:30
+msgid "Text to be displayed as end range input label"
+msgstr "Text que es mostra a l'etiqueta del camp de final de l'interval"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:44
+msgid "Text to be displayed as end range input placeholder"
+msgstr "Text que es mostra com a pista dins del camp de final de l'interval"
+
+#: ../../facetednavigation/widgets/interfaces.py:77
+msgid "Text to be displayed as input placeholder"
+msgstr "Text que es mostra com a pista dins del camp d'entrada"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:51
+msgid "Text to be displayed as start date input label"
+msgstr "Text que es mostra a l'etiqueta del camp de data inicial"
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:65
+msgid "Text to be displayed as start date input placeholder"
+msgstr "Text que es mostra com a pista dins del camp de data inicial"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:23
+msgid "Text to be displayed as start range input label"
+msgstr "Text que es mostra a l'etiqueta del camp d'inici de l'interval"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:37
+msgid "Text to be displayed as start range input placeholder"
+msgstr "Text que es mostra com a pista dins del camp d'inici de l'interval"
+
+#: ../../facetednavigation/widgets/path/interfaces.py:42
+msgid "Theme to be used with this widget"
+msgstr "Tema que cal utilitzar per a aquest giny"
+
+#: ../../facetednavigation/widgets/interfaces.py:129
+msgid "This option works only if 'count results' is enabled"
+msgstr "Aquesta opció només funciona si l'opció 'compta els resultats' està activada"
+
+#: ../../facetednavigation/widgets/path/widget.pt:31
+msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
+msgstr "Aquest giny no s'està utilitzant perquè o bé la carpeta arrel indicada no és accessible o bé no té cap contingut."
+
+#: ../../facetednavigation/browser/template/error.pt:3
+msgid "This widget will be ignored in view mode as an error occurred while trying to render it. For more details please check the server log file. You can also try to modify widget configuration in order to see what property is causing this problem."
+msgstr "Aquest giny no s'està utilitzant perquè hi ha un error a l'hora de renderitzar-lo. Per més detalls consulteu els fitxers de registre del servidor. També podeu provar de canviar la configuració del giny per tal de descobrir quina propietat causa aquest problema."
+
+#: ../../facetednavigation/widgets/interfaces.py:71
+msgid "Title for widget to display in view page"
+msgstr "Títol del giny que es mostra a la vista facetada"
+
+#: ../../facetednavigation/widgets/date/widget.py:85
+msgid "Today"
+msgstr "Avui"
+
+#: ../../facetednavigation/widgets/date/widget.py:28
+msgid "Tomorrow"
+msgstr "Demà"
+
+#: ../../facetednavigation/browser/template/configure.pt:30
+msgid "Type"
+msgstr "Tipus"
+
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:88
+msgid "Type of the cloud"
+msgstr "Tipus del núvol"
+
+#: ../../facetednavigation/browser/template/configure.pt:31
+msgid "Type of the widget."
+msgstr "Tipus de giny."
+
+#: ../../facetednavigation/widgets/daterange/interfaces.py:22
+msgid "UI Calendar years range"
+msgstr "Interval d'anys del calendari"
+
+#: ../../facetednavigation/widgets/criteria/interfaces.py:16
+msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
+msgstr "Quan està activat permet que l'usuari amagui els filtres"
+
+#: ../../facetednavigation/profiles.zcml:42
+msgid "Uninstall EEA Faceted Navigation"
+msgstr "Desinstal·la la EEA navegació facetada"
+
+#: ../../facetednavigation/profiles.zcml:42
+msgid "Uninstall to remove EEA Faceted Navigation support"
+msgstr "Desinstal·leu per a suprimir la EEA navegació facetada"
+
+#: ../../facetednavigation/widgets/interfaces.py:123
+msgid "Use the results counter for sorting"
+msgstr "Utilitza el comptatge de resultats per a ordenar les opcions"
+
+#: ../../facetednavigation/widgets/debug/interfaces.py:15
+msgid "Visible to"
+msgstr "Visible per a"
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:44
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
+#: ../../facetednavigation/widgets/radio/interfaces.py:17
+msgid "Vocabulary"
+msgstr "Vocabulari"
+
+#: ../../facetednavigation/widgets/sorting/interfaces.py:16
+msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sorting criteria."
+msgstr "Vocabulari que s'utilitza per a obtenir els criteris d'ordenació. Deixeu-lo buit per a obtenir els criteris d'ordenació per defecte."
+
+#: ../../facetednavigation/widgets/checkbox/interfaces.py:45
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:52
+#: ../../facetednavigation/widgets/radio/interfaces.py:18
+msgid "Vocabulary to use to render widget items"
+msgstr "Vocabulari que s'utilitza per a obtenir les opcions seleccionables"
+
+#: ../../facetednavigation/widgets/interfaces.py:97
+msgid "Widget position in page"
+msgstr "Posició del giny a la pàgina"
+
+#: ../../facetednavigation/browser/template/configure.pt:147
+msgid "Widget type"
+msgstr "Tipus de giny"
+
+#: ../../facetednavigation/widgets/debug/interfaces.py:16
+msgid "Widget will be visible only for selected user"
+msgstr "Aquest giny només és visible per a l'usuari seleccionat"
+
+#: ../../facetednavigation/widgets/text/interfaces.py:30
+msgid "Wildcard search"
+msgstr "Cerca amb caràcters comodí"
+
+#: ../../facetednavigation/widgets/date/widget.py:24
+msgid "Yesterday"
+msgstr "Ahir"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+msgid "all"
+msgstr "tots"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:45
+#: ../../facetednavigation/widgets/text/widget.pt:37
+msgid "all items"
+msgstr "en tots els elements"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:30
+#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+msgid "any"
+msgstr "qualsevol"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:54
+#: ../../facetednavigation/widgets/text/widget.pt:46
+msgid "in current results"
+msgstr "entre els elements actuals"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:29
+#: ../../facetednavigation/widgets/multiselect/widget.pt:53
+msgid "match"
+msgstr "coincideix amb"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:28
+#: ../../facetednavigation/widgets/multiselect/widget.pt:52
+msgid "match any/all filters bellow"
+msgstr "compleix totes/qualsevol de les opcions seleccionades"
+
+#: ../../facetednavigation/widgets/autocomplete/widget.py:105
+msgid "solr"
+msgstr "solr"
