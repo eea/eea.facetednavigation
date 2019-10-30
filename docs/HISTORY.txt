@@ -3,6 +3,8 @@ Changelog
 
 13.4-dev0 - (unreleased)
 ---------------------------
+* Change: MultiSelect optimizations by selecting multiple values before FacetedQuery
+  [avoinea]
 
 13.3 - (2019-10-02)
 ---------------------------

@@ -14,6 +14,7 @@ Faceted.MultiSelectWidget = function(wid){
 
   this.select.select2({
     placeholder: this.placeholder,
+    closeOnSelect : false,
     allowClear: true
   });
 
@@ -50,7 +51,11 @@ Faceted.MultiSelectWidget = function(wid){
   });
 
   var js_widget = this;
-  this.select.change(function(evt){
+  this.select.on('select2-close', function(evt){
+    js_widget.select_change(this, evt);
+  });
+
+  this.select.on('select2-removed', function(evt){
     js_widget.select_change(this, evt);
   });
 
