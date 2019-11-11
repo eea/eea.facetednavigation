@@ -6,6 +6,7 @@
   default_value python:view.default;
   default_start python:default_value[0];
   default_end python:default_value[1];
+  integer python:view.integer;
   labelStart python:view.data.get('labelStart', 'Start');
   labelEnd python:view.data.get('labelEnd', 'End');
   placeholderStart python:view.data.get('placeholderStart', '');
@@ -28,8 +29,9 @@
     <input type="text" name="start" title="Start" tal:attributes="
       id string:$wid-start-input;
       placeholder python:view.translate(placeholderStart);
-      value default_start"
-      i18n:attributes="title" />
+      value default_start;
+      type python:'number' if integer else 'text';
+      " i18n:attributes="title" />
   </div>
   <div tal:attributes="id string:${wid}_end;">
     <label tal:attributes="for string:$wid-end-input"
@@ -37,8 +39,9 @@
     <input type="text" name="end" title="End" tal:attributes="
       id string:$wid-end-input;
       placeholder python:view.translate(placeholderEnd);
-      value default_end"
-      i18n:attributes="title" />
+      value default_end;
+      type python:'number' if integer else 'text';
+      " i18n:attributes="title" />
   </div>
   <div tal:attributes="id string:${wid}_errors"></div>
 </form>

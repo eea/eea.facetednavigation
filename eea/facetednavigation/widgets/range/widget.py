@@ -39,6 +39,12 @@ class Widget(AbstractWidget):
         start, end = default
         return (start, end)
 
+    @property
+    def integer(self):
+        """ Integer only
+        """
+        return self.data.get("integer", False)
+
     def query(self, form):
         """ Get value from form and return a catalog dict query
         """
