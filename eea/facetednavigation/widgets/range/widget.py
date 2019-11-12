@@ -66,19 +66,18 @@ class Widget(AbstractWidget):
             return query
 
         # let the field be integer if integer:
-        if self.integer:
-            try:
-                start = int(float(start))
-            except ValueError:
-                start = 0
+        try:
+            _start = int(float(start))
+        except ValueError:
+            _start = start
 
-            try:
-                end = int(float(end))
-            except ValueError:
-                end = 0
+        try:
+            _end = int(float(end))
+        except ValueError:
+            _end = end
 
         query[index] = {
-            'query': (start, end),
+            'query': (_start, _end),
             'range': 'min:max'
         }
         return query
