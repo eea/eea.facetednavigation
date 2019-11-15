@@ -48,6 +48,13 @@ class IRangeSchema(ISchema):
     )
     placeholderEnd._type = (str, six.text_type)
 
+    integer = schema.Bool(
+        title=_(u"Numerical range"),
+        description=_(u"Allow to input only numerical digits"),
+        required=False,
+        default=False
+    )
+
 
 class DefaultSchemata(DS):
     """ Schemata default
@@ -56,6 +63,7 @@ class DefaultSchemata(DS):
         u'title',
         u'default',
         u'index',
+        u'integer',
     )
 
 class DisplaySchemata(FacetedSchemata):
