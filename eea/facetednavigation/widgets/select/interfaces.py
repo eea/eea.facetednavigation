@@ -28,6 +28,12 @@ class ISelectSchema(ISchema):
         required=False
     )
 
+    hidealloption = schema.Bool(
+        title=_(u"Hide 'All' option"),
+        description=_(u'If this checkbox is checked, hides the "All" option'),
+        required=False
+    )
+
     sortreversed = schema.Bool(
         title=_(u"Reverse options"),
         description=_(u"Sort options reversed"),
@@ -43,6 +49,7 @@ class DefaultSchemata(DS):
         u'index',
         u'vocabulary',
         u'catalog',
+        u'hidealloption',
         u'default'
     )
 

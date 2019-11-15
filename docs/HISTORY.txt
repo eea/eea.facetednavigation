@@ -3,6 +3,8 @@ Changelog
 
 13.4-dev0 - (unreleased)
 ---------------------------
+* Feature: Add hide "All" option for select widget.
+  [laulaz refs #184]
 
 13.3 - (2019-10-02)
 ---------------------------
