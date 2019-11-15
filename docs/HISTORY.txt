@@ -1,7 +1,7 @@
 Changelog
 =========
 
-13.4-dev0 - (unreleased)
+13.4 - (2019-11-15)
 ---------------------------
 * Feature: Add hide "All" option for select widget.
   [laulaz refs #184]
