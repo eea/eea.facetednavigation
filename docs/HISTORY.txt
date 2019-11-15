@@ -3,6 +3,8 @@ Changelog
 
 13.4-dev0 - (unreleased)
 ---------------------------
+* Feature: Add hide "All" option for select widget.
+  [laulaz refs #184]
 * Feature: Added option to Range widget to enforce numbers only
   [avoinea]
 * Change: MultiSelect optimizations by selecting multiple values before FacetedQuery

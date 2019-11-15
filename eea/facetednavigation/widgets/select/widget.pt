@@ -26,6 +26,7 @@
     tal:content="python:view.translate(title)" />
   <select tal:attributes="name wid; id wid" class="faceted_select">
     <option title="All" value=""
+      tal:condition="not:view/data/hidealloption|nothing"
       tal:attributes="selected python: not default_value"
       i18n:attributes="title" i18n:translate="">All</option>
     <tal:option repeat="term vocabulary">
