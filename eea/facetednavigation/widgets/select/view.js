@@ -78,6 +78,7 @@ Faceted.SelectWidget.prototype = {
         var first_val = this.select.find("option:first").val();
         this.select.val(first_val);
         this.selected = [first_val];
+        this.select_change(this.select);
     }
     else {
         this.select.val("");
