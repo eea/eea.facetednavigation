@@ -1,6 +1,15 @@
 Changelog
 =========
 
+13.4 - (2019-11-15)
+---------------------------
+* Feature: Add hide "All" option for select widget.
+  [laulaz refs #184]
+* Feature: Added option to Range widget to enforce numbers only
+  [avoinea]
+* Change: MultiSelect optimizations by selecting multiple values before FacetedQuery
+  [avoinea]
+
 13.3 - (2019-10-02)
 ---------------------------
 * Completed catalan translations.

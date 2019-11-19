@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2019-04-10 21:10+0000\n"
+"POT-Creation-Date: 2019-11-11 21:44+0000\n"
 "PO-Revision-Date: 2012-11-27 16:24+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -16,47 +16,47 @@ msgstr ""
 "X-Poedit-Language: es\n"
 "X-Poedit-Country: SPAIN\n"
 
-#: ../../facetednavigation/widgets/date/widget.py:19
+#: ../../facetednavigation/widgets/date/widget.py:21
 msgid "1 month ago"
 msgstr "Hace 1 mes"
 
-#: ../../facetednavigation/widgets/date/widget.py:21
+#: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 week ago"
 msgstr "Hace 1 semana"
 
-#: ../../facetednavigation/widgets/date/widget.py:16
+#: ../../facetednavigation/widgets/date/widget.py:18
 msgid "1 year ago"
 msgstr "Hace 1 año"
 
-#: ../../facetednavigation/widgets/date/widget.py:23
+#: ../../facetednavigation/widgets/date/widget.py:25
 msgid "2 days ago"
 msgstr "Hace 2 días"
 
-#: ../../facetednavigation/widgets/date/widget.py:20
+#: ../../facetednavigation/widgets/date/widget.py:22
 msgid "2 weeks ago"
 msgstr "Hace 2 semanas"
 
-#: ../../facetednavigation/widgets/date/widget.py:15
+#: ../../facetednavigation/widgets/date/widget.py:17
 msgid "2 years ago"
 msgstr "Hace 2 años"
 
-#: ../../facetednavigation/widgets/date/widget.py:18
+#: ../../facetednavigation/widgets/date/widget.py:20
 msgid "3 months ago"
 msgstr "Hace 3 meses"
 
-#: ../../facetednavigation/widgets/date/widget.py:22
+#: ../../facetednavigation/widgets/date/widget.py:24
 msgid "5 days ago"
 msgstr "Hace 5 días"
 
-#: ../../facetednavigation/widgets/date/widget.py:17
+#: ../../facetednavigation/widgets/date/widget.py:19
 msgid "6 months ago"
 msgstr "Hace 6 meses"
 
-#: ../../facetednavigation/widgets/interfaces.py:54
+#: ../../facetednavigation/widgets/interfaces.py:55
 msgid "Accessor"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:55
+#: ../../facetednavigation/widgets/interfaces.py:56
 msgid "Accessor to extract data for faceted widget."
 msgstr ""
 
@@ -76,7 +76,7 @@ msgstr "Añadir widget"
 msgid "After query filters"
 msgstr "Después de los filtros de consulta"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:24
 #: ../../facetednavigation/widgets/radio/widget.pt:34
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
@@ -86,11 +86,15 @@ msgstr "Todo"
 msgid "Allow multiple selections"
 msgstr ""
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:25
+#: ../../facetednavigation/widgets/range/interfaces.py:53
+msgid "Allow to input only numerical digits"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:26
 msgid "Alphabetic"
 msgstr "Alfabético"
 
-#: ../../facetednavigation/widgets/interfaces.py:48
+#: ../../facetednavigation/widgets/interfaces.py:49
 msgid "An interface describing schema to be used within z3c.form"
 msgstr ""
 
@@ -102,7 +106,7 @@ msgstr "¿Está seguro que desea eliminar el widget ${widget}?"
 msgid "Autocomplete"
 msgstr ""
 
-#: ../../facetednavigation/widgets/boolean/widget.py:19
+#: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Boolean"
 msgstr ""
 
@@ -122,18 +126,18 @@ msgid "Catalog"
 msgstr "Catálogo"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:26
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:17
 #: ../../facetednavigation/widgets/boolean/interfaces.py:16
 msgid "Catalog index"
 msgstr "Índice del catálogo"
 
-#: ../../facetednavigation/widgets/interfaces.py:91
+#: ../../facetednavigation/widgets/interfaces.py:92
 msgid "Catalog index to be used"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:28
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:18
 #: ../../facetednavigation/widgets/boolean/interfaces.py:17
 msgid "Catalog index to use for search"
@@ -147,27 +151,27 @@ msgstr "Consulta del catálogo"
 msgid "Checkboxes"
 msgstr "Casillas de verificación"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:16
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:17
 msgid "Cloud"
 msgstr "Nube"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:107
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:108
 msgid "Cloud height"
 msgstr "Altura de la nube"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:108
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:109
 msgid "Cloud height (px)"
 msgstr "Altura de la nube (px)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:87
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:88
 msgid "Cloud type"
 msgstr "Tipo de nube"
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:49
+#: ../../facetednavigation/browser/app/exportimport.py:50
 msgid "Configuration imported"
 msgstr "Configuración importada"
 
@@ -181,12 +185,12 @@ msgid "Content listing"
 msgstr "Listado de contenido"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/daterange/interfaces.py:23
+#: ../../facetednavigation/widgets/daterange/interfaces.py:25
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "Controlar el rango de años mostrados en el desplegable de años: relativo al año actual (-nn: + nn), relativo al año seleccionado actualmente (c-nn: c+nn), absoluto (nnnn:nnnn), o combinaciones de estos formatos (nnnn:-nn)."
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:116
+#: ../../facetednavigation/widgets/interfaces.py:117
 msgid "Count results"
 msgstr "Contar resultados"
 
@@ -198,7 +202,7 @@ msgstr "Contadores"
 msgid "Criterion details"
 msgstr "Detalles del criterio"
 
-#: ../../facetednavigation/widgets/interfaces.py:60
+#: ../../facetednavigation/widgets/interfaces.py:61
 msgid "Criterion interface"
 msgstr ""
 
@@ -207,15 +211,15 @@ msgid "Current configuration"
 msgstr "Configuración actual"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:59
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:60
 msgid "Cut long phrases to provided number of characters"
 msgstr "Cortar frases largas al número de caracteres indicado"
 
-#: ../../facetednavigation/widgets/date/widget.py:46
+#: ../../facetednavigation/widgets/date/widget.py:48
 msgid "Date"
 msgstr "Fechas"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:61
+#: ../../facetednavigation/widgets/daterange/widget.py:64
 msgid "Date range"
 msgstr "Rango de Fecha"
 
@@ -223,7 +227,7 @@ msgstr "Rango de Fecha"
 msgid "Debugger"
 msgstr "Debugger"
 
-#: ../../facetednavigation/widgets/etag/interfaces.py:23
+#: ../../facetednavigation/widgets/etag/interfaces.py:24
 msgid "Default e-tag"
 msgstr ""
 
@@ -234,7 +238,7 @@ msgid "Default items (one per line)"
 msgstr "Elementos por defecto (uno por línea)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:20
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:21
 msgid "Default letter to be selected"
 msgstr "Letra por defecto para ser seleccionada"
 
@@ -244,7 +248,7 @@ msgstr "Letra por defecto para ser seleccionada"
 msgid "Default operator"
 msgstr "Operador"
 
-#: ../../facetednavigation/widgets/interfaces.py:84
+#: ../../facetednavigation/widgets/interfaces.py:85
 msgid "Default query"
 msgstr ""
 
@@ -254,13 +258,13 @@ msgid "Default results per page"
 msgstr "Número de resultados por página por defecto"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:22
-#: ../../facetednavigation/widgets/tal/interfaces.py:22
+#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:23
+#: ../../facetednavigation/widgets/tal/interfaces.py:23
 msgid "Default tal expression for query value"
 msgstr "Expresión TAL por defecto"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:19
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:20
 #: ../../facetednavigation/widgets/boolean/interfaces.py:23
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:18
 msgid "Default value"
@@ -270,7 +274,7 @@ msgstr "Valor por defecto"
 msgid "Delete"
 msgstr "Suprimir"
 
-#: ../../facetednavigation/widgets/path/interfaces.py:33
+#: ../../facetednavigation/widgets/path/interfaces.py:34
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Profundidad para buscar el camino. 0=este nivel, -1=todas las subcarpetas de forma recursiva, y cualquier otro número entero positivo indica el número de niveles de subcarpetas en las que hay que buscar."
 
@@ -303,12 +307,12 @@ msgid "Disable smart facets hiding"
 msgstr "Desactivar esconder facetas inteligentes "
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:117
+#: ../../facetednavigation/widgets/interfaces.py:118
 msgid "Display number of results near each option"
 msgstr "Mostrar el número de resultados junto a cada opción"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:104
+#: ../../facetednavigation/widgets/interfaces.py:105
 msgid "Display widget in section"
 msgstr "Mostrar widget en sección"
 
@@ -354,12 +358,12 @@ msgstr "Habilitar portlets de la derecha"
 msgid "Enable smart facets hiding"
 msgstr "Habilitar esconder facetas inteligentes"
 
-#: ../../facetednavigation/widgets/etag/interfaces.py:15
+#: ../../facetednavigation/widgets/etag/interfaces.py:16
 msgid "Enabled (hidden)"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:37
+#: ../../facetednavigation/widgets/range/widget.pt:39
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "Final"
@@ -413,11 +417,11 @@ msgstr ""
 msgid "Faceted navigation can be activated on the instances of this content type."
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:142
+#: ../../facetednavigation/subtypes/subtyper.py:138
 msgid "Faceted navigation disabled"
 msgstr "Navegación facetada desactivada"
 
-#: ../../facetednavigation/subtypes/subtyper.py:131
+#: ../../facetednavigation/subtypes/subtyper.py:127
 msgid "Faceted navigation enabled"
 msgstr "Navegación facetada habilitada"
 
@@ -425,11 +429,11 @@ msgstr "Navegación facetada habilitada"
 msgid "Faceted navigation settings"
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:174
+#: ../../facetednavigation/subtypes/subtyper.py:171
 msgid "Faceted search disabled"
 msgstr "Búsqueda facetada desactivada"
 
-#: ../../facetednavigation/subtypes/subtyper.py:166
+#: ../../facetednavigation/subtypes/subtyper.py:163
 msgid "Faceted search enabled"
 msgstr "Búsqueda facetada habilitada"
 
@@ -437,15 +441,15 @@ msgstr "Búsqueda facetada habilitada"
 msgid "Faceted summary view"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:39
+#: ../../facetednavigation/widgets/interfaces.py:40
 msgid "Factory"
 msgstr "Fábrica"
 
-#: ../../facetednavigation/browser/app/configure.py:63
+#: ../../facetednavigation/browser/app/configure.py:64
 msgid "Filter added"
 msgstr "Filtro añadido"
 
-#: ../../facetednavigation/browser/app/configure.py:158
+#: ../../facetednavigation/browser/app/configure.py:159
 msgid "Filter deleted"
 msgstr "Filtro eliminado"
 
@@ -458,16 +462,16 @@ msgstr "Filtrar desde vocabulario"
 msgid "Filters"
 msgstr "Filtros"
 
-#: ../../facetednavigation/browser/app/configure.py:90
+#: ../../facetednavigation/browser/app/configure.py:91
 msgid "Filters deleted"
 msgstr "Filtros eliminados"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:70
+#: ../../facetednavigation/widgets/interfaces.py:71
 msgid "Friendly name"
 msgstr "Nombre descriptivo"
 
-#: ../../facetednavigation/widgets/date/widget.py:91
+#: ../../facetednavigation/widgets/date/widget.py:93
 msgid "Future"
 msgstr "Futuro"
 
@@ -479,35 +483,35 @@ msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Obtener valores únicos de catálogo como alternativa al vocabulario"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:110
+#: ../../facetednavigation/widgets/interfaces.py:111
 msgid "Hidden"
 msgstr "Oculto"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:32
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:45
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "Hide 'All' option"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:17
+#: ../../facetednavigation/widgets/criteria/widget.pt:18
 msgid "Hide filters"
 msgstr "Ocultar filtros"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:128
+#: ../../facetednavigation/widgets/interfaces.py:129
 msgid "Hide items with zero results"
 msgstr "Ocultar elementos con cero resultados"
 
-#: ../../facetednavigation/widgets/etag/interfaces.py:16
+#: ../../facetednavigation/widgets/etag/interfaces.py:17
 msgid "Hide this widget in order for e-tag to be used"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:111
+#: ../../facetednavigation/widgets/interfaces.py:112
 msgid "Hide widget"
 msgstr "Ocultar widget"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:47
 msgid "If this checkbox is checked, hides the \"All\" option"
 msgstr ""
 
@@ -548,19 +552,19 @@ msgstr "Se ha configurado un vocabulario no válido o vacío para este widget. D
 msgid "Invalid range"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:57
+#: ../../facetednavigation/widgets/daterange/interfaces.py:59
 msgid "Label (end date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:29
+#: ../../facetednavigation/widgets/range/interfaces.py:31
 msgid "Label (end range)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:50
+#: ../../facetednavigation/widgets/daterange/interfaces.py:52
 msgid "Label (start date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:22
+#: ../../facetednavigation/widgets/range/interfaces.py:24
 msgid "Label (start range)"
 msgstr ""
 
@@ -579,47 +583,47 @@ msgstr "Menos filtros"
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr ""
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:14
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:15
 msgid "List"
 msgstr "Lista"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:58
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:59
 msgid "Maximum characters"
 msgstr "Máximo de caracteres"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:79
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:80
 msgid "Maximum color"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:102
 msgid "Maximum font-size (px)"
 msgstr "Tamaño de fuente máximo(font-size (px))"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:59
 #: ../../facetednavigation/widgets/radio/interfaces.py:38
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:51
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:52
 msgid "Maximum items"
 msgstr "Número máximo de elementos"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:100
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
 msgid "Maximum size"
 msgstr "Tamaño máximo"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:71
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:72
 msgid "Minimum color"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:95
 msgid "Minimum font-size (px)"
 msgstr "Tamaño de fuente mínimo (font-size (px))"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:93
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
 msgid "Minimum size"
 msgstr "Tamaño mínimo"
 
@@ -649,62 +653,66 @@ msgstr ""
 msgid "Multiselect"
 msgstr ""
 
-#: ../../facetednavigation/widgets/path/interfaces.py:25
+#: ../../facetednavigation/widgets/path/interfaces.py:26
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
 msgstr "Punto de partida de la navegación js-tree (en relación con el sitio plone p.ej.: SITIO/datos-y-mapas)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:41
+#: ../../facetednavigation/widgets/path/interfaces.py:42
 msgid "Navigation tree theme"
 msgstr "Tema de navegación de árbol"
 
-#: ../../facetednavigation/widgets/date/widget.py:29
+#: ../../facetednavigation/widgets/date/widget.py:31
 msgid "Next 2 days"
 msgstr "Próximos 2 días"
 
-#: ../../facetednavigation/widgets/date/widget.py:32
+#: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 2 weeks"
 msgstr "Próximas 2 semanas"
 
-#: ../../facetednavigation/widgets/date/widget.py:37
+#: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 2 years"
 msgstr "Próximos 2 años"
 
-#: ../../facetednavigation/widgets/date/widget.py:34
+#: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 3 months"
 msgstr "Próximos 3 meses"
 
-#: ../../facetednavigation/widgets/date/widget.py:30
+#: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Next 5 days"
 msgstr "Próximos 5 días"
 
-#: ../../facetednavigation/widgets/date/widget.py:35
+#: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next 6 months"
 msgstr "Próximos 6 meses"
 
-#: ../../facetednavigation/widgets/date/widget.py:33
+#: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next month"
 msgstr "Próximo mes"
 
-#: ../../facetednavigation/widgets/date/widget.py:31
+#: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next week"
 msgstr "Próxima semana"
 
-#: ../../facetednavigation/widgets/date/widget.py:36
+#: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next year"
 msgstr "El año que viene"
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:88
+#: ../../facetednavigation/browser/app/exportimport.py:90
 msgid "No action provided"
 msgstr "Ninguna acción prevista"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:60
 #: ../../facetednavigation/widgets/radio/interfaces.py:39
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:52
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:53
 msgid "Number of items visible in widget"
 msgstr "Número de elementos visibles en el widget"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:52
+msgid "Numerical range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:36
 #: ../../facetednavigation/widgets/multiselect/interfaces.py:36
@@ -715,40 +723,40 @@ msgstr ""
 msgid "Order"
 msgstr "Órden"
 
-#: ../../facetednavigation/widgets/date/widget.py:78
+#: ../../facetednavigation/widgets/date/widget.py:80
 msgid "Past"
 msgstr "Últimas"
 
-#: ../../facetednavigation/widgets/path/widget.py:20
+#: ../../facetednavigation/widgets/path/widget.py:21
 msgid "Path"
 msgstr "Camino"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/portlet/interfaces.py:16
+#: ../../facetednavigation/widgets/portlet/interfaces.py:17
 msgid "Path to portlet macro"
 msgstr "Camino al macro del portlet "
 
-#: ../../facetednavigation/widgets/interfaces.py:76
+#: ../../facetednavigation/widgets/interfaces.py:77
 msgid "Placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:71
+#: ../../facetednavigation/widgets/daterange/interfaces.py:73
 msgid "Placeholder (end date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:43
+#: ../../facetednavigation/widgets/range/interfaces.py:45
 msgid "Placeholder (end range)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:64
+#: ../../facetednavigation/widgets/daterange/interfaces.py:66
 msgid "Placeholder (start date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:36
+#: ../../facetednavigation/widgets/range/interfaces.py:38
 msgid "Placeholder (start range)"
 msgstr ""
 
-#: ../../facetednavigation/browser/app/exportimport.py:41
+#: ../../facetednavigation/browser/app/exportimport.py:42
 msgid "Please provide a valid xml file"
 msgstr ""
 
@@ -757,7 +765,7 @@ msgid "Plone portlet"
 msgstr "Portlet de Plone"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/portlet/interfaces.py:15
+#: ../../facetednavigation/widgets/portlet/interfaces.py:16
 msgid "Portlet macro"
 msgstr "Macro de portlet"
 
@@ -779,7 +787,7 @@ msgstr "Los portlets de la columna izquierda están visibles"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:42
-#: ../../facetednavigation/widgets/interfaces.py:96
+#: ../../facetednavigation/widgets/interfaces.py:97
 msgid "Position"
 msgstr "Posición."
 
@@ -788,15 +796,15 @@ msgstr "Posición."
 msgid "Position of the widget."
 msgstr "Posición del widget."
 
-#: ../../facetednavigation/widgets/interfaces.py:40
+#: ../../facetednavigation/widgets/interfaces.py:41
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Nombre de una factoría Python que puede crear el objeto implementado. Debe indentificar un objeto de un módulo utilizando su nombre completo con puntos (p.ej.: modulo.clase.objeto)"
 
-#: ../../facetednavigation/widgets/radio/widget.py:19
+#: ../../facetednavigation/widgets/radio/widget.py:21
 msgid "Radio"
 msgstr "Radio"
 
-#: ../../facetednavigation/widgets/range/widget.py:19
+#: ../../facetednavigation/widgets/range/widget.py:22
 msgid "Range"
 msgstr "Rango"
 
@@ -804,20 +812,20 @@ msgstr "Rango"
 msgid "Relevance"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:29
+#: ../../facetednavigation/widgets/criteria/widget.pt:30
 msgid "Remove all"
 msgstr "Eliminar todo"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:26
+#: ../../facetednavigation/widgets/criteria/widget.pt:27
 msgid "Remove all filters"
 msgstr "Eliminar todos los filtros"
 
-#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:21
+#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:22
 #: ../../facetednavigation/widgets/resultsfilter/widget.py:42
 msgid "Results Filter"
 msgstr ""
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:19
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:20
 msgid "Results per page"
 msgstr "Resultados por página"
 
@@ -836,11 +844,11 @@ msgstr "Opción inicial de número de resultados por página"
 msgid "Results per page step"
 msgstr "Intervalo entre opciones de resultados por página"
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:37
+#: ../../facetednavigation/widgets/daterange/interfaces.py:39
 msgid "Reuse date format and language used by Plone"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:38
+#: ../../facetednavigation/widgets/daterange/interfaces.py:40
 msgid "Reuse the same date format and the the same language that Plone uses elsewhere. Otherwise, the format will be \"yy-mm-dd\" and the language \"English\". Note that this default format allows you to encode very old or big years (example : 0001 will not be converted to 1901). Other formats do not."
 msgstr ""
 
@@ -856,7 +864,7 @@ msgid "Reverse options"
 msgstr "Opciones para la ordenación del revés"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:24
+#: ../../facetednavigation/widgets/path/interfaces.py:25
 msgid "Root folder"
 msgstr "Carpeta raíz"
 
@@ -864,7 +872,7 @@ msgstr "Carpeta raíz"
 msgid "Save"
 msgstr "Guardar"
 
-#: ../../facetednavigation/widgets/interfaces.py:47
+#: ../../facetednavigation/widgets/interfaces.py:48
 msgid "Schema interface"
 msgstr ""
 
@@ -874,7 +882,7 @@ msgid "Search"
 msgstr "Buscar"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:32
+#: ../../facetednavigation/widgets/path/interfaces.py:33
 msgid "Search Depth"
 msgstr "Profundidad de búsqueda"
 
@@ -891,11 +899,11 @@ msgstr "Buscar con y/o entre los elementos"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:54
-#: ../../facetednavigation/widgets/interfaces.py:103
+#: ../../facetednavigation/widgets/interfaces.py:104
 msgid "Section"
 msgstr "Sección"
 
-#: ../../facetednavigation/widgets/select/widget.py:16
+#: ../../facetednavigation/widgets/select/widget.py:18
 msgid "Select"
 msgstr "Seleccionable"
 
@@ -908,7 +916,7 @@ msgstr "Seleccionar todos los elementos"
 msgid "Select the source of the autocomplete suggestions"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:20
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
 msgid "Show filters"
 msgstr "Mostrar filtros"
 
@@ -920,7 +928,7 @@ msgstr "Esconder facetas inteligentes está desactivado"
 msgid "Smart facets hiding is now enabled"
 msgstr "Esconder facetas inteligentes está activado"
 
-#: ../../facetednavigation/widgets/interfaces.py:122
+#: ../../facetednavigation/widgets/interfaces.py:123
 msgid "Sort by countable"
 msgstr ""
 
@@ -935,12 +943,12 @@ msgstr "Se han invertido las opciones de ordenación"
 msgid "Sorting"
 msgstr "Ordenación"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:15
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:16
 msgid "Sphere"
 msgstr "Esfera"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:28
+#: ../../facetednavigation/widgets/range/widget.pt:29
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "Comienzo"
@@ -958,7 +966,7 @@ msgstr "Paso"
 msgid "Sync faceted translations"
 msgstr "Sincronizar traducciones de facetas"
 
-#: ../../facetednavigation/widgets/tal/widget.py:37
+#: ../../facetednavigation/widgets/tal/widget.py:40
 msgid "TAL Expression"
 msgstr "Expresión TAL"
 
@@ -966,69 +974,69 @@ msgstr "Expresión TAL"
 msgid "Tags Cloud"
 msgstr "Nube de etiquetas"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:80
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:81
 msgid "Tagscloud max color"
 msgstr ""
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:72
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:73
 msgid "Tagscloud minimum color"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tal/interfaces.py:21
+#: ../../facetednavigation/widgets/tal/interfaces.py:22
 msgid "Tal Expression"
 msgstr "Expresión TAL"
 
-#: ../../facetednavigation/widgets/text/widget.py:15
+#: ../../facetednavigation/widgets/text/widget.py:17
 msgid "Text field"
 msgstr "Campo de Texto"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:27
+#: ../../facetednavigation/widgets/autocomplete/widget.py:28
 msgid "Text field with suggestions"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:58
+#: ../../facetednavigation/widgets/daterange/interfaces.py:60
 msgid "Text to be displayed as end date input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:72
+#: ../../facetednavigation/widgets/daterange/interfaces.py:74
 msgid "Text to be displayed as end date input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:30
+#: ../../facetednavigation/widgets/range/interfaces.py:32
 msgid "Text to be displayed as end range input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:44
+#: ../../facetednavigation/widgets/range/interfaces.py:46
 msgid "Text to be displayed as end range input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:77
+#: ../../facetednavigation/widgets/interfaces.py:78
 msgid "Text to be displayed as input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:51
+#: ../../facetednavigation/widgets/daterange/interfaces.py:53
 msgid "Text to be displayed as start date input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:65
+#: ../../facetednavigation/widgets/daterange/interfaces.py:67
 msgid "Text to be displayed as start date input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:23
+#: ../../facetednavigation/widgets/range/interfaces.py:25
 msgid "Text to be displayed as start range input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:37
+#: ../../facetednavigation/widgets/range/interfaces.py:39
 msgid "Text to be displayed as start range input placeholder"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:42
+#: ../../facetednavigation/widgets/path/interfaces.py:43
 msgid "Theme to be used with this widget"
 msgstr "Tema para ser utilizado con este widget"
 
-#: ../../facetednavigation/widgets/interfaces.py:129
+#: ../../facetednavigation/widgets/interfaces.py:130
 msgid "This option works only if 'count results' is enabled"
 msgstr "Esta opción sólo funciona si 'contar resultados' está activado"
 
@@ -1042,15 +1050,15 @@ msgid "This widget will be ignored in view mode as an error occurred while tryin
 msgstr "Este widget se ignorará en el modo de vista porque ocurrió un error. Para obtener más detalles consulte el registro de errores del servidor. Puede intentar modificar la configuración del widget para averiguar lo que está pasando."
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:71
+#: ../../facetednavigation/widgets/interfaces.py:72
 msgid "Title for widget to display in view page"
 msgstr "Título del widget a mostrar en la vista de página"
 
-#: ../../facetednavigation/widgets/date/widget.py:85
+#: ../../facetednavigation/widgets/date/widget.py:87
 msgid "Today"
 msgstr "Hoy"
 
-#: ../../facetednavigation/widgets/date/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:30
 msgid "Tomorrow"
 msgstr "Mañana"
 
@@ -1059,7 +1067,7 @@ msgid "Type"
 msgstr "Tipos"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:88
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:89
 msgid "Type of the cloud"
 msgstr "Tipo de la nube"
 
@@ -1068,7 +1076,7 @@ msgstr "Tipo de la nube"
 msgid "Type of the widget."
 msgstr "Tipo del widget."
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:22
+#: ../../facetednavigation/widgets/daterange/interfaces.py:24
 msgid "UI Calendar years range"
 msgstr "UI Calendar rango de años"
 
@@ -1076,15 +1084,15 @@ msgstr "UI Calendar rango de años"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "Desmarque esta casilla si no desea ocultar/mostrar los criterios habilitados en este widget"
 
-#: ../../facetednavigation/profiles.zcml:42
+#: ../../facetednavigation/profiles.zcml:43
 msgid "Uninstall EEA Faceted Navigation"
 msgstr ""
 
-#: ../../facetednavigation/profiles.zcml:42
+#: ../../facetednavigation/profiles.zcml:43
 msgid "Uninstall to remove EEA Faceted Navigation support"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:123
+#: ../../facetednavigation/widgets/interfaces.py:124
 msgid "Use the results counter for sorting"
 msgstr ""
 
@@ -1113,7 +1121,7 @@ msgid "Vocabulary to use to render widget items"
 msgstr "Vocabulario utilizará para mostrar los elementos de widget"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:97
+#: ../../facetednavigation/widgets/interfaces.py:98
 msgid "Widget position in page"
 msgstr "Posición del widget en la página"
 
@@ -1130,7 +1138,7 @@ msgstr "El widget sólo será visible para el usuario seleccionado"
 msgid "Wildcard search"
 msgstr ""
 
-#: ../../facetednavigation/widgets/date/widget.py:24
+#: ../../facetednavigation/widgets/date/widget.py:26
 msgid "Yesterday"
 msgstr "Ayer"
 
@@ -1164,6 +1172,6 @@ msgstr ""
 msgid "match any/all filters bellow"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:105
+#: ../../facetednavigation/widgets/autocomplete/widget.py:107
 msgid "solr"
 msgstr ""

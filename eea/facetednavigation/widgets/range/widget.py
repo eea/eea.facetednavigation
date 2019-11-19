@@ -1,7 +1,6 @@
 """ Widget
 """
 import logging
-from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
@@ -39,6 +38,12 @@ class Widget(AbstractWidget):
         start, end = default
         return (start, end)
 
+    @property
+    def integer(self):
+        """ Integer only
+        """
+        return self.data.get("integer", False)
+
     def query(self, form):
         """ Get value from form and return a catalog dict query
         """
@@ -61,12 +66,18 @@ class Widget(AbstractWidget):
             return query
 
         # let the field be integer if integer:
-        catalog = getToolByName(self.context, 'portal_catalog')
-        evalues = catalog.uniqueValuesFor(index)
-        if True in [isinstance(v, int) for v in evalues]:
-            start, end = int(start), int(end)
+        try:
+            _start = int(float(start))
+        except ValueError:
+            _start = start
+
+        try:
+            _end = int(float(end))
+        except ValueError:
+            _end = end
+
         query[index] = {
-            'query': (start, end),
+            'query': (_start, _end),
             'range': 'min:max'
         }
         return query

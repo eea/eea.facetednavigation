@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2019-04-10 21:10+0000\n"
+"POT-Creation-Date: 2019-11-11 21:44+0000\n"
 "PO-Revision-Date: 2017-11-08 15:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -14,47 +14,47 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: eea\n"
 
-#: ../../facetednavigation/widgets/date/widget.py:19
+#: ../../facetednavigation/widgets/date/widget.py:21
 msgid "1 month ago"
 msgstr "一個月前"
 
-#: ../../facetednavigation/widgets/date/widget.py:21
+#: ../../facetednavigation/widgets/date/widget.py:23
 msgid "1 week ago"
 msgstr "一週前"
 
-#: ../../facetednavigation/widgets/date/widget.py:16
+#: ../../facetednavigation/widgets/date/widget.py:18
 msgid "1 year ago"
 msgstr "一年前"
 
-#: ../../facetednavigation/widgets/date/widget.py:23
+#: ../../facetednavigation/widgets/date/widget.py:25
 msgid "2 days ago"
 msgstr "兩天前"
 
-#: ../../facetednavigation/widgets/date/widget.py:20
+#: ../../facetednavigation/widgets/date/widget.py:22
 msgid "2 weeks ago"
 msgstr "兩週前"
 
-#: ../../facetednavigation/widgets/date/widget.py:15
+#: ../../facetednavigation/widgets/date/widget.py:17
 msgid "2 years ago"
 msgstr "兩年前"
 
-#: ../../facetednavigation/widgets/date/widget.py:18
+#: ../../facetednavigation/widgets/date/widget.py:20
 msgid "3 months ago"
 msgstr "三個月前"
 
-#: ../../facetednavigation/widgets/date/widget.py:22
+#: ../../facetednavigation/widgets/date/widget.py:24
 msgid "5 days ago"
 msgstr "五天前"
 
-#: ../../facetednavigation/widgets/date/widget.py:17
+#: ../../facetednavigation/widgets/date/widget.py:19
 msgid "6 months ago"
 msgstr "六個月前"
 
-#: ../../facetednavigation/widgets/interfaces.py:54
+#: ../../facetednavigation/widgets/interfaces.py:55
 msgid "Accessor"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:55
+#: ../../facetednavigation/widgets/interfaces.py:56
 msgid "Accessor to extract data for faceted widget."
 msgstr ""
 
@@ -74,7 +74,7 @@ msgstr "新增搜尋方框"
 msgid "After query filters"
 msgstr "位於查詢條件之後"
 
-#: ../../facetednavigation/widgets/alphabetic/widget.pt:23
+#: ../../facetednavigation/widgets/alphabetic/widget.pt:24
 #: ../../facetednavigation/widgets/radio/widget.pt:34
 #: ../../facetednavigation/widgets/select/widget.pt:28
 msgid "All"
@@ -84,11 +84,15 @@ msgstr "全選"
 msgid "Allow multiple selections"
 msgstr ""
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:25
+#: ../../facetednavigation/widgets/range/interfaces.py:53
+msgid "Allow to input only numerical digits"
+msgstr ""
+
+#: ../../facetednavigation/widgets/alphabetic/widget.py:26
 msgid "Alphabetic"
 msgstr "字母列表"
 
-#: ../../facetednavigation/widgets/interfaces.py:48
+#: ../../facetednavigation/widgets/interfaces.py:49
 msgid "An interface describing schema to be used within z3c.form"
 msgstr ""
 
@@ -100,7 +104,7 @@ msgstr "確定要刪除 ${widget} 嗎?"
 msgid "Autocomplete"
 msgstr "自動完成器"
 
-#: ../../facetednavigation/widgets/boolean/widget.py:19
+#: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Boolean"
 msgstr "布林選項"
 
@@ -120,18 +124,18 @@ msgid "Catalog"
 msgstr "Catalog"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:26
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:17
 #: ../../facetednavigation/widgets/boolean/interfaces.py:16
 msgid "Catalog index"
 msgstr "Catalog 索引"
 
-#: ../../facetednavigation/widgets/interfaces.py:91
+#: ../../facetednavigation/widgets/interfaces.py:92
 msgid "Catalog index to be used"
 msgstr "選用的 Catalog 索引"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:28
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:18
 #: ../../facetednavigation/widgets/boolean/interfaces.py:17
 msgid "Catalog index to use for search"
@@ -145,27 +149,27 @@ msgstr "Catalog 搜尋"
 msgid "Checkboxes"
 msgstr "方形勾選"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:16
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:17
 msgid "Cloud"
 msgstr "標籤雲"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:107
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:108
 msgid "Cloud height"
 msgstr "標籤雲高度"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:108
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:109
 msgid "Cloud height (px)"
 msgstr "標籤雲高度 (px)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:87
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:88
 msgid "Cloud type"
 msgstr "標籤雲類型"
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:49
+#: ../../facetednavigation/browser/app/exportimport.py:50
 msgid "Configuration imported"
 msgstr "設定值已匯入"
 
@@ -178,12 +182,12 @@ msgstr "設定"
 msgid "Content listing"
 msgstr "內容列表"
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:23
+#: ../../facetednavigation/widgets/daterange/interfaces.py:25
 msgid "Control the range of yearsdisplayed in the year drop-down: either relative to today's year (-nn:+nn), relative to the currently selected year (c-nn:c+nn), absolute (nnnn:nnnn), or combinations of these formats (nnnn:-nn)."
 msgstr "控制 yearsdisplayed 的變數範圍：可以是今年的相對值 (-nn:+nn)，某一年的相對值 (c-nn:c+nn)，絕對值 (nnnn:nnnn)，或是混合格式。"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:116
+#: ../../facetednavigation/widgets/interfaces.py:117
 msgid "Count results"
 msgstr "顯示數量"
 
@@ -195,7 +199,7 @@ msgstr "計數"
 msgid "Criterion details"
 msgstr "條件細節"
 
-#: ../../facetednavigation/widgets/interfaces.py:60
+#: ../../facetednavigation/widgets/interfaces.py:61
 msgid "Criterion interface"
 msgstr ""
 
@@ -204,15 +208,15 @@ msgid "Current configuration"
 msgstr "目前配置"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:59
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:60
 msgid "Cut long phrases to provided number of characters"
 msgstr "長句截短成指定的字數長度"
 
-#: ../../facetednavigation/widgets/date/widget.py:46
+#: ../../facetednavigation/widgets/date/widget.py:48
 msgid "Date"
 msgstr "日期"
 
-#: ../../facetednavigation/widgets/daterange/widget.py:61
+#: ../../facetednavigation/widgets/daterange/widget.py:64
 msgid "Date range"
 msgstr "日期區間"
 
@@ -220,7 +224,7 @@ msgstr "日期區間"
 msgid "Debugger"
 msgstr "偵錯方框"
 
-#: ../../facetednavigation/widgets/etag/interfaces.py:23
+#: ../../facetednavigation/widgets/etag/interfaces.py:24
 msgid "Default e-tag"
 msgstr ""
 
@@ -231,7 +235,7 @@ msgid "Default items (one per line)"
 msgstr "預設項目"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:20
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:21
 msgid "Default letter to be selected"
 msgstr "預設選取的英文字母"
 
@@ -241,7 +245,7 @@ msgstr "預設選取的英文字母"
 msgid "Default operator"
 msgstr "預設的操作元"
 
-#: ../../facetednavigation/widgets/interfaces.py:84
+#: ../../facetednavigation/widgets/interfaces.py:85
 msgid "Default query"
 msgstr "預設的查詢值"
 
@@ -251,13 +255,13 @@ msgid "Default results per page"
 msgstr "預設每頁顯示的項目數"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:22
-#: ../../facetednavigation/widgets/tal/interfaces.py:22
+#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:23
+#: ../../facetednavigation/widgets/tal/interfaces.py:23
 msgid "Default tal expression for query value"
 msgstr "預設的 TAL 查詢語法"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:19
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:20
 #: ../../facetednavigation/widgets/boolean/interfaces.py:23
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:18
 msgid "Default value"
@@ -267,7 +271,7 @@ msgstr "預設值"
 msgid "Delete"
 msgstr "删除"
 
-#: ../../facetednavigation/widgets/path/interfaces.py:33
+#: ../../facetednavigation/widgets/path/interfaces.py:34
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "搜尋的深度: 0 代表同一層 -1 代表所有子目錄 其他正整數代表子目錄數"
 
@@ -300,12 +304,12 @@ msgid "Disable smart facets hiding"
 msgstr "停用 smart facets hiding"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:117
+#: ../../facetednavigation/widgets/interfaces.py:118
 msgid "Display number of results near each option"
 msgstr "依選項顯示數量"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:104
+#: ../../facetednavigation/widgets/interfaces.py:105
 msgid "Display widget in section"
 msgstr "在區段顯示方框"
 
@@ -351,12 +355,12 @@ msgstr "啟用右側方框"
 msgid "Enable smart facets hiding"
 msgstr "啟用 Smart Facets Hiding"
 
-#: ../../facetednavigation/widgets/etag/interfaces.py:15
+#: ../../facetednavigation/widgets/etag/interfaces.py:16
 msgid "Enabled (hidden)"
 msgstr "隱藏並啟用"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:37
+#: ../../facetednavigation/widgets/range/widget.pt:39
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:22
 msgid "End"
 msgstr "結束"
@@ -410,11 +414,11 @@ msgstr ""
 msgid "Faceted navigation can be activated on the instances of this content type."
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:142
+#: ../../facetednavigation/subtypes/subtyper.py:138
 msgid "Faceted navigation disabled"
 msgstr "Faceted 導覽已停用"
 
-#: ../../facetednavigation/subtypes/subtyper.py:131
+#: ../../facetednavigation/subtypes/subtyper.py:127
 msgid "Faceted navigation enabled"
 msgstr "Faceted 導覽已啟用"
 
@@ -422,11 +426,11 @@ msgstr "Faceted 導覽已啟用"
 msgid "Faceted navigation settings"
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:174
+#: ../../facetednavigation/subtypes/subtyper.py:171
 msgid "Faceted search disabled"
 msgstr "Faceted 搜尋已停用"
 
-#: ../../facetednavigation/subtypes/subtyper.py:166
+#: ../../facetednavigation/subtypes/subtyper.py:163
 msgid "Faceted search enabled"
 msgstr "Faceted 搜尋已啟用"
 
@@ -434,15 +438,15 @@ msgstr "Faceted 搜尋已啟用"
 msgid "Faceted summary view"
 msgstr "Faceted Summary View"
 
-#: ../../facetednavigation/widgets/interfaces.py:39
+#: ../../facetednavigation/widgets/interfaces.py:40
 msgid "Factory"
 msgstr "Factory"
 
-#: ../../facetednavigation/browser/app/configure.py:63
+#: ../../facetednavigation/browser/app/configure.py:64
 msgid "Filter added"
 msgstr "過濾條件已新增"
 
-#: ../../facetednavigation/browser/app/configure.py:158
+#: ../../facetednavigation/browser/app/configure.py:159
 msgid "Filter deleted"
 msgstr "過濾條件已刪除"
 
@@ -455,16 +459,16 @@ msgstr "從詞彙過濾"
 msgid "Filters"
 msgstr "過濾條件"
 
-#: ../../facetednavigation/browser/app/configure.py:90
+#: ../../facetednavigation/browser/app/configure.py:91
 msgid "Filters deleted"
 msgstr "過濾條件已刪除"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:70
+#: ../../facetednavigation/widgets/interfaces.py:71
 msgid "Friendly name"
 msgstr "方框標題"
 
-#: ../../facetednavigation/widgets/date/widget.py:91
+#: ../../facetednavigation/widgets/date/widget.py:93
 msgid "Future"
 msgstr "未來"
 
@@ -476,35 +480,35 @@ msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "使用 Catalog 索引值作為詞彙"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:110
+#: ../../facetednavigation/widgets/interfaces.py:111
 msgid "Hidden"
 msgstr "隱藏"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:32
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:45
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "Hide 'All' option"
 msgstr "隱藏 'All' 選項"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:17
+#: ../../facetednavigation/widgets/criteria/widget.pt:18
 msgid "Hide filters"
 msgstr "隱藏條件"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:128
+#: ../../facetednavigation/widgets/interfaces.py:129
 msgid "Hide items with zero results"
 msgstr "隱藏數量為零的結果"
 
-#: ../../facetednavigation/widgets/etag/interfaces.py:16
+#: ../../facetednavigation/widgets/etag/interfaces.py:17
 msgid "Hide this widget in order for e-tag to be used"
 msgstr "隱藏 Widget 並讓 E-Tag 生效"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:111
+#: ../../facetednavigation/widgets/interfaces.py:112
 msgid "Hide widget"
 msgstr "隱藏方框"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:47
 msgid "If this checkbox is checked, hides the \"All\" option"
 msgstr "勾選的話，會隱藏「所有項目」的選項。"
 
@@ -545,19 +549,19 @@ msgstr "這個方框的詞彙表並不正確，預設的排序條件因此留空
 msgid "Invalid range"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:57
+#: ../../facetednavigation/widgets/daterange/interfaces.py:59
 msgid "Label (end date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:29
+#: ../../facetednavigation/widgets/range/interfaces.py:31
 msgid "Label (end range)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:50
+#: ../../facetednavigation/widgets/daterange/interfaces.py:52
 msgid "Label (start date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:22
+#: ../../facetednavigation/widgets/range/interfaces.py:24
 msgid "Label (start range)"
 msgstr ""
 
@@ -576,47 +580,47 @@ msgstr "更少"
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr "讓使用者能用 AND 或 OR 進行搜尋。"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:14
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:15
 msgid "List"
 msgstr "列表"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:58
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:59
 msgid "Maximum characters"
 msgstr "最大字元數"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:79
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:80
 msgid "Maximum color"
 msgstr "最大值的顏色"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:102
 msgid "Maximum font-size (px)"
 msgstr "字元最大尺寸 (px)"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:59
 #: ../../facetednavigation/widgets/radio/interfaces.py:38
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:51
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:52
 msgid "Maximum items"
 msgstr "最大項目數"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:100
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:101
 msgid "Maximum size"
 msgstr "最大尺寸"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:71
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:72
 msgid "Minimum color"
 msgstr "最小值的顏色"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:95
 msgid "Minimum font-size (px)"
 msgstr "字元最小尺寸 (px)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:93
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:94
 msgid "Minimum size"
 msgstr "最小尺寸"
 
@@ -646,62 +650,66 @@ msgstr ""
 msgid "Multiselect"
 msgstr ""
 
-#: ../../facetednavigation/widgets/path/interfaces.py:25
+#: ../../facetednavigation/widgets/path/interfaces.py:26
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
 msgstr "導覽樹的起始點 (根目錄的相對位置，例如 SITE/data-and-maps)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:41
+#: ../../facetednavigation/widgets/path/interfaces.py:42
 msgid "Navigation tree theme"
 msgstr "導覽樹佈景主題"
 
-#: ../../facetednavigation/widgets/date/widget.py:29
+#: ../../facetednavigation/widgets/date/widget.py:31
 msgid "Next 2 days"
 msgstr "未來兩天"
 
-#: ../../facetednavigation/widgets/date/widget.py:32
+#: ../../facetednavigation/widgets/date/widget.py:34
 msgid "Next 2 weeks"
 msgstr "未來兩週"
 
-#: ../../facetednavigation/widgets/date/widget.py:37
+#: ../../facetednavigation/widgets/date/widget.py:39
 msgid "Next 2 years"
 msgstr "未來兩年"
 
-#: ../../facetednavigation/widgets/date/widget.py:34
+#: ../../facetednavigation/widgets/date/widget.py:36
 msgid "Next 3 months"
 msgstr "未來三個月"
 
-#: ../../facetednavigation/widgets/date/widget.py:30
+#: ../../facetednavigation/widgets/date/widget.py:32
 msgid "Next 5 days"
 msgstr "未來五天"
 
-#: ../../facetednavigation/widgets/date/widget.py:35
+#: ../../facetednavigation/widgets/date/widget.py:37
 msgid "Next 6 months"
 msgstr "未來六個月"
 
-#: ../../facetednavigation/widgets/date/widget.py:33
+#: ../../facetednavigation/widgets/date/widget.py:35
 msgid "Next month"
 msgstr "下個月"
 
-#: ../../facetednavigation/widgets/date/widget.py:31
+#: ../../facetednavigation/widgets/date/widget.py:33
 msgid "Next week"
 msgstr "下週"
 
-#: ../../facetednavigation/widgets/date/widget.py:36
+#: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next year"
 msgstr "明年"
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:88
+#: ../../facetednavigation/browser/app/exportimport.py:90
 msgid "No action provided"
 msgstr "沒有動作被提供"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:60
 #: ../../facetednavigation/widgets/radio/interfaces.py:39
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:52
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:53
 msgid "Number of items visible in widget"
 msgstr "方框裡顯示的項目數量"
+
+#: ../../facetednavigation/widgets/range/interfaces.py:52
+msgid "Numerical range"
+msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:36
 #: ../../facetednavigation/widgets/multiselect/interfaces.py:36
@@ -712,40 +720,40 @@ msgstr "顯示操作元"
 msgid "Order"
 msgstr "順序"
 
-#: ../../facetednavigation/widgets/date/widget.py:78
+#: ../../facetednavigation/widgets/date/widget.py:80
 msgid "Past"
 msgstr "過往"
 
-#: ../../facetednavigation/widgets/path/widget.py:20
+#: ../../facetednavigation/widgets/path/widget.py:21
 msgid "Path"
 msgstr "路徑"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/portlet/interfaces.py:16
+#: ../../facetednavigation/widgets/portlet/interfaces.py:17
 msgid "Path to portlet macro"
 msgstr "Portlet Macro 的路徑"
 
-#: ../../facetednavigation/widgets/interfaces.py:76
+#: ../../facetednavigation/widgets/interfaces.py:77
 msgid "Placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:71
+#: ../../facetednavigation/widgets/daterange/interfaces.py:73
 msgid "Placeholder (end date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:43
+#: ../../facetednavigation/widgets/range/interfaces.py:45
 msgid "Placeholder (end range)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:64
+#: ../../facetednavigation/widgets/daterange/interfaces.py:66
 msgid "Placeholder (start date)"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:36
+#: ../../facetednavigation/widgets/range/interfaces.py:38
 msgid "Placeholder (start range)"
 msgstr ""
 
-#: ../../facetednavigation/browser/app/exportimport.py:41
+#: ../../facetednavigation/browser/app/exportimport.py:42
 msgid "Please provide a valid xml file"
 msgstr "請提供 XML 檔案"
 
@@ -754,7 +762,7 @@ msgid "Plone portlet"
 msgstr "資訊方框"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/portlet/interfaces.py:15
+#: ../../facetednavigation/widgets/portlet/interfaces.py:16
 msgid "Portlet macro"
 msgstr "Portlet Macro"
 
@@ -776,7 +784,7 @@ msgstr "右側資訊方框已啟用"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:42
-#: ../../facetednavigation/widgets/interfaces.py:96
+#: ../../facetednavigation/widgets/interfaces.py:97
 msgid "Position"
 msgstr "位置"
 
@@ -785,15 +793,15 @@ msgstr "位置"
 msgid "Position of the widget."
 msgstr "方框的位置"
 
-#: ../../facetednavigation/widgets/interfaces.py:40
+#: ../../facetednavigation/widgets/interfaces.py:41
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Factory 的名稱，可用來建立實作的物件，它必須使用 dotted name 來指定模組裡的物件。"
 
-#: ../../facetednavigation/widgets/radio/widget.py:19
+#: ../../facetednavigation/widgets/radio/widget.py:21
 msgid "Radio"
 msgstr "單選圓鈕"
 
-#: ../../facetednavigation/widgets/range/widget.py:19
+#: ../../facetednavigation/widgets/range/widget.py:22
 msgid "Range"
 msgstr "範圍"
 
@@ -801,20 +809,20 @@ msgstr "範圍"
 msgid "Relevance"
 msgstr ""
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:29
+#: ../../facetednavigation/widgets/criteria/widget.pt:30
 msgid "Remove all"
 msgstr "刪除全部"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:26
+#: ../../facetednavigation/widgets/criteria/widget.pt:27
 msgid "Remove all filters"
 msgstr "删除全部過濾條件"
 
-#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:21
+#: ../../facetednavigation/widgets/resultsfilter/interfaces.py:22
 #: ../../facetednavigation/widgets/resultsfilter/widget.py:42
 msgid "Results Filter"
 msgstr "搜尋結果的過濾條件"
 
-#: ../../facetednavigation/widgets/resultsperpage/widget.py:19
+#: ../../facetednavigation/widgets/resultsperpage/widget.py:20
 msgid "Results per page"
 msgstr "每頁顯示數量"
 
@@ -833,11 +841,11 @@ msgstr "搜尋結果每頁的起始值"
 msgid "Results per page step"
 msgstr "搜尋結果每頁的間距"
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:37
+#: ../../facetednavigation/widgets/daterange/interfaces.py:39
 msgid "Reuse date format and language used by Plone"
 msgstr "沿用 Plone 的日期與語系設定值"
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:38
+#: ../../facetednavigation/widgets/daterange/interfaces.py:40
 msgid "Reuse the same date format and the the same language that Plone uses elsewhere. Otherwise, the format will be \"yy-mm-dd\" and the language \"English\". Note that this default format allows you to encode very old or big years (example : 0001 will not be converted to 1901). Other formats do not."
 msgstr ""
 
@@ -853,7 +861,7 @@ msgid "Reverse options"
 msgstr "相反順序"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:24
+#: ../../facetednavigation/widgets/path/interfaces.py:25
 msgid "Root folder"
 msgstr "根目錄"
 
@@ -861,7 +869,7 @@ msgstr "根目錄"
 msgid "Save"
 msgstr "儲存"
 
-#: ../../facetednavigation/widgets/interfaces.py:47
+#: ../../facetednavigation/widgets/interfaces.py:48
 msgid "Schema interface"
 msgstr ""
 
@@ -871,7 +879,7 @@ msgid "Search"
 msgstr "搜尋"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:32
+#: ../../facetednavigation/widgets/path/interfaces.py:33
 msgid "Search Depth"
 msgstr "搜尋深度"
 
@@ -888,11 +896,11 @@ msgstr "搜尋功能支援 AND/OR 操作元"
 
 #. Default: ""
 #: ../../facetednavigation/browser/template/configure.pt:54
-#: ../../facetednavigation/widgets/interfaces.py:103
+#: ../../facetednavigation/widgets/interfaces.py:104
 msgid "Section"
 msgstr "區段"
 
-#: ../../facetednavigation/widgets/select/widget.py:16
+#: ../../facetednavigation/widgets/select/widget.py:18
 msgid "Select"
 msgstr "選擇方框"
 
@@ -905,7 +913,7 @@ msgstr "全選"
 msgid "Select the source of the autocomplete suggestions"
 msgstr "指定自動完成器的選項"
 
-#: ../../facetednavigation/widgets/criteria/widget.pt:20
+#: ../../facetednavigation/widgets/criteria/widget.pt:21
 msgid "Show filters"
 msgstr "顯示過濾條件"
 
@@ -917,7 +925,7 @@ msgstr "Smart Facets Hiding 已停用"
 msgid "Smart facets hiding is now enabled"
 msgstr "Smart Facets Hiding 已啟用"
 
-#: ../../facetednavigation/widgets/interfaces.py:122
+#: ../../facetednavigation/widgets/interfaces.py:123
 msgid "Sort by countable"
 msgstr "依計數結果排序"
 
@@ -932,12 +940,12 @@ msgstr "相反順序排列"
 msgid "Sorting"
 msgstr "排序"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:15
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:16
 msgid "Sphere"
 msgstr "標籤球"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/range/widget.pt:28
+#: ../../facetednavigation/widgets/range/widget.pt:29
 #: ../../facetednavigation/widgets/resultsperpage/interfaces.py:15
 msgid "Start"
 msgstr "起始"
@@ -955,7 +963,7 @@ msgstr "間距"
 msgid "Sync faceted translations"
 msgstr "同步翻譯"
 
-#: ../../facetednavigation/widgets/tal/widget.py:37
+#: ../../facetednavigation/widgets/tal/widget.py:40
 msgid "TAL Expression"
 msgstr "TAL 表示式"
 
@@ -963,69 +971,69 @@ msgstr "TAL 表示式"
 msgid "Tags Cloud"
 msgstr "標籤雲"
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:80
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:81
 msgid "Tagscloud max color"
 msgstr ""
 
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:72
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:73
 msgid "Tagscloud minimum color"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tal/interfaces.py:21
+#: ../../facetednavigation/widgets/tal/interfaces.py:22
 msgid "Tal Expression"
 msgstr "TAL 表示式"
 
-#: ../../facetednavigation/widgets/text/widget.py:15
+#: ../../facetednavigation/widgets/text/widget.py:17
 msgid "Text field"
 msgstr "文字欄位"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:27
+#: ../../facetednavigation/widgets/autocomplete/widget.py:28
 msgid "Text field with suggestions"
 msgstr "文字欄位搭配建議值"
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:58
+#: ../../facetednavigation/widgets/daterange/interfaces.py:60
 msgid "Text to be displayed as end date input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:72
+#: ../../facetednavigation/widgets/daterange/interfaces.py:74
 msgid "Text to be displayed as end date input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:30
+#: ../../facetednavigation/widgets/range/interfaces.py:32
 msgid "Text to be displayed as end range input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:44
+#: ../../facetednavigation/widgets/range/interfaces.py:46
 msgid "Text to be displayed as end range input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:77
+#: ../../facetednavigation/widgets/interfaces.py:78
 msgid "Text to be displayed as input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:51
+#: ../../facetednavigation/widgets/daterange/interfaces.py:53
 msgid "Text to be displayed as start date input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:65
+#: ../../facetednavigation/widgets/daterange/interfaces.py:67
 msgid "Text to be displayed as start date input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:23
+#: ../../facetednavigation/widgets/range/interfaces.py:25
 msgid "Text to be displayed as start range input label"
 msgstr ""
 
-#: ../../facetednavigation/widgets/range/interfaces.py:37
+#: ../../facetednavigation/widgets/range/interfaces.py:39
 msgid "Text to be displayed as start range input placeholder"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:42
+#: ../../facetednavigation/widgets/path/interfaces.py:43
 msgid "Theme to be used with this widget"
 msgstr "方框要搭配的佈景主題"
 
-#: ../../facetednavigation/widgets/interfaces.py:129
+#: ../../facetednavigation/widgets/interfaces.py:130
 msgid "This option works only if 'count results' is enabled"
 msgstr "啟用「顯示數量」時，這個設定值才會生效。"
 
@@ -1038,15 +1046,15 @@ msgid "This widget will be ignored in view mode as an error occurred while tryin
 msgstr "執行時發生錯誤的話，這個方框不會顯示。想了解細節的話，請查看 log 檔案，也可以修改設定值，查看哪個設定值造成錯誤。"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:71
+#: ../../facetednavigation/widgets/interfaces.py:72
 msgid "Title for widget to display in view page"
 msgstr "搜尋方框的標題"
 
-#: ../../facetednavigation/widgets/date/widget.py:85
+#: ../../facetednavigation/widgets/date/widget.py:87
 msgid "Today"
 msgstr "今天"
 
-#: ../../facetednavigation/widgets/date/widget.py:28
+#: ../../facetednavigation/widgets/date/widget.py:30
 msgid "Tomorrow"
 msgstr "明天"
 
@@ -1055,7 +1063,7 @@ msgid "Type"
 msgstr "類型"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/tagscloud/interfaces.py:88
+#: ../../facetednavigation/widgets/tagscloud/interfaces.py:89
 msgid "Type of the cloud"
 msgstr "標籤雲類型"
 
@@ -1064,7 +1072,7 @@ msgstr "標籤雲類型"
 msgid "Type of the widget."
 msgstr "搜尋方框的類型"
 
-#: ../../facetednavigation/widgets/daterange/interfaces.py:22
+#: ../../facetednavigation/widgets/daterange/interfaces.py:24
 msgid "UI Calendar years range"
 msgstr "日曆的年份範圍"
 
@@ -1072,15 +1080,15 @@ msgstr "日曆的年份範圍"
 msgid "Uncheck this box if you don't want hide/show criteria feature enabled on this widget"
 msgstr "不想 Hide/Show 條件功能被啟用的話，請取消勾選。"
 
-#: ../../facetednavigation/profiles.zcml:42
+#: ../../facetednavigation/profiles.zcml:43
 msgid "Uninstall EEA Faceted Navigation"
 msgstr ""
 
-#: ../../facetednavigation/profiles.zcml:42
+#: ../../facetednavigation/profiles.zcml:43
 msgid "Uninstall to remove EEA Faceted Navigation support"
 msgstr ""
 
-#: ../../facetednavigation/widgets/interfaces.py:123
+#: ../../facetednavigation/widgets/interfaces.py:124
 msgid "Use the results counter for sorting"
 msgstr "依計數結果來排序"
 
@@ -1109,7 +1117,7 @@ msgid "Vocabulary to use to render widget items"
 msgstr "用來顯示方框選項的詞彙表"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/interfaces.py:97
+#: ../../facetednavigation/widgets/interfaces.py:98
 msgid "Widget position in page"
 msgstr "方框在頁面的位置"
 
@@ -1126,7 +1134,7 @@ msgstr "只有特定使用者看得到方框"
 msgid "Wildcard search"
 msgstr "萬用字元搜尋"
 
-#: ../../facetednavigation/widgets/date/widget.py:24
+#: ../../facetednavigation/widgets/date/widget.py:26
 msgid "Yesterday"
 msgstr "昨天"
 
@@ -1160,6 +1168,6 @@ msgstr "符合"
 msgid "match any/all filters bellow"
 msgstr "符合 Any/All 過濾條件"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.py:105
+#: ../../facetednavigation/widgets/autocomplete/widget.py:107
 msgid "solr"
 msgstr "Apache Solr"
