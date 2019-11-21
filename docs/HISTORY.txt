@@ -3,6 +3,10 @@ Changelog
 
 13.5-dev0 - (unreleased)
 ---------------------------
+* Bug fix: Fixed eselect widget reset when hide "All" option is set
+  [laulaz]
+* Bug fix: Invalidate faceted cache for all Dexterity content-types
+  [avoinea]
 
 13.4 - (2019-11-15)
 ---------------------------
