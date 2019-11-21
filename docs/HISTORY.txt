@@ -1,6 +1,13 @@
 Changelog
 =========
 
+13.5 - (2019-11-21)
+---------------------------
+* Bug fix: Fixed eselect widget reset when hide "All" option is set
+  [laulaz]
+* Bug fix: Invalidate faceted cache for all Dexterity content-types
+  [avoinea]
+
 13.4 - (2019-11-15)
 ---------------------------
 * Feature: Add hide "All" option for select widget.

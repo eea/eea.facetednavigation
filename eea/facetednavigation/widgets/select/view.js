@@ -74,8 +74,16 @@ Faceted.SelectWidget.prototype = {
   },
 
   reset: function(){
-    this.select.val("");
-    this.selected = [];
+    if(this.widget.hasClass('hide-all-option')){
+        var first_val = this.select.find("option:first").val();
+        this.select.val(first_val);
+        this.selected = [first_val];
+        this.select_change(this.select);
+    }
+    else {
+        this.select.val("");
+        this.selected = [];
+    }
     this.widget.removeClass("faceted-widget-active");
   },
 
