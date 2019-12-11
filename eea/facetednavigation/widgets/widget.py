@@ -369,15 +369,15 @@ class CountableWidget(Widget):
 
         res[""] = res['all'] = len(brains)
         for value in sequence:
+            normalized_value = atdx_normalize(value)
+            if index.meta_type == 'BooleanIndex':
+                if normalized_value in ('False', 0):
+                    normalized_value = False
+                elif normalized_value in ('True', 1):
+                    normalized_value = True
             if not value:
                 res[value] = len(brains)
                 continue
-            normalized_value = atdx_normalize(value)
-            if index.meta_type == 'BooleanIndex':
-                if normalized_value == 'False':
-                    normalized_value = False
-                elif normalized_value == 'True':
-                    normalized_value = True
 
             rset = ctool.apply_index(self.context, index, normalized_value)[0]
             rset = IISet(rset)
@@ -386,6 +386,9 @@ class CountableWidget(Widget):
                 res[value] = len(rset)
             elif isinstance(normalized_value, six.text_type):
                 res[normalized_value] = len(rset)
+            elif isinstance(normalized_value, bool):
+                # We only get here for true values, not for false.
+                res['selected'] = len(rset)
             else:
                 unicode_value = value.decode('utf-8')
                 res[unicode_value] = len(rset)
