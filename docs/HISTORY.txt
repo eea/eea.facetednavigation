@@ -1,6 +1,11 @@
 Changelog
 =========
 
+13.6 - (unreleased)
+---------------------------
+* Nothing changed yet.
+
+
 13.5 - (2019-11-21)
 ---------------------------
 * Bug fix: Fixed eselect widget reset when hide "All" option is set
