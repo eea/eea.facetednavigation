@@ -1,7 +1,7 @@
 Changelog
 =========
 
-13.6 - (unreleased)
+13.6-dev0 - (unreleased)
 ---------------------------
 * Bug fix: Fix BooleanIndex in CountableWidget.
   [cedricmessiant, maurits]
