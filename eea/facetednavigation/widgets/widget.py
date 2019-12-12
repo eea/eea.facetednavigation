@@ -11,7 +11,6 @@ from zope.component import queryUtility
 from z3c.form.group import GroupForm
 from z3c.form.form import Form
 from z3c.form.interfaces import IGroup
-from BTrees.IIBTree import weightedIntersection, IISet
 
 from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
@@ -363,9 +362,9 @@ class CountableWidget(Widget):
             # if you upgrade to ZCatalog 3
             if isinstance(values[0], tuple):
                 values = [v[1] for v in values]
-            brains = IISet(values)
+            brains = frozenset(values)
         else:
-            brains = IISet(brain.getRID() for brain in brains)
+            brains = frozenset(brain.getRID() for brain in brains)
 
         res[""] = res['all'] = len(brains)
         for value in sequence:
@@ -374,8 +373,8 @@ class CountableWidget(Widget):
                 continue
             normalized_value = atdx_normalize(value)
             rset = ctool.apply_index(self.context, index, normalized_value)[0]
-            rset = IISet(rset)
-            rset = weightedIntersection(brains, rset)[1]
+            rset = frozenset(rset)
+            rset = brains.intersection(rset)
             if isinstance(value, six.text_type):
                 res[value] = len(rset)
             elif isinstance(normalized_value, six.text_type):
