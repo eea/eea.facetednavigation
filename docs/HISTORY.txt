@@ -3,6 +3,8 @@ Changelog
 
 13.6-dev0 - (unreleased)
 ---------------------------
+* Bug fix: Fix BooleanIndex in CountableWidget.
+  [cedricmessiant, maurits]
 * Bug fix: Fix count in combination with fulltext search widget and collective.solr.
   Fixes https://github.com/eea/eea.facetednavigation/issues/191
   [pbauer]
