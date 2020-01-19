@@ -3,6 +3,8 @@ Changelog
 
 13.7-dev0 - (unreleased)
 ---------------------------
+* Change: MultiSelect make closeOnSelect configurable
+  [avoinea]
 
 13.6 - (2019-12-16)
 ---------------------------

@@ -62,6 +62,12 @@ class IMultiSelectSchema(ISchema):
         required=False
     )
 
+    closeonselect = schema.Bool(
+        title=_(u"Close on select"),
+        description=_(u"Close selection popup after each select"),
+        required=False
+    )
+
     sortreversed = schema.Bool(
         title=_(u"Reverse options"),
         description=_(u"Sort options reversed"),
@@ -89,6 +95,7 @@ class DisplaySchemata(FacetedSchemata):
     label = u'display'
     fields = field.Fields(IMultiSelectSchema).select(
         u'sortreversed',
+        u'closeonselect',
         u'placeholder'
     )
 

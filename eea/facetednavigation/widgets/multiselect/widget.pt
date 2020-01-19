@@ -7,6 +7,7 @@
   sortcountable python:view.sortcountable;
   default_value python:view.data.get('default', u'');
   placeholder python:view.data.get('placeholder', 'Select a value');
+  closeOnSelect python:view.data.get('closeonselect', False);
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
@@ -21,6 +22,7 @@
     id string:${wid}_widget;
     class css;
     data-placeholder python:view.translate(placeholder);
+    data-closeonselect python:'true' if closeOnSelect else 'false';
     data-operator python:operator;">
 
 <fieldset class="widget-fieldset" tal:define="title python:view.data.get('title', '')">
