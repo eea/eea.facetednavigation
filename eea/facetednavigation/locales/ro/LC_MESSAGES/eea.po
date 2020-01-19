@@ -565,7 +565,7 @@ msgstr "Vocabularul selectat pentru acest widget este invalid sau lipseşte. Lă
 #: ../../facetednavigation/widgets/multiselect/widget.pt:36
 #: ../../facetednavigation/widgets/radio/widget.pt:29
 msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
-msgstr "Acest widget nu va fi afișat deoarece vocabularul selectat este invalid sau lipseşte."
+msgstr "Acest widget nu va fi afișat deoarece vocabularul selectat lipseşte sau este gol."
 
 #: ../../facetednavigation/widgets/range/widget.pt:1
 msgid "Invalid range"
