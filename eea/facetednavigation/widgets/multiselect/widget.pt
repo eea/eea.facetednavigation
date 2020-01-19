@@ -16,8 +16,10 @@
   operator python:view.operator;
   operator_visible python:view.operator_visible;
   operator_lable python: 'any' if operator == 'or' else 'all';
-  vocabulary view/vocabulary;"
-  tal:condition="vocabulary"
+  vocabulary view/vocabulary;
+  mode view/mode|string:display;
+  visible python:mode == 'input' or vocabulary"
+  tal:condition="visible"
   tal:attributes="
     id string:${wid}_widget;
     class css;
@@ -29,6 +31,10 @@
   <legend tal:content="python:view.translate(title)" i18n:translate="">HTML Widget</legend>
 
   <tal:facet on-error="structure python:error_view(error=error, cid=wid)">
+
+  <div tal:condition="not:vocabulary" class="faceted-widget-error">
+    <div i18n:translate="">Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode.</div>
+  </div>
 
   <form action="." method="get">
     <label class="multiselect-field"

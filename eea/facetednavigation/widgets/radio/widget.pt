@@ -12,16 +12,25 @@
   css python:hidezerocount and css + ' faceted-zero-count-hidden' or css;
   css python:sortcountable and css + ' faceted-sortcountable' or css;
   maxitems python:view.data.get('maxitems', 0) or 0;
-  vocabulary view/vocabulary;"
-  tal:condition="vocabulary"
+  vocabulary view/vocabulary;
+  mode view/mode|string:display;
+  visible python:mode == 'input' or vocabulary"
+  tal:condition="visible"
   tal:attributes="id string:${wid}_widget; class css"
   data-more="More" data-less="Less" i18n:attributes="data-more; data-less">
 
 <fieldset class="widget-fieldset">
   <legend tal:define="title python:view.data.get('title', '')" tal:content="
     python:view.translate(title)" i18n:translate="">HTML Widget</legend>
-  <form action="." method="get"
-  tal:on-error="structure python:error_view(error=error, cid=wid)">
+
+  <tal:facet on-error="structure python:error_view(error=error, cid=wid)">
+
+  <div tal:condition="not:vocabulary" class="faceted-widget-error">
+    <div i18n:translate="">Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode.</div>
+  </div>
+
+  <form action="." method="get">
+
   <ul>
     <li tal:condition="not:view/data/hidealloption|nothing">
       <tal:terms define="
@@ -56,5 +65,7 @@
   </ul>
   </form>
   <span style="display:none" tal:content="maxitems" />
+
+  </tal:facet>
 </fieldset>
 </div>

@@ -3,6 +3,8 @@ Changelog
 
 13.7-dev0 - (unreleased)
 ---------------------------
+* Bug fix: Show widgets with invalid vocabulary in edit mode in order to be able to fix them
+  [avoinea]
 * Change: MultiSelect make closeOnSelect configurable
   [avoinea]
 
