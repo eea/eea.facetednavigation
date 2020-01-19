@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-11-11 21:44+0000\n"
+"POT-Creation-Date: 2020-01-19 16:42+0000\n"
 "PO-Revision-Date: 2016-02-23 12:06+0100\n"
 "Last-Translator: Vincent Fretin <vincent.fretin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,7 +81,7 @@ msgstr "Filtres après la requête"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:24
 #: ../../facetednavigation/widgets/radio/widget.pt:34
-#: ../../facetednavigation/widgets/select/widget.pt:28
+#: ../../facetednavigation/widgets/select/widget.pt:30
 msgid "All"
 msgstr "Tous"
 
@@ -153,6 +153,14 @@ msgstr "Requête catalogue"
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
 msgstr "Cases à cocher"
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+msgid "Close on select"
+msgstr ""
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+msgid "Close selection popup after each select"
+msgstr ""
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:17
 msgid "Cloud"
@@ -490,6 +498,7 @@ msgid "Hidden"
 msgstr "Masqué"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:32
+#: ../../facetednavigation/widgets/select/interfaces.py:32
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "Hide 'All' option"
 msgstr "Masquer l'option 'Tous'"
@@ -513,6 +522,7 @@ msgid "Hide widget"
 msgstr "Masquer le widget"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
+#: ../../facetednavigation/widgets/select/interfaces.py:33
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:47
 msgid "If this checkbox is checked, hides the \"All\" option"
 msgstr "Si cette case est cochée, l'option \"Tous\" sera cachée"
@@ -806,7 +816,7 @@ msgstr "Le nom python d'une factory qui peut créer une implémentation de l'obj
 msgid "Radio"
 msgstr "Bouton radio"
 
-#: ../../facetednavigation/widgets/range/widget.py:22
+#: ../../facetednavigation/widgets/range/widget.py:21
 msgid "Range"
 msgstr "Interval"
 
@@ -860,7 +870,7 @@ msgstr "Inverser"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:66
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Inverser l'ordre des valeurs"
@@ -935,7 +945,7 @@ msgstr "Trier suivant le décompte"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:67
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Sort options reversed"
 msgstr "Le tri des choix est inversé"
@@ -1143,7 +1153,7 @@ msgid "Yesterday"
 msgstr "Hier"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/multiselect/widget.pt:56
 msgid "all"
 msgstr "tous"
 
@@ -1153,7 +1163,7 @@ msgid "all items"
 msgstr "dans tous les éléments"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/multiselect/widget.pt:56
 msgid "any"
 msgstr "au moins un"
 
@@ -1163,12 +1173,12 @@ msgid "in current results"
 msgstr "dans les résultats courants"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:29
-#: ../../facetednavigation/widgets/multiselect/widget.pt:53
+#: ../../facetednavigation/widgets/multiselect/widget.pt:55
 msgid "match"
 msgstr "correspondance"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:28
-#: ../../facetednavigation/widgets/multiselect/widget.pt:52
+#: ../../facetednavigation/widgets/multiselect/widget.pt:54
 msgid "match any/all filters bellow"
 msgstr "correspond à un / tous les filtres ci-dessous"
 
