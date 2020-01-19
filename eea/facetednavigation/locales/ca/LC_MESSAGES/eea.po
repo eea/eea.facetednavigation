@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-19 16:42+0000\n"
+"POT-Creation-Date: 2020-01-19 20:17+0000\n"
 "PO-Revision-Date: 2019-10-07 14:24+0200\n"
 "Last-Translator: Aleix Llusà Serra <a.llusa@iskra.cat>\n"
 "Language-Team: Català <ca@li.org>\n"
@@ -76,8 +76,8 @@ msgid "After query filters"
 msgstr "Després de cercar els filtres"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:24
-#: ../../facetednavigation/widgets/radio/widget.pt:34
-#: ../../facetednavigation/widgets/select/widget.pt:30
+#: ../../facetednavigation/widgets/radio/widget.pt:43
+#: ../../facetednavigation/widgets/select/widget.pt:36
 msgid "All"
 msgstr "Tots"
 
@@ -524,9 +524,19 @@ msgstr "S'ha activat la configuració heretada"
 msgid "Inheriting configuration is now disabled"
 msgstr "S'ha desactivat la configuració heretada"
 
+#: ../../facetednavigation/widgets/resultsperpage/widget.pt:19
+msgid "Invalid or empty range provided for this widget. This widget will be ignored in view mode."
+msgstr ""
+
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "S'ha introduït un vocabulari invàlid o buit per a aquest giny. Deixeu-lo en blanc per als criteris d'ordenació per defecte."
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
+msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.pt:1
 msgid "Invalid range"
@@ -1083,8 +1093,8 @@ msgstr "Cerca amb caràcters comodí"
 msgid "Yesterday"
 msgstr "Ahir"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:56
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "all"
 msgstr "tots"
 
@@ -1093,8 +1103,8 @@ msgstr "tots"
 msgid "all items"
 msgstr "en tots els elements"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:56
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "any"
 msgstr "qualsevol"
 
@@ -1103,13 +1113,13 @@ msgstr "qualsevol"
 msgid "in current results"
 msgstr "entre els elements actuals"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
-#: ../../facetednavigation/widgets/multiselect/widget.pt:55
+#: ../../facetednavigation/widgets/checkbox/widget.pt:35
+#: ../../facetednavigation/widgets/multiselect/widget.pt:61
 msgid "match"
 msgstr "coincideix amb"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/checkbox/widget.pt:34
+#: ../../facetednavigation/widgets/multiselect/widget.pt:60
 msgid "match any/all filters bellow"
 msgstr "compleix totes/qualsevol de les opcions seleccionades"
 

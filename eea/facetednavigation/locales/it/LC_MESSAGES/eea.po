@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2020-01-19 16:42+0000\n"
+"POT-Creation-Date: 2020-01-19 20:17+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -78,8 +78,8 @@ msgid "After query filters"
 msgstr "Filtri da applicare dopo la query"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:24
-#: ../../facetednavigation/widgets/radio/widget.pt:34
-#: ../../facetednavigation/widgets/select/widget.pt:30
+#: ../../facetednavigation/widgets/radio/widget.pt:43
+#: ../../facetednavigation/widgets/select/widget.pt:36
 msgid "All"
 msgstr "Tutto"
 
@@ -551,9 +551,19 @@ msgstr ""
 msgid "Inheriting configuration is now disabled"
 msgstr ""
 
+#: ../../facetednavigation/widgets/resultsperpage/widget.pt:19
+msgid "Invalid or empty range provided for this widget. This widget will be ignored in view mode."
+msgstr ""
+
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Il vocabolario fornito per questo widget è vuoto o non valido. Lasciare vuoto per utilizzare i criteri di ordinamento predefiniti."
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
+msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.pt:1
 msgid "Invalid range"
@@ -1147,8 +1157,8 @@ msgstr ""
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:56
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "all"
 msgstr ""
 
@@ -1157,8 +1167,8 @@ msgstr ""
 msgid "all items"
 msgstr "tutti gli elementi"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:56
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "any"
 msgstr ""
 
@@ -1167,13 +1177,13 @@ msgstr ""
 msgid "in current results"
 msgstr "nei risultati attuali"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
-#: ../../facetednavigation/widgets/multiselect/widget.pt:55
+#: ../../facetednavigation/widgets/checkbox/widget.pt:35
+#: ../../facetednavigation/widgets/multiselect/widget.pt:61
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/checkbox/widget.pt:34
+#: ../../facetednavigation/widgets/multiselect/widget.pt:60
 msgid "match any/all filters bellow"
 msgstr ""
 

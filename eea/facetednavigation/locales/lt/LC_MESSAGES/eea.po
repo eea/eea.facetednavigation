@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-19 16:42+0000\n"
+"POT-Creation-Date: 2020-01-19 20:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,8 +75,8 @@ msgid "After query filters"
 msgstr "Po užklausos filtrus"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:24
-#: ../../facetednavigation/widgets/radio/widget.pt:34
-#: ../../facetednavigation/widgets/select/widget.pt:30
+#: ../../facetednavigation/widgets/radio/widget.pt:43
+#: ../../facetednavigation/widgets/select/widget.pt:36
 msgid "All"
 msgstr "Visos"
 
@@ -523,9 +523,19 @@ msgstr ""
 msgid "Inheriting configuration is now disabled"
 msgstr ""
 
+#: ../../facetednavigation/widgets/resultsperpage/widget.pt:19
+msgid "Invalid or empty range provided for this widget. This widget will be ignored in view mode."
+msgstr ""
+
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Neteisinga ar tuščias žodynas numatyta šio valdikliui. Palikite tuščia įsipareigojimų neįvykdymo rikiavimo kriterijų."
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
+msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.pt:1
 msgid "Invalid range"
@@ -1082,8 +1092,8 @@ msgstr ""
 msgid "Yesterday"
 msgstr "Vakar"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:56
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "all"
 msgstr ""
 
@@ -1092,8 +1102,8 @@ msgstr ""
 msgid "all items"
 msgstr "visi elementai"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:56
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "any"
 msgstr ""
 
@@ -1102,13 +1112,13 @@ msgstr ""
 msgid "in current results"
 msgstr "dabartiniais rezultatais"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
-#: ../../facetednavigation/widgets/multiselect/widget.pt:55
+#: ../../facetednavigation/widgets/checkbox/widget.pt:35
+#: ../../facetednavigation/widgets/multiselect/widget.pt:61
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/checkbox/widget.pt:34
+#: ../../facetednavigation/widgets/multiselect/widget.pt:60
 msgid "match any/all filters bellow"
 msgstr ""
 
