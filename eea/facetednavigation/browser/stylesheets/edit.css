@@ -19,11 +19,11 @@
 }
 
 .ui-sortable-helper {
-  width: 20em ! important
+  width: 20em !important;
 }
 
-.ui-dialog {
-  width: 50em ! important;
+.faceted-ui-dialog {
+  min-width: 40%;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 5px 5px 5px #888;
@@ -50,7 +50,7 @@
 }
 
 dd {
-  margin-left: 0px;
+  margin-left: 0;
   padding-bottom: 1em;
 }
 
@@ -65,17 +65,17 @@ table.listing {
 }
 
 .faceted-loading-overlay {
-  background: none ! important;
-  border: none ! important;
-  width: 120px ! important;
+  background: none !important;
+  border: none !important;
+  width: 120px !important;
 }
 
 .faceted-loading-overlay .ui-dialog-titlebar {
-  display: none ! important;
+  display: none !important;
 }
 
 .faceted-loading-overlay .ui-resizable-handle {
-  display: none ! important;
+  display: none !important;
 }
 
 /* Widgets
@@ -186,7 +186,7 @@ table.listing {
 }
 
 #faceted-page-title {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 /* Areas
@@ -294,41 +294,39 @@ table.listing {
 
 /* Default
 */
-.faceted-default-widgets {
-}
+/* .faceted-default-widgets {
+} */
 
 /* Advanced
 */
-.faceted-advanced-widgets {
-}
+/* .faceted-advanced-widgets {
+} */
 
 /* Tabs
 */
 .faceted-section-tabs {
   margin-top: 1em;
-  padding: 0px;
+  padding: 0;
 }
 
 .faceted-section-tabs .ui-tabs-nav {
-  padding: 0px;
+  padding: 0;
 }
 
 .faceted-section-tabs ul li a {
-  border-bottom: 0px ! important;
+  border-bottom: 0 ! important;
   cursor: pointer;
   color: #205C90;
 }
 
 .faceted-section-tabs .ui-state-highlight {
-  height: 2em ! important;
   border: none ! important;
-  width: 90%;
   display: inline;
 }
 
 .faceted-section-tabs ul {
   list-style-type: none ! important;
-  margin: 0px ! important;
+  margin: 0 ! important;
 }
 
 /* Buttons
@@ -364,7 +362,7 @@ table.listing {
   padding-bottom:0;
 }
 
-.ui-dialog .ui-dialog-titlebar-close {
+.faceted-ui-dialog .ui-dialog-titlebar-close {
   right: 1em;
   background: transparent;
   border: none;

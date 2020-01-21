@@ -473,6 +473,7 @@ FacetedEdit.FormEditWidget = {
       bgiframe: true,
       modal: true,
       autoOpen: false,
+      dialogClass: "faceted-ui-dialog",
       buttons: {
         'Save': function(){
           var valid = FacetedEdit.FormValidator.validate(context.form);
