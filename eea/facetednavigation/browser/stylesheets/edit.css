@@ -23,10 +23,15 @@
 }
 
 .faceted-ui-dialog {
-  min-width: 40%;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 5px 5px 5px #888;
+  width: 90% !important;
+  max-width: 50em;
+}
+
+.faceted-ui-dialog select {
+  width: 100%;
 }
 
 /* Archetypes
