@@ -13,17 +13,17 @@
   <div class="faceted-clear"></div>
 
   <!-- Top -->
-  <div tal:define="position string:top" id="top-area">
+  <div tal:define="position string:top" id="top-area" class="faceted-area top-area">
     <metal:position use-macro="here/@@faceted_macros/macros/position" />
   </div>
 
   <!-- Left & Center-->
-  <div id="center-and-left-area">
+  <div id="center-and-left-area" class="faceted-area center-and-left-area">
     <!-- Center -->
-    <div id="center-area">
-      <div id="center-content-area">
+    <div id="center-area" class="faceted-area center-area">
+      <div id="center-content-area" class="faceted-area center-content-area">
         <!-- Center top -->
-        <div tal:define="position string:center" id="center-top-area">
+        <div tal:define="position string:center" id="center-top-area" class="faceted-area center-top-area">
           <metal:position use-macro="here/@@faceted_macros/macros/position" />
         </div>
 
@@ -31,25 +31,25 @@
         <metal:results use-macro="here/@@faceted_macros/macros/results" />
 
         <!-- Center bottom -->
-        <div tal:define="position string:bottomcenter" id="center-bottom-area">
+        <div tal:define="position string:bottomcenter" id="center-bottom-area" class="faceted-area center-bottom-area">
           <metal:position use-macro="here/@@faceted_macros/macros/position" />
         </div>
       </div>
     </div>
 
     <!-- Left column -->
-    <div tal:define="position string:left" id="left-area">
+    <div tal:define="position string:left" id="left-area" class="faceted-area left-area">
       <metal:position use-macro="here/@@faceted_macros/macros/position" />
     </div>
   </div>
 
   <!-- Right -->
-  <div tal:define="position string:right" id="right-area">
+  <div tal:define="position string:right" id="right-area" class="faceted-area right-area">
     <metal:position use-macro="here/@@faceted_macros/macros/position" />
   </div>
 
   <!-- Bottom -->
-  <div tal:define="position string:bottom" id="bottom-area">
+  <div tal:define="position string:bottom" id="bottom-area" class="faceted-area bottom-area">
     <metal:position use-macro="here/@@faceted_macros/macros/position" />
   </div>
 

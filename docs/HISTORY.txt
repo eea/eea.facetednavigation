@@ -3,6 +3,8 @@ Changelog
 
 13.7 - (2020-01-19)
 ---------------------------
+* Change: Add widgets areas CSS classes and style by class instead of ids
+  [avoinea]
 * Bug fix: Show widgets with invalid vocabulary in edit mode in order to be able to fix them
   [avoinea]
 * Change: MultiSelect make closeOnSelect configurable

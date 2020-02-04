@@ -196,7 +196,7 @@ table.listing {
 
 /* Areas
 */
-#center-content-area {
+.faceted-area.center-content-area {
   margin: 0 25em 0 25em;
 }
 
