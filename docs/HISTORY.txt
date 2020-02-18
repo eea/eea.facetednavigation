@@ -3,6 +3,8 @@ Changelog
 
 13.7 - (2020-01-19)
 ---------------------------
+* Change: Give name to Dexterity behavior: eea.faceted.navigable
+  [avoinea]
 * Change: Add widgets areas CSS classes and style by class instead of ids
   [avoinea]
 * Change: MultiSelect make closeOnSelect configurable
