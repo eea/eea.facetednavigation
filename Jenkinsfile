@@ -10,6 +10,12 @@ pipeline {
   stages {
 
     stage('Cosmetics') {
+      // Exclude Pull-Requests
+      when {
+        allOf {
+          environment name: 'CHANGE_ID', value: ''
+        }
+      }
       steps {
         parallel(
 
@@ -211,6 +217,7 @@ pipeline {
     }
 
     stage('Report to SonarQube') {
+      // Exclude Pull-Requests
       when {
         allOf {
           environment name: 'CHANGE_ID', value: ''
