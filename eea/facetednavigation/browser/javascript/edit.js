@@ -223,6 +223,7 @@ FacetedEdit.FormWidgets = {
       bgiframe: true,
       autoOpen: false,
       modal: true,
+      dialogClass: "faceted-ui-dialog",
       buttons:  {
         Yes: function() {
           var label = jQuery('strong', jQuery(this));
@@ -473,6 +474,7 @@ FacetedEdit.FormEditWidget = {
       bgiframe: true,
       modal: true,
       autoOpen: false,
+      dialogClass: "faceted-ui-dialog",
       buttons: {
         'Save': function(){
           var valid = FacetedEdit.FormValidator.validate(context.form);
@@ -557,6 +559,7 @@ FacetedEdit.FormAddWidgets = {
       bgiframe: true,
       modal: true,
       autoOpen: false,
+      dialogClass: "faceted-ui-dialog",
       buttons: {
         'Add': function(){
           var valid = FacetedEdit.FormValidator.validate(context.form);

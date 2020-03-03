@@ -7,6 +7,7 @@
   sortcountable python:view.sortcountable;
   default_value python:view.data.get('default', u'');
   placeholder python:view.data.get('placeholder', 'Select a value');
+  closeOnSelect python:view.data.get('closeonselect', False);
   css string:faceted-widget ${view/css_class};
   css python:hidden and css + ' faceted-widget-hidden' or css;
   css python:view.countable and css + ' faceted-count' or css;
@@ -15,18 +16,25 @@
   operator python:view.operator;
   operator_visible python:view.operator_visible;
   operator_lable python: 'any' if operator == 'or' else 'all';
-  vocabulary view/vocabulary;"
-  tal:condition="vocabulary"
+  vocabulary view/vocabulary;
+  mode view/mode|string:display;
+  visible python:mode == 'input' or vocabulary"
+  tal:condition="visible"
   tal:attributes="
     id string:${wid}_widget;
     class css;
     data-placeholder python:view.translate(placeholder);
+    data-closeonselect python:'true' if closeOnSelect else 'false';
     data-operator python:operator;">
 
 <fieldset class="widget-fieldset" tal:define="title python:view.data.get('title', '')">
   <legend tal:content="python:view.translate(title)" i18n:translate="">HTML Widget</legend>
 
   <tal:facet on-error="structure python:error_view(error=error, cid=wid)">
+
+  <div tal:condition="not:vocabulary" class="faceted-widget-error">
+    <div i18n:translate="">Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode.</div>
+  </div>
 
   <form action="." method="get">
     <label class="multiselect-field"

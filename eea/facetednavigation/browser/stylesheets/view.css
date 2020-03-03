@@ -15,29 +15,29 @@
 /* Areas
 */
 
-#center-and-left-area {
+.faceted-area.center-and-left-area {
   float: left;
   margin-right: -25em;
   width: 100%;
 }
 
-#right-area {
+.faceted-area.right-area {
   float: right;
   width: 25em;
 }
 
-#center-area {
+.faceted-area.center-area {
   float: right;
   margin-left: -25em;
   width: 100%;
 }
 
-#left-area {
+.faceted-area.left-area {
   float: left;
   width: 25em;
 }
 
-#bottom-area {
+.faceted-area.bottom-area {
   clear: both;
 }
 

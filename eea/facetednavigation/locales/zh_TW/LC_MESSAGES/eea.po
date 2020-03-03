@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2019-11-11 21:44+0000\n"
+"POT-Creation-Date: 2020-01-19 20:17+0000\n"
 "PO-Revision-Date: 2017-11-08 15:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -75,8 +75,8 @@ msgid "After query filters"
 msgstr "位於查詢條件之後"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:24
-#: ../../facetednavigation/widgets/radio/widget.pt:34
-#: ../../facetednavigation/widgets/select/widget.pt:28
+#: ../../facetednavigation/widgets/radio/widget.pt:43
+#: ../../facetednavigation/widgets/select/widget.pt:36
 msgid "All"
 msgstr "全選"
 
@@ -148,6 +148,14 @@ msgstr "Catalog 搜尋"
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
 msgstr "方形勾選"
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+msgid "Close on select"
+msgstr ""
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+msgid "Close selection popup after each select"
+msgstr ""
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:17
 msgid "Cloud"
@@ -485,6 +493,7 @@ msgid "Hidden"
 msgstr "隱藏"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:32
+#: ../../facetednavigation/widgets/select/interfaces.py:32
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "Hide 'All' option"
 msgstr "隱藏 'All' 選項"
@@ -508,6 +517,7 @@ msgid "Hide widget"
 msgstr "隱藏方框"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
+#: ../../facetednavigation/widgets/select/interfaces.py:33
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:47
 msgid "If this checkbox is checked, hides the \"All\" option"
 msgstr "勾選的話，會隱藏「所有項目」的選項。"
@@ -541,9 +551,19 @@ msgstr "設定沿用功能已啟用"
 msgid "Inheriting configuration is now disabled"
 msgstr "設定沿用功能已停用"
 
+#: ../../facetednavigation/widgets/resultsperpage/widget.pt:19
+msgid "Invalid or empty range provided for this widget. This widget will be ignored in view mode."
+msgstr ""
+
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "這個方框的詞彙表並不正確，預設的排序條件因此留空。"
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
+msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.pt:1
 msgid "Invalid range"
@@ -801,7 +821,7 @@ msgstr "Factory 的名稱，可用來建立實作的物件，它必須使用 dot
 msgid "Radio"
 msgstr "單選圓鈕"
 
-#: ../../facetednavigation/widgets/range/widget.py:22
+#: ../../facetednavigation/widgets/range/widget.py:21
 msgid "Range"
 msgstr "範圍"
 
@@ -855,7 +875,7 @@ msgstr "相反順序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:66
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "相反順序"
@@ -931,7 +951,7 @@ msgstr "依計數結果排序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:67
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Sort options reversed"
 msgstr "相反順序排列"
@@ -1138,8 +1158,8 @@ msgstr "萬用字元搜尋"
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "all"
 msgstr "全部"
 
@@ -1148,8 +1168,8 @@ msgstr "全部"
 msgid "all items"
 msgstr "所有項目"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "any"
 msgstr "任何"
 
@@ -1158,13 +1178,13 @@ msgstr "任何"
 msgid "in current results"
 msgstr "在現行結果裡"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
-#: ../../facetednavigation/widgets/multiselect/widget.pt:53
+#: ../../facetednavigation/widgets/checkbox/widget.pt:35
+#: ../../facetednavigation/widgets/multiselect/widget.pt:61
 msgid "match"
 msgstr "符合"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-#: ../../facetednavigation/widgets/multiselect/widget.pt:52
+#: ../../facetednavigation/widgets/checkbox/widget.pt:34
+#: ../../facetednavigation/widgets/multiselect/widget.pt:60
 msgid "match any/all filters bellow"
 msgstr "符合 Any/All 過濾條件"
 

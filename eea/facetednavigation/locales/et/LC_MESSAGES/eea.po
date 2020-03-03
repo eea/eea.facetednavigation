@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-11-11 21:44+0000\n"
+"POT-Creation-Date: 2020-01-19 20:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,8 +75,8 @@ msgid "After query filters"
 msgstr "Pärast päringu filtrid"
 
 #: ../../facetednavigation/widgets/alphabetic/widget.pt:24
-#: ../../facetednavigation/widgets/radio/widget.pt:34
-#: ../../facetednavigation/widgets/select/widget.pt:28
+#: ../../facetednavigation/widgets/radio/widget.pt:43
+#: ../../facetednavigation/widgets/select/widget.pt:36
 msgid "All"
 msgstr "Kõik"
 
@@ -145,6 +145,14 @@ msgstr "Kataloog päring"
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
 msgstr "Ruudud"
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+msgid "Close on select"
+msgstr ""
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+msgid "Close selection popup after each select"
+msgstr ""
 
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:17
 msgid "Cloud"
@@ -459,6 +467,7 @@ msgid "Hidden"
 msgstr "Peidetud"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:32
+#: ../../facetednavigation/widgets/select/interfaces.py:32
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:46
 msgid "Hide 'All' option"
 msgstr ""
@@ -480,6 +489,7 @@ msgid "Hide widget"
 msgstr "Peida widget"
 
 #: ../../facetednavigation/widgets/radio/interfaces.py:33
+#: ../../facetednavigation/widgets/select/interfaces.py:33
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:47
 msgid "If this checkbox is checked, hides the \"All\" option"
 msgstr ""
@@ -513,9 +523,19 @@ msgstr ""
 msgid "Inheriting configuration is now disabled"
 msgstr ""
 
+#: ../../facetednavigation/widgets/resultsperpage/widget.pt:19
+msgid "Invalid or empty range provided for this widget. This widget will be ignored in view mode."
+msgstr ""
+
 #: ../../facetednavigation/widgets/sorting/widget.pt:21
 msgid "Invalid or empty vocabulary provided for this widget. Leave empty for default sorting criteria."
 msgstr "Vigaseid või tühje sõnavara sätestatud selle vidina. Jäta tühjaks default sortimiskriteeriumina."
+
+#: ../../facetednavigation/widgets/checkbox/widget.pt:31
+#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/radio/widget.pt:29
+msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
+msgstr ""
 
 #: ../../facetednavigation/widgets/range/widget.pt:1
 msgid "Invalid range"
@@ -758,7 +778,7 @@ msgstr "Python nimi tehas, mis võib tekitada rakendamise vastu. See peab kindla
 msgid "Radio"
 msgstr "Raadio"
 
-#: ../../facetednavigation/widgets/range/widget.py:22
+#: ../../facetednavigation/widgets/range/widget.py:21
 msgid "Range"
 msgstr "Valik"
 
@@ -808,7 +828,7 @@ msgid "Reverse"
 msgstr "Vastupidine"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:66
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Reverse valikud"
@@ -878,7 +898,7 @@ msgid "Sort by countable"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:67
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Sort options reversed"
 msgstr "Sorteeri võimalusi vastupidine"
@@ -1072,8 +1092,8 @@ msgstr ""
 msgid "Yesterday"
 msgstr "eile"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "all"
 msgstr ""
 
@@ -1082,8 +1102,8 @@ msgstr ""
 msgid "all items"
 msgstr "kõik teemad"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:30
-#: ../../facetednavigation/widgets/multiselect/widget.pt:54
+#: ../../facetednavigation/widgets/checkbox/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:62
 msgid "any"
 msgstr ""
 
@@ -1092,13 +1112,13 @@ msgstr ""
 msgid "in current results"
 msgstr "praeguste tulemuste"
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:29
-#: ../../facetednavigation/widgets/multiselect/widget.pt:53
+#: ../../facetednavigation/widgets/checkbox/widget.pt:35
+#: ../../facetednavigation/widgets/multiselect/widget.pt:61
 msgid "match"
 msgstr ""
 
-#: ../../facetednavigation/widgets/checkbox/widget.pt:28
-#: ../../facetednavigation/widgets/multiselect/widget.pt:52
+#: ../../facetednavigation/widgets/checkbox/widget.pt:34
+#: ../../facetednavigation/widgets/multiselect/widget.pt:60
 msgid "match any/all filters bellow"
 msgstr ""
 

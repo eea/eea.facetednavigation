@@ -98,6 +98,7 @@ class FacetedContainerView(object):
         for widget in widgets:
             if widget.hidden:
                 continue
+            widget.mode = 'display'
             yield widget
 
     def get_widgets(self, position='', section=''):

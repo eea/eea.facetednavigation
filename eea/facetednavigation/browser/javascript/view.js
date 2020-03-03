@@ -326,11 +326,12 @@ Faceted.Sections = {
     var self = this;
     self.form = jQuery('.faceted-form');
     self.advanced = jQuery('.faceted-advanced-widgets', self.form).hide();
+    self.buttons = jQuery('.faceted-sections-buttons', self.form);
     if(!self.advanced.length){
+      self.buttons.remove();
       return;
     }
 
-    self.buttons = jQuery('.faceted-sections-buttons', self.form);
     self.more = jQuery('.faceted-sections-buttons-more', self.form).show();
     self.less = jQuery('.faceted-sections-buttons-less', self.form).hide();
 
