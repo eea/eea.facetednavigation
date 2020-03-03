@@ -1,6 +1,9 @@
 Changelog
 =========
 
+13.8-dev0 - (unreleased)
+---------------------------
+
 13.7 - (2020-01-19)
 ---------------------------
 * Change: Give name to Dexterity behavior: eea.faceted.navigable
