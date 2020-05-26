@@ -168,7 +168,9 @@ class FacetedQueryHandler(FolderView):
                 brains_filters.append(brains_filter)
 
         b_start = safeToInt(kwargs.get('b_start', 0))
-        orphans = num_per_page * 20 / 100 # orphans = 20% of items per page
+        # make sure orphans is an integer, // is used so in Python3 we have an
+        # integer division as by default, a division result is a float
+        orphans = num_per_page * 20 // 100  # orphans = 20% of items per page
         if batch and not brains_filters:
             # add b_start and b_size to query to use better sort algorithm
             query['b_start'] = b_start
