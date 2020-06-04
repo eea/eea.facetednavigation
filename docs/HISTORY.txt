@@ -1,6 +1,13 @@
 Changelog
 =========
 
+13.8 - (2020-06-04)
+---------------------------
+* Bug fix: make sure orphans used in FacetedQueryHandler.query is an integer
+  when using Py3 or it turns b_size to a float value that breaks plone.batching
+  Fixes https://github.com/eea/eea.facetednavigation/issues/197
+  [gbastien]
+
 13.7 - (2020-01-19)
 ---------------------------
 * Change: Give name to Dexterity behavior: eea.faceted.navigable
