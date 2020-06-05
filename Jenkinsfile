@@ -141,7 +141,7 @@ pipeline {
        steps {
          parallel(
           "WWW": {
-            node(label: 'docker') {
+            node(label: 'docker-host') {
               script {
                 try {
                   checkout scm
