@@ -145,6 +145,7 @@ pipeline {
               script {
                 try {
                   checkout scm
+                  sh '''hostname'''
                   sh '''mkdir -p xunit-functional'''
                   sh '''docker run -d -e ADDONS=$GIT_NAME -e DEVELOP=src/$GIT_NAME -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" --name=$BUILD_TAG-ft-www eeacms/www-devel /debug.sh bin/instance fg'''
                   sh '''timeout 600  wget --retry-connrefused --tries=60 --waitretry=10 -q http://$(docker inspect --format {{.NetworkSettings.IPAddress}} $BUILD_TAG-ft-www):8080/'''
