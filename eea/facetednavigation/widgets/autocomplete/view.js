@@ -5,8 +5,40 @@ Faceted.AutocompleteWidget = function(wid){
   this.widget = jQuery('#' + wid + '_widget');
   this.widget.show();
   this.title = jQuery('legend', this.widget).html();
+  this.elements = this.widget.find('option');
+  this.select = jQuery('#' + this.wid);
+  this.multiple = this.widget.data("multiple") ? true: false;
+  this.placeholder = this.widget.data('placeholder');
+  this.autocomplete_view = this.widget.data('autocomplete-view');
   this.selected = [];
   this.button = jQuery('input[type=submit]', this.widget);
+
+  this.select.select2({
+    placeholder: this.placeholder,
+    multiple: this.multiple,
+    allowClear: true,
+    minimumInputLength: 2,
+    ajax: {
+      url: this.autocomplete_view,
+      delay: 250,
+      dataType: 'json',
+      params: {
+         global: false
+      },
+      data: function (term, page) {
+          return {
+              term: term,
+              add_terms: true
+          };
+      },
+      results: function (data, page) {
+          return {
+              results: data
+          };
+      },
+      cache: false
+    }
+  });
 
   // Handle text change
   var js_widget = this;
@@ -167,38 +199,8 @@ Faceted.AutocompleteWidget.prototype = {
 Faceted.initializeAutocompleteWidget = function(evt){
   jQuery('div.faceted-autocomplete-widget').each(function(){
     var wid = jQuery(this).attr('id');
-    var autocomplete_view = jQuery(this).attr('data-autocomplete-view');
-    var multiple = (jQuery(this).attr('data-multiple') === 'true');
-    var placeholder = jQuery(this).attr('data-placeholder');
     wid = wid.split('_')[0];
     Faceted.Widgets[wid] = new Faceted.AutocompleteWidget(wid);
-
-    jQuery("#" + wid).select2({
-      placeholder: placeholder,
-      multiple: multiple,
-      allowClear: true,
-      minimumInputLength: 2,
-      ajax: {
-        url: autocomplete_view,
-        delay: 250,
-        dataType: 'json',
-        params: {
-           global: false
-        },
-        data: function (term, page) {
-            return {
-                term: term,
-                add_terms: true
-            };
-        },
-        results: function (data, page) {
-            return {
-                results: data
-            };
-        },
-        cache: false
-      }
-    });
   });
 };
 

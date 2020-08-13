@@ -6,9 +6,37 @@
   height:1px;
   overflow:hidden;
 }
-#content ul.select2-choices {
-    margin-left: 0;
+.faceted-autocomplete-widget .select2-container {
+  margin-bottom: auto;
+  display: inherit;
 }
-.select2-container-multi .select2-choices .select2-search-field input {
-    min-width: 100px;
+
+.faceted-autocomplete-widget .select2-container .select2-choice {
+  background-image: none;
+  font-weight: normal;
+}
+
+.faceted-autocomplete-widget .select2-container .select2-choice abbr {
+  top: 6px;
+}
+
+.faceted-autocomplete-widget .select2-container .select2-choice .select2-arrow {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+}
+
+.faceted-autocomplete-widget .select2-container-multi .select2-choices .select2-search-choice {
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-weight: normal;
+}
+
+.faceted-autocomplete-widget .faceted-operator a,
+.faceted-autocomplete-widget .select2-search-choice-close,
+#content-core .faceted-autocomplete-widget .faceted-operator a,
+#content-core .faceted-autocomplete-widget .select2-search-choice-close {
+  border-bottom: none;
 }

@@ -398,6 +398,7 @@
       <element>jstree</element>
       <element>select2uislider</element>
       <element>tagcloud</element>
+      <element>select2</element>
     </value>
     <value key="depends">jqueryui</value>
     <value key="csscompilation">++plone++static/faceted-navigation-jquery.min.css</value>

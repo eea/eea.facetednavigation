@@ -3,6 +3,17 @@ Changelog
 
 13.9-dev0 - (unreleased)
 ---------------------------
+* Upgrade step: Within "Plone > Site Setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation. If you still get a
+  JS error with autocomplete facet after this upgrade,
+  go to Site Setup > Resource Registries and enable, then disable
+  Development Mode for Faceted Bundles.
+  [avoinea refs #196]
+* Bug fix: Fix autocomplete solr facet CSS with Plone 5
+  [avoinea]
+* Bug fix: Fix select2 JS error when using autocomplete solr facet
+  [avoinea refs #196]
+
 
 13.8 - (2020-06-04)
 ---------------------------
