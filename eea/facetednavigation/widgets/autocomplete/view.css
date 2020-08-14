@@ -26,6 +26,11 @@
   border: none;
 }
 
+#content .faceted-autocomplete-widget .select2-container-multi .select2-choices,
+.faceted-autocomplete-widget .select2-container-multi .select2-choices {
+  margin-left: 0;
+}
+
 .faceted-autocomplete-widget .select2-container-multi .select2-choices .select2-search-choice {
   background-image: none;
   background-color: transparent;
@@ -39,4 +44,8 @@
 #content-core .faceted-autocomplete-widget .faceted-operator a,
 #content-core .faceted-autocomplete-widget .select2-search-choice-close {
   border-bottom: none;
+}
+
+.faceted-autocomplete-widget input[type=submit] {
+  float: right;
 }

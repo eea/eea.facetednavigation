@@ -1,6 +1,7 @@
 /* Autocomplete Widget
 */
 Faceted.AutocompleteWidget = function(wid){
+  var self = this;
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
   this.widget.show();
@@ -41,45 +42,68 @@ Faceted.AutocompleteWidget = function(wid){
   });
 
   // Handle text change
-  var js_widget = this;
   jQuery('form', this.widget).submit(function(){
-    js_widget.text_change(js_widget.button);
     return false;
   });
 
+  if(this.button.length) {
+    this.button.on('click', function(evt) {
+      self.text_change(self.button);
+    });
+  } else {
+    this.select.on('select2-close', function(evt){
+      self.select_change(this, evt);
+    });
+
+    this.select.on('select2-removed', function(evt){
+      self.select_change(this, evt);
+    });
+  }
+
   // Default value
-  var input = jQuery('#' + this.wid);
-  var value = input.val();
+  var value = this.select.select2('val');
   if(value){
-    this.selected = input;
-    Faceted.Query[this.wid] = [value];
+    this.selected = [this.select];
+    if(this.multiple) {
+      Faceted.Query[this.wid] = value;
+    } else {
+      Faceted.Query[this.wid] = [value];
+    }
   }
 
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
-    js_widget.synchronize();
+    self.synchronize();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
-    js_widget.reset();
+    self.reset();
   });
 };
 
 Faceted.AutocompleteWidget.prototype = {
+  select_change: function(element, evt){
+    if(!jQuery(element).val()){
+      element = null;
+    }
+    this.do_query(element);
+  },
+
   text_change: function(element, evt){
     this.do_query(element);
     jQuery(element).removeClass("submitting");
   },
 
   do_query: function(element){
-    var input = jQuery('#' + this.wid);
-    var value = input.val();
-    value = value ? [value] : [];
+    var value = this.select.select2('val');
+    if (value && !Array.isArray(value)) {
+      value = [value];
+    }
 
     if(!element){
       this.selected = [];
       return Faceted.Form.do_query(this.wid, []);
     }
-    this.selected = [input];
+    this.selected = [this.select];
 
     var where = jQuery('input[type=radio]:checked', this.widget);
     where = where.length == 1 ? where.val() : 'all';
@@ -87,30 +111,44 @@ Faceted.AutocompleteWidget.prototype = {
       return Faceted.Form.do_query(this.wid, value);
     }
 
-    var current = Faceted.Query[this.wid];
-    current = current ? current : [];
-    if(value.length && !(value[0] in current)){
-      current.push(value[0]);
-    }
+    var current = Faceted.Query[this.wid] || [];
+    jQuery.each(value, function(idx, val){
+      if(!current.includes(val)){
+        current.push(val);
+      }
+    });
     return Faceted.Form.do_query(this.wid, current);
   },
 
   reset: function(){
     this.selected = [];
     this.widget.removeClass("faceted-widget-active");
-    jQuery('#' + this.wid).val('');
+    this.select.select2("val", null);
   },
 
   synchronize: function(){
+    var self = this;
     var value = Faceted.Query[this.wid];
     if(!value){
-      this.reset();
-      return;
+      return this.reset();
     }
 
-    var input = jQuery('#value_' + this.wid);
-    input.attr('value', value);
-    this.selected = [input];
+    if (!Array.isArray(value)) {
+      value = [value];
+    }
+
+    var data = [];
+    jQuery.each(value, function(idx, val){
+      var item = {id: val, text: val};
+      if(self.multiple) {
+        data.push(item);
+      } else {
+        data = item;
+      }
+    });
+
+    this.select.select2('data', data);
+    this.selected = [this.select];
     this.widget.addClass("faceted-widget-active");
   },
 
@@ -164,7 +202,7 @@ Faceted.AutocompleteWidget.prototype = {
           var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
           link.attr('id', 'criteria_' + widget.wid + '_' + label);
           link.attr('title', 'Remove ' + label + ' filter');
-          link.click(function(evt){
+          link.click(function(){
             widget.criteria_remove(label);
             return false;
           });
@@ -177,22 +215,18 @@ Faceted.AutocompleteWidget.prototype = {
   },
 
   criteria_remove: function(value){
-    jQuery('#' + this.wid).val('');
     if(!value){
-      this.selected = [];
-      this.do_query();
-      return;
+      this.reset();
+      return this.do_query();
     }
-    jQuery('#' + this.wid + '_place_current', this.widget).attr('checked', true);
-    var element = jQuery('input[type=text]', this.widget);
-    var current = Faceted.Query[this.wid];
-    var index = jQuery.inArray(value, current);
-    if(index == -1){
-      return;
-    }
-    current.splice(index, 1);
-    Faceted.Query[this.wid] = current;
-    this.do_query(element);
+
+    current = Faceted.Query[this.wid] || [];
+    Faceted.Query[this.wid] = current.filter(function(item) {
+      return item != value;
+    });
+
+    this.synchronize();
+    this.do_query(this.select);
   }
 };
 

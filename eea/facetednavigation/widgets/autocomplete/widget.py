@@ -114,6 +114,9 @@ class SolrSuggest(BrowserView):
             return json.dumps(result)
 
         connection = manager.getConnection()
+        if not connection:
+            return json.dumps(result)
+
         # XXX this should really go into c.solr
         request = six.moves.urllib.parse.urlencode({'q': term}, doseq=True)
         response = connection.doPost(

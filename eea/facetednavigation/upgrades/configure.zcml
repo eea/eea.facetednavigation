@@ -6,7 +6,7 @@
 
   <genericsetup:upgradeSteps
     source="12.0"
-    destination="13.9"
+    destination="14.0"
     profile="eea.facetednavigation:default">
 
     <genericsetup:upgradeDepends

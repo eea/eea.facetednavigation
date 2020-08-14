@@ -140,9 +140,42 @@ To include a specific select2 locale, French for instance, you can add a resourc
 You can add a new autocomplete source by registering a IAutocompleteSuggest browser view, you can see an example in
 `eea/facetednavigation/tests/autocomplete.py` and `eea/facetednavigation/tests/autocomplete.zcml`
 
+You also need to configure Solr to include **/suggest** requestHandler. Within your **solrconfig.xml** add::
+
+    <!-- eea.facetednavigation autocomplete -->
+    <searchComponent name="suggest" class="solr.SpellCheckComponent">
+      <lst name="spellchecker">
+        <str name="name">suggest</str>
+        <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+        <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.WFSTLookupFactory</str>
+        <str name="field">Title</str>
+        <float name="threshold">0.005</float>
+        <str name="buildOnCommit">true</str>
+      </lst>
+    </searchComponent>
+
+    <requestHandler name="/suggest" class="org.apache.solr.handler.component.SearchHandler">
+      <lst name="defaults">
+        <str name="spellcheck">true</str>
+        <str name="spellcheck.dictionary">suggest</str>
+        <str name="spellcheck.count">10</str>
+        <str name="spellcheck.onlyMorePopular">true</str>
+        <str name="wt">xml</str>
+      </lst>
+      <arr name="components">
+        <str>suggest</str>
+      </arr>
+    </requestHandler>
+
+See `collective.solr <https://collectivesolr.readthedocs.io/en/latest/usage/setup.html#autocomplete-suggestions-with-solr>`_ docs.
+
 Extra
 =====
 You can extend faceted navigation functionality by installing the following add-ons:
+
+* Enhanced text search with autocompletion support
+
+  - `collective.solr <https://github.com/collective/collective.solr>`_
 
 * Customized vocabularies
 

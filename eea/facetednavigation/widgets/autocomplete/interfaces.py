@@ -38,6 +38,12 @@ class IAutocompleteSchema(ISchema):
         required=False
     )
 
+    hidebutton = schema.Bool(
+        title=_(u"Hide search button"),
+        description=_("Do not display the search button"),
+        required=False
+    )
+
 
 class DefaultSchemata(DS):
     """ Schemata default
@@ -48,7 +54,8 @@ class DefaultSchemata(DS):
         u'index',
         u'autocomplete_view',
         u'onlyallelements',
-        u'multivalued'
+        u'multivalued',
+        u'hidebutton',
     )
 
 

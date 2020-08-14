@@ -51,19 +51,18 @@ Faceted.MultiSelectWidget = function(wid){
     return false;
   });
 
-  var js_widget = this;
   this.select.on('select2-close', function(evt){
-    js_widget.select_change(this, evt);
+    self.select_change(this, evt);
   });
 
   this.select.on('select2-removed', function(evt){
-    js_widget.select_change(this, evt);
+    self.select_change(this, evt);
   });
 
   // Default value
   var value = this.select.val();
   if(value){
-    this.selected = js_widget.widget.find('option:selected');
+    this.selected = self.widget.find('option:selected');
     if(this.multiple) {
       Faceted.Query[this.wid] = value;
     } else {
@@ -77,21 +76,21 @@ Faceted.MultiSelectWidget = function(wid){
 
   // Bind events
   jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
-    js_widget.synchronize();
+    self.synchronize();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
-    js_widget.reset();
+    self.reset();
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
     jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
-      js_widget.count(sortcountable);
+      self.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
       if(self.operator != 'and' && (data.wid == self.wid || data.wid == 'b_start')){
         return;
       }
-      js_widget.count(sortcountable);
+      self.count(sortcountable);
     });
   }
 };
