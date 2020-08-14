@@ -1,7 +1,7 @@
 Changelog
 =========
 
-14.0-dev0 - (unreleased)
+14.0 - (2020-08-14)
 ---------------------------
 * Upgrade step: Within "Plone > Site Setup > Add-ons" click on
   upgrade button available for eea.facetednavigation. If you still get a
