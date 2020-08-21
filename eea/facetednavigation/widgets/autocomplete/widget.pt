@@ -3,6 +3,8 @@
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   hidden python:view.hidden;
+  multiple python:'true' if getattr(view.data, 'multivalued', True) else 'false';
+  button not:view/data/hidebutton|nothing;
   placeholder python:view.data.get('placeholder', 'Select a value');
   default_value python:view.default and view.default.get('value') or '';
   default_label python:view.default and view.default.get('label') or '';
@@ -14,7 +16,7 @@
     data-placeholder python:view.translate(placeholder);
     id string:${wid}_widget; class css;
     data-autocomplete-view view/autocomplete_view;
-    data-multiple python:'true' if getattr(view.data, 'multivalued', True) else 'false';">
+    data-multiple multiple">
 
 <fieldset class="widget-fieldset"
   tal:define="title python:view.data.get('title', '')">
@@ -32,7 +34,7 @@
     placeholder python:view.translate(placeholder);
     value default_label;
   "/>
-  <input type="submit" class="searchButton" value="Search" tal:attributes="
+  <input type="submit" class="searchButton" value="Search" tal:condition="button" tal:attributes="
     name string:${wid}_button;
     id string:${wid}_button;"
     i18n:attributes="value" />

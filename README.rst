@@ -107,11 +107,14 @@ Getting started
 
 Faceted settings
 ================
-(*New in version 4.1*)
 
 **Faceted settings** is a menu that appears once you enable Faceted navigation
 within your context next to the **Actions** menu and it allows you to perform
 the following actions:
+
+Configure
+---------
+Configure Faceted Navigation TTW.
 
 Enable/disable left portlets
 ----------------------------
@@ -134,15 +137,81 @@ Hide facets criteria if there is only one page of results.
 Default: **disabled** (*starting with version 5.2*)
 
 Autocomplete widget
--------------------
+===================
+
+Setup
+-----
+
+You can enhance and boost search by replacing **ZCatalog** with **Apache Solr**, see `collective.solr`_. Thus:
+
+* Add **collective.solr** to your eggs section in your buildout and re-run buildout::
+
+    [buildout]
+    eggs +=
+      collective.solr
+
+* With **Plone 5** you'll need to use a more recent version::
+
+    [versions]
+    collective.solr = >= 8.0.0b1
+
+* Start solr::
+
+    $ docker run -p 8983:8983 eeacms/solr
+
+* Install **collective.solr** within **Site Setup > Add-ons**
+
+* **Setup and reindex** Solr within **Site Setup > Solr settings**
+
+* Add or replace **Text** widgets with **Text field with suggestions** within your faceted enabled items.
+
+i18n
+----
+
 To include a specific select2 locale, French for instance, you can add a resource `++resource++select2/select2_locale_fr.js` in portal_javascripts (Plone 4). It needs to be after the select2.min.js resource. (You need eea.jquery 8.7 minimum)
 
+Suggestions
+-----------
+
 You can add a new autocomplete source by registering a IAutocompleteSuggest browser view, you can see an example in
-`eea/facetednavigation/tests/autocomplete.py` and `eea/facetednavigation/tests/autocomplete.zcml`
+`eea/facetednavigation/tests/autocomplete.py <https://github.com/eea/eea.facetednavigation/blob/master/eea/facetednavigation/tests/autocomplete.py>`_ and
+`eea/facetednavigation/tests/autocomplete.zcml <https://github.com/eea/eea.facetednavigation/blob/master/eea/facetednavigation/tests/autocomplete.zcml>`_
+
+You also need to configure Solr to include **/suggest** requestHandler. Within your **solrconfig.xml** add::
+
+    <!-- eea.facetednavigation autocomplete -->
+    <searchComponent name="suggest" class="solr.SpellCheckComponent">
+      <lst name="spellchecker">
+        <str name="name">suggest</str>
+        <str name="classname">org.apache.solr.spelling.suggest.Suggester</str>
+        <str name="lookupImpl">org.apache.solr.spelling.suggest.fst.WFSTLookupFactory</str>
+        <str name="field">Title</str>
+        <float name="threshold">0.005</float>
+        <str name="buildOnCommit">true</str>
+      </lst>
+    </searchComponent>
+
+    <requestHandler name="/suggest" class="org.apache.solr.handler.component.SearchHandler">
+      <lst name="defaults">
+        <str name="spellcheck">true</str>
+        <str name="spellcheck.dictionary">suggest</str>
+        <str name="spellcheck.count">10</str>
+        <str name="spellcheck.onlyMorePopular">true</str>
+        <str name="wt">xml</str>
+      </lst>
+      <arr name="components">
+        <str>suggest</str>
+      </arr>
+    </requestHandler>
+
 
 Extra
 =====
 You can extend faceted navigation functionality by installing the following add-ons:
+
+* Enhanced text search with autocompletion support
+
+  - `collective.solr`_
 
 * Customized vocabularies
 
@@ -267,3 +336,4 @@ EEA_ - European Environment Agency (EU)
 
 .. _EEA: https://www.eea.europa.eu/
 .. _`EEA Web Systems Training`: http://www.youtube.com/user/eeacms/videos?view=1
+.. _`collective.solr`:  https://github.com/collective/collective.solr
