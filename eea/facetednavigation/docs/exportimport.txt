@@ -322,7 +322,7 @@ Import a xml file with purge set to False, new criteria will be added to existin
 
     >>> query = {
     ...   'import_button': 'Import',
-    ...   'import_file': preparefile('data/with_purge_false.xml'),
+    ...   'import_file': preparefile('data/criteria_with_purge_false.xml'),
     ...   'redirect': '',
     ... }
     >>> view(**query)
@@ -379,7 +379,7 @@ Importing an already existing criterion will not fail, it is just ignored and a 
 
     >>> query = {
     ...   'import_button': 'Import',
-    ...   'import_file': preparefile('data/with_purge_false.xml'),
+    ...   'import_file': preparefile('data/criteria_with_purge_false.xml'),
     ...   'redirect': '',
     ... }
     >>> view(**query)
@@ -436,7 +436,7 @@ Import a xml file with purge set to True (default), existing criteria are remove
 
     >>> query = {
     ...   'import_button': 'Import',
-    ...   'import_file': preparefile('data/with_purge_true.xml'),
+    ...   'import_file': preparefile('data/criteria_with_purge_true.xml'),
     ...   'redirect': '',
     ... }
     >>> view(**query)
@@ -459,6 +459,68 @@ Import a xml file with purge set to True (default), existing criteria are remove
        <property name="section">advanced</property>
        <property name="hidden">False</property>
        <property name="calYearRange">c-10:c+10</property>
+      </criterion>
+     </criteria>
+    </object>
+
+Import a xml file with criterion purge set to False, existing criterion is left and the new is not imported
+
+    >>> query = {
+    ...   'import_button': 'Import',
+    ...   'import_file': preparefile('data/criterion_with_purge_false.xml'),
+    ...   'redirect': '',
+    ... }
+    >>> view(**query)
+    'Configuration imported'
+
+    >>> query = {
+    ...   'export_button': 'Export',
+    ...   'redirect': '',
+    ... }
+    >>> print(view(**query).decode('utf-8').strip())
+    <?xml...?>
+    <object name="new_sandbox" meta_type="...">
+     <criteria>
+      <criterion name="c22">
+       <property name="widget">daterange</property>
+       <property name="title">Created</property>
+       <property name="index">Date</property>
+       <property name="default"></property>
+       <property name="position">top</property>
+       <property name="section">advanced</property>
+       <property name="hidden">False</property>
+       <property name="calYearRange">c-10:c+10</property>
+      </criterion>
+     </criteria>
+    </object>
+
+Import a xml file with criterion purge set to True, existing criterion is removed and the new is imported
+
+    >>> query = {
+    ...   'import_button': 'Import',
+    ...   'import_file': preparefile('data/criterion_with_purge_true.xml'),
+    ...   'redirect': '',
+    ... }
+    >>> view(**query)
+    'Configuration imported'
+
+    >>> query = {
+    ...   'export_button': 'Export',
+    ...   'redirect': '',
+    ... }
+    >>> print(view(**query).decode('utf-8').strip())
+    <?xml...?>
+    <object name="new_sandbox" meta_type="...">
+     <criteria>
+      <criterion name="c22">
+       <property name="widget">daterange</property>
+       <property name="title">Created title changed</property>
+       <property name="index">Date</property>
+       <property name="default"></property>
+       <property name="position">top</property>
+       <property name="section">advanced</property>
+       <property name="hidden">False</property>
+       <property name="calYearRange">c-20:c+20</property>
       </criterion>
      </criteria>
     </object>
