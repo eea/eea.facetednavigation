@@ -22,8 +22,8 @@ OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
 class Py23DocChecker(doctest.OutputChecker):
     def check_output(self, want, got, optionflags):
         if six.PY2:
-            got = re.sub("u'(.*?)'", "'\\1'", want)
-            got = re.sub(' encoding="utf-8"', '', want)
+            got = re.sub("u'(.*?)'", "'\\1'", got)
+            got = re.sub(' encoding="utf-8"', '', got)
             # want = re.sub("b'(.*?)'", "'\\1'", want)
         return doctest.OutputChecker.check_output(self, want, got, optionflags)
 
