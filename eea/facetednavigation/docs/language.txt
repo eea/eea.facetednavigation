@@ -32,11 +32,11 @@ Set up
     >>> from Products.LinguaPlone.browser import controlpanel
     >>> controllang = controlpanel.IMultiLanguageSelectionSchema(portal)
     >>> controllang.available_languages
-    [u'en']
+    ['en']
 
     >>> controllang.available_languages = [u'en', u'fr']
     >>> controllang.available_languages
-    [u'en', u'fr']
+    ['en', 'fr']
 
 Setup sandbox
 
