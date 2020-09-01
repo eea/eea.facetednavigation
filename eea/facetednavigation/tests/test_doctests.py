@@ -132,7 +132,6 @@ def test_suite():
                 doctest.DocFileSuite(
                     'docs/language.txt',
                     optionflags=OPTIONFLAGS,
-                    checker=Py23DocChecker(),
                     package='eea.facetednavigation'),
                 layer=FUNCTIONAL_TESTING),
         ])
