@@ -6,6 +6,9 @@ Changelog
 * Bug fix: Fix "test_doctests.Py23DocChecker" that was hidding failing doc
   tests by wrongly testing on "want" instead on "got".
   [gbastien refs #203]
+* Feature: In GenericSetup import profile, take into account the "purge"
+  attribute at the <criterion> level like it is done at <criteria> level.
+  [gbastien]
 
 14.0 - (2020-08-14)
 ---------------------------
