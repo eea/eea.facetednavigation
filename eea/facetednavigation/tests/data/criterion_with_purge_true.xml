@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <object name="sandbox" meta_type="ATFolder">
- <criteria purge="True">
-  <criterion name="c22">
+ <criteria purge="False">
+  <criterion purge="True" name="c22">
    <property name="widget">daterange</property>
    <property name="title">Created title changed</property>
    <property name="position">top</property>
