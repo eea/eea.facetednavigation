@@ -1,6 +1,9 @@
 Changelog
 =========
 
+14.2-dev0 - (unreleased)
+---------------------------
+
 14.1 - (2020-09-02)
 ---------------------------
 * Bug fix: Fix "test_doctests.Py23DocChecker" that was hidding failing doc
