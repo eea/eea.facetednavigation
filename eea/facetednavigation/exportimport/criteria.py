@@ -58,6 +58,11 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                 continue
 
             name = child.getAttribute('name')
+            # check if purge at criterion level if not already at criteria level
+            if not should_purge and child.getAttribute('purge'):
+                should_purge_child = self._convertToBoolean(child.getAttribute('purge'))
+                if should_purge_child and name in list(self.context.keys()):
+                    self.context.delete(name)
             try:
                 # we need to find the 'position' and 'section' because
                 # it is used to sort criteria when the criterion is added
@@ -68,7 +73,7 @@ class CriteriaXMLAdapter(XMLAdapterBase):
                         if s.getAttribute('name') == 'section']
                 section = sect[0].childNodes[0].nodeValue if sect else 'default'
                 widget = [w for w in child.getElementsByTagName('property')
-                        if w.getAttribute('name') == 'widget']
+                          if w.getAttribute('name') == 'widget']
                 widget = widget[0].childNodes[0].nodeValue if widget else 'text'
                 cid = self.context.add(widget, position, section, _cid_=name)
             except KeyError:
