@@ -206,6 +206,8 @@ class FacetedQueryHandler(FolderView):
         """
         kwargs['batch'] = False
         results = self.query(**kwargs)
+        if isinstance(results, GeneratorType):
+            results = [i for i in results]
         results = IContentListing(results)
         return results
 
