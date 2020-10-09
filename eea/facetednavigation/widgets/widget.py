@@ -33,6 +33,14 @@ try:
 except ImportError:
     from Products.ZCatalog.Lazy import LazyMap
 
+try:
+    from collective.solr.exceptions import SolrConnectionException
+    from collective.solr.exceptions import SolrInactiveException
+    HAVE_SOLR = True
+except ImportError:
+    HAVE_SOLR = False
+
+
 logger = logging.getLogger('eea.facetednavigation')
 
 
@@ -254,18 +262,24 @@ class Widget(GroupForm, Form):
             mapping = dict(mapping)
             values = []
 
-            # get values from SOLR if collective.solr is present
-            searchutility = queryUtility(ISolrSearch)
-            if searchutility is not None:
-                index = self.data.get('index', None)
-                kw = {'facet': 'on',
-                  'facet.field': index,    # facet on index
-                  'facet.limit': -1,       # show unlimited results
-                  'rows': 0}                # no results needed
-                result = searchutility.search('*:*', **kw)
+            if HAVE_SOLR:
                 try:
-                    values = list(result.facet_counts['facet_fields'][index].keys())
-                except (AttributeError, KeyError):
+                    # get values from SOLR if collective.solr is present
+                    searchutility = queryUtility(ISolrSearch)
+                    if searchutility is not None:
+                        index = self.data.get('index', None)
+                        kw = {
+                            'facet': 'on',
+                            'facet.field': index,    # facet on index
+                            'facet.limit': -1,       # show unlimited results
+                            'rows': 0}                # no results needed
+                        result = searchutility.search('*:*', **kw)
+                        try:
+                            values = list(result.facet_counts['facet_fields'][index].keys())
+                        except (AttributeError, KeyError):
+                            pass
+                except (SolrConnectionException, SolrInactiveException):
+                    # solr is down or disabled
                     pass
 
             if not values:
