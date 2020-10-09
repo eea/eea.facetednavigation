@@ -1,14 +1,13 @@
 Changelog
 =========
 
-14.2 - (unreleased)
---------------------------
+14.2-dev0 - (unreleased)
+---------------------------
 * Fix an issue with ContentListing when filtered search results is
   a generator (e.g. when using alphabetic widget)
   [pbauer]
 * Allow solr to be not installed or not enabled
   [pbauer]
-
 
 14.1 - (2020-09-02)
 ---------------------------
