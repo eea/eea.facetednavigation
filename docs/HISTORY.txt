@@ -1,7 +1,7 @@
 Changelog
 =========
 
-14.2-dev0 - (unreleased)
+14.2 - (2020-10-09)
 ---------------------------
 * Fix an issue with ContentListing when filtered search results is
   a generator (e.g. when using alphabetic widget)
