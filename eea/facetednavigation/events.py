@@ -3,6 +3,7 @@
 from zope.interface import implementer
 from eea.facetednavigation.interfaces import (
     IFacetedEvent,
+    IFacetedSettingsWillBeChangedEvent,
     IFacetedGlobalSettingsChangedEvent,
     IFacetedWillBeEnabledEvent,
     IFacetedEnabledEvent,
@@ -21,6 +22,11 @@ except ImportError:
 @implementer(IFacetedEvent)
 class FacetedEvent(ObjectEvent):
     """ Abstract faceted event. All faceted events should inherit from it """
+
+
+@implementer(IFacetedSettingsWillBeChangedEvent)
+class FacetedSettingsWillBeChangedEvent(FacetedEvent):
+    """ Sent if faceted navigation settings are going to be changed """
 
 
 @implementer(IFacetedGlobalSettingsChangedEvent)

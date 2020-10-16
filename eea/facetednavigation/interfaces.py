@@ -44,6 +44,8 @@ from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
 from eea.facetednavigation import EEAMessageFactory as _
+
+
 #
 # Events
 #
@@ -51,21 +53,31 @@ class IFacetedEvent(IObjectEvent):
     """ All faceted events should inherit from this class
     """
 
+
+class IFacetedSettingsWillBeChangedEvent(IFacetedEvent):
+    """ Faceted settings will be updated
+    """
+
+
 class IFacetedGlobalSettingsChangedEvent(IFacetedEvent):
     """ Faceted global settings updated
     """
+
 
 class IFacetedWillBeEnabledEvent(IFacetedEvent):
     """ Faceted navigation is going to be enabled
     """
 
+
 class IFacetedEnabledEvent(IFacetedEvent):
     """ Faceted navigation enabled
     """
 
+
 class IFacetedWillBeDisabledEvent(IFacetedEvent):
     """ Faceted navigation is going to be disabled
     """
+
 
 class IFacetedDisabledEvent(IFacetedEvent):
     """ Faceted navigation disabled
@@ -77,8 +89,8 @@ class IEEASettings(Interface):
     """
 
     disable_diazo_rules_ajax = schema.Bool(
-                title=_(u"Disable diazo rules on ajax requests"),
-                required=False)
+        title=_(u"Disable diazo rules on ajax requests"),
+        required=False)
 
 
 class IQueryWillBeExecutedEvent(IFacetedEvent):
