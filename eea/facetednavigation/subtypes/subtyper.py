@@ -23,6 +23,9 @@ from eea.facetednavigation.events import (
 )
 from eea.facetednavigation import EEAMessageFactory as _
 
+import pkg_resources
+
+plone_version = pkg_resources.get_distribution('Products.CMFPlone').version
 
 @implementer(IFacetedSubtyper)
 class FacetedPublicSubtyper(BrowserView):
@@ -102,11 +105,15 @@ class FacetedSubtyper(FacetedPublicSubtyper):
         """
         if not self.is_faceted:
             return False
-        qtool = getToolByName(self.context, 'portal_quickinstaller')
-        installed = [package['id'] for package in qtool.listInstalledProducts()]
-        if 'LinguaPlone' not in installed:
+        # No Archetypes, no LinguaPlone in Plone6
+        if plone_version >= '6.0':
             return False
-        return True
+        else:
+            qtool = getToolByName(self.context, 'portal_quickinstaller')
+            installed = [package['id'] for package in qtool.listInstalledProducts()]
+            if 'LinguaPlone' not in installed:
+                return False
+            return True
 
     def enable(self):
         """ See IFacetedSubtyper
