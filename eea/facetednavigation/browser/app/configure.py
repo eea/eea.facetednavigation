@@ -14,6 +14,7 @@ from eea.facetednavigation.plonex import IDisableCSRFProtection
 from eea.facetednavigation.interfaces import IWidgetsInfo
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.browser import interfaces
+from eea.facetednavigation.events import FacetedSettingsWillBeChangedEvent
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 from eea.facetednavigation import EEAMessageFactory as _
 
@@ -23,9 +24,12 @@ logger = logging.getLogger('eea.facetednavigation')
 #
 # Controllers
 #
+
+
 class FacetedBasicHandler(BrowserView):
     """ Define common methods for criteria handlers
     """
+
     def __init__(self, context, request=None):
         self.context = context
         self.request = request or getattr(context, 'request', None)
@@ -41,7 +45,8 @@ class FacetedBasicHandler(BrowserView):
             return msg
 
         if msg:
-            IStatusMessage(self.request).addStatusMessage(str(msg), type='info')
+            IStatusMessage(self.request).addStatusMessage(
+                str(msg), type='info')
         self.request.response.redirect(to)
         return msg
 
@@ -50,6 +55,7 @@ class FacetedBasicHandler(BrowserView):
 class FacetedCriteriaHandler(FacetedBasicHandler):
     """ Edit criteria
     """
+
     def add(self, **kwargs):
         """ See IFacetedCriteriaHandler
         """
@@ -95,6 +101,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
 class FacetedCriterionHandler(FacetedBasicHandler):
     """ Edit criterion
     """
+
     def extractData(self, widget, **kwargs):
         """ Extract form
         """
@@ -164,6 +171,7 @@ class FacetedCriterionHandler(FacetedBasicHandler):
 class FacetedPositionHandler(FacetedBasicHandler):
     """ Edit criteria position
     """
+
     def update(self, **kwargs):
         """ Update position by given slots
         """
@@ -188,6 +196,7 @@ class FacetedPositionHandler(FacetedBasicHandler):
 class FacetedFormHandler(FacetedBasicHandler):
     """ Edit criteria using a static form
     """
+
     def __init__(self, context, request):
         super(FacetedFormHandler, self).__init__(context, request)
         # XXX Quick fix until we figure out how to enable CSRF Protection
@@ -206,6 +215,8 @@ class FacetedFormHandler(FacetedBasicHandler):
         if sanitized_form:
             self.request.form = sanitized_form
             kwargs.update(sanitized_form)
+
+        notify(FacetedSettingsWillBeChangedEvent(self.context))
         #
         # Criteria
         #
@@ -259,7 +270,7 @@ class FacetedFormHandler(FacetedBasicHandler):
 
         # Move down button clicked
         move_down = [k for k in kwargs
-                   if k.startswith('moveDown_button')]
+                     if k.startswith('moveDown_button')]
         if move_down:
             cid = move_down[0].split('+++')[1]
             return handler.move_down(cid)
@@ -273,6 +284,7 @@ class FacetedFormHandler(FacetedBasicHandler):
 class FacetedConfigureView(object):
     """ Faceted configure
     """
+
     def __init__(self, context, request):
         self.context = context
         self.request = request
@@ -282,7 +294,7 @@ class FacetedConfigureView(object):
         """ Possible positions
         """
         voc = getUtility(IVocabularyFactory,
-                          'eea.faceted.vocabularies.WidgetPositions')
+                         'eea.faceted.vocabularies.WidgetPositions')
         return voc(self.context)
 
     @property
@@ -290,7 +302,7 @@ class FacetedConfigureView(object):
         """ Possible sections
         """
         voc = getUtility(IVocabularyFactory,
-                          'eea.faceted.vocabularies.WidgetSections')
+                         'eea.faceted.vocabularies.WidgetSections')
         return voc(self.context)
 
     def get_widget(self, wid):

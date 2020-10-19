@@ -1,6 +1,11 @@
 Changelog
 =========
 
+14.3 (2020-10-16)
+---------------------------
+* Change: Trigger FacetedSettingsWillBeChangedEvent before faceted settings change
+  [avoinea]
+
 14.2 - (2020-10-09)
 ---------------------------
 * Fix an issue with ContentListing when filtered search results is
