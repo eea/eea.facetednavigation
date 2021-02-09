@@ -29,8 +29,9 @@ class Widget(CountableWidget):
         """
         css_type = self.widget_type
         css_title = normalizer.normalize(self.data.title)
+        custom_css = ' {}'.format(self.data.custom_css) if len(self.data.custom_css) else ''
         return ('faceted-checkboxes-widget '
-                'faceted-{0}-widget section-{1}').format(css_type, css_title)
+                'faceted-{0}-widget section-{1}{2}').format(css_type, css_title, custom_css)
 
     def selected(self):
         """ Return True if True by default
