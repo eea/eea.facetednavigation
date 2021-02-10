@@ -7,6 +7,7 @@
    <property name="position">right</property>
    <property name="section">default</property>
    <property name="hidden">True</property>
+   <property name="custom_css"></property>
    <property name="start">0</property>
    <property name="end">20</property>
    <property name="step">5</property>
@@ -18,6 +19,7 @@
    <property name="position">right</property>
    <property name="section">default</property>
    <property name="hidden">False</property>
+   <property name="custom_css"></property>
    <property name="index">portal_type</property>
    <property
       name="vocabulary">eea.faceted.vocabularies.FacetedPortalTypes</property>
@@ -36,6 +38,7 @@
    <property name="position">right</property>
    <property name="section">default</property>
    <property name="hidden">True</property>
+   <property name="custom_css"></property>
    <property name="vocabulary"></property>
    <property name="default">effective(reverse)</property>
   </criterion>
@@ -45,6 +48,7 @@
    <property name="position">center</property>
    <property name="section">default</property>
    <property name="hidden">False</property>
+   <property name="custom_css"></property>
   </criterion>
  </criteria>
 </object>

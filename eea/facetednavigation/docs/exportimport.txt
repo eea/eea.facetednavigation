@@ -294,6 +294,7 @@ Let's see our new configuration
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">False</property>
+       <property name="custom_css"></property>
        <property name="count">False</property>
        <property name="cloud">sphere</property>
       </criterion>
@@ -309,6 +310,7 @@ Let's see our new configuration
        <property name="position">left</property>
        <property name="section">default</property>
        <property name="hidden">True</property>
+       <property name="custom_css"></property>
        <property name="count">True</property>
       </criterion>
      </criteria>
