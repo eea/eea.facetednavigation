@@ -121,7 +121,7 @@ class Widget(GroupForm, Form):
 
     @property
     def custom_css(self):
-        """ Widget custom_css?
+        """ Widget custom_css
         """
         return self.data.custom_css
 
