@@ -1,7 +1,7 @@
 Changelog
 =========
 
-14.4-dev0 - (unreleased)
+14.4 - (2021-02-11)
 ---------------------------
 * Feature: Add custom CSS class to a widget css classes
   [balavec]
