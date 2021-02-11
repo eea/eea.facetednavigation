@@ -110,13 +110,19 @@ class Widget(GroupForm, Form):
         """
         css_type = self.widget_type
         css_title = normalizer.normalize(self.data.title)
-        return 'faceted-{0}-widget section-{1}'.format(css_type, css_title)
+        return 'faceted-{0}-widget section-{1}{2}'.format(css_type, css_title, self.custom_css)
 
     @property
     def hidden(self):
         """ Widget hidden?
         """
         return self.data.hidden
+
+    @property
+    def custom_css(self):
+        if self.data.custom_css:
+            return ' {}'.format(self.data.custom_css)
+        return ''
 
     @property
     def default(self):
@@ -298,6 +304,7 @@ class Widget(GroupForm, Form):
         """
         """
         return self.template
+
 
 class CountableWidget(Widget):
     """ Defines useful methods for countable widgets
