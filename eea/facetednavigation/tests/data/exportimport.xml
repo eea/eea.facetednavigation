@@ -5,6 +5,7 @@
    <property name="widget">checkbox</property>
    <property name="position">left</property>
    <property name="hidden">True</property>
+   <property name="custom_css"></property>
    <property name="title">Type d'element</property>
    <property name="index">portal_type</property>
    <property name="vocabulary"></property>
@@ -18,6 +19,7 @@
    <property name="widget">tagscloud</property>
    <property name="position">top</property>
    <property name="hidden">False</property>
+   <property name="custom_css"></property>
    <property name="title">Meta-type d'element</property>
    <property name="index">meta_type</property>
    <property name="vocabulary"></property>

@@ -37,7 +37,7 @@ class Widget(CountableWidget):
         css_type = self.widget_type
         css_title = normalizer.normalize(self.data.title)
         return ('faceted-checkboxes-widget '
-                'faceted-{0}-widget section-{1}').format(css_type, css_title)
+                'faceted-{0}-widget section-{1}{2}').format(css_type, css_title, self.custom_css)
 
     @property
     def default(self):

@@ -17,6 +17,7 @@ class Criterion(object):
     position = u'right'
     catalog = None
     _hidden = False
+    custom_css = u''
     default = None
     section = u'default'
 
