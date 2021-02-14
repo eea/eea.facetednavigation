@@ -2,7 +2,7 @@
 """
 from Acquisition import Implicit
 from AccessControl import ClassSecurityInfo
-from App.class_init import InitializeClass
+from AccessControl.class_init import InitializeClass
 
 from zope.interface import implementer
 from zope.traversing.interfaces import ITraversable
