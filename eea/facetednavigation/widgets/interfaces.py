@@ -131,10 +131,19 @@ class ISchema(Interface):
         required=False
     )
 
+    custom_css = schema.TextLine(
+        title=_(u"Custom CSS"),
+        description=_(u"Custom CSS class for widget to display in view page"),
+        required=False
+    )
+    custom_css._type = (six.text_type, str)
+
+
 class FacetedSchemata(group.Group):
     """ Faceted Schemata
     """
     prefix = 'faceted'
+
 
 class DefaultSchemata(FacetedSchemata):
     """ Schemata default
@@ -154,7 +163,8 @@ class LayoutSchemata(FacetedSchemata):
     fields = field.Fields(ISchema).select(
         u'position',
         u'section',
-        u'hidden'
+        u'hidden',
+        u'custom_css'
     )
 
 

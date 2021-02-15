@@ -1,6 +1,11 @@
 Changelog
 =========
 
+14.4 - (2021-02-11)
+---------------------------
+* Feature: Add custom CSS class to a widget css classes
+  [balavec]
+
 14.3 (2020-10-16)
 ---------------------------
 * Change: Trigger FacetedSettingsWillBeChangedEvent before faceted settings change
