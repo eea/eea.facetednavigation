@@ -3,6 +3,8 @@ Changelog
 
 14.5-dev0 - (unreleased)
 ---------------------------
+* Bug fix: Fix radio widget label within criteria body
+  [avoinea]
 
 14.4 - (2021-02-11)
 ---------------------------
