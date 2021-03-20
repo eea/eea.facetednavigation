@@ -125,6 +125,9 @@
   font-size: 1em;
 }
 
+#faceted-form ul.select2-choices {
+  margin-left: auto;
+}
 #faceted-form .ui-helper-reset {
   font-size: 1em;
 }

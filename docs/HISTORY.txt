@@ -3,6 +3,10 @@ Changelog
 
 14.5 - (2021-03-20)
 ---------------------------
+* Bug fix: Fix eea for Plone 6 (zope5)
+  [pbauer]
+* Change: Add select2 on Faceted Widgets configuration popup
+  [avoinea]
 * Bug fix: Fix radio widget label within criteria body
   [avoinea]
 
