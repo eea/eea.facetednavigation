@@ -528,8 +528,6 @@ FacetedEdit.FormEditWidget = {
       jQuery('ul', widget).addClass('formTabs').show();
       jQuery('li', widget).addClass('formTab');
       jQuery('ul', widget).tabs('div.panes > div');
-
-      context.form.find('select').select2();
     });
   },
 
@@ -557,7 +555,7 @@ FacetedEdit.FormAddWidgets = {
     this.query = '';
     this.form = jQuery('#faceted-edit-addwidget');
     var context = this;
-    this.form.dialog({
+    jQuery('#faceted-edit-addwidget').dialog({
       bgiframe: true,
       modal: true,
       autoOpen: false,
@@ -591,8 +589,7 @@ FacetedEdit.FormAddWidgets = {
       return context.wtype_change(this, evt);
     });
 
-    this.form.find('input[type=submit]').hide();
-    this.details.find('select').select2();
+    jQuery('#faceted-edit-addwidget input[type=submit]').hide();
     jQuery('#faceted-field-wposition').hide();
     jQuery('#faceted-field-wsection').hide();
     jQuery('#faceted-widget-type .field', this.form).css('float', 'left');
@@ -635,7 +632,6 @@ FacetedEdit.FormAddWidgets = {
       jQuery('ul', widget).attr('class', 'formTabs').show();
       jQuery('li', widget).attr('class', 'formTab');
       jQuery('ul', widget).tabs('div.panes > div');
-      context.details.find('select').select2();
     });
   },
 
@@ -654,6 +650,7 @@ FacetedEdit.FormAddWidgets = {
   update_query: function(){
     this.query = 'redirect=&addPropertiesWidget_button=Add&';
     this.query += this.form.serialize();
+    console.log(this.query);
   }
 };
 
@@ -725,17 +722,12 @@ FacetedEdit.FormValidator = {
   },
 
   validate_numbers: function(form){
-    var inputs = jQuery('#' + jQuery(form).attr('id') + ' input[type=text]')
-      .not('.select2-input')
-      .not('.select2-focusser');
+    var inputs = jQuery('#' + jQuery(form).attr('id') + ' input[type=text]');
     var valid = true;
     var context = this;
     jQuery.each(inputs, function(){
       var input = jQuery(this);
-      if(!input.attr('name')) {
-        return;
-      }
-      if(input.attr('name').indexOf(':int') === -1){
+      if(jQuery(this).attr('name').indexOf(':int')==-1){
         return;
       }
       var value = input.val();
@@ -753,15 +745,10 @@ FacetedEdit.FormValidator = {
 
   validate_integers: function(form){
     var valid = true;
-    var elements = jQuery('.ArchetypesIntegerWidget :input[type=text]', form)
-      .not('.select2-input')
-      .not('.select2-focusser');
+    var elements = jQuery('.ArchetypesIntegerWidget :input[type=text]', form);
     var context = this;
     elements.each(function(){
       var input = jQuery(this);
-      if(!input.attr('name')){
-        return;
-      }
       var value = input.val();
       value = parseInt(value, 10);
       if(value || value === 0){
@@ -777,15 +764,11 @@ FacetedEdit.FormValidator = {
 
   validate_required: function(form){
     var valid = true;
-    var elements = jQuery('div.field:has(span.required) :input', jQuery(form))
-      .not('.select2-input')
-      .not('.select2-focusser');
+    var elements = jQuery('div.field:has(span.required) :input', jQuery(form));
+
     var context = this;
     jQuery.each(elements, function(){
       var element = jQuery(this);
-      if(!element.attr('name')){
-        return;
-      }
       var value = element.val();
       if(!value){
         element.addClass('ui-state-error');
