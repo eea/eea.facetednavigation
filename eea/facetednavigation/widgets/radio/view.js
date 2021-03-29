@@ -154,7 +154,7 @@ Faceted.RadioWidget.prototype = {
     html.attr('id', 'criteria_' + this.wid + '_entries');
     var element = jQuery(this.selected);
     var id = element.attr('id');
-    var label = jQuery('label[for=' + id + ']');
+    var label = jQuery('label[for=' + id + ']', widget.widget);
     var title = label.attr('title');
     label = label.text();
     var link = jQuery('<a href="#" class="faceted-remove">remove</a>');

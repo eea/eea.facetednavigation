@@ -1,6 +1,13 @@
 Changelog
 =========
 
+14.5 - (2021-03-20)
+---------------------------
+* Bug fix: Fix deprecated import (Zope5)
+  [pbauer]
+* Bug fix: Fix radio widget label within criteria body
+  [avoinea]
+
 14.4 - (2021-02-11)
 ---------------------------
 * Feature: Add custom CSS class to a widget css classes
