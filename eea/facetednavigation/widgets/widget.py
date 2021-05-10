@@ -12,7 +12,9 @@ from z3c.form.group import GroupForm
 from z3c.form.form import Form
 from z3c.form.interfaces import IGroup
 
+from collective.taxonomy.interfaces import ITaxonomy
 from plone.i18n.normalizer import urlnormalizer as normalizer
+from Products.Archetypes.utils import DisplayList
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.utils import safe_unicode
@@ -27,6 +29,7 @@ from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 import six
 from six.moves import range
+
 
 try:
     from ZTUtils.Lazy import LazyMap
@@ -235,26 +238,50 @@ class Widget(GroupForm, Form):
         """Look up selected vocabulary from portal_vocabulary or from ZTK
            zope-vocabulary factory.
         """
-        vtool = getToolByName(self.context, 'portal_vocabularies', None)
+        dl = DisplayList()
         voc_id = self.data.get('vocabulary', None)
-        if not voc_id:
-            return []
-        voc = getattr(vtool, voc_id, None)
-        if not voc:
-            voc = queryUtility(IVocabularyFactory, voc_id, None)
-            if voc:
-                values = []
-                for term in voc(self.context):
-                    value = term.value
-                    if isinstance(value, six.binary_type):
-                        value = value.decode('utf-8')
-                    values.append((value, (term.title or term.token or value)))
-                return values
-            return []
+        taxonomy = queryUtility(ITaxonomy, name=voc_id)
 
-        terms = voc.getDisplayList(self.context)
+        if not taxonomy:
+            taxonomy = queryUtility(ITaxonomy, name="collective.taxonomy.themes")
+
+        try:
+            vocabulary = taxonomy(self.context)
+        except:
+            vtool = getToolByName(self.context, 'portal_vocabularies', None)
+            if not voc_id:
+                return []
+
+            voc = getattr(vtool, voc_id, None)
+            if not voc:
+                voc = queryUtility(IVocabularyFactory, voc_id, None)
+
+                if voc:
+                    values = []
+                    for term in voc(self.context):
+                        value = term.value
+
+                        if isinstance(value, six.binary_type):
+                            value = value.decode('utf-8')
+                        values.append((value, (term.title or term.token or value)))
+                    return values
+                return []
+
+            terms = voc.getDisplayList(self.context)
+            if hasattr(terms, 'items'):
+                return list(terms.items())
+            return terms
+
+        for key, val in vocabulary.iterEntries():
+            dl.add(
+                val.encode("ascii", "ignore").decode("ascii"),
+                key.encode("ascii", "ignore").decode("ascii"),
+            )
+
+        terms = dl.sortedByKey()
         if hasattr(terms, 'items'):
             return list(terms.items())
+
         return terms
 
     def vocabulary(self, **kwargs):

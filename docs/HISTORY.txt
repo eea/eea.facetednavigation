@@ -3,6 +3,8 @@ Changelog
 
 14.6-dev0 - (unreleased)
 ---------------------------
+* Change: Try to get vocabulary info from taxonomies if available
+  [iulianpetchesi refs #131802]
 
 14.5 - (2021-03-20)
 ---------------------------
