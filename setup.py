@@ -51,6 +51,7 @@ setup(name=NAME,
           'eea.faceted.vocabularies > 6.0',
           'collective.js.jqueryui',
           'eea.jquery > 10.2',
+          'collective.taxonomy',
       ],
       extras_require={
           'test': [
