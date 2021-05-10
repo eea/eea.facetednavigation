@@ -242,9 +242,6 @@ class Widget(GroupForm, Form):
         voc_id = self.data.get('vocabulary', None)
         taxonomy = queryUtility(ITaxonomy, name=voc_id)
 
-        if not taxonomy:
-            taxonomy = queryUtility(ITaxonomy, name="collective.taxonomy.themes")
-
         try:
             vocabulary = taxonomy(self.context)
         except:
