@@ -238,16 +238,16 @@ class Widget(GroupForm, Form):
            zope-vocabulary factory.
         """
         voc_id = self.data.get('vocabulary', None)
-        taxonomy = queryUtility(ITaxonomy, name=voc_id)
+        if not voc_id:
+            return []
 
+        taxonomy = queryUtility(ITaxonomy, name=voc_id)
         try:
             vocabulary = taxonomy(self.context)
         except:
             vtool = getToolByName(self.context, 'portal_vocabularies', None)
-            if not voc_id:
-                return []
-
             voc = getattr(vtool, voc_id, None)
+
             if not voc:
                 voc = queryUtility(IVocabularyFactory, voc_id, None)
 
