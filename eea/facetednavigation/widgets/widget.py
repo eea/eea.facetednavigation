@@ -14,7 +14,6 @@ from z3c.form.interfaces import IGroup
 
 from collective.taxonomy.interfaces import ITaxonomy
 from plone.i18n.normalizer import urlnormalizer as normalizer
-from Products.Archetypes.utils import DisplayList
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safeToInt
 from Products.CMFPlone.utils import safe_unicode
@@ -238,7 +237,6 @@ class Widget(GroupForm, Form):
         """Look up selected vocabulary from portal_vocabulary or from ZTK
            zope-vocabulary factory.
         """
-        dl = DisplayList()
         voc_id = self.data.get('vocabulary', None)
         taxonomy = queryUtility(ITaxonomy, name=voc_id)
 
@@ -269,15 +267,12 @@ class Widget(GroupForm, Form):
                 return list(terms.items())
             return terms
 
-        for key, val in vocabulary.iterEntries():
-            dl.add(
-                val.encode("ascii", "ignore").decode("ascii"),
+        terms = []
+        for val, key in vocabulary.iterEntries():
+            terms.append((
                 key.encode("ascii", "ignore").decode("ascii"),
-            )
-
-        terms = dl.sortedByKey()
-        if hasattr(terms, 'items'):
-            return list(terms.items())
+                val.encode("ascii", "ignore").decode("ascii"),
+            ))
 
         return terms
 
