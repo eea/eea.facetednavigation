@@ -3,6 +3,7 @@
 from zope import schema
 from z3c.form import field
 from eea.facetednavigation.interfaces import IWidget
+from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
@@ -41,5 +42,6 @@ class DefaultSchemata(DS):
 __all__ = [
     IAlphabeticSchema.__name__,
     DefaultSchemata.__name__,
+    CountableSchemata.__name__,
     LayoutSchemata.__name__,
 ]
