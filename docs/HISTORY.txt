@@ -1,8 +1,10 @@
 Changelog
 =========
 
-14.6-dev0 - (unreleased)
+14.6 - (2021-07-19)
 ---------------------------
+* Change: Make Alphabetic Widget countable again
+  [avoinea]
 
 14.5 - (2021-03-20)
 ---------------------------
