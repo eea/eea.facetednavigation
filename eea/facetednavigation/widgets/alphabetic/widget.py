@@ -6,6 +6,7 @@ from zope.interface import implementer
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation.widgets.alphabetic.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.alphabetic.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.alphabetic.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets.alphabetic.alphabets import (
@@ -25,7 +26,7 @@ class Widget(CountableWidget):
     widget_type = 'alphabetic'
     widget_label = _('Alphabetic')
 
-    groups = (DefaultSchemata, LayoutSchemata)
+    groups = (DefaultSchemata, LayoutSchemata, CountableSchemata)
     index = ViewPageTemplateFile('widget.pt')
 
     # Widget custom API
