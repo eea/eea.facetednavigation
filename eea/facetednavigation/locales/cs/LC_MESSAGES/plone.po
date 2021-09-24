@@ -29,5 +29,9 @@ msgstr "Objekt poskytuje"
 msgid "Portal type"
 msgstr "Portálového typu"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Seřadit"

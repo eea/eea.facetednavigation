@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea.facetednavigation\n"
-"POT-Creation-Date: 2020-01-19 20:17+0000\n"
+"POT-Creation-Date: 2021-09-24 11:07+0000\n"
 "PO-Revision-Date: 2012-03-06 21:50+0100\n"
 "Last-Translator: Giacomo Spettoli <giacomo.spettoli@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Allow to input only numerical digits"
 msgstr ""
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:26
+#: ../../facetednavigation/widgets/alphabetic/widget.py:27
 msgid "Alphabetic"
 msgstr "Alfabetico"
 
@@ -127,7 +127,7 @@ msgid "Catalog"
 msgstr "Catalogo"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:28
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:17
 #: ../../facetednavigation/widgets/boolean/interfaces.py:16
 msgid "Catalog index"
@@ -138,7 +138,7 @@ msgid "Catalog index to be used"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:28
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:29
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:18
 #: ../../facetednavigation/widgets/boolean/interfaces.py:17
 msgid "Catalog index to use for search"
@@ -217,6 +217,14 @@ msgstr ""
 msgid "Current configuration"
 msgstr "Configurazione attuale"
 
+#: ../../facetednavigation/widgets/interfaces.py:135
+msgid "Custom CSS"
+msgstr ""
+
+#: ../../facetednavigation/widgets/interfaces.py:136
+msgid "Custom CSS class for widget to display in view page"
+msgstr ""
+
 #. Default: ""
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:60
 msgid "Cut long phrases to provided number of characters"
@@ -244,7 +252,7 @@ msgid "Default items (one per line)"
 msgstr "Elementi predefiniti (uno per linea)"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:21
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:22
 msgid "Default letter to be selected"
 msgstr "Lettera predefinita da selezionare"
 
@@ -270,7 +278,7 @@ msgid "Default tal expression for query value"
 msgstr "Predefinito espressione Tal per valore della query"
 
 #. Default: ""
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:20
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:21
 #: ../../facetednavigation/widgets/boolean/interfaces.py:23
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:18
 msgid "Default value"
@@ -284,7 +292,7 @@ msgstr "Elimina"
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Profondità di ricerca del percorso. 0=questo livello, -1=ricorsivamente in tutte le sottocartelle, qualsiasi altro intero positivo conta i livelli di sotto-cartelle da ricercare"
 
-#: ../../facetednavigation/interfaces.py:80
+#: ../../facetednavigation/interfaces.py:92
 msgid "Disable diazo rules on ajax requests"
 msgstr ""
 
@@ -326,6 +334,10 @@ msgstr "Mostra il widget nella sezione"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Mostra il widget nella sezione"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:43
+msgid "Do not display the search button"
+msgstr ""
 
 #: ../../facetednavigation/profiles.zcml:17
 msgid "EEA Faceted Navigation"
@@ -410,7 +422,7 @@ msgstr ""
 msgid "Faceted listing view"
 msgstr ""
 
-#: ../../facetednavigation/dexterity.zcml:11
+#: ../../facetednavigation/dexterity.zcml:12
 msgid "Faceted navigable"
 msgstr ""
 
@@ -418,15 +430,15 @@ msgstr ""
 msgid "Faceted navigation"
 msgstr ""
 
-#: ../../facetednavigation/dexterity.zcml:11
+#: ../../facetednavigation/dexterity.zcml:12
 msgid "Faceted navigation can be activated on the instances of this content type."
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:138
+#: ../../facetednavigation/subtypes/subtyper.py:145
 msgid "Faceted navigation disabled"
 msgstr "Navigazione a faccette disabilitata"
 
-#: ../../facetednavigation/subtypes/subtyper.py:127
+#: ../../facetednavigation/subtypes/subtyper.py:134
 msgid "Faceted navigation enabled"
 msgstr "Navigazione a faccette abilitata"
 
@@ -434,11 +446,11 @@ msgstr "Navigazione a faccette abilitata"
 msgid "Faceted navigation settings"
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:171
+#: ../../facetednavigation/subtypes/subtyper.py:178
 msgid "Faceted search disabled"
 msgstr "Ricerca sfaccettato disattivato"
 
-#: ../../facetednavigation/subtypes/subtyper.py:163
+#: ../../facetednavigation/subtypes/subtyper.py:170
 msgid "Faceted search enabled"
 msgstr "Ricerca sfaccettato abilitato"
 
@@ -450,11 +462,11 @@ msgstr ""
 msgid "Factory"
 msgstr "Fabbrica"
 
-#: ../../facetednavigation/browser/app/configure.py:64
+#: ../../facetednavigation/browser/app/configure.py:70
 msgid "Filter added"
 msgstr "Filtro aggiunto"
 
-#: ../../facetednavigation/browser/app/configure.py:159
+#: ../../facetednavigation/browser/app/configure.py:166
 msgid "Filter deleted"
 msgstr "Filtro rimosso"
 
@@ -467,7 +479,7 @@ msgstr "Filtra dal vocabolario"
 msgid "Filters"
 msgstr "Filtri"
 
-#: ../../facetednavigation/browser/app/configure.py:91
+#: ../../facetednavigation/browser/app/configure.py:97
 msgid "Filters deleted"
 msgstr "Filtri eliminati"
 
@@ -506,6 +518,10 @@ msgstr "Nascondi i filtri"
 #: ../../facetednavigation/widgets/interfaces.py:129
 msgid "Hide items with zero results"
 msgstr "Nascondi gli elementi con zero risultati"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:42
+msgid "Hide search button"
+msgstr ""
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:17
 msgid "Hide this widget in order for e-tag to be used"
@@ -893,7 +909,7 @@ msgstr "Salva"
 msgid "Schema interface"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:35
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:37
 #: ../../facetednavigation/widgets/text/widget.pt:27
 msgid "Search"
 msgstr "Cerca"
@@ -1162,7 +1178,7 @@ msgstr "Ieri"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:45
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
 #: ../../facetednavigation/widgets/text/widget.pt:37
 msgid "all items"
 msgstr "tutti gli elementi"
@@ -1172,7 +1188,7 @@ msgstr "tutti gli elementi"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:54
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:56
 #: ../../facetednavigation/widgets/text/widget.pt:46
 msgid "in current results"
 msgstr "nei risultati attuali"

@@ -29,5 +29,9 @@ msgstr "Objektas suteikia"
 msgid "Portal type"
 msgstr "Portalas tipas"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Rūšiuoti pagal"

@@ -29,5 +29,9 @@ msgstr "Objekts nodrošina"
 msgid "Portal type"
 msgstr "Portāls tips"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Kārtot pēc"

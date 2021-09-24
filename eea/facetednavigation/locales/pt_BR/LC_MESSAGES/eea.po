@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2020-01-19 20:17+0000\n"
+"POT-Creation-Date: 2021-09-24 11:07+0000\n"
 "PO-Revision-Date: 2013-05-12 19:29-0300\n"
 "Last-Translator: Gustavo Lepri <gustavolepri@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Allow to input only numerical digits"
 msgstr ""
 
-#: ../../facetednavigation/widgets/alphabetic/widget.py:26
+#: ../../facetednavigation/widgets/alphabetic/widget.py:27
 msgid "Alphabetic"
 msgstr "Alfabético"
 
@@ -123,7 +123,7 @@ msgstr ""
 msgid "Catalog"
 msgstr "Catálogo"
 
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:27
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:28
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:17
 #: ../../facetednavigation/widgets/boolean/interfaces.py:16
 msgid "Catalog index"
@@ -133,7 +133,7 @@ msgstr "Índice do Catálogo"
 msgid "Catalog index to be used"
 msgstr ""
 
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:28
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:29
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:18
 #: ../../facetednavigation/widgets/boolean/interfaces.py:17
 msgid "Catalog index to use for search"
@@ -207,6 +207,14 @@ msgstr ""
 msgid "Current configuration"
 msgstr "Configuração atual"
 
+#: ../../facetednavigation/widgets/interfaces.py:135
+msgid "Custom CSS"
+msgstr ""
+
+#: ../../facetednavigation/widgets/interfaces.py:136
+msgid "Custom CSS class for widget to display in view page"
+msgstr ""
+
 #: ../../facetednavigation/widgets/tagscloud/interfaces.py:60
 msgid "Cut long phrases to provided number of characters"
 msgstr "Corte frases longas para o número de caracteres fornecidos"
@@ -232,7 +240,7 @@ msgstr ""
 msgid "Default items (one per line)"
 msgstr "Itens padrão (um por linha)"
 
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:21
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:22
 msgid "Default letter to be selected"
 msgstr "Carta padrão a ser selecionada"
 
@@ -254,7 +262,7 @@ msgstr "Resultados padrão por página"
 msgid "Default tal expression for query value"
 msgstr "Expressão tal padrão para valor da consulta"
 
-#: ../../facetednavigation/widgets/alphabetic/interfaces.py:20
+#: ../../facetednavigation/widgets/alphabetic/interfaces.py:21
 #: ../../facetednavigation/widgets/boolean/interfaces.py:23
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:18
 msgid "Default value"
@@ -268,7 +276,7 @@ msgstr "Apagar"
 msgid "Depth to search the path. 0=this level, -1=all subfolders recursive, and any other positive integer count the subfolder-levels to search."
 msgstr "Profundidade para procurar o caminho. 0 = este nível, -1 = todas as subpastas recursivas, e qualquer outro inteiro positivo contam as subpastas-níveis para pesquisar."
 
-#: ../../facetednavigation/interfaces.py:80
+#: ../../facetednavigation/interfaces.py:92
 msgid "Disable diazo rules on ajax requests"
 msgstr ""
 
@@ -307,6 +315,10 @@ msgstr "Exibir widget na seção"
 #: ../../facetednavigation/browser/template/configure.pt:55
 msgid "Display widget in section."
 msgstr "Exibir widget na seção."
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:43
+msgid "Do not display the search button"
+msgstr ""
 
 #: ../../facetednavigation/profiles.zcml:17
 msgid "EEA Faceted Navigation"
@@ -389,7 +401,7 @@ msgstr ""
 msgid "Faceted listing view"
 msgstr ""
 
-#: ../../facetednavigation/dexterity.zcml:11
+#: ../../facetednavigation/dexterity.zcml:12
 msgid "Faceted navigable"
 msgstr ""
 
@@ -397,15 +409,15 @@ msgstr ""
 msgid "Faceted navigation"
 msgstr ""
 
-#: ../../facetednavigation/dexterity.zcml:11
+#: ../../facetednavigation/dexterity.zcml:12
 msgid "Faceted navigation can be activated on the instances of this content type."
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:138
+#: ../../facetednavigation/subtypes/subtyper.py:145
 msgid "Faceted navigation disabled"
 msgstr "Navegação facetada desativada"
 
-#: ../../facetednavigation/subtypes/subtyper.py:127
+#: ../../facetednavigation/subtypes/subtyper.py:134
 msgid "Faceted navigation enabled"
 msgstr "Navegação facetada habilitado"
 
@@ -413,11 +425,11 @@ msgstr "Navegação facetada habilitado"
 msgid "Faceted navigation settings"
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:171
+#: ../../facetednavigation/subtypes/subtyper.py:178
 msgid "Faceted search disabled"
 msgstr "Busca facetada desabilitada"
 
-#: ../../facetednavigation/subtypes/subtyper.py:163
+#: ../../facetednavigation/subtypes/subtyper.py:170
 msgid "Faceted search enabled"
 msgstr "Busca facetada habilitada"
 
@@ -429,11 +441,11 @@ msgstr ""
 msgid "Factory"
 msgstr "Fábrica"
 
-#: ../../facetednavigation/browser/app/configure.py:64
+#: ../../facetednavigation/browser/app/configure.py:70
 msgid "Filter added"
 msgstr "Filtro adicionado"
 
-#: ../../facetednavigation/browser/app/configure.py:159
+#: ../../facetednavigation/browser/app/configure.py:166
 msgid "Filter deleted"
 msgstr "Filtrar apagado"
 
@@ -445,7 +457,7 @@ msgstr "Filtro a partir de vocabulário"
 msgid "Filters"
 msgstr "Filtros  "
 
-#: ../../facetednavigation/browser/app/configure.py:91
+#: ../../facetednavigation/browser/app/configure.py:97
 msgid "Filters deleted"
 msgstr "Filtros apagados"
 
@@ -480,6 +492,10 @@ msgstr "Ocultar filtros"
 #: ../../facetednavigation/widgets/interfaces.py:129
 msgid "Hide items with zero results"
 msgstr "Ocultar itens com resultados zero"
+
+#: ../../facetednavigation/widgets/autocomplete/interfaces.py:42
+msgid "Hide search button"
+msgstr ""
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:17
 msgid "Hide this widget in order for e-tag to be used"
@@ -846,7 +862,7 @@ msgstr "Salvar"
 msgid "Schema interface"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:35
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:37
 #: ../../facetednavigation/widgets/text/widget.pt:27
 msgid "Search"
 msgstr "Pesquisar"
@@ -1098,7 +1114,7 @@ msgstr "Ontem"
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:45
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
 #: ../../facetednavigation/widgets/text/widget.pt:37
 msgid "all items"
 msgstr "todos os itens"
@@ -1108,7 +1124,7 @@ msgstr "todos os itens"
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:54
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:56
 #: ../../facetednavigation/widgets/text/widget.pt:46
 msgid "in current results"
 msgstr "em resultados atuais"
