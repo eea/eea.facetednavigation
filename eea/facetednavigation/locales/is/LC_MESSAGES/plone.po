@@ -29,5 +29,9 @@ msgstr "Object veitir"
 msgid "Portal type"
 msgstr "Portal tegund"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Raða á"

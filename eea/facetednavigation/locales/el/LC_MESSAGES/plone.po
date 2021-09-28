@@ -29,5 +29,9 @@ msgstr "Αντικείμενο παρέχει"
 msgid "Portal type"
 msgstr "Πύλη τύπου"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Ταξινόμηση με"

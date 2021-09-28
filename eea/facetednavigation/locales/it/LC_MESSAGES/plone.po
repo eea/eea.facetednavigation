@@ -29,5 +29,9 @@ msgstr "Interfacce fornite dall'oggetto"
 msgid "Portal type"
 msgstr ""
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Ordina per"

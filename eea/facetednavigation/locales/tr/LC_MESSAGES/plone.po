@@ -29,5 +29,9 @@ msgstr "Nesne sağlar"
 msgid "Portal type"
 msgstr "Portal tipi"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Sırala"

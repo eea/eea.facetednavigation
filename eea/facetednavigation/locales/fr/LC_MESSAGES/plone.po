@@ -29,5 +29,9 @@ msgstr "Interfaces des objets"
 msgid "Portal type"
 msgstr "Type de contenu"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr "Rechercher une valeur"
+
 msgid "Sort on"
 msgstr "Tri"
