@@ -30,5 +30,9 @@ msgstr "Interfície d'objecte"
 msgid "Portal type"
 msgstr "Tipus de contingut"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Ordena per"

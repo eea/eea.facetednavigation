@@ -29,5 +29,9 @@ msgstr "Objekt stellt zur Verfügung"
 msgid "Portal type"
 msgstr "Portal-Type"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Sortieren nach"

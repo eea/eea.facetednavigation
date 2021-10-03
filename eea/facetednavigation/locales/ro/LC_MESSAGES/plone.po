@@ -29,5 +29,9 @@ msgstr "Interfeţe oferite"
 msgid "Portal type"
 msgstr "Tip"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Sortare după"

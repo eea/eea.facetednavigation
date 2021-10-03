@@ -29,5 +29,9 @@ msgstr "Objektum"
 msgid "Portal type"
 msgstr "Szemafor"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Rendezés on"
