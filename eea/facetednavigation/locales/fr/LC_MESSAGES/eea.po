@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-24 11:07+0000\n"
+"POT-Creation-Date: 2021-10-05 13:48+0000\n"
 "PO-Revision-Date: 2016-02-23 12:06+0100\n"
 "Last-Translator: Vincent Fretin <vincent.fretin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,6 +55,10 @@ msgstr "il y a 5 jours"
 msgid "6 months ago"
 msgstr "il y a 6 mois"
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:57
+msgid "AJAX URL"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:55
 msgid "Accessor"
 msgstr "Accessor"
@@ -85,7 +89,7 @@ msgstr "Filtres après la requête"
 msgid "All"
 msgstr "Tous"
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:45
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
 msgid "Allow multiple selections"
 msgstr "Permettre les sélections multiples"
 
@@ -123,7 +127,7 @@ msgstr "Peut sélectionner plusieurs éléments"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:51
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:68
 #: ../../facetednavigation/widgets/radio/interfaces.py:24
 msgid "Catalog"
 msgstr "Catalogue"
@@ -154,11 +158,11 @@ msgstr "Requête catalogue"
 msgid "Checkboxes"
 msgstr "Cases à cocher"
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:76
 msgid "Close on select"
 msgstr "Fermer après sélection"
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:77
 msgid "Close selection popup after each select"
 msgstr "Fermer le popup après chaque sélection"
 
@@ -251,7 +255,7 @@ msgstr "e-tag par défaut"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:19
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:19
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:18
 msgid "Default items (one per line)"
 msgstr "Éléments par défaut (un par ligne)"
 
@@ -262,7 +266,7 @@ msgstr "Lettre à sélectionner par défaut"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:26
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:25
 msgid "Default operator"
 msgstr "Opérateur"
 
@@ -499,7 +503,7 @@ msgstr "Futur"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:52
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:59
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:69
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Utiliser l'ensemble des valeurs indexées comme vocabulaire"
@@ -581,7 +585,7 @@ msgid "Invalid or empty vocabulary provided for this widget. Leave empty for def
 msgstr "Le vocabulaire de ce widget est vide ou invalide. Laissez vide pour le tri par défaut."
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:31
-#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:38
 #: ../../facetednavigation/widgets/radio/widget.pt:29
 msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
 msgstr "Vocabulaire invalide ou vide. Le widget sera ignoré en visualisation."
@@ -617,7 +621,7 @@ msgid "Less filters"
 msgstr "Moins de filtres"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:37
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:37
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr "Permettez aux utilisateurs de choisir entre une recherche avec ET ou avec OU"
 
@@ -687,7 +691,7 @@ msgstr "Monter"
 msgid "Multi Select"
 msgstr "Multi sélection"
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:43
 msgid "Multiselect"
 msgstr "Multisélection"
 
@@ -753,7 +757,7 @@ msgid "Numerical range"
 msgstr "Plage numérique"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:36
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:35
 msgid "Operator visible"
 msgstr "Opérateur visible"
 
@@ -834,6 +838,10 @@ msgstr "Position"
 msgid "Position of the widget."
 msgstr "Position de le widget"
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+msgid "Provide an URL to be used to get and filter items asynchronously e.g.: /search. Your endpoint should filter items by 'q' param and return a JSON like e.g.: {'items': [...]}"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:41
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Le nom python d'une factory qui peut créer une implémentation de l'objet. Ce nom doit identifier un objet dans un module."
@@ -896,7 +904,7 @@ msgstr "Inverser"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:66
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:82
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Inverser l'ordre des valeurs"
@@ -930,7 +938,7 @@ msgid "Search in all elements only"
 msgstr "Rechercher seulement dans tous les éléments"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:27
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:27
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
 msgid "Search with AND/OR between elements"
 msgstr "Opérateur de recherche entre les critères"
 
@@ -971,7 +979,7 @@ msgstr "Trier suivant le décompte"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:67
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:83
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Sort options reversed"
 msgstr "Le tri des choix est inversé"
@@ -1140,7 +1148,7 @@ msgstr "Visible par"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:44
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:50
 #: ../../facetednavigation/widgets/radio/interfaces.py:17
 msgid "Vocabulary"
 msgstr "Vocabulaire"
@@ -1151,7 +1159,7 @@ msgstr "Vocabulaire du filtre de tri. Laissez vide pour les critères de tri par
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:45
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:52
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
 #: ../../facetednavigation/widgets/radio/interfaces.py:18
 msgid "Vocabulary to use to render widget items"
 msgstr "Vocabulaire à utiliser pour les éléments du widget"
@@ -1179,7 +1187,7 @@ msgid "Yesterday"
 msgstr "Hier"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "all"
 msgstr "tous"
 
@@ -1189,7 +1197,7 @@ msgid "all items"
 msgstr "dans tous les éléments"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "any"
 msgstr "au moins un"
 
@@ -1199,12 +1207,12 @@ msgid "in current results"
 msgstr "dans les résultats courants"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:35
-#: ../../facetednavigation/widgets/multiselect/widget.pt:61
+#: ../../facetednavigation/widgets/multiselect/widget.pt:64
 msgid "match"
 msgstr "correspondance"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:34
-#: ../../facetednavigation/widgets/multiselect/widget.pt:60
+#: ../../facetednavigation/widgets/multiselect/widget.pt:63
 msgid "match any/all filters bellow"
 msgstr "correspond à un / tous les filtres ci-dessous"
 
