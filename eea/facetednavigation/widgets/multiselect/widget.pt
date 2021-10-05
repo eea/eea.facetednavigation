@@ -18,13 +18,15 @@
   operator_lable python: 'any' if operator == 'or' else 'all';
   vocabulary view/vocabulary;
   mode view/mode|string:display;
-  visible python:mode == 'input' or vocabulary"
+  visible python:mode == 'input' or vocabulary;
+  ajax python:view.data.get('ajax', u'')"
   tal:condition="visible"
   tal:attributes="
     id string:${wid}_widget;
     class css;
     data-placeholder python:view.translate(placeholder);
     data-closeonselect python:'true' if closeOnSelect else 'false';
+    data-ajax ajax;
     data-operator python:operator;">
 
 <fieldset class="widget-fieldset" tal:define="title python:view.data.get('title', '')">
@@ -40,7 +42,8 @@
     <label class="multiselect-field"
       tal:attributes="for wid"
       tal:content="python:view.translate(title)" />
-    <select tal:attributes="name wid; id wid; multiple multiple" class="faceted_multiselect">
+    <input type="hidden" tal:attributes="name wid; id wid; multiple multiple" class="faceted_multiselect" tal:condition="ajax" />
+    <select tal:attributes="name wid; id wid; multiple multiple" class="faceted_multiselect" tal:condition="not:ajax">
       <option tal:condition="not:multiple"></option>
       <tal:option repeat="term vocabulary">
         <option tal:define="
