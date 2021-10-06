@@ -14,6 +14,7 @@ Faceted.MultiSelectWidget = function(wid){
   this.ajax = this.widget.data('ajax');
   this.selected = [];
 
+  var self = this;
   if(!this.ajax) {
     this.select.select2({
       placeholder: this.placeholder,
@@ -27,19 +28,33 @@ Faceted.MultiSelectWidget = function(wid){
       allowClear: true,
       multiple: this.multiple,
       ajax: {
-        url: this.ajax,
-          dataType: 'json',
-          data: function (term) {
-            var query = {
-              q: term,
-            }
-              return query;
-          },
-          results: function (data) {
-            return {
-                results: data.items
-              };
+        url: self.ajax,
+        dataType: 'json',
+        data: function (term) {
+          var query = {
+            q: term,
           }
+            return query;
+        },
+        results: function (data) {
+          return {
+            results: data.items
+          };
+        }
+      },
+      initSelection: function(element, callback) {
+        var id = $(element).val();
+        if (id !== "") {
+          $.ajax(self.ajax + '?wildcard:int=0&q=' + id, {
+              dataType: "json"
+          }).done(function(data) {
+            if(self.multiple) {
+              callback(data.items);
+            } else if (data.items.length) {
+              callback(data.items[0]);
+            }
+          });
+        }
       }
     });
   }
@@ -87,7 +102,11 @@ Faceted.MultiSelectWidget = function(wid){
   // Default value
   var value = this.select.val();
   if(value){
-    this.selected = self.widget.find('option:selected');
+    if(this.ajax) {
+      this.selected = this.multiple ? this.widget.find('input[type="hidden"]') : this.widget.find('input[type="text"]');
+    } else {
+      this.selected = this.widget.find('option:selected');
+    }
     if(this.multiple) {
       Faceted.Query[this.wid] = value;
     } else {
@@ -153,12 +172,17 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   do_query: function(element){
+    var self = this;
     if(!element){
       this.selected = [];
       return Faceted.Form.do_query(this.wid, []);
     }else{
       var value = jQuery(element).val();
-      this.selected = this.widget.find('option:selected');
+      if(this.ajax) {
+        this.selected = this.multiple ? this.widget.find('input[type="hidden"]') : this.widget.find('input[type="text"]');
+      } else {
+        this.selected = this.widget.find('option:selected');
+      }
       return Faceted.Form.do_query(this.wid, value);
     }
   },
@@ -170,10 +194,15 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   synchronize: function(){
+    var self = this;
     var value = Faceted.Query[this.wid];
     if(value){
       this.select.val(value).trigger("change.select2");
-      this.selected = this.widget.find('option:selected');
+      if(this.ajax) {
+        this.selected = this.multiple ? this.widget.find('input[type="hidden"]') : this.widget.find('input[type="text"]');
+      } else {
+        this.selected = this.widget.find('option:selected');
+      }
       this.widget.addClass("faceted-widget-active");
     } else {
       this.reset();
@@ -241,7 +270,7 @@ Faceted.MultiSelectWidget.prototype = {
       var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + label + ' filter');
-      link.click(function(evt){
+      link.click(function(){
         widget.criteria_remove(value, element);
         return false;
       });
