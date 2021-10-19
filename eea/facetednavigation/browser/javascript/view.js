@@ -151,14 +151,9 @@ Faceted.Form = {
 
     // Handle errors
     var area =  this.area;
-    $(document).ajaxError(function(event, request, settings){
+    $(document).ajaxError(function(event, request, settings, thrownError){
       jQuery(area).html('');
-      // jQuery(area).html('' +
-      // '<h3>This site encountered an error trying to fulfill your request</h3>' +
-      // '<p>' +
-      //   'If the error persists please contact the site maintainer. ' +
-      //   'Thank you for your patience.' +
-      // '</p>');
+      console.error("AJAX ERROR", event, request, settings, thrownError);
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_ERROR);
     });
 
