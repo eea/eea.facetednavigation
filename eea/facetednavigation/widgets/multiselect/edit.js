@@ -27,9 +27,9 @@ FacetedEdit.MultiSelectWidget = function(wid){
           dataType: 'json',
           data: function (term) {
             var query = {
-              q: term,
-            }
-              return query;
+              q: term
+            };
+            return query;
           },
           results: function (data) {
             return {

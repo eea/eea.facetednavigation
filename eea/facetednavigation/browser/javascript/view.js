@@ -150,7 +150,7 @@ Faceted.Form = {
     }
 
     // Handle errors
-    // var area =  this.area;
+    var area =  this.area;
     $(document).ajaxError(function(event, request, settings){
       jQuery(area).html('');
       // jQuery(area).html('' +

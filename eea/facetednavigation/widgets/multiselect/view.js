@@ -14,7 +14,6 @@ Faceted.MultiSelectWidget = function(wid){
   this.ajax = this.widget.data('ajax');
   this.selected = [];
 
-  var self = this;
   if(!this.ajax) {
     this.select.select2({
       placeholder: this.placeholder,
@@ -32,9 +31,9 @@ Faceted.MultiSelectWidget = function(wid){
         dataType: 'json',
         data: function (term) {
           var query = {
-            q: term,
-          }
-            return query;
+            q: term
+          };
+          return query;
         },
         results: function (data) {
           return {
