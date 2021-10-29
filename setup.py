@@ -55,6 +55,9 @@ setup(name=NAME,
       extras_require={
           'test': [
               'plone.app.testing',
+              'plone.testing',
+              'plone.app.contenttypes',
+              'plone.app.robotframework[debug]',
           ],
       },
       entry_points="""
