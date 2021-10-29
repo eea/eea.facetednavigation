@@ -28,4 +28,4 @@ jobs:
 
       - name: test
         run: |
-          zope-testrunner --auto-color --auto-progress
+          zope-testrunner --auto-color --auto-progress --test-path .
