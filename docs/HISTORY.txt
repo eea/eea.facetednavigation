@@ -1,8 +1,10 @@
 Changelog
 =========
 
-14.7-dev0 - (unreleased)
+14.7 - (2021-10-29)
 ---------------------------
+* Change: Release community contrib
+  [avoinea]
 
 14.6 - (2021-07-19)
 ---------------------------
