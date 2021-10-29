@@ -24,7 +24,7 @@ jobs:
 
       - name: Install plone.volto
         run: |
-          pip install ".[test]" --use-deprecated legacy-resolver
+          pip install -e ".[test]" --use-deprecated legacy-resolver
 
       - name: test
         run: |
