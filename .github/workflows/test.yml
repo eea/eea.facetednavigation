@@ -1,23 +1,16 @@
 name: Tests
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./api
     strategy:
       fail-fast: false
       matrix:
-        python:
-          - "3.7"
-          - "3.8"
-          - "3.9"
-        plone:
-          - "5.2.5"
-          - "5.2.6"
-          - "6.0.0a1"
+        python: [3.7, 3.8, 3.9]
+        plone: ["6.0.0a1", "5.2-latest"]
+        exclude:
+          - plone: "5.2-latest"
+            python: 3.9
 
     steps:
       - uses: actions/checkout@v2
@@ -29,10 +22,10 @@ jobs:
           python-version: ${{ matrix.python }}
           plone-version: ${{ matrix.plone }}
 
-      - name: Install addon package, in editable mode, with pip
+      - name: Install plone.volto
         run: |
-          pip install -e ".[test]" --use-deprecated legacy-resolver
+          pip install ".[test]" --use-deprecated legacy-resolver
 
-      - name: Run tests
+      - name: test
         run: |
-          PYTHONWARNINGS=ignore zope-testrunner --auto-color --auto-progress --test-path src/eea.facetednavigation
+          zope-testrunner --auto-color --auto-progress --test-path eea
