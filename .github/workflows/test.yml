@@ -22,10 +22,10 @@ jobs:
           python-version: ${{ matrix.python }}
           plone-version: ${{ matrix.plone }}
 
-      - name: Install plone.volto
+      - name: Install
         run: |
           pip install -e ".[test]" --use-deprecated legacy-resolver
 
       - name: test
         run: |
-          zope-testrunner --auto-color --auto-progress --test-path eea
+          zope-testrunner --auto-color --auto-progress
