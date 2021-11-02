@@ -57,7 +57,7 @@ setup(name=NAME,
               'plone.app.testing',
               'plone.testing',
               'plone.app.contenttypes',
-              'plone.app.robotframework[debug]',
+              'zope.testrunner',
           ],
       },
       entry_points="""

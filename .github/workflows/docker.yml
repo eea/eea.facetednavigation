@@ -1,0 +1,26 @@
+name: Run Tests with Docker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["python37", "python38", "python39"]
+        plone: ["6.0.0a1", "5.2.6"]
+        exclude:
+          - plone: "5.2.6"
+            python: "python39"
+
+    steps:
+      # git checkout
+      - uses: actions/checkout@v2
+        name: Testing on Plone ${{ matrix.plone }} with Python ${{ matrix.python }}
+        id: setup
+        with:
+          python-version: ${{ matrix.python }}
+          plone-version: ${{ matrix.plone }}
+
+      - name: tests
+        run: |
+          docker run -i --rm -v $(pwd):/app/${{ github.event.repository.name }} -e ADDONS="/app/${{ github.event.repository.name }}[test]" plone/plone-backend:${{ matrix.plone }}-${{ matrix.python }} bin/zope-testrunner --auto-color --auto-progress --test-path /app/${{ github.event.repository.name }}
