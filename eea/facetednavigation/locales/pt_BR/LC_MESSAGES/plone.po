@@ -29,5 +29,9 @@ msgstr "Objeto fornece"
 msgid "Portal type"
 msgstr "Tipo de Portal"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Classificar por"

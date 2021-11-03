@@ -29,5 +29,9 @@ msgstr "Обект осигурява"
 msgid "Portal type"
 msgstr "Портален тип"
 
+#: widgets/autocomplete/widget.pt:8
+msgid "Select a value"
+msgstr ""
+
 msgid "Sort on"
 msgstr "Сортирай по"

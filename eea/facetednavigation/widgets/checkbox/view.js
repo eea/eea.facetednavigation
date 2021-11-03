@@ -204,7 +204,7 @@ Faceted.CheckboxesWidget.prototype = {
       var value = element.val();
       var label = jQuery('label[for=' + id + ']', widget.widget);
       var title = label.attr('title');
-      label = label.text();
+      var count = label.children('span').text();
 
       var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
@@ -215,7 +215,8 @@ Faceted.CheckboxesWidget.prototype = {
       });
 
       span.append(link);
-      jQuery('<span>').text(label).appendTo(span);
+      jQuery('<span class="title">').text(title).appendTo(span);
+      jQuery('<span class="count">').text(count).appendTo(span);
       html.append(span);
     });
 
