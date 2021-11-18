@@ -73,26 +73,28 @@ jQuery.fn.collapsible = function(settings){
       self.bind(options.events.colapse, function(evt, data){
         options.handle_colapse(evt, data);
       });
+      // Only add button if none exits
+      if (jQuery('.faceted-checkbox-more').length < 1){
+        // More/Less button
+        var link = jQuery('<a>').attr('href', '#').text('More');
+        self.button = jQuery('<div>')
+          .addClass('faceted-checkbox-more')
+          .append(link)
+          .hide();
+        self.append(self.button);
 
-      // More/Less button
-      var link = jQuery('<a>').attr('href', '#').text('More');
-      self.button = jQuery('<div>')
-        .addClass('faceted-checkbox-more')
-        .append(link)
-        .hide();
-      self.append(self.button);
+        link.click(function(){
+          if(self.colapsed){
+            self.trigger(options.events.expand);
+          }else{
+            self.trigger(options.events.colapse);
+          }
+          return false;
+        });
 
-      link.click(function(){
-        if(self.colapsed){
-          self.trigger(options.events.expand);
-        }else{
-          self.trigger(options.events.colapse);
+        if(options.maxitems){
+          link.click();
         }
-        return false;
-      });
-
-      if(options.maxitems){
-        link.click();
       }
     }
   };
