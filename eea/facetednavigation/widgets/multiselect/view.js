@@ -264,13 +264,18 @@ Faceted.MultiSelectWidget.prototype = {
       var element = jQuery(this);
       var id = element.attr('id');
       var value = element.val();
-      var label = element.attr("title");
+      var to_remove = value;
+      if(!value) {
+        value = element.parent().find('a').text();
+        to_remove = null;
+      }
+      var label = element.attr("title") || value;
 
       var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + label + ' filter');
       link.click(function(){
-        widget.criteria_remove(value, element);
+        widget.criteria_remove(to_remove, element);
         return false;
       });
 
