@@ -54,8 +54,6 @@
 ">
   <div id="faceted-results" class="faceted-results"
     metal:define-slot="content">
-    <noscript tal:condition="view_mode">
-      <tal:results replace="structure python:faceted_html" />
-    </noscript>
+    <tal:results replace="structure python:faceted_html" tal:condition="view_mode" />
   </div>
 </metal:results>
