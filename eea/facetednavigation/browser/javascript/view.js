@@ -141,6 +141,7 @@ Faceted.Form = {
     // Handle form submit event
     this.area = jQuery('#faceted-results');
     this.mode = this.form.data('mode') || 'view';
+    this.area_html = this.area.html();
 
     // Faceted version
     this.version = '';
@@ -150,9 +151,9 @@ Faceted.Form = {
     }
 
     // Handle errors
-    var area =  this.area;
+    var self = this;
     $(document).ajaxError(function(event, request, settings, thrownError){
-      jQuery(area).html('');
+      jQuery(self.area).html(self.area_html);
       console.error("AJAX ERROR", event, request, settings, thrownError);
       jQuery(Faceted.Events).trigger(Faceted.Events.AJAX_ERROR);
     });
@@ -231,6 +232,7 @@ Faceted.Form = {
     context.area.fadeOut('fast', function(){
       if(Faceted.Options.SHOW_SPINNER){
         var loading = '<div class="faceted_loading"></div>';
+        context.area_html = context.area.html();
         context.area.html(loading);
         context.area.fadeIn(Faceted.Options.FADE_SPEED);
       }
