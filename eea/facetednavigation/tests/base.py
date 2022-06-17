@@ -1,5 +1,6 @@
 """ Base test cases
 """
+from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import setuphandlers
 from plone.testing import z2
 from plone.app.testing import TEST_USER_ID
@@ -48,6 +49,12 @@ class EEAFixture(PloneSandboxLayer):
 
         # Create testing environment
         portal.invokeFactory("Folder", "sandbox", title="Sandbox")
+
+        pt_tool = getToolByName(portal, "portal_types")
+        if "Collection" in pt_tool.objectIds():
+            portal.invokeFactory("Collection", "collection", title="Sandbox Collection")
+        elif "Topic" in pt_tool.objectIds():
+            portal.invokeFactory("Topic", "collection", title="Sandbox Collection")
 
 
     def tearDownZope(self, app):

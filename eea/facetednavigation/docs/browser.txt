@@ -33,6 +33,19 @@ Set up
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
 
+  Add text to test collection
+
+    >>> collection =  portal['collection']
+    >>> if PLONE < 5:
+    ...    collection.setText("<p>Collection-Text</p>", mimetype="text/html")
+    ... else:
+    ...    from plone.app.textfield.value import RichTextValue
+    ...    collection.text = RichTextValue(
+    ...        u'<p>Collection-Text</p>',
+    ...        'text/plain',
+    ...        'text/html'
+    ...    )
+
   Initialize browser
 
     >>> browser = Browser(app)
@@ -50,6 +63,13 @@ Browser views
     >>> sandbox_url = sandbox.absolute_url()
     >>> browser.open(sandbox_url)
     >>> 'faceted-results' in browser.contents
+    True
+
+  Default view on a collection (with a text field)
+
+    >>> collection_url = collection.absolute_url()
+    >>> browser.open(collection_url)
+    >>> 'Collection-Text' in browser.contents
     True
 
   Configure faceted criteria view

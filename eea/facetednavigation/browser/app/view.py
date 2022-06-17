@@ -1,5 +1,6 @@
 """ Faceted views
 """
+from Acquisition import aq_base
 from zope.component import getUtility
 from zope.component import queryAdapter
 from zope.schema.interfaces import IVocabularyFactory
@@ -18,6 +19,7 @@ class FacetedContainerView(object):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        self.text_class = None
         self._canonical = '<NOT SET>'
 
     @property
@@ -77,6 +79,33 @@ class FacetedContainerView(object):
         if not wrapper:
             return self.context
         return wrapper(content)
+
+    def get_text(self):
+        """Get text field value, if any (eg: collections, plone.richtext)"""
+        mime_type = None
+        text = None
+        context = aq_base(self.context)
+        if hasattr(context, "text"):
+            textfield = getattr(context, "text", None)
+            text = (
+                textfield.output_relative_to(self.context)
+                if getattr(textfield, "output_relative_to", None)
+                else None
+            )
+            if text:
+                mime_type = textfield.mimeType
+        elif hasattr(context, "getText"):
+            # old style contents
+            text = context.getText()
+            if text:
+                mime_type = context.Format()
+        if text:
+            self.text_class = (
+                "stx"
+                if mime_type in ("text/structured", "text/x-rst", "text/restructured")
+                else "plain"
+            )
+        return text
 
     def get_sections(self, position='', mode='view'):
         """ Get sections for given position or return all sections
