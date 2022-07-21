@@ -90,12 +90,16 @@ Install
 
 * Install `EEA Faceted Navigation`` within `Site Setup > Add-ons`
 
+Develop
+=======
+
+    make help
+
 Getting started
 ===============
 
-* Go to your working space and add a **Folder** and within **Actions** menu
-  click on **Enable faceted navigation**.
-  See more on the dedicated youtube channel: `EEA Web Systems Training`_
+* Go to your working space and add a **Folder** and within **Actions** menu click on **Enable faceted navigation**.
+* See more on the dedicated youtube channel: `EEA Web Systems Training`_
 
 Faceted settings
 ================
