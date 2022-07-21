@@ -11,55 +11,51 @@ from eea.facetednavigation import EEAMessageFactory as _
 
 
 class ISelectSchema(ISchema):
-    """ Schema
-    """
+    """Schema"""
+
     vocabulary = schema.Choice(
-        title=_(u"Vocabulary"),
-        description=_(u'Vocabulary to use to render widget items'),
-        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
-        required=False
+        title=_("Vocabulary"),
+        description=_("Vocabulary to use to render widget items"),
+        vocabulary="eea.faceted.vocabularies.PortalVocabularies",
+        required=False,
     )
 
     catalog = schema.Choice(
-        title=_(u'Catalog'),
-        description=_(u"Get unique values from catalog "
-                      u"as an alternative for vocabulary"),
-        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
-        required=False
+        title=_("Catalog"),
+        description=_(
+            "Get unique values from catalog " "as an alternative for vocabulary"
+        ),
+        vocabulary="eea.faceted.vocabularies.UseCatalog",
+        required=False,
     )
 
     hidealloption = schema.Bool(
-        title=_(u"Hide 'All' option"),
-        description=_(u'If this checkbox is checked, hides the "All" option'),
-        required=False
+        title=_("Hide 'All' option"),
+        description=_('If this checkbox is checked, hides the "All" option'),
+        required=False,
     )
 
     sortreversed = schema.Bool(
-        title=_(u"Reverse options"),
-        description=_(u"Sort options reversed"),
-        required=False
+        title=_("Reverse options"),
+        description=_("Sort options reversed"),
+        required=False,
     )
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
+
     fields = field.Fields(ISelectSchema).select(
-        u'title',
-        u'index',
-        u'vocabulary',
-        u'catalog',
-        u'hidealloption',
-        u'default'
+        "title", "index", "vocabulary", "catalog", "hidealloption", "default"
     )
 
 
 class DisplaySchemata(FacetedSchemata):
-    """ Schemata display
-    """
-    label = u'display'
+    """Schemata display"""
+
+    label = "display"
     fields = field.Fields(ISelectSchema).select(
-        u'sortreversed',
+        "sortreversed",
     )
 
 

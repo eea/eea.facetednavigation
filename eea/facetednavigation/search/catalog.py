@@ -10,39 +10,42 @@ from eea.facetednavigation.search.interfaces import IFacetedCatalog
 from eea.facetednavigation.plonex import parseFormquery
 from zope.interface import Interface
 import six
+
 try:
     from plone.app.collection.interfaces import ICollection
 except ImportError:
+
     class ICollection(Interface):
-        """ Fallback ICollection """
+        """Fallback ICollection"""
 
 
 try:
     from plone.app.contenttypes import interfaces as PACI
-    from plone.app.contenttypes.behaviors.collection import \
-            ICollection as ICollection_behavior
+    from plone.app.contenttypes.behaviors.collection import (
+        ICollection as ICollection_behavior,
+    )
+
     HAS_PAT = True
 except ImportError:
     HAS_PAT = False
 
-logger = logging.getLogger('eea.facetednavigation')
+logger = logging.getLogger("eea.facetednavigation")
 
 
 @implementer(IFacetedCatalog)
 class FacetedCatalog(object):
-    """ Custom faceted adapter for portal_catalog
-    """
+    """Custom faceted adapter for portal_catalog"""
+
     def _apply_index(self, index, value):
-        """ Default portal_catalog index _apply_index
-        """
+        """Default portal_catalog index _apply_index"""
         index_id = index.getId()
 
-        apply_index = getattr(index, '_apply_index', None)
+        apply_index = getattr(index, "_apply_index", None)
         if not apply_index:
             return IIBucket(), (index_id,)
 
         if six.PY2 and isinstance(value, six.text_type):
-            value = value.encode('utf-8', 'replace')
+            value = value.encode("utf-8", "replace")
         rset = apply_index({index_id: value})
 
         if not rset:
@@ -51,24 +54,23 @@ class FacetedCatalog(object):
         return rset
 
     def apply_index(self, context, index, value):
-        """ Call index _apply_index method of catalog index
-        """
-        ctool = getToolByName(context, 'portal_faceted', None)
+        """Call index _apply_index method of catalog index"""
+        ctool = getToolByName(context, "portal_faceted", None)
         if ctool:
             return ctool.apply_index(index, value)
         return self._apply_index(index, value)
 
     def __call__(self, context, **query):
-        ctool = getToolByName(context, 'portal_faceted', None)
+        ctool = getToolByName(context, "portal_faceted", None)
         if ctool:
             search = ctool.search
         else:
-            logger.debug('portal_faceted not present, using portal_catalog')
-            ctool = getToolByName(context, 'portal_catalog')
+            logger.debug("portal_faceted not present, using portal_catalog")
+            ctool = getToolByName(context, "portal_catalog")
             search = ctool.searchResults
 
         # Also get query from Topic
-        buildQuery = getattr(context, 'buildQuery', None)
+        buildQuery = getattr(context, "buildQuery", None)
         newquery = buildQuery and buildQuery() or {}
         formquery = None
 
@@ -76,27 +78,24 @@ class FacetedCatalog(object):
         if HAS_PAT:
             if PACI.ICollection.providedBy(context):
                 infos = ICollection_behavior(context)
-                sort_order = ('descending'
-                              if infos.sort_reversed
-                              else 'ascending')
+                sort_order = "descending" if infos.sort_reversed else "ascending"
                 sort_on = infos.sort_on
                 formquery = infos.query
 
         if ICollection.providedBy(context):
-            getRawQuery = getattr(context, 'getRawQuery', lambda: [])
+            getRawQuery = getattr(context, "getRawQuery", lambda: [])
             formquery = getRawQuery()
 
-            getSortOn = getattr(context, 'getSort_on', lambda: None)
+            getSortOn = getattr(context, "getSort_on", lambda: None)
             sort_on = getSortOn()
 
             if sort_on:
-                getSortReversed = getattr(
-                    context, 'getSort_reversed', lambda: None)
+                getSortReversed = getattr(context, "getSort_reversed", lambda: None)
                 sort_order = getSortReversed()
                 if sort_order:
-                    sort_order = 'descending'
+                    sort_order = "descending"
                 else:
-                    sort_order = 'ascending'
+                    sort_order = "ascending"
             else:
                 sort_order = None
 
@@ -107,11 +106,11 @@ class FacetedCatalog(object):
             newquery = {}
 
         # Avoid mixing sorting params from faceted and collection
-        if 'sort_on' not in query:
-            query.pop('sort_order', None)
+        if "sort_on" not in query:
+            query.pop("sort_order", None)
 
-        if 'sort_on' in query and 'sort_order' not in query:
-            newquery.pop('sort_order', None)
+        if "sort_on" in query and "sort_order" not in query:
+            newquery.pop("sort_order", None)
 
         newquery.update(query)
 

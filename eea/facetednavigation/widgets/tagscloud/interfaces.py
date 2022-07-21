@@ -11,140 +11,137 @@ from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation import EEAMessageFactory as _
 import six
 
-TagsCloudVocabulary = SimpleVocabulary([
-    SimpleTerm(u'list', u'list', _(u"List")),
-    SimpleTerm(u'sphere', u'sphere', _(u"Sphere")),
-    SimpleTerm(u'cloud', u'cloud', _(u"Cloud"))
-])
+TagsCloudVocabulary = SimpleVocabulary(
+    [
+        SimpleTerm("list", "list", _("List")),
+        SimpleTerm("sphere", "sphere", _("Sphere")),
+        SimpleTerm("cloud", "cloud", _("Cloud")),
+    ]
+)
 
 
 class ITagsCloudSchema(ISchema):
-    """ Schema
-    """
+    """Schema"""
+
     index = schema.Choice(
-        title=_(u'Catalog index'),
-        description=_(u'Catalog index to use for search'),
-        vocabulary=u"eea.faceted.vocabularies.CatalogIndexes",
+        title=_("Catalog index"),
+        description=_("Catalog index to use for search"),
+        vocabulary="eea.faceted.vocabularies.CatalogIndexes",
     )
 
     vocabulary = schema.Choice(
-        title=_(u"Vocabulary"),
-        description=_(u'Vocabulary to use to render widget items'),
-        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
-        required=False
+        title=_("Vocabulary"),
+        description=_("Vocabulary to use to render widget items"),
+        vocabulary="eea.faceted.vocabularies.PortalVocabularies",
+        required=False,
     )
 
     catalog = schema.Choice(
-        title=_(u'Catalog'),
-        description=_(u"Get unique values from catalog "
-                      u"as an alternative for vocabulary"),
-        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
-        required=False
+        title=_("Catalog"),
+        description=_(
+            "Get unique values from catalog " "as an alternative for vocabulary"
+        ),
+        vocabulary="eea.faceted.vocabularies.UseCatalog",
+        required=False,
     )
 
     hidealloption = schema.Bool(
-        title=_(u"Hide 'All' option"),
-        description=_(u'If this checkbox is checked, hides the "All" option'),
-        required=False
+        title=_("Hide 'All' option"),
+        description=_('If this checkbox is checked, hides the "All" option'),
+        required=False,
     )
 
     maxitems = schema.Int(
-        title=_(u"Maximum items"),
-        description=_(u'Number of items visible in widget'),
+        title=_("Maximum items"),
+        description=_("Number of items visible in widget"),
         default=50,
-        required=False
+        required=False,
     )
 
     maxchars = schema.Int(
-        title=_(u'Maximum characters'),
-        description=_(u'Cut long phrases to provided number of characters'),
+        title=_("Maximum characters"),
+        description=_("Cut long phrases to provided number of characters"),
         default=0,
-        required=False
+        required=False,
     )
 
     sortreversed = schema.Bool(
-        title=_(u"Reverse options"),
-        description=_(u"Sort options reversed"),
-        required=False
+        title=_("Reverse options"),
+        description=_("Sort options reversed"),
+        required=False,
     )
 
     colormin = schema.TextLine(
-        title=_(u'Minimum color'),
-        description=_(u'Tagscloud minimum color'),
-        default=u"9acee6",
-        required=False
+        title=_("Minimum color"),
+        description=_("Tagscloud minimum color"),
+        default="9acee6",
+        required=False,
     )
     colormin._type = (six.text_type, str)
 
     colormax = schema.TextLine(
-        title=_(u'Maximum color'),
-        description=_(u'Tagscloud max color'),
-        default=u"007bb3",
-        required=False
+        title=_("Maximum color"),
+        description=_("Tagscloud max color"),
+        default="007bb3",
+        required=False,
     )
     colormax._type = (six.text_type, str)
 
     cloud = schema.Choice(
-        title=_(u'Cloud type'),
-        description=_(u'Type of the cloud'),
-        vocabulary=TagsCloudVocabulary
+        title=_("Cloud type"),
+        description=_("Type of the cloud"),
+        vocabulary=TagsCloudVocabulary,
     )
 
     sizemin = schema.Int(
-        title=_(u'Minimum size'),
-        description=_(u'Minimum font-size (px)'),
+        title=_("Minimum size"),
+        description=_("Minimum font-size (px)"),
         required=False,
-        default=10
+        default=10,
     )
 
     sizemax = schema.Int(
-        title=_(u'Maximum size'),
-        description=_(u'Maximum font-size (px)'),
+        title=_("Maximum size"),
+        description=_("Maximum font-size (px)"),
         required=False,
-        default=20
+        default=20,
     )
 
     height = schema.Int(
-        title=_(u'Cloud height'),
-        description=_(u'Cloud height (px)'),
+        title=_("Cloud height"),
+        description=_("Cloud height (px)"),
         required=False,
-        default=200
+        default=200,
     )
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
+
     fields = field.Fields(ITagsCloudSchema).select(
-        u'title',
-        u'index',
-        u'vocabulary',
-        u'catalog',
-        u'default'
+        "title", "index", "vocabulary", "catalog", "default"
     )
 
+
 class DisplaySchemata(FacetedSchemata):
-    """ Schemata display
-    """
-    label = u'display'
+    """Schemata display"""
+
+    label = "display"
     fields = field.Fields(ITagsCloudSchema).select(
-        u'maxitems',
-        u'maxchars',
-        u'colormin',
-        u'colormax',
-        u'sortreversed',
+        "maxitems",
+        "maxchars",
+        "colormin",
+        "colormax",
+        "sortreversed",
     )
 
 
 class GeometrySchemata(FacetedSchemata):
-    """ Schemata geometry
-    """
-    label = u'geometry'
+    """Schemata geometry"""
+
+    label = "geometry"
     fields = field.Fields(ITagsCloudSchema).select(
-        u'cloud',
-        u'sizemin',
-        u'sizemax',
-        u'height'
+        "cloud", "sizemin", "sizemax", "height"
     )
 
 

@@ -14,24 +14,23 @@ from eea.facetednavigation.vocabularies.utils import lowercase_text
 #
 @implementer(IVocabularyFactory)
 class FacetedPortalTypesVocabulary(object):
-    """Vocabulary factory for faceted portal types.
-    """
+    """Vocabulary factory for faceted portal types."""
 
     def __call__(self, *args, **kwargs):
         site = getSite()
-        ptool = getToolByName(site, 'plone_utils', None)
-        ttool = getToolByName(site, 'portal_types', None)
-        ftool = getToolByName(site, 'portal_faceted', None)
+        ptool = getToolByName(site, "plone_utils", None)
+        ttool = getToolByName(site, "portal_types", None)
+        ftool = getToolByName(site, "portal_faceted", None)
 
         if ptool is None or ttool is None:
             return SimpleVocabulary([])
 
-        items = dict((t, ttool[t].Title())
-                     for t in ptool.getUserFriendlyTypes())
+        items = dict((t, ttool[t].Title()) for t in ptool.getUserFriendlyTypes())
 
         if ftool is not None:
-            faceted_items = dict((t.getId(), t.title_or_id())
-                                 for t in ftool.objectValues())
+            faceted_items = dict(
+                (t.getId(), t.title_or_id()) for t in ftool.objectValues()
+            )
             items.update(faceted_items)
 
         items = items.items()
@@ -46,17 +45,15 @@ class FacetedPortalTypesVocabulary(object):
 #
 @implementer(IVocabularyFactory)
 class FacetedOnlyPortalTypesVocabulary(object):
-    """Vocabulary factory only for faceted portal types.
-    """
+    """Vocabulary factory only for faceted portal types."""
 
     def __call__(self, *args, **kwargs):
-        ftool = getToolByName(getSite(), 'portal_faceted', None)
+        ftool = getToolByName(getSite(), "portal_faceted", None)
 
         if ftool is None:
             return SimpleVocabulary([])
 
-        items = dict((t.getId(), t.title_or_id())
-                     for t in ftool.objectValues())
+        items = dict((t.getId(), t.title_or_id()) for t in ftool.objectValues())
 
         items = items.items()
         items.sort(key=lowercase_text)

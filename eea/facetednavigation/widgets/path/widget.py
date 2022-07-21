@@ -11,57 +11,55 @@ from eea.facetednavigation.widgets.path.interfaces import DisplaySchemata
 from eea.facetednavigation import EEAMessageFactory as _
 import six
 
-logger = logging.getLogger('eea.facetednavigation')
+logger = logging.getLogger("eea.facetednavigation")
 
 
 class Widget(AbstractWidget):
-    """ Widget
-    """
-    widget_type = 'path'
-    widget_label = _('Path')
+    """Widget"""
+
+    widget_type = "path"
+    widget_label = _("Path")
 
     groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
-    index = ViewPageTemplateFile('widget.pt')
+    index = ViewPageTemplateFile("widget.pt")
 
     @property
     def data_root(self):
-        """ Get navigation root
-        """
+        """Get navigation root"""
         site = self.context.portal_url.getPortalObject()
-        site_url = '/'.join(site.getPhysicalPath())
-        site_url = site_url.strip('/')
-        data_root = self.data.get('root', '') or ''
-        data_root = data_root.strip().strip('/')
+        site_url = "/".join(site.getPhysicalPath())
+        site_url = site_url.strip("/")
+        data_root = self.data.get("root", "") or ""
+        data_root = data_root.strip().strip("/")
         if six.PY2 and isinstance(data_root, six.text_type):
-            data_root = data_root.encode('utf-8')
+            data_root = data_root.encode("utf-8")
         if data_root.startswith(site_url):
-            data_root = '/' + data_root
-            return data_root.split('/')
+            data_root = "/" + data_root
+            return data_root.split("/")
 
-        site_url = site_url.split('/')
+        site_url = site_url.split("/")
         if data_root:
-            data_root = data_root.split('/')
+            data_root = data_root.split("/")
         else:
             data_root = []
         site_url.extend(data_root)
-        site_url.insert(0, '')
+        site_url.insert(0, "")
         return site_url
 
     @property
     def root(self):
-        """ Get navigation root language dependent
-        """
-        getLanguage = getattr(self.context, 'getLanguage', None)
+        """Get navigation root language dependent"""
+        getLanguage = getattr(self.context, "getLanguage", None)
         if not getLanguage:
             return self.data_root
 
-        lang = getLanguage() or self.request.get('LANGUAGE', '')
+        lang = getLanguage() or self.request.get("LANGUAGE", "")
         if not lang:
             return self.data_root
 
-        root = '/'.join(self.data_root)
+        root = "/".join(self.data_root)
         root = self.context.unrestrictedTraverse(root, None)
-        getTranslation = getattr(root, 'getTranslation', None)
+        getTranslation = getattr(root, "getTranslation", None)
         if not getTranslation:
             return self.data_root
 
@@ -74,33 +72,32 @@ class Widget(AbstractWidget):
 
     @property
     def default(self):
-        """ Default value
-        """
-        data_default = self.data.get('default', '')
+        """Default value"""
+        data_default = self.data.get("default", "")
         if not data_default:
-            return ''
+            return ""
 
         if six.PY2 and isinstance(data_default, six.text_type):
-            data_default = data_default.encode('utf-8')
+            data_default = data_default.encode("utf-8")
 
-        data_list = [d for d in data_default.strip().strip('/').split('/') if d]
+        data_list = [d for d in data_default.strip().strip("/").split("/") if d]
         root = self.data_root[:]
         root.extend(data_list)
 
-        url = '/'.join(root)
+        url = "/".join(root)
         folder = self.context.unrestrictedTraverse(url, None)
         if not folder:
-            return ''
+            return ""
 
-        getTranslation = getattr(folder, 'getTranslation', None)
+        getTranslation = getattr(folder, "getTranslation", None)
         if not getTranslation:
             return data_default
 
-        getLanguage = getattr(self.context, 'getLanguage', None)
+        getLanguage = getattr(self.context, "getLanguage", None)
         if not getLanguage:
             return data_default
 
-        lang = getLanguage() or self.request.get('LANGUAGE', '')
+        lang = getLanguage() or self.request.get("LANGUAGE", "")
         if not lang:
             return data_default
 
@@ -108,26 +105,25 @@ class Widget(AbstractWidget):
         if not translation:
             return data_default
 
-        url = '/'.join(translation.getPhysicalPath())
-        root = '/'.join(self.root)
-        return url.replace(root, '', 1)
+        url = "/".join(translation.getPhysicalPath())
+        root = "/".join(self.root)
+        return url.replace(root, "", 1)
 
     def query(self, form):
-        """ Get value from form and return a catalog dict query
-        """
+        """Get value from form and return a catalog dict query"""
         query = {}
-        index = self.data.get('index', '')
+        index = self.data.get("index", "")
         if six.PY2:
-            index = index.encode('utf-8', 'replace')
+            index = index.encode("utf-8", "replace")
         if not index:
             return query
 
         if self.hidden:
             value = self.default
         else:
-            value = form.get(self.data.getId(), '')
+            value = form.get(self.data.getId(), "")
 
-        value = value.strip().strip('/')
+        value = value.strip().strip("/")
         if not value:
             return query
 
@@ -135,11 +131,11 @@ class Widget(AbstractWidget):
         if not url:
             return query
 
-        url.extend(value.split('/'))
-        value = '/'.join(url).rstrip('/')
+        url.extend(value.split("/"))
+        value = "/".join(url).rstrip("/")
 
-        depth = safeToInt(self.data.get('depth', 0))
-        query[index] = {"query": value, 'level': depth}
+        depth = safeToInt(self.data.get("depth", 0))
+        query[index] = {"query": value, "level": depth}
 
         logger.debug(query)
         return query

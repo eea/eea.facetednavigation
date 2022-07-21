@@ -10,30 +10,30 @@ import six
 
 
 class ITalSchema(ISchema):
-    """ Widget
-    """
+    """Widget"""
+
     index = schema.Choice(
-        title=_(u'Catalog index'),
-        description=_(u'Catalog index to use for search'),
-        vocabulary=u'eea.faceted.vocabularies.SortingCatalogIndexes'
+        title=_("Catalog index"),
+        description=_("Catalog index to use for search"),
+        vocabulary="eea.faceted.vocabularies.SortingCatalogIndexes",
     )
 
     default = schema.TextLine(
-        title=_(u'Tal Expression'),
-        description=_(u'Default tal expression for query value'),
+        title=_("Tal Expression"),
+        description=_("Default tal expression for query value"),
         required=False,
-        default=u'string:',
+        default="string:",
     )
     default._type = (six.text_type, str)
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
+
     fields = field.Fields(ITalSchema).select(
-        u'title',
-        u'index',
-        u'default',
+        "title",
+        "index",
+        "default",
     )
 
 

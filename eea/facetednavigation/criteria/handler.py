@@ -20,16 +20,15 @@ logger = logging.getLogger("eea.facetednavigation")
 
 @implementer(ICriteria)
 class Criteria(object):
-    """ Handle criteria
-    """
+    """Handle criteria"""
+
     def __init__(self, context):
-        """ Handle criteria
-        """
+        """Handle criteria"""
         # LinguaPlone support
         if IDontInheritConfiguration.providedBy(context):
             self.context = context
         else:
-            canonical = getattr(context, 'getCanonical', None)
+            canonical = getattr(context, "getCanonical", None)
             if canonical:
                 self.context = canonical()
             else:
@@ -37,8 +36,7 @@ class Criteria(object):
         self.criteria = self._criteria()
 
     def _criteria(self):
-        """ Get criteria from annotations
-        """
+        """Get criteria from annotations"""
         anno = IAnnotations(self.context)
         criteria = anno.get(ANNO_CRITERIA, None)
         if criteria is None:
@@ -46,49 +44,44 @@ class Criteria(object):
         return anno[ANNO_CRITERIA]
 
     def _update(self, values):
-        """ Update criteria
-        """
+        """Update criteria"""
         anno = IAnnotations(self.context)
         anno[ANNO_CRITERIA] = PersistentList(values)
         self.criteria = anno[ANNO_CRITERIA]
+
     #
     # Getters
     #
 
     def newid(self):
-        """ Get new id
-        """
+        """Get new id"""
         return Criterion().getId()
 
     def get(self, key, default=None):
-        """ Get criterion
-        """
+        """Get criterion"""
         for cid, cvalue in self.items():
             if key == cid:
                 return cvalue
         return default
 
     def keys(self):
-        """ Criteria keys
-        """
+        """Criteria keys"""
         return [criterion.getId() for criterion in self.criteria]
 
     def values(self):
-        """ Criteria values
-        """
+        """Criteria values"""
         return [criterion for criterion in self.criteria]
 
     def items(self):
-        """ Criteria items
-        """
+        """Criteria items"""
         return [(criterion.getId(), criterion) for criterion in self.criteria]
+
     #
     # Setters
     #
 
-    def add(self, wid, position, section='default', **kwargs):
-        """ Add criterion
-        """
+    def add(self, wid, position, section="default", **kwargs):
+        """Add criterion"""
         widget = self.widget(wid)
         if not widget:
             raise NameError("Widget type '%s' is undefined" % wid)
@@ -96,28 +89,28 @@ class Criteria(object):
         properties = {}
         criteria = self.criteria
         taken_ids = [criterion.getId() for criterion in criteria]
-        properties['_taken_ids_'] = taken_ids
-        if '_cid_' in kwargs:
-            properties['_cid_'] = kwargs.pop('_cid_')
-        criterion = Criterion(widget=wid, position=position,
-                              section=section, **properties)
+        properties["_taken_ids_"] = taken_ids
+        if "_cid_" in kwargs:
+            properties["_cid_"] = kwargs.pop("_cid_")
+        criterion = Criterion(
+            widget=wid, position=position, section=section, **properties
+        )
 
         # insert the new criterion at the right place in criteria
-        voc = getUtility(IVocabularyFactory,
-                         'eea.faceted.vocabularies.WidgetPositions')
+        voc = getUtility(IVocabularyFactory, "eea.faceted.vocabularies.WidgetPositions")
         # we need to take into account position and section
         positions = []
         for term in voc(self.context):
-            positions.append('{0}_default'.format(term.value))
-            positions.append('{0}_advanced'.format(term.value))
+            positions.append("{0}_default".format(term.value))
+            positions.append("{0}_advanced".format(term.value))
         # will be inserted at the end by default
         insert_index = len(criteria)
-        crit_pos_sect = '{0}_{1}'.format(position, section)
+        crit_pos_sect = "{0}_{1}".format(position, section)
         for index, stored_criterion in enumerate(criteria):
-            stored_crit_pos_sect = '{0}_{1}'.format(stored_criterion.position,
-                                                    stored_criterion.section)
-            if (positions.index(crit_pos_sect) <
-               positions.index(stored_crit_pos_sect)):
+            stored_crit_pos_sect = "{0}_{1}".format(
+                stored_criterion.position, stored_criterion.section
+            )
+            if positions.index(crit_pos_sect) < positions.index(stored_crit_pos_sect):
                 insert_index = index
                 break
         criteria.insert(insert_index, criterion)
@@ -128,10 +121,9 @@ class Criteria(object):
         return cid
 
     def delete(self, cid):
-        """ Delete criteria by given ids
-        """
+        """Delete criteria by given ids"""
         if not cid:
-            raise TypeError('delete takes exactly one argument (0 given)')
+            raise TypeError("delete takes exactly one argument (0 given)")
 
         for index, criterion in enumerate(self.criteria):
             criterion_id = criterion.getId()
@@ -141,13 +133,12 @@ class Criteria(object):
         raise KeyError(cid)
 
     def edit(self, cid, **properties):
-        """ Update criterion properties
-        """
+        """Update criterion properties"""
         criterion = self.get(cid)
         if not criterion:
             raise KeyError(cid)
 
-        wid = properties.get('widget', None)
+        wid = properties.get("widget", None)
         schema = self.schema(wid=wid, cid=cid)
 
         criteria = {}
@@ -166,14 +157,13 @@ class Criteria(object):
         self.criteria._p_changed = 1
 
     def upgrade(self, cid):
-        """ Upgrade criterion properties
-        """
+        """Upgrade criterion properties"""
         criterion = self.get(cid)
         if not criterion:
             return
         properties = criterion.__dict__
 
-        wid = properties.get('widget', None)
+        wid = properties.get("widget", None)
         schema = self.schema(wid=wid, cid=cid)
         if not schema:
             return
@@ -201,7 +191,11 @@ class Criteria(object):
                     else:
                         logger.warn(
                             "%s: Cleaning up empty %s:%s from criterion %s",
-                            self.context.absolute_url(), key, value, cid)
+                            self.context.absolute_url(),
+                            key,
+                            value,
+                            cid,
+                        )
                         delattr(criterion, key)
                 except ValueError as err:
                     logger.exception(err)
@@ -209,26 +203,34 @@ class Criteria(object):
                     if getattr(criterion, key, None) == value:
                         logger.warn(
                             "%s: Cleaning up broken %s:%s from criterion %s",
-                            self.context.absolute_url(), key, value, cid)
+                            self.context.absolute_url(),
+                            key,
+                            value,
+                            cid,
+                        )
                         delattr(criterion, key)
                     continue
                 except Exception as err:
                     logger.warn(
                         "%s: Could not upgrade %s: %s from criterion %s",
-                        self.context.absolute_url(), key, value, cid)
+                        self.context.absolute_url(),
+                        key,
+                        value,
+                        cid,
+                    )
                     logger.exception(err)
                     continue
             criteria[key] = value
 
         criterion.update(**criteria)
         self.criteria._p_changed = 1
+
     #
     # Position
     #
 
     def up(self, cid):
-        """ Move criterion up
-        """
+        """Move criterion up"""
         insert = None
         index = 0
         for index, criterion in enumerate(self.criteria):
@@ -243,8 +245,7 @@ class Criteria(object):
         self.criteria.insert(index, insert)
 
     def down(self, cid):
-        """ Move criterion down
-        """
+        """Move criterion down"""
         insert = None
         index = 0
         for index, criterion in enumerate(self.criteria):
@@ -258,12 +259,11 @@ class Criteria(object):
         self.criteria.insert(index, insert)
 
     def position(self, **kwargs):
-        """ Update criteria position from given lists
-        """
-        voc = getUtility(IVocabularyFactory,
-                         'eea.faceted.vocabularies.WidgetPositions')
-        positions = ((term.value, kwargs.get(term.value, []))
-                     for term in voc(self.context))
+        """Update criteria position from given lists"""
+        voc = getUtility(IVocabularyFactory, "eea.faceted.vocabularies.WidgetPositions")
+        positions = (
+            (term.value, kwargs.get(term.value, [])) for term in voc(self.context)
+        )
         res = []
         for position, cids in positions:
             if isinstance(cids, (str, six.text_type)):
@@ -273,28 +273,27 @@ class Criteria(object):
                 criterion.update(position=position)
                 res.append(criterion)
         self._update(res)
+
     #
     # Utils
     #
 
     def widget(self, wid=None, cid=None):
-        """ Return widget by given wid or from criterion by given cid
-        """
+        """Return widget by given wid or from criterion by given cid"""
         if not wid:
             criterion = self.get(cid)
             if not criterion:
                 raise KeyError(cid)
-            wid = criterion.get('widget')
+            wid = criterion.get("widget")
         info = getUtility(IWidgetsInfo)
         return info.widget(wid)
 
     def schema(self, wid=None, cid=None):
-        """ Return widget schema by given wid or from criterion by given cid
-        """
+        """Return widget schema by given wid or from criterion by given cid"""
         if not wid:
             criterion = self.get(cid)
             if not criterion:
                 raise KeyError(cid)
-            wid = criterion.get('widget')
+            wid = criterion.get("widget")
         info = getUtility(IWidgetsInfo)
         return info.schema(wid)

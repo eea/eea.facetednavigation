@@ -10,23 +10,24 @@ import six
 
 
 class IPortletSchema(ISchema):
-    """ Schema
-    """
+    """Schema"""
+
     macro = schema.TextLine(
-        title=_(u'Portlet macro'),
-        description=_(u'Path to portlet macro'),
+        title=_("Portlet macro"),
+        description=_("Path to portlet macro"),
     )
     macro._type = (six.text_type, str)
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
+
     fields = field.Fields(IPortletSchema).select(
-        u'title',
-        u'default',
-        u'macro',
+        "title",
+        "default",
+        "macro",
     )
+
 
 __all__ = [
     IPortletSchema.__name__,

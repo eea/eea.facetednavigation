@@ -1,6 +1,7 @@
 """ Utils
 """
 from Products.CMFPlone.utils import safe_unicode
+
 #
 # Util for sort method
 #

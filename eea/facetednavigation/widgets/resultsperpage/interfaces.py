@@ -9,55 +9,51 @@ from eea.facetednavigation import EEAMessageFactory as _
 
 
 class IResultsPerPageSchema(ISchema):
-    """ Schema
-    """
+    """Schema"""
+
     start = schema.Int(
-        title=_(u'Start'),
-        description=_(u'Results per page starting value'),
+        title=_("Start"),
+        description=_("Results per page starting value"),
         required=False,
-        default=0
+        default=0,
     )
 
     end = schema.Int(
-        title=_(u'End'),
-        description=_(u'Results per page ending value'),
+        title=_("End"),
+        description=_("Results per page ending value"),
         required=False,
-        default=50
+        default=50,
     )
 
     step = schema.Int(
-        title=_(u'Step'),
-        description=_(u'Results per page step'),
+        title=_("Step"),
+        description=_("Results per page step"),
         required=False,
-        default=5
+        default=5,
     )
 
     default = schema.Int(
-        title=_(u'Default value'),
-        description=_(u'Default results per page'),
+        title=_("Default value"),
+        description=_("Default results per page"),
         required=False,
-        default=20
+        default=20,
     )
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
+
     fields = field.Fields(IResultsPerPageSchema).select(
-        u'title',
-        u'default',
+        "title",
+        "default",
     )
 
 
 class DisplaySchemata(FacetedSchemata):
-    """ Schemata display
-    """
-    label = u'display'
-    fields = field.Fields(IResultsPerPageSchema).select(
-        u'start',
-        u'end',
-        u'step'
-    )
+    """Schemata display"""
+
+    label = "display"
+    fields = field.Fields(IResultsPerPageSchema).select("start", "end", "step")
 
 
 __all__ = [

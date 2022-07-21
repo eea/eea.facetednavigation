@@ -16,41 +16,39 @@ from eea.facetednavigation.widgets.alphabetic.interfaces import (
     IAlphabeticWidget,
 )
 import six
-logger = logging.getLogger('eea.facetednavigation')
+
+logger = logging.getLogger("eea.facetednavigation")
 
 
 @implementer(IAlphabeticWidget)
 class Widget(CountableWidget):
-    """ Widget
-    """
-    widget_type = 'alphabetic'
-    widget_label = _('Alphabetic')
+    """Widget"""
+
+    widget_type = "alphabetic"
+    widget_label = _("Alphabetic")
 
     groups = (DefaultSchemata, LayoutSchemata, CountableSchemata)
-    index = ViewPageTemplateFile('widget.pt')
+    index = ViewPageTemplateFile("widget.pt")
 
     # Widget custom API
     def getAlphabet(self, lang):
-        """ Get language alphabet
-        """
+        """Get language alphabet"""
         try:
-            lang = lang.split('-')[0].lower()
+            lang = lang.split("-")[0].lower()
         except Exception as err:
             logger.exception(err)
-            lang = 'en'
-        return unicode_character_map.get(lang,
-                    unicode_character_map.get('en'))
+            lang = "en"
+        return unicode_character_map.get(lang, unicode_character_map.get("en"))
 
     def count(self, brains, sequence=None):
-        """ Intersect results
-        """
+        """Intersect results"""
         res = {}
-        lang = self.request.get('LANGUAGE', 'en')
+        lang = self.request.get("LANGUAGE", "en")
         sequence = [item[0] for item in self.getAlphabet(lang)]
         if not sequence:
             return res
 
-        index_id = self.data.get('index')
+        index_id = self.data.get("index")
         if not index_id:
             return res
 
@@ -62,9 +60,9 @@ class Widget(CountableWidget):
             if not isinstance(xval, (six.binary_type, six.text_type)):
                 continue
             if isinstance(xval, six.binary_type):
-                xval = xval.decode('utf-8', 'replace')
+                xval = xval.decode("utf-8", "replace")
             letter = xval[0].upper()
             count = res.get(letter, 0)
             res[letter] = count + 1
-        res['all'] = index + 1
+        res["all"] = index + 1
         return res

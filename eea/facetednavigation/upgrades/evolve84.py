@@ -15,7 +15,7 @@ def migrate_autocomplete_widget(context):
     view. To maintain backward compatibility we will set the value of
     this 'autocomplete_view' field to solr suggestions view.
     """
-    ctool = getToolByName(context, 'portal_catalog')
+    ctool = getToolByName(context, "portal_catalog")
     iface = interfaceToName(context, IFacetedNavigable)
     brains = ctool.unrestrictedSearchResults(object_provides=iface)
 
@@ -25,12 +25,11 @@ def migrate_autocomplete_widget(context):
         settings = ICriteria(doc)
 
         for criterion in settings.values():
-            if criterion.widget == 'autocomplete':
-                criterion.autocomplete_view = u'solr-autocomplete-suggest'
+            if criterion.widget == "autocomplete":
+                criterion.autocomplete_view = "solr-autocomplete-suggest"
                 logger.info(
-                    'Set defaut autocomplete view of widget: %s',
-                    criterion.title
+                    "Set defaut autocomplete view of widget: %s", criterion.title
                 )
                 count += 1
 
-    logger.info('Migrated %s autocomplete widgets', count)
+    logger.info("Migrated %s autocomplete widgets", count)

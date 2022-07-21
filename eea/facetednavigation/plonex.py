@@ -2,11 +2,13 @@
 """
 from Products.Five.browser import BrowserView
 from zope.interface import Interface
+
 #
 # Older imports
 #
 try:
     from zope.browserpage import viewpagetemplatefile
+
     ViewPageTemplateFile = viewpagetemplatefile.ViewPageTemplateFile
 except (ImportError, AttributeError):
     # BBB Plone < 4.3
@@ -14,6 +16,7 @@ except (ImportError, AttributeError):
 
 try:
     from zope.pagetemplate import engine
+
     TrustedEngine = engine.TrustedEngine
     TrustedZopeContext = engine.TrustedZopeContext
 except (ImportError, AttributeError):
@@ -22,6 +25,7 @@ except (ImportError, AttributeError):
 
 try:
     from zope.browsermenu import menu
+
     BrowserSubMenuItem = menu.BrowserSubMenuItem
 except (ImportError, AttributeError):
     # BBB Plone < 4.3
@@ -29,6 +33,7 @@ except (ImportError, AttributeError):
 
 try:
     from zope.browsermenu import menu
+
     BrowserMenu = menu.BrowserMenu
 except (ImportError, AttributeError):
     # BBB Plone < 4.3
@@ -41,22 +46,24 @@ except (ImportError, AttributeError):
 
 try:
     from plone.protect import utils
+
     addTokenToUrl = utils.addTokenToUrl
 except (ImportError, AttributeError):
     # BBB Plone 4
     def addTokenToUrl(url, *args, **kwargs):
-        """ plone.protect
-        """
+        """plone.protect"""
         return url
+
 
 try:
     from plone.protect import interfaces as protect
+
     IDisableCSRFProtection = protect.IDisableCSRFProtection
 except (ImportError, AttributeError):
     # BBB Plone 4
     class IDisableCSRFProtection(Interface):
-        """ Fallback
-        """
+        """Fallback"""
+
 
 #
 # plone.app.contenttypes
@@ -64,12 +71,13 @@ except (ImportError, AttributeError):
 
 try:
     from plone.app.contenttypes.browser import folder
+
     FolderView = folder.FolderView
 except (ImportError, AttributeError):
     # BBB Plone 4
     class FolderView(BrowserView):
-        """ Fallback Folder View
-        """
+        """Fallback Folder View"""
+
 
 #
 # plone.app.querystring
@@ -77,12 +85,14 @@ except (ImportError, AttributeError):
 
 try:
     from plone.app.querystring import queryparser
+
     parseFormquery = queryparser.parseFormquery
 except (ImportError, AttributeError):
+
     def parseFormquery(*args, **kwargs):
-        """ plone.app.querystring not installed
-        """
+        """plone.app.querystring not installed"""
         return {}
+
 
 #
 # collective.solr
@@ -90,16 +100,16 @@ except (ImportError, AttributeError):
 
 try:
     from collective.solr import interfaces
+
     ISolrConnectionManager = interfaces.ISolrConnectionManager
     ISolrSearch = interfaces.ISearch
 except (ImportError, AttributeError):
+
     class ISolrConnectionManager(Interface):
-        """ collective.solr not installed
-        """
+        """collective.solr not installed"""
 
     class ISolrSearch(Interface):
-        """ collective.solr not installed
-        """
+        """collective.solr not installed"""
 
 
 __all__ = [
@@ -107,5 +117,5 @@ __all__ = [
     TrustedZopeContext,
     TrustedEngine,
     BrowserSubMenuItem,
-    BrowserMenu
+    BrowserMenu,
 ]
