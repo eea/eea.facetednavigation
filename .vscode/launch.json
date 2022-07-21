@@ -18,7 +18,10 @@
             "request": "launch",
             "module": "zope.testrunner",
             "args": [
-                "--test-path=eea"
+                "--test-path=./",
+                "--auto-progress",
+                "--auto-color",
+                "--verbose",
             ],
             "justMyCode": false
         }

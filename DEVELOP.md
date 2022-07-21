@@ -54,7 +54,7 @@ To use other **Plone** version run make with `-e` parameter:
 
 ## Develop
 
-Add your addons to `source.ini` and run:
+Run:
 
     make develop
 

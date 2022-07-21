@@ -55,7 +55,7 @@ all: clean bootstrap install develop
 
 .PHONY: clean
 clean:			## Cleanup environment
-	rm -rf bin etc include lib lib64 var inituser pyvenv.cfg
+	rm -rf bin etc include lib lib64 var inituser pyvenv.cfg *.egg-info
 
 .PHONY: bootstrap
 bootstrap:		## Bootstrap python environment
@@ -76,6 +76,10 @@ develop:		## Develop this add-on
 .PHONY: start
 start:			## Start Plone backend
 	bin/runwsgi -v etc/zope.ini
+
+.PHONY: test
+test:			## Run tests
+	bin/zope-testrunner --test-path=./ --auto-progress --auto-color --verbose
 
 .PHONY: help
 help:			## Show this help.
