@@ -26,7 +26,7 @@ to the web visitor.
 **FacetedNav may very well replace the standard collection content type**, since
 it covers same functionality and it adds a lot more features.
 
-**FacetedNav can also be used as an advanced search for your site**.
+**FacetedNav can also be used as an advanced search for your Plone Classic site**.
 
 .. contents::
 
@@ -80,23 +80,15 @@ It comes with plenty of configuration options and features like:
 Install
 =======
 
-* Add eea.facetednavigation to your eggs section in your buildout and
-  re-run buildout::
+* With pip::
 
-    [buildout]
-    eggs +=
-      eea.facetednavigation
+    bin/pip install eea.facetednavigation
 
-* You can download a sample buildout from:
+* Try it with docker::
 
-  - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4
-  - https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone5
+    docker run --rm -p 8080:8080 -e SITE="Plone" -e ADDONS="eea.facetednavigation" -e PROFILES="eea.facetednavigation:default" plone/plone-backend
 
-* Or via docker::
-
-    $ docker run --rm -p 8080:8080 -e ADDONS="eea.facetednavigation" plone
-
-* Install *EEA Faceted Navigation* within Site Setup > Add-ons
+* Install `EEA Faceted Navigation`` within `Site Setup > Add-ons`
 
 Getting started
 ===============
@@ -144,16 +136,9 @@ Setup
 
 You can enhance and boost search by replacing **ZCatalog** with **Apache Solr**, see `collective.solr`_. Thus:
 
-* Add **collective.solr** to your eggs section in your buildout and re-run buildout::
+* Add **collective.solr** to your `requirements.txt` and `constraints.txt`::
 
-    [buildout]
-    eggs +=
-      collective.solr
-
-* With **Plone 5** you'll need to use a more recent version::
-
-    [versions]
-    collective.solr = >= 8.0.0b1
+    bin/pip install collective.solr
 
 * Start solr::
 
@@ -265,19 +250,11 @@ Live demo
 - `The Mountaineers <https://mountaineers.org/explore/activities>`_
 
 
-Buildout installation
-=====================
-
-- `Plone 2 and 3 <https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone3>`_
-- `Plone 4+ <https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone4>`_
-- `Plone 5+ <https://github.com/eea/eea.facetednavigation/tree/master/buildouts/plone5>`_
-
-
 Source code
 ===========
 
 - `Plone 2 and 3 on github <https://github.com/eea/eea.facetednavigation/tree/plone3>`_
-- `Plone 4+ on github <https://github.com/eea/eea.facetednavigation>`_
+- `Plone 4 on github <https://github.com/eea/eea.facetednavigation/tree/plone4>`_
 - `Plone 5+ on github <https://github.com/eea/eea.facetednavigation>`_
 
 
@@ -290,7 +267,7 @@ Eggs repository
 
 Plone versions
 ==============
-It has been developed and tested for Plone 2, 3, 4 and 5. See buildouts section above.
+It has been developed and tested for Plone `2`, `3`, `4`, `5` and `6`.
 
 
 How to contribute
@@ -301,10 +278,6 @@ Other resources
 ===============
 
 - `Faceted navigation pattern <http://www.welie.com/patterns/showPattern.php?patternID=faceted-navigation>`_
-- `Faceted classification <http://www.webdesignpractices.com/navigation/facets.html>`_
-- `Flamenco faceted navigation <http://flamenco.berkeley.edu/demos.html>`_ made at University of Berkeley
-- `A simpler Faceted plone 3 product made 2008 <http://plone.org/products/faceted-navigation>`_
-- `Folder navigation (GSoC) <http://plone.org/support/forums/core#nabble-td3165375>`_ A new product Folder Navigation in early development]
 - `Exhibit <http://www.simile-widgets.org/exhibit/>`_ Client based faceted navigation via javascript
 
 Copyright and license

@@ -1,0 +1,25 @@
+version: "3"
+services:
+  plone5:
+    image: plone/plone-backend:5
+    ports:
+    - "8080"
+    volumes:
+    - ./:/app/src/eea.facetednavigation
+    environment:
+      SITE: "Plone"
+      ADDONS: "eea.facetednavigation"
+      PROFILES: "eea.facetednavigation:default"
+      DEVELOP: "/app/src/eea.facetednavigation"
+
+  plone6:
+    image: plone/plone-backend:6.0.0a6
+    ports:
+    - "8080"
+    volumes:
+    - ./:/app/src/eea.facetednavigation
+    environment:
+      SITE: "Plone"
+      ADDONS: "eea.facetednavigation"
+      PROFILES: "eea.facetednavigation:default"
+      DEVELOP: "/app/src/eea.facetednavigation"
