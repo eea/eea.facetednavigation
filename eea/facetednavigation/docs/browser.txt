@@ -9,7 +9,7 @@ Imports
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
     >>> from eea.facetednavigation.tests.utils import preparefile
 
-    >>> from plone.testing.z2 import Browser
+    >>> from plone.testing.zope import Browser
     >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
     >>> try:
     ...     from Products.CMFPlone.interfaces import IBundleRegistry

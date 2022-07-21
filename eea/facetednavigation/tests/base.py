@@ -1,7 +1,7 @@
 """ Base test cases
 """
 from Products.CMFPlone import setuphandlers
-from plone.testing import z2
+from plone.testing.zope import installProduct, uninstallProduct
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
@@ -21,7 +21,7 @@ class EEAFixture(PloneSandboxLayer):
         """
         import eea.facetednavigation
         self.loadZCML(package=eea.facetednavigation)
-        z2.installProduct(app, 'eea.facetednavigation')
+        installProduct(app, 'eea.facetednavigation')
 
     def setUpPloneSite(self, portal):
         """ Setup Plone
@@ -53,7 +53,7 @@ class EEAFixture(PloneSandboxLayer):
     def tearDownZope(self, app):
         """ Uninstall Zope
         """
-        z2.uninstallProduct(app, 'eea.facetednavigation')
+        uninstallProduct(app, 'eea.facetednavigation')
 
 EEAFIXTURE = EEAFixture()
 FUNCTIONAL_TESTING = FunctionalTesting(bases=(EEAFIXTURE,),

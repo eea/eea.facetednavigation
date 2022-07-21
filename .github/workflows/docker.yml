@@ -6,17 +6,31 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python: ["python38"]
         plone: ["5.2.8"]
 
     steps:
       - uses: actions/checkout@v2
-        name: Testing on Plone ${{ matrix.plone }} with Python ${{ matrix.python }}
+        name: Testing on Plone ${{ matrix.plone }}
         id: setup
         with:
-          python-version: ${{ matrix.python }}
           plone-version: ${{ matrix.plone }}
 
       - name: tests
         run: |
           docker run -i --rm -v $(pwd):/app/${{ github.event.repository.name }} -e DEVELOP="/app/${{ github.event.repository.name }}" -e ADDONS="/app/${{ github.event.repository.name }}[test]" plone/plone-backend:${{ matrix.plone }} bin/zope-testrunner --auto-color --auto-progress --test-path /app/${{ github.event.repository.name }}
+
+      - name: jslint
+        run: |
+          docker run -i --rm -v $(pwd):/code eeacms/jslint4java
+
+      - name: pyflakes
+        run: |
+          docker run -i --rm -v $(pwd):/code eeacms/pyflakes
+
+      - name: i18n
+        run: |
+          docker run -i --rm -v $(pwd):/code eeacms/i18ndude
+
+      - name: zptlint
+        run: |
+          docker run -i --rm -v $(pwd):/code eeacms/zptlint
