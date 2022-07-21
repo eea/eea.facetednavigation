@@ -33,7 +33,7 @@ setup(name=NAME,
       keywords='EEA Faceted Navigation FacetedNavigation Add-ons Plone Zope',
       author='European Environment Agency: IDM2 A-Team',
       author_email='eea-edw-a-team-alerts@googlegroups.com',
-      url='https://github.com/collective/eea.facetednavigation',
+      url='https://github.com/eea/eea.facetednavigation',
       license='GPL version 2',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['eea'],
@@ -49,6 +49,9 @@ setup(name=NAME,
       extras_require={
           'test': [
               'plone.app.testing',
+              'plone.testing',
+              'plone.app.contenttypes',
+              'zope.testrunner',
           ],
       },
       entry_points="""
