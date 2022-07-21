@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-09-24 11:07+0000\n"
+"POT-Creation-Date: 2022-07-21 14:23+0000\n"
 "PO-Revision-Date: 2019-10-07 14:24+0200\n"
 "Last-Translator: Aleix Llusà Serra <a.llusa@iskra.cat>\n"
 "Language-Team: Català <ca@li.org>\n"
@@ -97,6 +97,10 @@ msgstr "Alfabètic"
 msgid "An interface describing schema to be used within z3c.form"
 msgstr "La interfície que indica l'schema que cal usar d'entre els z3c.form"
 
+#: ../../facetednavigation/vocabularies/simple.py:41
+msgid "Apple"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Confirmeu que voleu eliminar el giny ${widget}?"
@@ -105,9 +109,17 @@ msgstr "Confirmeu que voleu eliminar el giny ${widget}?"
 msgid "Autocomplete"
 msgstr "Autocompleció"
 
+#: ../../facetednavigation/vocabularies/section.py:18
+msgid "Basic search"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Boolean"
 msgstr "Booleà"
+
+#: ../../facetednavigation/vocabularies/position.py:24
+msgid "Bottom"
+msgstr ""
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:37
 msgid "Can select multiple values"
@@ -143,9 +155,21 @@ msgstr "Índex del catàleg que s'utilitza per a cercar"
 msgid "Catalog query"
 msgstr "Cerca al catàleg"
 
+#: ../../facetednavigation/vocabularies/position.py:23
+msgid "Center bottom"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:21
+msgid "Center top"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
 msgstr "Selecció amb caselles"
+
+#: ../../facetednavigation/vocabularies/simple.py:40
+msgid "Classic"
+msgstr ""
 
 #: ../../facetednavigation/widgets/multiselect/interfaces.py:66
 msgid "Close on select"
@@ -230,6 +254,10 @@ msgstr "Data amb interval"
 #: ../../facetednavigation/widgets/debug/widget.py:14
 msgid "Debugger"
 msgstr "Depurador"
+
+#: ../../facetednavigation/vocabularies/simple.py:39
+msgid "Default"
+msgstr ""
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:24
 msgid "Default e-tag"
@@ -381,6 +409,10 @@ msgstr "Valor de l'error:"
 msgid "Export"
 msgstr "Exporta"
 
+#: ../../facetednavigation/vocabularies/section.py:19
+msgid "Extended search"
+msgstr ""
+
 #: ../../facetednavigation/profiles.zcml:34
 msgid "Extension profile for EEA Faceted Navigation settings that aren't version dependent."
 msgstr "Perfil d'instal·lació per a la configuració de la navegació facetada EEA que no depèn de versions."
@@ -474,6 +506,10 @@ msgstr "Futur"
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Utilitza, com a vocabulari, els valors únics indexats al catàleg"
+
+#: ../../facetednavigation/vocabularies/simple.py:42
+msgid "Green"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:111
 msgid "Hidden"
@@ -573,6 +609,10 @@ msgstr "Etiqueta (data inicial)"
 #: ../../facetednavigation/widgets/range/interfaces.py:24
 msgid "Label (start range)"
 msgstr "Etiqueta (inici de l'interval)"
+
+#: ../../facetednavigation/vocabularies/position.py:20
+msgid "Left"
+msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:1
 #: ../../facetednavigation/widgets/radio/widget.pt:1
@@ -694,6 +734,10 @@ msgstr "D'aquí a una setmana"
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next year"
 msgstr "D'aquí a un any"
+
+#: ../../facetednavigation/vocabularies/simple.py:22
+msgid "No"
+msgstr ""
 
 #: ../../facetednavigation/browser/app/exportimport.py:90
 msgid "No action provided"
@@ -849,6 +893,10 @@ msgstr "Invers"
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Opcions invertides"
+
+#: ../../facetednavigation/vocabularies/position.py:22
+msgid "Right"
+msgstr ""
 
 #: ../../facetednavigation/widgets/path/interfaces.py:25
 msgid "Root folder"
@@ -1037,6 +1085,10 @@ msgstr "Avui"
 msgid "Tomorrow"
 msgstr "Demà"
 
+#: ../../facetednavigation/vocabularies/position.py:19
+msgid "Top"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr "Tipus"
@@ -1104,6 +1156,10 @@ msgstr "Aquest giny només és visible per a l'usuari seleccionat"
 #: ../../facetednavigation/widgets/text/interfaces.py:30
 msgid "Wildcard search"
 msgstr "Cerca amb caràcters comodí"
+
+#: ../../facetednavigation/vocabularies/simple.py:23
+msgid "Yes"
+msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "Yesterday"
