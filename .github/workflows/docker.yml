@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true
       matrix:
         plone: ["5.2.8"]
 
@@ -15,22 +15,22 @@ jobs:
         with:
           plone-version: ${{ matrix.plone }}
 
-      - name: tests
+      - name: pyflakes
         run: |
-          docker run -i --rm -v $(pwd):/app/${{ github.event.repository.name }} -e DEVELOP="/app/${{ github.event.repository.name }}" -e ADDONS="/app/${{ github.event.repository.name }}[test]" plone/plone-backend:${{ matrix.plone }} bin/zope-testrunner --auto-color --auto-progress --test-path /app/${{ github.event.repository.name }}
+          docker run -i --rm -v $(pwd):/code eeacms/pyflakes
 
       - name: jslint
         run: |
           docker run -i --rm -v $(pwd):/code eeacms/jslint4java
 
-      - name: pyflakes
+      - name: zptlint
         run: |
-          docker run -i --rm -v $(pwd):/code eeacms/pyflakes
+          docker run -i --rm -v $(pwd):/code eeacms/zptlint
 
       - name: i18n
         run: |
           docker run -i --rm -v $(pwd):/code eeacms/i18ndude
 
-      - name: zptlint
+      - name: tests
         run: |
-          docker run -i --rm -v $(pwd):/code eeacms/zptlint
+          docker run -i --rm -v $(pwd):/app/${{ github.event.repository.name }} -e DEVELOP="/app/${{ github.event.repository.name }}" -e ADDONS="/app/${{ github.event.repository.name }}[test]" plone/plone-backend:${{ matrix.plone }} bin/zope-testrunner --auto-color --auto-progress --test-path /app/${{ github.event.repository.name }}
