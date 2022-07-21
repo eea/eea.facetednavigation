@@ -11,6 +11,7 @@ from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.vocabularies.utils import lowercase_text
 
+
 #
 # Object provides
 #

@@ -76,7 +76,7 @@ class FacetedCriteriaHandler(FacetedBasicHandler):
             for key, value in kwargs.items():
                 if not key.startswith(cid):
                     continue
-                key = key[len(cid) + 1 :]
+                key = key[(len(cid) + 1) :]
                 properties[key] = value
             handler.edit(cid, **properties)
         return self._redirect("Changes saved", to=self.redirect)

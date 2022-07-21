@@ -1,7 +1,9 @@
 """ Widget
 """
 import json
-import six.moves.urllib.request, six.moves.urllib.parse, six.moves.urllib.error
+import six.moves.urllib.request
+import six.moves.urllib.parse
+import six.moves.urllib.error
 from zope.interface import implementer
 from zope.component import queryUtility
 
