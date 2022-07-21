@@ -88,7 +88,8 @@ Install
 
     docker run --rm -p 8080:8080 -e SITE="Plone" -e ADDONS="eea.facetednavigation" -e PROFILES="eea.facetednavigation:default" plone/plone-backend
 
-* Install `EEA Faceted Navigation`` within `Site Setup > Add-ons`
+* Login to http://localhost:8080/Plone/login (`admin:admin`)
+* Install `EEA Faceted Navigation`` via `Site Setup > Add-ons`
 
 Develop
 =======
@@ -98,7 +99,7 @@ Develop
 Getting started
 ===============
 
-* Go to your working space and add a **Folder** and within **Actions** menu click on **Enable faceted navigation**.
+* Go to your working space and add a **Folder/Page** and within **Actions** menu click on **Enable faceted navigation**.
 * See more on the dedicated youtube channel: `EEA Web Systems Training`_
 
 Faceted settings

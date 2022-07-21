@@ -1,8 +1,12 @@
 Changelog
 =========
 
-14.8-dev0 - (unreleased)
+15.0-dev0 - (unreleased)
 ---------------------------
+* Breaking: Plone 6 support
+  [avoinea refs #231]
+* Breaking: Remove Plone 4 / Python 2 support
+  [avoinea refs #231]
 
 14.7 - (2021-10-29)
 ---------------------------
