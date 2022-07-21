@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Plone",
+            "type": "python",
+            "request": "launch",
+            "module": "Zope2.Startup.serve",
+            "args": [
+                "-v",
+                "${workspaceFolder}/etc/zope.ini"
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "Test Plone",
+            "type": "python",
+            "request": "launch",
+            "module": "zope.testrunner",
+            "args": [
+                "--test-path=eea"
+            ],
+            "justMyCode": false
+        }
+    ]
+}

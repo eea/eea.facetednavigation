@@ -38,7 +38,6 @@ var/
 pyvenv.cfg
 node_modules/
 .env
-.vscode/
 
 .python-version
 annotate.txt

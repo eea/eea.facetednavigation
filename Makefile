@@ -51,7 +51,11 @@ PIP_PARAMS=
 
 # Top-level targets
 .PHONY: all
-all: bootstrap install develop
+all: clean bootstrap install develop
+
+.PHONY: clean
+clean:			## Cleanup environment
+	rm -rf bin etc include lib lib64 var inituser pyvenv.cfg
 
 .PHONY: bootstrap
 bootstrap:		## Bootstrap python environment
@@ -60,7 +64,7 @@ bootstrap:		## Bootstrap python environment
 
 .PHONY: install
 install:		## Install Plone
-	bin/pip install Plone plone.volto -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
+	bin/pip install Paste Plone plone.volto -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
 	bin/pip install zope.testrunner plone.app.testing plone.reload dm.plonepatches.reload -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
 	bin/mkwsgiinstance -d . -u admin:admin
 	mkdir -p var/blobstorage var/filestorage

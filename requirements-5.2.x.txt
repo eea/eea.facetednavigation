@@ -1,1 +1,0 @@
--r https://dist.plone.org/release/5-latest/requirements.txt
