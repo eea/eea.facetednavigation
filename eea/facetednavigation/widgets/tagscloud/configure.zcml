@@ -1,39 +1,40 @@
 <configure
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:faceted="http://namespaces.zope.org/faceted"
-  i18n_domain="eea">
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    i18n_domain="eea"
+    >
 
   <faceted:widget
-    factory=".widget.Widget"
-    schema=".interfaces.ITagsCloudSchema"
-    />
+      factory=".widget.Widget"
+      schema=".interfaces.ITagsCloudSchema"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.tagscloud.view.js"
-    file="./view.js"
-    />
+      name="eea.facetednavigation.widgets.tagscloud.view.js"
+      file="./view.js"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.tagscloud.edit.js"
-    file="./edit.js"
-    />
+      name="eea.facetednavigation.widgets.tagscloud.edit.js"
+      file="./edit.js"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.tagscloud.view.css"
-    file="./view.css"
-    />
+      name="eea.facetednavigation.widgets.tagscloud.view.css"
+      file="./view.css"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.tagscloud.edit.css"
-    file="./edit.css"
-    />
+      name="eea.facetednavigation.widgets.tagscloud.edit.css"
+      file="./edit.css"
+      />
 
   <browser:page
-    for="eea.facetednavigation.interfaces.IFacetedNavigable"
-    name="tagscloud_counter"
-    class=".counter.TagsCloudCounter"
-    template="counter.pt"
-    permission="zope2.View"
-    />
+      name="tagscloud_counter"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".counter.TagsCloudCounter"
+      template="counter.pt"
+      permission="zope2.View"
+      />
 
 </configure>

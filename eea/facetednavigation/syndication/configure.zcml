@@ -1,22 +1,24 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="eea"
+    >
 
-  <adapter zcml:condition="have plone-43"
-    factory=".feed.FacetedFeed"
-    for="eea.facetednavigation.interfaces.IFacetedNavigable"
-    provides="Products.CMFPlone.interfaces.syndication.IFeed"
-    />
+  <adapter
+      factory=".feed.FacetedFeed"
+      provides="Products.CMFPlone.interfaces.syndication.IFeed"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      zcml:condition="have plone-43"
+      />
 
   <!-- skos syndication -->
   <browser:page
-    for="eea.facetednavigation.interfaces.IFacetedNavigable"
-    name="skos_syndication"
-    class=".skos.SKOS"
-    allowed_attributes="concepts"
-    permission="zope.Public"
-    />
+      name="skos_syndication"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".skos.SKOS"
+      allowed_attributes="concepts"
+      permission="zope.Public"
+      />
 
 </configure>

@@ -1,36 +1,39 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:faceted="http://namespaces.zope.org/faceted"
-  i18n_domain="eea">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    i18n_domain="eea"
+    >
 
   <faceted:widget
-    factory=".widget.Widget"
-    schema=".interfaces.IResultsFilterSchema"
-    />
+      factory=".widget.Widget"
+      schema=".interfaces.IResultsFilterSchema"
+      />
 
   <adapter
-    for=".interfaces.IResultsFilterWidget"
-    provides="..interfaces.IWidgetFilterBrains"
-    factory=".adapters.WidgetFilterBrains" />
+      factory=".adapters.WidgetFilterBrains"
+      provides="..interfaces.IWidgetFilterBrains"
+      for=".interfaces.IResultsFilterWidget"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.resultsfilter.view.css"
-    file="./view.css"
-    />
+      name="eea.facetednavigation.widgets.resultsfilter.view.css"
+      file="./view.css"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.resultsfilter.edit.css"
-    file="./edit.css"
-    />
+      name="eea.facetednavigation.widgets.resultsfilter.edit.css"
+      file="./edit.css"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.resultsfilter.view.js"
-    file="./view.js"
-    />
+      name="eea.facetednavigation.widgets.resultsfilter.view.js"
+      file="./view.js"
+      />
 
   <browser:resource
-    name="eea.facetednavigation.widgets.resultsfilter.edit.js"
-    file="./edit.js"
-    />
+      name="eea.facetednavigation.widgets.resultsfilter.edit.js"
+      file="./edit.js"
+      />
 
 </configure>
