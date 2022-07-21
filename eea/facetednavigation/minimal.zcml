@@ -12,7 +12,6 @@
 
   <!-- Dependencies -->
   <include package="collective.js.jqueryui" />
-  <include package="eea.faceted.vocabularies" />
   <include package="eea.jquery" />
 
   <include file="profiles.zcml" />
@@ -30,6 +29,7 @@
   <include package=".widgets" />
   <include package=".indexes" />
   <include package=".versions" />
+  <include package=".vocabularies" />
   <include package=".upgrades" />
   <include package=".views" />
 

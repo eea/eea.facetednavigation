@@ -5,6 +5,8 @@ Changelog
 ---------------------------
 * Breaking: Plone 6 support
   [avoinea refs #231]
+* Breaking: Drop eea.faceted.vocabularies dependency
+  [avoinea refs #231]
 * Breaking: Remove Plone 4 / Python 2 support
   [avoinea refs #231]
 

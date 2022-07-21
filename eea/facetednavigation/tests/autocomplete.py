@@ -4,7 +4,7 @@ import json
 from Products.Five import BrowserView
 from zope.interface import implementer
 
-from eea.faceted.vocabularies.autocomplete import IAutocompleteSuggest
+from eea.facetednavigation.vocabularies.autocomplete import IAutocompleteSuggest
 
 vocab = [
     ('Document', u"Document"),

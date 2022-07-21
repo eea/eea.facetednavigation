@@ -9,7 +9,7 @@ from lxml import etree
 
 from Products.Five import BrowserView
 
-from eea.faceted.vocabularies.autocomplete import IAutocompleteSuggest
+from eea.facetednavigation.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.autocomplete.interfaces import ISolrConnectionManager
