@@ -7,7 +7,7 @@ jobs:
       fail-fast: false
       matrix:
         python: [ "3.8" ]
-        plone: ["6.0.0a6", "5.2.8"]
+        plone: ["5.2.8"]
 
     steps:
       - uses: actions/checkout@v2
