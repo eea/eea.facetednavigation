@@ -1,8 +1,8 @@
 """ Simple static vocabularies
 """
-from eea.facetednavigation.vocabularies.utils import IVocabularyFactory
-from eea.facetednavigation.vocabularies import EEAMessageFactory as _
+from eea.facetednavigation import EEAMessageFactory as _
 from zope.interface import implementer
+from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 

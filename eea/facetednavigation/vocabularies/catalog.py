@@ -5,12 +5,11 @@ from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 from zope.interface import implementer
 from zope.component.hooks import getSite
+from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName
 from eea.facetednavigation.vocabularies.utils import lowercase_text
-from eea.facetednavigation.vocabularies.utils import IVocabularyFactory
-
 #
 # Object provides
 #

@@ -1,10 +1,10 @@
 """ Portal tools specific vocabularies
 """
-from eea.facetednavigation.vocabularies.utils import IVocabularyFactory
 from eea.facetednavigation.vocabularies.utils import lowercase_text
 from zope.component import getUtilitiesFor
 from zope.component.hooks import getSite
 from zope.interface import implementer
+from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
 from Products.CMFCore.utils import getToolByName

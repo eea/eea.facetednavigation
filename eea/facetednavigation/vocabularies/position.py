@@ -3,8 +3,7 @@
 from zope.interface import implementer
 from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
-
-from eea.facetednavigation.vocabularies.utils import IVocabularyFactory
+from zope.schema.interfaces import IVocabularyFactory
 from eea.facetednavigation import EEAMessageFactory as _
 
 
