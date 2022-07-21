@@ -93,7 +93,7 @@ Install
 Develop
 =======
 
-    make help
+* See `DEVELOP.md <https://github.com/eea/eea.facetednavigation/blob/master/DEVELOP.md>`_
 
 Getting started
 ===============
