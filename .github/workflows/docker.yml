@@ -17,19 +17,19 @@ jobs:
 
       - name: pyflakes
         run: |
-          docker run -i --rm -v $(pwd):/code eeacms/pyflakes
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/pyflakes
 
       - name: jslint
         run: |
-          docker run -i --rm -v $(pwd):/code eeacms/jslint4java
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/jslint4java
 
       - name: zptlint
         run: |
-          docker run -i --rm -v $(pwd):/code eeacms/zptlint
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/zptlint
 
       - name: i18n
         run: |
-          docker run -i --rm -v $(pwd):/code eeacms/i18ndude
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/i18ndude
 
       - name: tests
         run: |
