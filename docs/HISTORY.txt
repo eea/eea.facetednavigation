@@ -1,6 +1,9 @@
 Changelog
 =========
 
+14.8-dev0 - (unreleased)
+---------------------------
+
 14.7 - (2021-10-29)
 ---------------------------
 * Change: Release community contrib
