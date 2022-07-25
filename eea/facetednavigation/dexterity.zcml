@@ -1,8 +1,13 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-           xmlns:plone="http://namespaces.plone.org/plone"
-           i18n_domain="eea">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="eea"
+    >
 
-  <include package="plone.behavior" file="meta.zcml" />
+  <include
+      package="plone.behavior"
+      file="meta.zcml"
+      />
 
   <plone:behavior
       name="eea.faceted.navigable"

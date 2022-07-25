@@ -1,52 +1,61 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:five="http://namespaces.zope.org/five"
-    i18n_domain="eea">
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="eea"
+    >
 
-  <five:registerPackage package="." initialize=".initialize" />
-
-  <genericsetup:registerProfile
-      zcml:condition="have plone-5"
-      name="default"
-      directory="profiles/plone5"
-      title="EEA Faceted Navigation"
-      description="Extension profile for EEA Faceted Navigation."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
+  <five:registerPackage
+      package="."
+      initialize=".initialize"
       />
 
   <genericsetup:registerProfile
-      zcml:condition="not-have plone-5"
       name="default"
-      directory="profiles/plone4"
       title="EEA Faceted Navigation"
       description="Extension profile for EEA Faceted Navigation."
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/plone5"
+      zcml:condition="have plone-5"
+      />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="EEA Faceted Navigation"
+      description="Extension profile for EEA Faceted Navigation."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/plone4"
+      zcml:condition="not-have plone-5"
       />
 
   <genericsetup:registerProfile
       name="universal"
-      directory="profiles/common"
       title="EEA Faceted Navigation Common Configuration"
       description="Extension profile for EEA Faceted Navigation settings that aren't version dependent."
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/common"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
-      directory="profiles/uninstall"
       title="Uninstall EEA Faceted Navigation"
       description="Uninstall to remove EEA Faceted Navigation support"
       provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
       post_handler=".setuphandlers.uninstall_faceted"
       />
 
   <genericsetup:importStep
-    name="eea.facetednavigation.various"
-    title="EEA Faceted Navigation setup" description="Setup EEA Faceted Navigation"
-    handler="eea.facetednavigation.setuphandlers.setupVarious" />
+      name="eea.facetednavigation.various"
+      title="EEA Faceted Navigation setup"
+      description="Setup EEA Faceted Navigation"
+      handler="eea.facetednavigation.setuphandlers.setupVarious"
+      />
 
-  <utility factory=".HiddenProfiles" name="eea.facetednavigation" />
+  <utility
+      factory=".HiddenProfiles"
+      name="eea.facetednavigation"
+      />
 
 </configure>

@@ -4,154 +4,65 @@
  <!-- Cleanup -->
  <stylesheet id="faceted_view.css" remove="True" />
  <stylesheet id="faceted_edit.css" remove="True" />
+ <stylesheet id="++resource++eea.faceted-navigation.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.alphabets.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.autocomplete.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.checkbox.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.criteria.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.date.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.daterange.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.debug.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.etag.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.multiselect.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.path.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.portlet.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.radio.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.range.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.resultsfilter.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.resultsperpage.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.select.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.sorting.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.tagscloud.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.tal.view.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.text.view.css" remove="True" />
+ <stylesheet id="++resource++eea.faceted-navigation-edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.alphabets.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.autocomplete.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.checkbox.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.criteria.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.date.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.daterange.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.debug.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.etag.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.multiselect.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.path.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.portlet.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.radio.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.range.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.resultsfilter.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.resultsperpage.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.select.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.sorting.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.tagscloud.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.tal.edit.css" remove="True" />
+ <stylesheet id="++resource++eea.facetednavigation.widgets.text.edit.css" remove="True" />
 
- <!-- Faceted View -->
- <stylesheet id="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.alphabets.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.autocomplete.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-            bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.checkbox.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.criteria.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.date.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.daterange.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-            bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.debug.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.etag.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.multiselect.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.path.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.portlet.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.radio.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-            bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.range.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.resultsfilter.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.resultsperpage.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.select.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.sorting.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.tagscloud.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.tal.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.text.view.css"
-             insert-after="++resource++eea.faceted-navigation.css"
-             bundle="faceted-view" />
+ <!-- Cleanup eea.jquery dependencies -->
+ <stylesheet id="++resource++select2/select2.css" remove="True" />
+ <stylesheet id="++resource++jquery.select2uislider.css" remove="True" />
 
- <!-- Faceted Edit -->
- <stylesheet id="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.alphabets.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.autocomplete.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.checkbox.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.criteria.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.date.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.daterange.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.debug.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.etag.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.multiselect.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.path.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.portlet.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.radio.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.range.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.resultsfilter.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.resultsperpage.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.select.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.sorting.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.tagscloud.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.tal.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
- <stylesheet id="++resource++eea.facetednavigation.widgets.text.edit.css"
-             insert-after="++resource++eea.faceted-navigation-edit.css"
-             expression="python:'configure_faceted.html' in request.URL0"
-             bundle="faceted-edit" />
+ <!-- Faceted CSS static resources -->
+ <stylesheet
+    id="++resource++facetednavigation/faceted-jquery.min.css"
+    bundle="faceted-view" />
+
+ <stylesheet
+    id="++resource++facetednavigation/faceted-view.min.css"
+    bundle="faceted-view" />
+
+ <stylesheet
+    id="++resource++facetednavigation/faceted-edit.min.css"
+    expression="python:'configure_faceted.html' in request.URL0"
+    bundle="faceted-edit" />
 
 </object>

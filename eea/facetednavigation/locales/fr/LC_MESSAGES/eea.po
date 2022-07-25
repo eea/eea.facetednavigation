@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-09-24 11:07+0000\n"
+"POT-Creation-Date: 2022-07-21 14:23+0000\n"
 "PO-Revision-Date: 2016-02-23 12:06+0100\n"
 "Last-Translator: Vincent Fretin <vincent.fretin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,6 +101,10 @@ msgstr "Alphabet"
 msgid "An interface describing schema to be used within z3c.form"
 msgstr "An interface describing schema to be used within z3c.form"
 
+#: ../../facetednavigation/vocabularies/simple.py:41
+msgid "Apple"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Êtes-vous sûrs de vouloir supprimer le widget ${widget}?"
@@ -109,9 +113,17 @@ msgstr "Êtes-vous sûrs de vouloir supprimer le widget ${widget}?"
 msgid "Autocomplete"
 msgstr "Autocomplétion"
 
+#: ../../facetednavigation/vocabularies/section.py:18
+msgid "Basic search"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Boolean"
 msgstr "Booléen"
+
+#: ../../facetednavigation/vocabularies/position.py:24
+msgid "Bottom"
+msgstr ""
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:37
 msgid "Can select multiple values"
@@ -150,9 +162,21 @@ msgstr "Index du catalogue à utiliser pour la recherche"
 msgid "Catalog query"
 msgstr "Requête catalogue"
 
+#: ../../facetednavigation/vocabularies/position.py:23
+msgid "Center bottom"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:21
+msgid "Center top"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
 msgstr "Cases à cocher"
+
+#: ../../facetednavigation/vocabularies/simple.py:40
+msgid "Classic"
+msgstr ""
 
 #: ../../facetednavigation/widgets/multiselect/interfaces.py:66
 msgid "Close on select"
@@ -244,6 +268,10 @@ msgstr "Intervalle entre les dates"
 #: ../../facetednavigation/widgets/debug/widget.py:14
 msgid "Debugger"
 msgstr "Débogueur"
+
+#: ../../facetednavigation/vocabularies/simple.py:39
+msgid "Default"
+msgstr ""
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:24
 msgid "Default e-tag"
@@ -406,6 +434,10 @@ msgstr "Valeur de l'erreur:"
 msgid "Export"
 msgstr "Exporter"
 
+#: ../../facetednavigation/vocabularies/section.py:19
+msgid "Extended search"
+msgstr ""
+
 #: ../../facetednavigation/profiles.zcml:34
 msgid "Extension profile for EEA Faceted Navigation settings that aren't version dependent."
 msgstr ""
@@ -503,6 +535,10 @@ msgstr "Futur"
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Utiliser l'ensemble des valeurs indexées comme vocabulaire"
+
+#: ../../facetednavigation/vocabularies/simple.py:42
+msgid "Green"
+msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/widgets/interfaces.py:111
@@ -605,6 +641,10 @@ msgstr "Intitulé (date début)"
 #: ../../facetednavigation/widgets/range/interfaces.py:24
 msgid "Label (start range)"
 msgstr "Intitulé (plage début)"
+
+#: ../../facetednavigation/vocabularies/position.py:20
+msgid "Left"
+msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:1
 #: ../../facetednavigation/widgets/radio/widget.pt:1
@@ -735,6 +775,10 @@ msgstr "Dans 1 semaine"
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next year"
 msgstr "Dans 1 an"
+
+#: ../../facetednavigation/vocabularies/simple.py:22
+msgid "No"
+msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/browser/app/exportimport.py:90
@@ -900,6 +944,10 @@ msgstr "Inverser"
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Inverser l'ordre des valeurs"
+
+#: ../../facetednavigation/vocabularies/position.py:22
+msgid "Right"
+msgstr ""
 
 #. Default: ""
 #: ../../facetednavigation/widgets/path/interfaces.py:25
@@ -1098,6 +1146,10 @@ msgstr "Aujourd'hui"
 msgid "Tomorrow"
 msgstr "Demain"
 
+#: ../../facetednavigation/vocabularies/position.py:19
+msgid "Top"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr "Type"
@@ -1173,6 +1225,10 @@ msgstr "Le widget ne sera visible que pour l'utilisateur indiqué"
 #: ../../facetednavigation/widgets/text/interfaces.py:30
 msgid "Wildcard search"
 msgstr "Recherche générique"
+
+#: ../../facetednavigation/vocabularies/simple.py:23
+msgid "Yes"
+msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:26
 msgid "Yesterday"

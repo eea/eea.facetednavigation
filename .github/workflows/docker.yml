@@ -1,0 +1,36 @@
+name: Run Tests with Docker
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        plone: ["5.2.8"]
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Testing on Plone ${{ matrix.plone }}
+        id: setup
+        with:
+          plone-version: ${{ matrix.plone }}
+
+      - name: pyflakes
+        run: |
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/pyflakes
+
+      - name: jslint
+        run: |
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/jslint4java
+
+      - name: zptlint
+        run: |
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/zptlint
+
+      - name: i18n
+        run: |
+          docker run -i --rm -v $(pwd)/eea:/code eeacms/i18ndude
+
+      - name: tests
+        run: |
+          docker run -i --rm -v $(pwd):/app/${{ github.event.repository.name }} -e DEVELOP="/app/${{ github.event.repository.name }}" -e ADDONS="/app/${{ github.event.repository.name }}[test]" plone/plone-backend:${{ matrix.plone }} bin/zope-testrunner --auto-color --auto-progress --test-path /app/${{ github.event.repository.name }}

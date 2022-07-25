@@ -1,0 +1,24 @@
+// Edit
+import "../eea/facetednavigation/browser/javascript/edit.js";
+
+// Widgets
+import "../eea/facetednavigation/widgets/alphabetic/edit.js";
+import "../eea/facetednavigation/widgets/autocomplete/edit.js";
+import "../eea/facetednavigation/widgets/checkbox/edit.js";
+import "../eea/facetednavigation/widgets/criteria/edit.js";
+import "../eea/facetednavigation/widgets/date/edit.js";
+import "../eea/facetednavigation/widgets/daterange/edit.js";
+import "../eea/facetednavigation/widgets/debug/edit.js";
+import "../eea/facetednavigation/widgets/etag/edit.js";
+import "../eea/facetednavigation/widgets/multiselect/edit.js";
+import "../eea/facetednavigation/widgets/path/edit.js";
+import "../eea/facetednavigation/widgets/portlet/edit.js";
+import "../eea/facetednavigation/widgets/radio/edit.js";
+import "../eea/facetednavigation/widgets/range/edit.js";
+import "../eea/facetednavigation/widgets/resultsfilter/edit.js";
+import "../eea/facetednavigation/widgets/resultsperpage/edit.js";
+import "../eea/facetednavigation/widgets/select/edit.js";
+import "../eea/facetednavigation/widgets/sorting/edit.js";
+import "../eea/facetednavigation/widgets/tagscloud/edit.js";
+import "../eea/facetednavigation/widgets/tal/edit.js";
+import "../eea/facetednavigation/widgets/text/edit.js";

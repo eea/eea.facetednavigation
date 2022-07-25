@@ -1,6 +1,21 @@
 Changelog
 =========
 
+15.0 - (2022-07-25)
+---------------------------
+* Upgrade step: Within "Plone > Site Setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation.
+  Plone4: After running the upgrade step, check CSS/JS order
+  within ZMI > portal_css / portal_javascripts
+  [avoinea refs #231]
+* Cleanup: Bundle JS/CSS resource with webpack and remove individual
+  resource registrations
+  [avoinea refs #231]
+* Cleanup: Drop eea.jquery dependency
+  [avoinea refs #231]
+* Cleanup: Drop eea.faceted.vocabularies dependency
+  [avoinea refs #231]
+
 14.7 - (2021-10-29)
 ---------------------------
 * Change: Release community contrib

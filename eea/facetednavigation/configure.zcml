@@ -1,39 +1,52 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="eea"
+    >
 
   <include file="meta.zcml" />
   <include file="minimal.zcml" />
 
   <!-- Make default ATCT faceted navigable -->
-  <class class="Products.ATContentTypes.content.folder.ATFolder"
-    zcml:condition="installed Products.ATContentTypes.content.folder">
+  <class
+      class="Products.ATContentTypes.content.folder.ATFolder"
+      zcml:condition="installed Products.ATContentTypes.content.folder"
+      >
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 
-  <class class="Products.ATContentTypes.content.folder.ATBTreeFolder"
-    zcml:condition="installed Products.ATContentTypes.content.folder">
+  <class
+      class="Products.ATContentTypes.content.folder.ATBTreeFolder"
+      zcml:condition="installed Products.ATContentTypes.content.folder"
+      >
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 
-  <class class="Products.ATContentTypes.content.topic.ATTopic"
-    zcml:condition="installed Products.ATContentTypes.content.topic">
+  <class
+      class="Products.ATContentTypes.content.topic.ATTopic"
+      zcml:condition="installed Products.ATContentTypes.content.topic"
+      >
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 
-  <class class="plone.app.folder.folder.ATFolder"
-    zcml:condition="installed Products.ATContentTypes">
+  <class
+      class="plone.app.folder.folder.ATFolder"
+      zcml:condition="installed Products.ATContentTypes"
+      >
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 
-  <class class="plone.dexterity.content.Container"
-    zcml:condition="installed plone.app.dexterity">
+  <class
+      class="plone.dexterity.content.Container"
+      zcml:condition="installed plone.app.dexterity"
+      >
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 
-  <class class="plone.app.collection.collection.Collection"
-    zcml:condition="installed plone.app.collection">
+  <class
+      class="plone.app.collection.collection.Collection"
+      zcml:condition="installed plone.app.collection"
+      >
     <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
   </class>
 

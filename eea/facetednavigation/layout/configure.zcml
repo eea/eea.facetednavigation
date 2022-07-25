@@ -1,38 +1,39 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="eea"
+    >
 
   <subscriber
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
-         eea.facetednavigation.interfaces.IFacetedWillBeEnabledEvent"
-    handler=".events.faceted_will_be_enabled"
-    />
+      for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
+           eea.facetednavigation.interfaces.IFacetedWillBeEnabledEvent"
+      handler=".events.faceted_will_be_enabled"
+      />
 
   <subscriber
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
-         eea.facetednavigation.interfaces.IFacetedEnabledEvent"
-    handler=".events.faceted_enabled"
-    />
+      for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
+           eea.facetednavigation.interfaces.IFacetedEnabledEvent"
+      handler=".events.faceted_enabled"
+      />
 
   <subscriber
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
-         eea.facetednavigation.interfaces.IFacetedDisabledEvent"
-    handler=".events.faceted_disabled"
-    />
+      for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable
+           eea.facetednavigation.interfaces.IFacetedDisabledEvent"
+      handler=".events.faceted_disabled"
+      />
 
   <browser:page
-    name="faceted_layout"
-    for="..interfaces.IFacetedNavigable"
-    permission="eea.faceted.configure"
-    class=".menu.LayoutMenuHandler"
-    allowed_interface=".menu.ILayoutMenuHandler"
-    />
+      name="faceted_layout"
+      for="..interfaces.IFacetedNavigable"
+      class=".menu.LayoutMenuHandler"
+      allowed_interface=".menu.ILayoutMenuHandler"
+      permission="eea.faceted.configure"
+      />
 
   <adapter
-    factory=".layout.FacetedLayout"
-    for="..interfaces.IPossibleFacetedNavigable"
-    />
+      factory=".layout.FacetedLayout"
+      for="..interfaces.IPossibleFacetedNavigable"
+      />
 
 </configure>

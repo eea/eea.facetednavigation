@@ -9,14 +9,11 @@ Imports
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
     >>> from eea.facetednavigation.tests.utils import preparefile
 
-    >>> from plone.testing.z2 import Browser
-    >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
     >>> try:
-    ...     from Products.CMFPlone.interfaces import IBundleRegistry
+    ...   from plone.testing.zope import Browser
     ... except ImportError:
-    ...     PLONE = 4
-    ... else:
-    ...     PLONE = 5
+    ...   from plone.testing.z2 import Browser
+    >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
 
 Set up
 ------
@@ -64,20 +61,13 @@ CSS
   View css
 
     >>> browser.open(sandbox_url)
-    >>> if PLONE == 5:
-    ...     'faceted-view.min.css' in browser.contents
-    ... else:
-    ...     # XXX Plone 4 doesn't seem to use CSS bundles as expected
-    ...     re.search("faceted", browser.contents) is not None
+    >>> 'faceted-jquery.min' in browser.contents
     True
 
   Edit css
 
     >>> browser.open(sandbox_url + '/configure_faceted.html')
-    >>> if PLONE == 5:
-    ...    'faceted-edit.min.css' in browser.contents
-    ... else:
-    ...    re.search("eea.faceted-navigation-edit-cachekey-.*.css", browser.contents) is not None
+    >>> 'faceted-edit.min' in browser.contents
     True
 
 Javascript
@@ -86,20 +76,13 @@ Javascript
   View js
 
     >>> browser.open(sandbox_url)
-    >>> if PLONE == 5:
-    ...     'faceted-view.min.js' in browser.contents
-    ... else:
-    ...     # XXX Plone 4 doesn't seem to use JS bundles as expected
-    ...     re.search("faceted", browser.contents) is not None
+    >>> 'faceted-jquery.min' in browser.contents
     True
 
   Edit js
 
     >>> browser.open(sandbox_url + '/configure_faceted.html')
-    >>> if PLONE == 5:
-    ...    'faceted-edit.min.js' in browser.contents
-    ... else:
-    ...    re.search("eea.faceted-navigation-edit-cachekey-.*.js", browser.contents) is not None
+    >>> 'faceted-edit.min' in browser.contents
     True
 
 Views used by AJAX framework
