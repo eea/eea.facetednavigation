@@ -1,7 +1,11 @@
 """ Base test cases
 """
 from Products.CMFPlone import setuphandlers
-from plone.testing.zope import installProduct, uninstallProduct
+try:
+    from plone.testing.zope import installProduct, uninstallProduct
+except ImportError:
+    # BBB: Plone 4
+    from plone.testing.z2 import installProduct, uninstallProduct
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
