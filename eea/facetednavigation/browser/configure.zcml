@@ -156,12 +156,14 @@
       />
 
   <browser:resourceDirectory
-    name="facetednavigation"
-    directory="./static" />
+      name="facetednavigation"
+      directory="./static"
+      />
 
   <!-- BBB -->
   <browser:resourceDirectory
-    name="faceted_images"
-    directory="./static" />
+      name="faceted_images"
+      directory="./static"
+      />
 
 </configure>

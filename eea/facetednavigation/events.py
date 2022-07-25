@@ -21,37 +21,37 @@ except ImportError:
 
 @implementer(IFacetedEvent)
 class FacetedEvent(ObjectEvent):
-    """ Abstract faceted event. All faceted events should inherit from it """
+    """Abstract faceted event. All faceted events should inherit from it"""
 
 
 @implementer(IFacetedSettingsWillBeChangedEvent)
 class FacetedSettingsWillBeChangedEvent(FacetedEvent):
-    """ Sent if faceted navigation settings are going to be changed """
+    """Sent if faceted navigation settings are going to be changed"""
 
 
 @implementer(IFacetedGlobalSettingsChangedEvent)
 class FacetedGlobalSettingsChangedEvent(FacetedEvent):
-    """ Sent if faceted navigation global settings were changed """
+    """Sent if faceted navigation global settings were changed"""
 
 
 @implementer(IFacetedWillBeEnabledEvent)
 class FacetedWillBeEnabledEvent(FacetedEvent):
-    """ Event triggered if faceted navigation is going to be enabled """
+    """Event triggered if faceted navigation is going to be enabled"""
 
 
 @implementer(IFacetedEnabledEvent)
 class FacetedEnabledEvent(FacetedEvent):
-    """ Event triggered if faceted navigation was enabled """
+    """Event triggered if faceted navigation was enabled"""
 
 
 @implementer(IFacetedWillBeDisabledEvent)
 class FacetedWillBeDisabledEvent(FacetedEvent):
-    """ Event triggered if faceted navigation is goinf to be disabled """
+    """Event triggered if faceted navigation is goinf to be disabled"""
 
 
 @implementer(IFacetedDisabledEvent)
 class FacetedDisabledEvent(FacetedEvent):
-    """ Event triggered if faceted navigation was disabled """
+    """Event triggered if faceted navigation was disabled"""
 
 
 @implementer(IQueryWillBeExecutedEvent)

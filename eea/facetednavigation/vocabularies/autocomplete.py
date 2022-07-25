@@ -24,8 +24,9 @@ class AutocompleteVocabulary(object):
         """
         site = getSite()
         factories = getAdapters((site, site.REQUEST), IAutocompleteSuggest)
-        terms = [SimpleTerm(f[0], f[0], getattr(f[1], 'label', f[0]))
-                 for f in factories]
+        terms = [
+            SimpleTerm(f[0], f[0], getattr(f[1], "label", f[0])) for f in factories
+        ]
         return SimpleVocabulary(terms)
 
 

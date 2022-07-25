@@ -10,85 +10,86 @@ from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-
 class ICheckboxSchema(ISchema):
-    """ Schema
-    """
+    """Schema"""
+
     default = schema.List(
-        title=_(u'Default value'),
-        description=_(u'Default items (one per line)'),
+        title=_("Default value"),
+        description=_("Default items (one per line)"),
         required=False,
         unique=True,
-        value_type=schema.TextLine(title=u'Item'),
+        value_type=schema.TextLine(title="Item"),
     )
 
     operator = schema.Choice(
-        title=_(u'Default operator'),
-        description=_(u'Search with AND/OR between elements'),
-        vocabulary=SimpleVocabulary([
-            SimpleTerm(u'or', u'or', u'OR'),
-            SimpleTerm(u'and', u'and', u'AND')
-        ]),
-        default=u'or'
+        title=_("Default operator"),
+        description=_("Search with AND/OR between elements"),
+        vocabulary=SimpleVocabulary(
+            [SimpleTerm("or", "or", "OR"), SimpleTerm("and", "and", "AND")]
+        ),
+        default="or",
     )
 
     operator_visible = schema.Bool(
-        title=_(u"Operator visible"),
-        description=_(u"Let the end-user choose to search with "
-                      u"AND or OR between elements"),
+        title=_("Operator visible"),
+        description=_(
+            "Let the end-user choose to search with " "AND or OR between elements"
+        ),
         required=False,
-        default=False
+        default=False,
     )
 
     vocabulary = schema.Choice(
-        title=_(u"Vocabulary"),
-        description=_(u'Vocabulary to use to render widget items'),
-        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
-        required=False
+        title=_("Vocabulary"),
+        description=_("Vocabulary to use to render widget items"),
+        vocabulary="eea.faceted.vocabularies.PortalVocabularies",
+        required=False,
     )
 
     catalog = schema.Choice(
-        title=_(u'Catalog'),
-        description=_(u"Get unique values from catalog "
-                      u"as an alternative for vocabulary"),
-        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
-        required=False
+        title=_("Catalog"),
+        description=_(
+            "Get unique values from catalog " "as an alternative for vocabulary"
+        ),
+        vocabulary="eea.faceted.vocabularies.UseCatalog",
+        required=False,
     )
 
     maxitems = schema.Int(
-        title=_(u"Maximum items"),
-        description=_(u'Number of items visible in widget'),
+        title=_("Maximum items"),
+        description=_("Number of items visible in widget"),
         default=0,
-        required=False
+        required=False,
     )
 
     sortreversed = schema.Bool(
-        title=_(u"Reverse options"),
-        description=_(u"Sort options reversed"),
-        required=False
+        title=_("Reverse options"),
+        description=_("Sort options reversed"),
+        required=False,
     )
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
+
     fields = field.Fields(ICheckboxSchema).select(
-        u'title',
-        u'index',
-        u'operator',
-        u'operator_visible',
-        u'vocabulary',
-        u'catalog',
-        u'default'
+        "title",
+        "index",
+        "operator",
+        "operator_visible",
+        "vocabulary",
+        "catalog",
+        "default",
     )
 
+
 class DisplaySchemata(FacetedSchemata):
-    """ Schemata display
-    """
-    label = u'display'
+    """Schemata display"""
+
+    label = "display"
     fields = field.Fields(ICheckboxSchema).select(
-        u'maxitems',
-        u'sortreversed',
+        "maxitems",
+        "sortreversed",
     )
 
 

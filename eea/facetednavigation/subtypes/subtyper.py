@@ -25,101 +25,91 @@ from eea.facetednavigation import EEAMessageFactory as _
 
 import pkg_resources
 
-plone_version = pkg_resources.get_distribution('Products.CMFPlone').version
+plone_version = pkg_resources.get_distribution("Products.CMFPlone").version
+
 
 @implementer(IFacetedSubtyper)
 class FacetedPublicSubtyper(BrowserView):
-    """ Public support for subtyping objects
-        view for non IPossibleFacetedNavigable objects
+    """Public support for subtyping objects
+    view for non IPossibleFacetedNavigable objects
     """
-    def _redirect(self, msg=''):
-        """ Redirect
-        """
+
+    def _redirect(self, msg=""):
+        """Redirect"""
         if self.request:
             if msg:
-                IStatusMessage(self.request).addStatusMessage(msg, type='info')
+                IStatusMessage(self.request).addStatusMessage(msg, type="info")
             self.request.response.redirect(self.context.absolute_url())
         return msg
 
     @property
     def can_enable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return False
 
     @property
     def can_disable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return False
 
     @property
     def is_faceted(self):
-        """ Is faceted navigable?
-        """
+        """Is faceted navigable?"""
         return False
 
     @property
     def is_lingua_faceted(self):
-        """ Is LinguaPlone installed and context is faceted navigable?
-        """
+        """Is LinguaPlone installed and context is faceted navigable?"""
         return False
 
     def enable(self):
-        """ See IFacetedSubtyper
-        """
-        raise NotFound(self.context, 'enable', self.request)
+        """See IFacetedSubtyper"""
+        raise NotFound(self.context, "enable", self.request)
 
     def disable(self):
-        """ See IFacetedSubtyper
-        """
-        raise NotFound(self.context, 'disable', self.request)
+        """See IFacetedSubtyper"""
+        raise NotFound(self.context, "disable", self.request)
 
 
 class FacetedSubtyper(FacetedPublicSubtyper):
-    """ Support for subtyping objects
-        view for IPossibleFacetedNavigable objects
+    """Support for subtyping objects
+    view for IPossibleFacetedNavigable objects
     """
 
     @property
     def can_enable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return not self.is_faceted
 
     @property
     def can_disable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         return self.is_faceted
 
     @property
     def is_faceted(self):
-        """ Is faceted navigable?
-        """
+        """Is faceted navigable?"""
         return IFacetedNavigable.providedBy(self.context)
 
     @property
     def is_lingua_faceted(self):
-        """ Is LinguaPlone installed and context is faceted navigable?
-        """
+        """Is LinguaPlone installed and context is faceted navigable?"""
         if not self.is_faceted:
             return False
         # No Archetypes, no LinguaPlone in Plone6
-        if plone_version >= '6.0':
+        if plone_version >= "6.0":
             return False
         else:
-            qtool = getToolByName(self.context, 'portal_quickinstaller')
-            installed = [package['id'] for package in qtool.listInstalledProducts()]
-            if 'LinguaPlone' not in installed:
+            qtool = getToolByName(self.context, "portal_quickinstaller")
+            installed = [package["id"] for package in qtool.listInstalledProducts()]
+            if "LinguaPlone" not in installed:
                 return False
             return True
 
     def enable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         if not self.can_enable:
-            return self._redirect('Faceted navigation not supported')
+            return self._redirect("Faceted navigation not supported")
 
         notify(FacetedWillBeEnabledEvent(self.context))
         alsoProvides(self.context, IFacetedNavigable)
@@ -131,48 +121,45 @@ class FacetedSubtyper(FacetedPublicSubtyper):
             alsoProvides(self.context, IHidePloneRightColumn)
         notify(FacetedEnabledEvent(self.context))
 
-        self._redirect(_('Faceted navigation enabled'))
+        self._redirect(_("Faceted navigation enabled"))
 
     def disable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         if not self.can_disable:
-            return self._redirect('Faceted navigation not supported')
+            return self._redirect("Faceted navigation not supported")
 
         notify(FacetedWillBeDisabledEvent(self.context))
         noLongerProvides(self.context, IFacetedNavigable)
         notify(FacetedDisabledEvent(self.context))
-        self._redirect(_('Faceted navigation disabled'))
+        self._redirect(_("Faceted navigation disabled"))
 
 
 class FacetedSearchSubtyper(FacetedSubtyper):
-    """ Support for subtyping objects as faceted search form (no default items
-        on load)
+    """Support for subtyping objects as faceted search form (no default items
+    on load)
     """
+
     @property
     def is_faceted(self):
-        """ Is faceted navigable?
-        """
+        """Is faceted navigable?"""
         if not super(FacetedSearchSubtyper, self).is_faceted:
             return False
         return IFacetedSearchMode.providedBy(self.context)
 
     def enable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         if not self.can_enable:
-            return self._redirect('Faceted search navigation not supported')
+            return self._redirect("Faceted search navigation not supported")
 
         if not super(FacetedSearchSubtyper, self).is_faceted:
             super(FacetedSearchSubtyper, self).enable()
         if not IFacetedSearchMode.providedBy(self.context):
             alsoProvides(self.context, IFacetedSearchMode)
-        self._redirect(_('Faceted search enabled'))
+        self._redirect(_("Faceted search enabled"))
 
     def disable(self):
-        """ See IFacetedSubtyper
-        """
+        """See IFacetedSubtyper"""
         if not self.can_disable:
-            return self._redirect('Faceted search navigation not supported')
+            return self._redirect("Faceted search navigation not supported")
         noLongerProvides(self.context, IFacetedSearchMode)
-        self._redirect(_('Faceted search disabled'))
+        self._redirect(_("Faceted search disabled"))

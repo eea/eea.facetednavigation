@@ -8,10 +8,10 @@ from eea.facetednavigation import EEAMessageFactory as _
 
 
 class Widget(AbstractWidget):
-    """ Widget
-    """
-    widget_type = 'debug'
-    widget_label = _('Debugger')
+    """Widget"""
+
+    widget_type = "debug"
+    widget_label = _("Debugger")
 
     groups = (DefaultSchemata, LayoutSchemata)
-    index = ViewPageTemplateFile('widget.pt')
+    index = ViewPageTemplateFile("widget.pt")

@@ -12,7 +12,7 @@ def install_select2(context):
     jquery.autocomplete.
     """
 
-    context.runAllImportStepsFromProfile('profile-eea.jquery:23-select2')
-    js_tool = getToolByName(context, 'portal_javascripts')
+    context.runAllImportStepsFromProfile("profile-eea.jquery:23-select2")
+    js_tool = getToolByName(context, "portal_javascripts")
     js_tool.cookResources()
-    logger.info('Installed select2 dependency')
+    logger.info("Installed select2 dependency")

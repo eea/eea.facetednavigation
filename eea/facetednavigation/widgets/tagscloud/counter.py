@@ -10,14 +10,13 @@ from eea.facetednavigation.widgets.widget import lowercase
 
 
 class TagsCloudCounter(BrowserView):
-    """ Count results per query for tags cloud widget
-    """
+    """Count results per query for tags cloud widget"""
+
     def query(self, cid, **kwargs):
-        """ Count catalog items
-        """
+        """Count catalog items"""
         # Cleanup query
-        kwargs.pop('sort_on', None)
-        kwargs.pop('sort_order', None)
+        kwargs.pop("sort_on", None)
+        kwargs.pop("sort_order", None)
         kwargs.pop(cid, None)
         self.request.form.pop(cid, None)
 
@@ -25,23 +24,25 @@ class TagsCloudCounter(BrowserView):
         criterion = criteria.get(cid)
 
         # Query catalog
-        handler = getMultiAdapter((self.context, self.request),
-                                  name=u'faceted_query')
+        handler = getMultiAdapter((self.context, self.request), name="faceted_query")
 
-        if criterion.get('index', '') == 'Language':
-            kwargs['_language_count_'] = True
+        if criterion.get("index", "") == "Language":
+            kwargs["_language_count_"] = True
         brains = handler.query(batch=False, sort=False, **kwargs)
 
         # Get index
         widget = criteria.widget(cid=cid)(self.context, self.request, criterion)
-        vocabulary = dict((key, value) for key, value, count
-                    in widget.vocabulary(oll=True) if key not in ("", "all"))
+        vocabulary = dict(
+            (key, value)
+            for key, value, count in widget.vocabulary(oll=True)
+            if key not in ("", "all")
+        )
 
         # Count
-        count = getattr(widget, 'count', lambda brains, sequence: {})
+        count = getattr(widget, "count", lambda brains, sequence: {})
         res = count(brains, sequence=list(vocabulary.keys()))
         res.pop("", 0)
-        oll = res.pop('all', 0)
+        oll = res.pop("all", 0)
 
         res = list(res.items())
         res.sort(key=operator.itemgetter(1), reverse=True)
@@ -54,12 +55,11 @@ class TagsCloudCounter(BrowserView):
         # Return a of list of three items tuples (key, label, count)
         res = [(key, vocabulary.get(key, key), value) for key, value in res]
 
-        res.insert(0, ('all', 'All', oll))
+        res.insert(0, ("all", "All", oll))
         for item in res:
             yield item
 
-    @ramcache(cacheCounterKeyFacetedNavigation,
-              dependencies=['eea.facetednavigation'])
+    @ramcache(cacheCounterKeyFacetedNavigation, dependencies=["eea.facetednavigation"])
     def __call__(self, **kwargs):
         if self.request:
             kwargs.update(self.request.form)
@@ -67,7 +67,7 @@ class TagsCloudCounter(BrowserView):
         # Calling self.index() will set cache headers for varnish
         self.index()
 
-        cid = kwargs.pop('cid', None)
+        cid = kwargs.pop("cid", None)
         if not cid:
             return {}
 

@@ -14,15 +14,15 @@ def fix_criteria(context):
     In version 8.8, the autocomplete widget uses select2 instead of
     jquery.autocomplete.
     """
-    ctool = getToolByName(context, 'portal_catalog')
+    ctool = getToolByName(context, "portal_catalog")
     iface = interfaceToName(context, IFacetedNavigable)
     brains = ctool.unrestrictedSearchResults(object_provides=iface)
 
-    logger.info('Fixing %s faceted navigable criteria', len(brains))
+    logger.info("Fixing %s faceted navigable criteria", len(brains))
     for brain in brains:
         doc = brain.getObject()
         criteria = queryAdapter(doc, ICriteria)
         for cid in criteria.keys():
-            logger.info('Fixing faceted criteria for %s', brain.getURL())
+            logger.info("Fixing faceted criteria for %s", brain.getURL())
             criteria.upgrade(cid)
-    logger.info('Done fixing faceted navigable criteria')
+    logger.info("Done fixing faceted navigable criteria")

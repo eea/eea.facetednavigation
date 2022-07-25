@@ -21,7 +21,7 @@ jobs:
 
       - name: jslint
         run: |
-          docker run -i --rm -v $(pwd)/eea:/code eeacms/jslint4java
+          docker run -i --rm -v $(pwd)/eea:/code -e CUSTOM_FIND="! -name *.min.js" eeacms/jslint4java
 
       - name: zptlint
         run: |
