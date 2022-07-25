@@ -29,7 +29,10 @@
   <include package=".widgets" />
   <include package=".indexes" />
   <include package=".versions" />
-  <include package=".vocabularies" zcml:condition="not-installed eea.faceted.vocabularies" />
+  <include package=".vocabularies" 
+    zcml:condition="not-installed eea.faceted.vocabularies" />
+  <include package="eea.faceted.vocabularies" 
+    zcml:condition="installed eea.faceted.vocabularies" />
   <include package=".upgrades" />
   <include package=".views" />
 
