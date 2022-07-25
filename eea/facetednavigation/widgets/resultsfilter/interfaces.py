@@ -11,27 +11,28 @@ import six
 
 
 class IResultsFilterWidget(IWidget):
-    """Results Filter widget"""
+    """ Results Filter widget
+    """
 
 
 class IResultsFilterSchema(ISchema):
-    """Schema"""
-
+    """ Schema
+    """
     default = schema.TextLine(
-        title=_("Results Filter"),
-        description=_("Default tal expression for query value"),
+        title=_(u'Results Filter'),
+        description=_(u'Default tal expression for query value'),
         required=False,
-        default='python:hasattr(brain, u"Title")',
+        default=u'python:hasattr(brain, u"Title")',
     )
     default._type = (six.text_type, str)
 
 
 class DefaultSchemata(DS):
-    """Schemata default"""
-
+    """ Schemata default
+    """
     fields = field.Fields(IResultsFilterSchema).select(
-        "title",
-        "default",
+        u'title',
+        u'default',
     )
 
 

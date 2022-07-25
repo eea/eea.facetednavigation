@@ -45,7 +45,6 @@ setup(
         "setuptools",
         # -*- Extra requirements: -*-
         "collective.js.jqueryui",
-        "eea.jquery > 10.2",
     ],
     extras_require={
         "test": [

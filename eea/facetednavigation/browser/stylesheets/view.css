@@ -111,7 +111,7 @@
 ---------------- */
 
 .faceted_loading {
-  background: url(../../++resource++faceted_images/ajax-loader.gif) no-repeat 50% 1.5em;
+  background: url(ajax-loader.gif) no-repeat 50% 1.5em;
   height: 200px;
 }
 
@@ -182,7 +182,7 @@
 }
 
 .faceted-widget-loading {
-  background: url(../../++resource++faceted_images/ajax-loader-small.gif) no-repeat 95% 1.5em;
+  background: url(ajax-loader-small.gif) no-repeat 95% 1.5em;
 }
 
 /* Errors

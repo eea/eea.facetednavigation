@@ -8,6 +8,7 @@ Trainings on how to create your own website using Plone 6 is available as part o
 
 * Python **3.7, 3.8, 3.9**
 * Python **python-venv** and **python-dev**
+* Yarn
 * Libraries
   - **libz**
   - **libjpeg**
@@ -35,7 +36,7 @@ Optionally set default `python3`:
 
 ## Install
 
-In order to develop Plone 6 backend add-ons run:
+In order to develop Plone 6 backend add-on run:
 
     git clone https://github.com/eea/eea.facetednavigation
     cd eea.facetednavigation
@@ -51,6 +52,17 @@ To use other **Plone** version run make with `-e` parameter:
 
     make -e PLONE_VERSION=6.0.0a6
     make start
+
+## CSS / JS Resources
+
+CSS and JS static resources are automatically built on `make start` but you can always manually rebuild them by running:
+
+    yarn
+    yarn build
+
+See the `resources` directory if you need to add or remove CSS/JS resources.
+
+See `webpack.config.js` and `package.json` for the static resources input/output options.
 
 ## Develop
 

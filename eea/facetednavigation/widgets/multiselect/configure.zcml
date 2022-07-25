@@ -9,24 +9,4 @@
       schema=".interfaces.IMultiSelectSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.multiselect.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.multiselect.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.multiselect.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.multiselect.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

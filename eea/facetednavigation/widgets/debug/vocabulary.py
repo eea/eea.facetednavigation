@@ -10,10 +10,11 @@ from Products.CMFCore.utils import _getAuthenticatedUser
 
 @implementer(IVocabularyFactory)
 class CurrentUserVocabulary(object):
-    """Vocabulary factory for logged in user."""
-
+    """Vocabulary factory for logged in user.
+    """
     def __call__(self, *args, **kwargs):
-        """See IVocabularyFactory interface"""
+        """ See IVocabularyFactory interface
+        """
         user = _getAuthenticatedUser(getSite())
         user_id = user.getId()
         user_name = user.getUserName()

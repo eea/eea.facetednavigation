@@ -1,6 +1,6 @@
 """ Faceted Navigation public interfaces
 """
-from zope.interface.interfaces import IObjectEvent
+from zope.component.interfaces import IObjectEvent
 from zope.interface import Interface
 from zope import schema
 
@@ -50,43 +50,52 @@ from eea.facetednavigation import EEAMessageFactory as _
 # Events
 #
 class IFacetedEvent(IObjectEvent):
-    """All faceted events should inherit from this class"""
+    """ All faceted events should inherit from this class
+    """
 
 
 class IFacetedSettingsWillBeChangedEvent(IFacetedEvent):
-    """Faceted settings will be updated"""
+    """ Faceted settings will be updated
+    """
 
 
 class IFacetedGlobalSettingsChangedEvent(IFacetedEvent):
-    """Faceted global settings updated"""
+    """ Faceted global settings updated
+    """
 
 
 class IFacetedWillBeEnabledEvent(IFacetedEvent):
-    """Faceted navigation is going to be enabled"""
+    """ Faceted navigation is going to be enabled
+    """
 
 
 class IFacetedEnabledEvent(IFacetedEvent):
-    """Faceted navigation enabled"""
+    """ Faceted navigation enabled
+    """
 
 
 class IFacetedWillBeDisabledEvent(IFacetedEvent):
-    """Faceted navigation is going to be disabled"""
+    """ Faceted navigation is going to be disabled
+    """
 
 
 class IFacetedDisabledEvent(IFacetedEvent):
-    """Faceted navigation disabled"""
+    """ Faceted navigation disabled
+    """
 
 
 class IEEASettings(Interface):
-    """Registry settings for eea.facetednavigation product"""
+    """ Registry settings for eea.facetednavigation product
+    """
 
     disable_diazo_rules_ajax = schema.Bool(
-        title=_("Disable diazo rules on ajax requests"), required=False
-    )
+        title=_(u"Disable diazo rules on ajax requests"),
+        required=False)
 
 
 class IQueryWillBeExecutedEvent(IFacetedEvent):
-    """Catalog query event."""
+    """ Catalog query event.
+    """
 
     # query = Attribute(u"The query that will be done.")
 

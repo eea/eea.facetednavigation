@@ -16,24 +16,4 @@
       for=".interfaces.IAlphabeticWidget"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.alphabets.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.alphabets.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.alphabets.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.alphabets.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

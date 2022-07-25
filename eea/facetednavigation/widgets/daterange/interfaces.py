@@ -12,92 +12,92 @@ import six
 
 
 class IDateRangeSchema(ISchema):
-    """Schema"""
-
+    """ Schema
+    """
     index = schema.Choice(
-        title=_("Catalog index"),
-        description=_("Catalog index to use for search"),
-        vocabulary="eea.faceted.vocabularies.DateRangeCatalogIndexes",
+        title=_(u'Catalog index'),
+        description=_(u'Catalog index to use for search'),
+        vocabulary=u"eea.faceted.vocabularies.DateRangeCatalogIndexes",
     )
 
     calYearRange = schema.TextLine(
-        title=_("UI Calendar years range"),
-        description=_(
-            "Control the range of years"
-            "displayed in the year drop-down: "
-            "either relative to today's year "
-            "(-nn:+nn), relative to the "
-            "currently selected year (c-nn:c+nn"
-            "), absolute (nnnn:nnnn), or "
-            "combinations of these formats "
-            "(nnnn:-nn)."
-        ),
+        title=_(u'UI Calendar years range'),
+        description=_(u'Control the range of years'
+                      u'displayed in the year drop-down: '
+                      u'either relative to today\'s year '
+                      u'(-nn:+nn), relative to the '
+                      u'currently selected year (c-nn:c+nn'
+                      u'), absolute (nnnn:nnnn), or '
+                      u'combinations of these formats '
+                      u'(nnnn:-nn).'),
         required=False,
-        default="c-10:c+10",
+        default=u"c-10:c+10"
     )
     calYearRange._type = (str, six.text_type)
 
     usePloneDateFormat = schema.Bool(
-        title=_("Reuse date format and language used by Plone"),
-        description=_(
-            "Reuse the same date format and the "
-            "the same language that Plone uses "
-            "elsewhere. Otherwise, the format will "
-            'be "yy-mm-dd" and the language "English". '
-            "Note that this default format allows "
-            "you to encode very old or big years "
-            "(example : 0001 will not be converted "
-            "to 1901). Other formats do not."
-        ),
-        required=False,
+        title=_(u'Reuse date format and language used by Plone'),
+        description=_(u'Reuse the same date format and the '
+                      u'the same language that Plone uses '
+                      u'elsewhere. Otherwise, the format will '
+                      u'be "yy-mm-dd" and the language "English". '
+                      u'Note that this default format allows '
+                      u'you to encode very old or big years '
+                      u'(example : 0001 will not be converted '
+                      u'to 1901). Other formats do not.'),
+        required=False
     )
 
     labelStart = schema.TextLine(
-        title=_("Label (start date)"),
-        description=_("Text to be displayed as start date input label"),
-        required=False,
+        title=_(u"Label (start date)"),
+        description=_(u"Text to be displayed as start date input label"),
+        required=False
     )
     labelStart._type = (str, six.text_type)
 
     labelEnd = schema.TextLine(
-        title=_("Label (end date)"),
-        description=_("Text to be displayed as end date input label"),
-        required=False,
+        title=_(u"Label (end date)"),
+        description=_(u"Text to be displayed as end date input label"),
+        required=False
     )
     labelEnd._type = (str, six.text_type)
 
     placeholderStart = schema.TextLine(
-        title=_("Placeholder (start date)"),
-        description=_("Text to be displayed as start date input placeholder"),
-        required=False,
+        title=_(u"Placeholder (start date)"),
+        description=_(u"Text to be displayed as start date input placeholder"),
+        required=False
     )
     placeholderStart._type = (str, six.text_type)
 
     placeholderEnd = schema.TextLine(
-        title=_("Placeholder (end date)"),
-        description=_("Text to be displayed as end date input placeholder"),
-        required=False,
+        title=_(u"Placeholder (end date)"),
+        description=_(u"Text to be displayed as end date input placeholder"),
+        required=False
     )
     placeholderEnd._type = (str, six.text_type)
 
 
 class DefaultSchemata(DS):
-    """Schemata default"""
-
-    fields = field.Fields(IDateRangeSchema).select("title", "index", "default")
+    """ Schemata default
+    """
+    fields = field.Fields(IDateRangeSchema).select(
+        u'title',
+        u'index',
+        u'default'
+    )
 
 
 class DisplaySchemata(FacetedSchemata):
-    """Schemata display"""
-
-    label = "display"
+    """ Schemata display
+    """
+    label = u"display"
     fields = field.Fields(IDateRangeSchema).select(
-        "calYearRange",
-        "usePloneDateFormat",
-        "labelStart",
-        "labelEnd",
-        "placeholderStart",
-        "placeholderEnd",
+        u'calYearRange',
+        u'usePloneDateFormat',
+        u'labelStart',
+        u'labelEnd',
+        u'placeholderStart',
+        u'placeholderEnd'
     )
 
 

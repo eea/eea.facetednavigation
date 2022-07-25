@@ -11,16 +11,16 @@ from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
 from eea.facetednavigation.widgets.widget import CountableWidget
 
-
 class Debug(BrowserView):
-    """Query debugger util views"""
-
+    """ Query debugger util views
+    """
     def visible(self, **kwargs):
-        """Visibility"""
+        """ Visibility
+        """
         if self.request:
             kwargs.update(self.request.form)
 
-        cid = kwargs.get("debugger", None)
+        cid = kwargs.get('debugger', None)
         if not cid:
             return False
 
@@ -32,27 +32,29 @@ class Debug(BrowserView):
         if not criterion:
             return False
 
-        wtype = criterion.get("widget")
+        wtype = criterion.get('widget')
         if wtype != Widget.widget_type:
             return False
 
-        mtool = getToolByName(self.context, "portal_membership")
+        mtool = getToolByName(self.context, 'portal_membership')
         user = mtool.getAuthenticatedMember()
-        allowed = criterion.get("user", "DEBUGGER USER NOT SET")
+        allowed = criterion.get('user', u'DEBUGGER USER NOT SET')
         if allowed != user.getId():
             return False
 
         return True
 
     def query(self, **kwargs):
-        """Return current faceted query"""
+        """ Return current faceted query
+        """
         if self.request:
             kwargs.update(self.request.form)
 
         if not self.visible(**kwargs):
             return "[]"
 
-        view = queryMultiAdapter((self.context, self.request), name="faceted_query")
+        view = queryMultiAdapter((self.context, self.request),
+                                 name=u'faceted_query')
         if not view:
             return "[]"
 
@@ -60,11 +62,12 @@ class Debug(BrowserView):
         return pformat(query)
 
     def after(self, **kwargs):
-        """After query filters"""
+        """ After query filters
+        """
         if self.request:
             kwargs.update(self.request.form)
 
-        mode = kwargs.get("mode", "view")
+        mode = kwargs.get('mode', 'view')
         if not self.visible(**kwargs):
             return "[]"
 
@@ -79,23 +82,24 @@ class Debug(BrowserView):
                 continue
 
             rep = {}
-            rep["handler"] = ".".join((aquery.__module__, aquery.__class__.__name__))
-            rep["index"] = criterion.get("index", None)
-            rep["title"] = criterion.get("title", None)
-            rep["widget"] = criterion.get("widget", None)
+            rep['handler'] = '.'.join((
+                    aquery.__module__, aquery.__class__.__name__))
+            rep['index'] = criterion.get('index', None)
+            rep['title'] = criterion.get('title', None)
+            rep['widget'] = criterion.get('widget', None)
 
-            if mode == "edit":
+            if mode == 'edit':
                 if not widget.hidden:
                     continue
-                rep["default"] = widget.default
-            elif mode == "view":
+                rep['default'] = widget.default
+            elif mode == 'view':
                 if widget.hidden:
-                    rep["default"] = widget.default
+                    rep['default'] = widget.default
                 else:
                     value = kwargs.get(cid, None)
                     if not value:
                         continue
-                    rep["value"] = value
+                    rep['value'] = value
 
             res.append(rep)
         if not res:
@@ -103,14 +107,16 @@ class Debug(BrowserView):
         return pformat(res)
 
     def counters(self, **kwargs):
-        """Return current counters"""
+        """ Return current counters
+        """
         if self.request:
             kwargs.update(self.request.form)
 
         if not self.visible(**kwargs):
             return "[]"
 
-        handler = queryMultiAdapter((self.context, self.request), name="faceted_query")
+        handler = queryMultiAdapter((self.context, self.request),
+                                    name=u'faceted_query')
 
         criteria = queryAdapter(self.context, ICriteria)
         res = []
@@ -130,7 +136,7 @@ class Debug(BrowserView):
             rep = {}
             props = kwargs.copy()
             props.pop(cid, None)
-            title = criterion.get("title", None) or criterion.getId()
+            title = criterion.get('title', None) or criterion.getId()
             rep[title] = handler.criteria(sort=False, **props)
             res.append(rep)
 
@@ -139,15 +145,16 @@ class Debug(BrowserView):
         return pformat(res)
 
     def criteria(self, **kwargs):
-        """Return current criteria"""
+        """ Return current criteria
+        """
         if self.request:
             kwargs.update(self.request.form)
 
         if not self.visible(**kwargs):
             return "[]"
 
-        mode = kwargs.get("mode", "view")
-        if mode == "view":
+        mode = kwargs.get('mode', 'view')
+        if mode == 'view':
             return "[]"
 
         criteria = queryAdapter(self.context, ICriteria)
@@ -156,6 +163,6 @@ class Debug(BrowserView):
             widget = criteria.widget(cid=cid)
 
             rep = criterion.__dict__.copy()
-            rep["class"] = ".".join((widget.__module__, widget.__name__))
+            rep['class'] = '.'.join((widget.__module__, widget.__name__))
             res.append(rep)
         return pformat(res)

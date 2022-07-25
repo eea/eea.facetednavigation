@@ -16,41 +16,46 @@ import six
 
 
 class Widget(CountableWidget):
-    """Widget"""
+    """ Widget
+    """
+    widget_type = 'checkbox'
+    widget_label = _('Checkboxes')
 
-    widget_type = "checkbox"
-    widget_label = _("Checkboxes")
+    groups = (
+        DefaultSchemata,
+        LayoutSchemata,
+        CountableSchemata,
+        DisplaySchemata
+    )
 
-    groups = (DefaultSchemata, LayoutSchemata, CountableSchemata, DisplaySchemata)
-
-    index = ViewPageTemplateFile("widget.pt")
+    index = ViewPageTemplateFile('widget.pt')
 
     @property
     def css_class(self):
-        """Widget specific css class"""
+        """ Widget specific css class
+        """
         css_type = self.widget_type
         css_title = normalizer.normalize(self.data.title)
-        return (
-            "faceted-checkboxes-widget " "faceted-{0}-widget section-{1}{2}"
-        ).format(css_type, css_title, self.custom_css)
+        return ('faceted-checkboxes-widget '
+                'faceted-{0}-widget section-{1}{2}').format(css_type, css_title, self.custom_css)
 
     @property
     def default(self):
-        """Get default values"""
+        """ Get default values
+        """
         default = super(Widget, self).default
         if not default:
             return []
 
         if isinstance(default, (str, six.text_type)):
-            default = [
-                default,
-            ]
+            default = [default, ]
         if six.PY2:
-            default = [x.encode("utf-8") for x in default]
+            default = [x.encode('utf-8') for x in default]
         return default
 
     def selected(self, key):
-        """Return True if key in self.default"""
+        """ Return True if key in self.default
+        """
         default = self.default
         if not default:
             return False
@@ -61,28 +66,31 @@ class Widget(CountableWidget):
 
     @property
     def operator_visible(self):
-        """Is operator visible for anonymous users"""
-        return self.data.get("operator_visible", False)
+        """ Is operator visible for anonymous users
+        """
+        return self.data.get('operator_visible', False)
 
     @property
     def operator(self):
-        """Get the default query operator"""
-        return self.data.get("operator", "and")
+        """ Get the default query operator
+        """
+        return self.data.get('operator', 'and')
 
     def query(self, form):
-        """Get value from form and return a catalog dict query"""
+        """ Get value from form and return a catalog dict query
+        """
         query = {}
-        index = self.data.get("index", "")
+        index = self.data.get('index', '')
         if six.PY2:
-            index = index.encode("utf-8", "replace")
+            index = index.encode('utf-8', 'replace')
 
         if not self.operator_visible:
             operator = self.operator
         else:
-            operator = form.get(self.data.getId() + "-operator", self.operator)
+            operator = form.get(self.data.getId() + '-operator', self.operator)
 
         if six.PY2:
-            operator = operator.encode("utf-8", "replace")
+            operator = operator.encode('utf-8', 'replace')
 
         if not index:
             return query
@@ -90,25 +98,24 @@ class Widget(CountableWidget):
         if self.hidden:
             value = self.default
         else:
-            value = form.get(self.data.getId(), "")
+            value = form.get(self.data.getId(), '')
 
         if not value:
             return query
 
-        catalog = getToolByName(self.context, "portal_catalog")
+        catalog = getToolByName(self.context, 'portal_catalog')
         catalog_index = catalog.Indexes.get(index)
         operator_supported = True
         if catalog_index:
-            if catalog_index.meta_type == "BooleanIndex":
-                if value == "False":
+            if catalog_index.meta_type == 'BooleanIndex':
+                if value == 'False':
                     value = False
-                elif value == "True":
+                elif value == 'True':
                     value = True
-            operator_supported = "operator" in getattr(
-                catalog_index, "query_options", []
-            )
+            operator_supported = 'operator' in getattr(
+                catalog_index, 'query_options', [])
 
-        query[index] = {"query": value}
+        query[index] = {'query': value}
         if operator_supported:
-            query[index]["operator"] = operator
+            query[index]['operator'] = operator
         return query

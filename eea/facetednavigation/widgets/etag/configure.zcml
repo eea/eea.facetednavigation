@@ -9,24 +9,4 @@
       schema=".interfaces.IETagSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.etag.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.etag.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.etag.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.etag.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

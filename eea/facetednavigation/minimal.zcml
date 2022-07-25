@@ -13,7 +13,6 @@
 
   <!-- Dependencies -->
   <include package="collective.js.jqueryui" />
-  <include package="eea.jquery" />
 
   <include file="profiles.zcml" />
   <include file="permissions.zcml" />
@@ -30,7 +29,7 @@
   <include package=".widgets" />
   <include package=".indexes" />
   <include package=".versions" />
-  <include package=".vocabularies" />
+  <include package=".vocabularies" zcml:condition="not-installed eea.faceted.vocabularies" />
   <include package=".upgrades" />
   <include package=".views" />
 

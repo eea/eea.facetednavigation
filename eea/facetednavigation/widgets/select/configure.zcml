@@ -9,24 +9,4 @@
       schema=".interfaces.ISelectSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.select.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.select.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.select.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.select.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

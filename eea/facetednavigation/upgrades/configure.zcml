@@ -7,6 +7,26 @@
 
   <genericsetup:upgradeSteps
       profile="eea.facetednavigation:default"
+      source="14.0"
+      destination="15.0"
+      >
+
+    <genericsetup:upgradeDepends
+        title="Resource registry: CSS, JS"
+        import_steps="cssregistry jsregistry"
+        zcml:condition="not-have plone-5"
+        />
+
+    <genericsetup:upgradeDepends
+        title="Resource registry: CSS, JS"
+        import_steps="plone.app.registry"
+        zcml:condition="have plone-5"
+        />
+
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+      profile="eea.facetednavigation:default"
       source="12.0"
       destination="14.0"
       >

@@ -9,24 +9,4 @@
       schema=".interfaces.IRangeSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.range.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.range.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.range.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.range.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

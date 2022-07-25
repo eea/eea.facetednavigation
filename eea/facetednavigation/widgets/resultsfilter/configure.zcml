@@ -16,24 +16,4 @@
       for=".interfaces.IResultsFilterWidget"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.resultsfilter.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.resultsfilter.edit.css"
-      file="./edit.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.resultsfilter.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.resultsfilter.edit.js"
-      file="./edit.js"
-      />
-
 </configure>

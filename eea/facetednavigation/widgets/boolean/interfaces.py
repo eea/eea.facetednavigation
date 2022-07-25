@@ -10,35 +10,37 @@ from eea.facetednavigation import EEAMessageFactory as _
 
 
 class IBooleanSchema(ISchema):
-    """Schema"""
-
+    """ Schema
+    """
     index = schema.Choice(
-        title=_("Catalog index"),
-        description=_("Catalog index to use for search"),
-        vocabulary="eea.faceted.vocabularies.SimpleFieldCatalogIndexes",
-        required=True,
+        title=_(u'Catalog index'),
+        description=_(u'Catalog index to use for search'),
+        vocabulary=u"eea.faceted.vocabularies.SimpleFieldCatalogIndexes",
+        required=True
     )
 
     default = schema.Bool(
-        title=_("Default value"),
-        description=_("Default value"),
+        title=_(u'Default value'),
+        description=_(u'Default value'),
     )
 
 
 class DefaultSchemata(DS):
-    """Schemata default"""
-
+    """ Schemata default
+    """
     fields = field.Fields(IBooleanSchema).select(
-        "title",
-        "default",
-        "index",
+        u'title',
+        u'default',
+        u'index',
     )
 
 
 class CountableSchemata(CS):
-    """Schemata countable"""
-
-    fields = field.Fields(ISchema).select("count")
+    """ Schemata countable
+    """
+    fields = field.Fields(ISchema).select(
+        u'count'
+    )
 
 
 __all__ = [

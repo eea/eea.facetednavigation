@@ -1,4 +1,4 @@
-var FacetedTree = {version: '2.0'};
+var FacetedTree = window.FacetedTree = {version: '15.0'};
 
 FacetedTree.Events = {};
 FacetedTree.Events.CHANGED = 'FACETEDTREE-CHANGED';

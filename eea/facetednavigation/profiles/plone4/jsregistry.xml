@@ -1,166 +1,76 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 
- <!-- Cleanup -->
- <javascript id="faceted_view.js" remove="True"/>
- <javascript id="faceted_edit.js" remove="True"/>
+  <!-- Cleanup -->
+  <javascript id="faceted_view.js" remove="True"/>
+  <javascript id="faceted_edit.js" remove="True"/>
+  <javascript id="++resource++eea.faceted-navigation.js" remove="True" />
+  <javascript id="++resource++eea.faceted-navigation-expand.js" remove="True" />
+  <javascript id="++resource++eea.faceted-navigation-independent.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.alphabets.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.autocomplete.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.checkbox.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.criteria.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.date.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.daterange.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.debug.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.etag.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.multiselect.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.path.tree.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.path.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.portlet.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.radio.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.range.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.resultsfilter.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.resultsperpage.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.select.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.sorting.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.tagscloud.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.tal.view.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.text.view.js" remove="True" />
+  <javascript id="++resource++eea.faceted-navigation-edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.alphabets.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.autocomplete.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.checkbox.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.criteria.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.date.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.daterange.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.debug.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.etag.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.multiselect.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.path.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.portlet.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.radio.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.range.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.resultsfilter.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.resultsperpage.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.select.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.sorting.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.tagscloud.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.tal.edit.js" remove="True" />
+  <javascript id="++resource++eea.facetednavigation.widgets.text.edit.js" remove="True" />
 
-  <!-- Faceted View -->
-  <javascript id="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.faceted-navigation-expand.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.faceted-navigation-independent.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.alphabets.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.autocomplete.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.checkbox.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.criteria.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-             bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.date.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.daterange.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.debug.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.etag.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.multiselect.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.path.tree.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.path.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.portlet.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.radio.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.range.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.resultsfilter.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.resultsperpage.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.select.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.sorting.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.tagscloud.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.tal.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
-  <javascript id="++resource++eea.facetednavigation.widgets.text.view.js"
-              insert-after="++resource++eea.faceted-navigation.js"
-              bundle="faceted-view" />
+  <!-- Cleanup eea.jquery dependencies -->
+  <javascript id="++resource++jquery.cookie.js" remove="True" />
+  <javascript id="++resource++jquery.ajaxfileupload.js" remove="True" />
+  <javascript id="++resource++jquery.bbq.js" remove="True" />
+  <javascript id="++resource++jquery.jstree.js" remove="True" />
+  <javascript id="++resource++jquery.select2uislider.js" remove="True" />
+  <javascript id="++resource++jquery.tagcloud.js" remove="True" />
+  <javascript id="++resource++select2/select2.min.js" remove="True" />
 
-  <!-- Faceted Edit -->
-  <javascript id="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.alphabets.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.autocomplete.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.checkbox.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.criteria.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.date.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.daterange.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.debug.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.etag.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.multiselect.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.path.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.portlet.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.radio.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.range.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.resultsfilter.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.resultsperpage.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.select.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.sorting.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.tagscloud.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.tal.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
-  <javascript id="++resource++eea.facetednavigation.widgets.text.edit.js"
-              insert-after="++resource++eea.faceted-navigation-edit.js"
-              expression="python:'configure_faceted.html' in request.URL0"
-              bundle="faceted-edit" />
+  <!-- Faceted JS static resources -->
+  <javascript
+    id="++resource++facetednavigation/faceted-jquery.min.js"
+    bundle="faceted-view" />
+
+  <javascript
+    id="++resource++facetednavigation/faceted-view.min.js"
+    bundle="faceted-view" />
+
+  <javascript
+    id="++resource++facetednavigation/faceted-edit.min.js"
+    expression="python:'configure_faceted.html' in request.URL0"
+    bundle="faceted-edit" />
 
 </object>

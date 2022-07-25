@@ -9,24 +9,4 @@
       schema=".interfaces.IDateRangeSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.daterange.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.daterange.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.daterange.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.daterange.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

@@ -12,37 +12,44 @@ import six
 
 
 class Widget(CountableWidget):
-    """Widget"""
+    """ Widget
+    """
+    widget_type = 'select'
+    widget_label = _('Select')
 
-    widget_type = "select"
-    widget_label = _("Select")
+    groups = (
+        DefaultSchemata,
+        LayoutSchemata,
+        CountableSchemata,
+        DisplaySchemata
+    )
 
-    groups = (DefaultSchemata, LayoutSchemata, CountableSchemata, DisplaySchemata)
-
-    index = ViewPageTemplateFile("widget.pt")
+    index = ViewPageTemplateFile('widget.pt')
 
     @property
     def default(self):
-        """Get default values"""
-        default = super(Widget, self).default or ""
+        """ Get default values
+        """
+        default = super(Widget, self).default or u''
         if six.PY2:
             if isinstance(default, six.text_type):
-                default = default.encode("utf-8")
+                default = default.encode('utf-8')
         return default
 
     def query(self, form):
-        """Get value from form and return a catalog dict query"""
+        """ Get value from form and return a catalog dict query
+        """
         query = {}
-        index = self.data.get("index", "")
+        index = self.data.get('index', '')
         if six.PY2:
-            index = index.encode("utf-8", "replace")
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 
         if self.hidden:
             value = self.default
         else:
-            value = form.get(self.data.getId(), "")
+            value = form.get(self.data.getId(), '')
 
         if not value:
             return query

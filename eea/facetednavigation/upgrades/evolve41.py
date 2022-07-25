@@ -13,30 +13,30 @@ from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 
 logger = logging.getLogger("eea.facetednavigation")
 
-
 def hide_portlets(context):
-    """As eea.design changed, we need to hide left and right plone portlets
+    """ As eea.design changed, we need to hide left and right plone portlets
     columns. This upgrade step is available only in EEA context
     """
-    ctool = getToolByName(context, "portal_catalog")
+    ctool = getToolByName(context, 'portal_catalog')
     iface = interfaceToName(context, IFacetedNavigable)
     brains = ctool.unrestrictedSearchResults(object_provides=iface)
 
-    logger.info("Hiding plone portlets for %s faceted navigable objects", len(brains))
+    logger.info(
+        'Hiding plone portlets for %s faceted navigable objects', len(brains))
 
     for brain in brains:
         doc = brain.getObject()
         if not IHidePloneLeftColumn.providedBy(doc):
-            logger.info("Hidding left portlet for %s", doc.absolute_url())
+            logger.info('Hidding left portlet for %s', doc.absolute_url())
             alsoProvides(doc, IHidePloneLeftColumn)
         if not IHidePloneRightColumn.providedBy(doc):
-            logger.info("Hidding right portlet for %s", doc.absolute_url())
+            logger.info('Hidding right portlet for %s', doc.absolute_url())
             alsoProvides(doc, IHidePloneRightColumn)
-    logger.info("Hiding plone portlets ... DONE")
+    logger.info('Hiding plone portlets ... DONE')
 
 
 def fix_default_layout(context):
-    """In eea.facetednavigation < 4.0 the default layout was
+    """ In eea.facetednavigation < 4.0 the default layout was
     folder_summary_view. As in Plone 4 folder_summary_view doesn't wrap the
     listing in a macro, the default layout for eea.facetednavigation > 4.0 is
     folder_listing. Still, we need to keep backward compatibility, at least when
@@ -44,26 +44,25 @@ def fix_default_layout(context):
     EEA context, as folder_summary_view was customized in eea.design in order
     to define the 'content-core' macro.
     """
-    ctool = getToolByName(context, "portal_catalog")
+    ctool = getToolByName(context, 'portal_catalog')
     iface = interfaceToName(context, IFacetedNavigable)
     brains = ctool.unrestrictedSearchResults(object_provides=iface)
     for brain in brains:
         doc = brain.getObject()
         anno = queryAdapter(doc, IAnnotations)
 
-        if anno.get(ANNO_FACETED_LAYOUT, ""):
+        if anno.get(ANNO_FACETED_LAYOUT, ''):
             # Not using the default one, skipping
             continue
 
         logger.info(
-            "Updating faceted layout to folder_summary_view for: %s", doc.absolute_url()
-        )
+            'Updating faceted layout to folder_summary_view for: %s',
+            doc.absolute_url())
 
-        anno[ANNO_FACETED_LAYOUT] = "folder_summary_view"
-
+        anno[ANNO_FACETED_LAYOUT] = 'folder_summary_view'
 
 def cleanup_p4a(context):
-    """eea.facetednavigation > 4.0 doesn't depend on p4a.subtyper anymore,
+    """ eea.facetednavigation > 4.0 doesn't depend on p4a.subtyper anymore,
     but your instance will crash if it's missing as there are persistent
     references to p4a.subtyper.interfaces.ISubtyped. After you run this script,
     you should be able to drop p4a.subtyper from your buildout.
@@ -71,10 +70,11 @@ def cleanup_p4a(context):
     try:
         from p4a.subtyper.interfaces import ISubtyper, ISubtyped
     except ImportError:
-        logger.info("p4a.subtyper not installed. Aborting...")
+        logger.info('p4a.subtyper not installed. Aborting...')
         return
 
-    ctool = getToolByName(context, "portal_catalog")
+
+    ctool = getToolByName(context, 'portal_catalog')
     iface = interfaceToName(context, IFacetedNavigable)
     brains = ctool.unrestrictedSearchResults(object_provides=iface)
     for brain in brains:
@@ -82,14 +82,13 @@ def cleanup_p4a(context):
         anno = queryAdapter(doc, IAnnotations)
 
         subtyper = getUtility(ISubtyper)
-        name = getattr(subtyper.existing_type(doc), "name", "")
-        if "faceted" not in name.lower():
+        name = getattr(subtyper.existing_type(doc), 'name', '')
+        if 'faceted' not in name.lower():
             continue
 
         logger.info(
-            "Cleanup p4a.subtyper interface and descriptor info for: %s",
-            doc.absolute_url(),
-        )
+            'Cleanup p4a.subtyper interface and descriptor info for: %s',
+            doc.absolute_url())
 
         noLongerProvides(doc, ISubtyped)
-        anno.pop("p4a.subtyper.DescriptorInfo", None)
+        anno.pop('p4a.subtyper.DescriptorInfo', None)

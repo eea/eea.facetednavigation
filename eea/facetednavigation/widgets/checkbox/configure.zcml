@@ -9,24 +9,4 @@
       schema=".interfaces.ICheckboxSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.checkbox.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.checkbox.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.checkbox.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.checkbox.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

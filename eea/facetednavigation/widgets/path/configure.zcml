@@ -9,31 +9,6 @@
       schema=".interfaces.IPathSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.path.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.path.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.path.tree.js"
-      file="./tree.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.path.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.path.edit.css"
-      file="./edit.css"
-      />
-
   <browser:page
       name="faceted.path.tree.json"
       for="eea.facetednavigation.interfaces.IFacetedNavigable"

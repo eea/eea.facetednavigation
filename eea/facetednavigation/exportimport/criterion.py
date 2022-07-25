@@ -6,39 +6,39 @@ from Products.GenericSetup.utils import XMLAdapterBase
 from eea.facetednavigation.widgets.interfaces import ICriterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
 import six
-
-logger = logging.getLogger("eea.facetednavigation")
+logger = logging.getLogger('eea.facetednavigation')
 
 
 class CriterionXMLAdapter(XMLAdapterBase):
-    """GenericSetup XML Adapter for faceted criterion"""
-
+    """ GenericSetup XML Adapter for faceted criterion
+    """
     __used_for__ = ICriterion
 
     def _exportNode(self):
-        """Export the object as a DOM node."""
-        # self._doc = doc
-        node = self._doc.createElement("criterion")
-        node.setAttribute("name", self.context.getId())
+        """Export the object as a DOM node.
+        """
+        #self._doc = doc
+        node = self._doc.createElement('criterion')
+        node.setAttribute('name', self.context.getId())
         info = getUtility(IWidgetsInfo)
-        widget_id = self.context.get("widget")
+        widget_id = self.context.get('widget')
         widget = info(widget_id)
 
-        properties = ["widget"]
+        properties = ['widget']
         for group in widget.groups:
             properties.extend(list(group.fields.keys()))
         for key in properties:
             value = self.context.get(key, None)
             if value is None:
                 continue
-            prop = self._doc.createElement("property")
-            prop.setAttribute("name", key)
+            prop = self._doc.createElement('property')
+            prop.setAttribute('name', key)
             if isinstance(value, (tuple, list)):
                 for item in value:
                     if not value:
                         continue
-                    element = self._doc.createElement("element")
-                    element.setAttribute("value", item)
+                    element = self._doc.createElement('element')
+                    element.setAttribute('value', item)
                     prop.appendChild(element)
             else:
                 if isinstance(value, (int, bool)):
@@ -51,18 +51,19 @@ class CriterionXMLAdapter(XMLAdapterBase):
         return node
 
     def _importNode(self, node):
-        """Import the object from the DOM node."""
+        """Import the object from the DOM node.
+        """
         properties = {}
         for child in node.childNodes:
-            if child.nodeName != "property":
+            if child.nodeName != 'property':
                 continue
 
-            key = child.getAttribute("name")
+            key = child.getAttribute('name')
             elements = []
             for element in child.childNodes:
-                if element.nodeName != "element":
+                if element.nodeName != 'element':
                     continue
-                elements.append(element.getAttribute("value"))
+                elements.append(element.getAttribute('value'))
 
             if elements:
                 properties[key] = elements

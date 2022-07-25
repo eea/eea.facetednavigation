@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="eea"
     >
@@ -72,7 +73,6 @@
       class=".app.configure.FacetedCriteriaHandler"
       permission="eea.faceted.configure"
       />
-  <!--allowed_interface=".interfaces.IFacetedCriteriaHandler"-->
 
   <browser:page
       name="faceted_update_criterion"
@@ -80,7 +80,6 @@
       class=".app.configure.FacetedCriterionHandler"
       permission="eea.faceted.configure"
       />
-  <!--allowed_interface=".interfaces.IFacetedCriterionHandler"-->
 
   <browser:page
       name="faceted_update_position"
@@ -88,7 +87,6 @@
       class=".app.configure.FacetedPositionHandler"
       permission="eea.faceted.configure"
       />
-  <!--allowed_interface=".interfaces.IFacetedPositionHandler"-->
 
   <browser:page
       name="faceted_query"
@@ -157,44 +155,13 @@
       permission="zope2.View"
       />
 
-  <browser:resource
-      name="eea.faceted-navigation.css"
-      file="./stylesheets/view.css"
-      />
-
-  <browser:resource
-      name="eea.faceted-navigation-edit.css"
-      file="./stylesheets/edit.css"
-      />
-
-  <browser:resource
-      name="eea.faceted.jquery.ui.fix.css"
-      file="./stylesheets/ui.fix.css"
-      />
-
-  <browser:resource
-      name="eea.faceted-navigation.js"
-      file="./javascript/view.js"
-      />
-
-  <browser:resource
-      name="eea.faceted-navigation-edit.js"
-      file="./javascript/edit.js"
-      />
-
-  <browser:resource
-      name="eea.faceted-navigation-expand.js"
-      file="./javascript/expand.js"
-      />
-
-  <browser:resource
-      name="eea.faceted-navigation-independent.js"
-      file="./javascript/independent.js"
-      />
-
   <browser:resourceDirectory
-      name="faceted_images"
-      directory="./images"
-      />
+    name="facetednavigation"
+    directory="./static" />
+
+  <!-- BBB -->
+  <browser:resourceDirectory
+    name="faceted_images"
+    directory="./static" />
 
 </configure>

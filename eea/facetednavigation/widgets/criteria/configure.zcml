@@ -9,24 +9,4 @@
       schema=".interfaces.ICriteriaSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.criteria.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.criteria.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.criteria.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.criteria.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

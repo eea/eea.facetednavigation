@@ -14,47 +14,54 @@ import six
 
 
 class Widget(CountableWidget):
-    """Widget"""
-
+    """ Widget
+    """
     # Widget properties
-    widget_type = "radio"
-    widget_label = _("Radio")
+    widget_type = 'radio'
+    widget_label = _('Radio')
 
-    groups = (DefaultSchemata, LayoutSchemata, CountableSchemata, DisplaySchemata)
+    groups = (
+        DefaultSchemata,
+        LayoutSchemata,
+        CountableSchemata,
+        DisplaySchemata
+    )
 
-    index = ViewPageTemplateFile("widget.pt")
+    index = ViewPageTemplateFile('widget.pt')
 
     @property
     def default(self):
-        """Get default values"""
-        default = super(Widget, self).default or ""
+        """ Get default values
+        """
+        default = super(Widget, self).default or u''
         if six.PY2:
             if isinstance(default, six.text_type):
-                default = default.encode("utf-8")
+                default = default.encode('utf-8')
         return default
 
     def query(self, form):
-        """Get value from form and return a catalog dict query"""
+        """ Get value from form and return a catalog dict query
+        """
         query = {}
-        index = self.data.get("index", "")
+        index = self.data.get('index', '')
         if six.PY2:
-            index = index.encode("utf-8", "replace")
+            index = index.encode('utf-8', 'replace')
         if not index:
             return query
 
         if self.hidden:
             value = self.default
         else:
-            value = form.get(self.data.getId(), "")
+            value = form.get(self.data.getId(), '')
         if not value:
             return query
 
-        catalog = getToolByName(self.context, "portal_catalog")
+        catalog = getToolByName(self.context, 'portal_catalog')
         if index in catalog.Indexes:
-            if catalog.Indexes[index].meta_type == "BooleanIndex":
-                if value == "False":
+            if catalog.Indexes[index].meta_type == 'BooleanIndex':
+                if value == 'False':
                     value = False
-                elif value == "True":
+                elif value == 'True':
                     value = True
 
         query[index] = value

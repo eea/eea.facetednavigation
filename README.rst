@@ -30,6 +30,12 @@ it covers same functionality and it adds a lot more features.
 
 .. contents::
 
+Upgrade to version 15.0+
+========================
+* Within "Plone > Site setup > Add-ons" click on upgrade button available for
+  EEA Faceted Navigation;
+* Plone4: After running the upgrade step, check CSS/JS order within ZMI > portal_css / portal_javascripts
+
 Upgrade to version 10.0+
 ========================
 * Within "Plone > Site setup > Add-ons" click on upgrade button available for

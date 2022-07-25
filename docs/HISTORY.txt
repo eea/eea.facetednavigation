@@ -3,11 +3,17 @@ Changelog
 
 15.0-dev0 - (unreleased)
 ---------------------------
-* Breaking: Plone 6 support
+* Upgrade step: Within "Plone > Site Setup > Add-ons" click on
+  upgrade button available for eea.facetednavigation.
+  Plone4: After running the upgrade step, check CSS/JS order
+  within ZMI > portal_css / portal_javascripts
   [avoinea refs #231]
-* Breaking: Drop eea.faceted.vocabularies dependency
+* Cleanup: Bundle JS/CSS resource with webpack and remove individual
+  resource registrations
   [avoinea refs #231]
-* Breaking: Remove Plone 4 / Python 2 support
+* Cleanup: Drop eea.jquery dependency
+  [avoinea refs #231]
+* Cleanup: Drop eea.faceted.vocabularies dependency
   [avoinea refs #231]
 
 14.7 - (2021-10-29)

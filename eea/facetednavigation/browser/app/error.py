@@ -6,17 +6,19 @@ from zope.component import queryAdapter
 from eea.facetednavigation.interfaces import ICriteria
 from Products.Five.browser import BrowserView
 
-logger = logging.getLogger("eea.facetednavigation")
-
+logger = logging.getLogger('eea.facetednavigation')
 
 class FacetedError(BrowserView):
-    """Render an error message when something is wrong with widgets"""
-
+    """ Render an error message when something is wrong with widgets
+    """
     def __call__(self, **kwargs):
-        error = kwargs.get("error", None)
-        res = {"type": getattr(error, "type", ""), "value": getattr(error, "value", "")}
-        cid = kwargs.get("cid", "")
-        msg = ""
+        error = kwargs.get('error', None)
+        res = {
+            'type': getattr(error, 'type', ''),
+            'value': getattr(error, 'value', '')
+        }
+        cid = kwargs.get('cid', '')
+        msg = ''
         if cid:
             criteria = queryAdapter(self.context, ICriteria)
             if criteria:
@@ -24,5 +26,6 @@ class FacetedError(BrowserView):
                 if data:
                     msg = pformat(data.__dict__)
 
-        logger.exception("\n%s\n", msg)
+
+        logger.exception('\n%s\n', msg)
         return self.index(error=res)

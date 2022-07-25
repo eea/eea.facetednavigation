@@ -36,13 +36,12 @@ except ImportError:
 try:
     from collective.solr.exceptions import SolrConnectionException
     from collective.solr.exceptions import SolrInactiveException
-
     HAVE_SOLR = True
 except ImportError:
     HAVE_SOLR = False
 
 
-logger = logging.getLogger("eea.facetednavigation")
+logger = logging.getLogger('eea.facetednavigation')
 
 
 def lowercase(value):
@@ -51,20 +50,19 @@ def lowercase(value):
     except AttributeError:
         return value[1]
 
-
 #
 # Faceted Widget
 #
 @interface.implementer(IWidget)
 class Widget(GroupForm, Form):
-    """All faceted widgets should inherit from this class"""
-
+    """ All faceted widgets should inherit from this class
+    """
     # z3c.form
     groups = (DefaultSchemata, LayoutSchemata)
 
     # Faceted Widget properties
-    widget_type = "abstract"
-    widget_label = "Abstract"
+    widget_type = 'abstract'
+    widget_label = 'Abstract'
 
     def __init__(self, context, request, data=None):
         self.context = context
@@ -74,18 +72,21 @@ class Widget(GroupForm, Form):
 
     @property
     def prefix(self):
-        """Form prefix"""
+        """ Form prefix
+        """
         cid = self.data.getId()
         if six.PY2 and isinstance(cid, six.text_type):
-            cid = cid.encode("utf-8")
+            cid = cid.encode('utf-8')
         return cid
 
     def getContent(self):
-        """Content"""
+        """ Content
+        """
         return self.data
 
     def update(self):
-        """Update"""
+        """ Update
+        """
         self.updateWidgets(prefix=self.prefix)
         groups = []
         for groupClass in self.groups:
@@ -99,65 +100,68 @@ class Widget(GroupForm, Form):
 
     @property
     def template(self):
-        """Widget template"""
+        """ Widget template
+        """
         return self.index()
 
     @property
     def css_class(self):
-        """Widget specific css class"""
+        """ Widget specific css class
+        """
         css_type = self.widget_type
         css_title = normalizer.normalize(self.data.title)
-        return "faceted-{0}-widget section-{1}{2}".format(
-            css_type, css_title, self.custom_css
-        )
+        return 'faceted-{0}-widget section-{1}{2}'.format(css_type, css_title, self.custom_css)
 
     @property
     def hidden(self):
-        """Widget hidden?"""
+        """ Widget hidden?
+        """
         return self.data.hidden
 
     @property
     def custom_css(self):
         if self.data.custom_css:
-            return " {}".format(self.data.custom_css)
-        return ""
+            return ' {}'.format(self.data.custom_css)
+        return ''
 
     @property
     def default(self):
-        """Get default values"""
+        """ Get default values
+        """
         # Language widget has custom behaviour so be sure you keep
         # this in your widget
-        index = self.data.get("index", None)
-        if index == "Language":
-            language_widget = queryMultiAdapter(
-                (self, self.context), ILanguageWidgetAdapter
-            )
+        index = self.data.get('index', None)
+        if index == 'Language':
+            language_widget = queryMultiAdapter((self, self.context),
+                                                ILanguageWidgetAdapter)
             if language_widget:
                 return language_widget.default
         # Take value from request parameter, for example ?SearchableText=test.
         from_request = self.request.form.pop(index, None)
         if from_request is not None:
             return from_request
-        return self.data.get("default", None)
+        return self.data.get('default', None)
 
     def query(self, form):
-        """Get value from form and return a catalog dict query"""
+        """ Get value from form and return a catalog dict query
+        """
         return {}
 
     def translate(self, message):
-        """Use zope.i18n to translate message"""
+        """ Use zope.i18n to translate message
+        """
         if not message:
-            return ""
+            return ''
 
         if isinstance(message, Message):
             # message is an i18n message
             return translate(message, context=self.request)
 
         # message is a simple msgid
-        for domain in ["eea", "plone"]:
+        for domain in ['eea', 'plone']:
             if isinstance(message, six.binary_type):
                 try:
-                    message = message.decode("utf-8")
+                    message = message.decode('utf-8')
                 except Exception as err:
                     logger.exception(err)
                     continue
@@ -168,12 +172,13 @@ class Widget(GroupForm, Form):
         return message
 
     def cleanup(self, string):
-        """Quote string"""
-        safe = re.compile(r"[^_A-Za-z0-9\-]")
-        return safe.sub("-", string)
+        """ Quote string
+        """
+        safe = re.compile(r'[^_A-Za-z0-9\-]')
+        return safe.sub('-', string)
 
-    def word_break(self, text="", insert="<wbr />", nchars=15):
-        """Insert a string (insert) every space or if a word length is bigger
+    def word_break(self, text='', insert="<wbr />", nchars=15):
+        """ Insert a string (insert) every space or if a word length is bigger
         than given chars, every ${chars} characters.
 
         Example:
@@ -181,22 +186,23 @@ class Widget(GroupForm, Form):
         >>> print word_break(text, nchars=10)
         this is a bigwordwit<wbr />h_and-and.<wbr />jpg
         """
-        list_text = text.split(" ")
+        list_text = text.split(' ')
         res = []
         for word in list_text:
-            word = [word[i : i + nchars] for i in range(0, len(word), nchars)]
+            word = [word[i:i + nchars] for i in range(0, len(word), nchars)]
             word = insert.join(word)
             res.append(word)
-        return " ".join(res)
+        return ' '.join(res)
 
     def catalog_vocabulary(self):
-        """Get vocabulary from catalog"""
-        catalog = self.data.get("catalog", "portal_catalog")
+        """ Get vocabulary from catalog
+        """
+        catalog = self.data.get('catalog', 'portal_catalog')
         ctool = getToolByName(self.context, catalog)
         if not ctool:
             return []
 
-        index = self.data.get("index", None)
+        index = self.data.get('index', None)
         if not index:
             return []
 
@@ -209,7 +215,7 @@ class Widget(GroupForm, Form):
             if isinstance(val, (int, float)):
                 val = str(val)
                 if six.PY2 and isinstance(val, six.binary_type):
-                    val = val.decode("utf-8")
+                    val = val.decode('utf-8')
 
             elif not isinstance(val, six.text_type):
                 try:
@@ -228,10 +234,10 @@ class Widget(GroupForm, Form):
 
     def portal_vocabulary(self):
         """Look up selected vocabulary from portal_vocabulary or from ZTK
-        zope-vocabulary factory.
+           zope-vocabulary factory.
         """
-        vtool = getToolByName(self.context, "portal_vocabularies", None)
-        voc_id = self.data.get("vocabulary", None)
+        vtool = getToolByName(self.context, 'portal_vocabularies', None)
+        voc_id = self.data.get('vocabulary', None)
         if not voc_id:
             return []
         voc = getattr(vtool, voc_id, None)
@@ -242,21 +248,22 @@ class Widget(GroupForm, Form):
                 for term in voc(self.context):
                     value = term.value
                     if isinstance(value, six.binary_type):
-                        value = value.decode("utf-8")
+                        value = value.decode('utf-8')
                     values.append((value, (term.title or term.token or value)))
                 return values
             return []
 
         terms = voc.getDisplayList(self.context)
-        if hasattr(terms, "items"):
+        if hasattr(terms, 'items'):
             return list(terms.items())
         return terms
 
     def vocabulary(self, **kwargs):
-        """Return data vocabulary"""
-        reverse = safeToInt(self.data.get("sortreversed", 0))
+        """ Return data vocabulary
+        """
+        reverse = safeToInt(self.data.get('sortreversed', 0))
         mapping = self.portal_vocabulary()
-        catalog = self.data.get("catalog", None)
+        catalog = self.data.get('catalog', None)
 
         if catalog:
             mapping = dict(mapping)
@@ -267,18 +274,15 @@ class Widget(GroupForm, Form):
                     # get values from SOLR if collective.solr is present
                     searchutility = queryUtility(ISolrSearch)
                     if searchutility is not None:
-                        index = self.data.get("index", None)
+                        index = self.data.get('index', None)
                         kw = {
-                            "facet": "on",
-                            "facet.field": index,  # facet on index
-                            "facet.limit": -1,  # show unlimited results
-                            "rows": 0,
-                        }  # no results needed
-                        result = searchutility.search("*:*", **kw)
+                            'facet': 'on',
+                            'facet.field': index,    # facet on index
+                            'facet.limit': -1,       # show unlimited results
+                            'rows': 0}                # no results needed
+                        result = searchutility.search('*:*', **kw)
                         try:
-                            values = list(
-                                result.facet_counts["facet_fields"][index].keys()
-                            )
+                            values = list(result.facet_counts['facet_fields'][index].keys())
                         except (AttributeError, KeyError):
                             pass
                 except (SolrConnectionException, SolrInactiveException):
@@ -298,41 +302,46 @@ class Widget(GroupForm, Form):
         return res
 
     def __call__(self, **kwargs):
-        """ """
+        """
+        """
         return self.template
 
 
 class CountableWidget(Widget):
-    """Defines useful methods for countable widgets"""
-
+    """ Defines useful methods for countable widgets
+    """
     groups = Widget.groups + (CountableSchemata,)
 
     @property
     def countable(self):
-        """Count results?"""
-        return bool(safeToInt(self.data.get("count", 0)))
+        """ Count results?
+        """
+        return bool(safeToInt(self.data.get('count', 0)))
 
     @property
     def sortcountable(self):
-        """Sort results by countable value?"""
-        return bool(safeToInt(self.data.get("sortcountable", 0)))
+        """ Sort results by countable value?
+        """
+        return bool(safeToInt(self.data.get('sortcountable', 0)))
 
     @property
     def hidezerocount(self):
-        """Hide items that return no result?"""
-        return bool(safeToInt(self.data.get("hidezerocount", 0)))
+        """ Hide items that return no result?
+        """
+        return bool(safeToInt(self.data.get('hidezerocount', 0)))
 
     faceted_field = True
 
     def count(self, brains, sequence=None):
-        """Intersect results"""
+        """ Intersect results
+        """
         res = {}
         # by checking for facet_counts we assume this is a SolrResponse
         # from collective.solr
-        if hasattr(brains, "facet_counts"):
-            facet_fields = brains.facet_counts.get("facet_fields")
+        if hasattr(brains, 'facet_counts'):
+            facet_fields = brains.facet_counts.get('facet_fields')
             if facet_fields:
-                index_id = self.data.get("index")
+                index_id = self.data.get('index')
                 facet_field = facet_fields.get(index_id, {})
                 for value, num in facet_field.items():
                     normalized_value = atdx_normalize(value)
@@ -341,13 +350,13 @@ class CountableWidget(Widget):
                     elif isinstance(normalized_value, six.text_type):
                         res[normalized_value] = num
                     else:
-                        unicode_value = value.decode("utf-8")
+                        unicode_value = value.decode('utf-8')
                         res[unicode_value] = num
             else:
                 # no facet counts were returned. we exit anyway because
                 # zcatalog methods throw an error on solr responses
                 return res
-            res[""] = res["all"] = len(brains)
+            res[""] = res['all'] = len(brains)
             return res
         else:
             # this is handled by the zcatalog. see below
@@ -359,11 +368,11 @@ class CountableWidget(Widget):
         if not sequence:
             return res
 
-        index_id = self.data.get("index")
+        index_id = self.data.get('index')
         if not index_id:
             return res
 
-        ctool = getToolByName(self.context, "portal_catalog")
+        ctool = getToolByName(self.context, 'portal_catalog')
         index = ctool._catalog.getIndex(index_id)
         ctool = queryUtility(IFacetedCatalog)
         if not ctool:
@@ -379,13 +388,13 @@ class CountableWidget(Widget):
         else:
             brains = frozenset(brain.getRID() for brain in brains)
 
-        res[""] = res["all"] = len(brains)
+        res[""] = res['all'] = len(brains)
         for value in sequence:
             normalized_value = atdx_normalize(value)
-            if index.meta_type == "BooleanIndex":
-                if normalized_value in ("False", 0):
+            if index.meta_type == 'BooleanIndex':
+                if normalized_value in ('False', 0):
                     normalized_value = False
-                elif normalized_value in ("True", 1):
+                elif normalized_value in ('True', 1):
                     normalized_value = True
             if not value:
                 res[value] = len(brains)
@@ -400,8 +409,8 @@ class CountableWidget(Widget):
                 res[normalized_value] = len(rset)
             elif isinstance(normalized_value, bool):
                 # We only get here for true values, not for false.
-                res["selected"] = len(rset)
+                res['selected'] = len(rset)
             else:
-                unicode_value = value.decode("utf-8")
+                unicode_value = value.decode('utf-8')
                 res[unicode_value] = len(rset)
         return res

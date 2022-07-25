@@ -9,26 +9,6 @@
       schema=".interfaces.ITagsCloudSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.tagscloud.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.tagscloud.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.tagscloud.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.tagscloud.edit.css"
-      file="./edit.css"
-      />
-
   <browser:page
       name="tagscloud_counter"
       for="eea.facetednavigation.interfaces.IFacetedNavigable"

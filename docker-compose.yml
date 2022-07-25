@@ -1,6 +1,18 @@
 version: "3"
 
 services:
+
+  plone4:
+    image: plone:4
+    ports:
+    - "8080:8080"
+    volumes:
+    - ./:/plone/instance/src/eea.facetednavigation
+    environment:
+      SITE: "Plone"
+      ADDONS: "eea.facetednavigation"
+      DEVELOP: "/plone/instance/src/eea.facetednavigation"
+
   plone5:
     image: plone/plone-backend:5
     ports:

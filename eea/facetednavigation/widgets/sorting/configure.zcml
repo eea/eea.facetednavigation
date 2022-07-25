@@ -9,24 +9,4 @@
       schema=".interfaces.ISortingSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.sorting.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.sorting.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.sorting.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.sorting.edit.css"
-      file="./edit.css"
-      />
-
 </configure>

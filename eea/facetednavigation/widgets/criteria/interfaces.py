@@ -9,23 +9,24 @@ from eea.facetednavigation import EEAMessageFactory as _
 
 
 class ICriteriaSchema(ISchema):
-    """Schema"""
-
+    """ Schema
+    """
     hidecriteriaenabled = schema.Bool(
-        title=_("Enable hide/show criteria"),
-        description=_(
-            "Uncheck this box if you don't want hide/show "
-            "criteria feature enabled on this widget"
-        ),
+        title=_(u'Enable hide/show criteria'),
+        description=_(u"Uncheck this box if you don't want hide/show "
+                      u"criteria feature enabled on this widget"),
         required=False,
-        default=True,
+        default=True
     )
 
 
 class DefaultSchemata(DS):
-    """Schemata default"""
-
-    fields = field.Fields(ICriteriaSchema).select("title", "hidecriteriaenabled")
+    """ Schemata default
+    """
+    fields = field.Fields(ICriteriaSchema).select(
+        u'title',
+        u'hidecriteriaenabled'
+    )
 
 
 __all__ = [

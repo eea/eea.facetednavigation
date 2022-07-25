@@ -50,26 +50,6 @@
       permission="zope2.View"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.debug.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.debug.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.debug.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.debug.edit.css"
-      file="./edit.css"
-      />
-
   <utility
       factory=".vocabulary.CurrentUserVocabulary"
       name="eea.faceted.vocabularies.CurrentUser"

@@ -10,23 +10,23 @@ from eea.facetednavigation.widgets.resultsperpage.interfaces import (
     DisplaySchemata,
 )
 from six.moves import range
-
-logger = logging.getLogger("eea.facetednavigation")
+logger = logging.getLogger('eea.facetednavigation')
 
 
 class Widget(AbstractWidget):
-    """Widget"""
-
-    widget_type = "resultsperpage"
-    widget_label = _("Results per page")
+    """ Widget
+    """
+    widget_type = 'resultsperpage'
+    widget_label = _('Results per page')
 
     groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
-    index = ViewPageTemplateFile("widget.pt")
+    index = ViewPageTemplateFile('widget.pt')
 
     @property
     def default(self):
-        """Get default values"""
-        value = self.data.get("default", 0) or 0
+        """ Get default values
+        """
+        value = self.data.get('default', 0) or 0
         try:
             return int(value)
         except (TypeError, ValueError) as err:
@@ -34,7 +34,8 @@ class Widget(AbstractWidget):
             return 0
 
     def results_per_page(self, form, default=20):
-        """Get results per page"""
+        """ Get results per page
+        """
         if self.hidden:
             value = self.default
         else:
@@ -52,19 +53,20 @@ class Widget(AbstractWidget):
         return value
 
     def vocabulary(self, **kwargs):
-        """Vocabulary"""
+        """ Vocabulary
+        """
         try:
-            start = int(self.data.get("start", 0) or 0)
+            start = int(self.data.get('start', 0) or 0)
         except (TypeError, ValueError) as err:
             logger.exception(err)
             start = 0
         try:
-            end = int(self.data.get("end", 21)) + 1
+            end = int(self.data.get('end', 21)) + 1
         except (TypeError, ValueError) as err:
             logger.exception(err)
             end = 21
         try:
-            step = int(self.data.get("step", 1))
+            step = int(self.data.get('step', 1))
         except (TypeError, ValueError) as err:
             logger.exception(err)
             step = 1

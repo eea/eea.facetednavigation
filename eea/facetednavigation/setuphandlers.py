@@ -17,13 +17,14 @@ log = getLogger("eea.facetednavigation.post_uninstall")
 
 
 def setupVarious(context):
-    """Do some various setup."""
+    """ Do some various setup.
+    """
     if context.readDataFile("eea.facetednavigation.txt") is None:
         return
 
 
 def uninstall_faceted(context):
-    """Custom script to remove interface traces on uninstall"""
+    """ Custom script to remove interface traces on uninstall """
     remove_annotations(context)
     remove_default_views(context)
     remove_assigned_interfaces(context)
@@ -39,7 +40,7 @@ def remove_assigned_interfaces(context):
 
 
 def remove_interface(context, iface):
-    """Remove interface assignment from objects"""
+    """ Remove interface assignment from objects"""
     portal_catalog = getToolByName(context, "portal_catalog")
     brains = portal_catalog(object_provides=iface.__identifier__)
     log.info(

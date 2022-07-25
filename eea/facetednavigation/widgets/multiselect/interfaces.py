@@ -10,92 +10,93 @@ from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation import EEAMessageFactory as _
 
 
-class IMultiSelectSchema(ISchema):
-    """Schema"""
 
+class IMultiSelectSchema(ISchema):
+    """ Schema
+    """
     default = schema.List(
-        title=_("Default value"),
-        description=_("Default items (one per line)"),
+        title=_(u'Default value'),
+        description=_(u'Default items (one per line)'),
         required=False,
         unique=True,
-        value_type=schema.TextLine(title="Item"),
+        value_type=schema.TextLine(title=u'Item'),
     )
 
     operator = schema.Choice(
-        title=_("Default operator"),
-        description=_("Search with AND/OR between elements"),
-        vocabulary=SimpleVocabulary(
-            [SimpleTerm("or", "or", "OR"), SimpleTerm("and", "and", "AND")]
-        ),
-        default="or",
+        title=_(u'Default operator'),
+        description=_(u'Search with AND/OR between elements'),
+        vocabulary=SimpleVocabulary([
+            SimpleTerm(u'or', u'or', u'OR'),
+            SimpleTerm(u'and', u'and', u'AND')
+        ]),
+        default=u'or'
     )
 
     operator_visible = schema.Bool(
-        title=_("Operator visible"),
-        description=_(
-            "Let the end-user choose to search with " "AND or OR between elements"
-        ),
+        title=_(u"Operator visible"),
+        description=_(u"Let the end-user choose to search with "
+                      u"AND or OR between elements"),
         required=False,
-        default=False,
+        default=False
     )
 
     multiple = schema.Bool(
-        title=_("Multiselect"),
-        description=_("Allow multiple selections"),
+        title=_(u"Multiselect"),
+        description=_(u"Allow multiple selections"),
         default=True,
-        required=False,
+        required=False
     )
 
     vocabulary = schema.Choice(
-        title=_("Vocabulary"),
-        description=_("Vocabulary to use to render widget items"),
-        vocabulary="eea.faceted.vocabularies.PortalVocabularies",
-        required=False,
+        title=_(u"Vocabulary"),
+        description=_(u'Vocabulary to use to render widget items'),
+        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
+        required=False
     )
 
     catalog = schema.Choice(
-        title=_("Catalog"),
-        description=_(
-            "Get unique values from catalog " "as an alternative for vocabulary"
-        ),
-        vocabulary="eea.faceted.vocabularies.UseCatalog",
-        required=False,
+        title=_(u'Catalog'),
+        description=_(u"Get unique values from catalog "
+                      u"as an alternative for vocabulary"),
+        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
+        required=False
     )
 
     closeonselect = schema.Bool(
-        title=_("Close on select"),
-        description=_("Close selection popup after each select"),
-        required=False,
+        title=_(u"Close on select"),
+        description=_(u"Close selection popup after each select"),
+        required=False
     )
 
     sortreversed = schema.Bool(
-        title=_("Reverse options"),
-        description=_("Sort options reversed"),
-        required=False,
+        title=_(u"Reverse options"),
+        description=_(u"Sort options reversed"),
+        required=False
     )
 
 
 class DefaultSchemata(DS):
-    """Schemata default"""
-
+    """ Schemata default
+    """
     fields = field.Fields(IMultiSelectSchema).select(
-        "title",
-        "index",
-        "operator",
-        "operator_visible",
-        "multiple",
-        "vocabulary",
-        "catalog",
-        "default",
+        u'title',
+        u'index',
+        u'operator',
+        u'operator_visible',
+        u'multiple',
+        u'vocabulary',
+        u'catalog',
+        u'default'
     )
 
-
 class DisplaySchemata(FacetedSchemata):
-    """Schemata display"""
-
-    label = "display"
+    """ Schemata display
+    """
+    label = u'display'
     fields = field.Fields(IMultiSelectSchema).select(
-        "sortreversed", "closeonselect", "placeholder"
+        u'sortreversed',
+        u'closeonselect',
+        u'placeholder'
     )
 
 

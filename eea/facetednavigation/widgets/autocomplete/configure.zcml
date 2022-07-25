@@ -9,26 +9,6 @@
       schema=".interfaces.IAutocompleteSchema"
       />
 
-  <browser:resource
-      name="eea.facetednavigation.widgets.autocomplete.view.js"
-      file="./view.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.autocomplete.edit.js"
-      file="./edit.js"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.autocomplete.view.css"
-      file="./view.css"
-      />
-
-  <browser:resource
-      name="eea.facetednavigation.widgets.autocomplete.edit.css"
-      file="./edit.css"
-      />
-
   <browser:view
       name="solr-autocomplete-suggest"
       provides="eea.facetednavigation.vocabularies.autocomplete.IAutocompleteSuggest"
