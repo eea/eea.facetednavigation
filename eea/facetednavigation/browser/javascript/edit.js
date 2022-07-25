@@ -1,4 +1,4 @@
-var FacetedEdit = {version: '2.0'};
+var FacetedEdit = window.FacetedEdit = {version: '15.0'};
 FacetedEdit.loading = '<div class="faceted_loading"></div>';
 
 // Widgets

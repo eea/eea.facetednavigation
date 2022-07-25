@@ -2,7 +2,8 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="eea">
+    i18n_domain="eea"
+    >
 
   <i18n:registerTranslations directory="locales" />
 
@@ -12,13 +13,11 @@
 
   <!-- Dependencies -->
   <include package="collective.js.jqueryui" />
-  <include package="eea.faceted.vocabularies" />
-  <include package="eea.jquery" />
 
   <include file="profiles.zcml" />
   <include file="permissions.zcml" />
 
-  <include package=".subtypes"/>
+  <include package=".subtypes" />
   <include package=".browser" />
   <include package=".caching" />
   <include package=".criteria" />
@@ -30,6 +29,7 @@
   <include package=".widgets" />
   <include package=".indexes" />
   <include package=".versions" />
+  <include package=".vocabularies" zcml:condition="not-installed eea.faceted.vocabularies" />
   <include package=".upgrades" />
   <include package=".views" />
 

@@ -1,11 +1,14 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:faceted="http://namespaces.zope.org/faceted"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    i18n_domain="eea"
+    >
 
-  <utility provides=".interfaces.IViewsInfo"
-    factory=".meta.ViewsInfo" />
+  <utility
+      factory=".meta.ViewsInfo"
+      provides=".interfaces.IViewsInfo"
+      />
 
   <!--
     A view for faceted navigation that displays items in preview mode,
@@ -13,17 +16,17 @@
     comes up, depending on your
   -->
   <faceted:view
-    name="faceted-preview-items"
-    template="preview-items.pt"
-    title="Faceted items preview"
-    permission="zope2.View"
-    />
+      name="faceted-preview-items"
+      title="Faceted items preview"
+      template="preview-items.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    name="faceted-preview-item"
-    for="zope.interface.Interface"
-    template="preview-item.pt"
-    permission="zope2.View"
-    />
+      name="faceted-preview-item"
+      for="zope.interface.Interface"
+      template="preview-item.pt"
+      permission="zope2.View"
+      />
 
 </configure>

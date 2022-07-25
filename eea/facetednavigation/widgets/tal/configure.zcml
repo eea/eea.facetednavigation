@@ -1,31 +1,12 @@
 <configure
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:faceted="http://namespaces.zope.org/faceted"
-  i18n_domain="eea">
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    i18n_domain="eea"
+    >
 
   <faceted:widget
-    factory=".widget.Widget"
-    schema=".interfaces.ITalSchema"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.tal.view.css"
-    file="./view.css"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.tal.edit.css"
-    file="./edit.css"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.tal.view.js"
-    file="./view.js"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.tal.edit.js"
-    file="./edit.js"
-    />
+      factory=".widget.Widget"
+      schema=".interfaces.ITalSchema"
+      />
 
 </configure>

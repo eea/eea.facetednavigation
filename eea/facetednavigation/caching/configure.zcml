@@ -1,27 +1,29 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-           xmlns:zcml="http://namespaces.zope.org/zcml">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
 
   <!-- Faceted: invalidate Memcached -->
   <subscriber
-    for="..interfaces.IFacetedNavigable
-         ..interfaces.IFacetedGlobalSettingsChangedEvent"
-    handler=".cache.invalidateFacetedCache"
-    />
+      for="..interfaces.IFacetedNavigable
+           ..interfaces.IFacetedGlobalSettingsChangedEvent"
+      handler=".cache.invalidateFacetedCache"
+      />
 
   <!-- Archetypes: invalidate Memcached -->
   <subscriber
-    zcml:condition="installed Products.Archetypes"
-    for="Products.Archetypes.interfaces.IBaseContent
-         zope.lifecycleevent.interfaces.IObjectModifiedEvent"
-    handler=".cache.invalidateFacetedCache"
-    />
+      for="Products.Archetypes.interfaces.IBaseContent
+           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+      handler=".cache.invalidateFacetedCache"
+      zcml:condition="installed Products.Archetypes"
+      />
 
   <!-- Dexterity: invalidate Memcached -->
   <subscriber
-    zcml:condition="installed plone.dexterity"
-    for="plone.dexterity.interfaces.IDexterityContent
-         zope.lifecycleevent.interfaces.IObjectModifiedEvent"
-    handler=".cache.invalidateFacetedCache"
-    />
+      for="plone.dexterity.interfaces.IDexterityContent
+           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+      handler=".cache.invalidateFacetedCache"
+      zcml:condition="installed plone.dexterity"
+      />
 
 </configure>

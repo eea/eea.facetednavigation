@@ -4,7 +4,7 @@
   wid python:view.data.getId();
   site_url python:context.portal_url();
   theme python:view.data.get('theme', 'green');
-  theme_url string:${site_url}/++resource++jquery.jstree/themes/${theme}/style.css;
+  theme_url string:${site_url}/++resource++facetednavigation/themes/${theme}/style.css;
   hidden python:view.hidden;
   placeholder python:view.data.get('placeholder', '');
   default_value python:view.default or '';

@@ -105,6 +105,13 @@ def test_suite():
             layer=FUNCTIONAL_TESTING),
         layered(
             doctest.DocFileSuite(
+                'docs/vocabularies.txt',
+                optionflags=OPTIONFLAGS,
+                checker=Py23DocChecker(),
+                package='eea.facetednavigation'),
+            layer=FUNCTIONAL_TESTING),
+        layered(
+            doctest.DocFileSuite(
                 'docs/unicode.txt',
                 optionflags=OPTIONFLAGS,
                 checker=Py23DocChecker(),

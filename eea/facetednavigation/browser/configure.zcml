@@ -1,198 +1,167 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="eea"
+    >
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="facetednavigation_view"
-    template="template/view.pt"
-    class=".app.view.FacetedContainerView"
-    permission="zope2.View"
-    />
+      name="facetednavigation_view"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.FacetedContainerView"
+      template="template/view.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_display_criteria_checker"
-    class=".app.view.DisplayCriteriaCheckerView"
-    permission="zope2.View"
-    />
+      name="faceted_display_criteria_checker"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.DisplayCriteriaCheckerView"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="facetednavigation_simple_view"
-    template="template/simple_view.pt"
-    class=".app.view.FacetedContainerView"
-    permission="zope2.View"
-    />
+      name="facetednavigation_simple_view"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.FacetedContainerView"
+      template="template/simple_view.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_widgets"
-    template="template/widgets.pt"
-    class=".app.view.FacetedContainerView"
-    permission="zope2.View"
-    />
+      name="faceted_widgets"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.view.FacetedContainerView"
+      template="template/widgets.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_widgets_macros"
-    template="template/widgets.pt"
-    permission="zope2.View"
-    />
+      name="faceted_widgets_macros"
+      for="..interfaces.IFacetedNavigable"
+      template="template/widgets.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_macros"
-    template="template/macros.pt"
-    permission="zope2.View"
-    />
+      name="faceted_macros"
+      for="..interfaces.IFacetedNavigable"
+      template="template/macros.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="configure_faceted.html"
-    template="template/configure.pt"
-    class=".app.configure.FacetedConfigureView"
-    permission="eea.faceted.configure"
-    />
+      name="configure_faceted.html"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedConfigureView"
+      template="template/configure.pt"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_configure"
-    class=".app.configure.FacetedFormHandler"
-    permission="eea.faceted.configure"
-    allowed_interface=".interfaces.IFacetedFormHandler"
-    />
+      name="faceted_configure"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedFormHandler"
+      allowed_interface=".interfaces.IFacetedFormHandler"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_update_criteria"
-    class=".app.configure.FacetedCriteriaHandler"
-    permission="eea.faceted.configure"
-    />
-    <!--allowed_interface=".interfaces.IFacetedCriteriaHandler"-->
+      name="faceted_update_criteria"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedCriteriaHandler"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_update_criterion"
-    class=".app.configure.FacetedCriterionHandler"
-    permission="eea.faceted.configure"
-    />
-    <!--allowed_interface=".interfaces.IFacetedCriterionHandler"-->
+      name="faceted_update_criterion"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedCriterionHandler"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_update_position"
-    class=".app.configure.FacetedPositionHandler"
-    permission="eea.faceted.configure"
-    />
-    <!--allowed_interface=".interfaces.IFacetedPositionHandler"-->
+      name="faceted_update_position"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.configure.FacetedPositionHandler"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_query"
-    class=".app.query.FacetedQueryHandler"
-    template="template/query.pt"
-    permission="zope2.View"
-    />
+      name="faceted_query"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.query.FacetedQueryHandler"
+      template="template/query.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_counter"
-    class=".app.counter.FacetedQueryCounter"
-    template="template/counter.pt"
-    permission="zope2.View"
-    />
+      name="faceted_counter"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.counter.FacetedQueryCounter"
+      template="template/counter.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_history"
-    template="template/history.pt"
-    permission="zope2.View"
-    />
+      name="faceted_history"
+      for="..interfaces.IFacetedNavigable"
+      template="template/history.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_exportimport"
-    class=".app.exportimport.FacetedExportImport"
-    permission="eea.faceted.configure"
-    />
+      name="faceted_exportimport"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.exportimport.FacetedExportImport"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_schema"
-    class=".app.schema.FacetedSchemaGetter"
-    permission="eea.faceted.configure"
-    />
+      name="faceted_schema"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.schema.FacetedSchemaGetter"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IPossibleFacetedNavigable"
-    name="default_widgets.xml"
-    template="template/default.xml"
-    permission="eea.faceted.configure"
-    />
+      name="default_widgets.xml"
+      for="..interfaces.IPossibleFacetedNavigable"
+      template="template/default.xml"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_sync_translations"
-    class=".app.synchronize.FacetedSynchronizeTranslation"
-    permission="eea.faceted.configure"
-    />
+      name="faceted_sync_translations"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.synchronize.FacetedSynchronizeTranslation"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted.widget.error"
-    class=".app.error.FacetedError"
-    template="template/error.pt"
-    permission="zope2.View"
-    />
+      name="faceted.widget.error"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.error.FacetedError"
+      template="template/error.pt"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted.catalog.types.json"
-    class=".app.catalog.FacetedCatalog"
-    attribute="json_types"
-    permission="zope2.View"
-    />
-
-  <browser:resource
-    name="eea.faceted-navigation.css"
-    file="./stylesheets/view.css"
-   />
-
-  <browser:resource
-    name="eea.faceted-navigation-edit.css"
-    file="./stylesheets/edit.css"
-    />
-
-  <browser:resource
-    name="eea.faceted.jquery.ui.fix.css"
-    file="./stylesheets/ui.fix.css"
-   />
-
-  <browser:resource
-    name="eea.faceted-navigation.js"
-    file="./javascript/view.js"
-   />
-
-  <browser:resource
-    name="eea.faceted-navigation-edit.js"
-    file="./javascript/edit.js"
-   />
-
-  <browser:resource
-    name="eea.faceted-navigation-expand.js"
-    file="./javascript/expand.js"
-   />
-
-  <browser:resource
-    name="eea.faceted-navigation-independent.js"
-    file="./javascript/independent.js"
-   />
+      name="faceted.catalog.types.json"
+      for="..interfaces.IFacetedNavigable"
+      class=".app.catalog.FacetedCatalog"
+      attribute="json_types"
+      permission="zope2.View"
+      />
 
   <browser:resourceDirectory
+    name="facetednavigation"
+    directory="./static" />
+
+  <!-- BBB -->
+  <browser:resourceDirectory
     name="faceted_images"
-    directory="./images" />
+    directory="./static" />
 
 </configure>

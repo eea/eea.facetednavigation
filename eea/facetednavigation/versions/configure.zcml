@@ -1,19 +1,20 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="eea"
+    >
 
   <browser:page
-    for="..interfaces.IFacetedNavigable"
-    name="faceted_version"
-    class=".browser.FacetedVersion"
-    permission="zope2.View"
-    />
+      name="faceted_version"
+      for="..interfaces.IFacetedNavigable"
+      class=".browser.FacetedVersion"
+      permission="zope2.View"
+      />
 
   <subscriber
-    for="..interfaces.IFacetedNavigable
-         ..interfaces.IFacetedGlobalSettingsChangedEvent"
-    handler=".events.updateFacetedVersion"
-    />
+      for="..interfaces.IFacetedNavigable
+           ..interfaces.IFacetedGlobalSettingsChangedEvent"
+      handler=".events.updateFacetedVersion"
+      />
 
 </configure>

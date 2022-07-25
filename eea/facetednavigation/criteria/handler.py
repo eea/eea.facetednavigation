@@ -194,7 +194,7 @@ class Criteria(object):
                 except ConstraintNotSatisfied as err:
                     logger.exception(err)
                     continue
-                except AttributeError as err:
+                except AttributeError:
                     value_type = schema[key].value_type
                     if value:
                         value = [value_type.fromUnicode(value)]

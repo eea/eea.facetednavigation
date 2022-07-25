@@ -9,10 +9,13 @@ def loadfile(rel_filename):
     """
     storage_path = os.path.join(os.path.dirname(__file__))
     file_path = os.path.join(storage_path, rel_filename)
-    file_ob = open(file_path, 'rb')
-    filedata = file_ob.read()
-    filename = file_path.split('/')[-1]
-    filename = str(filename)
+
+    filename = filedata = ""
+    with open(file_path, 'rb') as file_ob:
+        filedata = file_ob.read()
+        filename = file_path.split('/')[-1]
+        filename = str(filename)
+
     return {
         'name': filename,
         'data': filedata,

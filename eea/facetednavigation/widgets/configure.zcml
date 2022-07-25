@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:zcml="http://namespaces.zope.org/zcml">
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
 
   <include package=".alphabetic" />
   <include package=".autocomplete" />
@@ -24,7 +25,9 @@
   <include package=".text" />
   <include package=".path" />
 
-  <utility provides=".interfaces.IWidgetsInfo"
-    factory=".widgets.WidgetsInfo" />
+  <utility
+      factory=".widgets.WidgetsInfo"
+      provides=".interfaces.IWidgetsInfo"
+      />
 
 </configure>

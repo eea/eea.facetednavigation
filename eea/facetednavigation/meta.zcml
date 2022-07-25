@@ -1,32 +1,33 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:zcml="http://namespaces.zope.org/zcml"
-  xmlns:meta="http://namespaces.zope.org/meta">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:meta="http://namespaces.zope.org/meta"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    >
 
   <meta:directives namespace="http://namespaces.zope.org/faceted">
     <meta:directive
-      name="widget"
-      schema=".widgets.interfaces.IWidgetDirective"
-      handler=".widgets.widgets.WidgetDirective"
-      />
+        name="widget"
+        handler=".widgets.widgets.WidgetDirective"
+        schema=".widgets.interfaces.IWidgetDirective"
+        />
   </meta:directives>
 
   <meta:directives namespace="http://namespaces.zope.org/faceted">
     <!-- Plone 4.1+  -->
     <configure zcml:condition="installed zope.browserpage">
       <meta:directive
-         name="view"
-         schema="zope.browserpage.metadirectives.IPageDirective"
-         handler=".views.meta.ViewDirective"
-         />
+          name="view"
+          handler=".views.meta.ViewDirective"
+          schema="zope.browserpage.metadirectives.IPageDirective"
+          />
     </configure>
     <!-- Plone 4.0  -->
     <configure zcml:condition="not-installed zope.browserpage">
       <meta:directive
-         name="view"
-         schema="zope.app.publisher.browser.metadirectives.IPageDirective"
-         handler=".views.meta.ViewDirective"
-         />
+          name="view"
+          handler=".views.meta.ViewDirective"
+          schema="zope.app.publisher.browser.metadirectives.IPageDirective"
+          />
     </configure>
   </meta:directives>
 
