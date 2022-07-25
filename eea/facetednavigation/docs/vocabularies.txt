@@ -11,7 +11,7 @@ Vocabulary from catalog index object_provides uniqueValues.
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.ObjectProvides')
     >>> voc
-    <eea.facetednavigation.vocabularies.catalog.ObjectProvidesVocabulary object at ...>
+    <eea.faceted...vocabularies.catalog.ObjectProvidesVocabulary object at ...>
 
 eea.faceted.vocabularies.PortalTypes
 ------------------------------------
@@ -19,7 +19,7 @@ Same as plone.app.vocabularies.PortalTypes
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.PortalTypes')
     >>> voc
-    <eea.facetednavigation.vocabularies.types.PortalTypesVocabulary object at ...>
+    <eea.faceted...vocabularies.types.PortalTypesVocabulary object at ...>
 
 eea.faceted.vocabularies.FacetedPortalTypes
 -------------------------------------------
@@ -28,7 +28,7 @@ types mapping added within portal_faceted tool.
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.FacetedPortalTypes')
     >>> voc
-    <eea.facetednavigation.vocabularies.faceted.FacetedPortalTypesVocabulary object at ...>
+    <eea.faceted...vocabularies.faceted.FacetedPortalTypesVocabulary object at ...>
 
 eea.faceted.vocabularies.WidgetPositions
 ----------------------------------------
@@ -36,7 +36,7 @@ Faceted widgets possible positions
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.WidgetPositions')
     >>> voc
-    <eea.facetednavigation.vocabularies.position.WidgetPositions object at ...>
+    <eea.faceted...vocabularies.position.WidgetPositions object at ...>
 
     >>> [term.value for term in voc()]
     ['top', 'left', 'center', 'right', 'bottomcenter', 'bottom']
@@ -47,7 +47,7 @@ Faceted widgets possible sections
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.WidgetSections')
     >>> voc
-    <eea.facetednavigation.vocabularies.section.WidgetSections object at ...>
+    <eea.faceted...vocabularies.section.WidgetSections object at ...>
 
     >>> [term.value for term in voc()]
     ['default', 'advanced']
@@ -58,7 +58,7 @@ Catalog indexes including sorting ones
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.SortingCatalogIndexes')
     >>> voc
-    <eea.facetednavigation.vocabularies.catalog.SortingCatalogIndexesVocabulary object at ...>
+    <eea.faceted...vocabularies.catalog.SortingCatalogIndexesVocabulary object at ...>
 
 eea.faceted.vocabularies.AutocompleteVocabularies
 -------------------------------------------------
@@ -66,4 +66,4 @@ Possible autocomplete suggestions views
 
     >>> voc = getUtility(IVocabularyFactory, 'eea.faceted.vocabularies.AutocompleteViews')
     >>> voc
-    <eea.facetednavigation.vocabularies.autocomplete.AutocompleteVocabulary object at ...>
+    <eea.faceted...vocabularies.autocomplete.AutocompleteVocabulary object at ...>
