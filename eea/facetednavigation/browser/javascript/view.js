@@ -286,7 +286,7 @@ Faceted.Form = {
 
 Faceted.hash_changed = function() {
   return Faceted.URLHandler.hash_changed();
-}
+};
 
 Faceted.URLHandler = {
   initialize: function(){

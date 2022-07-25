@@ -5,6 +5,7 @@ pipeline {
         GIT_NAME = "eea.facetednavigation"
         SONARQUBE_TAGS = "www.eea.europa.eu"
         FTEST_DIR = "eea/facetednavigation/ftests"
+        CUSTOM_FIND = "! -name *.min.js"
     }
 
   stages {
@@ -69,7 +70,11 @@ pipeline {
 
           "JS Lint": {
             node(label: 'docker') {
-              sh '''docker run -i --rm --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" eeacms/jslint4java'''
+              script {
+                catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
+                  sh '''docker run -i --rm --name="$BUILD_TAG-jslint" -e GIT_SRC="https://github.com/eea/$GIT_NAME.git" -e GIT_NAME="$GIT_NAME" -e GIT_BRANCH="$BRANCH_NAME" -e GIT_CHANGE_ID="$CHANGE_ID" -e CUSTOM_FIND="$CUSTOM_FIND" eeacms/jslint4java'''
+                }
+              }
             }
           },
 
