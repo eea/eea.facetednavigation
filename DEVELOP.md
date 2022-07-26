@@ -8,7 +8,7 @@ Trainings on how to create your own website using Plone 6 is available as part o
 
 * Python **3.7, 3.8, 3.9**
 * Python **python-venv** and **python-dev**
-* Yarn
+* Node 16 / Yarn (See https://6.dev-docs.plone.org/volto/getting-started)
 * Libraries
   - **libz**
   - **libjpeg**

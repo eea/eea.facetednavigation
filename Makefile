@@ -68,11 +68,11 @@ install:		## Install Plone
 	bin/pip install zope.testrunner plone.app.testing plone.reload dm.plonepatches.reload i18ndude -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
 	bin/mkwsgiinstance -d . -u admin:admin
 	mkdir -p var/blobstorage var/filestorage
-	yarn install
 
 .PHONY: develop
 develop:		## Develop this add-on
 	bin/pip install -e . $(PIP_PARAMS)
+	yarn install
 
 .PHONY: start
 start:			## Start Plone backend
