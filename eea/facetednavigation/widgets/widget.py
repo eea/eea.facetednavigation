@@ -211,30 +211,23 @@ class Widget(GroupForm, Form):
         return res
 
     def portal_vocabulary(self):
-        """Look up selected vocabulary from portal_vocabulary or from ZTK
-        zope-vocabulary factory.
+        """Look up selected vocabulary from ZTK zope-vocabulary factory.
         """
-        vtool = getToolByName(self.context, "portal_vocabularies", None)
         voc_id = self.data.get("vocabulary", None)
         if not voc_id:
             return []
-        voc = getattr(vtool, voc_id, None)
+
+        voc = queryUtility(IVocabularyFactory, voc_id, None)
         if not voc:
-            voc = queryUtility(IVocabularyFactory, voc_id, None)
-            if voc:
-                values = []
-                for term in voc(self.context):
-                    value = term.value
-                    if isinstance(value, bytes):
-                        value = value.decode("utf-8")
-                    values.append((value, (term.title or term.token or value)))
-                return values
             return []
 
-        terms = voc.getDisplayList(self.context)
-        if hasattr(terms, "items"):
-            return list(terms.items())
-        return terms
+        values = []
+        for term in voc(self.context):
+            value = term.value
+            if isinstance(value, bytes):
+                value = value.decode("utf-8")
+            values.append((value, (term.title or term.token or value)))
+        return values
 
     def vocabulary(self, **kwargs):
         """Return data vocabulary"""

@@ -10,9 +10,6 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 
-#
-# portal_vocabularies
-#
 @implementer(IVocabularyFactory)
 class PortalVocabulariesVocabulary(object):
     """Return vocabularies in portal_vocabulary"""
@@ -20,20 +17,9 @@ class PortalVocabulariesVocabulary(object):
     def __call__(self, *args, **kwargs):
         """See IVocabularyFactory interface"""
         res = []
-        vtool = getToolByName(getSite(), "portal_vocabularies", None)
-        if vtool:
-            vocabularies = vtool.objectValues()
-            res.extend([(term.getId(), term.title_or_id()) for term in vocabularies])
-        atvocabulary_ids = [elem[0] for elem in res]
 
         factories = getUtilitiesFor(IVocabularyFactory)
-        res.extend(
-            [
-                (factory[0], factory[0])
-                for factory in factories
-                if factory[0] not in atvocabulary_ids
-            ]
-        )
+        res.extend([(factory[0], factory[0]) for factory in factories])
 
         res.sort(key=lowercase_text)
         # play nice with collective.solr I18NFacetTitlesVocabularyFactory
