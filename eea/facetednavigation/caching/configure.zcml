@@ -1,7 +1,4 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
-    >
+<configure xmlns="http://namespaces.zope.org/zope">
 
   <!-- Faceted: invalidate Memcached -->
   <subscriber
@@ -15,7 +12,6 @@
       for="plone.dexterity.interfaces.IDexterityContent
            zope.lifecycleevent.interfaces.IObjectModifiedEvent"
       handler=".cache.invalidateFacetedCache"
-      zcml:condition="installed plone.dexterity"
       />
 
 </configure>

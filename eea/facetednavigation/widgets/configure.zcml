@@ -1,7 +1,4 @@
-<configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
-    >
+<configure xmlns="http://namespaces.zope.org/zope">
 
   <include package=".alphabetic" />
   <include package=".autocomplete" />
