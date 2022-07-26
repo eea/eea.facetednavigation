@@ -300,7 +300,7 @@ class CountableWidget(Widget):
     faceted_field = True
 
     def facet_counts(self, brains):
-        """ Count """
+        """Count"""
         res = {}
         facet_fields = brains.facet_counts.get("facet_fields")
         if facet_fields:
