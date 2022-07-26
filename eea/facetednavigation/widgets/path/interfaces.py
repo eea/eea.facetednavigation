@@ -1,13 +1,12 @@
 """ Widget interfaces and schema
 """
-from zope import schema
-from z3c.form import field
-from eea.facetednavigation.widgets.interfaces import ISchema
-from eea.facetednavigation.widgets.interfaces import FacetedSchemata
-from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
-from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
-import six
+from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
+from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import LayoutSchemata
+from z3c.form import field
+from zope import schema
 
 
 class IPathSchema(ISchema):
@@ -29,7 +28,6 @@ class IPathSchema(ISchema):
         ),
         required=False,
     )
-    root._type = (six.text_type, str)
 
     depth = schema.TextLine(
         title=_("Search Depth"),
@@ -40,7 +38,6 @@ class IPathSchema(ISchema):
         ),
         required=False,
     )
-    depth._type = (six.text_type, str)
 
     theme = schema.Choice(
         title=_("Navigation tree theme"),

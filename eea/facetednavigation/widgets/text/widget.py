@@ -7,7 +7,6 @@ from eea.facetednavigation.widgets.text.interfaces import DisplaySchemata
 from eea.facetednavigation.widgets.text.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from Products.CMFCore.utils import getToolByName
-import six
 
 
 class Widget(AbstractWidget):
@@ -33,10 +32,8 @@ class Widget(AbstractWidget):
     def normalize_string(self, value):
         """Process string values to be used in catalog query"""
         # Ensure words are string instances as ZCatalog requires strings
-        if isinstance(value, six.binary_type):
+        if isinstance(value, bytes):
             value = value.decode("utf-8")
-        if six.PY2 and isinstance(value, six.text_type):
-            value = value.encode("utf-8")
         if self.data.get("wildcard", False) and not value.endswith("*"):
             value = value + "*"
         value = self.quote_bad_chars(value)
@@ -50,7 +47,7 @@ class Widget(AbstractWidget):
         """Process value to be used in catalog query"""
         if isinstance(value, (tuple, list)):
             value = self.normalize_list(value)
-        elif isinstance(value, (str, six.text_type)):
+        elif isinstance(value, str):
             value = self.normalize_string(value)
         return value
 
@@ -58,8 +55,6 @@ class Widget(AbstractWidget):
         """Get value from form and return a catalog dict query"""
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
         if not index:
             return query
 

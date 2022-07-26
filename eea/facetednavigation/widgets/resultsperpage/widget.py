@@ -1,15 +1,14 @@
 """ Widget
 """
-import logging
-from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation import EEAMessageFactory as _
-from eea.facetednavigation.widgets.resultsperpage.interfaces import (
-    DefaultSchemata,
-    LayoutSchemata,
-    DisplaySchemata,
-)
-from six.moves import range
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.resultsperpage.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.resultsperpage.interfaces import DisplaySchemata
+from eea.facetednavigation.widgets.resultsperpage.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+
+import logging
+
 
 logger = logging.getLogger("eea.facetednavigation")
 

@@ -1,14 +1,12 @@
 """ Widget interfaces and schema
 """
-from zope import schema
-from z3c.form import field
-from eea.facetednavigation.widgets.interfaces import ISchema
-from eea.facetednavigation.widgets.interfaces import FacetedSchemata
-from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
-from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation import EEAMessageFactory as _
-
-import six
+from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
+from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import LayoutSchemata
+from z3c.form import field
+from zope import schema
 
 
 class IRangeSchema(ISchema):
@@ -25,28 +23,24 @@ class IRangeSchema(ISchema):
         description=_("Text to be displayed as start range input label"),
         required=False,
     )
-    labelStart._type = (str, six.text_type)
 
     labelEnd = schema.TextLine(
         title=_("Label (end range)"),
         description=_("Text to be displayed as end range input label"),
         required=False,
     )
-    labelEnd._type = (str, six.text_type)
 
     placeholderStart = schema.TextLine(
         title=_("Placeholder (start range)"),
         description=_("Text to be displayed as start range input placeholder"),
         required=False,
     )
-    placeholderStart._type = (str, six.text_type)
 
     placeholderEnd = schema.TextLine(
         title=_("Placeholder (end range)"),
         description=_("Text to be displayed as end range input placeholder"),
         required=False,
     )
-    placeholderEnd._type = (str, six.text_type)
 
     integer = schema.Bool(
         title=_("Numerical range"),

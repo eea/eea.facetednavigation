@@ -1,21 +1,17 @@
 """ Alphabet widget
 """
-import logging
+from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.alphabetic.alphabets import unicode_character_map
+from eea.facetednavigation.widgets.alphabetic.interfaces import CountableSchemata
+from eea.facetednavigation.widgets.alphabetic.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.alphabetic.interfaces import IAlphabeticWidget
+from eea.facetednavigation.widgets.alphabetic.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import CountableWidget
 from zope.interface import implementer
 
-from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import CountableWidget
-from eea.facetednavigation.widgets.alphabetic.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.alphabetic.interfaces import CountableSchemata
-from eea.facetednavigation.widgets.alphabetic.interfaces import LayoutSchemata
-from eea.facetednavigation import EEAMessageFactory as _
-from eea.facetednavigation.widgets.alphabetic.alphabets import (
-    unicode_character_map,
-)
-from eea.facetednavigation.widgets.alphabetic.interfaces import (
-    IAlphabeticWidget,
-)
-import six
+import logging
+
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -57,9 +53,9 @@ class Widget(CountableWidget):
             xval = getattr(brain, index_id, None)
             if not xval:
                 continue
-            if not isinstance(xval, (six.binary_type, six.text_type)):
+            if not isinstance(xval, (bytes, str)):
                 continue
-            if isinstance(xval, six.binary_type):
+            if isinstance(xval, bytes):
                 xval = xval.decode("utf-8", "replace")
             letter = xval[0].upper()
             count = res.get(letter, 0)

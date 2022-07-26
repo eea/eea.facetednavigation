@@ -1,15 +1,15 @@
 """ Path widget
 """
-import logging
+from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.path.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.path.interfaces import DisplaySchemata
+from eea.facetednavigation.widgets.path.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from Products.CMFPlone.utils import safeToInt
 
-from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation.widgets.path.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.path.interfaces import LayoutSchemata
-from eea.facetednavigation.widgets.path.interfaces import DisplaySchemata
-from eea.facetednavigation import EEAMessageFactory as _
-import six
+import logging
+
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -31,8 +31,6 @@ class Widget(AbstractWidget):
         site_url = site_url.strip("/")
         data_root = self.data.get("root", "") or ""
         data_root = data_root.strip().strip("/")
-        if six.PY2 and isinstance(data_root, six.text_type):
-            data_root = data_root.encode("utf-8")
         if data_root.startswith(site_url):
             data_root = "/" + data_root
             return data_root.split("/")
@@ -77,9 +75,6 @@ class Widget(AbstractWidget):
         if not data_default:
             return ""
 
-        if six.PY2 and isinstance(data_default, six.text_type):
-            data_default = data_default.encode("utf-8")
-
         data_list = [d for d in data_default.strip().strip("/").split("/") if d]
         root = self.data_root[:]
         root.extend(data_list)
@@ -113,8 +108,6 @@ class Widget(AbstractWidget):
         """Get value from form and return a catalog dict query"""
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
         if not index:
             return query
 

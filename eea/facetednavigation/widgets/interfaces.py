@@ -1,12 +1,12 @@
 """ Widgets interfaces
 """
-from zope import schema
-from zope.interface import Interface
-from z3c.form import group, field
-from zope.configuration.fields import GlobalObject
-from zope.configuration.fields import GlobalInterface
 from eea.facetednavigation import EEAMessageFactory as _
-import six
+from z3c.form import field
+from z3c.form import group
+from zope import schema
+from zope.configuration.fields import GlobalInterface
+from zope.configuration.fields import GlobalObject
+from zope.interface import Interface
 
 
 class ICriterion(Interface):
@@ -69,19 +69,16 @@ class ISchema(Interface):
         title=_("Friendly name"),
         description=_("Title for widget to display in view page"),
     )
-    title._type = (six.text_type, str)
 
     placeholder = schema.TextLine(
         title=_("Placeholder"),
         description=_("Text to be displayed as input placeholder"),
         required=False,
     )
-    placeholder._type = (str, six.text_type)
 
     default = schema.TextLine(
         title=_("Default value"), description=_("Default query"), required=False
     )
-    default._type = (six.text_type, str)
 
     index = schema.Choice(
         title=_("Catalog index"),
@@ -130,7 +127,6 @@ class ISchema(Interface):
         description=_("Custom CSS class for widget to display in view page"),
         required=False,
     )
-    custom_css._type = (six.text_type, str)
 
 
 class FacetedSchemata(group.Group):

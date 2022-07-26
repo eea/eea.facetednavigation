@@ -1,18 +1,14 @@
 """ MultiSelect widget
 """
+from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.multiselect.interfaces import CountableSchemata
+from eea.facetednavigation.widgets.multiselect.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.multiselect.interfaces import DisplaySchemata
+from eea.facetednavigation.widgets.multiselect.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import CountableWidget
 from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
-
-from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.multiselect.interfaces import (
-    DefaultSchemata,
-    LayoutSchemata,
-    CountableSchemata,
-    DisplaySchemata,
-)
-from eea.facetednavigation.widgets.widget import CountableWidget
-from eea.facetednavigation import EEAMessageFactory as _
-import six
 
 
 class Widget(CountableWidget):
@@ -41,15 +37,13 @@ class Widget(CountableWidget):
         if not default:
             return []
 
-        if isinstance(default, (str, six.text_type)):
+        if isinstance(default, str):
             default = [
                 default,
             ]
 
         res = []
         for x in default:
-            if six.PY2 and isinstance(x, six.text_type):
-                x = x.encode("utf-8")
             res.append(x)
         return res
 
@@ -77,16 +71,11 @@ class Widget(CountableWidget):
         """Get value from form and return a catalog dict query"""
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
 
         if not self.operator_visible:
             operator = self.operator
         else:
             operator = form.get(self.data.getId() + "-operator", self.operator)
-
-        if six.PY2:
-            operator = operator.encode("utf-8", "replace")
 
         if not index:
             return query

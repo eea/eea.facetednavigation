@@ -1,15 +1,13 @@
 """ Portal tools specific vocabularies
 """
 from eea.facetednavigation.vocabularies.utils import lowercase_text
+from Products.CMFCore.utils import getToolByName
 from zope.component import getUtilitiesFor
 from zope.component.hooks import getSite
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
-from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
-from Products.CMFCore.utils import getToolByName
-
-import six
+from zope.schema.vocabulary import SimpleVocabulary
 
 
 #
@@ -64,10 +62,7 @@ class PortalLanguagesVocabulary(object):
             return SimpleVocabulary([])
 
         res = portal_languages.listSupportedLanguages()
-        res = [
-            (x, (isinstance(y, six.binary_type) and y.decode("utf-8") or y))
-            for x, y in res
-        ]
+        res = [(x, (isinstance(y, bytes) and y.decode("utf-8") or y)) for x, y in res]
 
         res.sort(key=lowercase_text)
         items = [SimpleTerm(key, key, value) for key, value in res]

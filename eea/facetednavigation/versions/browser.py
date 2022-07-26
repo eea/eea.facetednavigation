@@ -1,15 +1,17 @@
 """ Proxy caching (squid, etc)
 """
-from hashlib import md5
-import six.moves.cPickle
-import logging
-from zope.component import queryAdapter
-from zope.interface import implementer
-from zope.annotation.interfaces import IAnnotations
-from Products.Five.browser import BrowserView
+from eea.facetednavigation.config import ANNO_FACETED_VERSION
 from eea.facetednavigation.interfaces import ICriteria
 from eea.facetednavigation.versions.interfaces import IFacetedVersion
-from eea.facetednavigation.config import ANNO_FACETED_VERSION
+from hashlib import md5
+from Products.Five.browser import BrowserView
+from zope.annotation.interfaces import IAnnotations
+from zope.component import queryAdapter
+from zope.interface import implementer
+
+import logging
+import pickle
+
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -50,7 +52,7 @@ class FacetedVersion(BrowserView):
         if not query:
             return ""
 
-        return md5(six.moves.cPickle.dumps(query)).hexdigest()
+        return md5(pickle.dumps(query)).hexdigest()
 
     #
     # Public interface

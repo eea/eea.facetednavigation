@@ -1,14 +1,13 @@
 """ Widget interfaces and schema
 """
-from zope import schema
-from z3c.form import field
+from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.interfaces import IWidget
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
-from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
+from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
-from eea.facetednavigation import EEAMessageFactory as _
-import six
+from z3c.form import field
+from zope import schema
 
 
 class IAlphabeticWidget(IWidget):
@@ -23,7 +22,6 @@ class IAlphabeticSchema(ISchema):
         description=_("Default letter to be selected"),
         required=False,
     )
-    default._type = (six.text_type, str)
 
     index = schema.Choice(
         title=_("Catalog index"),

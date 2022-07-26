@@ -1,25 +1,20 @@
 """ Widget
 """
-import json
-import six.moves.urllib.request
-import six.moves.urllib.parse
-import six.moves.urllib.error
-from zope.interface import implementer
-from zope.component import queryUtility
-
-from lxml import etree
-
-from Products.Five import BrowserView
-
-from eea.facetednavigation.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.autocomplete.interfaces import ISolrConnectionManager
 from eea.facetednavigation.widgets.autocomplete.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.autocomplete.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.autocomplete.interfaces import DisplaySchemata
+from eea.facetednavigation.widgets.autocomplete.interfaces import ISolrConnectionManager
+from eea.facetednavigation.widgets.autocomplete.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-import six
+from lxml import etree
+from Products.Five import BrowserView
+from zope.component import queryUtility
+from zope.interface import implementer
+
+import json
+import urllib
 
 
 class Widget(AbstractWidget):
@@ -46,10 +41,8 @@ class Widget(AbstractWidget):
     def normalize_string(self, value):
         """Process string values to be used in catalog query"""
         # Ensure words are string instances as ZCatalog requires strings
-        if isinstance(value, six.binary_type):
+        if isinstance(value, bytes):
             value = value.decode("utf-8")
-        if six.PY2 and isinstance(value, six.text_type):
-            value = value.encode("utf-8")
         value = self.quote_bad_chars(value)
         return value
 
@@ -64,7 +57,7 @@ class Widget(AbstractWidget):
             value = value.split(",")
         if isinstance(value, (tuple, list)):
             value = self.normalize_list(value)
-        elif isinstance(value, (six.binary_type, six.text_type)):
+        elif isinstance(value, (bytes, str)):
             value = self.normalize_string(value)
         return value
 
@@ -72,8 +65,6 @@ class Widget(AbstractWidget):
         """Get value from form and return a catalog dict query"""
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
         if not index:
             return query
 
@@ -113,7 +104,7 @@ class SolrSuggest(BrowserView):
             return json.dumps(result)
 
         # XXX this should really go into c.solr
-        request = six.moves.urllib.parse.urlencode({"q": term}, doseq=True)
+        request = urllib.parse.urlencode({"q": term}, doseq=True)
         response = connection.doPost(
             connection.solrBase + "/suggest", request, connection.formheaders
         )

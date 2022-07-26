@@ -1,11 +1,12 @@
 """ Criterion
 """
-import logging
-from zope.component import getUtility
-from Products.GenericSetup.utils import XMLAdapterBase
-from eea.facetednavigation.widgets.interfaces import ICriterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
-import six
+from eea.facetednavigation.widgets.interfaces import ICriterion
+from Products.GenericSetup.utils import XMLAdapterBase
+from zope.component import getUtility
+
+import logging
+
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -43,7 +44,7 @@ class CriterionXMLAdapter(XMLAdapterBase):
             else:
                 if isinstance(value, (int, bool)):
                     value = str(value)
-                elif not isinstance(value, six.string_types):
+                elif not isinstance(value, str):
                     value = str(value)
                 child = self._doc.createTextNode(value)
                 prop.appendChild(child)

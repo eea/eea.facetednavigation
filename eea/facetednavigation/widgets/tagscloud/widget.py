@@ -1,17 +1,16 @@
 """ Tag-Cloud widget
 """
-import random
-from Products.CMFPlone.utils import safeToInt
+from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.tagscloud.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.tagscloud.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.tagscloud.interfaces import CountableSchemata
+from eea.facetednavigation.widgets.tagscloud.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.tagscloud.interfaces import DisplaySchemata
 from eea.facetednavigation.widgets.tagscloud.interfaces import GeometrySchemata
+from eea.facetednavigation.widgets.tagscloud.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import CountableWidget
-from eea.facetednavigation import EEAMessageFactory as _
+from Products.CMFPlone.utils import safeToInt
 
-import six
+import random
 
 
 class Widget(CountableWidget):
@@ -35,8 +34,6 @@ class Widget(CountableWidget):
     def default(self):
         """Get default values"""
         default = super(Widget, self).default or ""
-        if six.PY2:
-            default = default.encode("utf-8")
         return default
 
     @property
@@ -83,8 +80,6 @@ class Widget(CountableWidget):
         """Get value from form and return a catalog dict query"""
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
         if not index:
             return query
 

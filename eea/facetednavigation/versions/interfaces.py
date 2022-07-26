@@ -1,8 +1,7 @@
 """ Versions interfaces
 """
-from zope.interface import Interface
 from zope import schema
-import six
+from zope.interface import Interface
 
 
 class IFacetedVersion(Interface):
@@ -11,7 +10,6 @@ class IFacetedVersion(Interface):
     """
 
     key = schema.TextLine(title="Version key")
-    key._type = (six.text_type, str)
 
     def __call__():
         """Get version key"""

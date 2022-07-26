@@ -1,7 +1,8 @@
 """ Test utilities
 """
+from io import BytesIO
+
 import os
-from six import BytesIO
 
 
 def loadfile(rel_filename):

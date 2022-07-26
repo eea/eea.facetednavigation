@@ -1,15 +1,14 @@
 """ Widget
 """
-import logging
 from DateTime import DateTime
-
+from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.date.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.date.interfaces import LayoutSchemata
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
-import six
+import logging
+
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -95,8 +94,6 @@ class Widget(AbstractWidget):
         """Get value from form and return a catalog dict query"""
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
         if not index:
             return query
 

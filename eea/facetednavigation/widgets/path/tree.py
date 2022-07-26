@@ -1,16 +1,15 @@
 """ JsTree views
 """
-import json
-from zope.component import queryAdapter
-from Products.Five.browser import BrowserView
-from Products.CMFPlone.browser.navtree import DefaultNavtreeStrategy
-from Products.CMFCore.utils import getToolByName
-from plone.app.layout.navigation.navtree import buildFolderTree
-
-from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import cacheTreeKeyFacetedNavigation
+from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.interfaces import ICriteria
-import six
+from plone.app.layout.navigation.navtree import buildFolderTree
+from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.browser.navtree import DefaultNavtreeStrategy
+from Products.Five.browser import BrowserView
+from zope.component import queryAdapter
+
+import json
 
 
 class FacetedTree(BrowserView):
@@ -76,8 +75,6 @@ class FacetedTree(BrowserView):
             query["Language"] = language
 
         self.rootPath = url
-        if six.PY2 and isinstance(url, six.text_type):
-            url = url.encode("utf-8")
         obj = self.context.unrestrictedTraverse(url.strip("/"), None)
         if not obj:
             return []

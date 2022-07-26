@@ -15,7 +15,6 @@ from plone.i18n.normalizer import urlnormalizer as normalizer
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import safe_unicode
 from Products.CMFPlone.utils import safeToInt
-from six.moves import range
 from z3c.form.form import Form
 from z3c.form.group import GroupForm
 from z3c.form.interfaces import IGroup
@@ -29,7 +28,6 @@ from ZTUtils.Lazy import LazyMap
 
 import logging
 import re
-import six
 
 
 logger = logging.getLogger("eea.facetednavigation")
@@ -66,8 +64,6 @@ class Widget(GroupForm, Form):
     def prefix(self):
         """Form prefix"""
         cid = self.data.getId()
-        if six.PY2 and isinstance(cid, six.text_type):
-            cid = cid.encode("utf-8")
         return cid
 
     def getContent(self):
@@ -145,7 +141,7 @@ class Widget(GroupForm, Form):
 
         # message is a simple msgid
         for domain in ["eea", "plone"]:
-            if isinstance(message, six.binary_type):
+            if isinstance(message, bytes):
                 try:
                     message = message.decode("utf-8")
                 except Exception as err:
@@ -198,10 +194,8 @@ class Widget(GroupForm, Form):
         for val in index.uniqueValues():
             if isinstance(val, (int, float)):
                 val = str(val)
-                if six.PY2 and isinstance(val, six.binary_type):
-                    val = val.decode("utf-8")
 
-            elif not isinstance(val, six.text_type):
+            elif not isinstance(val, str):
                 try:
                     val = safe_unicode(str(val))
                 except Exception:
@@ -231,7 +225,7 @@ class Widget(GroupForm, Form):
                 values = []
                 for term in voc(self.context):
                     value = term.value
-                    if isinstance(value, six.binary_type):
+                    if isinstance(value, bytes):
                         value = value.decode("utf-8")
                     values.append((value, (term.title or term.token or value)))
                 return values
@@ -326,9 +320,9 @@ class CountableWidget(Widget):
                 facet_field = facet_fields.get(index_id, {})
                 for value, num in facet_field.items():
                     normalized_value = atdx_normalize(value)
-                    if isinstance(value, six.text_type):
+                    if isinstance(value, str):
                         res[value] = num
-                    elif isinstance(normalized_value, six.text_type):
+                    elif isinstance(normalized_value, str):
                         res[normalized_value] = num
                     else:
                         unicode_value = value.decode("utf-8")
@@ -384,9 +378,9 @@ class CountableWidget(Widget):
             rset = ctool.apply_index(self.context, index, normalized_value)[0]
             rset = frozenset(rset)
             rset = brains.intersection(rset)
-            if isinstance(value, six.text_type):
+            if isinstance(value, str):
                 res[value] = len(rset)
-            elif isinstance(normalized_value, six.text_type):
+            elif isinstance(normalized_value, str):
                 res[normalized_value] = len(rset)
             elif isinstance(normalized_value, bool):
                 # We only get here for true values, not for false.

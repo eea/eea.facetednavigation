@@ -17,7 +17,6 @@ from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 
 import logging
-import six
 
 
 logger = logging.getLogger("eea.facetednavigation")
@@ -189,7 +188,7 @@ class FacetedFormHandler(FacetedBasicHandler):
         sanitized_form = {}
         for key, value in getattr(self.request, "form", {}).items():
             key = key.replace("[]", "")
-            if isinstance(value, six.binary_type):
+            if isinstance(value, bytes):
                 value = value.decode("utf-8")
             sanitized_form[key] = value
 

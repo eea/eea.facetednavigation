@@ -13,7 +13,6 @@ from zope.event import notify
 from zope.interface import implementer
 
 import logging
-import six
 
 
 logger = logging.getLogger("eea.facetednavigation")
@@ -31,8 +30,6 @@ class FacetedCatalog(object):
         if not apply_index:
             return IIBucket(), (index_id,)
 
-        if six.PY2 and isinstance(value, six.text_type):
-            value = value.encode("utf-8", "replace")
         rset = apply_index({index_id: value})
 
         if not rset:

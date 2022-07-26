@@ -1,9 +1,8 @@
 """ Criteria storage
 """
-from zope import interface
 from eea.facetednavigation.widgets.interfaces import ICriterion
 from Products.CMFPlone.utils import safe_unicode
-from six.moves import range
+from zope import interface
 
 
 @interface.implementer(ICriterion)

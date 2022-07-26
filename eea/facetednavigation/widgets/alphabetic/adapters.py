@@ -1,8 +1,7 @@
 """ Adapters
 """
-from zope.interface import implementer
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
-import six
+from zope.interface import implementer
 
 
 @implementer(IWidgetFilterBrains)
@@ -22,7 +21,7 @@ class WidgetFilterBrains(object):
         else:
             letter = form.get(wid, "")
 
-        if isinstance(letter, six.binary_type):
+        if isinstance(letter, bytes):
             letter = letter.decode("utf-8", "replace")
 
         for brain in brains:
@@ -38,10 +37,10 @@ class WidgetFilterBrains(object):
             if xval is None:
                 continue
 
-            if not isinstance(xval, (six.binary_type, six.text_type)):
+            if not isinstance(xval, (bytes, str)):
                 continue
 
-            if isinstance(xval, six.binary_type):
+            if isinstance(xval, bytes):
                 xval = xval.decode("utf-8", "replace")
 
             if not xval.lower().startswith(letter.lower()):

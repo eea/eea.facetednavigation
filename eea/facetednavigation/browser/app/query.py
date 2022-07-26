@@ -20,7 +20,6 @@ from zope.component import queryAdapter
 from zope.component import queryMultiAdapter
 
 import logging
-import six
 import time
 
 
@@ -61,8 +60,6 @@ class FacetedQueryHandler(FolderView):
             default = widget.default
             if not default:
                 continue
-            if six.PY2:
-                cid = cid.encode("utf-8")
             query[cid] = default
         return query
 

@@ -1,18 +1,17 @@
 """ TAL widget
 """
 # Python
-import logging
-from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
+from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.tal.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.tal.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation import EEAMessageFactory as _
+from plone.dexterity.interfaces import IDexterityContent
 from Products.CMFCore.utils import getToolByName
 
-import six
-from plone.dexterity.interfaces import IDexterityContent
+import logging
 
 
 logger = logging.getLogger("eea.facetednavigation")
@@ -101,8 +100,6 @@ class Widget(AbstractWidget):
         """
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
         if not index:
             return query
 

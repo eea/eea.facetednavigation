@@ -1,16 +1,12 @@
 """ Checkbox widget
 """
-from plone.i18n.normalizer import urlnormalizer as normalizer
-from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import CountableWidget
 from eea.facetednavigation import EEAMessageFactory as _
-from eea.facetednavigation.widgets.boolean.interfaces import (
-    DefaultSchemata,
-    LayoutSchemata,
-    CountableSchemata,
-)
-
-import six
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.boolean.interfaces import CountableSchemata
+from eea.facetednavigation.widgets.boolean.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.boolean.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import CountableWidget
+from plone.i18n.normalizer import urlnormalizer as normalizer
 
 
 class Widget(CountableWidget):
@@ -47,9 +43,6 @@ class Widget(CountableWidget):
     def query(self, form):
         """Get value from form and return a catalog dict query"""
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
-
         if not index:
             return {}
 

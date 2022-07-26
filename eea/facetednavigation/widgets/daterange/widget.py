@@ -1,22 +1,19 @@
 """ Widget
 """
-import logging
-
-from datetime import datetime
-from DateTime import DateTime
-
 from collective.js.jqueryui.utils import get_datepicker_date_format
 from collective.js.jqueryui.utils import get_python_date_format
 from collective.js.jqueryui.viewlet import L10nDatepicker
-
-from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
-from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata
+from datetime import datetime
+from DateTime import DateTime
 from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata
+from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
-import six
+import logging
+
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -103,8 +100,6 @@ class Widget(AbstractWidget, L10nDatepicker):
         """Get value from form and return a catalog dict query"""
         query = {}
         index = self.data.get("index", "")
-        if six.PY2:
-            index = index.encode("utf-8", "replace")
         if not index:
             return query
 

@@ -1,18 +1,19 @@
 """ Low level faceted criteria API
 """
-import logging
+from eea.facetednavigation.config import ANNO_CRITERIA
+from eea.facetednavigation.criteria.interfaces import ICriteria
+from eea.facetednavigation.criteria.utils import fix_string
+from eea.facetednavigation.interfaces import IWidgetsInfo
+from eea.facetednavigation.widgets.storage import Criterion
 from persistent.list import PersistentList
+from zope.annotation.interfaces import IAnnotations
 from zope.component import getUtility
 from zope.interface import implementer
-from zope.annotation.interfaces import IAnnotations
-from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.interfaces import ConstraintNotSatisfied
-from eea.facetednavigation.criteria.utils import fix_string
-from eea.facetednavigation.config import ANNO_CRITERIA
-from eea.facetednavigation.widgets.storage import Criterion
-from eea.facetednavigation.interfaces import IWidgetsInfo
-from eea.facetednavigation.criteria.interfaces import ICriteria
-import six
+from zope.schema.interfaces import IVocabularyFactory
+
+import logging
+
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -140,7 +141,7 @@ class Criteria(object):
                 value_type = schema[key].value_type
                 value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
-            elif isinstance(value, (str, six.text_type)):
+            elif isinstance(value, str):
                 value = schema[key].fromUnicode(value)
             criteria[key] = value
 
@@ -167,7 +168,7 @@ class Criteria(object):
                 value_type = schema[key].value_type
                 value = [fix_string(x) for x in value]
                 value = [value_type.fromUnicode(x) for x in value]
-            elif isinstance(value, (str, six.text_type)):
+            elif isinstance(value, str):
                 _type = getattr(schema[key], "_type", None)
                 value = fix_string(value, _type)
                 try:
@@ -257,7 +258,7 @@ class Criteria(object):
         )
         res = []
         for position, cids in positions:
-            if isinstance(cids, (str, six.text_type)):
+            if isinstance(cids, str):
                 cids = [cids]
             for cid in cids:
                 criterion = self.get(cid)
