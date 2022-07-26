@@ -514,11 +514,13 @@ FacetedEdit.FormEditWidget = {
       if(catalog.length && operator.length){
         operator = operator.clone();
         jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.CATALOG_CHANGED, {
+          cid: context.cid,
           catalog: catalog,
           operator: operator
         });
         catalog.change(function(){
           jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.CATALOG_CHANGED, {
+            cid: context.cid,
             catalog: catalog,
             operator: operator
           });
@@ -621,6 +623,7 @@ FacetedEdit.FormAddWidgets = {
         operator = operator.clone();
         catalog.change(function(){
           jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.CATALOG_CHANGED, {
+            cid: 'c0',
             catalog: catalog,
             operator: operator
           });
@@ -716,7 +719,6 @@ FacetedEdit.FormValidator = {
 
     var valid = true;
     valid = valid && this.validate_numbers(form);
-    valid = valid && this.validate_integers(form);
     valid = valid && this.validate_required(form);
     return valid;
   },
@@ -730,25 +732,6 @@ FacetedEdit.FormValidator = {
       if(jQuery(this).attr('name').indexOf(':int')==-1){
         return;
       }
-      var value = input.val();
-      value = parseInt(value, 10);
-      if(value || value === 0){
-        input.val(value);
-      }else{
-        input.addClass('ui-state-error');
-        context.error_message(form, input, 'Invalid number');
-        valid = false;
-      }
-    });
-    return valid;
-  },
-
-  validate_integers: function(form){
-    var valid = true;
-    var elements = jQuery('.ArchetypesIntegerWidget :input[type=text]', form);
-    var context = this;
-    elements.each(function(){
-      var input = jQuery(this);
       var value = input.val();
       value = parseInt(value, 10);
       if(value || value === 0){
@@ -951,7 +934,7 @@ FacetedEdit.Catalog = {
     });
 
     jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.CATALOG_CHANGED, function(evt, data){
-      context.handle_change(data.catalog, data.operator);
+      context.handle_change(data.catalog, data.operator, data.cid);
     });
   },
 
@@ -959,8 +942,8 @@ FacetedEdit.Catalog = {
     return this.types[key];
   },
 
-  handle_change: function(catalog, operator){
-    var select = jQuery('#archetypes-fieldname-operator select');
+  handle_change: function(catalog, operator, cid){
+    var select = jQuery('#faceted-' + cid + '-operator');
     var index = catalog.val();
     var mapping = this.get(index);
     var values = mapping ? mapping.operator : ['or'];

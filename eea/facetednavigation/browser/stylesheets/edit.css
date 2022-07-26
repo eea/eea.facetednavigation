@@ -34,18 +34,8 @@
   width: 100%;
 }
 
-/* Archetypes
-============= */
 .formHelp {
   display: block;
-}
-
-#archetypes-fieldname-title input{
-  width: auto;
-}
-
-#archetypes-fieldname-vocabulary select {
-  width: 25em;
 }
 
 /* Common
