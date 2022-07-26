@@ -1,28 +1,26 @@
 """ Subtyping support
 """
-from zope.interface import implementer
-from zope.interface import alsoProvides, noLongerProvides
-from zope.event import notify
-from zope.publisher.interfaces import NotFound
-
-from Products.statusmessages.interfaces import IStatusMessage
-from Products.Five.browser import BrowserView
-
-from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
+from eea.facetednavigation import _
+from eea.facetednavigation.events import FacetedDisabledEvent
+from eea.facetednavigation.events import FacetedEnabledEvent
+from eea.facetednavigation.events import FacetedWillBeDisabledEvent
+from eea.facetednavigation.events import FacetedWillBeEnabledEvent
+from eea.facetednavigation.interfaces import IDisableSmartFacets
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.interfaces import IFacetedSearchMode
-from eea.facetednavigation.interfaces import IDisableSmartFacets
 from eea.facetednavigation.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.interfaces import IHidePloneRightColumn
-from eea.facetednavigation.events import (
-    FacetedWillBeDisabledEvent,
-    FacetedWillBeEnabledEvent,
-    FacetedDisabledEvent,
-    FacetedEnabledEvent,
-)
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
+from Products.Five.browser import BrowserView
+from Products.statusmessages.interfaces import IStatusMessage
+from zope.event import notify
+from zope.interface import alsoProvides
+from zope.interface import implementer
+from zope.interface import noLongerProvides
+from zope.publisher.interfaces import NotFound
 
 import pkg_resources
+
 
 plone_version = pkg_resources.get_distribution("Products.CMFPlone").version
 

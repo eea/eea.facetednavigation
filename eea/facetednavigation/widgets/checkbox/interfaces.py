@@ -1,13 +1,15 @@
 """ Widget interfaces and schema
 """
-from zope import schema
-from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from z3c.form import field
-from eea.facetednavigation.widgets.interfaces import ISchema, FacetedSchemata
-from eea.facetednavigation.widgets.interfaces import LayoutSchemata
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets.interfaces import FacetedSchemata
+from eea.facetednavigation.widgets.interfaces import ISchema
+from eea.facetednavigation.widgets.interfaces import LayoutSchemata
+from z3c.form import field
+from zope import schema
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 
 
 class ICheckboxSchema(ISchema):

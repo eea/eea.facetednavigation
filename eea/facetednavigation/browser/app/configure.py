@@ -1,6 +1,6 @@
 """ Faceted configure
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.browser import interfaces
 from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
 from eea.facetednavigation.events import FacetedSettingsWillBeChangedEvent

@@ -1,16 +1,12 @@
 """ Faceted Navigation public interfaces
 """
-from zope.interface.interfaces import IObjectEvent
-from zope.interface import Interface
-from zope import schema
-
-# Subtypes
-from eea.facetednavigation.subtypes.interfaces import IPossibleFacetedNavigable
-from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
-from eea.facetednavigation.subtypes.interfaces import IFacetedSearchMode
+from eea.facetednavigation import _
 
 # Criteria
 from eea.facetednavigation.criteria.interfaces import ICriteria
+
+# Language
+from eea.facetednavigation.indexes.language.interfaces import ILanguageWidgetAdapter
 
 # Layout
 from eea.facetednavigation.layout.interfaces import IFacetedLayout
@@ -18,32 +14,32 @@ from eea.facetednavigation.layout.interfaces import IFacetedLayout
 # Search
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
 
-# Widgets
-from eea.facetednavigation.widgets.interfaces import IWidget
-from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
+# Settings
+from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
+from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
+from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
+
+# Wrapper
+# Subtypes
+from eea.facetednavigation.subtypes.interfaces import IFacetedNavigable
+from eea.facetednavigation.subtypes.interfaces import IFacetedSearchMode
+from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
+from eea.facetednavigation.subtypes.interfaces import IPossibleFacetedNavigable
+
+# Versioning
+from eea.facetednavigation.versions.interfaces import IFacetedVersion
 
 # Faceted Views
 from eea.facetednavigation.views.interfaces import IViewsInfo
 
 # After query adapter
+# Widgets
+from eea.facetednavigation.widgets.interfaces import IWidget
 from eea.facetednavigation.widgets.interfaces import IWidgetFilterBrains
-
-# Language
-from eea.facetednavigation.indexes.language.interfaces import (
-    ILanguageWidgetAdapter,
-)
-
-# Versioning
-from eea.facetednavigation.versions.interfaces import IFacetedVersion
-
-# Wrapper
-from eea.facetednavigation.subtypes.interfaces import IFacetedWrapper
-
-# Settings
-from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
-from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
-from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets.interfaces import IWidgetsInfo
+from zope import schema
+from zope.interface import Interface
+from zope.interface.interfaces import IObjectEvent
 
 
 #

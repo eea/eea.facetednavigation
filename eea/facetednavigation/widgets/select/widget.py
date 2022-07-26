@@ -1,6 +1,6 @@
 """ Select widget
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.select.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.select.interfaces import DefaultSchemata

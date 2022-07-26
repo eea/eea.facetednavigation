@@ -1,6 +1,6 @@
 """ Alphabet widget
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.alphabetic.alphabets import unicode_character_map
 from eea.facetednavigation.widgets.alphabetic.interfaces import CountableSchemata

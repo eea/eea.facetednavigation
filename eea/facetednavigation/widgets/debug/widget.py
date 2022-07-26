@@ -4,7 +4,7 @@ from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.debug.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.debug.interfaces import LayoutSchemata
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 
 
 class Widget(AbstractWidget):

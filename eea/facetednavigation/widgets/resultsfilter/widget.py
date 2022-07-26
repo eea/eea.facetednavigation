@@ -1,19 +1,18 @@
 """ Results Filter widget
 """
-import logging
-from zope.interface import implementer
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
 from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.resultsfilter.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.resultsfilter.interfaces import IResultsFilterWidget
+from eea.facetednavigation.widgets.resultsfilter.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation import EEAMessageFactory as _
-from eea.facetednavigation.widgets.resultsfilter.interfaces import (
-    IResultsFilterWidget,
-    DefaultSchemata,
-    LayoutSchemata,
-)
-from Products.CMFCore.utils import getToolByName
 from plone.dexterity.interfaces import IDexterityContent
+from Products.CMFCore.utils import getToolByName
+from zope.interface import implementer
+
+import logging
 
 
 logger = logging.getLogger("eea.facetednavigation")

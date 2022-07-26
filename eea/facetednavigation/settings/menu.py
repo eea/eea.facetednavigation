@@ -1,6 +1,6 @@
 """ Faceted settings
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.interfaces import IFacetedNavigable
 from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration

@@ -1,7 +1,7 @@
 """ TAL widget
 """
 # Python
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
 from eea.facetednavigation.widgets import ViewPageTemplateFile

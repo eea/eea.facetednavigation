@@ -1,6 +1,6 @@
 """ Widget
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.range.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.range.interfaces import DisplaySchemata

@@ -1,6 +1,6 @@
 """ Widget interfaces and schema
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata as LS

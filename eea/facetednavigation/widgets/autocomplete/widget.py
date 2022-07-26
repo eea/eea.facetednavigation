@@ -1,6 +1,6 @@
 """ Widget
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.vocabularies.autocomplete import IAutocompleteSuggest
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.autocomplete.interfaces import DefaultSchemata

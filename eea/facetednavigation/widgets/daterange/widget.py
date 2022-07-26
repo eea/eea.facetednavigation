@@ -5,7 +5,7 @@ from collective.js.jqueryui.utils import get_python_date_format
 from collective.js.jqueryui.viewlet import L10nDatepicker
 from datetime import datetime
 from DateTime import DateTime
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata

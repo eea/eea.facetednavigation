@@ -1,10 +1,10 @@
 """ Widget positions vocabularies
 """
+from eea.facetednavigation import _
 from zope.interface import implementer
-from zope.schema.vocabulary import SimpleVocabulary
-from zope.schema.vocabulary import SimpleTerm
 from zope.schema.interfaces import IVocabularyFactory
-from eea.facetednavigation import EEAMessageFactory as _
+from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 
 
 @implementer(IVocabularyFactory)

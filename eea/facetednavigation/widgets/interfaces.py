@@ -1,6 +1,6 @@
 """ Widgets interfaces
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from z3c.form import field
 from z3c.form import group
 from zope import schema

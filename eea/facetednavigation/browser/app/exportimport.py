@@ -1,6 +1,6 @@
 """ Export / Import faceted configuration
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from plone.protect.interfaces import IDisableCSRFProtection
 from Products.GenericSetup.context import SnapshotExportContext
 from Products.GenericSetup.context import SnapshotImportContext

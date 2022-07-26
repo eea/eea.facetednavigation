@@ -6,7 +6,7 @@ from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.portlet.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.portlet.interfaces import LayoutSchemata
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 
 logger = logging.getLogger("eea.facetednavigation")
 

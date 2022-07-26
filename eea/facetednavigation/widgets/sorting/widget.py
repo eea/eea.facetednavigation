@@ -1,6 +1,6 @@
 """ Sorting widget
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.sorting.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.sorting.interfaces import LayoutSchemata

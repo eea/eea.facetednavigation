@@ -210,8 +210,7 @@ class Widget(GroupForm, Form):
         return res
 
     def portal_vocabulary(self):
-        """Look up selected vocabulary from ZTK zope-vocabulary factory.
-        """
+        """Look up selected vocabulary from ZTK zope-vocabulary factory."""
         voc_id = self.data.get("vocabulary", None)
         if not voc_id:
             return []
@@ -300,35 +299,39 @@ class CountableWidget(Widget):
 
     faceted_field = True
 
+    def facet_counts(self, brains):
+        """ Count """
+        res = {}
+        facet_fields = brains.facet_counts.get("facet_fields")
+        if facet_fields:
+            index_id = self.data.get("index")
+            facet_field = facet_fields.get(index_id, {})
+            for value, num in facet_field.items():
+                normalized_value = safe_unicode(value)
+                if isinstance(value, str):
+                    res[value] = num
+                elif isinstance(normalized_value, str):
+                    res[normalized_value] = num
+                else:
+                    unicode_value = value.decode("utf-8")
+                    res[unicode_value] = num
+        else:
+            # no facet counts were returned. we exit anyway because
+            # zcatalog methods throw an error on solr responses
+            return res
+
+        res[""] = res["all"] = len(brains)
+        return res
+
     def count(self, brains, sequence=None):
         """Intersect results"""
         res = {}
         # by checking for facet_counts we assume this is a SolrResponse
         # from collective.solr
         if hasattr(brains, "facet_counts"):
-            facet_fields = brains.facet_counts.get("facet_fields")
-            if facet_fields:
-                index_id = self.data.get("index")
-                facet_field = facet_fields.get(index_id, {})
-                for value, num in facet_field.items():
-                    normalized_value = safe_unicode(value)
-                    if isinstance(value, str):
-                        res[value] = num
-                    elif isinstance(normalized_value, str):
-                        res[normalized_value] = num
-                    else:
-                        unicode_value = value.decode("utf-8")
-                        res[unicode_value] = num
-            else:
-                # no facet counts were returned. we exit anyway because
-                # zcatalog methods throw an error on solr responses
-                return res
-            res[""] = res["all"] = len(brains)
-            return res
-        else:
-            # this is handled by the zcatalog. see below
-            pass
+            return self.facet_counts(brains)
 
+        # this is handled by the zcatalog.
         if not sequence:
             sequence = [key for key, value in self.vocabulary()]
 
