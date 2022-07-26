@@ -1,8 +1,5 @@
 """ Widget
 """
-from collective.js.jqueryui.utils import get_datepicker_date_format
-from collective.js.jqueryui.utils import get_python_date_format
-from collective.js.jqueryui.viewlet import L10nDatepicker
 from datetime import datetime
 from DateTime import DateTime
 from eea.facetednavigation import _
@@ -10,6 +7,9 @@ from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata
 from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.daterange.utils import get_datepicker_date_format
+from eea.facetednavigation.widgets.daterange.utils import get_python_date_format
+from eea.facetednavigation.widgets.daterange.utils import LANGUAGES
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
 import logging
@@ -55,7 +55,7 @@ def convert_to_padded_digits(start, end):
     return bounds["start"], bounds["end"]
 
 
-class Widget(AbstractWidget, L10nDatepicker):
+class Widget(AbstractWidget):
     """Widget"""
 
     widget_type = "daterange"
@@ -169,3 +169,16 @@ class Widget(AbstractWidget, L10nDatepicker):
         if self.use_plone_date_format:
             return self.jq_language()
         return ""
+
+    def jq_language(self):
+        language = self.request.get('LANGUAGE', '')
+        if '-' in language:
+            parts = language.split('-')
+            language = "%s-%s" % (parts[0], parts[1].upper())
+            if language in LANGUAGES:
+                return language
+            else:
+                language = language.split('-')[0]
+        if language in LANGUAGES:
+            return language
+        return ''
