@@ -7,7 +7,6 @@ from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
 from plone.testing.zope import installProduct
 from plone.testing.zope import uninstallProduct
-from Products.CMFPlone import setuphandlers
 
 
 class EEAFixture(PloneSandboxLayer):
@@ -32,13 +31,7 @@ class EEAFixture(PloneSandboxLayer):
         setRoles(portal, TEST_USER_ID, ["Manager"])
 
         # Add default Plone content
-        try:
-            applyProfile(portal, "plone.app.contenttypes:plone-content")
-            # portal.portal_workflow.setDefaultChain(
-            #     'simple_publication_workflow')
-        except KeyError:
-            # BBB Plone 4
-            setuphandlers.setupPortalContent(portal)
+        applyProfile(portal, "plone.app.contenttypes:plone-content")
 
         # Create testing environment
         portal.invokeFactory("Folder", "sandbox", title="Sandbox")

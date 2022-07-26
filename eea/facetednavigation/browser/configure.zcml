@@ -153,10 +153,4 @@
       directory="./static"
       />
 
-  <!-- BBB -->
-  <browser:resourceDirectory
-      name="faceted_images"
-      directory="./static"
-      />
-
 </configure>
