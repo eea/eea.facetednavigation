@@ -10,7 +10,6 @@
   <include package="collective.js.jqueryui" />
 
   <include file="meta.zcml" />
-  <include file="dexterity.zcml" />
   <include file="profiles.zcml" />
   <include file="permissions.zcml" />
 

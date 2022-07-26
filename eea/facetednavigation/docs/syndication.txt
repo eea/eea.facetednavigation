@@ -17,7 +17,9 @@ Set up
     >>> sandbox.setLanguage('en')
 
     >>> from Products.CMFPlone.interfaces.syndication import IFeedSettings
-    >>> IFeedSettings(sandbox).enabled = True
+    >>> syndication = IFeedSettings(sandbox, None)
+    >>> if syndication:
+    ...     syndication.enabled = True
     >>> from zope.component import getMultiAdapter
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()

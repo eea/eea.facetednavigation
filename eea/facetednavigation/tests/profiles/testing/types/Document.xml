@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="Document" meta_type="Dexterity FTI">
+ <property name="behaviors" purge="False">
+  <element value="eea.faceted.navigable"/>
+ </property>
+</object>

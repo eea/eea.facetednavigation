@@ -32,15 +32,15 @@ it covers same functionality and it adds a lot more features.
 
 Upgrade to version 16.0+
 ========================
+* **Version 16.x** is **NOT** backward compatible and **it works only** with **Python 3 / Plone 5+**
 * If you're upgrading from a lower version, please first install and upgrade to `version 15.x`` then install and upgrade to `version 16+`
-* Within "Plone > Site setup > Add-ons" click on upgrade button available for
-  EEA Faceted Navigation;
+* Within "Plone > Site setup > Add-ons" click on upgrade button available for `EEA Faceted Navigation`
 
 Upgrade to version 15.0+
 ========================
-* Within "Plone > Site setup > Add-ons" click on upgrade button available for
-  EEA Faceted Navigation;
-* Plone4: After running the upgrade step, check CSS/JS order within ZMI > portal_css / portal_javascripts
+* **Version 15.x** is the latest **Python 2 / Plone 4** backward compatible.
+* Within "Plone > Site setup > Add-ons" click on upgrade button available for `EEA Faceted Navigation`
+* **Plone4:** After running the upgrade step, check CSS/JS order within `ZMI > portal_css / portal_javascripts`
 
 Upgrade to version 10.0+
 ========================
@@ -111,8 +111,9 @@ Develop
 Getting started
 ===============
 
-* Go to your working space and add a **Folder/Page** and within **Actions** menu click on **Enable faceted navigation**.
-* See more on the dedicated youtube channel: `EEA Web Systems Training`_
+* Go to `Site Setup > Content Types` and select `Page`
+* Go to `Behaviors` and enable `Faceted navigable` behavior
+* Go to your working space and add a `Page` and within `Actions` menu click on `Enable faceted navigation`.
 
 Faceted settings
 ================
@@ -325,5 +326,4 @@ Funding
 EEA_ - European Environment Agency (EU)
 
 .. _EEA: https://www.eea.europa.eu/
-.. _`EEA Web Systems Training`: http://www.youtube.com/user/eeacms/videos?view=1
 .. _`collective.solr`:  https://github.com/collective/collective.solr

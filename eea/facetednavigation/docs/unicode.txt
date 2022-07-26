@@ -20,7 +20,6 @@ Set up
     True
 
     >>> subtyper.enable()
-    >>> putils = getToolByName(sandbox, 'plone_utils')
 
 Cleanup default widgets
 -----------------------
@@ -34,8 +33,8 @@ Cleanup default widgets
 Add some content
 ----------------
 
-    >>> doc = sandbox.invokeFactory('News Item', 'non-ascii-folder', title='NON-ASCII Folder')
-    >>> doc = sandbox._getOb(doc)
+    >>> doc = portal.invokeFactory('News Item', 'non-ascii-folder', title='NON-ASCII Folder')
+    >>> doc = portal._getOb(doc)
     >>> doc.setLanguage('en')
     >>> doc.setSubject(('étire',))
     >>> doc.reindexObject()

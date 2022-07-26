@@ -187,7 +187,7 @@ Edit (no AJAX)
        <property name="title">Meta-type d...element</property>
        <property name="index">meta_type</property>
        <property name="vocabulary"></property>
-       <property name="default">ATFolder</property>
+       <property name="default">Dexterity Item</property>
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">False</property>

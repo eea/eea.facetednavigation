@@ -17,11 +17,13 @@ class EEAFixture(PloneSandboxLayer):
         import eea.facetednavigation
 
         self.loadZCML(package=eea.facetednavigation)
+        self.loadZCML(package=eea.facetednavigation.tests)
         installProduct(app, "eea.facetednavigation")
 
     def setUpPloneSite(self, portal):
         """Setup Plone"""
         applyProfile(portal, "eea.facetednavigation:default")
+        applyProfile(portal, "eea.facetednavigation.tests:testing")
 
         # Default workflow
         wftool = portal["portal_workflow"]
@@ -34,7 +36,7 @@ class EEAFixture(PloneSandboxLayer):
         applyProfile(portal, "plone.app.contenttypes:plone-content")
 
         # Create testing environment
-        portal.invokeFactory("Folder", "sandbox", title="Sandbox")
+        portal.invokeFactory("Document", "sandbox", title="Sandbox")
 
     def tearDownZope(self, app):
         """Uninstall Zope"""

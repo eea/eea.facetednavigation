@@ -39,16 +39,16 @@ Set up
 
   Add some content
 
-    >>> doc = sandbox.invokeFactory('News Item', 'non-ascii-folder',
+    >>> doc = portal.invokeFactory('News Item', 'non-ascii-folder',
     ...         title='Distance-to-target (Kyoto Protocol) for new Member States countries')
-    >>> doc = sandbox._getOb(doc)
+    >>> doc = portal._getOb(doc)
     >>> doc.setLanguage('en')
     >>> doc.setSubject((u'\u015etire', u'\u015etire politica'))
     >>> doc.reindexObject()
 
-    >>> doc = sandbox.invokeFactory('News Item', 'doc-title-two',
+    >>> doc = portal.invokeFactory('News Item', 'doc-title-two',
     ...         title='443/2009 EEA-32')
-    >>> doc = sandbox._getOb(doc)
+    >>> doc = portal._getOb(doc)
     >>> doc.setLanguage('en')
     >>> doc.reindexObject()
 

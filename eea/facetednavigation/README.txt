@@ -8,8 +8,11 @@ and navigation within plone sites.
 
 Installation
 ============
-  * Go to admin > Site Setup > Add-ons
-  * Activate EEA Faceted Navigation
+  * Go to "admin > Site Setup > Add-ons"
+  * Activate "EEA Faceted Navigation"
+  * Go to "admin > Site Setup > Content Types"
+  * Select one content type and go to "Behaviors"
+  * Enable "Faceted navigable" behavior
 
 
 Extra
