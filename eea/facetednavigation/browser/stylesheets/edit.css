@@ -184,6 +184,11 @@ table.listing {
   padding-right: 0;
 }
 
+.faceted-ajax {
+  cursor: pointer;
+  float: right;
+}
+
 /* Areas
 */
 .faceted-area.center-content-area {

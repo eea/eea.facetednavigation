@@ -963,13 +963,13 @@ FacetedEdit.FormPage = {
     this.cookie_id = 'faceted-config-disable-ajax';
     var use_ajax = true;
     if(jQuery.cookie){
-      if(jQuery.cookie(this.cookie_id)){
+      if(jQuery.cookie(this.cookie_id) === 'disable'){
         use_ajax = false;
       }
       if(use_ajax){
-        this.add_ajax_button('Disable AJAX', 'configure_faceted.html', 'disable');
+        this.add_ajax_button('Disable AJAX UI', 'configure_faceted.html', 'disable');
       }else{
-        this.add_ajax_button('Enable AJAX', 'configure_faceted.html', null);
+        this.add_ajax_button('Enable AJAX UI', 'configure_faceted.html', null);
       }
     }
 
@@ -997,13 +997,14 @@ FacetedEdit.FormPage = {
     }else{
       button.attr('class', 'ui-icon ui-icon-newwin');
     }
-    button.attr('title', label);
-    button.css('cursor', 'pointer');
-    button.click(function(){
+    button
+      .attr('title', label)
+      .addClass('faceted-ajax')
+      .click(function(){
       jQuery.cookie(context.cookie_id, cookie);
       window.location.href = action;
     });
-    jQuery('#faceted-page-title').after(button);
+    jQuery('.documentFirstHeading').before(button);
   }
 };
 
