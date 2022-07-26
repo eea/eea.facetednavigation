@@ -57,11 +57,6 @@ class FacetedPublicSubtyper(BrowserView):
         """Is faceted navigable?"""
         return False
 
-    @property
-    def is_lingua_faceted(self):
-        """Is LinguaPlone installed and context is faceted navigable?"""
-        return False
-
     def enable(self):
         """See IFacetedSubtyper"""
         raise NotFound(self.context, "enable", self.request)
@@ -90,21 +85,6 @@ class FacetedSubtyper(FacetedPublicSubtyper):
     def is_faceted(self):
         """Is faceted navigable?"""
         return IFacetedNavigable.providedBy(self.context)
-
-    @property
-    def is_lingua_faceted(self):
-        """Is LinguaPlone installed and context is faceted navigable?"""
-        if not self.is_faceted:
-            return False
-        # No Archetypes, no LinguaPlone in Plone6
-        if plone_version >= "6.0":
-            return False
-        else:
-            qtool = getToolByName(self.context, "portal_quickinstaller")
-            installed = [package["id"] for package in qtool.listInstalledProducts()]
-            if "LinguaPlone" not in installed:
-                return False
-            return True
 
     def enable(self):
         """See IFacetedSubtyper"""

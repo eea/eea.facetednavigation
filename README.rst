@@ -30,6 +30,12 @@ it covers same functionality and it adds a lot more features.
 
 .. contents::
 
+Upgrade to version 16.0+
+========================
+* If you're upgrading from a lower version, please first install and upgrade to `version 15.x`` then install and upgrade to `version 16+`
+* Within "Plone > Site setup > Add-ons" click on upgrade button available for
+  EEA Faceted Navigation;
+
 Upgrade to version 15.0+
 ========================
 * Within "Plone > Site setup > Add-ons" click on upgrade button available for

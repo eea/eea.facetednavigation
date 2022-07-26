@@ -1,8 +1,12 @@
 Changelog
 =========
 
-15.1-dev0 - (unreleased)
+16.0-dev0 - (unreleased)
 ---------------------------
+* Feature: Plone 6 compatibility
+  [avoinea refs #231]
+* Breaking: Drop Plone4 / Python2 support
+  [avoinea refs #231]
 
 15.0 - (2022-07-25)
 ---------------------------

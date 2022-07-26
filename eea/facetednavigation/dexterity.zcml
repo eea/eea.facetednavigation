@@ -16,4 +16,8 @@
       provides="eea.facetednavigation.subtypes.interfaces.IPossibleFacetedNavigable"
       />
 
+  <class class="plone.dexterity.content.Container">
+    <implements interface="eea.facetednavigation.interfaces.IPossibleFacetedNavigable" />
+  </class>
+
 </configure>

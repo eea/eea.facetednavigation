@@ -33,10 +33,6 @@ class IFacetedSubtyper(Interface):
     can_enable = schema.Bool("Can enable faceted navigation", readonly=True)
     can_disable = schema.Bool("Can disable faceted navigation", readonly=True)
     is_faceted = schema.Bool("Is current object faceted navigable", readonly=True)
-    is_lingua_faceted = schema.Bool(
-        "Is LinguaPlone installed and current object is faceted navigable",
-        readonly=True,
-    )
 
     def enable():
         """Enable faceted navigation"""

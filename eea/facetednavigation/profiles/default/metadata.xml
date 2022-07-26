@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
- <version>14.0</version>
+ <version>16.0</version>
  <dependencies>
   <dependency>profile-collective.js.jqueryui:default</dependency>
  </dependencies>

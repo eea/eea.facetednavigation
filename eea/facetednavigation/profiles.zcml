@@ -16,25 +16,7 @@
       title="EEA Faceted Navigation"
       description="Extension profile for EEA Faceted Navigation."
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      directory="profiles/plone5"
-      zcml:condition="have plone-5"
-      />
-
-  <genericsetup:registerProfile
-      name="default"
-      title="EEA Faceted Navigation"
-      description="Extension profile for EEA Faceted Navigation."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      directory="profiles/plone4"
-      zcml:condition="not-have plone-5"
-      />
-
-  <genericsetup:registerProfile
-      name="universal"
-      title="EEA Faceted Navigation Common Configuration"
-      description="Extension profile for EEA Faceted Navigation settings that aren't version dependent."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      directory="profiles/common"
+      directory="profiles/default"
       />
 
   <genericsetup:registerProfile
