@@ -1823,7 +1823,14 @@ jest-worker@^27.4.5:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jquery@3.6.0:
+jquery2-bbq@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/jquery2-bbq/-/jquery2-bbq-1.3.1.tgz#d9016a2a190cd508247b6997767d563cb98dc4e2"
+  integrity sha512-mx2YbTHicHOc98PL1SK7fjEIm6X38WU75V3ocm430OWH2KQoQTEJuvgrKymW1wKh+KvnygU0KQJHVYVEDE3tPQ==
+  dependencies:
+    jquery "^2.2.3"
+
+jquery@3.6.0, jquery@^2.2.3:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
