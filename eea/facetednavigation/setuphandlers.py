@@ -9,11 +9,24 @@ from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from logging import getLogger
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.interfaces import INonInstallable
 from zope.annotation.interfaces import IAnnotations
+from zope.interface import implementer
 from zope.interface import noLongerProvides
 
 
 log = getLogger("eea.facetednavigation.post_uninstall")
+
+
+@implementer(INonInstallable)
+class HiddenProfiles(object):
+    """Hidden profiles"""
+
+    def getNonInstallableProfiles(self):
+        """Do not show on Plone's list of installable profiles."""
+        return [
+            "eea.facetednavigation:uninstall",
+        ]
 
 
 def setupVarious(context):

@@ -1,6 +1,5 @@
 """ Abstract widgets
 """
-from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
 from eea.facetednavigation.interfaces import IFacetedCatalog
 from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.plonex import HAVE_SOLR
@@ -312,7 +311,7 @@ class CountableWidget(Widget):
                 index_id = self.data.get("index")
                 facet_field = facet_fields.get(index_id, {})
                 for value, num in facet_field.items():
-                    normalized_value = atdx_normalize(value)
+                    normalized_value = safe_unicode(value)
                     if isinstance(value, str):
                         res[value] = num
                     elif isinstance(normalized_value, str):
@@ -358,7 +357,7 @@ class CountableWidget(Widget):
 
         res[""] = res["all"] = len(brains)
         for value in sequence:
-            normalized_value = atdx_normalize(value)
+            normalized_value = safe_unicode(value)
             if index.meta_type == "BooleanIndex":
                 if normalized_value in ("False", 0):
                     normalized_value = False

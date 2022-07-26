@@ -36,7 +36,7 @@
       />
 
   <utility
-      factory=".HiddenProfiles"
+      factory=".setuphandlers.HiddenProfiles"
       name="eea.facetednavigation"
       />
 

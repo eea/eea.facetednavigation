@@ -1,19 +1,9 @@
 """ Main product initializer
 """
-from Products.CMFPlone import interfaces as Plone
-from zope.interface import implementer
 from zope.i18nmessageid.message import MessageFactory
 
+
 EEAMessageFactory = MessageFactory("eea")
-
-
-@implementer(Plone.INonInstallable)
-class HiddenProfiles(object):
-    """Hidden profiles"""
-
-    def getNonInstallableProfiles(self):
-        """Do not show on Plone's list of installable profiles."""
-        return []
 
 
 def initialize(context):
