@@ -13,6 +13,9 @@ services:
       ADDONS: "eea.facetednavigation"
       PROFILES: "eea.facetednavigation:default"
       DEVELOP: "/app/src/eea.facetednavigation"
+    tty: true
+    stdin_open: true
+    command: cat
 
   plone6:
     image: plone/plone-backend:6.0.0a6
@@ -25,3 +28,6 @@ services:
       ADDONS: "eea.facetednavigation"
       PROFILES: "eea.facetednavigation:default"
       DEVELOP: "/app/src/eea.facetednavigation"
+    tty: true
+    stdin_open: true
+    command: cat

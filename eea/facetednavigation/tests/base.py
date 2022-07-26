@@ -1,24 +1,13 @@
 """ Base test cases
 """
-from Products.CMFPlone import setuphandlers
-
-try:
-    from plone.testing.zope import installProduct, uninstallProduct
-except ImportError:
-    # BBB: Plone 4
-    from plone.testing.z2 import installProduct, uninstallProduct
-from plone.app.testing import TEST_USER_ID
-from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import applyProfile
 from plone.app.testing import FunctionalTesting
+from plone.app.testing import PloneSandboxLayer
 from plone.app.testing import setRoles
-
-try:
-    from Products import LinguaPlone
-
-    LinguaPlone = True if LinguaPlone else False
-except ImportError:
-    LinguaPlone = False
+from plone.app.testing import TEST_USER_ID
+from plone.testing.zope import installProduct
+from plone.testing.zope import uninstallProduct
+from Products.CMFPlone import setuphandlers
 
 
 class EEAFixture(PloneSandboxLayer):
@@ -33,8 +22,6 @@ class EEAFixture(PloneSandboxLayer):
 
     def setUpPloneSite(self, portal):
         """Setup Plone"""
-        if LinguaPlone:
-            applyProfile(portal, "Products.LinguaPlone:LinguaPlone")
         applyProfile(portal, "eea.facetednavigation:default")
 
         # Default workflow

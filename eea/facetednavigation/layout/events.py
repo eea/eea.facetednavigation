@@ -47,13 +47,6 @@ def add_default_widgets(context):
     if not criteria:
         return
 
-    # Configure widgets only for canonical (LinguaPlone only)
-    getCanonical = getattr(context, "getCanonical", None)
-    if getCanonical:
-        canonical = getCanonical()
-        if context != canonical:
-            return
-
     # Criteria already changed, we don't want to mess them
     if list(criteria.keys()):
         return

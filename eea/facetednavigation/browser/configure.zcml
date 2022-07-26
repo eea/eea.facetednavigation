@@ -133,13 +133,6 @@
       />
 
   <browser:page
-      name="faceted_sync_translations"
-      for="..interfaces.IFacetedNavigable"
-      class=".app.synchronize.FacetedSynchronizeTranslation"
-      permission="eea.faceted.configure"
-      />
-
-  <browser:page
       name="faceted.widget.error"
       for="..interfaces.IFacetedNavigable"
       class=".app.error.FacetedError"

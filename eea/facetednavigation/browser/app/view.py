@@ -9,7 +9,6 @@ from eea.facetednavigation.interfaces import IHidePloneLeftColumn
 from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.interfaces import IDisableSmartFacets
 from eea.facetednavigation.interfaces import IFacetedSearchMode
-from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from Products.Five.browser import BrowserView
 
 
@@ -19,27 +18,13 @@ class FacetedContainerView(object):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self._canonical = "<NOT SET>"
 
     @property
     def mode(self):
         """Display mode"""
-        if IFacetedSearchMode.providedBy(
-            self.canonical
-        ) or IFacetedSearchMode.providedBy(self.context):
+        if IFacetedSearchMode.providedBy(self.context):
             return "search"
         return "view"
-
-    @property
-    def canonical(self):
-        """Get canonical"""
-        if not IDontInheritConfiguration.providedBy(self.context):
-            if self._canonical == "<NOT SET>":
-                canonical = getattr(self.context, "getCanonical", None)
-                if callable(canonical):
-                    canonical = canonical()
-                self._canonical = canonical
-        return self._canonical
 
     @property
     def positions(self):
@@ -50,23 +35,17 @@ class FacetedContainerView(object):
     @property
     def hide_left_column(self):
         """Disable plone portlets left column"""
-        return IHidePloneLeftColumn.providedBy(
-            self.canonical
-        ) or IHidePloneLeftColumn.providedBy(self.context)
+        return IHidePloneLeftColumn.providedBy(self.context)
 
     @property
     def hide_right_column(self):
         """Disable plone portlets right column"""
-        return IHidePloneRightColumn.providedBy(
-            self.canonical
-        ) or IHidePloneRightColumn.providedBy(self.context)
+        return IHidePloneRightColumn.providedBy(self.context)
 
     @property
     def disable_smart_facets(self):
         """Disable 'smart facets hiding'"""
-        return IDisableSmartFacets.providedBy(
-            self.canonical
-        ) or IDisableSmartFacets.providedBy(self.context)
+        return IDisableSmartFacets.providedBy(self.context)
 
     def get_context(self, content=None):
         """Return context"""

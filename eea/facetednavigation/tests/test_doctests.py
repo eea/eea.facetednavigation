@@ -1,19 +1,12 @@
 """ Doc tests
 """
-import doctest
-import unittest
 from eea.facetednavigation.tests.base import FUNCTIONAL_TESTING
 from plone.testing import layered
 
-try:
-    from Products import LinguaPlone
-
-    LinguaPlone = True if LinguaPlone else False
-except ImportError:
-    LinguaPlone = False
-
+import doctest
 import re
 import six
+import unittest
 
 
 OPTIONFLAGS = (
@@ -154,30 +147,6 @@ def test_suite():
             ),
         ]
     )
-
-    if LinguaPlone:
-        suite.addTests(
-            [
-                layered(
-                    doctest.DocFileSuite(
-                        "docs/syncronize.txt",
-                        optionflags=OPTIONFLAGS,
-                        checker=Py23DocChecker(),
-                        package="eea.facetednavigation",
-                    ),
-                    layer=FUNCTIONAL_TESTING,
-                ),
-                layered(
-                    doctest.DocFileSuite(
-                        "docs/language.txt",
-                        optionflags=OPTIONFLAGS,
-                        checker=Py23DocChecker(),
-                        package="eea.facetednavigation",
-                    ),
-                    layer=FUNCTIONAL_TESTING,
-                ),
-            ]
-        )
 
     return suite
 

@@ -11,7 +11,6 @@ from eea.facetednavigation.criteria.utils import fix_string
 from eea.facetednavigation.config import ANNO_CRITERIA
 from eea.facetednavigation.widgets.storage import Criterion
 from eea.facetednavigation.interfaces import IWidgetsInfo
-from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from eea.facetednavigation.criteria.interfaces import ICriteria
 import six
 
@@ -25,14 +24,7 @@ class Criteria(object):
     def __init__(self, context):
         """Handle criteria"""
         # LinguaPlone support
-        if IDontInheritConfiguration.providedBy(context):
-            self.context = context
-        else:
-            canonical = getattr(context, "getCanonical", None)
-            if canonical:
-                self.context = canonical()
-            else:
-                self.context = context
+        self.context = context
         self.criteria = self._criteria()
 
     def _criteria(self):

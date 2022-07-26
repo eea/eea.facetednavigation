@@ -7,7 +7,6 @@ from zope.publisher.interfaces import NotFound
 
 from Products.statusmessages.interfaces import IStatusMessage
 from Products.Five.browser import BrowserView
-from Products.CMFCore.utils import getToolByName
 
 from eea.facetednavigation.subtypes.interfaces import IFacetedSubtyper
 from eea.facetednavigation.interfaces import IFacetedNavigable

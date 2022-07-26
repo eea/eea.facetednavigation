@@ -114,29 +114,6 @@ class SettingsMenuItems(BrowserMenu):
                 "submenu": None,
             },
         ]
-        iscanonical = getattr(context, "isCanonical", None)
-        if callable(iscanonical) and not iscanonical():
-            inherit_config = not IDontInheritConfiguration.providedBy(context)
-            menu.append(
-                {
-                    "title": (
-                        _("Disable inheriting configuration")
-                        if inherit_config
-                        else _("Enable inheriting configuration")
-                    ),
-                    "description": "",
-                    "action": action.format("toggle_inherit_config"),
-                    "selected": not inherit_config,
-                    "icon": None,
-                    "extra": {
-                        "id": "toggle_inherit_config",
-                        "separator": None,
-                        "class": "",
-                    },
-                    "submenu": None,
-                }
-            )
-
         return menu
 
 

@@ -1,6 +1,6 @@
 """ Faceted Navigation public interfaces
 """
-from zope.component.interfaces import IObjectEvent
+from zope.interface.interfaces import IObjectEvent
 from zope.interface import Interface
 from zope import schema
 
