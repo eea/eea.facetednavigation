@@ -12,13 +12,4 @@
       zcml:condition="have plone-43"
       />
 
-  <!-- skos syndication -->
-  <browser:page
-      name="skos_syndication"
-      for="eea.facetednavigation.interfaces.IFacetedNavigable"
-      class=".skos.SKOS"
-      allowed_attributes="concepts"
-      permission="zope.Public"
-      />
-
 </configure>

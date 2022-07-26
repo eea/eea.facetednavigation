@@ -88,8 +88,6 @@ Faceted.CriteriaWidget.prototype = {
   initialize_syndication: function(){
     this.rss = null;
     this.rss_href = '';
-    this.skos = null;
-    this.skos_href = '';
     var icon = null;
     var rss = jQuery('#document-action-rss, #document-action-rss2').find('a');
     if(rss.length){
@@ -102,18 +100,6 @@ Faceted.CriteriaWidget.prototype = {
       this.rss = jQuery('#' + this.wid + 'syndication-rss', this.widget);
       this.rss_href = rss.attr('href');
     }
-
-    var skos = jQuery('#document-action-skos').find('a');
-    if(skos.length){
-      skos = jQuery(skos[0]).clone();
-      icon = jQuery('img', skos);
-      icon.attr('id', icon.attr('id') + '-' + this.wid);
-      skos.addClass('faceted-criteria-syndication-skos');
-      skos.attr('id', this.wid + 'syndication-skos');
-      jQuery('.faceted-criteria-reset', this.widget).prepend(skos);
-      this.skos = jQuery('#' + this.wid + 'syndication-skos', this.widget);
-      this.skos_href = this.skos.attr('href');
-    }
   },
 
   update_syndication: function(){
@@ -121,10 +107,6 @@ Faceted.CriteriaWidget.prototype = {
     hash += Faceted.URLHandler.document_hash();
     if(this.rss){
       this.rss.attr('href', this.rss_href + '?' + hash);
-    }
-
-    if(this.skos){
-      this.skos.attr('href', this.skos_href + '?' + hash);
     }
   }
 };

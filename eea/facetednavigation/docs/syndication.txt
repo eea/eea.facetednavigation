@@ -34,10 +34,3 @@ RSS2
     ...     res = u'<?xml version="1.0"?>\n<rss version="2.0">\n</rss>\n'
     >>> res
     '<?xml version="1.0"?>...<rss...version="2.0"...</rss>...'
-
-SKOS
-----
-
-    >>> skos = sandbox.unrestrictedTraverse('@@skos_syndication', None)
-    >>> if skos:
-    ...     concepts = [c for c in skos.concepts()]

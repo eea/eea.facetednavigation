@@ -13,22 +13,11 @@
   </meta:directives>
 
   <meta:directives namespace="http://namespaces.zope.org/faceted">
-    <!-- Plone 4.1+  -->
-    <configure zcml:condition="installed zope.browserpage">
-      <meta:directive
-          name="view"
-          handler=".views.meta.ViewDirective"
-          schema="zope.browserpage.metadirectives.IPageDirective"
-          />
-    </configure>
-    <!-- Plone 4.0  -->
-    <configure zcml:condition="not-installed zope.browserpage">
-      <meta:directive
-          name="view"
-          handler=".views.meta.ViewDirective"
-          schema="zope.app.publisher.browser.metadirectives.IPageDirective"
-          />
-    </configure>
+    <meta:directive
+        name="view"
+        handler=".views.meta.ViewDirective"
+        schema="zope.browserpage.metadirectives.IPageDirective"
+        />
   </meta:directives>
 
 </configure>
