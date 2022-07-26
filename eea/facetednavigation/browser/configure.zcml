@@ -104,13 +104,6 @@
       />
 
   <browser:page
-      name="faceted_history"
-      for="..interfaces.IFacetedNavigable"
-      template="template/history.pt"
-      permission="zope2.View"
-      />
-
-  <browser:page
       name="faceted_exportimport"
       for="..interfaces.IFacetedNavigable"
       class=".app.exportimport.FacetedExportImport"
