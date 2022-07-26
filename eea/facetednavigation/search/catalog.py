@@ -1,33 +1,20 @@
 """ Custom catalog
 """
-import logging
-from zope.event import notify
-from zope.interface import implementer
-from Products.CMFCore.utils import getToolByName
 from BTrees.IIBTree import IIBucket
 from eea.facetednavigation.events import QueryWillBeExecutedEvent
 from eea.facetednavigation.search.interfaces import IFacetedCatalog
-from eea.facetednavigation.plonex import parseFormquery
-from zope.interface import Interface
+from plone.app.contenttypes.behaviors.collection import (
+    ICollection as ICollectionBehavior,
+)
+from plone.app.contenttypes.interfaces import ICollection
+from plone.app.querystring.queryparser import parseFormquery
+from Products.CMFCore.utils import getToolByName
+from zope.event import notify
+from zope.interface import implementer
+
+import logging
 import six
 
-try:
-    from plone.app.collection.interfaces import ICollection
-except ImportError:
-
-    class ICollection(Interface):
-        """Fallback ICollection"""
-
-
-try:
-    from plone.app.contenttypes import interfaces as PACI
-    from plone.app.contenttypes.behaviors.collection import (
-        ICollection as ICollection_behavior,
-    )
-
-    HAS_PAT = True
-except ImportError:
-    HAS_PAT = False
 
 logger = logging.getLogger("eea.facetednavigation")
 
@@ -75,29 +62,11 @@ class FacetedCatalog(object):
         formquery = None
 
         # Get query from Collection
-        if HAS_PAT:
-            if PACI.ICollection.providedBy(context):
-                infos = ICollection_behavior(context)
-                sort_order = "descending" if infos.sort_reversed else "ascending"
-                sort_on = infos.sort_on
-                formquery = infos.query
-
         if ICollection.providedBy(context):
-            getRawQuery = getattr(context, "getRawQuery", lambda: [])
-            formquery = getRawQuery()
-
-            getSortOn = getattr(context, "getSort_on", lambda: None)
-            sort_on = getSortOn()
-
-            if sort_on:
-                getSortReversed = getattr(context, "getSort_reversed", lambda: None)
-                sort_order = getSortReversed()
-                if sort_order:
-                    sort_order = "descending"
-                else:
-                    sort_order = "ascending"
-            else:
-                sort_order = None
+            infos = ICollectionBehavior(context)
+            sort_order = "descending" if infos.sort_reversed else "ascending"
+            sort_on = infos.sort_on
+            formquery = infos.query
 
         if formquery is not None:
             newquery = parseFormquery(context, formquery, sort_on, sort_order)

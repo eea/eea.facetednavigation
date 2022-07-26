@@ -23,7 +23,6 @@ class Criteria(object):
 
     def __init__(self, context):
         """Handle criteria"""
-        # LinguaPlone support
         self.context = context
         self.criteria = self._criteria()
 

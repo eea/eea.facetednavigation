@@ -1,14 +1,13 @@
 """ Export / Import faceted configuration
 """
-from zope.interface import alsoProvides
-from zope.component import queryMultiAdapter
-from Products.GenericSetup.interfaces import IBody
-from Products.statusmessages.interfaces import IStatusMessage
-from eea.facetednavigation.plonex import IDisableCSRFProtection
+from eea.facetednavigation import EEAMessageFactory as _
+from plone.protect.interfaces import IDisableCSRFProtection
 from Products.GenericSetup.context import SnapshotExportContext
 from Products.GenericSetup.context import SnapshotImportContext
-
-from eea.facetednavigation import EEAMessageFactory as _
+from Products.GenericSetup.interfaces import IBody
+from Products.statusmessages.interfaces import IStatusMessage
+from zope.component import queryMultiAdapter
+from zope.interface import alsoProvides
 
 
 class FacetedExportImport(object):

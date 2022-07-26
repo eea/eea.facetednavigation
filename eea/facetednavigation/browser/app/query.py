@@ -1,28 +1,28 @@
 """ Faceted query
 """
-import time
-import logging
-from types import GeneratorType
-from zope.component import queryMultiAdapter
-from zope.component import getUtility
-from zope.component import queryAdapter
-
-from Products.CMFPlone.utils import safeToInt
-from Products.CMFPlone.PloneBatch import Batch
-from plone.registry.interfaces import IRegistry
-
-from eea.facetednavigation.plonex import FolderView
-from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.caching import cacheKeyFacetedNavigation
-from eea.facetednavigation.interfaces import IFacetedLayout, IEEASettings
-from eea.facetednavigation.interfaces import IFacetedCatalog
+from eea.facetednavigation.caching import ramcache
 from eea.facetednavigation.interfaces import ICriteria
-from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
+from eea.facetednavigation.interfaces import IEEASettings
+from eea.facetednavigation.interfaces import IFacetedCatalog
+from eea.facetednavigation.interfaces import IFacetedLayout
 from eea.facetednavigation.interfaces import IFacetedWrapper
+from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
 from plone.app.contentlisting.interfaces import IContentListing
+from plone.app.contenttypes.browser.folder import FolderView
+from plone.registry.interfaces import IRegistry
+from Products.CMFPlone.PloneBatch import Batch
+from Products.CMFPlone.utils import safeToInt
+from types import GeneratorType
+from zope.component import getUtility
+from zope.component import queryAdapter
+from zope.component import queryMultiAdapter
 
+import logging
 import six
+import time
+
 
 logger = logging.getLogger("eea.facetednavigation")
 

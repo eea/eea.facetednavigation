@@ -10,14 +10,6 @@
       handler=".cache.invalidateFacetedCache"
       />
 
-  <!-- Archetypes: invalidate Memcached -->
-  <subscriber
-      for="Products.Archetypes.interfaces.IBaseContent
-           zope.lifecycleevent.interfaces.IObjectModifiedEvent"
-      handler=".cache.invalidateFacetedCache"
-      zcml:condition="installed Products.Archetypes"
-      />
-
   <!-- Dexterity: invalidate Memcached -->
   <subscriber
       for="plone.dexterity.interfaces.IDexterityContent

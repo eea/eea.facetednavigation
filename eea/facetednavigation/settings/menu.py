@@ -1,20 +1,21 @@
 """ Faceted settings
 """
-from zope.interface import implementer, alsoProvides, noLongerProvides
-from zope.security import checkPermission
-from Products.Five.browser import BrowserView
-from Products.statusmessages.interfaces import IStatusMessage
-
-from eea.facetednavigation.plonex import addTokenToUrl
-from eea.facetednavigation.plonex import BrowserMenu
-from eea.facetednavigation.plonex import BrowserSubMenuItem
+from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.interfaces import IFacetedNavigable
-from eea.facetednavigation.settings.interfaces import ISettingsHandler
-from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
-from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.settings.interfaces import IDisableSmartFacets
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.settings.interfaces import IHidePloneLeftColumn
+from eea.facetednavigation.settings.interfaces import IHidePloneRightColumn
+from eea.facetednavigation.settings.interfaces import ISettingsHandler
+from plone.protect.utils import addTokenToUrl
+from Products.Five.browser import BrowserView
+from Products.statusmessages.interfaces import IStatusMessage
+from zope.browsermenu.menu import BrowserMenu
+from zope.browsermenu.menu import BrowserSubMenuItem
+from zope.interface import alsoProvides
+from zope.interface import implementer
+from zope.interface import noLongerProvides
+from zope.security import checkPermission
 
 
 class SettingsMenu(BrowserSubMenuItem):

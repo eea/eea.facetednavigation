@@ -1,24 +1,24 @@
 """ Faceted configure
 """
-import logging
-from zope.interface import implementer, alsoProvides
-from zope.event import notify
-from zope.component import getUtility
-from zope.component import getMultiAdapter
-from zope.schema.interfaces import IVocabularyFactory
-
+from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.browser import interfaces
+from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
+from eea.facetednavigation.events import FacetedSettingsWillBeChangedEvent
+from eea.facetednavigation.interfaces import ICriteria
+from eea.facetednavigation.interfaces import IWidgetsInfo
+from plone.protect.interfaces import IDisableCSRFProtection
 from Products.Five.browser import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
+from zope.component import getMultiAdapter
+from zope.component import getUtility
+from zope.event import notify
+from zope.interface import alsoProvides
+from zope.interface import implementer
+from zope.schema.interfaces import IVocabularyFactory
 
-from eea.facetednavigation.plonex import IDisableCSRFProtection
-from eea.facetednavigation.interfaces import IWidgetsInfo
-from eea.facetednavigation.interfaces import ICriteria
-from eea.facetednavigation.browser import interfaces
-from eea.facetednavigation.events import FacetedSettingsWillBeChangedEvent
-from eea.facetednavigation.events import FacetedGlobalSettingsChangedEvent
-from eea.facetednavigation import EEAMessageFactory as _
-
+import logging
 import six
+
 
 logger = logging.getLogger("eea.facetednavigation")
 #

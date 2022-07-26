@@ -2,7 +2,6 @@
 """
 # Python
 import logging
-from zope.interface import Interface
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets import TrustedEngine
 from eea.facetednavigation.widgets import TrustedZopeContext
@@ -13,13 +12,7 @@ from eea.facetednavigation import EEAMessageFactory as _
 from Products.CMFCore.utils import getToolByName
 
 import six
-
-try:
-    from Products.Archetypes.interfaces import IBaseObject
-except ImportError:
-
-    class IBaseObject(Interface):
-        """Fallback IBaseObject"""
+from plone.dexterity.interfaces import IDexterityContent
 
 
 logger = logging.getLogger("eea.facetednavigation")
@@ -68,7 +61,7 @@ class Widget(AbstractWidget):
         if path == self.context.absolute_url(1):
             return default
 
-        if IBaseObject.providedBy(referer):
+        if IDexterityContent.providedBy(referer):
             return referer
 
         path = "/".join(path.split("/")[:-1])

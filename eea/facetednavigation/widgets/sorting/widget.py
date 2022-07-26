@@ -1,21 +1,13 @@
 """ Sorting widget
 """
-from zope.component import getUtility
-from plone.app.querystring.interfaces import IQuerystringRegistryReader
-from plone.registry.interfaces import IRegistry
+from eea.facetednavigation import EEAMessageFactory as _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
 from eea.facetednavigation.widgets.sorting.interfaces import DefaultSchemata
 from eea.facetednavigation.widgets.sorting.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation import EEAMessageFactory as _
-from Products.CMFCore.utils import getToolByName
-
-try:
-    from Products.ATContentTypes.criteria import _criterionRegistry
-
-    HAS_ATCT = True
-except ImportError:
-    HAS_ATCT = False
+from plone.app.querystring.interfaces import IQuerystringRegistryReader
+from plone.registry.interfaces import IRegistry
+from zope.component import getUtility
 
 
 class Widget(AbstractWidget):
@@ -61,32 +53,6 @@ class Widget(AbstractWidget):
             query["sort_order"] = "ascending"
 
         return query
-
-    def criteriaByIndexId(self, indexId):
-        """Get criteria by index id
-
-        XXX: this method is probaly orphaned code
-        """
-        catalog_tool = getToolByName(self.context, "portal_catalog")
-        try:
-            indexObj = catalog_tool.Indexes[indexId]
-        except KeyError:
-            return []
-        # allow DateRecurringIndex that is unknown to atct.
-        # events in plone.app.contenttypes use it for start and end
-        if indexObj.meta_type == "DateRecurringIndex":
-            return ("ATFriendlyDateCriteria", "ATDateRangeCriterion", "ATSortCriterion")
-        results = _criterionRegistry.criteriaByIndex(indexObj.meta_type)
-        return results
-
-    def validateAddCriterion(self, indexId, criteriaType):
-        """Is criteriaType acceptable criteria for indexId
-
-        XXX: this method is probaly orphaned code
-        """
-        if HAS_ATCT:
-            return criteriaType in self.criteriaByIndexId(indexId)
-        return True
 
     def listSortFields(self):
         """Return a list of available fields for sorting."""

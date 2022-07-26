@@ -1,45 +1,35 @@
 """ Abstract widgets
 """
-import re
-import logging
+from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
+from eea.facetednavigation.interfaces import IFacetedCatalog
+from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
+from eea.facetednavigation.plonex import HAVE_SOLR
+from eea.facetednavigation.plonex import ISolrSearch
+from eea.facetednavigation.plonex import SolrConnectionException
+from eea.facetednavigation.plonex import SolrInactiveException
+from eea.facetednavigation.widgets.interfaces import CountableSchemata
+from eea.facetednavigation.widgets.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.interfaces import IWidget
+from eea.facetednavigation.widgets.interfaces import LayoutSchemata
+from plone.i18n.normalizer import urlnormalizer as normalizer
+from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.utils import safe_unicode
+from Products.CMFPlone.utils import safeToInt
+from six.moves import range
+from z3c.form.form import Form
+from z3c.form.group import GroupForm
+from z3c.form.interfaces import IGroup
 from zope import interface
 from zope.component import queryMultiAdapter
+from zope.component import queryUtility
 from zope.i18n import translate
 from zope.i18nmessageid.message import Message
 from zope.schema.interfaces import IVocabularyFactory
-from zope.component import queryUtility
-from z3c.form.group import GroupForm
-from z3c.form.form import Form
-from z3c.form.interfaces import IGroup
+from ZTUtils.Lazy import LazyMap
 
-from plone.i18n.normalizer import urlnormalizer as normalizer
-from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.utils import safeToInt
-from Products.CMFPlone.utils import safe_unicode
-
-from eea.facetednavigation.plonex import ISolrSearch
-from eea.facetednavigation.interfaces import IFacetedCatalog
-from eea.facetednavigation.dexterity_support import normalize as atdx_normalize
-from eea.facetednavigation.interfaces import ILanguageWidgetAdapter
-from eea.facetednavigation.widgets.interfaces import IWidget
-from eea.facetednavigation.widgets.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.interfaces import LayoutSchemata
-from eea.facetednavigation.widgets.interfaces import CountableSchemata
+import logging
+import re
 import six
-from six.moves import range
-
-try:
-    from ZTUtils.Lazy import LazyMap
-except ImportError:
-    from Products.ZCatalog.Lazy import LazyMap
-
-try:
-    from collective.solr.exceptions import SolrConnectionException
-    from collective.solr.exceptions import SolrInactiveException
-
-    HAVE_SOLR = True
-except ImportError:
-    HAVE_SOLR = False
 
 
 logger = logging.getLogger("eea.facetednavigation")

@@ -16,11 +16,8 @@ Set up
     >>> sandbox = portal['sandbox']
     >>> sandbox.setLanguage('en')
 
-    >>> try:
-    ...     from Products.CMFPlone.interfaces.syndication import IFeedSettings
-    ...     IFeedSettings(sandbox).enabled = True
-    ... except ImportError:
-    ...     pass
+    >>> from Products.CMFPlone.interfaces.syndication import IFeedSettings
+    >>> IFeedSettings(sandbox).enabled = True
     >>> from zope.component import getMultiAdapter
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
