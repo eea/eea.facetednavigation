@@ -1,7 +1,7 @@
 Relative date widget
 ====================
 
-Implementation of ATContentTypes date criteria for facted navigation usage.
+Implementation of date criteria for faceted navigation usage.
 
 Imports
 -------
