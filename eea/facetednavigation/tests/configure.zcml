@@ -4,14 +4,15 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:zcml="http://namespaces.zope.org/zcml"
-    i18n_domain="eea">
+    i18n_domain="eea"
+    >
 
-    <genericsetup:registerProfile
-        name="testing"
-        title="eea.facetednavigation testing"
-        directory="profiles/testing"
-        description='Extension profile for Plone.'
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
+  <genericsetup:registerProfile
+      name="testing"
+      title="eea.facetednavigation testing"
+      description="Extension profile for Plone."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/testing"
+      />
 
 </configure>
