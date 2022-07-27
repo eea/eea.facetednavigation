@@ -171,14 +171,14 @@ class Widget(AbstractWidget):
         return ""
 
     def jq_language(self):
-        language = self.request.get('LANGUAGE', '')
-        if '-' in language:
-            parts = language.split('-')
+        language = self.request.get("LANGUAGE", "")
+        if "-" in language:
+            parts = language.split("-")
             language = "%s-%s" % (parts[0], parts[1].upper())
             if language in LANGUAGES:
                 return language
             else:
-                language = language.split('-')[0]
+                language = language.split("-")[0]
         if language in LANGUAGES:
             return language
-        return ''
+        return ""

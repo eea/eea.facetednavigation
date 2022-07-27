@@ -7,12 +7,58 @@ import time
 
 
 LANGUAGES = (
-    'af', 'ar', 'az', 'bg', 'bs', 'ca', 'cs', 'da', 'de', 'el', 'en-GB', 'eo',
-    'es', 'et', 'eu', 'fa', 'fi', 'fr-CH', 'fr', 'he', 'hr', 'hu', 'hy', 'id',
-    'is', 'it', 'ja', 'ko', 'lt', 'lv', 'ms', 'nl', 'no', 'pl', 'pt-BR', 'ro',
-    'ru', 'sk', 'sl', 'sq', 'sr', 'sr-SR', 'sv', 'th', 'tr', 'uk', 'vi',
-    'zh-CN', 'zh-HK', 'zh-TW',
+    "af",
+    "ar",
+    "az",
+    "bg",
+    "bs",
+    "ca",
+    "cs",
+    "da",
+    "de",
+    "el",
+    "en-GB",
+    "eo",
+    "es",
+    "et",
+    "eu",
+    "fa",
+    "fi",
+    "fr-CH",
+    "fr",
+    "he",
+    "hr",
+    "hu",
+    "hy",
+    "id",
+    "is",
+    "it",
+    "ja",
+    "ko",
+    "lt",
+    "lv",
+    "ms",
+    "nl",
+    "no",
+    "pl",
+    "pt-BR",
+    "ro",
+    "ru",
+    "sk",
+    "sl",
+    "sq",
+    "sr",
+    "sr-SR",
+    "sv",
+    "th",
+    "tr",
+    "uk",
+    "vi",
+    "zh-CN",
+    "zh-HK",
+    "zh-TW",
 )
+
 
 def get_datepicker_date_format(request):
     """Return a localized date format we can use with the datepicker
@@ -20,11 +66,11 @@ def get_datepicker_date_format(request):
     date_format_short_datepicker msgid in the plonelocales i18n domain.
     Return 'mm/dd/yy' if no translation has been found.
     """
-    date_format = translate(u"date_format_short_datepicker",
-                            domain="plonelocales",
-                            context=request)
-    if date_format == u"date_format_short_datepicker":
-        return 'mm/dd/yy'
+    date_format = translate(
+        "date_format_short_datepicker", domain="plonelocales", context=request
+    )
+    if date_format == "date_format_short_datepicker":
+        return "mm/dd/yy"
     return date_format
 
 
@@ -47,10 +93,7 @@ def transform_to_percent(date_format):
     >>> transform_to_percent("yy.mm.dd.")
     '%Y.%m.%d.'
     """
-    return date_format.replace(
-        "mm", "%m").replace(
-        "dd", "%d").replace(
-        "yy", "%Y")
+    return date_format.replace("mm", "%m").replace("dd", "%d").replace("yy", "%Y")
 
 
 def get_python_date_format(request):
