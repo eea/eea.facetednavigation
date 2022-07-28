@@ -171,7 +171,10 @@ You can enhance and boost search by replacing **ZCatalog** with **Apache Solr**,
 i18n
 ----
 
-To include a specific select2 locale, French for instance, you can add a resource `++resource++select2/select2_locale_fr.js` in portal_javascripts (Plone 4). It needs to be after the select2.min.js resource. (You need eea.jquery 8.7 minimum)
+To include a specific select2 locale, French for instance, just import it to your webpack bundle and make the bundle depend on `plone`::
+
+    import 'select2/select2_locale_fr';
+
 
 Suggestions
 -----------

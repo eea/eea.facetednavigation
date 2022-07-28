@@ -18,7 +18,7 @@
     <value key="jscompilation">++resource++facetednavigation/faceted-jquery.min.js</value>
     <value key="csscompilation">++resource++facetednavigation/faceted-jquery.min.css</value>
     <value key="expression"></value>
-    <value key="depends">jqueryui</value>
+    <value key="depends">plone</value>
     <value key="load_async">False</value>
     <value key="load_defer">False</value>
   </records>
@@ -40,7 +40,7 @@
     <value key="jscompilation">++resource++facetednavigation/faceted-edit.min.js</value>
     <value key="csscompilation">++resource++facetednavigation/faceted-edit.min.css</value>
     <value key="expression">python:'configure_faceted.html' in request.URL0</value>
-    <value key="depends">faceted.jquery</value>
+    <value key="depends">faceted.view</value>
     <value key="load_async">False</value>
     <value key="load_defer">False</value>
   </records>
