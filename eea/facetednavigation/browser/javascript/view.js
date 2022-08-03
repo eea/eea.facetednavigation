@@ -449,7 +449,7 @@ Faceted.AjaxLook = {
 
 /* Load facetednavigation
 */
-Faceted.Load = function(evt, baseurl){
+Faceted.Load = function(evt, baseurl, context){
   if(baseurl){
     Faceted.BASEURL = baseurl;
   }
@@ -531,3 +531,19 @@ Faceted.Cleanup = function(){
   // Reset URL hash
   Faceted.URLHandler.set();
 };
+
+// Load
+jQuery(window).on('load', function(evt){
+  var context = jQuery('body').find('.faceted-form');
+  if(context.length) {
+    Faceted.Load(evt, context.data('baseurl'));
+  }
+});
+
+// Unload
+jQuery(window).on('unload', function(){
+  var context = jQuery('body').find('.faceted-form');
+  if(context.length) {
+    Faceted.Unload();
+  }
+});

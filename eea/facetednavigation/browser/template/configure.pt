@@ -6,15 +6,6 @@
   metal:use-macro="here/main_template/macros/master"
   i18n:domain="eea">
 
-<metal:jsslot fill-slot="javascript_head_slot">
-  <script type="text/javascript"
-    tal:content="string:jQuery(document).ready(function(evt){
-      FacetedEdit.Load(evt, '${context/absolute_url}/');
-    });"></script>
-  <script type="text/javascript"
-    tal:content="string:jQuery(window).on('unload', FacetedEdit.Unload);"></script>
-</metal:jsslot>
-
 <body>
 
 <div metal:fill-slot="content-core">
@@ -100,6 +91,7 @@
   <!-- List widgets no ajax -->
   <form method="post" id="faceted-edit-widgets"
     tal:attributes="
+      data-baseurl string:${context/absolute_url}/;
       action string:${context/absolute_url}/@@faceted_configure;
       style python:criteria and 'display: block' or 'display: none'"
     tal:define="criteria view/get_criteria">

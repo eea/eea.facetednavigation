@@ -1038,3 +1038,19 @@ FacetedEdit.Load = function(evt, baseurl){
 
 FacetedEdit.Unload = function(){
 };
+
+// Load
+jQuery(window).on('load', function(evt){
+  var context = jQuery('body').find('.faceted-edit-fieldset');
+  if(context.length) {
+    FacetedEdit.Load(evt, context.data('baseurl'));
+  }
+});
+
+// Unload
+jQuery(window).on('unload', function(){
+  var context = jQuery('body').find('.faceted-edit-fieldset');
+  if(context.length) {
+    FacetedEdit.Unload();
+  }
+});
