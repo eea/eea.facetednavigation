@@ -39,17 +39,14 @@ class FacetedPublicSubtyper(BrowserView):
             self.request.response.redirect(self.context.absolute_url())
         return msg
 
-    @property
     def can_enable(self):
         """See IFacetedSubtyper"""
         return False
 
-    @property
     def can_disable(self):
         """See IFacetedSubtyper"""
         return False
 
-    @property
     def is_faceted(self):
         """Is faceted navigable?"""
         return False
@@ -68,24 +65,21 @@ class FacetedSubtyper(FacetedPublicSubtyper):
     view for IPossibleFacetedNavigable objects
     """
 
-    @property
     def can_enable(self):
         """See IFacetedSubtyper"""
-        return not self.is_faceted
+        return not self.is_faceted()
 
-    @property
     def can_disable(self):
         """See IFacetedSubtyper"""
-        return self.is_faceted
+        return self.is_faceted()
 
-    @property
     def is_faceted(self):
         """Is faceted navigable?"""
         return IFacetedNavigable.providedBy(self.context)
 
     def enable(self):
         """See IFacetedSubtyper"""
-        if not self.can_enable:
+        if not self.can_enable():
             return self._redirect("Faceted navigation not supported")
 
         notify(FacetedWillBeEnabledEvent(self.context))
@@ -102,7 +96,7 @@ class FacetedSubtyper(FacetedPublicSubtyper):
 
     def disable(self):
         """See IFacetedSubtyper"""
-        if not self.can_disable:
+        if not self.can_disable():
             return self._redirect("Faceted navigation not supported")
 
         notify(FacetedWillBeDisabledEvent(self.context))
@@ -116,19 +110,18 @@ class FacetedSearchSubtyper(FacetedSubtyper):
     on load)
     """
 
-    @property
     def is_faceted(self):
         """Is faceted navigable?"""
-        if not super(FacetedSearchSubtyper, self).is_faceted:
+        if not super(FacetedSearchSubtyper, self).is_faceted():
             return False
         return IFacetedSearchMode.providedBy(self.context)
 
     def enable(self):
         """See IFacetedSubtyper"""
-        if not self.can_enable:
+        if not self.can_enable():
             return self._redirect("Faceted search navigation not supported")
 
-        if not super(FacetedSearchSubtyper, self).is_faceted:
+        if not super(FacetedSearchSubtyper, self).is_faceted():
             super(FacetedSearchSubtyper, self).enable()
         if not IFacetedSearchMode.providedBy(self.context):
             alsoProvides(self.context, IFacetedSearchMode)
@@ -136,7 +129,7 @@ class FacetedSearchSubtyper(FacetedSubtyper):
 
     def disable(self):
         """See IFacetedSubtyper"""
-        if not self.can_disable:
+        if not self.can_disable():
             return self._redirect("Faceted search navigation not supported")
         noLongerProvides(self.context, IFacetedSearchMode)
         self._redirect(_("Faceted search disabled"))

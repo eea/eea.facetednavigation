@@ -18,7 +18,7 @@ Set up
     >>> sandbox = portal['sandbox']
 
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
-    >>> subtyper.can_enable
+    >>> subtyper.can_enable()
     True
 
     >>> subtyper.enable()

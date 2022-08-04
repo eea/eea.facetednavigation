@@ -30,9 +30,14 @@ class IFacetedWrapper(Interface):
 class IFacetedSubtyper(Interface):
     """Support for subtyping objects"""
 
-    can_enable = schema.Bool("Can enable faceted navigation", readonly=True)
-    can_disable = schema.Bool("Can disable faceted navigation", readonly=True)
-    is_faceted = schema.Bool("Is current object faceted navigable", readonly=True)
+    def can_enable():
+        """Can enable faceted navigation"""
+
+    def can_disable():
+        """Can disable faceted navigation"""
+
+    def is_faceted():
+        """Is current object faceted navigable"""
 
     def enable():
         """Enable faceted navigation"""
