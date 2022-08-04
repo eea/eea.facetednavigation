@@ -1,6 +1,5 @@
 """ Subtypes interfaces
 """
-from zope import schema
 from zope.interface import Interface
 
 
