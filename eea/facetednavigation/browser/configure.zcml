@@ -147,9 +147,9 @@
       />
 
   <plone:static
+      directory="static"
       name="facetednavigation"
       type="plone"
-      directory="static"
       />
 
 </configure>
