@@ -140,9 +140,16 @@
       permission="zope2.View"
       />
 
+  <!-- BBB -->
   <browser:resourceDirectory
       name="facetednavigation"
       directory="./static"
+      />
+
+  <plone:static
+      name="facetednavigation"
+      type="plone"
+      directory="static"
       />
 
 </configure>
