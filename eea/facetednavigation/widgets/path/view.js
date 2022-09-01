@@ -1,42 +1,42 @@
 /* Path Widget
 */
 Faceted.PathWidget = function(wid){
-  this.wid = wid;
-  this.widget = jQuery('#' + wid + '_widget');
-  this.widget.show();
-  this.title = jQuery('legend', this.widget).html();
-  this.input = jQuery('input', this.widget);
-  this.breadcrumbs = jQuery('<dd>');
-  this.selected = [];
+  var self = this;
+  self.wid = wid;
+  self.widget = jQuery(`#${wid}_widget`);
+  self.widget.show();
+  self.title = jQuery('legend', self.widget).html();
+  self.input = jQuery('input', self.widget);
+  self.breadcrumbs = jQuery('<dd>');
+  self.selected = [];
 
   // Default value
-  var value = this.input.val();
+  var value = self.input.val();
   if(value){
-    this.selected = this.input;
-    Faceted.Query[this.wid] = [value];
+    self.selected = self.input;
+    Faceted.Query[self.wid] = [value];
   }
 
   // Navigation Tree
-  var tree = new FacetedTree.JsTree(this.wid, this.widget);
+  self.tree = new FacetedTree.JsTree(self.wid, self.widget);
 
   // Bind events
-  var js_widget = this;
-  jQuery('form', this.widget).submit(function(){
+  jQuery('form', self.widget).on('submit', function(){
     return false;
   });
-  jQuery(FacetedTree.Events).bind(FacetedTree.Events.CHANGED, function(data){
-    js_widget.text_change(js_widget.input);
+  jQuery(FacetedTree.Events).on(FacetedTree.Events.CHANGED, function(data){
+    self.text_change(self.input);
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
-    js_widget.synchronize();
+  jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function(evt){
+    self.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
-    js_widget.reset();
+  jQuery(Faceted.Events).on(Faceted.Events.RESET, function(evt){
+    self.reset();
   });
 };
 
 Faceted.PathWidget.prototype = {
-  text_change: function(element, evt){
+  text_change: function(element){
     this.do_query(element);
   },
 
@@ -64,6 +64,7 @@ Faceted.PathWidget.prototype = {
       this.reset();
       return;
     }
+    this.input.val(value);
     this.selected = [this.input];
     this.widget.addClass("faceted-widget-active");
   },
@@ -86,18 +87,18 @@ Faceted.PathWidget.prototype = {
       return '';
     }
     var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
-    link.attr('id', 'criteria_' + this.wid);
-    link.attr('title', 'Remove ' + this.title + ' filters');
+    link.attr('id', `criteria_${this.wid}`);
+    link.attr('title', `Remove ${this.title} filters`);
     var widget = this;
-    link.click(function(evt){
+    link.on('click', function(evt){
       widget.criteria_remove();
       return false;
     });
 
     var html = jQuery('<dt>');
-    html.attr('id', 'criteria_' + this.wid + '_label');
+    html.attr('id', `criteria_${this.wid}_label`);
     html.append(link);
-    html.append('<span>' + this.title + '</span>');
+    html.append(`<span>${this.title}</span>`);
     return html;
   },
 
@@ -106,31 +107,31 @@ Faceted.PathWidget.prototype = {
       return '';
     }
 
-    var js_widget = this;
-    js_widget.breadcrumbs.text('Loading...');
+    var self = this;
+    self.breadcrumbs.text('Loading...');
     var query = {};
-    query.path = js_widget.input.val();
-    query.cid = js_widget.wid;
-    jQuery.getJSON(Faceted.BASEURL + '@@faceted.path.breadcrumbs.json', query, function(data){
-      js_widget.breadcrumbs.empty();
+    query.path = self.input.val();
+    query.cid = self.wid;
+    jQuery.getJSON(`${Faceted.BASEURL}@@faceted.path.breadcrumbs.json`, query, function(data){
+      self.breadcrumbs.empty();
       jQuery.each(data, function(){
-        js_widget.breadcrumbs.append(jQuery('<span>').html('&raquo;'));
-        var a = jQuery('<a>');
-        a.attr('href', this.url);
-        a.attr('title', this.title);
-        a.text(this.title);
-        a.click(function(){
-          var path = jQuery(this).attr('href');
-          js_widget.input.val(path);
-          jQuery(FacetedTree.Events).trigger(
-            FacetedTree.Events.CHANGED, {path: path}
-          );
-          return false;
-        });
-        js_widget.breadcrumbs.append(a);
+        self.breadcrumbs.append(jQuery('<span>').html('&raquo;'));
+        var a = jQuery('<a>')
+          .attr('href', this.url)
+          .attr('title', this.title)
+          .text(this.title)
+          .on('click', function(){
+            var path = jQuery(this).attr('href');
+            self.input.val(path);
+            jQuery(FacetedTree.Events).trigger(
+              FacetedTree.Events.CHANGED, {path: path}
+            );
+            return false;
+          });
+        self.breadcrumbs.append(a);
       });
     });
-    return js_widget.breadcrumbs;
+    return self.breadcrumbs;
   },
 
   criteria_remove: function(){
@@ -148,8 +149,8 @@ Faceted.initializePathWidget = function(evt){
   });
 };
 
-jQuery(document).ready(function(){
-  jQuery(Faceted.Events).bind(
+jQuery(function(){
+  jQuery(Faceted.Events).on(
     Faceted.Events.INITIALIZE,
     Faceted.initializePathWidget);
 });

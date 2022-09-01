@@ -6,114 +6,75 @@ FacetedTree.Events.AJAX_START = 'FACETEDTREE-AJAX-START';
 FacetedTree.Events.AJAX_STOP = 'FACETEDTREE-AJAX-STOP';
 
 FacetedTree.JsTree = function(wid, container, mode){
-  this.BASEURL = '';
+  var self = this;
+  self.BASEURL = '';
   if(window.FacetedEdit){
-    this.BASEURL = FacetedEdit.BASEURL;
+    self.BASEURL = FacetedEdit.BASEURL;
   }else if(window.Faceted){
-    this.BASEURL = Faceted.BASEURL;
+    self.BASEURL = Faceted.BASEURL;
   }
-  this.wid = wid;
-  this.mode = mode || 'view';
-  this.input = jQuery('#' + wid, container);
-  this.input.attr('readonly', 'readonly');
-  this.theme = jQuery('#' + wid + '-theme', container);
+  self.wid = wid;
+  self.mode = mode || 'view';
+  self.input = jQuery(container).find(`#${wid}`);
+  self.input.attr('readonly', 'readonly');
 
-  this.area = jQuery('<div>');
-  this.area.addClass('tree');
-  this.area.text('Loading...');
-  this.area.hide();
-  this.area.width(this.input.width());
-  this.input.after(this.area);
+  self.area = jQuery('<div>')
+    .attr('id', `${wid}-tree`)
+    .addClass('tree')
+    .text('Loading...')
+    .width(self.input.width())
+    .hide();
+  self.input.after(self.area);
 
-  var js_tree = this;
-  this.input.click(function(evt){
-    js_tree.show();
+  var self = this;
+  self.input.click(function(evt){
+    self.show();
   });
 
-  jQuery(document).click(function(e){
+  jQuery(document).on('click', function(e){
     var target = jQuery(e.target);
-    if(target.is('#' + js_tree.input.attr('id'))){
+    if(target.is(`#${self.input.attr('id')}`)){
       return;
     }
-    var parent = target.parents('#' + js_tree.area.attr('id'));
+    var parent = target.parents(`#${self.area.attr('id')}`);
     if(parent.length){
       return;
     }
-    js_tree.hide();
+    self.hide();
   });
 
-  jQuery(document).keydown(function(e){
+  jQuery(document).on('keydown', function(e){
     if(e.keyCode == 27){
-      js_tree.hide();
+      self.hide();
     }
   });
 
-  var query = {};
-  query.cid = this.wid;
-  query.mode = this.mode;
-
-  jQuery(FacetedTree.Events).trigger(FacetedTree.Events.AJAX_START, {msg: 'Loading ...'});
-  jQuery.getJSON(js_tree.BASEURL + '@@faceted.path.tree.json', query, function(data){
-    if(data.length){
-      js_tree.initialize(data);
-    }else{
-      if(mode=='edit'){
-        jQuery('form', container).hide();
-        jQuery('div.faceted-path-errors', container).show();
-      }else{
-        jQuery('.faceted-widget:has(div.faceted-path-errors)').remove();
-        jQuery(Faceted.Events).trigger(Faceted.Events.REDRAW);
-      }
-    }
-    jQuery(FacetedTree.Events).trigger(FacetedTree.Events.AJAX_STOP, {msg: data});
-  });
+  self.initialize();
 };
 
 FacetedTree.JsTree.prototype = {
-  initialize: function(static_tree){
-    var js_tree = this;
-    js_tree.area.jstree({
-      ui: {
-        theme_name: js_tree.theme.attr('title'),
-        theme_path: js_tree.theme.text()
-      },
-
-      types   : {
-        "default" : {
-          clickable  : true,
-          renameable : false,
-          deletable  : false,
-          creatable  : false,
-          draggable  : false
-        }
-      },
-
-      data: {
-        type: 'json',
-        async: true,
-        opts: {
-          method: 'POST',
-          url: js_tree.BASEURL  + '@@faceted.path.tree.json'
-        }
-      },
-      callback: {
-        beforedata: function(node, tree){
-          if(node===false){
-            tree.settings.data.opts['static'] = static_tree;
-            return;
-          }
-          tree.settings.data.opts['static'] = false;
-          var data = {cid: js_tree.wid};
-          data.mode = js_tree.mode;
-          if(node){
-            data.path = node.attr('path');
-          }
-          return data;
+  initialize: function(){
+    var self = this;
+    self.area.jstree({
+      plugins: ["wholerow"],
+      core: {
+        themes : {
+          name: 'proton',
+          responsive: true,
+          variant : "large"
         },
-        onselect: function(node, tree){
-          js_tree.change(node, tree);
+        data: {
+          url: function(node) {
+            if(node.id === '#') {
+              return `${self.BASEURL}@@faceted.path.tree.json?cid=${self.wid}&mode=${self.mode}`;
+            }
+            return `${self.BASEURL}@@faceted.path.tree.json?cid=${self.wid}&mode=${self.mode}&path=${node.data.path}`;
+          },
+          dataType : "json"
         }
       }
+    }).on('changed.jstree', function (e, data) {
+      self.change(data.node);
     });
   },
 
@@ -125,10 +86,9 @@ FacetedTree.JsTree.prototype = {
     this.area.hide();
   },
 
-  change: function(node, tree){
+  change: function(node){
     this.hide();
-    node = jQuery(node);
-    var value = node.attr('path');
+    var value = node.data.path;
     if(this.input.val() == value){
       value = '';
     }

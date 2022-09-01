@@ -95,11 +95,12 @@ class FacetedTree(BrowserView):
 
             nodes.append(
                 {
-                    "attributes": {"id": node_id, "path": node_url},
+                    "id": node_id,
+                    "text": node.get("Title", node_id),
+                    "children": True if node_children else False,
                     "data": {
-                        "title": node.get("Title", "Missing title"),
-                    },
-                    "state": node_state,
+                        "path": node_url
+                    }
                 }
             )
         return nodes
@@ -127,9 +128,9 @@ class FacetedTree(BrowserView):
         url = root[:]
         breadcrumb_path = [""]
         search = {}
-        languge = self.language
-        if languge:
-            search["Language"] = languge
+        language = self.language
+        if language:
+            search["Language"] = language
 
         for breadcrumb in path:
             url.append(breadcrumb)
