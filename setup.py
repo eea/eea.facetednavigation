@@ -44,7 +44,6 @@ setup(
     install_requires=[
         "setuptools",
         # -*- Extra requirements: -*-
-        "collective.js.jqueryui",
     ],
     extras_require={
         "test": [

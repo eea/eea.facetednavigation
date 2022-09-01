@@ -12,6 +12,9 @@ module.exports = [
             path: path.resolve(__dirname, 'eea/facetednavigation/browser/static'),
             filename: 'faceted-jquery.min.js',
         },
+        externals: {
+            jquery: 'jQuery',
+        },
     },
     {
         entry: './resources/view.js',
