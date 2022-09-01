@@ -69,7 +69,7 @@
       id="faceted-importexport-widgets" tal:attributes="
       action string:${context/absolute_url}/@@faceted_exportimport;"
     tal:define="criteria view/get_criteria">
-      <input type="file" name="import_file" />
+      <input type="file" name="import_file" id="import_file" />
       <div>
         <input class="context" type="submit" value="Import" id="import_button"
            name="import_button"

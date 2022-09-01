@@ -42,8 +42,12 @@ class FacetedExportImport(object):
         if not importer:
             return "No adapter found"
 
-        importer.body = xml
-        return _("Configuration imported")
+        try:
+            importer.body = xml
+        except Exception as err:
+            return "ERROR: %s" % err
+        else:
+            return _("Configuration imported")
 
     def import_xml(self, **kwargs):
         """Import config from xml"""

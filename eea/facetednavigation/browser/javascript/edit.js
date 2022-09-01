@@ -78,13 +78,7 @@ FacetedEdit.FormMessage = {
     var msg = jQuery('<dl>')
       .addClass('portalMessage')
       .attr('id', 'faceted-portal-status-message')
-      .css({
-        float: 'left',
-        cursor: 'pointer',
-        margin: '0px',
-        width: '80%',
-        'text-align': 'left'
-      }).append(jQuery('<dt>').text('Info'));
+      .append(jQuery('<dt>').text('Info'));
 
     var msg_area = jQuery('<dd>')
       .attr('id', 'faceted-portal-status-message-area');
@@ -143,7 +137,11 @@ FacetedEdit.FormMessage = {
     this.update(msg);
   },
 
-  update: function(msg){
+  update: function(msg, level){
+    if(!level) {
+      level = 'success';
+    }
+    this.msg.removeClass().addClass(level);
     this.msg_area.html(msg);
     if(!msg){
       this.msg.hide();
@@ -679,23 +677,37 @@ FacetedEdit.FormImportExport = {
       button.remove();
     });
 
-    var import_button = jQuery('#import_button');
-    import_button.css('cursor', 'pointer');
-    var upload = new AjaxUpload(import_button, {
+    var import_file = jQuery('#import_file');
+    import_file.ajaxfileupload({
       action: this.form.attr('action'),
-      name: 'import_file',
-      data: {
+      params: {
         redirect: '',
         import_button: 'Import'
       },
-      autoSubmit: true,
-      onComplete: function(file, response) {
-        var data = jQuery(response);
+      valid_extensions : ['xml'],
+      onComplete: function(response) {
+        import_file.val("");
+        if(!response.status && response.message) {
+          FacetedEdit.FormMessage.update(response.message, 'error');
+          return false;
+        }
+
+        if(response.startsWith && response.startsWith("ERROR")) {
+          FacetedEdit.FormMessage.update(response, 'error');
+          return false
+        }
+
         jQuery(FacetedEdit.Events).trigger(
-          FacetedEdit.Events.RELOAD_WIDGETS, {msg: data.text()
-        });
-      }
+          FacetedEdit.Events.RELOAD_WIDGETS, {msg: response});
+        return true;
+      },
     });
+
+    jQuery('#import_button')
+      .css('cursor', 'pointer')
+      .on('click', function(){
+        import_file.trigger('click');
+      });
   },
 
   export_xml: function(){

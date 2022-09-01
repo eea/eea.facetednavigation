@@ -1823,6 +1823,11 @@ jest-worker@^27.4.5:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
+jquery-ajax-file-upload@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/jquery-ajax-file-upload/-/jquery-ajax-file-upload-1.0.0.tgz#ceb34b3b8d357151f3b40f5f412db6161493616a"
+  integrity sha512-HLMrROOLVMsHtV+sZQExop6t6cyIFaebuIgMlsA35L/5JRm5Frcuil414TW8cXhg8xkbicrsyxGT7W62qkVo3Q==
+
 jquery-ui@1.13.2:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.13.2.tgz#de03580ae6604773602f8d786ad1abfb75232034"
@@ -1879,7 +1884,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
-jstree-bootstrap-theme@^1.0.1:
+jstree-bootstrap-theme@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/jstree-bootstrap-theme/-/jstree-bootstrap-theme-1.0.1.tgz#7d5edc73a846e8da7f94f57a1cc5ddee9d9eab4b"
   integrity sha512-H1F1NOwfPnsQAzsLPRBRR0zO4pfXD5tUHfRj9psT/2+eEMMotG1mYtU3gP5Lsr67TKbsE53M8HLv93EAL+zC2A==

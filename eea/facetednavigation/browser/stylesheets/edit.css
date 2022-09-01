@@ -371,17 +371,31 @@ table.listing {
 #faceted-portal-status-message {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 50%;
   z-index: 3;
-  background: #E6E6E6;
+  background: #aee2f2;
   border: 1px solid #ccc;
   border-bottom: none;
   text-align: center !important;
-  width: 100% !important;
+  width: 480px !important;
+  margin-left: -240px;
+  margin-bottom: 0;
   border-radius: 0;
   font-family: sans-serif;
-  font-size: 80%;
-  padding: 0.5em;
+  font-size: 120%;
+  padding: 2rem;
+}
+
+#faceted-portal-status-message.success {
+  background: #c9eab1;
+}
+
+#faceted-portal-status-message.error {
+  background: #f5c1c1;
+}
+
+#faceted-portal-status-message.warning {
+  background: #f3e2ab;
 }
 
 #faceted-portal-status-message .ui-icon {
