@@ -405,3 +405,7 @@ table.listing {
 #faceted-portal-status-message dt {
   display: none;
 }
+
+#faceted-portal-status-message dd {
+  padding-bottom: 0;
+}

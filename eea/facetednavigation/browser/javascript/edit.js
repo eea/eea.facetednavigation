@@ -24,16 +24,17 @@ FacetedEdit.Window = {
   initialize: function(){
     this.width = jQuery(window).width();
     this.height = jQuery(window).height();
-    var js_window = this;
-    jQuery(window).resize(function(){
-      js_window.width_change();
-      js_window.height_change();
+
+    var self = this;
+    jQuery(window).on('resize', function(){
+      self.width_change();
+      self.height_change();
     });
 
     // Full screen icon cliked
     var fullscreen = jQuery('a:has(img#icon-full_screen)');
     if(fullscreen.length){
-      js_window.toggle_fullscreen(fullscreen);
+      self.toggle_fullscreen(fullscreen);
     }
   },
 
@@ -72,7 +73,7 @@ FacetedEdit.Window = {
 
 FacetedEdit.FormMessage = {
   initialize: function(){
-    var js_obj = this;
+    var self = this;
     // Add portal status message
     var context = jQuery('#faceted-edit-widgets-ajax');
     var msg = jQuery('<dl>')
@@ -93,9 +94,10 @@ FacetedEdit.FormMessage = {
         margin: '0.5em'
       });
 
-    msg.click(function(){
-      js_obj.msg.hide();
+    msg.on('click', function(){
+      self.msg.hide('slide', { direction: "down" });
     });
+
     msg.append(msg_close).append(msg_area);
     context.prepend(msg);
     this.msg = msg;
@@ -119,11 +121,11 @@ FacetedEdit.FormMessage = {
     this.lock.html(FacetedEdit.loading);
 
     // Events
-    jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.AJAX_START, function(evt, data){
-      js_obj.start(data.msg);
+    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.AJAX_START, function(evt, data){
+      self.start(data.msg);
     });
-    jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.AJAX_STOP, function(evt, data){
-      js_obj.stop(data.msg);
+    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.AJAX_STOP, function(evt, data){
+      self.stop(data.msg);
     });
   },
 
@@ -144,9 +146,9 @@ FacetedEdit.FormMessage = {
     this.msg.removeClass().addClass(level);
     this.msg_area.html(msg);
     if(!msg){
-      this.msg.hide();
+      this.msg.hide('slide', { direction: "down" });
     }else{
-      this.msg.show();
+      this.msg.show('slide', { direction: "down" });
     }
   },
 
@@ -216,7 +218,7 @@ FacetedEdit.FormWidgets = {
     this.update();
 
     // Confirm delete dialog
-    var js_obj = this;
+    var self = this;
     jQuery('#confirm-delete-dialog').dialog({
       bgiframe: true,
       autoOpen: false,
@@ -228,7 +230,7 @@ FacetedEdit.FormWidgets = {
           var wid = label.attr('id');
           var cid = wid.split('_')[0];
           jQuery('#' + wid).slideUp(function(){
-            js_obj.delete_widget(cid);
+            self.delete_widget(cid);
             jQuery('#' + wid).remove();
           });
           jQuery(this).dialog('close');
@@ -240,8 +242,8 @@ FacetedEdit.FormWidgets = {
     });
 
     // Events
-    jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.RELOAD_WIDGETS, function(evt, data){
-      js_obj.update();
+    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.RELOAD_WIDGETS, function(evt, data){
+      self.update();
     });
   },
 
@@ -806,7 +808,7 @@ FacetedEdit.FormSections = {
     this.selected = null;
 
     var context = this;
-    jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.INITIALIZE_WIDGETS, function(){
+    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.INITIALIZE_WIDGETS, function(){
       context.update();
     });
   },
@@ -945,7 +947,7 @@ FacetedEdit.Catalog = {
       context.types = data;
     });
 
-    jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.CATALOG_CHANGED, function(evt, data){
+    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.CATALOG_CHANGED, function(evt, data){
       context.handle_change(data.catalog, data.operator, data.cid);
     });
   },
