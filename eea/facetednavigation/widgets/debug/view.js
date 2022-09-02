@@ -32,7 +32,7 @@ Faceted.DebugWidget = function(wid){
 
   // Bind events
   var js_widget = this;
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
 };
@@ -81,7 +81,7 @@ Faceted.DebugWidget.prototype = {
   }
 };
 
-Faceted.initializeDebugWidget = function(evt){
+Faceted.initializeDebugWidget = function(){
   jQuery('div.faceted-debug-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

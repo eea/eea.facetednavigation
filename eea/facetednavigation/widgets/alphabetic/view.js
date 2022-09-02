@@ -30,15 +30,15 @@ Faceted.AlphabeticalWidget = function(wid){
   });
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     js_widget.reset();
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(){
       js_widget.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
@@ -51,7 +51,7 @@ Faceted.AlphabeticalWidget = function(wid){
 };
 
 Faceted.AlphabeticalWidget.prototype = {
-  letter_click: function(letter, evt){
+  letter_click: function(letter){
     this.do_query(letter);
   },
 
@@ -160,7 +160,7 @@ Faceted.AlphabeticalWidget.prototype = {
     return html;
   },
 
-  criteria_remove: function(element, evt){
+  criteria_remove: function(){
     this.do_query(this.selected[0]);
   },
 
@@ -212,7 +212,7 @@ Faceted.AlphabeticalWidget.prototype = {
   }
 };
 
-Faceted.initializeAlphabeticalWidget = function(evt){
+Faceted.initializeAlphabeticalWidget = function(){
   jQuery('div.faceted-alphabetic-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

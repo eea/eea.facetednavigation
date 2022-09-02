@@ -31,7 +31,7 @@ FacetedEdit.Window = {
       self.height_change();
     });
 
-    // Full screen icon cliked
+    // Full screen icon clicked
     var fullscreen = jQuery('a:has(img#icon-full_screen)');
     if(fullscreen.length){
       self.toggle_fullscreen(fullscreen);
@@ -60,7 +60,7 @@ FacetedEdit.Window = {
 
   toggle_fullscreen: function(button){
     button.attr('href', '#');
-    button.click(function(evt){
+    button.click(function(){
       var toggleFullScreenMode = window.toggleFullScreenMode;
       if(toggleFullScreenMode){
         toggleFullScreenMode();
@@ -206,7 +206,7 @@ FacetedEdit.FormWidgets = {
   initialize: function(){
     this.form = jQuery('#faceted-edit-widgets');
     var form = this.form;
-    $(document).ajaxError(function(event, request, settings){
+    jQuery(document).ajaxError(function(){
       jQuery(form).html('<h3>This site encountered an error trying to fulfill your request</h3><p>If the error persists please contact the site maintainer. Thank you for your patience.</p>');
       jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: 'Error'});
     });
@@ -242,7 +242,7 @@ FacetedEdit.FormWidgets = {
     });
 
     // Events
-    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.RELOAD_WIDGETS, function(evt, data){
+    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.RELOAD_WIDGETS, function(){
       self.update();
     });
   },
@@ -305,7 +305,7 @@ FacetedEdit.FormWidgets = {
         var position = container_id[0];
         var section = container_id[1];
         var local_addbutton = addbutton.clone();
-        local_addbutton.click(function(evt){
+        local_addbutton.click(function(){
           var dialog = jQuery('#faceted-edit-addwidget');
           jQuery('#wposition', dialog).val(position);
           jQuery('#wsection', dialog).val(section);
@@ -401,7 +401,6 @@ FacetedEdit.FormWidgets = {
   },
 
   delete_widget: function(criterion_id){
-    var context = this;
     var query = {};
     query.path = criterion_id;
     query.deleteWidget_button = 'Delete';
@@ -417,7 +416,6 @@ FacetedEdit.FormWidgets = {
 
   hide_button_click: function(widget_id, criterion_id){
     var widget = jQuery('#' + widget_id);
-    var button = jQuery('#' + widget_id + ' div.ui-icon-unlocked, div.ui-icon-locked');
     var action = FacetedEdit.BASEURL + '@@faceted_configure';
     var query = {};
     query.redirect = '';
@@ -438,7 +436,6 @@ FacetedEdit.FormWidgets = {
   },
 
   hide_widget: function(widget_id){
-    var widget = jQuery('#' + widget_id);
     var button = jQuery('#' + widget_id + ' div.ui-icon-unlocked');
     button.attr('title', 'Show widget');
     button.removeClass('ui-icon-unlocked');
@@ -447,7 +444,6 @@ FacetedEdit.FormWidgets = {
   },
 
   show_widget: function(widget_id){
-    var widget = jQuery('#' + widget_id);
     var button = jQuery('#' + widget_id + ' div.ui-icon-locked');
     button.attr('title', 'Hide widget');
     button.removeClass('ui-icon-locked');
@@ -534,7 +530,6 @@ FacetedEdit.FormEditWidget = {
   },
 
   submit: function(){
-    var context = this;
     var action = FacetedEdit.BASEURL + '@@faceted_configure';
     this.update_query();
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
@@ -601,7 +596,7 @@ FacetedEdit.FormAddWidgets = {
     jQuery('#faceted-widget-type', this.form).after(clear);
   },
 
-  wtype_change: function(element, evt){
+  wtype_change: function(element){
     FacetedEdit.FormValidator.clear(this.form);
     this.wtype_update(jQuery(element).val());
   },
@@ -638,10 +633,9 @@ FacetedEdit.FormAddWidgets = {
     });
   },
 
-  submit: function(form, evt){
+  submit: function(form){
     this.update_query();
 
-    var context = this;
     jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Adding ...'});
     jQuery.post(form.attr('action'), this.query, function(data){
       jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: data});
@@ -794,7 +788,7 @@ FacetedEdit.FormValidator = {
     error.append('<div style="clear: both" />');
   },
 
-  clear: function(form){
+  clear: function(){
     jQuery('.ui-state-error').removeClass('ui-state-error');
     jQuery('.submitting').removeClass('.submitting');
     jQuery('#form-validator-errors').remove();
@@ -1030,7 +1024,7 @@ FacetedEdit.Load = function(evt, baseurl){
   FacetedEdit.FormPage.initialize();
   // Override calendar close handler method in order to raise custom events
   if(window.Calendar){
-    Calendar.prototype.callCloseHandler = function () {
+    window.Calendar.prototype.callCloseHandler = function () {
       // Original code
       if (this.onClose) {
         this.onClose(this);

@@ -32,14 +32,14 @@ Faceted.TagsCloudWidget = function(wid){
   });
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     js_widget.reset();
   });
 
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(){
     js_widget.count();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
@@ -50,7 +50,7 @@ Faceted.TagsCloudWidget = function(wid){
   });
 
   // Resize window
-  jQuery(Faceted.Events).bind(Faceted.Events.WINDOW_WIDTH_CHANGED, function(evt, data){
+  jQuery(Faceted.Events).bind(Faceted.Events.WINDOW_WIDTH_CHANGED, function(){
     var width = js_widget.widget.width();
     jQuery('ul', js_widget.widget).width(width - 30);
     js_widget.update();
@@ -88,7 +88,7 @@ Faceted.TagsCloudWidget.prototype = {
     jQuery('#' + this.wid, this.widget).tagcloud(this.config);
   },
 
-  tag_click: function(tag, evt){
+  tag_click: function(tag){
     this.do_query(tag);
   },
 
@@ -202,7 +202,7 @@ Faceted.TagsCloudWidget.prototype = {
     return html;
   },
 
-  criteria_remove: function(tag, evt){
+  criteria_remove: function(){
     this.do_query(this.selected[0]);
   },
 
@@ -287,7 +287,7 @@ Faceted.TagsCloudWidget.prototype = {
   }
 };
 
-Faceted.initializeTagsCloudWidget = function(evt){
+Faceted.initializeTagsCloudWidget = function(){
   jQuery('div.faceted-tagscloud-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

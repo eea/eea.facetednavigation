@@ -1,25 +1,24 @@
-FacetedEdit.SortingWidget = function(wid, context){
+FacetedEdit.SortingWidget = function(wid){
   this.wid = wid;
   this.widget = jQuery('#' + wid + '_widget');
   this.reverse = jQuery('#' + this.wid + '_reversed');
   this.elements = jQuery('option', this.widget);
   this.select = jQuery('#' + this.wid);
-
-  var value = this.select.val();
+  this.value = this.select.val();
 
   // Handle select change
   var js_widget = this;
-  this.select.change(function(evt){
+  this.select.change(function(){
     js_widget.set_default(this);
   });
-  this.reverse.click(function(evt){
+  this.reverse.click(function(){
     js_widget.set_default(this);
   });
 
 };
 
 FacetedEdit.SortingWidget.prototype = {
-  set_default: function(element){
+  set_default: function(){
     var value = this.select.val();
     if(this.reverse.is(':checked')){
       value += '(reverse)';

@@ -15,7 +15,7 @@ FacetedEdit.DateRangeWidget = function(wid){
     changeYear: true,
     dateFormat: this.dateFormat,
     yearRange: this.yearRange,
-    onSelect: function(date, cal){
+    onSelect: function(date){
       js_widget.force_range();
       js_widget.set_default(date);
     }
@@ -26,7 +26,7 @@ FacetedEdit.DateRangeWidget = function(wid){
     changeYear: true,
     dateFormat: this.dateFormat,
     yearRange: this.yearRange,
-    onSelect: function(date, cal){
+    onSelect: function(date){
       js_widget.set_default(date);
     }
   });
@@ -55,7 +55,7 @@ FacetedEdit.DateRangeWidget.prototype = {
     this.end.datepicker("option", "minDate", start_date);
   },
 
-  set_default: function(element){
+  set_default: function(){
     var start = this.start.val();
     var end = this.end.val();
     if((!start && end) || (start && !end)){
@@ -67,8 +67,8 @@ FacetedEdit.DateRangeWidget.prototype = {
       var start_date;
       var end_date;
       if(this.usePloneFormat){
-        start_date = $.datepicker.parseDate(this.dateFormat, start);
-        end_date = $.datepicker.parseDate(this.dateFormat, end);
+        start_date = jQuery.datepicker.parseDate(this.dateFormat, start);
+        end_date = jQuery.datepicker.parseDate(this.dateFormat, end);
       }else{
         start_date = new Date(start.replace(/-/g, '/'));
         end_date = new Date(end.replace(/-/g, '/'));

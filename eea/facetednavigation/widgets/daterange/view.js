@@ -28,7 +28,7 @@ Faceted.DateRangeWidget = function(wid){
     changeYear: true,
     dateFormat: this.dateFormat,
     yearRange: this.yearRange,
-    onSelect: function(date, cal){
+    onSelect: function(){
       js_widget.force_start_range();
       js_widget.select_change(js_widget.start);
     }
@@ -39,7 +39,7 @@ Faceted.DateRangeWidget = function(wid){
     changeYear: true,
     yearRange: this.yearRange,
     dateFormat: this.dateFormat,
-    onSelect: function(date, cal){
+    onSelect: function(){
       js_widget.force_end_range();
       js_widget.select_change(js_widget.end);
     }
@@ -82,10 +82,10 @@ Faceted.DateRangeWidget = function(wid){
   });
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     js_widget.reset();
   });
 };
@@ -109,7 +109,7 @@ Faceted.DateRangeWidget.prototype = {
     }
   },
 
-  do_query: function(element){
+  do_query: function(){
     var start = this.start.val();
     var end = this.end.val();
 
@@ -177,8 +177,8 @@ Faceted.DateRangeWidget.prototype = {
     var start_date;
     var end_date;
     if (this.usePloneFormat){
-      start_date = $.datepicker.parseDate(this.dateFormat, start);
-      end_date = $.datepicker.parseDate(this.dateFormat, end);
+      start_date = jQuery.datepicker.parseDate(this.dateFormat, start);
+      end_date = jQuery.datepicker.parseDate(this.dateFormat, end);
     }else{
       start_date = new Date(start.replace(/-/g, '/'));
       end_date = new Date(end.replace(/-/g, '/'));
@@ -223,7 +223,7 @@ Faceted.DateRangeWidget.prototype = {
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -260,7 +260,7 @@ Faceted.DateRangeWidget.prototype = {
 
     link.attr('id', 'criteria_' + this.wid + '_');
     link.attr('title', 'Remove ' + label + ' filter');
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -291,7 +291,7 @@ Faceted.DateRangeWidget.prototype = {
   }
 };
 
-Faceted.initializeDateRangeWidget = function(evt){
+Faceted.initializeDateRangeWidget = function(){
   jQuery('div.faceted-daterange-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

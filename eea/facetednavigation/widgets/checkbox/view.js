@@ -72,15 +72,15 @@ Faceted.CheckboxesWidget = function(wid){
   }
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     self.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     self.reset();
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(){
       self.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
@@ -93,11 +93,11 @@ Faceted.CheckboxesWidget = function(wid){
 };
 
 Faceted.CheckboxesWidget.prototype = {
-  checkbox_click: function(element, evt){
+  checkbox_click: function(element){
     this.do_query(element);
   },
 
-  operator_click: function(element, evt){
+  operator_click: function(){
     var self = this;
     if(self.operator === 'or'){
       self.operator = 'and';
@@ -121,10 +121,10 @@ Faceted.CheckboxesWidget.prototype = {
     return '(' + label + ')';
   },
 
-  do_query: function(element){
+  do_query: function(){
     this.selected = jQuery('form input[type=checkbox]:checked', this.widget);
     var value = [];
-    this.selected.each(function(i){
+    this.selected.each(function(){
       value.push(jQuery(this).val());
     });
     Faceted.Form.do_query(this.wid, value);
@@ -176,7 +176,7 @@ Faceted.CheckboxesWidget.prototype = {
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
-    link.click(function(evt){
+    link.on('click', function(){
       widget.criteria_remove();
       return false;
     });
@@ -197,7 +197,7 @@ Faceted.CheckboxesWidget.prototype = {
     var html = jQuery('<dd>');
     html.attr('id', 'criteria_' + this.wid + '_entries');
 
-    widget.selected.each(function(i){
+    widget.selected.each(function(){
       var span = jQuery('<span class="faceted-checkbox-criterion">');
       var element = jQuery(this);
       var id = element.attr('id');
@@ -209,7 +209,7 @@ Faceted.CheckboxesWidget.prototype = {
       var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + title + ' filter');
-      link.click(function(evt){
+      link.click(function(){
         widget.criteria_remove(value, element);
         return false;
       });
@@ -304,7 +304,7 @@ Faceted.CheckboxesWidget.prototype = {
   }
 };
 
-Faceted.initializeCheckboxesWidget = function(evt){
+Faceted.initializeCheckboxesWidget = function(){
   jQuery('div.faceted-checkboxes-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

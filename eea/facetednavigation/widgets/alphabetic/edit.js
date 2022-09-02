@@ -11,7 +11,7 @@ FacetedEdit.AlphabeticalWidget = function(wid){
 };
 
 FacetedEdit.AlphabeticalWidget.prototype = {
-  letter_click: function(letter, evt){
+  letter_click: function(letter){
     this.set_default(letter);
   },
 

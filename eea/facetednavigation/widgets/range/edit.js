@@ -16,7 +16,7 @@ FacetedEdit.RangeWidget = function(wid){
 };
 
 FacetedEdit.RangeWidget.prototype = {
-  set_default: function(element){
+  set_default: function(){
     var start = this.start.val();
     var end = this.end.val();
     if((!start && end) || (start && !end)){

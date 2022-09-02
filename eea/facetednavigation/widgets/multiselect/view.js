@@ -75,15 +75,15 @@ Faceted.MultiSelectWidget = function(wid){
   }
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     self.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     self.reset();
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(){
       self.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
@@ -96,14 +96,14 @@ Faceted.MultiSelectWidget = function(wid){
 };
 
 Faceted.MultiSelectWidget.prototype = {
-  select_change: function(element, evt){
+  select_change: function(element){
     if(!jQuery(element).val()){
       element = null;
     }
     this.do_query(element);
   },
 
-  operator_click: function(element, evt){
+  operator_click: function(){
     var self = this;
     if(self.operator === 'or'){
       self.operator = 'and';
@@ -185,7 +185,7 @@ Faceted.MultiSelectWidget.prototype = {
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -206,7 +206,7 @@ Faceted.MultiSelectWidget.prototype = {
     var html = jQuery('<dd>');
     html.attr('id', 'criteria_' + this.wid + '_entries');
 
-    widget.selected.each(function(i){
+    widget.selected.each(function(){
       var span = jQuery('<span class="faceted-multiselect-criterion">');
       var element = jQuery(this);
       var id = element.attr('id');
@@ -216,7 +216,7 @@ Faceted.MultiSelectWidget.prototype = {
       var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + label + ' filter');
-      link.click(function(evt){
+      link.click(function(){
         widget.criteria_remove(value, element);
         return false;
       });
@@ -302,7 +302,7 @@ Faceted.MultiSelectWidget.prototype = {
   }
 };
 
-Faceted.initializeMultiSelectWidget = function(evt){
+Faceted.initializeMultiSelectWidget = function(){
   jQuery('div.faceted-multiselect-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

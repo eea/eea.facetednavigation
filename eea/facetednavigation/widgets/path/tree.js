@@ -26,8 +26,7 @@ FacetedTree.JsTree = function(wid, container, mode){
     .hide();
   self.input.after(self.area);
 
-  var self = this;
-  self.input.click(function(evt){
+  self.input.click(function(){
     self.show();
   });
 

@@ -43,7 +43,7 @@ Faceted.SortingWidget = function(wid){
   }
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
@@ -52,11 +52,11 @@ Faceted.SortingWidget = function(wid){
 };
 
 Faceted.SortingWidget.prototype = {
-  select_change: function(element, evt){
+  select_change: function(element){
     this.do_query(element);
   },
 
-  reverse_change: function(element, evt){
+  reverse_change: function(element){
     this.do_query(element);
   },
 
@@ -151,7 +151,7 @@ Faceted.SortingWidget.prototype = {
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -179,7 +179,7 @@ Faceted.SortingWidget.prototype = {
 
     link.attr('id', 'criteria_' + this.wid + '_' + value);
     link.attr('title', 'Remove ' + label + ' filter');
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -203,7 +203,7 @@ Faceted.SortingWidget.prototype = {
   }
 };
 
-Faceted.initializeSortingWidget = function(evt){
+Faceted.initializeSortingWidget = function(){
   jQuery('div.faceted-sorting-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

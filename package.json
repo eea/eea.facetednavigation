@@ -25,6 +25,10 @@
         "jquery": "1.12.4"
     },
     "devDependencies": {
+        "@babel/core": "^7.18.10",
+        "@babel/eslint-parser": "^7.18.9",
+        "@babel/plugin-proposal-optional-chaining": "^7.18.9",
+        "@babel/preset-env": "^7.18.10",
         "clean-css-cli": "^5.6.0",
         "copy-webpack-plugin": "^10.2.4",
         "core-js": "^3.21.1",
@@ -52,7 +56,9 @@
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",
         "css-minify-plugins": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-jquery.min.css ./resources/plugins.css",
         "css-minify-view": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-view.min.css ./resources/view.css",
-        "css-minify-edit": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-edit.min.css ./resources/edit.css"
+        "css-minify-edit": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-edit.min.css ./resources/edit.css",
+        "lint": "./node_modules/eslint/bin/eslint.js --max-warnings=0 'eea/**/*.{js,jsx}'",
+        "lint:fix": "./node_modules/eslint/bin/eslint.js --fix 'eea/**/*.{js,jsx}'"
     },
     "browserslist": {
         "production": [

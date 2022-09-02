@@ -34,7 +34,7 @@ Faceted.RadioWidget = function(wid){
   }
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
   jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
@@ -42,7 +42,7 @@ Faceted.RadioWidget = function(wid){
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(){
       js_widget.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
@@ -64,7 +64,7 @@ Faceted.RadioWidget = function(wid){
 };
 
 Faceted.RadioWidget.prototype = {
-  radio_click: function(element, evt){
+  radio_click: function(element){
     if(!jQuery(element).val()){
       element = null;
     }
@@ -132,7 +132,7 @@ Faceted.RadioWidget.prototype = {
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -158,10 +158,10 @@ Faceted.RadioWidget.prototype = {
     var title = label.attr('title');
     label = label.text();
     var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
-    var span = jQuery('<span class="facted-radio-criterion">');
+    var span = jQuery('<span class="faceted-radio-criterion">');
     link.attr('id', 'criteria_' + id);
     link.attr('title', 'Remove ' + title + ' filter');
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -246,7 +246,7 @@ Faceted.RadioWidget.prototype = {
   }
 };
 
-Faceted.initializeRadioWidget = function(evt){
+Faceted.initializeRadioWidget = function(){
   jQuery('div.faceted-radio-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

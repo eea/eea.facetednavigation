@@ -11,13 +11,13 @@ FacetedEdit.TalWidget = function(wid){
     return false;
   });
 
-  self.input.change(function(evt){
+  self.input.change(function(){
     self.set_default(this);
   });
 };
 
 FacetedEdit.TalWidget.prototype = {
-  set_default: function(element){
+  set_default: function(){
     var self = this;
     self.selected = self.input;
     var value = self.selected.val();

@@ -11,11 +11,11 @@ Faceted.PortletWidget = function(wid){
   });
 };
 
-Faceted.initializePortletWidget = function(evt){
+Faceted.initializePortletWidget = function(){
   jQuery('div.faceted-portlet-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];
-    var widget = new Faceted.PortletWidget(wid);
+    Faceted.Widgets[wid] = new Faceted.PortletWidget(wid);
   });
 };
 

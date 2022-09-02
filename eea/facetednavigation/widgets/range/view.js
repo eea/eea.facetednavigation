@@ -30,10 +30,10 @@ Faceted.RangeWidget = function(wid){
   this.end.change(handle);
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     js_widget.reset();
   });
 };
@@ -43,7 +43,7 @@ Faceted.RangeWidget.prototype = {
     this.do_query(element);
   },
 
-  do_query: function(element){
+  do_query: function(){
     var start = this.start.val();
     start = parseFloat(start) || start;
     var end = this.end.val();
@@ -119,7 +119,7 @@ Faceted.RangeWidget.prototype = {
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
-    link.click(function(evt){
+    link.on('click', function(){
       widget.criteria_remove();
       return false;
     });
@@ -146,7 +146,7 @@ Faceted.RangeWidget.prototype = {
 
     link.attr('id', 'criteria_' + this.wid + '_');
     link.attr('title', 'Remove ' + label + ' filter');
-    link.click(function(evt){
+    link.on('click', function(){
       widget.criteria_remove();
       return false;
     });
@@ -162,7 +162,7 @@ Faceted.RangeWidget.prototype = {
   }
 };
 
-Faceted.initializeRangeWidget = function(evt){
+Faceted.initializeRangeWidget = function(){
   jQuery('div.faceted-range-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

@@ -78,7 +78,7 @@ Faceted.SortedQuery = function(query){
 
   keys.sort();
   var res = {};
-  jQuery.each(keys, function(index){
+  jQuery.each(keys, function(){
     res[this] = query[this];
   });
   return res;
@@ -123,7 +123,7 @@ Faceted.Window = {
 
   toggle_fullscreen: function(button){
     button.attr('href', '#');
-    button.click(function(evt){
+    button.click(function(){
       var toggleFullScreenMode = window.toggleFullScreenMode;
       if(toggleFullScreenMode){
         toggleFullScreenMode();
@@ -153,7 +153,7 @@ Faceted.Form = {
 
     // Handle errors
     var area =  this.area;
-    $(document).ajaxError(function(event, request, settings){
+    jQuery(document).ajaxError(function(){
       jQuery(area).html('' +
       '<h3>This site encountered an error trying to fulfill your request</h3>' +
       '<p>' +
@@ -195,7 +195,7 @@ Faceted.Form = {
   initialize_paginator: function() {
     var context = this;
     Faceted.b_start_changed = false;
-    jQuery('.pagination a').each(function(i){
+    jQuery('.pagination a').each(function(){
       jQuery(this).click(function(){
         var href = jQuery(this).attr('href');
         var regex = new RegExp('b_start\\:int=(\\d+)');
@@ -207,7 +207,7 @@ Faceted.Form = {
     });
   },
 
-  reset: function(evt){
+  reset: function(){
     Faceted.Query = {};
   },
 
@@ -322,7 +322,7 @@ Faceted.URLHandler = {
     if(!query){
       query = Faceted.Query;
     }
-    query = jQuery.param(query, traditional=true);
+    query = jQuery.param(query, true);
     jQuery.bbq.pushState(query, 2);
   }
 };
@@ -347,7 +347,7 @@ Faceted.Sections = {
     });
   },
 
-  toggle: function(element, evt){
+  toggle: function(){
     this.more.toggle();
     this.less.toggle();
     this.advanced.toggle('blind');
@@ -374,15 +374,15 @@ Faceted.AjaxLook = {
       js_object.remove(data.wid);
     });
 
-    jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_START, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_START, function(){
       js_object.add('faceted-results');
     });
 
-    jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(){
       js_object.remove('faceted-results');
     });
 
-    jQuery(Faceted.Events).bind(Faceted.Events.AJAX_ERROR, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.AJAX_ERROR, function(){
       jQuery(this.slaves).each(function(index){
         js_object.remove(js_object.slaves[index]);
       });
@@ -401,7 +401,7 @@ Faceted.AjaxLook = {
 
   remove: function(wid){
     if(this.slaves.length){
-      this.slaves = jQuery.map(this.slaves, function(slave, index){
+      this.slaves = jQuery.map(this.slaves, function(slave){
         if(slave == wid){
           return null;
         }
@@ -422,7 +422,7 @@ Faceted.AjaxLook = {
       return;
     }
     this.locked = true;
-    jQuery.each(Faceted.Widgets, function(key){
+    jQuery.each(Faceted.Widgets, function(){
       this.widget.addClass('faceted-widget-locked');
     });
 
@@ -439,7 +439,7 @@ Faceted.AjaxLook = {
     }
     this.locked = false;
 
-    jQuery.each(Faceted.Widgets, function(key){
+    jQuery.each(Faceted.Widgets, function(){
       this.widget.removeClass('faceted-widget-locked');
     });
 
@@ -449,7 +449,7 @@ Faceted.AjaxLook = {
 
 /* Load facetednavigation
 */
-Faceted.Load = function(evt, baseurl, context){
+Faceted.Load = function(evt, baseurl){
   if(baseurl){
     Faceted.BASEURL = baseurl;
   }
@@ -481,10 +481,10 @@ Faceted.Load = function(evt, baseurl, context){
   // });
   window.addEventListener("hashchange", Faceted.hash_changed, false);
 
-  jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(){
     Faceted.Form.initialize_paginator();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     Faceted.Form.reset();
   });
 
@@ -495,7 +495,7 @@ Faceted.Load = function(evt, baseurl, context){
 
   // Override calendar close handler method in order to raise custom events
   if(window.Calendar){
-    Calendar.prototype.callCloseHandler = function () {
+    window.Calendar.prototype.callCloseHandler = function () {
       // Original code
       if (this.onClose) {
         this.onClose(this);

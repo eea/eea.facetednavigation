@@ -14,7 +14,7 @@ FacetedEdit.RadioWidget = function(wid){
   }
 
   var js_widget = this;
-  this.elements.click(function(evt){
+  this.elements.on('click', function(){
     js_widget.set_default(this);
   });
   this.count();

@@ -24,13 +24,13 @@ Faceted.PathWidget = function(wid){
   jQuery('form', self.widget).on('submit', function(){
     return false;
   });
-  jQuery(FacetedTree.Events).on(FacetedTree.Events.CHANGED, function(data){
+  jQuery(FacetedTree.Events).on(FacetedTree.Events.CHANGED, function(){
     self.text_change(self.input);
   });
-  jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function(){
     self.synchronize();
   });
-  jQuery(Faceted.Events).on(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).on(Faceted.Events.RESET, function(){
     self.reset();
   });
 };
@@ -90,7 +90,7 @@ Faceted.PathWidget.prototype = {
     link.attr('id', `criteria_${this.wid}`);
     link.attr('title', `Remove ${this.title} filters`);
     var widget = this;
-    link.on('click', function(evt){
+    link.on('click', function(){
       widget.criteria_remove();
       return false;
     });
@@ -141,7 +141,7 @@ Faceted.PathWidget.prototype = {
   }
 };
 
-Faceted.initializePathWidget = function(evt){
+Faceted.initializePathWidget = function(){
   jQuery('div.faceted-path-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

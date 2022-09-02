@@ -34,15 +34,15 @@ Faceted.SelectWidget = function(wid){
   }
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     js_widget.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
     js_widget.reset();
   });
   if(this.widget.hasClass('faceted-count')){
     var sortcountable = this.widget.hasClass('faceted-sortcountable');
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(evt){
+    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function(){
       js_widget.count(sortcountable);
     });
     jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function(evt, data){
@@ -55,7 +55,7 @@ Faceted.SelectWidget = function(wid){
 };
 
 Faceted.SelectWidget.prototype = {
-  select_change: function(element, evt){
+  select_change: function(element){
     if(!jQuery(element).val()){
       element = null;
     }
@@ -129,7 +129,7 @@ Faceted.SelectWidget.prototype = {
     link.attr('id', 'criteria_' + this.wid);
     link.attr('title', 'Remove ' + this.title + ' filters');
     var widget = this;
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -148,7 +148,7 @@ Faceted.SelectWidget.prototype = {
 
     var widget = this;
     var html = jQuery('<dd>');
-    var span = jQuery('<span class="facted-select-criterion">');
+    var span = jQuery('<span class="faceted-select-criterion">');
     html.attr('id', 'criteria_' + this.wid + '_entries');
     var element = jQuery(this.selected);
     var value = element.val();
@@ -157,7 +157,7 @@ Faceted.SelectWidget.prototype = {
 
     link.attr('id', 'criteria_' + this.wid + '_' + value);
     link.attr('title', 'Remove ' + label + ' filter');
-    link.click(function(evt){
+    link.click(function(){
       widget.criteria_remove();
       return false;
     });
@@ -226,7 +226,7 @@ Faceted.SelectWidget.prototype = {
   }
 };
 
-Faceted.initializeSelectWidget = function(evt){
+Faceted.initializeSelectWidget = function(){
   jQuery('div.faceted-select-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

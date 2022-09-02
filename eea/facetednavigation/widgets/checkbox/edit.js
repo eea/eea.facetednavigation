@@ -39,7 +39,7 @@ FacetedEdit.CheckboxesWidget = function(wid){
   }
 
   var js_widget = this;
-  this.elements.click(function(evt){
+  this.elements.click(function(){
     js_widget.set_default(this);
   });
   this.count();
@@ -62,7 +62,7 @@ FacetedEdit.CheckboxesWidget.prototype = {
     });
   },
 
-  set_default: function(element){
+  set_default: function(){
     var query = {};
     query.redirect = '';
     query.updateCriterion_button = 'Save';

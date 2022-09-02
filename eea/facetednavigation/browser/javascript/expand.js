@@ -16,7 +16,7 @@ jQuery.fn.collapsible = function(settings){
     },
 
     // Event handlers
-    handle_refresh: function(evt, data){
+    handle_refresh: function(){
       jQuery(options.elements, self).show();
       self.button.hide();
 
@@ -49,12 +49,12 @@ jQuery.fn.collapsible = function(settings){
       });
     },
 
-    handle_expand: function(evt, data){
+    handle_expand: function(){
       self.colapsed = false;
       self.trigger(options.events.refresh);
     },
 
-    handle_colapse: function(evt, data){
+    handle_colapse: function(){
       self.colapsed = true;
       self.trigger(options.events.refresh);
     },

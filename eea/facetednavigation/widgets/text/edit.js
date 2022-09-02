@@ -6,17 +6,17 @@ FacetedEdit.TextWidget = function(wid){
   this.selected = this.input;
 
   var js_widget = this;
-  this.button.click(function(evt){
+  this.button.click(function(){
     js_widget.set_default(this);
   });
 
-  this.input.change(function(evt){
+  this.input.change(function(){
     js_widget.set_default(this);
   });
 };
 
 FacetedEdit.TextWidget.prototype = {
-  set_default: function(element){
+  set_default: function(){
     this.selected = this.input;
     var value = this.selected.val();
 

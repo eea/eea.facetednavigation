@@ -25,16 +25,16 @@ Faceted.ResultsPerPageWidget = function(wid) {
   }
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt) {
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function() {
     js_widget.synchronize();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(evt) {
+  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function() {
     js_widget.reset();
   });
 };
 
 Faceted.ResultsPerPageWidget.prototype = {
-  select_change : function(element, evt) {
+  select_change : function(element) {
     if (!jQuery(element).val()) {
       element = null;
     }
@@ -100,7 +100,7 @@ Faceted.ResultsPerPageWidget.prototype = {
   link.attr('id', 'criteria_' + this.wid);
   link.attr('title', 'Remove ' + this.title + ' filters');
   var widget = this;
-  link.click(function(evt) {
+  link.click(function() {
     widget.criteria_remove();
     return false;
   });
@@ -128,7 +128,7 @@ Faceted.ResultsPerPageWidget.prototype = {
 
   link.attr('id', 'criteria_' + this.wid + '_' + value);
   link.attr('title', 'Remove ' + label + ' filter');
-  link.click(function(evt) {
+  link.click(function() {
     widget.criteria_remove();
     return false;
   });
@@ -144,7 +144,7 @@ Faceted.ResultsPerPageWidget.prototype = {
   }
 };
 
-Faceted.initializeResultsPerPageWidget = function(evt) {
+Faceted.initializeResultsPerPageWidget = function() {
   jQuery('div.faceted-resultsperpage-widget').each(function() {
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

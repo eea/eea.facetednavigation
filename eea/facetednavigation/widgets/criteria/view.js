@@ -26,26 +26,26 @@ Faceted.CriteriaWidget = function(wid){
   js_widget.initialize_syndication();
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_START, function(evt){
+  jQuery(Faceted.Events).on(Faceted.Events.AJAX_QUERY_START, function(){
     return js_widget.update();
   });
 
-  jQuery(Faceted.Events).bind(Faceted.Events.DO_UPDATE, function(evt){
+  jQuery(Faceted.Events).on(Faceted.Events.DO_UPDATE, function(){
     return js_widget.update();
   });
 
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(evt){
+  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
     return js_widget.update_syndication();
   });
 };
 
 Faceted.CriteriaWidget.prototype = {
-  reset_click: function(element, evt){
+  reset_click: function(){
     jQuery(Faceted.Events).trigger(Faceted.Events.RESET);
     this.do_query();
   },
 
-  toggle_button_click: function(element, evt){
+  toggle_button_click: function(){
     this.area.toggle('blind');
     jQuery('a', this.toggle_button).toggle();
     this.toggle_button_count.toggle();
@@ -111,7 +111,7 @@ Faceted.CriteriaWidget.prototype = {
   }
 };
 
-Faceted.initializeCriteriaWidget = function(evt){
+Faceted.initializeCriteriaWidget = function(){
   jQuery('div.faceted-criteria-widget').each(function(){
     var wid = jQuery(this).attr('id');
     wid = wid.split('_')[0];

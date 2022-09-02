@@ -9,13 +9,13 @@ FacetedEdit.ETagWidget = function(wid){
   });
 
   var js_widget = this;
-  this.input.change(function(evt){
+  this.input.change(function(){
     js_widget.set_default(this);
   });
 };
 
 FacetedEdit.ETagWidget.prototype = {
-  set_default: function(element){
+  set_default: function(){
     this.selected = this.input;
     var value = this.selected.val();
 

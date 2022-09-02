@@ -91,8 +91,6 @@ class FacetedTree(BrowserView):
 
             node_children = node.get("children", [])
             node_children = [n for n in node_children if strategy.nodeFilter(n)]
-            node_state = "closed" if node_children else "leaf"
-
             nodes.append(
                 {
                     "id": node_id,

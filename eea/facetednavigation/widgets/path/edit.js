@@ -13,13 +13,13 @@ FacetedEdit.PathWidget.prototype = {
     self.input = self.widget.find('input');
     self.selected = self.input;
 
-    self.form.submit(function(evt){
+    self.form.submit(function(){
       self.set_default(self.input);
       return false;
     });
 
     // Navigation Tree
-    jQuery(FacetedTree.Events).on(FacetedTree.Events.CHANGED, function(data){
+    jQuery(FacetedTree.Events).on(FacetedTree.Events.CHANGED, function(){
       self.set_default(self.input);
     });
   },

@@ -6,13 +6,13 @@ FacetedEdit.ResultsPerPageWidget = function(wid){
 
   // Handle change
   var js_widget = this;
-  this.select.change(function(evt){
+  this.select.change(function(){
     js_widget.set_default(this);
   });
 };
 
 FacetedEdit.ResultsPerPageWidget.prototype = {
-  set_default: function(element){
+  set_default: function(){
     var value = this.select.val();
 
     var query = {};
