@@ -6,7 +6,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        plone: ["5.2.8"]
+        plone: ["5.2.9"]
 
     steps:
       - uses: actions/checkout@v2
@@ -18,10 +18,6 @@ jobs:
       - name: pyflakes
         run: |
           docker run -i --rm -v $(pwd)/eea:/code eeacms/pyflakes
-
-      - name: eslint
-        run: |
-          docker run -i --rm -v $(pwd):/data cytopia/eslint eea
 
       - name: zptlint
         run: |
