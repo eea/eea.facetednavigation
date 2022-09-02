@@ -135,6 +135,15 @@ table.listing {
     margin-right:0.25em;
 }
 
+.faceted-widget-edit li.formTab.ui-state-active {
+  background: #ffffff !important;
+  border: 1px solid #c5c5c5;
+  border-bottom-width: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-bottom: 0;
+}
+
 .faceted-section-tabs li.formTab a,
 .faceted-widget-edit li.formTab a {
     display: inline-block;
@@ -153,7 +162,13 @@ table.listing {
 .faceted-section-tabs li.formTab a:hover,
 .faceted-widget-edit li.formTab a.current,
 .faceted-widget-edit li.formTab a:hover {
-    background: White;
+    background: #ffffff !important;
+    color: Black;
+}
+
+.faceted-widget-edit li.formTab.ui-state-active a,
+.faceted-widget-edit li.formTab.ui-state-active a:hover {
+    background: transparent !important;
     color: Black;
 }
 
@@ -343,7 +358,7 @@ table.listing {
 }
 
 #main-container .faceted-add-button span {
-  padding: 0.6em;
+  padding: 8.5px;
 }
 
 /* Errors

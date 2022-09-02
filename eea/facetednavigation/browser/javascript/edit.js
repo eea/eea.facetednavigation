@@ -525,7 +525,12 @@ FacetedEdit.FormEditWidget = {
       var widget = jQuery('.faceted-widget-edit', context.form);
       jQuery('ul', widget).addClass('formTabs').show();
       jQuery('li', widget).addClass('formTab');
-      jQuery('ul', widget).tabs('div.panes > div');
+      try{
+        widget.tabs();
+      } catch(e) {
+        // BBB: jquery.tools.tabs
+        jQuery('ul', widget).tabs('div.panes > div');
+      }
     });
   },
 
@@ -629,7 +634,12 @@ FacetedEdit.FormAddWidgets = {
       var widget = jQuery('.faceted-widget-edit', context.details);
       jQuery('ul', widget).attr('class', 'formTabs').show();
       jQuery('li', widget).attr('class', 'formTab');
-      jQuery('ul', widget).tabs('div.panes > div');
+      try {
+        widget.tabs();
+      } catch(e) {
+        // BBB: jquery.tools.tabs
+        jQuery('ul', widget).tabs('div.panes > div');
+      }
     });
   },
 
