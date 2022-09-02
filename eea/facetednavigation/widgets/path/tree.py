@@ -98,9 +98,7 @@ class FacetedTree(BrowserView):
                     "id": node_id,
                     "text": node.get("Title", node_id),
                     "children": True if node_children else False,
-                    "data": {
-                        "path": node_url
-                    }
+                    "data": {"path": node_url},
                 }
             )
         return nodes
