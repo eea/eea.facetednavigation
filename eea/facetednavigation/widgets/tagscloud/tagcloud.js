@@ -63,9 +63,10 @@
   var iValMx = -2147483647;
   var iValMn = 2147483648;
   var iLastVal = -1;
-  for (var j=0;j<iNumLi;j++) {
-    var mLi = $(aLi[j]);
-    var iVal = mLi.attr("value")==-1?iLastVal++:mLi.attr("value");
+  var j, x, k, mLi, iVal, iXps, iYps;
+  for (j=0;j<iNumLi;j++) {
+    mLi = $(aLi[j]);
+    iVal = mLi.attr("value")==-1?iLastVal++:mLi.attr("value");
     if (iVal>iValMx) iValMx = iVal;
     if (iVal<iValMn) iValMn = iVal;
     iLastVal = iVal;
@@ -74,17 +75,17 @@
 
   // place on line to create minimal overlays
   var aLine = new Array();
-  for (var j=0;j<iNumLi;j++) aLine[j] = j;
-  for (var j, x, k = aLine.length; k; j = parseInt(Rng.rand(0,1000)/1000 * k), x = aLine[--k], aLine[k] = aLine[j], aLine[j] = x);
+  for (j=0;j<iNumLi;j++) aLine[j] = j;
+  for (j, x, k = aLine.length; k; j = parseInt(Rng.rand(0,1000)/1000 * k), x = aLine[--k], aLine[k] = aLine[j], aLine[j] = x);
 
   iLastVal = -1;
-  for (var j=0;j<iNumLi;j++) {
-    var mLi = $(aLi[j]);;
-    var iVal = mLi.attr("value")==-1?iLastVal++:mLi.attr("value");
+  for (j=0;j<iNumLi;j++) {
+    mLi = $(aLi[j]);;
+    iVal = mLi.attr("value")==-1?iLastVal++:mLi.attr("value");
     iLastVal = iVal;
     //
     var fPrt = ((iNumLi-j-1)/(iNumLi-1));
-    var fPrt = (iVal-iValMn)/iValRn;
+    fPrt = (iVal-iValMn)/iValRn;
     //
     var iSzFnt = oSettings.sizemin + fPrt*(oSettings.sizemax-oSettings.sizemin);
     var sColor = colorRng(oSettings.colormin,oSettings.colormax,fPrt);
@@ -96,13 +97,13 @@
     var oCss = {};
     if (oSettings.type!="list") {
       if (oSettings.type=="cloud") {
-        var iXps = Rng.rand(0,iUlW-iLiW);
-        var iYps = aLine[j]*(iUlH/iNumLi) - iLiH/2;
+        iXps = Rng.rand(0,iUlW-iLiW);
+        iYps = aLine[j]*(iUlH/iNumLi) - iLiH/2;
       } else {
         var fRds = Math.pow(j/iNumLi,oSettings.power);
         var fRad = (j+Math.PI/2)*fGAng;
-        var iXps = iUlW/2 - iLiW/2 + .5*iUlW*fRds*Math.sin(fRad);
-        var iYps = iUlH/2 - iLiH/2 + .5*iUlH*fRds*Math.cos(fRad);
+        iXps = iUlW/2 - iLiW/2 + .5*iUlW*fRds*Math.sin(fRad);
+        iYps = iUlH/2 - iLiH/2 + .5*iUlH*fRds*Math.cos(fRad);
       }
       oCss.left = iXps;
       oCss.top  = iYps;
@@ -167,13 +168,13 @@ function h2d(h) {return parseInt(h,16);}
     for (var i=0;i<3;i++) aRtr.push( aMin[i] + Math.floor(prt*(aMax[i]-aMin[i])) );
     return getHex(aRtr);
   }
-  // trace
-  function trace(o) {
-    if (window.console&&window.console.log) {
-      if (typeof(o)=="string")	window.console.log(o);
-      else						for (var prop in o) window.console.log(prop+": "+o[prop]);
-    }
-  };
+  // // trace
+  // function trace(o) {
+  //   if (window.console&&window.console.log) {
+  //     if (typeof(o)=="string")	window.console.log(o);
+  //     else						for (var prop in o) window.console.log(prop+": "+o[prop]);
+  //   }
+  // };
   // set functions
   $.fn.TagCloud = $.fn.Tagcloud = $.fn.tagcloud;
 })(jQuery);

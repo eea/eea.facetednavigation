@@ -42,9 +42,9 @@ Faceted.MultiSelectWidget = function(wid){
         }
       },
       initSelection: function(element, callback) {
-        var id = $(element).val();
+        var id = jQuery(element).val();
         if (id !== "") {
-          $.ajax(self.ajax + '?wildcard:int=0&q=' + id, {
+          jQuery.ajax(self.ajax + '?wildcard:int=0&q=' + id, {
               dataType: "json"
           }).done(function(data) {
             if(self.multiple) {
@@ -171,7 +171,6 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   do_query: function(element){
-    var self = this;
     if(!element){
       this.selected = [];
       return Faceted.Form.do_query(this.wid, []);
@@ -193,7 +192,6 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   synchronize: function(){
-    var self = this;
     var value = Faceted.Query[this.wid];
     if(value){
       this.select.val(value).trigger("change.select2");
