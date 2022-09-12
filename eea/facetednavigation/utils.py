@@ -1,6 +1,7 @@
 """ Utilities
 """
 
+
 def truncate_words(text, words=14, orphans=1, suffix="..."):
     """
     Truncate text by number of words. Orphans is the number of trailing

@@ -9,6 +9,7 @@ from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation import _
 
+
 class IMultiSelectSchema(ISchema):
     """Schema"""
 
@@ -53,14 +54,14 @@ class IMultiSelectSchema(ISchema):
     )
 
     ajax = schema.TextLine(
-        title=_(u'AJAX URL'),
+        title=_("AJAX URL"),
         description=_(
-            u"Provide an URL to be used to get and filter items "
-            u"asynchronously e.g.: /search. Your endpoint should "
-            u"filter items by 'q' param and return a JSON like "
-            u"e.g.: {'items': [...]}"
+            "Provide an URL to be used to get and filter items "
+            "asynchronously e.g.: /search. Your endpoint should "
+            "filter items by 'q' param and return a JSON like "
+            "e.g.: {'items': [...]}"
         ),
-        required=False
+        required=False,
     )
 
     catalog = schema.Choice(
