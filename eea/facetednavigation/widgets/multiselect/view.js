@@ -11,13 +11,52 @@ Faceted.MultiSelectWidget = function(wid){
   this.multiple = this.select.attr("multiple") ? true: false;
   this.placeholder = this.widget.data('placeholder');
   this.closeOnSelect = this.widget.data('closeonselect');
+  this.ajax = this.widget.data('ajax');
   this.selected = [];
 
-  this.select.select2({
-    placeholder: this.placeholder,
-    closeOnSelect : this.closeOnSelect,
-    allowClear: true
-  });
+  if(!this.ajax) {
+    this.select.select2({
+      placeholder: this.placeholder,
+      closeOnSelect : this.closeOnSelect,
+      allowClear: true
+    });
+  } else {
+    this.select.select2({
+      placeholder: this.placeholder,
+      closeOnSelect : this.closeOnSelect,
+      allowClear: true,
+      multiple: this.multiple,
+      ajax: {
+        url: self.ajax,
+        dataType: 'json',
+        data: function (term) {
+          var query = {
+            q: term
+          };
+          return query;
+        },
+        results: function (data) {
+          return {
+            results: data.items
+          };
+        }
+      },
+      initSelection: function(element, callback) {
+        var id = $(element).val();
+        if (id !== "") {
+          $.ajax(self.ajax + '?wildcard:int=0&q=' + id, {
+              dataType: "json"
+          }).done(function(data) {
+            if(self.multiple) {
+              callback(data.items);
+            } else if (data.items.length) {
+              callback(data.items[0]);
+            }
+          });
+        }
+      }
+    });
+  }
 
   // Faceted operator
   this.operatorElem = this.widget.find('.faceted-operator a');
@@ -62,7 +101,11 @@ Faceted.MultiSelectWidget = function(wid){
   // Default value
   var value = this.select.val();
   if(value){
-    this.selected = self.widget.find('option:selected');
+    if(this.ajax) {
+      this.selected = this.multiple ? this.widget.find('input[type="hidden"]') : this.widget.find('input[type="text"]');
+    } else {
+      this.selected = this.widget.find('option:selected');
+    }
     if(this.multiple) {
       Faceted.Query[this.wid] = value;
     } else {
@@ -128,12 +171,17 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   do_query: function(element){
+    var self = this;
     if(!element){
       this.selected = [];
       return Faceted.Form.do_query(this.wid, []);
     }else{
       var value = jQuery(element).val();
-      this.selected = this.widget.find('option:selected');
+      if(this.ajax) {
+        this.selected = this.multiple ? this.widget.find('input[type="hidden"]') : this.widget.find('input[type="text"]');
+      } else {
+        this.selected = this.widget.find('option:selected');
+      }
       return Faceted.Form.do_query(this.wid, value);
     }
   },
@@ -145,10 +193,15 @@ Faceted.MultiSelectWidget.prototype = {
   },
 
   synchronize: function(){
+    var self = this;
     var value = Faceted.Query[this.wid];
     if(value){
       this.select.val(value).trigger("change.select2");
-      this.selected = this.widget.find('option:selected');
+      if(this.ajax) {
+        this.selected = this.multiple ? this.widget.find('input[type="hidden"]') : this.widget.find('input[type="text"]');
+      } else {
+        this.selected = this.widget.find('option:selected');
+      }
       this.widget.addClass("faceted-widget-active");
     } else {
       this.reset();
@@ -211,13 +264,18 @@ Faceted.MultiSelectWidget.prototype = {
       var element = jQuery(this);
       var id = element.attr('id');
       var value = element.val();
-      var label = element.attr("title");
+      var to_remove = value;
+      if(!value) {
+        value = element.parent().find('a').text();
+        to_remove = null;
+      }
+      var label = element.attr("title") || value;
 
       var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
       link.attr('id', 'criteria_' + id);
       link.attr('title', 'Remove ' + label + ' filter');
-      link.click(function(evt){
-        widget.criteria_remove(value, element);
+      link.click(function(){
+        widget.criteria_remove(to_remove, element);
         return false;
       });
 

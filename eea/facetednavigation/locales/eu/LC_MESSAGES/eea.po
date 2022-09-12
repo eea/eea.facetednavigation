@@ -52,6 +52,10 @@ msgstr "Duela 5 egun"
 msgid "6 months ago"
 msgstr "Duela 6 hilabete"
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:57
+msgid "AJAX URL"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:55
 msgid "Accessor"
 msgstr "Atzipen metodoa"
@@ -82,7 +86,7 @@ msgstr "Kontsultaren osteko filtroak"
 msgid "All"
 msgstr "Guztiak"
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:45
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
 msgid "Allow multiple selections"
 msgstr ""
 
@@ -132,7 +136,7 @@ msgstr "Hainbat elementu aukeratu daitezke"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:51
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:68
 #: ../../facetednavigation/widgets/radio/interfaces.py:24
 msgid "Catalog"
 msgstr "Katalogoa"
@@ -179,7 +183,7 @@ msgstr ""
 msgid "Close on select"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:77
 msgid "Close selection popup after each select"
 msgstr ""
 
@@ -276,7 +280,7 @@ msgstr "Defektuzko e-tag balioa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:19
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:19
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:18
 msgid "Default items (one per line)"
 msgstr "Defektuzko elementuak (bat lerro bakoitzean)"
 
@@ -287,7 +291,7 @@ msgstr "Defektuz aukeratuta agertuko den hizkia"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:26
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:25
 msgid "Default operator"
 msgstr "Eragilea"
 
@@ -528,7 +532,7 @@ msgstr "Etorkizuna"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:52
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:59
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:69
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Balioak katalogotik ekarri hiztegitik beharrean."
@@ -614,7 +618,7 @@ msgid "Invalid or empty vocabulary provided for this widget. Leave empty for def
 msgstr "Widget honentzat aukeratu duzun hiztegiak ez du balio edo hutsik dago. Utzi hutsik defektuzko ordenazio-irizpidea erabiltzeko."
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:31
-#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:38
 #: ../../facetednavigation/widgets/radio/widget.pt:29
 msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
 msgstr ""
@@ -654,7 +658,7 @@ msgid "Less filters"
 msgstr "Filtro gutxiago"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:37
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:37
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr "Utzi erabiltzaileari AND eta OR erabiliz bilatzen utzi"
 
@@ -724,7 +728,7 @@ msgstr "Gora mugitu"
 msgid "Multi Select"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:43
 msgid "Multiselect"
 msgstr ""
 
@@ -794,7 +798,7 @@ msgid "Numerical range"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:36
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:35
 msgid "Operator visible"
 msgstr "Eragilea erakutsi"
 
@@ -875,6 +879,10 @@ msgstr "Kokapena"
 msgid "Position of the widget."
 msgstr "Widgetaren kokapena."
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+msgid "Provide an URL to be used to get and filter items asynchronously e.g.: /search. Your endpoint should filter items by 'q' param and return a JSON like e.g.: {'items': [...]}"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:41
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Objektua sortzen duen objektu-sortzaile baten python-izena. Modulu bateko objektu bat identifikatu behar du puntuz banatutako izendapena erabiliz."
@@ -937,7 +945,7 @@ msgstr "Alderantzizkoa"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:66
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:82
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Aukerak alderantzikatu"
@@ -976,7 +984,7 @@ msgstr "Elementu guztietan bakarrik bilatu"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:27
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:27
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
 msgid "Search with AND/OR between elements"
 msgstr "Elementuen artean AND/OR erabiliz bilatu"
 
@@ -1017,7 +1025,7 @@ msgstr "Kontagarri direnen arabera ordenatu"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:67
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:83
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Sort options reversed"
 msgstr "Balioak alderantziz ordenatu"
@@ -1191,7 +1199,7 @@ msgstr "Nork ikusi dezake"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:44
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:50
 #: ../../facetednavigation/widgets/radio/interfaces.py:17
 msgid "Vocabulary"
 msgstr "Hiztegia"
@@ -1203,7 +1211,7 @@ msgstr "Ordenazio irizpideak filtratzeko erabiliko den hiztegia. Utzi hutsik def
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:45
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:52
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
 #: ../../facetednavigation/widgets/radio/interfaces.py:18
 msgid "Vocabulary to use to render widget items"
 msgstr "Widgeteko elementuak ateratzeko erabiliko den hiztegia"
@@ -1235,7 +1243,7 @@ msgid "Yesterday"
 msgstr "Atzo"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "all"
 msgstr "guztiak"
 
@@ -1245,7 +1253,7 @@ msgid "all items"
 msgstr "elementu guztiak"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "any"
 msgstr "edozein"
 
@@ -1255,12 +1263,12 @@ msgid "in current results"
 msgstr "uneko elementuetan"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:35
-#: ../../facetednavigation/widgets/multiselect/widget.pt:61
+#: ../../facetednavigation/widgets/multiselect/widget.pt:64
 msgid "match"
 msgstr "bat-etorri"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:34
-#: ../../facetednavigation/widgets/multiselect/widget.pt:60
+#: ../../facetednavigation/widgets/multiselect/widget.pt:63
 msgid "match any/all filters bellow"
 msgstr "Beheko filtro guztiak/edozein bat-etorri"
 
