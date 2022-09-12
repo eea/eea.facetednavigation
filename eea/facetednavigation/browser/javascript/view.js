@@ -1,4 +1,4 @@
-var Faceted = {version: '2.0'};
+var Faceted = window.Faceted = {version: '15.0'};
 /* Events
 */
 Faceted.Events = {};
@@ -35,7 +35,9 @@ Faceted.Events.cleanup = function(){
   jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_ERROR);
   jQuery(Faceted.Events).unbind(Faceted.Events.REDRAW);
   jQuery(Faceted.Events).unbind(Faceted.Events.DO_UPDATE);
-  jQuery(window).unbind(Faceted.Events.HASHCHANGE); /* jQuery.bbq events */
+  // jQuery(window).unbind(Faceted.Events.HASHCHANGE); 
+  /* jQuery.bbq events */
+  window.removeEventListener("hashchange", Faceted.hash_changed);
   /* trigger cleanup completed event once events cleanup is done */
   jQuery(Faceted.Events).trigger(Faceted.Events.CLEANUP_COMPLETED);
 };
@@ -280,6 +282,10 @@ Faceted.Form = {
   }
 };
 
+Faceted.hash_changed = function() {
+  return Faceted.URLHandler.hash_changed();
+};
+
 Faceted.URLHandler = {
   initialize: function(){
   },
@@ -468,9 +474,11 @@ Faceted.Load = function(evt, baseurl){
   jQuery(Faceted.Events).trigger(Faceted.Events.INITIALIZE);
 
   // Bind events
-  jQuery(window).bind(Faceted.Events.HASHCHANGE, function(evt){
-    Faceted.URLHandler.hash_changed();
-  });
+  // jQuery(window).bind(Faceted.Events.HASHCHANGE, function(evt){
+  //   Faceted.URLHandler.hash_changed();
+  // });
+  window.addEventListener("hashchange", Faceted.hash_changed, false);
+
   jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function(evt){
     Faceted.Form.initialize_paginator();
   });

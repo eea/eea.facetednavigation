@@ -1,0 +1,101 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="eea"
+    >
+
+  <utility
+      factory=".autocomplete.AutocompleteVocabulary"
+      name="eea.faceted.vocabularies.AutocompleteViews"
+      />
+
+  <utility
+      factory=".catalog.ObjectProvidesVocabulary"
+      name="eea.faceted.vocabularies.ObjectProvides"
+      />
+  <utility
+      factory=".catalog.RangeCatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.RangeCatalogIndexes"
+      />
+
+  <utility
+      factory=".catalog.CatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.CatalogIndexes"
+      />
+
+  <utility
+      factory=".catalog.SortingCatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.SortingCatalogIndexes"
+      />
+
+  <utility
+      factory=".catalog.AlphabeticCatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.AlphabeticCatalogIndexes"
+      />
+
+  <utility
+      factory=".catalog.DateRangeCatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.DateRangeCatalogIndexes"
+      />
+
+  <utility
+      factory=".catalog.TextCatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.TextCatalogIndexes"
+      />
+
+  <utility
+      factory=".catalog.SimpleFieldCatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.SimpleFieldCatalogIndexes"
+      />
+
+  <utility
+      factory=".catalog.PathCatalogIndexesVocabulary"
+      name="eea.faceted.vocabularies.PathCatalogIndexes"
+      />
+
+  <utility
+      factory=".portal.PortalVocabulariesVocabulary"
+      name="eea.faceted.vocabularies.PortalVocabularies"
+      />
+
+  <utility
+      factory=".portal.PortalLanguagesVocabulary"
+      name="eea.faceted.vocabularies.PortalLanguages"
+      />
+
+  <utility
+      factory=".types.PortalTypesVocabulary"
+      name="eea.faceted.vocabularies.PortalTypes"
+      />
+
+  <utility
+      factory=".faceted.FacetedPortalTypesVocabulary"
+      name="eea.faceted.vocabularies.FacetedPortalTypes"
+      />
+
+  <utility
+      factory=".faceted.FacetedOnlyPortalTypesVocabulary"
+      name="eea.faceted.vocabularies.FacetedOnlyPortalTypes"
+      />
+
+  <utility
+      factory=".position.WidgetPositions"
+      name="eea.faceted.vocabularies.WidgetPositions"
+      />
+
+  <utility
+      factory=".section.WidgetSections"
+      name="eea.faceted.vocabularies.WidgetSections"
+      />
+
+  <utility
+      factory=".simple.UseCatalogVocabulary"
+      name="eea.faceted.vocabularies.UseCatalog"
+      />
+
+  <utility
+      factory=".simple.JsTreeThemes"
+      name="eea.faceted.vocabularies.JsTreeThemes"
+      />
+
+</configure>

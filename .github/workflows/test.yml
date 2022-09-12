@@ -1,0 +1,28 @@
+name: Tests
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: [ "3.8" ]
+        plone: ["5.2.8"]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Plone ${{ matrix.plone }} with Python ${{ matrix.python }}
+        id: setup
+        uses: plone/setup-plone@v1.1.0
+        with:
+          python-version: ${{ matrix.python }}
+          plone-version: ${{ matrix.plone }}
+
+      - name: Install
+        run: |
+          pip install -e ".[test]"
+
+      - name: test
+        run: |
+          zope-testrunner --auto-color --auto-progress --test-path .

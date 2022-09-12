@@ -1,52 +1,28 @@
 <configure
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:faceted="http://namespaces.zope.org/faceted"
-  i18n_domain="eea">
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:faceted="http://namespaces.zope.org/faceted"
+    i18n_domain="eea"
+    >
 
   <faceted:widget
-    factory=".widget.Widget"
-    schema=".interfaces.IPathSchema"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.path.view.js"
-    file="./view.js"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.path.edit.js"
-    file="./edit.js"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.path.tree.js"
-    file="./tree.js"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.path.view.css"
-    file="./view.css"
-    />
-
-  <browser:resource
-    name="eea.facetednavigation.widgets.path.edit.css"
-    file="./edit.css"
-    />
+      factory=".widget.Widget"
+      schema=".interfaces.IPathSchema"
+      />
 
   <browser:page
-    for="eea.facetednavigation.interfaces.IFacetedNavigable"
-    name="faceted.path.tree.json"
-    class=".tree.FacetedTree"
-    attribute="json_tree"
-    permission="zope2.View"
-    />
+      name="faceted.path.tree.json"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".tree.FacetedTree"
+      attribute="json_tree"
+      permission="zope2.View"
+      />
 
   <browser:page
-    for="eea.facetednavigation.interfaces.IFacetedNavigable"
-    name="faceted.path.breadcrumbs.json"
-    class=".tree.FacetedTree"
-    attribute="json_breadcrumbs"
-    permission="zope2.View"
-    />
+      name="faceted.path.breadcrumbs.json"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      class=".tree.FacetedTree"
+      attribute="json_breadcrumbs"
+      permission="zope2.View"
+      />
 
 </configure>

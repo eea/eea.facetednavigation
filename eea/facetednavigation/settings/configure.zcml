@@ -1,31 +1,34 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="eea"
+    >
 
   <adapter
-    for="eea.facetednavigation.interfaces.IFacetedNavigable
-         zope.publisher.interfaces.http.IHTTPRequest"
-    name="eea.faceted.settings"
-    factory=".menu.SettingsMenu"
-    provides="plone.app.contentmenu.interfaces.IContentMenuItem">
+      factory=".menu.SettingsMenu"
+      provides="plone.app.contentmenu.interfaces.IContentMenuItem"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable
+           zope.publisher.interfaces.http.IHTTPRequest"
+      name="eea.faceted.settings"
+      >
     This adapter adds a new menu called "Faceted settings"
     in the content menu near "Actions", "Display"...
   </adapter>
 
   <browser:menu
-    id="faceted_settings_actions"
-    title="Faceted global settings"
-    class=".menu.SettingsMenuItems">
+      id="faceted_settings_actions"
+      title="Faceted global settings"
+      class=".menu.SettingsMenuItems"
+      >
     This is the "Faceted settings" menu (menu items)
   </browser:menu>
 
   <browser:page
-    name="faceted_settings"
-    for="..interfaces.IFacetedNavigable"
-    permission="eea.faceted.configure"
-    class=".menu.SettingsHandler"
-    allowed_interface=".interfaces.ISettingsHandler"
-    />
+      name="faceted_settings"
+      for="..interfaces.IFacetedNavigable"
+      class=".menu.SettingsHandler"
+      allowed_interface=".interfaces.ISettingsHandler"
+      permission="eea.faceted.configure"
+      />
 
 </configure>

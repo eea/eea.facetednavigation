@@ -227,7 +227,8 @@ class Widget(GroupForm, Form):
             if not val:
                 continue
 
-            res.append(val)
+            if val not in res:
+                res.append(val)
 
         return res
 

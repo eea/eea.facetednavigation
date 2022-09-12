@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-10-05 13:48+0000\n"
+"POT-Creation-Date: 2022-07-21 14:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,6 +100,10 @@ msgstr "Abėcėlinis"
 msgid "An interface describing schema to be used within z3c.form"
 msgstr ""
 
+#: ../../facetednavigation/vocabularies/simple.py:41
+msgid "Apple"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Ar tikrai norite ištrinti ${widget} valdikliui?"
@@ -108,8 +112,16 @@ msgstr "Ar tikrai norite ištrinti ${widget} valdikliui?"
 msgid "Autocomplete"
 msgstr ""
 
+#: ../../facetednavigation/vocabularies/section.py:18
+msgid "Basic search"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Boolean"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:24
+msgid "Bottom"
 msgstr ""
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:37
@@ -146,11 +158,23 @@ msgstr "Katalogas indeksas naudoti paieškai"
 msgid "Catalog query"
 msgstr "Katalogas užklausa"
 
+#: ../../facetednavigation/vocabularies/position.py:23
+msgid "Center bottom"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:21
+msgid "Center top"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
 msgstr "Varneles,"
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:76
+#: ../../facetednavigation/vocabularies/simple.py:40
+msgid "Classic"
+msgstr ""
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
 msgid "Close on select"
 msgstr ""
 
@@ -233,6 +257,10 @@ msgstr "Datų intervalas"
 #: ../../facetednavigation/widgets/debug/widget.py:14
 msgid "Debugger"
 msgstr "Debugger"
+
+#: ../../facetednavigation/vocabularies/simple.py:39
+msgid "Default"
+msgstr ""
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:24
 msgid "Default e-tag"
@@ -384,6 +412,10 @@ msgstr "Klaidos vertė:"
 msgid "Export"
 msgstr "Eksportas"
 
+#: ../../facetednavigation/vocabularies/section.py:19
+msgid "Extended search"
+msgstr ""
+
 #: ../../facetednavigation/profiles.zcml:34
 msgid "Extension profile for EEA Faceted Navigation settings that aren't version dependent."
 msgstr ""
@@ -477,6 +509,10 @@ msgstr "Ateitis"
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Gauti unikalias reikšmes iš katalogo kaip alternatyvą žodyną"
+
+#: ../../facetednavigation/vocabularies/simple.py:42
+msgid "Green"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:111
 msgid "Hidden"
@@ -575,6 +611,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/range/interfaces.py:24
 msgid "Label (start range)"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:20
+msgid "Left"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:1
@@ -697,6 +737,10 @@ msgstr "Kitą savaitę"
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next year"
 msgstr "Kitąmet"
+
+#: ../../facetednavigation/vocabularies/simple.py:22
+msgid "No"
+msgstr ""
 
 #: ../../facetednavigation/browser/app/exportimport.py:90
 msgid "No action provided"
@@ -856,6 +900,10 @@ msgstr "Panaikinti"
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Grįžtamieji galimybės"
+
+#: ../../facetednavigation/vocabularies/position.py:22
+msgid "Right"
+msgstr ""
 
 #: ../../facetednavigation/widgets/path/interfaces.py:25
 msgid "Root folder"
@@ -1044,6 +1092,10 @@ msgstr "Šiandien"
 msgid "Tomorrow"
 msgstr "Rytoj"
 
+#: ../../facetednavigation/vocabularies/position.py:19
+msgid "Top"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr "Tipas"
@@ -1110,6 +1162,10 @@ msgstr "Valdiklis bus matoma tik pasirinkto vartotojo"
 
 #: ../../facetednavigation/widgets/text/interfaces.py:30
 msgid "Wildcard search"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/simple.py:23
+msgid "Yes"
 msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:26

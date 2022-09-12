@@ -1,10 +1,10 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+#SOME DESCRIPTIVE TITLE.
+#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-10-05 13:48+0000\n"
+"POT-Creation-Date: 2022-07-21 14:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,6 +103,10 @@ msgstr ""
 msgid "An interface describing schema to be used within z3c.form"
 msgstr ""
 
+#: ../../facetednavigation/vocabularies/simple.py:41
+msgid "Apple"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:97
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr ""
@@ -111,8 +115,16 @@ msgstr ""
 msgid "Autocomplete"
 msgstr ""
 
+#: ../../facetednavigation/vocabularies/section.py:18
+msgid "Basic search"
+msgstr ""
+
 #: ../../facetednavigation/widgets/boolean/widget.py:21
 msgid "Boolean"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:24
+msgid "Bottom"
 msgstr ""
 
 #: ../../facetednavigation/widgets/autocomplete/interfaces.py:37
@@ -149,11 +161,23 @@ msgstr ""
 msgid "Catalog query"
 msgstr ""
 
+#: ../../facetednavigation/vocabularies/position.py:23
+msgid "Center bottom"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:21
+msgid "Center top"
+msgstr ""
+
 #: ../../facetednavigation/widgets/checkbox/widget.py:22
 msgid "Checkboxes"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:76
+#: ../../facetednavigation/vocabularies/simple.py:40
+msgid "Classic"
+msgstr ""
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
 msgid "Close on select"
 msgstr ""
 
@@ -235,6 +259,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/debug/widget.py:14
 msgid "Debugger"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/simple.py:39
+msgid "Default"
 msgstr ""
 
 #: ../../facetednavigation/widgets/etag/interfaces.py:24
@@ -387,6 +415,10 @@ msgstr ""
 msgid "Export"
 msgstr ""
 
+#: ../../facetednavigation/vocabularies/section.py:19
+msgid "Extended search"
+msgstr ""
+
 #: ../../facetednavigation/profiles.zcml:34
 msgid "Extension profile for EEA Faceted Navigation settings that aren't version dependent."
 msgstr ""
@@ -479,6 +511,10 @@ msgstr ""
 #: ../../facetednavigation/widgets/multiselect/interfaces.py:69
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/simple.py:42
+msgid "Green"
 msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:111
@@ -578,6 +614,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/range/interfaces.py:24
 msgid "Label (start range)"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:20
+msgid "Left"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:1
@@ -699,6 +739,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:38
 msgid "Next year"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/simple.py:22
+msgid "No"
 msgstr ""
 
 #: ../../facetednavigation/browser/app/exportimport.py:90
@@ -858,6 +902,10 @@ msgstr ""
 #: ../../facetednavigation/widgets/multiselect/interfaces.py:82
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/position.py:22
+msgid "Right"
 msgstr ""
 
 #: ../../facetednavigation/widgets/path/interfaces.py:25
@@ -1047,6 +1095,10 @@ msgstr ""
 msgid "Tomorrow"
 msgstr ""
 
+#: ../../facetednavigation/vocabularies/position.py:19
+msgid "Top"
+msgstr ""
+
 #: ../../facetednavigation/browser/template/configure.pt:30
 msgid "Type"
 msgstr ""
@@ -1113,6 +1165,10 @@ msgstr ""
 
 #: ../../facetednavigation/widgets/text/interfaces.py:30
 msgid "Wildcard search"
+msgstr ""
+
+#: ../../facetednavigation/vocabularies/simple.py:23
+msgid "Yes"
 msgstr ""
 
 #: ../../facetednavigation/widgets/date/widget.py:26

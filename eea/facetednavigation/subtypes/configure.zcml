@@ -1,53 +1,54 @@
 <configure
-  xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  i18n_domain="eea">
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="eea"
+    >
 
   <include package="Products.CMFCore" />
 
 
   <adapter
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
-    provides="zope.annotation.interfaces.IAnnotations"
-    factory="zope.annotation.attribute.AttributeAnnotations"
-    />
+      factory="zope.annotation.attribute.AttributeAnnotations"
+      provides="zope.annotation.interfaces.IAnnotations"
+      for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+      />
 
   <adapter
-    for="eea.facetednavigation.interfaces.IFacetedNavigable"
-    provides=".interfaces.IFacetedWrapper"
-    factory=".wrapper.FacetedWrapper"
-    />
+      factory=".wrapper.FacetedWrapper"
+      provides=".interfaces.IFacetedWrapper"
+      for="eea.facetednavigation.interfaces.IFacetedNavigable"
+      />
 
   <browser:page
-    name="faceted_subtyper"
-    for="zope.interface.Interface"
-    class=".subtyper.FacetedPublicSubtyper"
-    permission="zope.Public"
-    allowed_interface=".interfaces.IFacetedSubtyper"
-    />
+      name="faceted_subtyper"
+      for="zope.interface.Interface"
+      class=".subtyper.FacetedPublicSubtyper"
+      allowed_interface=".interfaces.IFacetedSubtyper"
+      permission="zope.Public"
+      />
 
   <browser:page
-    name="faceted_subtyper"
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
-    class=".subtyper.FacetedSubtyper"
-    permission="eea.faceted.configure"
-    allowed_interface=".interfaces.IFacetedSubtyper"
-    />
+      name="faceted_subtyper"
+      for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+      class=".subtyper.FacetedSubtyper"
+      allowed_interface=".interfaces.IFacetedSubtyper"
+      permission="eea.faceted.configure"
+      />
 
   <browser:page
-    name="faceted_search_subtyper"
-    for="zope.interface.Interface"
-    class=".subtyper.FacetedPublicSubtyper"
-    permission="zope.Public"
-    allowed_interface=".interfaces.IFacetedSubtyper"
-    />
+      name="faceted_search_subtyper"
+      for="zope.interface.Interface"
+      class=".subtyper.FacetedPublicSubtyper"
+      allowed_interface=".interfaces.IFacetedSubtyper"
+      permission="zope.Public"
+      />
 
   <browser:page
-    name="faceted_search_subtyper"
-    for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
-    class=".subtyper.FacetedSearchSubtyper"
-    permission="eea.faceted.configure"
-    allowed_interface=".interfaces.IFacetedSubtyper"
-    />
+      name="faceted_search_subtyper"
+      for="eea.facetednavigation.interfaces.IPossibleFacetedNavigable"
+      class=".subtyper.FacetedSearchSubtyper"
+      allowed_interface=".interfaces.IFacetedSubtyper"
+      permission="eea.faceted.configure"
+      />
 
 </configure>

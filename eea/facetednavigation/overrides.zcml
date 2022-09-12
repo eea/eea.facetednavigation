@@ -1,7 +1,11 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser">
+    xmlns:browser="http://namespaces.zope.org/browser"
+    >
 
-  <include package=".layout" file="overrides.zcml" />
+  <include
+      package=".layout"
+      file="overrides.zcml"
+      />
 
 </configure>

@@ -1,9 +1,12 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-  i18n_domain="eea">
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="eea"
+    >
 
   <adapter
-    for="..interfaces.IFacetedNavigable"
-    provides=".interfaces.ICriteria"
-    factory=".handler.Criteria" />
+      factory=".handler.Criteria"
+      provides=".interfaces.ICriteria"
+      for="..interfaces.IFacetedNavigable"
+      />
 
 </configure>
