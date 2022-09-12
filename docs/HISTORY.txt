@@ -3,6 +3,8 @@ Changelog
 
 15.1-dev0 - (unreleased)
 ---------------------------
+* Feature: Multiselect widget - add support for ajax vocabulary
+  [avoinea]
 
 15.0 - (2022-07-25)
 ---------------------------
