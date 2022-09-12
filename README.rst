@@ -34,13 +34,14 @@ Upgrade to version 16.0+
 ========================
 * **Version 16.x** is **NOT** backward compatible and **it works only** with **Python 3 / Plone 5+**
 * If you're upgrading from a lower version, please first install and upgrade to `version 15.x`` then install and upgrade to `version 16+`
-* Within "Plone > Site setup > Add-ons" click on upgrade button available for `EEA Faceted Navigation`
+* Upgraded the default faceted view/edit layout to **Bootstrap Grid** and **Bootstrap Card**. Thus, you will need to **adjust your theme** before pushing this version to production.
+* Within **Plone > Site setup > Add-ons** click on upgrade button available for `EEA Faceted Navigation`
 
 Upgrade to version 15.0+
 ========================
 * **Version 15.x** is the latest **Python 2 / Plone 4** backward compatible.
 * Within "Plone > Site setup > Add-ons" click on upgrade button available for `EEA Faceted Navigation`
-* **Plone4:** After running the upgrade step, check CSS/JS order within `ZMI > portal_css / portal_javascripts`
+* **Plone4:** After running the upgrade step, check CSS/JS order within `ZMI > portal_css / portal_javascript`
 
 Upgrade to version 10.0+
 ========================

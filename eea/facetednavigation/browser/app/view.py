@@ -106,9 +106,8 @@ class FacetedContainerView(object):
             return True
 
     def left_col(self, mode):
-        """ Show faceted left col
-        """
-        if mode == 'edit':
+        """Show faceted left col"""
+        if mode == "edit":
             return True
         if not self.has_left_widgets():
             return False
@@ -117,9 +116,8 @@ class FacetedContainerView(object):
         return True
 
     def right_col(self, mode):
-        """ Show faceted right col
-        """
-        if mode == 'edit':
+        """Show faceted right col"""
+        if mode == "edit":
             return True
         if not self.has_right_widgets():
             return False
@@ -128,27 +126,25 @@ class FacetedContainerView(object):
         return True
 
     def left_col_grid(self, mode):
-        """ Grid for left facets column
-        """
+        """Grid for left facets column"""
         if self.left_col(mode):
-            return 'col-lg-3'
-        return 'col-lg-12'
+            return "col-lg-3"
+        return "col-lg-12"
 
     def right_col_grid(self, mode):
-        """ Return right column bootstrap grid col
-        """
+        """Return right column bootstrap grid col"""
         if self.right_col(mode):
-            return 'col-lg-3'
-        return 'col-lg-12'
+            return "col-lg-3"
+        return "col-lg-12"
 
     def center_col_grid(self, mode):
-        """ Return center column bootstrap grid col
-        """
+        """Return center column bootstrap grid col"""
         if self.left_col(mode) and self.right_col(mode):
-            return 'col-lg-6'
+            return "col-lg-6"
         if self.left_col(mode) or self.right_col(mode):
-            return 'col-lg-9'
-        return 'col-lg-12'
+            return "col-lg-9"
+        return "col-lg-12"
+
 
 class DisplayCriteriaCheckerView(BrowserView):
     """This views checks if criteria are displayed on faceted navigation"""
