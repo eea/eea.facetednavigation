@@ -1,12 +1,5 @@
 """ Utilities
 """
-from plone.namedfile.utils import rotate_image
-
-import logging
-
-
-logger = logging.getLogger("eea.facetednavigation")
-
 
 def truncate_words(text, words=14, orphans=1, suffix="..."):
     """
