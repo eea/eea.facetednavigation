@@ -67,6 +67,7 @@ install:		## Install Plone
 	bin/pip install Paste Plone plone.volto -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
 	bin/pip install zope.testrunner plone.app.testing plone.reload dm.plonepatches.reload i18ndude Products.ZMIntrospection -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
 	bin/mkwsgiinstance -d . -u admin:admin
+	cp zope.conf etc/zope.conf
 	mkdir -p var/blobstorage var/filestorage
 
 .PHONY: develop

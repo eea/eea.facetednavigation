@@ -16,38 +16,38 @@
 */
 
 .faceted-area.center-and-left-area {
-  float: left;
+  /* float: left;
   margin-right: -25em;
-  width: 100%;
+  width: 100%; */
 }
 
 .faceted-area.right-area {
-  float: right;
-  width: 25em;
+  /* float: right;
+  width: 25em; */
 }
 
 .faceted-area.center-area {
-  float: right;
+  /* float: right;
   margin-left: -25em;
-  width: 100%;
+  width: 100%; */
 }
 
 .faceted-area.left-area {
-  float: left;
-  width: 25em;
+  /* float: left;
+  width: 25em; */
 }
 
 .faceted-area.bottom-area {
-  clear: both;
+  /* clear: both; */
 }
 
-.right-area-js {
+/* .right-area-js {
   margin-right: 25em;
 }
 
 .left-area-js {
   margin-left: 25em;
-}
+} */
 
 /* End Areas */
 

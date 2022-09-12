@@ -1,5 +1,5 @@
-<tal:left define="hidden python:request.set('disable_plone.leftcolumn', view.hide_left_column)" />
-<tal:right define="hidden python:request.set('disable_plone.rightcolumn', view.hide_right_column)" />
+<tal:left define="hidden python:request.set('disable_plone.leftcolumn', view.hide_left_portlets)" />
+<tal:right define="hidden python:request.set('disable_plone.rightcolumn', view.hide_right_portlets)" />
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
   lang="en-US"
