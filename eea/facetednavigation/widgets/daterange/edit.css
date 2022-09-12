@@ -1,6 +1,6 @@
-.faceted-daterange-widget-form div {
-  float: left;
-  margin-left: 0.5em;
+.faceted-daterange-widget-form {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 
 .faceted-daterange-widget-form div label {
@@ -8,5 +8,5 @@
 }
 
 .faceted-daterange-widget-form input {
-  width: 10em;
+  width: 100%;
 }
