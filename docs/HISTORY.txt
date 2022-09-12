@@ -3,6 +3,8 @@ Changelog
 
 15.1-dev0 - (unreleased)
 ---------------------------
+* Fix: Fix TypeError: Cannot read properties of undefined (reading 'msie')
+  [avoinea]
 * Feature: Multiselect widget - add support for ajax vocabulary
   [avoinea]
 
