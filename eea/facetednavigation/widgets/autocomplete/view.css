@@ -49,3 +49,8 @@
 .faceted-autocomplete-widget input[type=submit] {
   float: right;
 }
+
+.faceted-autocomplete-search {
+  display: grid;
+  grid-template-columns: auto min-content;
+}

@@ -18,11 +18,11 @@
       i18n:attributes="title">
       <div id="faceted-widget-type">
         <div class="field"  id="faceted-field-wtype">
-          <label for="wtype" i18n:translate="">Type</label>
-          <div class="formHelp" i18n:translate="">
+          <label for="wtype" i18n:translate="" class="form-check-label">Type</label>
+          <span class="formHelp" i18n:translate="">
             Type of the widget.
-          </div>
-          <select name="wtype" id="wtype">
+          </span>
+          <select name="wtype" id="wtype" class="form-select">
             <tal:option repeat="widget view/get_widget_types">
               <option tal:attributes="value python:widget.widget_type;"
                 tal:content="python:widget.widget_label" i18n:translate="" />
@@ -30,11 +30,11 @@
           </select>
         </div>
         <div class="field" id="faceted-field-wposition">
-          <label for="wposition" i18n:translate="">Position</label>
-          <div class="formHelp" i18n:translate="">
+          <label for="wposition" i18n:translate="" class="form-check-label">Position</label>
+          <span class="formHelp" i18n:translate="">
             Position of the widget.
-          </div>
-          <select name="wposition" id="wposition">
+          </span>
+          <select name="wposition" id="wposition" class="form-select">
             <tal:position repeat="position python:view.positions">
               <option tal:attributes="value python:position.value"
                 tal:content="python:position.title" i18n:translate="" />
@@ -42,11 +42,11 @@
           </select>
         </div>
         <div class="field" id="faceted-field-wsection">
-          <label for="wsection" i18n:translate="">Section</label>
-          <div class="formHelp" i18n:translate="">
+          <label for="wsection" i18n:translate="" class="form-check-label">Section</label>
+          <span class="formHelp" i18n:translate="">
             Display widget in section.
-          </div>
-          <select name="wsection" id="wsection">
+          </span>
+          <select name="wsection" id="wsection" class="form-select">
             <tal:section repeat="section python:view.sections">
               <option tal:attributes="value python:section.value"
                 tal:content="python:section.title" i18n:translate="" />
@@ -56,7 +56,7 @@
       </div>
       <div id="faceted-widget-details"></div>
       <div class="field" style="clear: both">
-        <input class="context" type="submit" value="Add" i18n:attributes="value" name="addWidget_button" />
+        <input class="context form-control" type="submit" value="Add" i18n:attributes="value" name="addWidget_button" />
       </div>
     </form>
   </fieldset>
@@ -69,12 +69,12 @@
       id="faceted-importexport-widgets" tal:attributes="
       action string:${context/absolute_url}/@@faceted_exportimport;"
     tal:define="criteria view/get_criteria">
-      <input type="file" name="import_file" id="import_file" />
+      <input type="file" class="form-control" name="import_file" id="import_file" />
       <div>
-        <input class="context" type="submit" value="Import" id="import_button"
+        <input class="context btn btn-primary" type="submit" value="Import" id="import_button"
            name="import_button"
            i18n:attributes="value"/>
-        <input class="context" type="submit" value="Export" id="export_button"
+        <input class="standalone btn btn-secondary" type="submit" value="Export" id="export_button"
           name="export_button"
           i18n:attributes="value" tal:attributes="
           style python:criteria and 'display: inline' or 'display: none'"/>
@@ -101,7 +101,7 @@
       <thead>
         <tr>
         <th class="nosort" style="width: 4%">
-          <input class="noborder" style="display: none"
+          <input class="form-check-input" style="display: none"
             type="checkbox"
             src="select_all_icon.gif"
             name="selectButton"
@@ -127,7 +127,7 @@
           tal:attributes="class python:oddrow and 'even' or 'odd'">
           <!-- Ids -->
           <td style="text-align: center">
-            <input type="checkbox" name="paths:list" tal:attributes="
+            <input type="checkbox" class="form-check-input" name="paths:list" tal:attributes="
               id criterion/getId;
               value criterion/getId;
             "/>
@@ -136,7 +136,7 @@
           <td>
             <div tal:attributes="id string:${cid}_widget_edit_properties">
               <div class="field">
-                <label for="widget_type" i18n:translate="">Widget type</label>
+                <label for="widget_type" i18n:translate="" class="form-check-label">Widget type</label>
                 <div tal:content="python:widget.widget_label" />
               </div>
               <tal:schema replace="structure python:schema" />
@@ -144,7 +144,7 @@
           </td>
           <!-- Order -->
           <td style="text-align: center;">
-            <input class="context" title="Move Up" name="moveUp_button"
+            <input class="context form-control" title="Move Up" name="moveUp_button"
               i18n:attributes="title"
               tal:define="start repeat/criterion/start"
               tal:attributes="
@@ -153,7 +153,7 @@
                 style python:start and 'cursor: default';
                 class python:start and 'standalone' or 'context'"
               type="submit" value="&#8613;"/>
-            <input class="context" title="Move Down" name="moveDown_button"
+            <input class="context form-control" title="Move Down" name="moveDown_button"
               i18n:attributes="title"
               tal:define="end repeat/criterion/end"
               tal:attributes="
@@ -169,8 +169,8 @@
     </table>
 
     <div>
-      <input class="context" type="submit" value="Save" i18n:attributes="value"  name="saveChanges_button" />
-      <input class="context" type="submit" value="Delete" i18n:attributes="value"  name="deleteWidgets_button" />
+      <input class="context btn btn-primary" type="submit" value="Save" i18n:attributes="value"  name="saveChanges_button" />
+      <input class="standalone btn btn-danger" type="submit" value="Delete" i18n:attributes="value"  name="deleteWidgets_button" />
     </div>
   </form>
 

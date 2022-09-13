@@ -238,6 +238,14 @@ FacetedEdit.FormWidgets = {
         No: function() {
           jQuery(this).dialog('close');
         }
+      },
+      create: function () {
+        jQuery(this).closest(".ui-dialog")
+            .find(".ui-dialog-buttonset button").first()
+            .addClass("context btn btn-danger");
+        jQuery(this).closest(".ui-dialog")
+            .find(".ui-dialog-buttonset button").last()
+            .addClass("standalone btn btn-secondary");
       }
     });
 
@@ -483,6 +491,14 @@ FacetedEdit.FormEditWidget = {
           jQuery(this).dialog('close');
         }
       },
+      create: function () {
+        jQuery(this).closest(".ui-dialog")
+            .find(".ui-dialog-buttonset button").first()
+            .addClass("context btn btn-primary");
+        jQuery(this).closest(".ui-dialog")
+            .find(".ui-dialog-buttonset button").last()
+            .addClass("standalone btn btn-secondary");
+      },
       close: function(){
         FacetedEdit.FormValidator.clear(context.form);
         context.form.html("");
@@ -573,6 +589,14 @@ FacetedEdit.FormAddWidgets = {
         'Cancel': function(){
           jQuery(this).dialog('close');
         }
+      },
+      create: function () {
+        jQuery(this).closest(".ui-dialog")
+            .find(".ui-dialog-buttonset button").first()
+            .addClass("context btn btn-primary");
+        jQuery(this).closest(".ui-dialog")
+            .find(".ui-dialog-buttonset button").last()
+            .addClass("standalone btn btn-secondary");
       },
       close: function(){
         FacetedEdit.FormValidator.clear(context.form);

@@ -6,3 +6,8 @@
   height:1px;
   overflow:hidden;
 }
+
+.faceted-text-search {
+  display: grid;
+  grid-template-columns: auto min-content;
+}

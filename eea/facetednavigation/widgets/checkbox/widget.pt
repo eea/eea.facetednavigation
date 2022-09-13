@@ -32,7 +32,7 @@
   </div>
 
   <div class="faceted-operator" tal:condition="operator_visible" title="match any/all filters bellow" i18n:attributes="title">
-    <label tal:attributes="for string:$wid-operator" i18n:translate="">match</label>
+    <label class="form-check-label" tal:attributes="for string:$wid-operator" i18n:translate="">match</label>
     <a data-or="any" data-and="all" data-name="operator" i18n:attributes="data-or; data-and" tal:attributes="
         href string:#$wid-operator=$operator;
         data-value string:$operator;
@@ -54,13 +54,13 @@
         option_id string:${wid}_option_${chbox_id};"
         tal:attributes="id option_id"
         >
-        <input type="checkbox" class="faceted-noborder" tal:attributes="
+        <input type="checkbox" class="form-check-input" tal:attributes="
           checked python:view.selected(term_id);
           name string:${wid};
           id chbox_id;
           title term_label;
           value term_id;" />
-        <label tal:attributes="for chbox_id; title term_label"
+        <label class="form-check-label" tal:attributes="for chbox_id; title term_label"
           tal:content="structure wbr_term_label">term label</label>
       </li>
     </tal:items>

@@ -1,0 +1,4 @@
+.faceted-autocomplete-search {
+    display: grid;
+    grid-template-columns: auto min-content;
+}

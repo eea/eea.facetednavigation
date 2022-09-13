@@ -14,7 +14,7 @@
   <div class="faceted-widget-error">
     <form action="." method="get"
       tal:on-error="structure python:error_view(error=error, cid=wid)">
-      <input type="text" tal:attributes="
+      <input type="text" class="form-control" tal:attributes="
         name string:${wid};
         id string:${wid};
         value default_value;" />

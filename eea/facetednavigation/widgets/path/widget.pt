@@ -15,7 +15,7 @@
     python:view.translate(title)" i18n:translate="">Widget title</legend>
   <form action="." method="get"
     tal:on-error="structure python:error_view(error=error, cid=wid)">
-    <input type="text" tal:attributes="
+    <input type="text" class="form-control" tal:attributes="
       name string:${wid};
       id string:${wid};
       placeholder python:view.translate(placeholder);
