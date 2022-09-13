@@ -1,6 +1,9 @@
 Changelog
 =========
 
+15.2-dev0 - (unreleased)
+---------------------------
+
 15.1 - (2022-09-12)
 ---------------------------
 * Fix: Fix TypeError: Cannot read properties of undefined (reading 'msie')
