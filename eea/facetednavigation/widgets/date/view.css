@@ -1,8 +1,8 @@
 .faceted-date-widget form {
-  display: grid;
-  grid-template-columns: auto auto;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .faceted-date-widget-form select {
-  width: 100%;
+    width: 100%;
 }

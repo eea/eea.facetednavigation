@@ -1,7 +1,7 @@
 .faceted-radio-item-disabled {
-  color: gray;
+    color: gray;
 }
 
 .faceted-zero-count-hidden .faceted-radio-item-disabled {
-  display: none ! important;
+    display: none !important;
 }

@@ -1,25 +1,25 @@
 .faceted-top-column .faceted-alphabetic-widget {
-  text-align: center;
+    text-align: center;
 }
 
 .faceted-center-column .faceted-alphabetic-widget {
-  text-align: center;
+    text-align: center;
 }
 
 .faceted_letter {
-  color: #007bb1;
-  font-weight: bold;
-  font-size: 1.2em;
-  cursor: pointer;
-  padding: 0 0.2em 0 0.2em;
-  background-color: transparent;
+    color: #007bb1;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0 0.2em 0 0.2em;
+    background-color: transparent;
 }
 
-.faceted_letter:hover{
-  color: orange;
+.faceted_letter:hover {
+    color: orange;
 }
 
 .faceted_letter_selected {
-  color: orange;
-  font-size: 1.7em;
+    color: orange;
+    font-size: 1.7em;
 }

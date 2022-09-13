@@ -1,147 +1,148 @@
 /* jquery ui overrides
 ====================== */
 .ui-icon-show {
-  background-image: url(show.png) ! important;
-  background-position: 0 0;
+    background-image: url(show.png) !important;
+    background-position: 0 0;
 }
 
 .ui-icon-hide {
-  background-image: url(hide.png) ! important;
-  background-position: 0 0;
+    background-image: url(hide.png) !important;
+    background-position: 0 0;
 }
 
 .ui-widget-header:hover {
-  cursor: move;
+    cursor: move;
 }
 
 .ui-icon:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .ui-sortable-helper {
-  width: 20em !important;
+    width: 20em !important;
 }
 
 .faceted-ui-dialog {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px #888;
-  width: 90% !important;
-  max-width: 50em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+    width: 90% !important;
+    max-width: 50em;
 }
 
 .faceted-ui-dialog select {
-  width: 100%;
+    width: 100%;
 }
 
 .formHelp {
-  display: block;
+    display: block;
 }
 
 /* Common
 ========= */
 .faceted-results {
-  border: 1px dotted #ccc;
+    border: 1px dotted #ccc;
 }
 
 dd {
-  margin-left: 0;
-  padding-bottom: 1em;
+    margin-left: 0;
+    padding-bottom: 1em;
 }
 
 table.listing {
-  width: 100%;
+    width: 100%;
 }
 
 /* Loading
 ========== */
 .faceted_loading {
-  text-align: center;
+    text-align: center;
 }
 
 .faceted-loading-overlay {
-  background: none !important;
-  border: none !important;
-  width: 120px !important;
+    background: none !important;
+    border: none !important;
+    width: 120px !important;
 }
 
 .faceted-loading-overlay .ui-dialog-titlebar {
-  display: none !important;
+    display: none !important;
 }
 
 .faceted-loading-overlay .ui-resizable-handle {
-  display: none !important;
+    display: none !important;
 }
 
 /* Widgets
 ========== */
-#content .faceted-widget fieldset, .faceted-widget fieldset {
-  border: none;
-  padding: 0 1em 1em;
-  margin: 1em 0;
+#content .faceted-widget fieldset,
+.faceted-widget fieldset {
+    border: none;
+    padding: 0 1em 1em;
+    margin: 1em 0;
 }
 
 .faceted-widget {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 3px 3px 3px #888;
-  margin: 2em 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #888;
+    margin: 2em 0.5em;
 }
 
 .faceted-widget legend {
-  width: 100%;
+    width: 100%;
 }
 
 .ui-widget-header {
-  margin-bottom: 1em;
-  text-align: left;
-  padding: 1em;
-  font-size: 120%;
-  font-weight: lighter;
-  background: #9acee6;
-  border: none;
+    margin-bottom: 1em;
+    text-align: left;
+    padding: 1em;
+    font-size: 120%;
+    font-weight: lighter;
+    background: #9acee6;
+    border: none;
 }
 
 .ui-draggable .ui-dialog-titlebar {
-  background: transparent;
-  border-bottom: 1px dotted #E6E6E6;
-  border-radius: initial;
+    background: transparent;
+    border-bottom: 1px dotted #e6e6e6;
+    border-radius: initial;
 }
 
 .faceted-widget .ui-widget-header {
-  margin-top: -0.9em;
-  margin-left: -0.9em;
-  margin-right: -0.9em;
-  border-top-right-radius: 0.5em;
-  border-top-left-radius: 0.5em;
+    margin-top: -0.9em;
+    margin-left: -0.9em;
+    margin-right: -0.9em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
 }
 
 .faceted-section-tabs ul.formTabs,
 .faceted-widget-edit ul.formTabs {
-  background-color: #E6E6E6;
-  border: 0.3em solid #E6E6E6;
-  display: block;
-  border-style: solid solid none solid;
-  margin-left: 0;
-  border-top-right-radius: 0.5em;
-  border-top-left-radius: 0.5em;
-  font-size: 125%;
-  font-weight: lighter
+    background-color: #e6e6e6;
+    border: 0.3em solid #e6e6e6;
+    display: block;
+    border-style: solid solid none solid;
+    margin-left: 0;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    font-size: 125%;
+    font-weight: lighter;
 }
 
 .faceted-section-tabs li.formTab,
 .faceted-widget-edit li.formTab {
     display: inline;
-    margin-right:0.25em;
+    margin-right: 0.25em;
 }
 
 .faceted-widget-edit li.formTab.ui-state-active {
-  background: #ffffff !important;
-  border: 1px solid #c5c5c5;
-  border-bottom-width: 0;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  margin-bottom: 0;
+    background: #ffffff !important;
+    border: 1px solid #c5c5c5;
+    border-bottom-width: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-bottom: 0;
 }
 
 .faceted-section-tabs li.formTab a,
@@ -155,7 +156,7 @@ table.listing {
     padding: 0 0.75em;
     text-decoration: none;
     border: none;
-    margin: 0 ;
+    margin: 0;
 }
 
 .faceted-section-tabs li.formTab a.selected,
@@ -173,135 +174,135 @@ table.listing {
 }
 
 .faceted-widget-edit .panes {
- padding: 1em;
+    padding: 1em;
 }
 
 .faceted-widget-hidden div.ui-widget-header {
-  background: #E6E6E6 ! important;
+    background: #e6e6e6 !important;
 }
 
 .faceted-widget-hidden fieldset {
-  border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 
 #faceted-edit-widgets-ajax {
-  text-align: right;
-  clear: both;
-  overflow: hidden;
-  margin-top: 1em;
+    text-align: right;
+    clear: both;
+    overflow: hidden;
+    margin-top: 1em;
 }
 
 #faceted-edit-widgets-ajax input {
-  margin-right: 0.5em;
+    margin-right: 0.5em;
 }
 
 #faceted-page-title {
-  padding-right: 0;
+    padding-right: 0;
 }
 
 .faceted-ajax {
-  cursor: pointer;
-  float: right;
+    cursor: pointer;
+    float: right;
 }
 
 /* Areas
 */
 .faceted-area.center-content-area {
-  /* margin: 0 25em 0 25em; */
+    /* margin: 0 25em 0 25em; */
 }
 
 /* Columns
 ========== */
 .faceted-column {
-  border-color: #ccc;
-  border-style: dotted;
-  border-width: 1px;
+    border-color: #ccc;
+    border-style: dotted;
+    border-width: 1px;
 }
 
 .faceted-empty-column {
-  font-size: 200%;
-  opacity: 0.8;
-  color: #9acee6;
-  text-align: center;
-  padding-bottom: 0.5em;
+    font-size: 200%;
+    opacity: 0.8;
+    color: #9acee6;
+    text-align: center;
+    padding-bottom: 0.5em;
 }
 
 /* Top
 */
 #faceted-top-column::before {
-  content: "Top widgets";
-  text-align: center;
-  width: 100%;
-  color: #9acee6;
-  float: right;
-  font-weight: lighter;
-  margin-top: 1em;
-  height: 0;
+    content: "Top widgets";
+    text-align: center;
+    width: 100%;
+    color: #9acee6;
+    float: right;
+    font-weight: lighter;
+    margin-top: 1em;
+    height: 0;
 }
 
 /* Left
 */
 #faceted-left-column::before {
-  content: "Left widgets";
-  text-align: center;
-  width: 100%;
-  color: #9acee6;
-  float: right;
-  font-weight: lighter;
-  margin-top: 1em;
-  height: 0;
+    content: "Left widgets";
+    text-align: center;
+    width: 100%;
+    color: #9acee6;
+    float: right;
+    font-weight: lighter;
+    margin-top: 1em;
+    height: 0;
 }
 
 /* Right
 */
 #faceted-right-column::before {
-  content: "Right widgets";
-  text-align: center;
-  width: 100%;
-  color: #9acee6;
-  float: right;
-  font-weight: lighter;
-  margin-top: 1em;
-  height: 0;
+    content: "Right widgets";
+    text-align: center;
+    width: 100%;
+    color: #9acee6;
+    float: right;
+    font-weight: lighter;
+    margin-top: 1em;
+    height: 0;
 }
 
 /* Center top
 */
 #faceted-center-column::before {
-  content: "Center top";
-  text-align: center;
-  width: 100%;
-  color: #9acee6;
-  float: right;
-  font-weight: lighter;
-  margin-top: 1em;
-  height: 0;
+    content: "Center top";
+    text-align: center;
+    width: 100%;
+    color: #9acee6;
+    float: right;
+    font-weight: lighter;
+    margin-top: 1em;
+    height: 0;
 }
 
 /* Center bottom
 */
 #faceted-bottomcenter-column::before {
-  content: "Center bottom";
-  text-align: center;
-  width: 100%;
-  color: #9acee6;
-  float: right;
-  font-weight: lighter;
-  margin-top: 1em;
-  height: 0;
+    content: "Center bottom";
+    text-align: center;
+    width: 100%;
+    color: #9acee6;
+    float: right;
+    font-weight: lighter;
+    margin-top: 1em;
+    height: 0;
 }
 
 /* Bottom
 */
 #faceted-bottom-column::before {
-  content: "Bottom widgets";
-  text-align: center;
-  width: 100%;
-  color: #9acee6;
-  float: right;
-  font-weight: lighter;
-  margin-top: 1em;
-  height: 0;
+    content: "Bottom widgets";
+    text-align: center;
+    width: 100%;
+    color: #9acee6;
+    float: right;
+    font-weight: lighter;
+    margin-top: 1em;
+    height: 0;
 }
 
 /* Sections
@@ -320,107 +321,107 @@ table.listing {
 /* Tabs
 */
 .faceted-section-tabs {
-  margin-top: 1em;
-  padding: 0;
+    margin-top: 1em;
+    padding: 0;
 }
 
 .faceted-section-tabs .ui-tabs-nav {
-  padding: 0;
+    padding: 0;
 }
 
 .faceted-section-tabs ul li a {
-  border-bottom: 0 ! important;
-  cursor: pointer;
-  color: #205C90;
+    border-bottom: 0 !important;
+    cursor: pointer;
+    color: #205c90;
 }
 
 .faceted-section-tabs .ui-state-highlight {
-  border: none ! important;
-  display: inline;
+    border: none !important;
+    display: inline;
 }
 
 .faceted-section-tabs ul {
-  list-style-type: none ! important;
-  margin: 0 ! important;
+    list-style-type: none !important;
+    margin: 0 !important;
 }
 
 /* Buttons
 ========== */
 
 .faceted-add-button {
-  padding: 1em;
+    padding: 1em;
 }
 
 .faceted-add-button span {
-  border-color: #007bb1;
-  border-style: dotted;
-  border-width: 1px;
+    border-color: #007bb1;
+    border-style: dotted;
+    border-width: 1px;
 }
 
 #main-container .faceted-add-button span {
-  padding: 8.5px;
+    padding: 8.5px;
 }
 
 /* Errors
 =========  */
 #faceted-edit-widgets .faceted-widget-error {
-  display: block;
+    display: block;
 }
 
 #faceted-edit-widgets .faceted-widget-error div {
-  text-align: center;
-  color: red;
+    text-align: center;
+    color: red;
 }
 
 #faceted-edit-widgets .faceted-widget-error dd {
-  margin-left: 2em;
-  padding-bottom:0;
+    margin-left: 2em;
+    padding-bottom: 0;
 }
 
 .faceted-ui-dialog .ui-dialog-titlebar-close {
-  right: 1em;
-  background: transparent;
-  border: none;
+    right: 1em;
+    background: transparent;
+    border: none;
 }
 
 #faceted-portal-status-message {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  z-index: 3;
-  background: #aee2f2;
-  border: 1px solid #ccc;
-  border-bottom: none;
-  text-align: center !important;
-  width: 480px !important;
-  margin-left: -240px;
-  margin-bottom: 0;
-  border-radius: 0;
-  font-family: sans-serif;
-  font-size: 120%;
-  padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 3;
+    background: #aee2f2;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    text-align: center !important;
+    width: 480px !important;
+    margin-left: -240px;
+    margin-bottom: 0;
+    border-radius: 0;
+    font-family: sans-serif;
+    font-size: 120%;
+    padding: 2rem;
 }
 
 #faceted-portal-status-message.success {
-  background: #c9eab1;
+    background: #c9eab1;
 }
 
 #faceted-portal-status-message.error {
-  background: #f5c1c1;
+    background: #f5c1c1;
 }
 
 #faceted-portal-status-message.warning {
-  background: #f3e2ab;
+    background: #f3e2ab;
 }
 
 #faceted-portal-status-message .ui-icon {
-  margin: 0 !important;
+    margin: 0 !important;
 }
 
 #faceted-portal-status-message dt {
-  display: none;
+    display: none;
 }
 
 #faceted-portal-status-message dd {
-  padding-bottom: 0;
+    padding-bottom: 0;
 }

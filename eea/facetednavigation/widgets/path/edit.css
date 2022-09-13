@@ -1,23 +1,23 @@
 .faceted-path-widget input {
-  width: 99%;
+    width: 99%;
 }
 
 .faceted-path-widget .tree {
-  position: absolute ! important;
-  background-color: #FFFFFF;
-  border: 1px dotted #CCCCCC;
-  z-index: 1;
+    position: absolute !important;
+    background-color: #ffffff;
+    border: 1px dotted #cccccc;
+    z-index: 1;
 }
 
 .faceted-path-widget .tree > .ltr > li {
-  display: block ! important;
+    display: block !important;
 }
 
 .faceted-path-widget .tree li a {
-  border: none ! important;
+    border: none !important;
 }
 
 .faceted-path-widget .faceted-path-errors {
-  color: red;
-  text-align: center;
+    color: red;
+    text-align: center;
 }

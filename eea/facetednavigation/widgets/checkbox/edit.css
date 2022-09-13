@@ -2,28 +2,28 @@
 }
 
 .widget-fieldset ul {
-  margin: 0px;
-  list-style: none ! important;
+    margin: 0px;
+    list-style: none !important;
 }
 
 .widget-fieldset ul li input {
-  clear: both;
-  float: left;
+    clear: both;
+    float: left;
 }
 
 .widget-fieldset ul li label {
-  font-weight: normal;
-  padding-left: 0.5em;
+    font-weight: normal;
+    padding-left: 0.5em;
 }
 
 .faceted-checkbox-more {
-  text-align: right;
+    text-align: right;
 }
 
 .faceted-checkbox-less {
-  text-align: right;
+    text-align: right;
 }
 
 .faceted-operator {
-  margin-top: 0px;
+    margin-top: 0px;
 }

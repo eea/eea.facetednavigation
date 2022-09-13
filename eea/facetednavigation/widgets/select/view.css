@@ -1,16 +1,16 @@
 .faceted-select-item-disabled {
-  color: gray;
+    color: gray;
 }
 
 .faceted-zero-count-hidden .faceted-select-item-disabled {
-  display: none;
+    display: none;
 }
 
 .faceted-select-widget label.select-field {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }

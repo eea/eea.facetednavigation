@@ -14,12 +14,12 @@
   c12 = is the parameter id of your text search facet.
 
 */
-jQuery(document).ready(function(){
-  jQuery('form.faceted-external-search').submit(function(evt){
-    evt.preventDefault();
-    var form = jQuery(this);
-    var action = form.attr('action');
-    var query = form.serialize();
-    window.location.href = action + '#' + query;
-  });
+jQuery(document).ready(function () {
+    jQuery("form.faceted-external-search").submit(function (evt) {
+        evt.preventDefault();
+        var form = jQuery(this);
+        var action = form.attr("action");
+        var query = form.serialize();
+        window.location.href = action + "#" + query;
+    });
 });
