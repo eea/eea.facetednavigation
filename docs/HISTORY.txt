@@ -1,6 +1,13 @@
 Changelog
 =========
 
+15.1 - (2022-09-12)
+---------------------------
+* Fix: Fix TypeError: Cannot read properties of undefined (reading 'msie')
+  [avoinea]
+* Feature: Multiselect widget - add support for ajax vocabulary
+  [avoinea]
+
 15.0 - (2022-07-25)
 ---------------------------
 * Upgrade step: Within "Plone > Site Setup > Add-ons" click on

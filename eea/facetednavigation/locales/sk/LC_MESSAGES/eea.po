@@ -50,6 +50,10 @@ msgstr "Pred 5 dňami"
 msgid "6 months ago"
 msgstr "Pred 6 mesiacmi"
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:57
+msgid "AJAX URL"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:55
 msgid "Accessor"
 msgstr ""
@@ -80,7 +84,7 @@ msgstr "Filtre po dotaze"
 msgid "All"
 msgstr "Všetky"
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:45
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
 msgid "Allow multiple selections"
 msgstr ""
 
@@ -129,7 +133,7 @@ msgid "Can select several elements"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:51
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:68
 #: ../../facetednavigation/widgets/radio/interfaces.py:24
 msgid "Catalog"
 msgstr "Katalóg"
@@ -174,7 +178,7 @@ msgstr ""
 msgid "Close on select"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:77
 msgid "Close selection popup after each select"
 msgstr ""
 
@@ -263,7 +267,7 @@ msgid "Default e-tag"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:19
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:19
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:18
 msgid "Default items (one per line)"
 msgstr "Východiskové položky (jedna na riadok)"
 
@@ -272,7 +276,7 @@ msgid "Default letter to be selected"
 msgstr "Východiskové písmeno, ktoré bude vybrané"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:26
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:25
 msgid "Default operator"
 msgstr "Operátor"
 
@@ -501,7 +505,7 @@ msgid "Future"
 msgstr "Budúce"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:52
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:59
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:69
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Získaj jedinečné hodnty z katalógu ako alternatívu pre slovník"
@@ -584,7 +588,7 @@ msgid "Invalid or empty vocabulary provided for this widget. Leave empty for def
 msgstr "Neplatný alebo prázdny slovník pre túto miniaplikáciu. Nechajte prázdny pre východiskové kritériá triedenia."
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:31
-#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:38
 #: ../../facetednavigation/widgets/radio/widget.pt:29
 msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
 msgstr ""
@@ -623,7 +627,7 @@ msgid "Less filters"
 msgstr "Menej filtrov"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:37
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:37
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
 msgid "Let the end-user choose to search with AND or OR between elements"
 msgstr "Nechať užívateľovi možnosť zvoliť vyhľadávanie pomocou AND alebo OR medzi prvkami"
 
@@ -686,7 +690,7 @@ msgstr "Posunúť nahor"
 msgid "Multi Select"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:44
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:43
 msgid "Multiselect"
 msgstr ""
 
@@ -753,7 +757,7 @@ msgid "Numerical range"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:36
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:36
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:35
 msgid "Operator visible"
 msgstr "Operátor viditeľny"
 
@@ -830,6 +834,10 @@ msgstr "Pozícia"
 msgid "Position of the widget."
 msgstr "Pozícia miniaplikácie."
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+msgid "Provide an URL to be used to get and filter items asynchronously e.g.: /search. Your endpoint should filter items by 'q' param and return a JSON like e.g.: {'items': [...]}"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:41
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
 msgstr "Python-ské meno továrne, ktorá môže vytvoriť implementovaný objekt. Meno musí identifikovať objekt v module s použitím úplného (dotted) mena."
@@ -888,7 +896,7 @@ msgid "Reverse"
 msgstr "Obrátiť"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:66
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:82
 #: ../../facetednavigation/widgets/radio/interfaces.py:45
 msgid "Reverse options"
 msgstr "Možnosti obrátenia"
@@ -924,7 +932,7 @@ msgid "Search in all elements only"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:27
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:27
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:26
 msgid "Search with AND/OR between elements"
 msgstr "Hľadať s A/ALEBO medzi prvkami"
 
@@ -962,7 +970,7 @@ msgid "Sort by countable"
 msgstr "Zoradiť podľa počítadiel"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:67
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:83
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Sort options reversed"
 msgstr "Obrátené možnosti triedenia"
@@ -1125,7 +1133,7 @@ msgid "Visible to"
 msgstr "Viditeľné"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:44
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:50
 #: ../../facetednavigation/widgets/radio/interfaces.py:17
 msgid "Vocabulary"
 msgstr "Slovník"
@@ -1135,7 +1143,7 @@ msgid "Vocabulary to use to filter sorting criteria. Leave empty for default sor
 msgstr "Slovník použitý na filtrovanie kritérií pre triedenie. Nechajte prázdny pre východzie triediace kritériá."
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:45
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:52
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:51
 #: ../../facetednavigation/widgets/radio/interfaces.py:18
 msgid "Vocabulary to use to render widget items"
 msgstr "Slovník použitý na vykreslenie položiek miniaplikácie"
@@ -1165,7 +1173,7 @@ msgid "Yesterday"
 msgstr "Včera"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "all"
 msgstr "všetky"
 
@@ -1175,7 +1183,7 @@ msgid "all items"
 msgstr "všetky položky"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "any"
 msgstr "niektoré"
 
@@ -1185,12 +1193,12 @@ msgid "in current results"
 msgstr "v aktuálnych výsledkoch"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:35
-#: ../../facetednavigation/widgets/multiselect/widget.pt:61
+#: ../../facetednavigation/widgets/multiselect/widget.pt:64
 msgid "match"
 msgstr "zhoda"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:34
-#: ../../facetednavigation/widgets/multiselect/widget.pt:60
+#: ../../facetednavigation/widgets/multiselect/widget.pt:63
 msgid "match any/all filters bellow"
 msgstr "zodpovedajú niektorému/všetkým filtrom nižšie"
 

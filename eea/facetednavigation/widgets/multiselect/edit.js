@@ -8,12 +8,37 @@ FacetedEdit.MultiSelectWidget = function(wid){
   this.multiple = this.select.attr("multiple") ? true : false;
   this.placeholder = this.widget.data('placeholder');
   this.closeOnSelect = this.widget.data('closeonselect');
+  this.ajax = this.widget.data('ajax');
 
-  this.select.select2({
-    placeholder: this.placeholder,
-    closeOnSelect: this.closeOnSelect,
-    allowClear: true
-  });
+  if(!this.ajax) {
+    this.select.select2({
+      placeholder: this.placeholder,
+      closeOnSelect: this.closeOnSelect,
+      allowClear: true
+    });
+  } else {
+    this.select.select2({
+      placeholder: this.placeholder,
+      closeOnSelect : this.closeOnSelect,
+      allowClear: true,
+      multiple: this.multiple,
+      ajax: {
+        url: this.ajax,
+          dataType: 'json',
+          data: function (term) {
+            var query = {
+              q: term
+            };
+            return query;
+          },
+          results: function (data) {
+            return {
+                results: data.items
+              };
+          }
+      }
+    });
+  }
 
   self.operatorValue = self.widget.data('operator');
 
