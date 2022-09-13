@@ -1,30 +1,18 @@
 FacetedEdit.DateWidget = function(wid){
-  this.wid = wid;
-  this.widget = jQuery('#' + wid + '_widget');
+  var self = this;
+  self.wid = wid;
+  self.widget = jQuery('#' + wid + '_widget');
 
-  this.select_from = jQuery('select[name=from]', this.widget);
-  this.select_to = jQuery('select[name=to]', this.widget);
+  self.select_from = jQuery('select[name=from]', this.widget);
+  self.select_to = jQuery('select[name=to]', this.widget);
 
-  this.select_from.hide();
-  this.select_to.hide();
-
-  var js_widget = this;
-  jQuery('select', this.widget).selectToUISlider({
-    labels: 2,
-    labelSrc: 'text',
-    sliderOptions: {
-      change: function(){
-        js_widget.set_default(js_widget.select_from, js_widget.select_to);
-      }
-    }
+  // Bind events
+  self.select_from.on('change', function(){
+    self.set_default(self.select_from, self.select_to);
   });
 
-  jQuery('span.ui-slider-label', this.widget).each(function(index){
-    if(index!==11){
-      return;
-    }
-    var span = jQuery(this);
-    span.addClass('ui-slider-label-show');
+  self.select_to.on('change', function(){
+    self.set_default(self.select_from, self.select_to);
   });
 
   this.selected = [];

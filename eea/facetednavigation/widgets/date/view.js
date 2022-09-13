@@ -1,56 +1,43 @@
 /* Relative Date Widget
 */
 Faceted.DateWidget = function(wid){
-  this.wid = wid;
-  this.widget = jQuery('#' + wid + '_widget');
-  this.widget.show();
-  this.title = jQuery('legend', this.widget).html();
-  this.select_from = jQuery('select[name=from]', this.widget);
-  this.select_to = jQuery('select[name=to]', this.widget);
+  var self = this;
+  self.wid = wid;
+  self.widget = jQuery('#' + wid + '_widget');
+  self.widget.show();
+  self.title = jQuery('legend', self.widget).html();
+  self.select_from = jQuery('select[name=from]', self.widget);
+  self.select_to = jQuery('select[name=to]', self.widget);
 
-  this.select_from.hide();
-  this.select_to.hide();
-
-  var js_widget = this;
-  this.slider = jQuery('select', this.widget).selectToUISlider({
-    labels: 2,
-    labelSrc: 'text',
-    sliderOptions: {
-      change: function(){
-        js_widget.change();
-      }
-    }
-  });
-
-  jQuery('span.ui-slider-label', this.widget).each(function(i){
-    if(i!==11){
-      return;
-    }
-    var span = jQuery(this);
-    span.addClass('ui-slider-label-show');
-  });
-
-  this.selected = [];
+  self.selected = [];
 
   // Default value
-  var from = this.select_from.val();
-  var to = this.select_to.val();
+  var from = self.select_from.val();
+  var to = self.select_to.val();
   if((from !== 'now-past') || (to !== 'now_future')){
-    this.selected = [this.select_from, this.select_to];
-    Faceted.Query[this.wid] = [from, to];
+    self.selected = [self.select_from, self.select_to];
+    Faceted.Query[self.wid] = [from, to];
   }
 
   // Handle clicks
-  jQuery('form', this.widget).submit(function(){
+  jQuery('form', self.widget).on('submit', function(){
     return false;
   });
 
   // Bind events
-  jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function(){
-    js_widget.synchronize();
+  self.select_from.on('change', function(){
+    self.change();
   });
-  jQuery(Faceted.Events).bind(Faceted.Events.RESET, function(){
-    js_widget.reset_ui();
+
+  self.select_to.on('change', function(){
+    self.change();
+  });
+
+  jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function(){
+    self.synchronize();
+  });
+  jQuery(Faceted.Events).on(Faceted.Events.RESET, function(){
+    self.reset_ui();
   });
 };
 
@@ -81,8 +68,8 @@ Faceted.DateWidget.prototype = {
 
   reset_ui: function(){
     this.reset();
-    this.select_from.trigger('change');
-    this.select_to.trigger('change');
+    // this.select_from.trigger('change');
+    // this.select_to.trigger('change');
   },
 
   synchronize: function(){
@@ -156,7 +143,7 @@ Faceted.DateWidget.prototype = {
 
     link.attr('id', 'criteria_' + this.wid + '_');
     link.attr('title', 'Remove ' + label + ' filter');
-    link.click(function(){
+    link.on('click', function(){
       widget.criteria_remove();
       return false;
     });

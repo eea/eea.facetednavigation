@@ -18,7 +18,7 @@
 
 <form action="." method="get" class="faceted-date-widget-form"
   tal:on-error="structure python:error_view(error=error, cid=wid)">
-  <select name="from" tal:attributes="id string:$wid-from" style="display: none">
+  <select name="from" tal:attributes="id string:$wid-from">
     <tal:option repeat="item vocabulary">
       <option tal:attributes="
         value python:item[0];
@@ -26,7 +26,7 @@
         tal:content="python:item[1]" />
     </tal:option>
   </select>
-  <select name="to" tal:attributes="id string:$wid-to" style="display: none">
+  <select name="to" tal:attributes="id string:$wid-to">
     <tal:option repeat="item vocabulary">
       <option tal:attributes="
         value python:item[0];
