@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: eea\n"
-"POT-Creation-Date: 2022-07-26 14:29+0000\n"
+"POT-Creation-Date: 2022-09-13 12:29+0000\n"
 "PO-Revision-Date: 2017-11-08 15:40+0800\n"
 "Last-Translator: TsungWei Hu <marr.tw@gmail.com>\n"
 "Language-Team: Plone I18N <plone-i18n@lists.sourceforge.net>\n"
@@ -50,6 +50,10 @@ msgstr "五天前"
 msgid "6 months ago"
 msgstr "六個月前"
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:57
+msgid "AJAX URL"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:53
 msgid "Accessor"
 msgstr ""
@@ -58,15 +62,15 @@ msgstr ""
 msgid "Accessor to extract data for faceted widget."
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:68
+#: ../../facetednavigation/browser/template/configure.pt:59
 msgid "Add"
 msgstr "新增"
 
-#: ../../facetednavigation/browser/template/configure.pt:24
+#: ../../facetednavigation/browser/template/configure.pt:15
 msgid "Add new filter"
 msgstr "新增過濾條件"
 
-#: ../../facetednavigation/browser/template/configure.pt:25
+#: ../../facetednavigation/browser/template/configure.pt:16
 msgid "Add widget"
 msgstr "新增搜尋方框"
 
@@ -100,7 +104,7 @@ msgstr ""
 msgid "Apple"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:97
+#: ../../facetednavigation/browser/template/configure.pt:88
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "確定要刪除 ${widget} 嗎?"
 
@@ -130,7 +134,7 @@ msgstr "可複選"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:52
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:57
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:68
 #: ../../facetednavigation/widgets/radio/interfaces.py:24
 msgid "Catalog"
 msgstr "Catalog"
@@ -173,11 +177,11 @@ msgstr "方形勾選"
 msgid "Classic"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:77
 msgid "Close on select"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:78
 msgid "Close selection popup after each select"
 msgstr ""
 
@@ -201,7 +205,7 @@ msgid "Cloud type"
 msgstr "標籤雲類型"
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:46
+#: ../../facetednavigation/browser/app/exportimport.py:50
 msgid "Configuration imported"
 msgstr "設定值已匯入"
 
@@ -210,7 +214,7 @@ msgid "Configure"
 msgstr "設定"
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/configure.pt:107
+#: ../../facetednavigation/browser/template/configure.pt:99
 msgid "Content listing"
 msgstr "內容列表"
 
@@ -227,7 +231,7 @@ msgstr "顯示數量"
 msgid "Counters"
 msgstr "計數"
 
-#: ../../facetednavigation/browser/template/configure.pt:123
+#: ../../facetednavigation/browser/template/configure.pt:115
 msgid "Criterion details"
 msgstr "條件細節"
 
@@ -311,7 +315,7 @@ msgstr "預設的 TAL 查詢語法"
 msgid "Default value"
 msgstr "預設值"
 
-#: ../../facetednavigation/browser/template/configure.pt:181
+#: ../../facetednavigation/browser/template/configure.pt:173
 msgid "Delete"
 msgstr "删除"
 
@@ -354,7 +358,7 @@ msgid "Display widget in section"
 msgstr "在區段顯示方框"
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/configure.pt:55
+#: ../../facetednavigation/browser/template/configure.pt:46
 msgid "Display widget in section."
 msgstr "在區段顯示方框。"
 
@@ -413,7 +417,7 @@ msgstr "錯誤類型:"
 msgid "Error value:"
 msgstr "錯誤值:"
 
-#: ../../facetednavigation/browser/template/configure.pt:86
+#: ../../facetednavigation/browser/template/configure.pt:77
 msgid "Export"
 msgstr "匯出"
 
@@ -450,11 +454,11 @@ msgstr ""
 msgid "Faceted navigation can be activated on the instances of this content type."
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:111
+#: ../../facetednavigation/subtypes/subtyper.py:105
 msgid "Faceted navigation disabled"
 msgstr "Faceted 導覽已停用"
 
-#: ../../facetednavigation/subtypes/subtyper.py:101
+#: ../../facetednavigation/subtypes/subtyper.py:95
 msgid "Faceted navigation enabled"
 msgstr "Faceted 導覽已啟用"
 
@@ -462,11 +466,11 @@ msgstr "Faceted 導覽已啟用"
 msgid "Faceted navigation settings"
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:142
+#: ../../facetednavigation/subtypes/subtyper.py:135
 msgid "Faceted search disabled"
 msgstr "Faceted 搜尋已停用"
 
-#: ../../facetednavigation/subtypes/subtyper.py:135
+#: ../../facetednavigation/subtypes/subtyper.py:128
 msgid "Faceted search enabled"
 msgstr "Faceted 搜尋已啟用"
 
@@ -510,7 +514,7 @@ msgstr "未來"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:53
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:69
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "使用 Catalog 索引值作為詞彙"
@@ -567,15 +571,15 @@ msgstr "勾選的話，會隱藏「所有項目」或「在現行結果裡」的
 msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
 msgstr "勾選的話，會自動在關鍵詞後方加上 '*' 符號，並啟用模糊比對。"
 
-#: ../../facetednavigation/browser/template/configure.pt:83
+#: ../../facetednavigation/browser/template/configure.pt:74
 msgid "Import"
 msgstr "匯入"
 
-#: ../../facetednavigation/browser/template/configure.pt:75
+#: ../../facetednavigation/browser/template/configure.pt:66
 msgid "Import - Export configuration"
 msgstr "匯入/匯出設定"
 
-#: ../../facetednavigation/browser/template/configure.pt:76
+#: ../../facetednavigation/browser/template/configure.pt:67
 msgid "Import configuration"
 msgstr "匯入設定"
 
@@ -596,7 +600,7 @@ msgid "Invalid or empty vocabulary provided for this widget. Leave empty for def
 msgstr "這個方框的詞彙表並不正確，預設的排序條件因此留空。"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:31
-#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:38
 #: ../../facetednavigation/widgets/radio/widget.pt:29
 msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
 msgstr ""
@@ -631,7 +635,7 @@ msgid "Less"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/view.pt:31
+#: ../../facetednavigation/browser/template/view.pt:22
 msgid "Less filters"
 msgstr "更少"
 
@@ -690,15 +694,15 @@ msgid "More"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/view.pt:30
+#: ../../facetednavigation/browser/template/view.pt:21
 msgid "More filters"
 msgstr "更多"
 
-#: ../../facetednavigation/browser/template/configure.pt:164
+#: ../../facetednavigation/browser/template/configure.pt:156
 msgid "Move Down"
 msgstr "下移"
 
-#: ../../facetednavigation/browser/template/configure.pt:155
+#: ../../facetednavigation/browser/template/configure.pt:147
 msgid "Move Up"
 msgstr "上移"
 
@@ -713,11 +717,6 @@ msgstr ""
 #: ../../facetednavigation/widgets/path/interfaces.py:25
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
 msgstr "導覽樹的起始點 (根目錄的相對位置，例如 SITE/data-and-maps)"
-
-#. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:43
-msgid "Navigation tree theme"
-msgstr "導覽樹佈景主題"
 
 #: ../../facetednavigation/widgets/date/widget.py:30
 msgid "Next 2 days"
@@ -760,7 +759,7 @@ msgid "No"
 msgstr ""
 
 #. Default: ""
-#: ../../facetednavigation/browser/app/exportimport.py:81
+#: ../../facetednavigation/browser/app/exportimport.py:85
 msgid "No action provided"
 msgstr "沒有動作被提供"
 
@@ -780,7 +779,7 @@ msgstr ""
 msgid "Operator visible"
 msgstr "顯示操作元"
 
-#: ../../facetednavigation/browser/template/configure.pt:124
+#: ../../facetednavigation/browser/template/configure.pt:116
 msgid "Order"
 msgstr "順序"
 
@@ -847,15 +846,19 @@ msgid "Portlets right column is visible now"
 msgstr "右側資訊方框已啟用"
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/configure.pt:42
+#: ../../facetednavigation/browser/template/configure.pt:33
 #: ../../facetednavigation/widgets/interfaces.py:90
 msgid "Position"
 msgstr "位置"
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/configure.pt:43
+#: ../../facetednavigation/browser/template/configure.pt:34
 msgid "Position of the widget."
 msgstr "方框的位置"
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+msgid "Provide an URL to be used to get and filter items asynchronously e.g.: /search. Your endpoint should filter items by 'q' param and return a JSON like e.g.: {'items': [...]}"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:38
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
@@ -919,7 +922,7 @@ msgstr "相反順序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:68
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:83
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Reverse options"
 msgstr "相反順序"
@@ -933,7 +936,7 @@ msgstr ""
 msgid "Root folder"
 msgstr "根目錄"
 
-#: ../../facetednavigation/browser/template/configure.pt:180
+#: ../../facetednavigation/browser/template/configure.pt:172
 msgid "Save"
 msgstr "儲存"
 
@@ -941,8 +944,8 @@ msgstr "儲存"
 msgid "Schema interface"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:37
-#: ../../facetednavigation/widgets/text/widget.pt:27
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/text/widget.pt:28
 msgid "Search"
 msgstr "搜尋"
 
@@ -963,7 +966,7 @@ msgid "Search with AND/OR between elements"
 msgstr "搜尋功能支援 AND/OR 操作元"
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/configure.pt:54
+#: ../../facetednavigation/browser/template/configure.pt:45
 #: ../../facetednavigation/widgets/interfaces.py:97
 msgid "Section"
 msgstr "區段"
@@ -973,7 +976,7 @@ msgid "Select"
 msgstr "選擇方框"
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/configure.pt:112
+#: ../../facetednavigation/browser/template/configure.pt:104
 msgid "Select all items"
 msgstr "全選"
 
@@ -999,7 +1002,7 @@ msgstr "依計數結果排序"
 
 #. Default: ""
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:69
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:84
 #: ../../facetednavigation/widgets/radio/interfaces.py:47
 msgid "Sort options reversed"
 msgstr "相反順序排列"
@@ -1092,16 +1095,11 @@ msgstr ""
 msgid "Text to be displayed as start range input placeholder"
 msgstr ""
 
-#. Default: ""
-#: ../../facetednavigation/widgets/path/interfaces.py:44
-msgid "Theme to be used with this widget"
-msgstr "方框要搭配的佈景主題"
-
 #: ../../facetednavigation/widgets/interfaces.py:121
 msgid "This option works only if 'count results' is enabled"
 msgstr "啟用「顯示數量」時，這個設定值才會生效。"
 
-#: ../../facetednavigation/widgets/path/widget.pt:31
+#: ../../facetednavigation/widgets/path/widget.pt:24
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
 msgstr "當條件不符合時，這個方框不會顯示。"
 
@@ -1126,7 +1124,7 @@ msgstr "明天"
 msgid "Top"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:30
+#: ../../facetednavigation/browser/template/configure.pt:21
 msgid "Type"
 msgstr "類型"
 
@@ -1136,7 +1134,7 @@ msgid "Type of the cloud"
 msgstr "標籤雲類型"
 
 #. Default: ""
-#: ../../facetednavigation/browser/template/configure.pt:31
+#: ../../facetednavigation/browser/template/configure.pt:22
 msgid "Type of the widget."
 msgstr "搜尋方框的類型"
 
@@ -1189,7 +1187,7 @@ msgstr "用來顯示方框選項的詞彙表"
 msgid "Widget position in page"
 msgstr "方框在頁面的位置"
 
-#: ../../facetednavigation/browser/template/configure.pt:147
+#: ../../facetednavigation/browser/template/configure.pt:139
 msgid "Widget type"
 msgstr "方框類型"
 
@@ -1211,32 +1209,32 @@ msgid "Yesterday"
 msgstr "昨天"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "all"
 msgstr "全部"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
-#: ../../facetednavigation/widgets/text/widget.pt:37
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:49
+#: ../../facetednavigation/widgets/text/widget.pt:39
 msgid "all items"
 msgstr "所有項目"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "any"
 msgstr "任何"
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:56
-#: ../../facetednavigation/widgets/text/widget.pt:46
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:58
+#: ../../facetednavigation/widgets/text/widget.pt:48
 msgid "in current results"
 msgstr "在現行結果裡"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:35
-#: ../../facetednavigation/widgets/multiselect/widget.pt:61
+#: ../../facetednavigation/widgets/multiselect/widget.pt:64
 msgid "match"
 msgstr "符合"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:34
-#: ../../facetednavigation/widgets/multiselect/widget.pt:60
+#: ../../facetednavigation/widgets/multiselect/widget.pt:63
 msgid "match any/all filters bellow"
 msgstr "符合 Any/All 過濾條件"
 

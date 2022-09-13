@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-07-26 14:29+0000\n"
+"POT-Creation-Date: 2022-09-13 12:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,10 @@ msgstr "5 μέρες πριν"
 msgid "6 months ago"
 msgstr "Πριν από 6 μήνες"
 
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:57
+msgid "AJAX URL"
+msgstr ""
+
 #: ../../facetednavigation/widgets/interfaces.py:53
 msgid "Accessor"
 msgstr ""
@@ -58,15 +62,15 @@ msgstr ""
 msgid "Accessor to extract data for faceted widget."
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:68
+#: ../../facetednavigation/browser/template/configure.pt:59
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: ../../facetednavigation/browser/template/configure.pt:24
+#: ../../facetednavigation/browser/template/configure.pt:15
 msgid "Add new filter"
 msgstr "Προσθήκη νέου φίλτρου"
 
-#: ../../facetednavigation/browser/template/configure.pt:25
+#: ../../facetednavigation/browser/template/configure.pt:16
 msgid "Add widget"
 msgstr "Προσθήκη widget"
 
@@ -100,7 +104,7 @@ msgstr ""
 msgid "Apple"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:97
+#: ../../facetednavigation/browser/template/configure.pt:88
 msgid "Are you sure you want to delete ${widget} widget?"
 msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε ${widget} widget;"
 
@@ -129,7 +133,7 @@ msgid "Can select several elements"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:52
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:57
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:68
 #: ../../facetednavigation/widgets/radio/interfaces.py:24
 msgid "Catalog"
 msgstr "Κατάλογος"
@@ -170,11 +174,11 @@ msgstr "Κουτάκια"
 msgid "Classic"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:66
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:77
 msgid "Close on select"
 msgstr ""
 
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:67
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:78
 msgid "Close selection popup after each select"
 msgstr ""
 
@@ -194,7 +198,7 @@ msgstr "Σύννεφο ύψος (px)"
 msgid "Cloud type"
 msgstr "Τύπου Cloud"
 
-#: ../../facetednavigation/browser/app/exportimport.py:46
+#: ../../facetednavigation/browser/app/exportimport.py:50
 msgid "Configuration imported"
 msgstr "Εισάγονται Διαμόρφωση"
 
@@ -202,7 +206,7 @@ msgstr "Εισάγονται Διαμόρφωση"
 msgid "Configure"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:107
+#: ../../facetednavigation/browser/template/configure.pt:99
 msgid "Content listing"
 msgstr "Λίστα περιεχομένων"
 
@@ -218,7 +222,7 @@ msgstr "Μετρήστε τα αποτελέσματα"
 msgid "Counters"
 msgstr "Μετρητές"
 
-#: ../../facetednavigation/browser/template/configure.pt:123
+#: ../../facetednavigation/browser/template/configure.pt:115
 msgid "Criterion details"
 msgstr "Κριτήριο λεπτομέρειες"
 
@@ -295,7 +299,7 @@ msgstr "Προεπιλογή Tal έκφραση για το ερώτημα αξ�
 msgid "Default value"
 msgstr "Προεπιλεγμένη τιμή"
 
-#: ../../facetednavigation/browser/template/configure.pt:181
+#: ../../facetednavigation/browser/template/configure.pt:173
 msgid "Delete"
 msgstr "Διαγραφή"
 
@@ -335,7 +339,7 @@ msgstr "Εμφάνιση του αριθμού των αποτελεσμάτων
 msgid "Display widget in section"
 msgstr "Εμφάνιση widget στο τμήμα"
 
-#: ../../facetednavigation/browser/template/configure.pt:55
+#: ../../facetednavigation/browser/template/configure.pt:46
 msgid "Display widget in section."
 msgstr "Εμφάνιση widget στο τμήμα."
 
@@ -392,7 +396,7 @@ msgstr "Τύπος σφάλματος:"
 msgid "Error value:"
 msgstr "Error value"
 
-#: ../../facetednavigation/browser/template/configure.pt:86
+#: ../../facetednavigation/browser/template/configure.pt:77
 msgid "Export"
 msgstr "Εξαγωγή"
 
@@ -428,11 +432,11 @@ msgstr ""
 msgid "Faceted navigation can be activated on the instances of this content type."
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:111
+#: ../../facetednavigation/subtypes/subtyper.py:105
 msgid "Faceted navigation disabled"
 msgstr "Πολύπλευρη πλοήγηση άτομα με ειδικές ανάγκες"
 
-#: ../../facetednavigation/subtypes/subtyper.py:101
+#: ../../facetednavigation/subtypes/subtyper.py:95
 msgid "Faceted navigation enabled"
 msgstr "Πολύπλευρη δυνατότητα πλοήγησης"
 
@@ -440,11 +444,11 @@ msgstr "Πολύπλευρη δυνατότητα πλοήγησης"
 msgid "Faceted navigation settings"
 msgstr ""
 
-#: ../../facetednavigation/subtypes/subtyper.py:142
+#: ../../facetednavigation/subtypes/subtyper.py:135
 msgid "Faceted search disabled"
 msgstr "Πολύπλευρη αναζήτηση άτομα με ειδικές ανάγκες"
 
-#: ../../facetednavigation/subtypes/subtyper.py:135
+#: ../../facetednavigation/subtypes/subtyper.py:128
 msgid "Faceted search enabled"
 msgstr "Πολύπλευρη δυνατότητα αναζήτησης"
 
@@ -485,7 +489,7 @@ msgid "Future"
 msgstr "μελλοντικός"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:53
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:69
 #: ../../facetednavigation/widgets/radio/interfaces.py:25
 msgid "Get unique values from catalog as an alternative for vocabulary"
 msgstr "Πάρτε μοναδικών τιμών από τον κατάλογο ως εναλλακτική λύση για το λεξιλόγιο"
@@ -539,15 +543,15 @@ msgstr ""
 msgid "If this checkbox is checked, the system will automatically do a wildcard search by appending a '*' to the search term so searching for 'budget' will also return elements containing 'budgetary'."
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:83
+#: ../../facetednavigation/browser/template/configure.pt:74
 msgid "Import"
 msgstr "Εισαγωγή"
 
-#: ../../facetednavigation/browser/template/configure.pt:75
+#: ../../facetednavigation/browser/template/configure.pt:66
 msgid "Import - Export configuration"
 msgstr "Εισαγωγή - Εξαγωγή διαμόρφωσης"
 
-#: ../../facetednavigation/browser/template/configure.pt:76
+#: ../../facetednavigation/browser/template/configure.pt:67
 msgid "Import configuration"
 msgstr "Εισαγωγή ρυθμίσεων"
 
@@ -568,7 +572,7 @@ msgid "Invalid or empty vocabulary provided for this widget. Leave empty for def
 msgstr "Άκυρα ή άδειο το λεξιλόγιο που προβλέπεται για το widget. Αφήστε το κενό για τα κριτήρια διαλογής προεπιλογή."
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:31
-#: ../../facetednavigation/widgets/multiselect/widget.pt:36
+#: ../../facetednavigation/widgets/multiselect/widget.pt:38
 #: ../../facetednavigation/widgets/radio/widget.pt:29
 msgid "Invalid or empty vocabulary provided for this widget. This widget will be ignored in view mode."
 msgstr ""
@@ -602,7 +606,7 @@ msgstr ""
 msgid "Less"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/view.pt:31
+#: ../../facetednavigation/browser/template/view.pt:22
 msgid "Less filters"
 msgstr "Λιγότερο φίλτρων"
 
@@ -654,15 +658,15 @@ msgstr "Ελάχιστο μέγεθος"
 msgid "More"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/view.pt:30
+#: ../../facetednavigation/browser/template/view.pt:21
 msgid "More filters"
 msgstr "Περισσότερα φίλτρα"
 
-#: ../../facetednavigation/browser/template/configure.pt:164
+#: ../../facetednavigation/browser/template/configure.pt:156
 msgid "Move Down"
 msgstr "Μετακίνηση προς τα κάτω"
 
-#: ../../facetednavigation/browser/template/configure.pt:155
+#: ../../facetednavigation/browser/template/configure.pt:147
 msgid "Move Up"
 msgstr "Μετακίνηση επάνω"
 
@@ -677,10 +681,6 @@ msgstr ""
 #: ../../facetednavigation/widgets/path/interfaces.py:25
 msgid "Navigation js-tree starting point (relative to plone site. ex: SITE/data-and-maps)"
 msgstr "Πλοήγηση js-δέντρο σημείο εκκίνησης (σε σχέση με το χώρο Plone πρώην:. SITE / δεδομένων και χάρτες)"
-
-#: ../../facetednavigation/widgets/path/interfaces.py:43
-msgid "Navigation tree theme"
-msgstr "Πλοήγηση θέμα δέντρο"
 
 #: ../../facetednavigation/widgets/date/widget.py:30
 msgid "Next 2 days"
@@ -722,7 +722,7 @@ msgstr "προσεχές έτος"
 msgid "No"
 msgstr ""
 
-#: ../../facetednavigation/browser/app/exportimport.py:81
+#: ../../facetednavigation/browser/app/exportimport.py:85
 msgid "No action provided"
 msgstr "Καμία ενέργεια που"
 
@@ -741,7 +741,7 @@ msgstr ""
 msgid "Operator visible"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:124
+#: ../../facetednavigation/browser/template/configure.pt:116
 msgid "Order"
 msgstr "παραγγελία"
 
@@ -805,14 +805,18 @@ msgstr "Συστατικά στοιχεία πύλης στήλη δεξιά κ�
 msgid "Portlets right column is visible now"
 msgstr "Συστατικά στοιχεία πύλης στήλη δεξιά είναι ορατή τώρα"
 
-#: ../../facetednavigation/browser/template/configure.pt:42
+#: ../../facetednavigation/browser/template/configure.pt:33
 #: ../../facetednavigation/widgets/interfaces.py:90
 msgid "Position"
 msgstr "Θέση"
 
-#: ../../facetednavigation/browser/template/configure.pt:43
+#: ../../facetednavigation/browser/template/configure.pt:34
 msgid "Position of the widget."
 msgstr "Θέση του widget."
+
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:58
+msgid "Provide an URL to be used to get and filter items asynchronously e.g.: /search. Your endpoint should filter items by 'q' param and return a JSON like e.g.: {'items': [...]}"
+msgstr ""
 
 #: ../../facetednavigation/widgets/interfaces.py:38
 msgid "Python name of a factory which can create the implementation object.  This must identify an object in a module using the full dotted name."
@@ -872,7 +876,7 @@ msgid "Reverse"
 msgstr "Αντίστροφη"
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:68
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:72
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:83
 #: ../../facetednavigation/widgets/radio/interfaces.py:46
 msgid "Reverse options"
 msgstr "Αντίστροφη επιλογές"
@@ -885,7 +889,7 @@ msgstr ""
 msgid "Root folder"
 msgstr "Φακέλου ρίζας"
 
-#: ../../facetednavigation/browser/template/configure.pt:180
+#: ../../facetednavigation/browser/template/configure.pt:172
 msgid "Save"
 msgstr "Αποθήκευση"
 
@@ -893,8 +897,8 @@ msgstr "Αποθήκευση"
 msgid "Schema interface"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:37
-#: ../../facetednavigation/widgets/text/widget.pt:27
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:38
+#: ../../facetednavigation/widgets/text/widget.pt:28
 msgid "Search"
 msgstr "Αναζήτηση"
 
@@ -912,7 +916,7 @@ msgstr ""
 msgid "Search with AND/OR between elements"
 msgstr "Αναζήτηση με ή / και μεταξύ των στοιχείων"
 
-#: ../../facetednavigation/browser/template/configure.pt:54
+#: ../../facetednavigation/browser/template/configure.pt:45
 #: ../../facetednavigation/widgets/interfaces.py:97
 msgid "Section"
 msgstr "Τμήμα"
@@ -921,7 +925,7 @@ msgstr "Τμήμα"
 msgid "Select"
 msgstr "Επιλογή"
 
-#: ../../facetednavigation/browser/template/configure.pt:112
+#: ../../facetednavigation/browser/template/configure.pt:104
 msgid "Select all items"
 msgstr "Επιλογή όλων των στοιχείων"
 
@@ -946,7 +950,7 @@ msgid "Sort by countable"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/interfaces.py:69
-#: ../../facetednavigation/widgets/multiselect/interfaces.py:73
+#: ../../facetednavigation/widgets/multiselect/interfaces.py:84
 #: ../../facetednavigation/widgets/radio/interfaces.py:47
 msgid "Sort options reversed"
 msgstr "Επιλογές ταξινόμησης αντιστρέφεται"
@@ -1036,15 +1040,11 @@ msgstr ""
 msgid "Text to be displayed as start range input placeholder"
 msgstr ""
 
-#: ../../facetednavigation/widgets/path/interfaces.py:44
-msgid "Theme to be used with this widget"
-msgstr "Θέμα που πρέπει να χρησιμοποιούνται με αυτό το μαραφέτι"
-
 #: ../../facetednavigation/widgets/interfaces.py:121
 msgid "This option works only if 'count results' is enabled"
 msgstr "Αυτή η επιλογή δουλεύει μόνο αν «τα αποτελέσματα μετράνε» είναι ενεργοποιημένη"
 
-#: ../../facetednavigation/widgets/path/widget.pt:31
+#: ../../facetednavigation/widgets/path/widget.pt:24
 msgid "This widget will be ignored as provided root is unreachable or it has no folderish children."
 msgstr "Αυτό το widget θα πρέπει να αγνοηθεί, όπως προβλέπεται ρίζα είναι απρόσιτος ή δεν έχει folderish παιδιά."
 
@@ -1068,7 +1068,7 @@ msgstr "αύριο"
 msgid "Top"
 msgstr ""
 
-#: ../../facetednavigation/browser/template/configure.pt:30
+#: ../../facetednavigation/browser/template/configure.pt:21
 msgid "Type"
 msgstr "Τύπος"
 
@@ -1076,7 +1076,7 @@ msgstr "Τύπος"
 msgid "Type of the cloud"
 msgstr "Τύπος του νέφους"
 
-#: ../../facetednavigation/browser/template/configure.pt:31
+#: ../../facetednavigation/browser/template/configure.pt:22
 msgid "Type of the widget."
 msgstr "Τύπος του widget."
 
@@ -1124,7 +1124,7 @@ msgstr "Λεξιλόγιο να χρησιμοποιούμε για να κατ�
 msgid "Widget position in page"
 msgstr "Widget θέση στη σελίδα"
 
-#: ../../facetednavigation/browser/template/configure.pt:147
+#: ../../facetednavigation/browser/template/configure.pt:139
 msgid "Widget type"
 msgstr "Τύπος Widget"
 
@@ -1145,32 +1145,32 @@ msgid "Yesterday"
 msgstr "χτες"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "all"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:47
-#: ../../facetednavigation/widgets/text/widget.pt:37
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:49
+#: ../../facetednavigation/widgets/text/widget.pt:39
 msgid "all items"
 msgstr "Όλα τα αντικείμενα"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:36
-#: ../../facetednavigation/widgets/multiselect/widget.pt:62
+#: ../../facetednavigation/widgets/multiselect/widget.pt:65
 msgid "any"
 msgstr ""
 
-#: ../../facetednavigation/widgets/autocomplete/widget.pt:56
-#: ../../facetednavigation/widgets/text/widget.pt:46
+#: ../../facetednavigation/widgets/autocomplete/widget.pt:58
+#: ../../facetednavigation/widgets/text/widget.pt:48
 msgid "in current results"
 msgstr "σε τρέχοντα αποτελέσματα"
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:35
-#: ../../facetednavigation/widgets/multiselect/widget.pt:61
+#: ../../facetednavigation/widgets/multiselect/widget.pt:64
 msgid "match"
 msgstr ""
 
 #: ../../facetednavigation/widgets/checkbox/widget.pt:34
-#: ../../facetednavigation/widgets/multiselect/widget.pt:60
+#: ../../facetednavigation/widgets/multiselect/widget.pt:63
 msgid "match any/all filters bellow"
 msgstr ""
 
