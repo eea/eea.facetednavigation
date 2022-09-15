@@ -30,7 +30,7 @@ jobs:
       - run: yarn --frozen-lockfile
 
       - name: Prettier check
-        run: yarn run prettier -w eea
+        run: yarn run prettier
 
       # run git diff
       - name: run git diff
