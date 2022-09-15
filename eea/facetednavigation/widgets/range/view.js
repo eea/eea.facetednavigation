@@ -22,20 +22,20 @@ Faceted.RangeWidget = function (wid) {
     }
 
     // Handle clicks
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
     var handle = function (evt) {
         js_widget.select_change(this, evt);
     };
-    this.start.change(handle);
-    this.end.change(handle);
+    this.start.on("change", handle);
+    this.end.on("change", handle);
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         js_widget.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         js_widget.reset();
     });
 };
@@ -172,9 +172,5 @@ Faceted.initializeRangeWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeRangeWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeRangeWidget);

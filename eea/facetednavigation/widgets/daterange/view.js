@@ -57,7 +57,7 @@ Faceted.DateRangeWidget = function (wid) {
      * end value of the date range and call the 'onChange' event (click outside
      * the changed field).
      */
-    this.start.change(function () {
+    this.start.on("change", function () {
         var start = js_widget.start.val();
         var end = js_widget.end.val();
 
@@ -66,7 +66,7 @@ Faceted.DateRangeWidget = function (wid) {
             Faceted.Form.do_query(js_widget.wid, []);
         }
     });
-    this.end.change(function () {
+    this.end.on("change", function () {
         var start = js_widget.start.val();
         var end = js_widget.end.val();
 
@@ -77,15 +77,15 @@ Faceted.DateRangeWidget = function (wid) {
     });
 
     // Handle clicks
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         js_widget.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         js_widget.reset();
     });
 };
@@ -226,7 +226,7 @@ Faceted.DateRangeWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -263,7 +263,7 @@ Faceted.DateRangeWidget.prototype = {
 
         link.attr("id", "criteria_" + this.wid + "_");
         link.attr("title", "Remove " + label + " filter");
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -304,9 +304,5 @@ Faceted.initializeDateRangeWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeDateRangeWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeDateRangeWidget);

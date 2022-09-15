@@ -23,7 +23,7 @@ FacetedEdit.CheckboxesWidget = function (wid) {
         self.operatorValue = self.operator.data("value");
         self.operator.text(self.operator.data(self.operatorValue));
 
-        self.operator.click(function (evt) {
+        self.operator.on("click", function (evt) {
             evt.preventDefault();
 
             if (self.operatorValue === "or") {
@@ -39,7 +39,7 @@ FacetedEdit.CheckboxesWidget = function (wid) {
     }
 
     var js_widget = this;
-    this.elements.click(function () {
+    this.elements.on("click", function () {
         js_widget.set_default(this);
     });
     this.count();
@@ -108,9 +108,8 @@ FacetedEdit.initializeCheckboxesWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeCheckboxesWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeCheckboxesWidget
+);

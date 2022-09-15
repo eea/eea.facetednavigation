@@ -18,7 +18,7 @@ Faceted.DebugWidget = function (wid) {
         var minmax = jQuery("<span>")
             .addClass("ui-icon ui-icon-plus")
             .css("float", "left");
-        minmax.click(function () {
+        minmax.on("click", function () {
             var button = jQuery(this);
             jQuery("dd." + css, parent).toggle();
             if (button.hasClass("ui-icon-minus")) {
@@ -34,7 +34,7 @@ Faceted.DebugWidget = function (wid) {
 
     // Bind events
     var js_widget = this;
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         js_widget.synchronize();
     });
 };
@@ -107,9 +107,5 @@ Faceted.initializeDebugWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeDebugWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeDebugWidget);

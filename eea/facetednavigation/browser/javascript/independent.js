@@ -14,8 +14,8 @@
   c12 = is the parameter id of your text search facet.
 
 */
-jQuery(document).ready(function () {
-    jQuery("form.faceted-external-search").submit(function (evt) {
+jQuery(function () {
+    jQuery("form.faceted-external-search").on("submit", function (evt) {
         evt.preventDefault();
         var form = jQuery(this);
         var action = form.attr("action");

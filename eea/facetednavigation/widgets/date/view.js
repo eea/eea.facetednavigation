@@ -68,8 +68,6 @@ Faceted.DateWidget.prototype = {
 
     reset_ui: function () {
         this.reset();
-        // this.select_from.trigger('change');
-        // this.select_to.trigger('change');
     },
 
     synchronize: function () {
@@ -114,7 +112,7 @@ Faceted.DateWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -168,6 +166,5 @@ Faceted.initializeDateWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(Faceted.Events.INITIALIZE, Faceted.initializeDateWidget);
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeDateWidget);

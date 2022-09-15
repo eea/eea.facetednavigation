@@ -31,12 +31,12 @@ FacetedEdit.DateRangeWidget = function (wid) {
         },
     });
 
-    this.start.change(function () {
+    this.start.on("change", function () {
         js_widget.force_range();
         js_widget.set_default(this);
     });
 
-    this.end.change(function () {
+    this.end.on("change", function () {
         js_widget.set_default(this);
     });
 
@@ -107,9 +107,8 @@ FacetedEdit.initializeDateRangeWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeDateRangeWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeDateRangeWidget
+);

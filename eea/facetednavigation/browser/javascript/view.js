@@ -1,4 +1,9 @@
-var Faceted = (window.Faceted = { version: "15.0" });
+var Faceted;
+if (window.Faceted !== undefined) {
+    Faceted = window.Faceted;
+} else {
+    Faceted = window.Faceted = { version: "15.0" };
+}
 /* Events
  */
 Faceted.Events = {};
@@ -22,19 +27,19 @@ Faceted.Events.CLEANUP_COMPLETED = "FACETED-CLEANUP-COMPLETED";
 /* Unbind events
  */
 Faceted.Events.cleanup = function () {
-    jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_START);
-    jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_QUERY_SUCCESS);
-    jQuery(Faceted.Events).unbind(Faceted.Events.QUERY_INITIALIZED);
-    jQuery(Faceted.Events).unbind(Faceted.Events.QUERY_CHANGED);
-    jQuery(Faceted.Events).unbind(Faceted.Events.RESET);
-    jQuery(Faceted.Events).unbind(Faceted.Events.FORM_DO_QUERY);
-    jQuery(Faceted.Events).unbind(Faceted.Events.WINDOW_WIDTH_CHANGED);
-    jQuery(Faceted.Events).unbind(Faceted.Events.WINDOW_HEIGHT_CHANGED);
-    jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_START);
-    jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_STOP);
-    jQuery(Faceted.Events).unbind(Faceted.Events.AJAX_ERROR);
-    jQuery(Faceted.Events).unbind(Faceted.Events.REDRAW);
-    jQuery(Faceted.Events).unbind(Faceted.Events.DO_UPDATE);
+    jQuery(Faceted.Events).off(Faceted.Events.AJAX_QUERY_START);
+    jQuery(Faceted.Events).off(Faceted.Events.AJAX_QUERY_SUCCESS);
+    jQuery(Faceted.Events).off(Faceted.Events.QUERY_INITIALIZED);
+    jQuery(Faceted.Events).off(Faceted.Events.QUERY_CHANGED);
+    jQuery(Faceted.Events).off(Faceted.Events.RESET);
+    jQuery(Faceted.Events).off(Faceted.Events.FORM_DO_QUERY);
+    jQuery(Faceted.Events).off(Faceted.Events.WINDOW_WIDTH_CHANGED);
+    jQuery(Faceted.Events).off(Faceted.Events.WINDOW_HEIGHT_CHANGED);
+    jQuery(Faceted.Events).off(Faceted.Events.AJAX_START);
+    jQuery(Faceted.Events).off(Faceted.Events.AJAX_STOP);
+    jQuery(Faceted.Events).off(Faceted.Events.AJAX_ERROR);
+    jQuery(Faceted.Events).off(Faceted.Events.REDRAW);
+    jQuery(Faceted.Events).off(Faceted.Events.DO_UPDATE);
     // jQuery(window).unbind(Faceted.Events.HASHCHANGE);
     /* jQuery.bbq events */
     window.removeEventListener("hashchange", Faceted.hash_changed);
@@ -123,7 +128,7 @@ Faceted.Window = {
 
     toggle_fullscreen: function (button) {
         button.attr("href", "#");
-        button.click(function () {
+        button.on("click", function () {
             var toggleFullScreenMode = window.toggleFullScreenMode;
             if (toggleFullScreenMode) {
                 toggleFullScreenMode();
@@ -193,7 +198,7 @@ Faceted.Form = {
         var context = this;
         Faceted.b_start_changed = false;
         jQuery(".pagination a").each(function () {
-            jQuery(this).click(function () {
+            jQuery(this).on("click", function () {
                 var href = jQuery(this).attr("href");
                 var regex = new RegExp("b_start\\:int=(\\d+)");
                 var b_start = regex.exec(href)[1];
@@ -338,7 +343,7 @@ Faceted.Sections = {
         self.more = jQuery(".faceted-sections-buttons-more", self.form).show();
         self.less = jQuery(".faceted-sections-buttons-less", self.form).hide();
 
-        jQuery("a", self.buttons).click(function (evt) {
+        jQuery("a", self.buttons).on("click", function (evt) {
             self.toggle(jQuery(this), evt);
             return false;
         });
@@ -363,23 +368,23 @@ Faceted.AjaxLook = {
         this.locked = false;
         // Events
         var js_object = this;
-        jQuery(Faceted.Events).bind(Faceted.Events.AJAX_START, function (evt, data) {
+        jQuery(Faceted.Events).on(Faceted.Events.AJAX_START, function (evt, data) {
             js_object.add(data.wid);
         });
 
-        jQuery(Faceted.Events).bind(Faceted.Events.AJAX_STOP, function (evt, data) {
+        jQuery(Faceted.Events).on(Faceted.Events.AJAX_STOP, function (evt, data) {
             js_object.remove(data.wid);
         });
 
-        jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_START, function () {
+        jQuery(Faceted.Events).on(Faceted.Events.AJAX_QUERY_START, function () {
             js_object.add("faceted-results");
         });
 
-        jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function () {
+        jQuery(Faceted.Events).on(Faceted.Events.AJAX_QUERY_SUCCESS, function () {
             js_object.remove("faceted-results");
         });
 
-        jQuery(Faceted.Events).bind(Faceted.Events.AJAX_ERROR, function () {
+        jQuery(Faceted.Events).on(Faceted.Events.AJAX_ERROR, function () {
             jQuery(this.slaves).each(function (index) {
                 js_object.remove(js_object.slaves[index]);
             });
@@ -454,7 +459,7 @@ Faceted.Load = function (evt, baseurl) {
     // Remove widgets with errors
     jQuery(".faceted-widget:has(div.faceted-widget-error)").remove();
 
-    jQuery(Faceted.Events).bind(Faceted.Events.REDRAW, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.REDRAW, function () {
         if (jQuery("#faceted-left-column:has(div.faceted-widget)").length) {
             jQuery("#center-content-area").addClass("left-area-js");
         } else {
@@ -473,15 +478,15 @@ Faceted.Load = function (evt, baseurl) {
     jQuery(Faceted.Events).trigger(Faceted.Events.INITIALIZE);
 
     // Bind events
-    // jQuery(window).bind(Faceted.Events.HASHCHANGE, function(evt){
+    // jQuery(window).on(Faceted.Events.HASHCHANGE, function(evt){
     //   Faceted.URLHandler.hash_changed();
     // });
     window.addEventListener("hashchange", Faceted.hash_changed, false);
 
-    jQuery(Faceted.Events).bind(Faceted.Events.AJAX_QUERY_SUCCESS, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.AJAX_QUERY_SUCCESS, function () {
         Faceted.Form.initialize_paginator();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         Faceted.Form.reset();
     });
 
@@ -528,18 +533,18 @@ Faceted.Cleanup = function () {
     Faceted.URLHandler.set();
 };
 
-// Load
-jQuery(window).on("load", function (evt) {
-    var context = jQuery("body").find(".faceted-form");
-    if (context.length) {
-        Faceted.Load(evt, context.data("baseurl"));
-    }
-});
-
 // Unload
 jQuery(window).on("unload", function () {
     var context = jQuery("body").find(".faceted-form");
     if (context.length) {
         Faceted.Unload();
+    }
+});
+
+// Load
+jQuery(function (evt) {
+    var context = jQuery("body").find(".faceted-form");
+    if (context.length) {
+        Faceted.Load(evt, context.data("baseurl"));
     }
 });

@@ -17,7 +17,7 @@ Faceted.CheckboxesWidget = function (wid) {
         this.operator = this.operatorElem.data("value");
 
         // Handle operator click
-        this.operatorElem.click(function (evt) {
+        this.operatorElem.on("click", function (evt) {
             evt.preventDefault();
             self.operator_click(this, evt);
         });
@@ -37,12 +37,12 @@ Faceted.CheckboxesWidget = function (wid) {
         this.version = version.text();
     }
 
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
 
     // Handle checkbox click
-    this.elements.click(function (evt) {
+    this.elements.on("click", function (evt) {
         self.checkbox_click(this, evt);
     });
 
@@ -71,18 +71,18 @@ Faceted.CheckboxesWidget = function (wid) {
     }
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         self.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         self.reset();
     });
     if (this.widget.hasClass("faceted-count")) {
         var sortcountable = this.widget.hasClass("faceted-sortcountable");
-        jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function () {
+        jQuery(Faceted.Events).on(Faceted.Events.QUERY_INITIALIZED, function () {
             self.count(sortcountable);
         });
-        jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
+        jQuery(Faceted.Events).on(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
             if (
                 self.operator != "and" &&
                 (data.wid == self.wid || data.wid == "b_start")
@@ -211,7 +211,7 @@ Faceted.CheckboxesWidget.prototype = {
             var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
             link.attr("id", "criteria_" + id);
             link.attr("title", "Remove " + title + " filter");
-            link.click(function () {
+            link.on("click", function () {
                 widget.criteria_remove(value, element);
                 return false;
             });
@@ -290,7 +290,7 @@ Faceted.CheckboxesWidget.prototype = {
                 input.attr("disabled", "disabled");
             } else {
                 input.attr("disabled", false);
-                input.click(function (evt) {
+                input.on("click", function (evt) {
                     context.checkbox_click(this, evt);
                 });
             }
@@ -316,9 +316,5 @@ Faceted.initializeCheckboxesWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeCheckboxesWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeCheckboxesWidget);

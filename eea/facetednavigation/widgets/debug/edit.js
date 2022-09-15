@@ -14,7 +14,7 @@ FacetedEdit.DebugWidget = function (wid) {
         var minmax = jQuery("<span>")
             .addClass("ui-icon ui-icon-plus")
             .css("float", "left");
-        minmax.click(function () {
+        minmax.on("click", function () {
             var button = jQuery(this);
             jQuery("dd." + css, parent).toggle();
             if (button.hasClass("ui-icon-minus")) {
@@ -29,7 +29,7 @@ FacetedEdit.DebugWidget = function (wid) {
     });
 
     var js_widget = this;
-    jQuery(FacetedEdit.Events).bind(FacetedEdit.Events.AJAX_STOP, function (evt, data) {
+    jQuery(FacetedEdit.Events).on(FacetedEdit.Events.AJAX_STOP, function (evt, data) {
         js_widget.update(data);
     });
 };
@@ -99,9 +99,8 @@ FacetedEdit.initializeDebugWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeDebugWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeDebugWidget
+);

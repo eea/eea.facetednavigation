@@ -54,9 +54,8 @@ FacetedEdit.initializeDateWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeDateWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeDateWidget
+);

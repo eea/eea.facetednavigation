@@ -11,13 +11,13 @@ Faceted.CriteriaWidget = function (wid) {
     this.toggle_button_count = jQuery(".faceted-criteria-count", this.toggle_button);
 
     var js_widget = this;
-    this.reset_button.click(function (evt) {
+    this.reset_button.on("click", function (evt) {
         js_widget.reset_click(this, evt);
         return false;
     });
 
     var toggle_buttons = jQuery("a", this.toggle_button);
-    toggle_buttons.click(function (evt) {
+    toggle_buttons.on("click", function (evt) {
         js_widget.toggle_button_click(this, evt);
         return false;
     });
@@ -34,7 +34,7 @@ Faceted.CriteriaWidget = function (wid) {
         return js_widget.update();
     });
 
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         return js_widget.update_syndication();
     });
 };
@@ -119,9 +119,5 @@ Faceted.initializeCriteriaWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeCriteriaWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeCriteriaWidget);

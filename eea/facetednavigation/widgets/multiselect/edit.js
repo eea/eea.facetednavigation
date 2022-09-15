@@ -47,7 +47,7 @@ FacetedEdit.MultiSelectWidget = function (wid) {
         self.operatorValue = self.operator.data("value");
         self.operator.text(self.operator.data(self.operatorValue));
 
-        self.operator.click(function (evt) {
+        self.operator.on("click", function (evt) {
             evt.preventDefault();
 
             if (self.operatorValue === "or") {
@@ -64,7 +64,7 @@ FacetedEdit.MultiSelectWidget = function (wid) {
 
     // Handle change
     var js_widget = this;
-    this.select.change(function () {
+    this.select.on("change", function () {
         js_widget.set_default(this);
     });
 
@@ -124,9 +124,8 @@ FacetedEdit.initializeMultiSelectWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeMultiSelectWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeMultiSelectWidget
+);

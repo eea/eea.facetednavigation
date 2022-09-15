@@ -25,23 +25,23 @@ Faceted.AlphabeticalWidget = function (wid) {
 
     // Handle letter click
     var js_widget = this;
-    this.letters.click(function (evt) {
+    this.letters.on("click", function (evt) {
         js_widget.letter_click(this, evt);
     });
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         js_widget.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         js_widget.reset();
     });
     if (this.widget.hasClass("faceted-count")) {
         var sortcountable = this.widget.hasClass("faceted-sortcountable");
-        jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function () {
+        jQuery(Faceted.Events).on(Faceted.Events.QUERY_INITIALIZED, function () {
             js_widget.count(sortcountable);
         });
-        jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
+        jQuery(Faceted.Events).on(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
             if (data.wid == js_widget.wid || data.wid == "b_start") {
                 return;
             }
@@ -124,7 +124,7 @@ Faceted.AlphabeticalWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function (evt) {
+        link.on("click", function (evt) {
             widget.criteria_remove(this, evt);
             return false;
         });
@@ -146,7 +146,7 @@ Faceted.AlphabeticalWidget.prototype = {
         link.attr("title", "Remove " + label + " filter");
 
         var widget = this;
-        link.click(function (evt) {
+        link.on("click", function (evt) {
             widget.criteria_remove(this, evt);
             return false;
         });
@@ -198,7 +198,7 @@ Faceted.AlphabeticalWidget.prototype = {
             if (!value) {
                 letter.addClass("faceted-alphabetic-letter-disabled");
             } else {
-                letter.click(function (evt) {
+                letter.on("click", function (evt) {
                     context.letter_click(this, evt);
                 });
             }
@@ -222,9 +222,8 @@ Faceted.initializeAlphabeticalWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeAlphabeticalWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(
+    Faceted.Events.INITIALIZE,
+    Faceted.initializeAlphabeticalWidget
+);

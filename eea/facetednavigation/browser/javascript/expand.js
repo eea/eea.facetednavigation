@@ -82,7 +82,7 @@
                     .hide();
                 self.append(self.button);
 
-                link.click(function () {
+                link.on("click", function () {
                     if (self.colapsed) {
                         self.trigger(options.events.expand);
                     } else {
@@ -92,7 +92,7 @@
                 });
 
                 if (options.maxitems) {
-                    link.click();
+                    link.trigger("click");
                 }
             },
         };

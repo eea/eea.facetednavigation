@@ -1,5 +1,4 @@
 process.traceDeprecation = true;
-const package_json = require("./package.json");
 const path = require("path");
 
 module.exports = [

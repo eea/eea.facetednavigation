@@ -6,7 +6,7 @@ Faceted.PortletWidget = function (wid) {
     jQuery("legend", this.widget).hide();
     jQuery("fieldset", this.widget).css("border", "none");
 
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return true;
     });
 };
@@ -19,9 +19,5 @@ Faceted.initializePortletWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializePortletWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializePortletWidget);

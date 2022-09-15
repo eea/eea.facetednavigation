@@ -4,12 +4,12 @@ FacetedEdit.ETagWidget = function (wid) {
     this.input = jQuery("#" + this.wid);
     this.selected = this.input;
 
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
 
     var js_widget = this;
-    this.input.change(function () {
+    this.input.on("change", function () {
         js_widget.set_default(this);
     });
 };
@@ -44,9 +44,8 @@ FacetedEdit.initializeETagWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeETagWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeETagWidget
+);

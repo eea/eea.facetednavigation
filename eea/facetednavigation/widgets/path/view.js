@@ -154,6 +154,5 @@ Faceted.initializePathWidget = function () {
     });
 };
 
-jQuery(function () {
-    jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializePathWidget);
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializePathWidget);

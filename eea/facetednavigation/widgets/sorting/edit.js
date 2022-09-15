@@ -8,10 +8,10 @@ FacetedEdit.SortingWidget = function (wid) {
 
     // Handle select change
     var js_widget = this;
-    this.select.change(function () {
+    this.select.on("change", function () {
         js_widget.set_default(this);
     });
-    this.reverse.click(function () {
+    this.reverse.on("click", function () {
         js_widget.set_default(this);
     });
 };
@@ -48,9 +48,8 @@ FacetedEdit.initializeSortingWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeSortingWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeSortingWidget
+);

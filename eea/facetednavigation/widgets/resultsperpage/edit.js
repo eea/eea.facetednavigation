@@ -6,7 +6,7 @@ FacetedEdit.ResultsPerPageWidget = function (wid) {
 
     // Handle change
     var js_widget = this;
-    this.select.change(function () {
+    this.select.on("change", function () {
         js_widget.set_default(this);
     });
 };
@@ -40,9 +40,8 @@ FacetedEdit.initializeResultsPerPageWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeResultsPerPageWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeResultsPerPageWidget
+);

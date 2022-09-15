@@ -13,13 +13,13 @@ Faceted.TextWidget = function (wid) {
     // Handle text change
     var js_widget = this;
     var form = this.widget.find("form");
-    form.submit(function () {
+    form.on("submit", function () {
         js_widget.text_change(js_widget.button);
         return false;
     });
 
-    this.input.change(function () {
-        form.submit();
+    this.input.on("change", function () {
+        form.trigger("submit");
     });
 
     // Default value
@@ -31,10 +31,10 @@ Faceted.TextWidget = function (wid) {
     }
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         js_widget.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         js_widget.reset();
     });
 };
@@ -117,7 +117,7 @@ Faceted.TextWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -145,7 +145,7 @@ Faceted.TextWidget.prototype = {
                 var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
                 link.attr("id", "criteria_" + widget.wid + "_" + label);
                 link.attr("title", "Remove " + label + " filter");
-                link.click(function () {
+                link.on("click", function () {
                     widget.criteria_remove(label);
                     return false;
                 });
@@ -186,6 +186,5 @@ Faceted.initializeTextWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(Faceted.Events.INITIALIZE, Faceted.initializeTextWidget);
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeTextWidget);

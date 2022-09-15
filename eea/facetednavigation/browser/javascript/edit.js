@@ -1,4 +1,10 @@
-var FacetedEdit = (window.FacetedEdit = { version: "15.0" });
+var FacetedEdit;
+if (window.FacetedEdit !== undefined) {
+    FacetedEdit = window.FacetedEdit;
+} else {
+    FacetedEdit = window.FacetedEdit = { version: "15.0" };
+}
+
 FacetedEdit.loading = '<div class="faceted_loading"></div>';
 
 // Widgets
@@ -61,7 +67,7 @@ FacetedEdit.Window = {
 
     toggle_fullscreen: function (button) {
         button.attr("href", "#");
-        button.click(function () {
+        button.on("click", function () {
             var toggleFullScreenMode = window.toggleFullScreenMode;
             if (toggleFullScreenMode) {
                 toggleFullScreenMode();
@@ -318,15 +324,15 @@ FacetedEdit.FormWidgets = {
                 });
 
                 jQuery(".faceted-widgets .ui-widget-header").disableSelection();
-                jQuery("div.faceted-widget").dblclick(function () {
+                jQuery("div.faceted-widget").on("dblclick", function () {
                     var wid = jQuery(this).attr("id");
                     context.edit_widget(wid);
                 });
 
-                jQuery("div.faceted-widget input[type=submit]").click(function () {
+                jQuery("div.faceted-widget input[type=submit]").on("click", function () {
                     return false;
                 });
-                jQuery("div.faceted-widget a").click(function () {
+                jQuery("div.faceted-widget a").on("click", function () {
                     return false;
                 });
 
@@ -341,7 +347,7 @@ FacetedEdit.FormWidgets = {
                     var position = container_id[0];
                     var section = container_id[1];
                     var local_addbutton = addbutton.clone();
-                    local_addbutton.click(function () {
+                    local_addbutton.on("click", function () {
                         var dialog = jQuery("#faceted-edit-addwidget");
                         jQuery("#wposition", dialog).val(position);
                         jQuery("#wsection", dialog).val(section);
@@ -378,7 +384,7 @@ FacetedEdit.FormWidgets = {
                     header_del_button.css("float", "right");
                     header_del_button.attr("class", "ui-icon ui-icon-trash");
                     header_del_button.html("x");
-                    header_del_button.click(function () {
+                    header_del_button.on("click", function () {
                         var confirm = jQuery("#confirm-delete-dialog");
                         var label = jQuery("strong", confirm);
                         label.attr("id", wid);
@@ -392,7 +398,7 @@ FacetedEdit.FormWidgets = {
                     header_edit_button.css("float", "right");
                     header_edit_button.attr("class", "ui-icon ui-icon-pencil");
                     header_edit_button.html("e");
-                    header_edit_button.click(function () {
+                    header_edit_button.on("click", function () {
                         context.edit_widget(cid);
                     });
 
@@ -409,7 +415,7 @@ FacetedEdit.FormWidgets = {
                     header_hide_button.attr("class", "ui-icon");
                     header_hide_button.addClass(css);
                     header_hide_button.html("h");
-                    header_hide_button.click(function () {
+                    header_hide_button.on("click", function () {
                         context.hide_button_click(wid, cid);
                     });
 
@@ -575,7 +581,7 @@ FacetedEdit.FormEditWidget = {
                     catalog: catalog,
                     operator: operator,
                 });
-                catalog.change(function () {
+                catalog.on("change", function () {
                     jQuery(FacetedEdit.Events).trigger(
                         FacetedEdit.Events.CATALOG_CHANGED,
                         {
@@ -666,10 +672,10 @@ FacetedEdit.FormAddWidgets = {
         this.details = jQuery("#faceted-widget-details");
 
         // Events
-        this.form.submit(function (evt) {
+        this.form.on("submit", function (evt) {
             return context.submit(context.form, evt);
         });
-        this.wtype.change(function (evt) {
+        this.wtype.on("change", function (evt) {
             return context.wtype_change(this, evt);
         });
 
@@ -709,7 +715,7 @@ FacetedEdit.FormAddWidgets = {
                 var operator = jQuery(selector + "-operator select");
                 if (catalog.length && operator.length) {
                     operator = operator.clone();
-                    catalog.change(function () {
+                    catalog.on("change", function () {
                         jQuery(FacetedEdit.Events).trigger(
                             FacetedEdit.Events.CATALOG_CHANGED,
                             {
@@ -763,7 +769,7 @@ FacetedEdit.FormImportExport = {
     initialize: function () {
         jQuery(".faceted-exportimport-fieldset").hide();
         this.form = jQuery(".faceted-exportimport-fieldset form");
-        this.form.submit(function () {
+        this.form.on("submit", function () {
             return false;
         });
 
@@ -772,7 +778,7 @@ FacetedEdit.FormImportExport = {
         buttons.each(function () {
             var button = jQuery(this);
             var new_button = button.clone();
-            new_button.click(function () {
+            new_button.on("click", function () {
                 if (new_button.attr("name") == "export_button") {
                     context.export_xml();
                 }
@@ -958,7 +964,7 @@ FacetedEdit.FormSections = {
 
             li.attr("id", "section-tabs-" + section_id);
             li.attr("class", "faceted-drag-drop formTab");
-            li.click(function () {
+            li.on("click", function () {
                 context.tab_clicked(this, section_id);
             });
             var a = jQuery("<a>");
@@ -1137,7 +1143,7 @@ FacetedEdit.FormPage = {
         button
             .attr("title", label)
             .addClass("faceted-ajax")
-            .click(function () {
+            .on("click", function () {
                 jQuery.cookie(context.cookie_id, cookie);
                 window.location.href = action;
             });
@@ -1175,18 +1181,18 @@ FacetedEdit.Load = function (evt, baseurl) {
 
 FacetedEdit.Unload = function () {};
 
-// Load
-jQuery(window).on("load", function (evt) {
-    var context = jQuery("body").find(".faceted-edit-fieldset");
-    if (context.length) {
-        FacetedEdit.Load(evt, context.data("baseurl"));
-    }
-});
-
 // Unload
 jQuery(window).on("unload", function () {
     var context = jQuery("body").find(".faceted-edit-fieldset");
     if (context.length) {
         FacetedEdit.Unload();
+    }
+});
+
+// Load
+jQuery(function (evt) {
+    var context = jQuery("body").find(".faceted-edit-fieldset");
+    if (context.length) {
+        FacetedEdit.Load(evt, context.data("baseurl"));
     }
 });

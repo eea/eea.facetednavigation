@@ -6,11 +6,11 @@ FacetedEdit.RangeWidget = function (wid) {
     this.end = jQuery("input[name=end]", this.widget);
 
     var js_widget = this;
-    this.start.change(function () {
+    this.start.on("change", function () {
         js_widget.set_default(this);
     });
 
-    this.end.change(function () {
+    this.end.on("change", function () {
         js_widget.set_default(this);
     });
 };
@@ -59,9 +59,8 @@ FacetedEdit.initializeRangeWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeRangeWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeRangeWidget
+);

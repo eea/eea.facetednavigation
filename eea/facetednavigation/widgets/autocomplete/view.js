@@ -42,7 +42,7 @@ Faceted.AutocompleteWidget = function (wid) {
     });
 
     // Handle text change
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
 
@@ -72,10 +72,10 @@ Faceted.AutocompleteWidget = function (wid) {
     }
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         self.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         self.reset();
     });
 };
@@ -174,7 +174,7 @@ Faceted.AutocompleteWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -202,7 +202,7 @@ Faceted.AutocompleteWidget.prototype = {
                 var link = jQuery('<a href="#" class="faceted-remove">remove</a>');
                 link.attr("id", "criteria_" + widget.wid + "_" + label);
                 link.attr("title", "Remove " + label + " filter");
-                link.click(function () {
+                link.on("click", function () {
                     widget.criteria_remove(label);
                     return false;
                 });
@@ -238,9 +238,8 @@ Faceted.initializeAutocompleteWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeAutocompleteWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(
+    Faceted.Events.INITIALIZE,
+    Faceted.initializeAutocompleteWidget
+);

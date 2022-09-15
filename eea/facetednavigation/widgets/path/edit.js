@@ -13,7 +13,7 @@ FacetedEdit.PathWidget.prototype = {
         self.input = self.widget.find("input");
         self.selected = self.input;
 
-        self.form.submit(function () {
+        self.form.on("submit", function () {
             self.set_default(self.input);
             return false;
         });

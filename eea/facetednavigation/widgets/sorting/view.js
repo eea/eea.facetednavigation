@@ -18,15 +18,15 @@ Faceted.SortingWidget = function (wid) {
     }
 
     // Handle select change
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
 
     var js_widget = this;
-    this.select.change(function (evt) {
+    this.select.on("change", function (evt) {
         js_widget.select_change(this, evt);
     });
-    this.reverse.click(function (evt) {
+    this.reverse.on("click", function (evt) {
         js_widget.reverse_change(this, evt);
     });
 
@@ -43,10 +43,10 @@ Faceted.SortingWidget = function (wid) {
     }
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         js_widget.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         js_widget.reset();
     });
 };
@@ -149,7 +149,7 @@ Faceted.SortingWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -177,7 +177,7 @@ Faceted.SortingWidget.prototype = {
 
         link.attr("id", "criteria_" + this.wid + "_" + value);
         link.attr("title", "Remove " + label + " filter");
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -209,9 +209,5 @@ Faceted.initializeSortingWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeSortingWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeSortingWidget);

@@ -6,12 +6,12 @@ FacetedEdit.TalWidget = function (wid) {
     self.input = jQuery("#" + self.wid);
     self.selected = self.input;
 
-    self.form.submit(function () {
+    self.form.on("submit", function () {
         self.set_default(self.input);
         return false;
     });
 
-    self.input.change(function () {
+    self.input.on("change", function () {
         self.set_default(this);
     });
 };
@@ -47,9 +47,8 @@ FacetedEdit.initializeTalWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeTalWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeTalWidget
+);

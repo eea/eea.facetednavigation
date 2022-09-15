@@ -8,7 +8,7 @@ FacetedEdit.TagsCloudWidget = function (wid) {
     this.initialize();
 
     var js_widget = this;
-    this.tags.click(function () {
+    this.tags.on("click", function () {
         js_widget.tag_click(this);
     });
 };
@@ -133,19 +133,18 @@ FacetedEdit.resizeTagsCloudWidgets = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeTagsCloudWidget
-    );
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeTagsCloudWidget
+);
 
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.POSITION_UPDATED,
-        FacetedEdit.resizeTagsCloudWidgets
-    );
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.POSITION_UPDATED,
+    FacetedEdit.resizeTagsCloudWidgets
+);
 
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.WINDOW_WIDTH_CHANGED,
-        FacetedEdit.resizeTagsCloudWidgets
-    );
-});
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.WINDOW_WIDTH_CHANGED,
+    FacetedEdit.resizeTagsCloudWidgets
+);

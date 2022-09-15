@@ -17,12 +17,12 @@ Faceted.RadioWidget = function (wid) {
         this.version = version.text();
     }
 
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
 
     var js_widget = this;
-    this.elements.click(function (evt) {
+    this.elements.on("click", function (evt) {
         js_widget.radio_click(this, evt);
     });
 
@@ -34,18 +34,18 @@ Faceted.RadioWidget = function (wid) {
     }
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         js_widget.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         js_widget.reset();
     });
     if (this.widget.hasClass("faceted-count")) {
         var sortcountable = this.widget.hasClass("faceted-sortcountable");
-        jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function () {
+        jQuery(Faceted.Events).on(Faceted.Events.QUERY_INITIALIZED, function () {
             js_widget.count(sortcountable);
         });
-        jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
+        jQuery(Faceted.Events).on(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
             if (data.wid == js_widget.wid || data.wid == "b_start") {
                 return;
             }
@@ -134,7 +134,7 @@ Faceted.RadioWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -163,7 +163,7 @@ Faceted.RadioWidget.prototype = {
         var span = jQuery('<span class="faceted-radio-criterion">');
         link.attr("id", "criteria_" + id);
         link.attr("title", "Remove " + title + " filter");
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -232,7 +232,7 @@ Faceted.RadioWidget.prototype = {
                 input.prop("disabled", "disabled");
             } else {
                 input.prop("disabled", false);
-                input.click(function (evt) {
+                input.on("click", function (evt) {
                     context.radio_click(this, evt);
                 });
             }
@@ -258,9 +258,5 @@ Faceted.initializeRadioWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeRadioWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(Faceted.Events.INITIALIZE, Faceted.initializeRadioWidget);

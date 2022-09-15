@@ -5,7 +5,7 @@ FacetedEdit.AlphabeticalWidget = function (wid) {
     this.selected = jQuery(".faceted_letter_selected", this.widget);
 
     var js_widget = this;
-    this.letters.click(function () {
+    this.letters.on("click", function () {
         js_widget.letter_click(this);
     });
 };
@@ -73,9 +73,8 @@ FacetedEdit.initializeAlphabeticalWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(FacetedEdit.Events).bind(
-        FacetedEdit.Events.INITIALIZE_WIDGETS,
-        FacetedEdit.initializeAlphabeticalWidget
-    );
-});
+// Initialize
+jQuery(FacetedEdit.Events).on(
+    FacetedEdit.Events.INITIALIZE_WIDGETS,
+    FacetedEdit.initializeAlphabeticalWidget
+);

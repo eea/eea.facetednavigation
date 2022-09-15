@@ -68,7 +68,7 @@ Faceted.MultiSelectWidget = function (wid) {
         this.operator = this.operatorElem.data("value");
 
         // Handle operator click
-        this.operatorElem.click(function (evt) {
+        this.operatorElem.on("click", function (evt) {
             evt.preventDefault();
             self.operator_click(this, evt);
         });
@@ -87,7 +87,7 @@ Faceted.MultiSelectWidget = function (wid) {
     }
 
     // Handle change
-    jQuery("form", this.widget).submit(function () {
+    jQuery("form", this.widget).on("submit", function () {
         return false;
     });
 
@@ -121,18 +121,18 @@ Faceted.MultiSelectWidget = function (wid) {
     }
 
     // Bind events
-    jQuery(Faceted.Events).bind(Faceted.Events.QUERY_CHANGED, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.QUERY_CHANGED, function () {
         self.synchronize();
     });
-    jQuery(Faceted.Events).bind(Faceted.Events.RESET, function () {
+    jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
         self.reset();
     });
     if (this.widget.hasClass("faceted-count")) {
         var sortcountable = this.widget.hasClass("faceted-sortcountable");
-        jQuery(Faceted.Events).bind(Faceted.Events.QUERY_INITIALIZED, function () {
+        jQuery(Faceted.Events).on(Faceted.Events.QUERY_INITIALIZED, function () {
             self.count(sortcountable);
         });
-        jQuery(Faceted.Events).bind(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
+        jQuery(Faceted.Events).on(Faceted.Events.FORM_DO_QUERY, function (evt, data) {
             if (
                 self.operator != "and" &&
                 (data.wid == self.wid || data.wid == "b_start")
@@ -246,7 +246,7 @@ Faceted.MultiSelectWidget.prototype = {
         link.attr("id", "criteria_" + this.wid);
         link.attr("title", "Remove " + this.title + " filters");
         var widget = this;
-        link.click(function () {
+        link.on("click", function () {
             widget.criteria_remove();
             return false;
         });
@@ -376,9 +376,8 @@ Faceted.initializeMultiSelectWidget = function () {
     });
 };
 
-jQuery(document).ready(function () {
-    jQuery(Faceted.Events).bind(
-        Faceted.Events.INITIALIZE,
-        Faceted.initializeMultiSelectWidget
-    );
-});
+// Initialize
+jQuery(Faceted.Events).on(
+    Faceted.Events.INITIALIZE,
+    Faceted.initializeMultiSelectWidget
+);
