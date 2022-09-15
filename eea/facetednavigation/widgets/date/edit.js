@@ -20,6 +20,7 @@ FacetedEdit.DateWidget = function (wid) {
 
 FacetedEdit.DateWidget.prototype = {
     set_default: function (from, to) {
+        this.sync_ui();
         var from_val = from.val();
         var to_val = to.val();
         var value = "";
@@ -42,6 +43,33 @@ FacetedEdit.DateWidget.prototype = {
             jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {
                 msg: data,
             });
+        });
+    },
+
+    sync_ui: function () {
+        this.select_from.find("option").attr("disabled", false);
+        this.select_to.find("option").attr("disabled", false);
+
+        var found;
+        found = false;
+        var from_value = this.select_from.val();
+        this.select_to.find("option").each(function () {
+            jQuery(this).attr("disabled", true);
+            if (!found && this.value === from_value) {
+                found = true;
+                return false;
+            }
+        });
+
+        found = false;
+        var to_value = this.select_to.val();
+        this.select_from.find("option").each(function () {
+            if (this.value === to_value) {
+                found = true;
+            }
+            if (found) {
+                jQuery(this).attr("disabled", true);
+            }
         });
     },
 };

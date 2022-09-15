@@ -37,7 +37,7 @@ Faceted.DateWidget = function (wid) {
         self.synchronize();
     });
     jQuery(Faceted.Events).on(Faceted.Events.RESET, function () {
-        self.reset_ui();
+        self.reset();
     });
 };
 
@@ -54,6 +54,7 @@ Faceted.DateWidget.prototype = {
     },
 
     do_query: function () {
+        this.sync_ui();
         var value = [this.select_from.val(), this.select_to.val()];
         this.selected = [this.select_from, this.select_to];
         Faceted.Form.do_query(this.wid, value);
@@ -64,24 +65,48 @@ Faceted.DateWidget.prototype = {
         this.select_from.val("now-past");
         this.select_to.val("now_future");
         this.widget.removeClass("faceted-widget-active");
+        this.sync_ui();
     },
 
-    reset_ui: function () {
-        this.reset();
+    sync_ui: function () {
+        this.select_from.find("option").attr("disabled", false);
+        this.select_to.find("option").attr("disabled", false);
+
+        var found;
+        found = false;
+        var from_value = this.select_from.val();
+        this.select_to.find("option").each(function () {
+            jQuery(this).attr("disabled", true);
+            if (!found && this.value === from_value) {
+                found = true;
+                return false;
+            }
+        });
+
+        found = false;
+        var to_value = this.select_to.val();
+        this.select_from.find("option").each(function () {
+            if (this.value === to_value) {
+                found = true;
+            }
+            if (found) {
+                jQuery(this).attr("disabled", true);
+            }
+        });
     },
 
     synchronize: function () {
         var q_value = Faceted.Query[this.wid];
         if (!q_value) {
-            this.reset_ui();
+            this.reset();
             return;
         }
         if (!q_value.length) {
-            this.reset_ui();
+            this.reset();
             return;
         }
         if (q_value.length < 2) {
-            this.reset_ui();
+            this.reset();
             return;
         }
 
@@ -153,7 +178,7 @@ Faceted.DateWidget.prototype = {
     },
 
     criteria_remove: function () {
-        this.reset_ui();
+        this.reset();
         return Faceted.Form.do_query(this.wid, []);
     },
 };
