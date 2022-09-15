@@ -1,0 +1,24 @@
+.faceted-select-widget {
+    select {
+        width: 100%;
+    }
+
+    .faceted-select-item-disabled {
+        color: gray;
+    }
+
+    .faceted-zero-count-hidden {
+        .faceted-select-item-disabled {
+            display: none;
+        }
+    }
+
+    label.select-field {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+}

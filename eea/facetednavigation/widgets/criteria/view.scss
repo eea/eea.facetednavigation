@@ -1,0 +1,61 @@
+.faceted-criteria {
+    text-align: left;
+
+    .faceted-criteria-syndication-rss {
+        float: right;
+        padding: 0.2em;
+    }
+
+    a {
+        color: #007bb1;
+        text-decoration: none;
+        border: none;
+
+        &:visited {
+            color: #007bb1;
+            text-decoration: none;
+            border: none;
+        }
+    }
+
+    span {
+        padding-left: 0.2em;
+        padding-right: 0.5em;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin-left: 1.5em;
+        font-weight: normal;
+    }
+
+    .faceted-criteria-hide-show {
+        float: left;
+        margin-right: 1em;
+    }
+
+    .faceted-criteria-show {
+        display: none;
+
+        &:before {
+            content: "+";
+        }
+    }
+
+    .faceted-criteria-hide:before {
+        content: "-";
+    }
+
+    .faceted-criteria-reset {
+        a:before {
+            content: "x";
+        }
+    }
+
+    .faceted-criteria-count {
+        display: none;
+    }
+}

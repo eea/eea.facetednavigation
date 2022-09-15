@@ -11,9 +11,7 @@ FacetedEdit.DebugWidget = function (wid) {
         var dt = jQuery(this);
         var css = dt.attr("class");
         var parent = dt.parent("dl");
-        var minmax = jQuery("<span>")
-            .addClass("ui-icon ui-icon-plus")
-            .css("float", "left");
+        var minmax = jQuery("<span>").addClass("ui-icon ui-icon-plus");
         minmax.on("click", function () {
             var button = jQuery(this);
             jQuery("dd." + css, parent).toggle();

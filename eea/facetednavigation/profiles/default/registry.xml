@@ -19,8 +19,8 @@
     <value key="csscompilation">++plone++facetednavigation/faceted-jquery.min.css</value>
     <value key="expression"></value>
     <value key="depends">plone</value>
-    <value key="load_async">False</value>
-    <value key="load_defer">False</value>
+    <value key="load_async">True</value>
+    <value key="load_defer">True</value>
   </records>
 
   <!-- Faceted Navigation view -->
@@ -30,8 +30,8 @@
     <value key="csscompilation">++plone++facetednavigation/faceted-view.min.css</value>
     <value key="expression"></value>
     <value key="depends">faceted.jquery</value>
-    <value key="load_async">False</value>
-    <value key="load_defer">False</value>
+    <value key="load_async">True</value>
+    <value key="load_defer">True</value>
   </records>
 
   <!-- Faceted Navigation edit -->
@@ -39,10 +39,10 @@
     <value key="enabled">True</value>
     <value key="jscompilation">++plone++facetednavigation/faceted-edit.min.js</value>
     <value key="csscompilation">++plone++facetednavigation/faceted-edit.min.css</value>
-    <value key="expression">python:'configure_faceted.html' in request.URL0</value>
+    <value key="expression"></value>
     <value key="depends">faceted.view</value>
-    <value key="load_async">False</value>
-    <value key="load_defer">False</value>
+    <value key="load_async">True</value>
+    <value key="load_defer">True</value>
   </records>
 
 </registry>

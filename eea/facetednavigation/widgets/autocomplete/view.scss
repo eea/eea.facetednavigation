@@ -1,0 +1,52 @@
+.faceted-autocomplete-widget {
+    label.text-field {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    .select2-container {
+        margin-bottom: auto;
+        display: inherit;
+
+        .select2-choice {
+            background-image: none;
+            font-weight: normal;
+
+            abbr {
+                top: 6px;
+            }
+
+            .select2-arrow {
+                background-image: none;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+
+    .select2-container-multi {
+        .select2-choices {
+            .select2-search-choice {
+                background-image: none;
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
+                font-weight: normal;
+            }
+        }
+    }
+
+    .faceted-operator a,
+    .select2-search-choice-close {
+        border-bottom: none;
+    }
+}
+
+.faceted-autocomplete-search {
+    display: grid;
+    grid-template-columns: auto min-content;
+}

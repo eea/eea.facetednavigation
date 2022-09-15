@@ -43,22 +43,28 @@
         "webpack": "^5.72.0",
         "webpack-bundle-analyzer": "^4.5.0",
         "webpack-cli": "^4.9.2",
-        "webpack-dev-server": "^4.8.1"
+        "webpack-dev-server": "^4.8.1",
+        "sass": "^1.49.11"
     },
     "resolutions-comments": {
         "ua-parser-js": "See https://github.com/faisalman/ua-parser-js/issues/536"
     },
     "scripts": {
-        "build": "npm-run-all build:webpack build:css",
+        "build": "npm-run-all build:webpack build:css prettier",
         "build:webpack": "NODE_ENV=production webpack --config webpack.config.js",
-        "build:css": "npm-run-all css-minify-plugins css-minify-view css-minify-edit",
+        "build:css": "npm-run-all css-compile-plugins css-minify-plugins css-compile-view css-minify-view css-compile-edit css-minify-edit prettier",
         "watch:webpack": "NODE_ENV=development webpack --config webpack.config.js --watch",
+        "watch:scss": "nodemon --watch eea --ext scss --exec \"yarn build:css\"",
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",
-        "css-minify-plugins": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-jquery.min.css ./resources/plugins.css",
-        "css-minify-view": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-view.min.css ./resources/view.css",
-        "css-minify-edit": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-edit.min.css ./resources/edit.css",
+        "css-compile-plugins": "sass --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css resources/plugins.scss:eea/facetednavigation/browser/static/faceted-jquery.css",
+        "css-minify-plugins": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-jquery.min.css eea/facetednavigation/browser/static/faceted-jquery.css",
+        "css-compile-view": "sass --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css resources/view.scss:eea/facetednavigation/browser/static/faceted-view.css",
+        "css-minify-view": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-view.min.css eea/facetednavigation/browser/static/faceted-view.css",
+        "css-compile-edit": "sass --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css resources/edit.scss:eea/facetednavigation/browser/static/faceted-edit.css",
+        "css-minify-edit": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-edit.min.css eea/facetednavigation/browser/static/faceted-edit.css",
         "lint": "./node_modules/eslint/bin/eslint.js --max-warnings=0 'eea/**/*.{js,jsx}'",
-        "lint:fix": "./node_modules/eslint/bin/eslint.js --fix 'eea/**/*.{js,jsx}'"
+        "lint:fix": "./node_modules/eslint/bin/eslint.js --fix 'eea/**/*.{js,jsx}'",
+        "prettier": "prettier eea -w"
     },
     "browserslist": {
         "production": [

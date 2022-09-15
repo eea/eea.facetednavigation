@@ -1,0 +1,126 @@
+.faceted-form {
+    fieldset {
+        padding: 1rem;
+        border: 1px solid #eee;
+    }
+
+    .widget-fieldset legend {
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
+
+    .faceted_loading {
+        background: url(ajax-loader.gif) no-repeat 50% 1.5em;
+        height: 200px;
+    }
+
+    .ui-widget {
+        font-size: 1em;
+    }
+
+    .ui-helper-reset {
+        font-size: 1em;
+    }
+
+    .ui-accordion {
+        .ui-accordion-content {
+            padding: 0;
+            overflow: hidden;
+            border: 0 none;
+        }
+
+        .ui-state-default {
+            border: none;
+            background: #007bb1 none;
+            margin: 0 0.5em;
+        }
+
+        .ui-state-default a {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .ui-state-default a:hover {
+            border: none;
+            color: #007bb1;
+        }
+
+        .ui-state-active {
+            border: none;
+            background: #007bb1 none;
+            margin: 0 0.5em;
+        }
+
+        .ui-state-active a {
+            color: #8e004d;
+            font-weight: bold;
+        }
+
+        .ui-state-active a:hover {
+            border: none;
+            cursor: text;
+        }
+    }
+
+    .faceted-widget-locked legend {
+        color: #ccc;
+    }
+
+    .faceted-lock-overlay {
+        background: none;
+    }
+
+    .faceted-widget-loading {
+        background: url(ajax-loader-small.gif) no-repeat 95% 1.5em;
+    }
+
+    .faceted-widget-error {
+        display: none;
+    }
+
+    .faceted-sections-buttons {
+        float: right;
+        margin-right: 0.5em;
+    }
+
+    .faceted-sections-buttons a {
+        display: none;
+        color: #007bb1;
+    }
+
+    .eea-preview-items .photoAlbumEntryWrapper {
+        display: block;
+    }
+
+    .eea-preview-items:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .icon-faceted_settings:before {
+        content: "\e812";
+    }
+
+    .table_faceted_no_results {
+        display: block;
+        text-align: center;
+        margin-top: 2em;
+        color: #b2b2b2;
+    }
+
+    .faceted-sections-buttons a {
+        border-bottom: none;
+    }
+
+    .faceted-remove {
+        font-size: 0px;
+    }
+
+    .faceted-remove::before {
+        font-size: small;
+        content: "x";
+    }
+}

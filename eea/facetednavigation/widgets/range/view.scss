@@ -1,0 +1,14 @@
+.faceted-range-widget {
+    .faceted-range-widget-form {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        div label {
+            display: block;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.faceted-text-widget {
+    label.text-field {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+
+    .faceted-text-search {
+        display: grid;
+        grid-template-columns: auto min-content;
+    }
+}
