@@ -379,6 +379,10 @@
     width: 100%;
 }
 
+.faceted-resultsperpage-widget select {
+    width: 100%;
+}
+
 .faceted-select-widget select {
     width: 100%;
 }
@@ -397,7 +401,10 @@
     overflow: hidden;
 }
 
-.faceted-sorting-errors {
+.faceted-sorting-widget select {
+    width: 100%;
+}
+.faceted-sorting-widget .faceted-sorting-errors {
     display: none;
 }
 
