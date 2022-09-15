@@ -1,6 +1,15 @@
 Changelog
 =========
 
+14.8 - (2022-09-15)
+---------------------------
+* Change: Add support for AJAX filtering with multiselect widget
+  [avoinea]
+* Cleanup: Remove hard-coded message on ajax error
+  [avoinea]
+* Bug fix: SEO improvments
+  [avoinea]
+
 14.7 - (2021-10-29)
 ---------------------------
 * Change: Release community contrib
