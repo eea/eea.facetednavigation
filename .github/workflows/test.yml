@@ -6,8 +6,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python: [ "3.8" ]
-        plone: ["5.2.9"]
+        python: [ "3.9" ]
+        plone: ["5.2.9", "6.0.0b2"]
 
     steps:
       - uses: actions/checkout@v2
