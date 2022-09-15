@@ -185,9 +185,9 @@ Edit (no AJAX)
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="default">Dexterity Item</property>
+       <property name="default">Document</property>
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">False</property>

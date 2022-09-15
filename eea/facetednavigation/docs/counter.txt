@@ -51,7 +51,7 @@ widget.vocabulary and number of cataloged objects per each
     ...         catalog='portal_catalog',
     ...         index='portal_type', default=[u'Folder'])
     >>> counter(cid='c1')
-    '{..."Document": 2...}'
+    '{..."Document": ...}'
 
 Radio
 -----
@@ -62,7 +62,7 @@ Same as for checkbox
     ...         catalog='portal_catalog',
     ...         index='portal_type')
     >>> counter(cid='c2')
-    '{..."Document": 2...}'
+    '{..."Document": ...}'
 
 Select
 ------
@@ -73,4 +73,4 @@ Same as for checkbox.
     ...         catalog='portal_catalog',
     ...         index='portal_type')
     >>> counter(cid='c3')
-    '{..."Document": 2...}'
+    '{..."Document": ...}'

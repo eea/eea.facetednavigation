@@ -66,7 +66,7 @@ Checkboxes
     >>> _ = handler(addPropertiesWidget_button='Add',
     ...     wtype='tagscloud', wposition='right',
     ...     title="Meta-type d'element",
-    ...     index='meta_type',
+    ...     index='portal_type',
     ...     cloud='sphere', sizemin=15, sizemax=25,
     ...     count=False)
 
@@ -92,7 +92,7 @@ Checkboxes
       <criterion name="c1">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="position">right</property>
        <property name="section">default</property>
@@ -152,7 +152,7 @@ Let's check exported
       <criterion name="c1">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="position">right</property>
        <property name="section">default</property>
@@ -237,7 +237,7 @@ Now update it
       <criterion name="c1">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
        <property name="position">right</property>
        <property name="section">default</property>
@@ -295,9 +295,9 @@ Let's see our new configuration
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="default">Dexterity Item</property>
+       <property name="default">Document</property>
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">False</property>
@@ -348,9 +348,9 @@ Import a xml file with purge set to False, new criteria will be added to existin
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="default">Dexterity Item</property>
+       <property name="default">Document</property>
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">False</property>
@@ -408,9 +408,9 @@ Importing an already existing criterion will not fail, it is just ignored and a 
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="default">Dexterity Item</property>
+       <property name="default">Document</property>
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">False</property>
