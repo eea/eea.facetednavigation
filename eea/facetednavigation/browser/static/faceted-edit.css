@@ -104,6 +104,7 @@
     border-top-left-radius: 0.5em;
     font-size: 125%;
     font-weight: lighter;
+    padding: 0;
 }
 .template-configure_faceted-html .faceted-section-tabs li.formTab,
 .template-configure_faceted-html .faceted-widget-edit li.formTab {
