@@ -5,7 +5,4 @@
           field="disable_diazo_rules_ajax"
           remove="True">
   </record>
-  <record interface="Products.ResourceRegistries.interfaces.settings.IResourceRegistriesSettings"
-          field="resourceBundlesForThemes" remove="True">
-  </record>
 </registry>

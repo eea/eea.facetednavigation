@@ -1,10 +1,10 @@
 """ Simple static vocabularies
 """
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
-from zope.schema.vocabulary import SimpleVocabulary
 from zope.schema.vocabulary import SimpleTerm
+from zope.schema.vocabulary import SimpleVocabulary
 
 
 #
@@ -12,15 +12,13 @@ from zope.schema.vocabulary import SimpleTerm
 #
 @implementer(IVocabularyFactory)
 class UseCatalogVocabulary(object):
-    """ Use catalog vocabulary
-    """
+    """Use catalog vocabulary"""
 
     def __call__(self, *args, **kwargs):
-        """ See IVocabularyFactory interface
-        """
+        """See IVocabularyFactory interface"""
         items = (
-            SimpleTerm('', '', _('No')),
-            SimpleTerm('portal_catalog', 'portal_catalog', _('Yes')),
+            SimpleTerm("", "", _("No")),
+            SimpleTerm("portal_catalog", "portal_catalog", _("Yes")),
         )
         return SimpleVocabulary(items)
 
@@ -30,15 +28,14 @@ class UseCatalogVocabulary(object):
 #
 @implementer(IVocabularyFactory)
 class JsTreeThemes(object):
-    """ Widget position in page
-    """
+    """Widget position in page"""
 
     def __call__(self, *args, **kwargs):
 
         items = (
-            SimpleTerm('default', 'default', _('Default')),
-            SimpleTerm('classic', 'classic', _('Classic')),
-            SimpleTerm('apple', 'apple', _('Apple')),
-            SimpleTerm('green', 'green', _('Green')),
+            SimpleTerm("default", "default", _("Default")),
+            SimpleTerm("classic", "classic", _("Classic")),
+            SimpleTerm("apple", "apple", _("Apple")),
+            SimpleTerm("green", "green", _("Green")),
         )
         return SimpleVocabulary(items)

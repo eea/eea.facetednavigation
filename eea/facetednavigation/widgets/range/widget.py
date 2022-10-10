@@ -1,56 +1,50 @@
 """ Widget
 """
+from eea.facetednavigation import _
+from eea.facetednavigation.widgets import ViewPageTemplateFile
+from eea.facetednavigation.widgets.range.interfaces import DefaultSchemata
+from eea.facetednavigation.widgets.range.interfaces import DisplaySchemata
+from eea.facetednavigation.widgets.range.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
+
 import logging
 
-from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
-from eea.facetednavigation.widgets.range.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.range.interfaces import LayoutSchemata
-from eea.facetednavigation.widgets.range.interfaces import DisplaySchemata
-from eea.facetednavigation import EEAMessageFactory as _
 
-import six
-
-logger = logging.getLogger('eea.facetednavigation')
+logger = logging.getLogger("eea.facetednavigation")
 
 
 class Widget(AbstractWidget):
-    """ Widget
-    """
-    widget_type = 'range'
-    widget_label = _('Range')
+    """Widget"""
+
+    widget_type = "range"
+    widget_label = _("Range")
 
     groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
-    index = ViewPageTemplateFile('widget.pt')
+    index = ViewPageTemplateFile("widget.pt")
 
     @property
     def default(self):
-        """ Return default
-        """
-        default = self.data.get('default', '')
+        """Return default"""
+        default = self.data.get("default", "")
         if not default:
-            return ('', '')
+            return ("", "")
 
-        default = default.split('=>')
+        default = default.split("=>")
         if len(default) != 2:
-            return ('', '')
+            return ("", "")
 
         start, end = default
         return (start, end)
 
     @property
     def integer(self):
-        """ Integer only
-        """
+        """Integer only"""
         return self.data.get("integer", False)
 
     def query(self, form):
-        """ Get value from form and return a catalog dict query
-        """
+        """Get value from form and return a catalog dict query"""
         query = {}
-        index = self.data.get('index', '')
-        if six.PY2:
-            index = index.encode('utf-8', 'replace')
+        index = self.data.get("index", "")
         if not index:
             return query
 
@@ -76,8 +70,5 @@ class Widget(AbstractWidget):
         except ValueError:
             _end = end
 
-        query[index] = {
-            'query': (_start, _end),
-            'range': 'min:max'
-        }
+        query[index] = {"query": (_start, _end), "range": "min:max"}
         return query

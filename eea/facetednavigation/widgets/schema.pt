@@ -22,7 +22,7 @@
     <div tal:attributes="id string:${cid}-${schemata/label}-tab" >
       <tal:widget tal:repeat="widget schemata/widgets/values">
         <div class="field" tal:attributes="class string:field field-${cid}-${widget/id}">
-          <label tal:attributes="for widget/id" tal:content="widget/label" />
+          <label tal:attributes="for widget/id" tal:content="widget/label" class="form-check-label" />
           <span class="required" title="Required" tal:condition="widget/required" i18n:attributes="title">&nbsp;</span>
           <div class="fieldErrorBox" tal:condition="widget/error" tal:content="structure widget/error/render" />
           <span class="formHelp" tal:condition="widget/label" tal:content="widget/field/description">Widget description</span>

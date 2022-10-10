@@ -8,7 +8,7 @@ Trainings on how to create your own website using Plone 6 is available as part o
 
 * Python **3.7, 3.8, 3.9**
 * Python **python-venv** and **python-dev**
-* Yarn
+* Node 16 / Yarn (See https://6.dev-docs.plone.org/volto/getting-started)
 * Libraries
   - **libz**
   - **libjpeg**
@@ -45,12 +45,12 @@ In order to develop Plone 6 backend add-on run:
 
 To use other **Python** version run make with `-e` parameter:
 
-    make -e PYTHON=python3.9
+    make -e PYTHON=python3.8
     make start
 
 To use other **Plone** version run make with `-e` parameter:
 
-    make -e PLONE_VERSION=6.0.0a6
+    make -e PLONE_VERSION=5.2.9
     make start
 
 ## CSS / JS Resources

@@ -9,10 +9,7 @@ Imports
     >>> from eea.facetednavigation.interfaces import IWidgetsInfo
     >>> from eea.facetednavigation.tests.utils import preparefile
 
-    >>> try:
-    ...   from plone.testing.zope import Browser
-    ... except ImportError:
-    ...   from plone.testing.z2 import Browser
+    >>> from plone.testing.zope import Browser
     >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
 
 Set up
@@ -188,9 +185,9 @@ Edit (no AJAX)
       <criterion name="c2">
        <property name="widget">tagscloud</property>
        <property name="title">Meta-type d...element</property>
-       <property name="index">meta_type</property>
+       <property name="index">portal_type</property>
        <property name="vocabulary"></property>
-       <property name="default">ATFolder</property>
+       <property name="default">Document</property>
        <property name="position">top</property>
        <property name="section">default</property>
        <property name="hidden">False</property>

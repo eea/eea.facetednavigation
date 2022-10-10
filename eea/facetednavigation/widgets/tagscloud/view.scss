@@ -1,0 +1,33 @@
+.faceted-tagscloud-widget {
+    .tags-cloud {
+        li {
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            color: #007bb1;
+
+            &:hover {
+                color: orange !important;
+            }
+        }
+    }
+
+    .faceted-tag-disabled {
+        color: #ccc !important;
+
+        &:hover {
+            color: #ccc !important;
+        }
+    }
+
+    .faceted-tag-selected {
+        color: orange !important;
+        font-size: 110%;
+    }
+
+    .faceted-zero-count-hidden {
+        li.faceted-tag-disabled {
+            display: none !important;
+        }
+    }
+}

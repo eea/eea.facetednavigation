@@ -25,7 +25,7 @@
 </div>
 
 <tal:sorting condition="vocabulary">
-  <select tal:attributes="name wid; id wid">
+  <select tal:attributes="name wid; id wid" class="form-select">
     <option value="" i18n:translate="">Relevance</option>
     <tal:option repeat="term vocabulary">
       <option tal:define="
@@ -43,11 +43,11 @@
     </tal:option>
   </select>
   <div class="field">
-    <input type="checkbox" class="faceted-noborder" tal:attributes="
+    <input type="checkbox" class="form-check-input" tal:attributes="
       id string:${wid}_reversed;
       checked python:default_reverse and 'checked'"
       name="reversed" value="reversed" />
-    <label tal:attributes="for string:${wid}_reversed"
+    <label class="form-check-label" tal:attributes="for string:${wid}_reversed"
       i18n:translate="">Reverse</label>
   </div>
 </tal:sorting>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<object name="sandbox" meta_type="ATFolder">
+<object name="sandbox" meta_type="Dexterity Item">
  <criteria purge="False">
   <criterion purge="False" name="c22">
    <property name="widget">daterange</property>

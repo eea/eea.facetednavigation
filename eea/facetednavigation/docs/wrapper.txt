@@ -19,7 +19,7 @@ Set up
     >>> subtyper = getMultiAdapter((sandbox, request), name=u'faceted_subtyper')
     >>> subtyper.enable()
 
-    >>> fid = portal.invokeFactory('Folder', 'folder', title='A Folder')
+    >>> fid = portal.invokeFactory('Document', 'folder', title='A Folder')
     >>> folder = portal['folder']
 
 Get wrapper

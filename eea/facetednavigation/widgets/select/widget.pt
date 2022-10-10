@@ -29,10 +29,10 @@
   </div>
 
   <form action="." method="get">
-    <label class="select-field"
+    <label class="select-field form-check-label"
       tal:attributes="for wid"
       tal:content="python:view.translate(title)" />
-    <select tal:attributes="name wid; id wid" class="faceted_select">
+    <select tal:attributes="name wid; id wid" class="form-select">
       <option title="All" value=""
         tal:condition="not:view/data/hidealloption|nothing"
         tal:attributes="selected python: not default_value"

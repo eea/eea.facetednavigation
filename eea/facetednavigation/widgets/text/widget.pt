@@ -15,36 +15,38 @@
     python:view.translate(title)" i18n:translate="">Text Widget</legend>
   <form action="." method="get"
     tal:on-error="structure python:error_view(error=error, cid=wid)">
-  <label class="text-field"
+  <label class="text-field form-check-label"
     tal:attributes="for wid"
     tal:content="python:view.translate(title)" />
-  <input type="text" tal:attributes="
-    name string:${wid};
-    id string:${wid};
-    placeholder python:view.translate(placeholder);
-    value default_value;
-  "/>
-  <input type="submit" class="searchButton" value="Search" tal:attributes="
-    name string:${wid}_button;
-    id string:${wid}_button;"
-    i18n:attributes="value" />
+  <div class="faceted-text-search">
+    <input type="text" class="form-control" tal:attributes="
+      name string:${wid};
+      id string:${wid};
+      placeholder python:view.translate(placeholder);
+      value default_value;
+    "/>
+    <input type="submit" class="context btn btn-primary" value="Search" tal:attributes="
+      name string:${wid}_button;
+      id string:${wid}_button;"
+      i18n:attributes="value" />
+  </div>
   <div class="faceted-textwidget-place-all"
        tal:condition="not:view/data/onlyallelements|nothing">
-  <input type="radio" checked="checked" tal:attributes="
-    name string:${wid}_place;
-    id string:${wid}_place_all;
-    value string:all" />
-  <label tal:attributes="for string:${wid}_place_all"
-    i18n:translate="">all items</label>
+    <input type="radio" checked="checked" class="form-check-input" tal:attributes="
+      name string:${wid}_place;
+      id string:${wid}_place_all;
+      value string:all" />
+    <label tal:attributes="for string:${wid}_place_all" class="form-check-label"
+      i18n:translate="">all items</label>
   </div>
   <div class="faceted-textwidget-place-current"
        tal:condition="not:view/data/onlyallelements|nothing">
-  <input type="radio" tal:attributes="
-    name string:${wid}_place;
-    id string:${wid}_place_current;
-    value string:current" />
-  <label tal:attributes="for string:${wid}_place_current"
-    i18n:translate="">in current results</label>
+    <input type="radio" class="form-check-input" tal:attributes="
+      name string:${wid}_place;
+      id string:${wid}_place_current;
+      value string:current" />
+    <label tal:attributes="for string:${wid}_place_current" class="form-check-label"
+      i18n:translate="">in current results</label>
   </div>
   </form>
 </fieldset>

@@ -22,7 +22,7 @@
   <form action="." method="get">
 
     <tal:select condition="vocabulary">
-      <select tal:attributes="name wid; id wid" class="faceted_select">
+      <select tal:attributes="name wid; id wid" class="form-select">
         <tal:option repeat="term vocabulary">
           <option tal:define="
             term_id python:term[0];

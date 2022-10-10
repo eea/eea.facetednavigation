@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<registry>
+  <!-- disable_diazo_rules_ajax-->
+  <record name="eea.facetednavigation.interfaces.IEEASettings.disable_diazo_rules_ajax"
+          interface="eea.facetednavigation.interfaces.IEEASettings"
+          field="disable_diazo_rules_ajax">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+      <required>False</required>
+      <title>Disable diazo rules on ajax requests</title>
+    </field>
+    <value>False</value>
+  </record>
+  
+  <!-- Install third-party dependencies -->
+  <records prefix="plone.bundles/faceted.jquery" interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++facetednavigation/faceted-jquery.min.js</value>
+    <value key="csscompilation">++plone++facetednavigation/faceted-jquery.min.css</value>
+    <value key="expression"></value>
+    <value key="depends">plone</value>
+    <value key="load_async">True</value>
+    <value key="load_defer">True</value>
+  </records>
+
+  <!-- Faceted Navigation view -->
+  <records prefix="plone.bundles/faceted.view" interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++facetednavigation/faceted-view.min.js</value>
+    <value key="csscompilation">++plone++facetednavigation/faceted-view.min.css</value>
+    <value key="expression"></value>
+    <value key="depends">faceted.jquery</value>
+    <value key="load_async">True</value>
+    <value key="load_defer">True</value>
+  </records>
+
+  <!-- Faceted Navigation edit -->
+  <records prefix="plone.bundles/faceted.edit" interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++facetednavigation/faceted-edit.min.js</value>
+    <value key="csscompilation">++plone++facetednavigation/faceted-edit.min.css</value>
+    <value key="expression"></value>
+    <value key="depends">faceted.view</value>
+    <value key="load_async">True</value>
+    <value key="load_defer">True</value>
+  </records>
+
+</registry>

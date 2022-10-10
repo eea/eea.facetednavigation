@@ -9,22 +9,34 @@ from eea.facetednavigation.interfaces import IHidePloneRightColumn
 from eea.facetednavigation.settings.interfaces import IDontInheritConfiguration
 from logging import getLogger
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.interfaces import INonInstallable
 from zope.annotation.interfaces import IAnnotations
+from zope.interface import implementer
 from zope.interface import noLongerProvides
 
 
 log = getLogger("eea.facetednavigation.post_uninstall")
 
 
+@implementer(INonInstallable)
+class HiddenProfiles(object):
+    """Hidden profiles"""
+
+    def getNonInstallableProfiles(self):
+        """Do not show on Plone's list of installable profiles."""
+        return [
+            "eea.facetednavigation:uninstall",
+        ]
+
+
 def setupVarious(context):
-    """ Do some various setup.
-    """
+    """Do some various setup."""
     if context.readDataFile("eea.facetednavigation.txt") is None:
         return
 
 
 def uninstall_faceted(context):
-    """ Custom script to remove interface traces on uninstall """
+    """Custom script to remove interface traces on uninstall"""
     remove_annotations(context)
     remove_default_views(context)
     remove_assigned_interfaces(context)
@@ -40,7 +52,7 @@ def remove_assigned_interfaces(context):
 
 
 def remove_interface(context, iface):
-    """ Remove interface assignment from objects"""
+    """Remove interface assignment from objects"""
     portal_catalog = getToolByName(context, "portal_catalog")
     brains = portal_catalog(object_provides=iface.__identifier__)
     log.info(

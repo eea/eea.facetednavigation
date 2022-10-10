@@ -36,11 +36,11 @@
       <tal:terms define="
         chbox_id string:${wid}_all;
         chbox_id python:view.cleanup(chbox_id);">
-        <input type="radio" class="faceted-noborder" checked="checked" tal:attributes="
+        <input type="radio" class="form-check-input" checked="checked" tal:attributes="
           name string:${wid};
           id chbox_id;
           value string:" />
-        <label tal:attributes="for chbox_id" title="All"
+        <label class="form-check-label" tal:attributes="for chbox_id" title="All"
           i18n:translate="" i18n:attributes="title">All</label>
       </tal:terms>
     </li>
@@ -52,13 +52,13 @@
         wbr_term_label python:view.word_break(term_label);
         chbox_id string:${wid}_${term_id};
         chbox_id python:view.cleanup(chbox_id);">
-        <input type="radio" class="faceted-noborder" tal:attributes="
+        <input type="radio" class="form-check-input" tal:attributes="
           checked python:term_id == default_value;
           name string:${wid};
           id chbox_id;
           title term_label;
           value term_id;" />
-        <label tal:attributes="for chbox_id; title term_label"
+        <label class="form-check-label" tal:attributes="for chbox_id; title term_label"
           tal:content="structure wbr_term_label">term label</label>
       </li>
     </tal:items>

@@ -5,13 +5,13 @@ from zope.publisher.browser import BrowserPage
 from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 from Products.CMFPlone.utils import safe_unicode
 
-_ = MessageFactory('plone')
+_ = MessageFactory("plone")
 
 
 class Schema(BrowserPage):
-    """ Handle widgets in edit mode
-    """
-    template = ViewPageTemplateFile('schema.pt')
+    """Handle widgets in edit mode"""
+
+    template = ViewPageTemplateFile("schema.pt")
 
     def __init__(self, context, request, widget, data):
         self.context = context
@@ -25,8 +25,7 @@ class Schema(BrowserPage):
         return self.template()
 
     def getTranslatedSchemaLabel(self, schema):
-        """Get message for schemata
-        """
-        label = u"label_schema_%s" % schema
+        """Get message for schemata"""
+        label = "label_schema_%s" % schema
         default = safe_unicode(schema).capitalize()
         return _(label, default=default)

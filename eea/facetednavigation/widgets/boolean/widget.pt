@@ -27,13 +27,13 @@
         "
         tal:attributes="id option_id"
         >
-        <input type="checkbox" class="faceted-noborder" tal:attributes="
+        <input type="checkbox" class="form-check-input" tal:attributes="
           checked python:view.selected();
           name string:${wid};
           id chbox_id;
           title title;
           value string:selected" />
-        <label tal:attributes="for chbox_id; title title"
+        <label class="form-check-label" tal:attributes="for chbox_id; title title"
           tal:content="title">term label</label>
       </li>
   </ul>

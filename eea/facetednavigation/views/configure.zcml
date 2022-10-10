@@ -25,6 +25,15 @@
   <browser:page
       name="faceted-preview-item"
       for="zope.interface.Interface"
+      class=".preview.PreviewItem"
+      template="preview-item.pt"
+      permission="zope2.View"
+      />
+
+  <browser:page
+      name="faceted-preview-brain"
+      for="zope.interface.Interface"
+      class=".preview.PreviewBrain"
       template="preview-item.pt"
       permission="zope2.View"
       />

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+ xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <object name="object_buttons" meta_type="CMF Action Category">
+  <object name="faceted.sync" remove="True" />
+  <object name="faceted.disable" meta_type="CMF Action" i18n:domain="eea">
+   <property name="title"
+      i18n:translate="">Disable faceted navigation</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${object/absolute_url}/@@faceted_subtyper/disable</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">object/@@faceted_subtyper/can_disable</property>
+   <property name="permissions">
+    <element value="eea.facetednavigation: Configure faceted"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="faceted.enable" meta_type="CMF Action" i18n:domain="eea">
+   <property name="title"
+      i18n:translate="">Enable faceted navigation</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${object/absolute_url}/@@faceted_subtyper/enable</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">object/@@faceted_subtyper/can_enable</property>
+   <property name="permissions">
+    <element value="eea.facetednavigation: Configure faceted"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="faceted.search.disable" meta_type="CMF Action" i18n:domain="eea">
+   <property name="title"
+      i18n:translate="">Disable faceted search</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${object/absolute_url}/@@faceted_search_subtyper/disable</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">object/@@faceted_search_subtyper/can_disable</property>
+   <property name="permissions">
+    <element value="eea.facetednavigation: Configure faceted"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="faceted.search.enable" meta_type="CMF Action" i18n:domain="eea">
+   <property name="title"
+      i18n:translate="">Enable faceted search</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${object/absolute_url}/@@faceted_search_subtyper/enable</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property
+      name="available_expr">object/@@faceted_search_subtyper/can_enable</property>
+   <property name="permissions">
+    <element value="eea.facetednavigation: Configure faceted"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>
+</object>

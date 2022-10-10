@@ -1,33 +1,31 @@
 """ Widget interfaces and schema
 """
-from zope import schema
-from z3c.form import field
+from eea.facetednavigation import _
+from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
 from eea.facetednavigation.widgets.interfaces import ISchema
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
-from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
-from eea.facetednavigation import EEAMessageFactory as _
+from z3c.form import field
+from zope import schema
 
 
 class ISortingSchema(ISchema):
-    """ Schema
-    """
+    """Schema"""
+
     vocabulary = schema.Choice(
-        title=_(u'Filter from vocabulary'),
-        description=_(u'Vocabulary to use to filter sorting criteria. '
-                      u'Leave empty for default sorting criteria.'),
-        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
-        required=False
+        title=_("Filter from vocabulary"),
+        description=_(
+            "Vocabulary to use to filter sorting criteria. "
+            "Leave empty for default sorting criteria."
+        ),
+        vocabulary="eea.faceted.vocabularies.PortalVocabularies",
+        required=False,
     )
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
-    fields = field.Fields(ISortingSchema).select(
-        u'title',
-        u'vocabulary',
-        u'default'
-    )
+    """Schemata default"""
+
+    fields = field.Fields(ISortingSchema).select("title", "vocabulary", "default")
 
 
 __all__ = [

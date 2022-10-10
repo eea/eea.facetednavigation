@@ -3,8 +3,6 @@
   error_view nocall:context/@@faceted.widget.error;
   wid python:view.data.getId();
   site_url python:context.portal_url();
-  theme python:view.data.get('theme', 'green');
-  theme_url string:${site_url}/++resource++facetednavigation/themes/${theme}/style.css;
   hidden python:view.hidden;
   placeholder python:view.data.get('placeholder', '');
   default_value python:view.default or '';
@@ -17,16 +15,11 @@
     python:view.translate(title)" i18n:translate="">Widget title</legend>
   <form action="." method="get"
     tal:on-error="structure python:error_view(error=error, cid=wid)">
-    <input type="text" tal:attributes="
+    <input type="text" class="form-control" tal:attributes="
       name string:${wid};
       id string:${wid};
       placeholder python:view.translate(placeholder);
       value default_value;" />
-    <span style="display: none"
-      tal:attributes="
-      id string:${wid}-theme;
-      title theme;"
-      tal:content="theme_url" />
   </form>
   <div class='faceted-path-errors' style="display: none" i18n:translate="">
     This widget will be ignored as provided root is unreachable or it has no

@@ -22,6 +22,7 @@ import "../eea/facetednavigation/widgets/resultsfilter/view.js";
 import "../eea/facetednavigation/widgets/resultsperpage/view.js";
 import "../eea/facetednavigation/widgets/select/view.js";
 import "../eea/facetednavigation/widgets/sorting/view.js";
+import "../eea/facetednavigation/widgets/tagscloud/tagcloud.js";
 import "../eea/facetednavigation/widgets/tagscloud/view.js";
 import "../eea/facetednavigation/widgets/tal/view.js";
 import "../eea/facetednavigation/widgets/text/view.js";

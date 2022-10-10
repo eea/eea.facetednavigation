@@ -43,7 +43,7 @@
       tal:attributes="for wid"
       tal:content="python:view.translate(title)" />
     <input type="hidden" tal:attributes="name wid; id wid; multiple multiple" class="faceted_multiselect" tal:condition="ajax" />
-    <select tal:attributes="name wid; id wid; multiple multiple" class="faceted_multiselect" tal:condition="not:ajax">
+    <select tal:attributes="name wid; id wid; multiple multiple" class="faceted_multiselect form-select" tal:condition="not:ajax">
       <option tal:condition="not:multiple"></option>
       <tal:option repeat="term vocabulary">
         <option tal:define="
@@ -61,7 +61,7 @@
     </select>
   </form>
   <div class="faceted-operator" tal:condition="operator_visible" title="match any/all filters bellow" i18n:attributes="title">
-    <label tal:attributes="for string:$wid-operator" i18n:translate="">match</label>
+    <label class="form-check-label" tal:attributes="for string:$wid-operator" i18n:translate="">match</label>
     <a data-or="any" data-and="all" data-name="operator" i18n:attributes="data-or; data-and" tal:attributes="
         href string:#$wid-operator=$operator;
         data-value string:$operator;

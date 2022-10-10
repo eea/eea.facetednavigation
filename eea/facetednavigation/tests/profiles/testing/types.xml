@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="portal_types" meta_type="Plone Types Tool">
+ <object name="Document" meta_type="Dexterity FTI"/>
+</object>

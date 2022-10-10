@@ -1,0 +1,10 @@
+.faceted-date-widget {
+    form {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    select {
+        width: 100%;
+    }
+}
