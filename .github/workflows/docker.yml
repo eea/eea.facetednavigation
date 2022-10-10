@@ -6,7 +6,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        plone: ["5.2.9", "6.0.0b3"]
+        plone: ["5.2.9"]
 
     steps:
       - uses: actions/checkout@v2
