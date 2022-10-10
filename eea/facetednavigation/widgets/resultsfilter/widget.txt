@@ -42,8 +42,8 @@ Default widgets
 
 Add testing content
 
-    >>> fid = sandbox.invokeFactory('Folder', 'a-folder', title='Za folder')
-    >>> fob = sandbox._getOb(fid)
+    >>> fid = portal.invokeFactory('Document', 'a-folder', title='Za folder')
+    >>> fob = portal._getOb(fid)
     >>> fob.setLanguage('en')
 
 Add widget

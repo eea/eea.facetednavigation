@@ -1,0 +1,16 @@
+.faceted-path-widget {
+    .tree {
+        position: absolute;
+        background-color: #ffffff;
+        border: 1px dotted #cccccc;
+        z-index: 1;
+
+        > .ltr > li {
+            display: block;
+        }
+
+        li a {
+            border: none;
+        }
+    }
+}

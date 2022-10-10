@@ -1,0 +1,383 @@
+.template-configure_faceted-html {
+    .ui-icon-show {
+        background-image: url(show.png) !important;
+        background-position: 0 0;
+    }
+
+    .ui-icon-hide {
+        background-image: url(hide.png) !important;
+        background-position: 0 0;
+    }
+
+    .ui-widget-header:hover {
+        cursor: move;
+    }
+
+    .ui-icon:hover {
+        cursor: pointer;
+    }
+
+    .ui-sortable-helper {
+        width: 20em !important;
+    }
+
+    .faceted-ui-dialog {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #888;
+        width: 90% !important;
+        max-width: 50em;
+
+        select {
+            width: 100%;
+        }
+
+        .ui-dialog-titlebar-close {
+            right: 1em;
+            background: transparent;
+            border: none;
+        }
+    }
+
+    .formHelp {
+        display: block;
+    }
+
+    .faceted-results {
+        border: 1px dotted #ccc;
+    }
+
+    dd {
+        margin-left: 0;
+        padding-bottom: 1em;
+    }
+
+    table.listing {
+        width: 100%;
+    }
+
+    .faceted_loading {
+        text-align: center;
+    }
+
+    .faceted-loading-overlay {
+        background: none !important;
+        border: none !important;
+        width: 120px !important;
+
+        .ui-dialog-titlebar {
+            display: none !important;
+        }
+
+        .ui-resizable-handle {
+            display: none !important;
+        }
+    }
+
+    .faceted-widget {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px #888;
+        margin: 2em 0.5em;
+
+        fieldset {
+            border: none;
+            padding: 0 1em 1em;
+            margin: 1em 0;
+        }
+
+        legend {
+            width: 100%;
+        }
+    }
+
+    .ui-widget-header {
+        margin-bottom: 1em;
+        text-align: left;
+        padding: 1em;
+        font-size: 120%;
+        font-weight: lighter;
+        background: #9acee6;
+        border: none;
+    }
+
+    .ui-draggable .ui-dialog-titlebar {
+        background: transparent;
+        border-bottom: 1px dotted #e6e6e6;
+        border-radius: initial;
+    }
+
+    .faceted-widget .ui-widget-header {
+        margin-top: -0.9em;
+        margin-left: -0.9em;
+        margin-right: -0.9em;
+        border-top-right-radius: 0.5em;
+        border-top-left-radius: 0.5em;
+    }
+
+    .faceted-section-tabs ul.formTabs,
+    .faceted-widget-edit ul.formTabs {
+        background-color: #e6e6e6;
+        border: 0.3em solid #e6e6e6;
+        display: block;
+        border-style: solid solid none solid;
+        margin-left: 0;
+        border-top-right-radius: 0.5em;
+        border-top-left-radius: 0.5em;
+        font-size: 125%;
+        font-weight: lighter;
+        padding: 0;
+    }
+
+    .faceted-section-tabs li.formTab,
+    .faceted-widget-edit li.formTab {
+        display: inline;
+        margin-right: 0.25em;
+    }
+
+    .faceted-widget-edit li.formTab.ui-state-active {
+        background: #ffffff !important;
+        border: 1px solid #c5c5c5;
+        border-bottom-width: 0;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        margin-bottom: 0;
+    }
+
+    .faceted-section-tabs li.formTab a,
+    .faceted-widget-edit li.formTab a {
+        display: inline-block;
+    }
+
+    .faceted-section-tabs li.formTab a,
+    .faceted-widget-edit li.formTab a {
+        line-height: 2em;
+        padding: 0 0.75em;
+        text-decoration: none;
+        border: none;
+        margin: 0;
+    }
+
+    .faceted-section-tabs li.formTab a.selected,
+    .faceted-section-tabs li.formTab a:hover,
+    .faceted-widget-edit li.formTab a.current,
+    .faceted-widget-edit li.formTab a:hover {
+        background: #ffffff !important;
+        color: Black;
+    }
+
+    .faceted-widget-edit li.formTab.ui-state-active a,
+    .faceted-widget-edit li.formTab.ui-state-active a:hover {
+        background: transparent !important;
+        color: Black;
+    }
+
+    .faceted-widget-edit .panes {
+        padding: 1em;
+    }
+
+    .faceted-widget-hidden {
+        div.ui-widget-header {
+            background: #e6e6e6 !important;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+        }
+    }
+
+    #faceted-edit-widgets-ajax {
+        text-align: right;
+        clear: both;
+        overflow: hidden;
+        margin-top: 1em;
+
+        input {
+            margin-right: 0.5em;
+        }
+    }
+
+    #faceted-page-title {
+        padding-right: 0;
+    }
+
+    .faceted-ajax {
+        cursor: pointer;
+        float: right;
+    }
+
+    .faceted-column {
+        border-color: #ccc;
+        border-style: dotted;
+        border-width: 1px;
+    }
+
+    .faceted-empty-column {
+        font-size: 200%;
+        opacity: 0.8;
+        color: #9acee6;
+        text-align: center;
+        padding-bottom: 0.5em;
+    }
+
+    #faceted-top-column::before {
+        content: "Top widgets";
+        text-align: center;
+        width: 100%;
+        color: #9acee6;
+        float: right;
+        font-weight: lighter;
+        margin-top: 1em;
+        height: 0;
+    }
+
+    #faceted-left-column::before {
+        content: "Left widgets";
+        text-align: center;
+        width: 100%;
+        color: #9acee6;
+        float: right;
+        font-weight: lighter;
+        margin-top: 1em;
+        height: 0;
+    }
+
+    #faceted-right-column::before {
+        content: "Right widgets";
+        text-align: center;
+        width: 100%;
+        color: #9acee6;
+        float: right;
+        font-weight: lighter;
+        margin-top: 1em;
+        height: 0;
+    }
+
+    #faceted-center-column::before {
+        content: "Center top";
+        text-align: center;
+        width: 100%;
+        color: #9acee6;
+        float: right;
+        font-weight: lighter;
+        margin-top: 1em;
+        height: 0;
+    }
+
+    #faceted-bottomcenter-column::before {
+        content: "Center bottom";
+        text-align: center;
+        width: 100%;
+        color: #9acee6;
+        float: right;
+        font-weight: lighter;
+        margin-top: 1em;
+        height: 0;
+    }
+
+    #faceted-bottom-column::before {
+        content: "Bottom widgets";
+        text-align: center;
+        width: 100%;
+        color: #9acee6;
+        float: right;
+        font-weight: lighter;
+        margin-top: 1em;
+        height: 0;
+    }
+
+    .faceted-section-tabs {
+        margin-top: 1em;
+        padding: 0;
+
+        .ui-tabs-nav {
+            padding: 0;
+        }
+
+        ul li a {
+            border-bottom: 0 !important;
+            cursor: pointer;
+            color: #205c90;
+        }
+
+        .ui-state-highlight {
+            border: none !important;
+            display: inline;
+        }
+
+        ul {
+            list-style-type: none !important;
+            margin: 0 !important;
+        }
+    }
+
+    .faceted-add-button {
+        padding: 1em;
+
+        span {
+            border-color: #007bb1;
+            border-style: dotted;
+            border-width: 1px;
+            min-height: 18px;
+            min-width: 18px;
+        }
+    }
+
+    #faceted-edit-widgets {
+        .faceted-widget-error {
+            display: block;
+        }
+
+        .faceted-widget-error div {
+            text-align: center;
+            color: red;
+        }
+
+        .faceted-widget-error dd {
+            margin-left: 2em;
+            padding-bottom: 0;
+        }
+    }
+
+    #faceted-portal-status-message {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        z-index: 3;
+        background: #aee2f2;
+        border: 1px solid #ccc;
+        border-bottom: none;
+        text-align: center !important;
+        width: 480px !important;
+        margin-left: -240px;
+        margin-bottom: 0;
+        border-radius: 0;
+        font-family: sans-serif;
+        font-size: 120%;
+        padding: 2rem;
+
+        &.success {
+            background: #c9eab1;
+        }
+
+        &.error {
+            background: #f5c1c1;
+        }
+
+        &.warning {
+            background: #f3e2ab;
+        }
+
+        .ui-icon {
+            margin: 0 !important;
+        }
+
+        dt {
+            display: none;
+        }
+
+        dd {
+            padding-bottom: 0;
+        }
+    }
+}

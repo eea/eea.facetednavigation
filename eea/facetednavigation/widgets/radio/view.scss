@@ -1,0 +1,11 @@
+.faceted-radio-widget {
+    .faceted-radio-item-disabled {
+        color: gray;
+    }
+
+    .faceted-zero-count-hidden {
+        .faceted-radio-item-disabled {
+            display: none !important;
+        }
+    }
+}

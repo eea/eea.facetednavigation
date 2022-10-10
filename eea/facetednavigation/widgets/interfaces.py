@@ -1,179 +1,156 @@
 """ Widgets interfaces
 """
+from eea.facetednavigation import _
+from z3c.form import field
+from z3c.form import group
 from zope import schema
-from zope.interface import Interface
-from z3c.form import group, field
-from zope.configuration.fields import GlobalObject
 from zope.configuration.fields import GlobalInterface
-from eea.facetednavigation import EEAMessageFactory as _
-import six
+from zope.configuration.fields import GlobalObject
+from zope.interface import Interface
 
 
 class ICriterion(Interface):
-    """ Model to store search criteria
-    """
+    """Model to store search criteria"""
 
 
 class IWidget(Interface):
-    """ Basic widget
-    """
+    """Basic widget"""
 
 
 class IWidgetFilterBrains(Interface):
-    """ Adapter to filter brains after catalog query.
-    """
+    """Adapter to filter brains after catalog query."""
+
     def __call__(brains, form):
-        """ Filter brains.
-        """
+        """Filter brains."""
 
 
 class IWidgetsInfo(Interface):
-    """ Utility to get available widgets
-    """
+    """Utility to get available widgets"""
 
 
 class IWidgetDirective(Interface):
     """
     Register a widget
     """
+
     factory = GlobalObject(
-        title=_(u"Factory"),
-        description=_(u"Python name of a factory which can create the"
-                      u" implementation object.  This must identify an"
-                      u" object in a module using the full dotted name."),
+        title=_("Factory"),
+        description=_(
+            "Python name of a factory which can create the"
+            " implementation object.  This must identify an"
+            " object in a module using the full dotted name."
+        ),
         required=True,
     )
 
     schema = GlobalInterface(
-        title=_(u"Schema interface"),
-        description=_(u"An interface describing schema to be used"
-                      u" within z3c.form"),
-        required=False
+        title=_("Schema interface"),
+        description=_("An interface describing schema to be used" " within z3c.form"),
+        required=False,
     )
 
     accessor = GlobalObject(
-        title=_(u"Accessor"),
-        description=_(u"Accessor to extract data for faceted widget."),
-        required=False
+        title=_("Accessor"),
+        description=_("Accessor to extract data for faceted widget."),
+        required=False,
     )
 
     criterion = GlobalInterface(
-        title=_(u"Criterion interface"),
-        description=_(u"Criterion interface"),
-        required=False
+        title=_("Criterion interface"),
+        description=_("Criterion interface"),
+        required=False,
     )
 
 
 class ISchema(Interface):
-    """ Common edit schema for Faceted Widgets
-    """
+    """Common edit schema for Faceted Widgets"""
+
     title = schema.TextLine(
-        title=_(u"Friendly name"),
-        description=_(u"Title for widget to display in view page"),
+        title=_("Friendly name"),
+        description=_("Title for widget to display in view page"),
     )
-    title._type = (six.text_type, str)
 
     placeholder = schema.TextLine(
-        title=_(u"Placeholder"),
-        description=_(u"Text to be displayed as input placeholder"),
-        required=False
+        title=_("Placeholder"),
+        description=_("Text to be displayed as input placeholder"),
+        required=False,
     )
-    placeholder._type = (str, six.text_type)
 
     default = schema.TextLine(
-        title=_(u"Default value"),
-        description=_(u"Default query"),
-        required=False
+        title=_("Default value"), description=_("Default query"), required=False
     )
-    default._type = (six.text_type, str)
 
     index = schema.Choice(
-        title=_(u"Catalog index"),
-        description=_(u'Catalog index to be used'),
-        vocabulary=u"eea.faceted.vocabularies.CatalogIndexes"
+        title=_("Catalog index"),
+        description=_("Catalog index to be used"),
+        vocabulary="eea.faceted.vocabularies.CatalogIndexes",
     )
 
     position = schema.Choice(
-        title=_(u'Position'),
-        description=_(u"Widget position in page"),
-        vocabulary=u"eea.faceted.vocabularies.WidgetPositions",
-        required=False
+        title=_("Position"),
+        description=_("Widget position in page"),
+        vocabulary="eea.faceted.vocabularies.WidgetPositions",
+        required=False,
     )
 
     section = schema.Choice(
-        title=_(u"Section"),
-        description=_(u"Display widget in section"),
-        vocabulary=u"eea.faceted.vocabularies.WidgetSections",
-        required=False
+        title=_("Section"),
+        description=_("Display widget in section"),
+        vocabulary="eea.faceted.vocabularies.WidgetSections",
+        required=False,
     )
 
     hidden = schema.Bool(
-        title=_(u'Hidden'),
-        description=_(u"Hide widget"),
-        required=False
+        title=_("Hidden"), description=_("Hide widget"), required=False
     )
 
     count = schema.Bool(
-        title=_(u"Count results"),
-        description=_(u"Display number of results near each option"),
-        required=False
+        title=_("Count results"),
+        description=_("Display number of results near each option"),
+        required=False,
     )
 
     sortcountable = schema.Bool(
-        title=_(u"Sort by countable"),
-        description=_(u"Use the results counter for sorting"),
-        required=False
+        title=_("Sort by countable"),
+        description=_("Use the results counter for sorting"),
+        required=False,
     )
 
     hidezerocount = schema.Bool(
-        title=_(u'Hide items with zero results'),
-        description=_(u"This option works only if 'count results' is enabled"),
-        required=False
+        title=_("Hide items with zero results"),
+        description=_("This option works only if 'count results' is enabled"),
+        required=False,
     )
 
     custom_css = schema.TextLine(
-        title=_(u"Custom CSS"),
-        description=_(u"Custom CSS class for widget to display in view page"),
-        required=False
+        title=_("Custom CSS"),
+        description=_("Custom CSS class for widget to display in view page"),
+        required=False,
     )
-    custom_css._type = (six.text_type, str)
 
 
 class FacetedSchemata(group.Group):
-    """ Faceted Schemata
-    """
-    prefix = 'faceted'
+    """Faceted Schemata"""
+
+    prefix = "faceted"
 
 
 class DefaultSchemata(FacetedSchemata):
-    """ Schemata default
-    """
-    label = u"default"
-    fields = field.Fields(ISchema).select(
-        u'title',
-        u'default',
-        u'index'
-    )
+    """Schemata default"""
+
+    label = "default"
+    fields = field.Fields(ISchema).select("title", "default", "index")
 
 
 class LayoutSchemata(FacetedSchemata):
-    """ Schemata layout
-    """
-    label = u"layout"
-    fields = field.Fields(ISchema).select(
-        u'position',
-        u'section',
-        u'hidden',
-        u'custom_css'
-    )
+    """Schemata layout"""
+
+    label = "layout"
+    fields = field.Fields(ISchema).select("position", "section", "hidden", "custom_css")
 
 
 class CountableSchemata(FacetedSchemata):
-    """ Schemata countable
-    """
-    label = u"countable"
-    fields = field.Fields(ISchema).select(
-        u'count',
-        u'sortcountable',
-        u'hidezerocount'
-    )
+    """Schemata countable"""
+
+    label = "countable"
+    fields = field.Fields(ISchema).select("count", "sortcountable", "hidezerocount")

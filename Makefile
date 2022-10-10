@@ -45,8 +45,8 @@ endif
 ##############################################################################
 # SETTINGS AND VARIABLE
 
-PLONE_VERSION?=5-latest
-PYTHON?=python3.8
+PLONE_VERSION?=6-latest
+PYTHON?=python3.9
 PIP_PARAMS=
 
 # Top-level targets
@@ -55,7 +55,7 @@ all: clean bootstrap install develop
 
 .PHONY: clean
 clean:			## Cleanup environment
-	rm -rf bin etc include lib lib64 var inituser pyvenv.cfg *.egg-info
+	rm -rf bin etc include lib lib64 var inituser pyvenv.cfg *.egg-info node_modules
 
 .PHONY: bootstrap
 bootstrap:		## Bootstrap python environment
@@ -65,14 +65,15 @@ bootstrap:		## Bootstrap python environment
 .PHONY: install
 install:		## Install Plone
 	bin/pip install Paste Plone plone.volto -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
-	bin/pip install zope.testrunner plone.app.testing plone.reload dm.plonepatches.reload i18ndude -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
+	bin/pip install zope.testrunner plone.app.testing plone.reload dm.plonepatches.reload i18ndude Products.ZMIntrospection -c "https://dist.plone.org/release/$(PLONE_VERSION)/constraints.txt" $(PIP_PARAMS)
 	bin/mkwsgiinstance -d . -u admin:admin
+	cp zope.conf etc/zope.conf
 	mkdir -p var/blobstorage var/filestorage
-	yarn install
 
 .PHONY: develop
 develop:		## Develop this add-on
 	bin/pip install -e . $(PIP_PARAMS)
+	yarn install
 
 .PHONY: start
 start:			## Start Plone backend

@@ -1,127 +1,131 @@
-FacetedEdit.MultiSelectWidget = function(wid){
-  var self = this;
-  this.wid = wid;
-  this.widget = jQuery('#' + wid + '_widget');
-  this.title = this.widget.find('legend').html();
-  this.elements = jQuery('option', this.widget);
-  this.select = jQuery('#' + this.wid);
-  this.multiple = this.select.attr("multiple") ? true : false;
-  this.placeholder = this.widget.data('placeholder');
-  this.closeOnSelect = this.widget.data('closeonselect');
-  this.ajax = this.widget.data('ajax');
+FacetedEdit.MultiSelectWidget = function (wid) {
+    var self = this;
+    this.wid = wid;
+    this.widget = jQuery("#" + wid + "_widget");
+    this.title = this.widget.find("legend").html();
+    this.elements = jQuery("option", this.widget);
+    this.select = jQuery("#" + this.wid);
+    this.multiple = this.select.attr("multiple") ? true : false;
+    this.placeholder = this.widget.data("placeholder");
+    this.closeOnSelect = this.widget.data("closeonselect");
+    this.ajax = this.widget.data("ajax");
 
-  if(!this.ajax) {
-    this.select.select2({
-      placeholder: this.placeholder,
-      closeOnSelect: this.closeOnSelect,
-      allowClear: true
+    if (!this.ajax) {
+        this.select.select2({
+            placeholder: this.placeholder,
+            closeOnSelect: this.closeOnSelect,
+            allowClear: true,
+        });
+    } else {
+        this.select.select2({
+            placeholder: this.placeholder,
+            closeOnSelect: this.closeOnSelect,
+            allowClear: true,
+            multiple: this.multiple,
+            ajax: {
+                url: this.ajax,
+                dataType: "json",
+                data: function (term) {
+                    var query = {
+                        q: term,
+                    };
+                    return query;
+                },
+                results: function (data) {
+                    return {
+                        results: data.items,
+                    };
+                },
+            },
+        });
+    }
+
+    self.operatorValue = self.widget.data("operator");
+
+    self.operator = self.widget.find(".faceted-operator a");
+    if (self.operator.length) {
+        self.operatorValue = self.operator.data("value");
+        self.operator.text(self.operator.data(self.operatorValue));
+
+        self.operator.on("click", function (evt) {
+            evt.preventDefault();
+
+            if (self.operatorValue === "or") {
+                self.operatorValue = "and";
+                self.operator.text(self.operator.data("and"));
+            } else {
+                self.operatorValue = "or";
+                self.operator.text(self.operator.data("or"));
+            }
+
+            self.set_default(this);
+        });
+    }
+
+    // Handle change
+    var js_widget = this;
+    this.select.on("change", function () {
+        js_widget.set_default(this);
     });
-  } else {
-    this.select.select2({
-      placeholder: this.placeholder,
-      closeOnSelect : this.closeOnSelect,
-      allowClear: true,
-      multiple: this.multiple,
-      ajax: {
-        url: this.ajax,
-          dataType: 'json',
-          data: function (term) {
-            var query = {
-              q: term
-            };
-            return query;
-          },
-          results: function (data) {
-            return {
-                results: data.items
-              };
-          }
-      }
-    });
-  }
 
-  self.operatorValue = self.widget.data('operator');
-
-  self.operator = self.widget.find('.faceted-operator a');
-  if(self.operator.length){
-    self.operatorValue = self.operator.data('value');
-    self.operator.text( self.operator.data( self.operatorValue ) );
-
-    self.operator.click(function(evt){
-      evt.preventDefault();
-
-      if(self.operatorValue === 'or'){
-        self.operatorValue = 'and';
-        self.operator.text(self.operator.data('and'));
-      }else{
-        self.operatorValue = 'or';
-        self.operator.text(self.operator.data('or'));
-      }
-
-      self.set_default(this);
-    });
-  }
-
-  // Handle change
-  var js_widget = this;
-  this.select.change(function(evt){
-    js_widget.set_default(this);
-  });
-
-  this.count();
+    this.count();
 };
 
 FacetedEdit.MultiSelectWidget.prototype = {
-  count: function(){
-    if(!this.widget.hasClass('faceted-count')){
-      return;
-    }
-    this.elements.each(function(){
-      var option = jQuery(this);
-      var number = Math.floor(Math.random() * 100);
-      var option_txt = option.attr('title');
-      option_txt += ' (' + number + ')';
-      option.html(option_txt);
-    });
-  },
-
-  set_default: function(element){
-    var value = "";
-    if(this.multiple){
-      jQuery(this.select.val()).each(function(idx, val){
-        if(idx > 0){
-          value += "\n";
+    count: function () {
+        if (!this.widget.hasClass("faceted-count")) {
+            return;
         }
-        value += val;
-      });
-    } else {
-      value = this.select.val();
-    }
+        this.elements.each(function () {
+            var option = jQuery(this);
+            var number = Math.floor(Math.random() * 100);
+            var option_txt = option.attr("title");
+            option_txt += " (" + number + ")";
+            option.html(option_txt);
+        });
+    },
 
-    var query = {};
-    query.redirect = '';
-    query.updateCriterion_button = 'Save';
-    query.cid = this.wid;
-    query['faceted.' + this.wid + '.default'] = value;
-    query['faceted.' + this.wid + '.operator'] = this.operatorValue;
+    set_default: function () {
+        var value = "";
+        if (this.multiple) {
+            jQuery(this.select.val()).each(function (idx, val) {
+                if (idx > 0) {
+                    value += "\n";
+                }
+                value += val;
+            });
+        } else {
+            value = this.select.val();
+        }
 
-    jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {msg: 'Saving ...'});
-    jQuery.post(FacetedEdit.BASEURL + '@@faceted_configure', query, function(data){
-      jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {msg: data});
+        var query = {};
+        query.redirect = "";
+        query.updateCriterion_button = "Save";
+        query.cid = this.wid;
+        query["faceted." + this.wid + ".default"] = value;
+        query["faceted." + this.wid + ".operator"] = this.operatorValue;
+
+        jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_START, {
+            msg: "Saving ...",
+        });
+        jQuery.post(FacetedEdit.BASEURL + "@@faceted_configure", query, function (data) {
+            jQuery(FacetedEdit.Events).trigger(FacetedEdit.Events.AJAX_STOP, {
+                msg: data,
+            });
+        });
+    },
+};
+
+FacetedEdit.initializeMultiSelectWidget = function () {
+    jQuery("div.faceted-multiselect-widget").each(function () {
+        var wid = jQuery(this).attr("id");
+        wid = wid.split("_")[0];
+        FacetedEdit.Widgets[wid] = new FacetedEdit.MultiSelectWidget(wid);
     });
-  }
 };
 
-FacetedEdit.initializeMultiSelectWidget = function(){
-  jQuery('div.faceted-multiselect-widget').each(function(){
-      var wid = jQuery(this).attr('id');
-      wid = wid.split('_')[0];
-      FacetedEdit.Widgets[wid] = new FacetedEdit.MultiSelectWidget(wid);
-  });
-};
-
-jQuery(document).ready(function(){
-  jQuery(FacetedEdit.Events).bind(
+// Initialize
+jQuery(FacetedEdit.Events).on(
     FacetedEdit.Events.INITIALIZE_WIDGETS,
-    FacetedEdit.initializeMultiSelectWidget);
-});
+    FacetedEdit.initializeMultiSelectWidget
+);

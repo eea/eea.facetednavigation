@@ -1,21 +1,10 @@
-<tal:left define="hidden python:request.set('disable_plone.leftcolumn', view.hide_left_column)" />
-<tal:right define="hidden python:request.set('disable_plone.rightcolumn', view.hide_right_column)" />
+<tal:left define="hidden python:request.set('disable_plone.leftcolumn', view.hide_left_portlets)" />
+<tal:right define="hidden python:request.set('disable_plone.rightcolumn', view.hide_right_portlets)" />
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
   lang="en-US"
   metal:use-macro="here/main_template/macros/master"
   i18n:domain="eea">
-
-<metal:jsslot fill-slot="javascript_head_slot">
-  <script type="text/javascript"
-    tal:content="string:jQuery(document).ready(function(evt){
-        Faceted.Load(evt, '${context/absolute_url}/');
-    });"></script>
-  <script type="text/javascript"
-    tal:content="string:jQuery(window).on('unload', function(){
-        Faceted.Unload();
-    });"></script>
-</metal:jsslot>
 
 <body>
 
@@ -23,7 +12,9 @@
 
 <!-- Folder contents -->
 <div class="faceted-form" metal:define-macro="widgets" id="faceted-form"
-  tal:define="mode view/mode | string:view" tal:attributes="data-mode mode">
+  tal:define="mode view/mode | string:view" tal:attributes="
+  data-mode mode;
+  data-baseurl string:${context/absolute_url}/">
 
   <!-- Basic/Extended search -->
   <div class="faceted-sections-buttons">

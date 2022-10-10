@@ -12,39 +12,59 @@
         "yarn": "^1.3.2"
     },
     "dependencies": {
+        "jquery": "1.12.4",
+        "jquery-ajax-file-upload": "1.0.0",
+        "jquery-ui": "1.13.2",
+        "jquery.cookie": "1.4.1",
+        "jquery2-bbq": "1.3.1",
+        "jstree": "3.3.12",
+        "jstree-bootstrap-theme": "1.0.1",
+        "select2": "3.5.1"
+    },
+    "resolutions": {
+        "jquery": "1.12.4"
     },
     "devDependencies": {
+        "@babel/core": "^7.18.10",
+        "@babel/eslint-parser": "^7.18.9",
+        "@babel/plugin-proposal-optional-chaining": "^7.18.9",
+        "@babel/preset-env": "^7.18.10",
         "clean-css-cli": "^5.6.0",
         "copy-webpack-plugin": "^10.2.4",
         "core-js": "^3.21.1",
         "css-loader": "^6.7.1",
-        "eslint-config-prettier": "^8.5.0",
         "eslint": "^8.13.0",
+        "eslint-config-prettier": "^8.5.0",
         "expose-loader": "^3.1.0",
         "nodemon": "^2.0.15",
         "npm-run-all": "^4.1.5",
         "prettier": "^2.6.2",
         "style-loader": "^3.3.1",
+        "webpack": "^5.72.0",
         "webpack-bundle-analyzer": "^4.5.0",
         "webpack-cli": "^4.9.2",
         "webpack-dev-server": "^4.8.1",
-        "webpack": "^5.72.0"
-    },
-    "resolutions": {
-        "jquery": "3.6.0"
+        "sass": "^1.49.11"
     },
     "resolutions-comments": {
         "ua-parser-js": "See https://github.com/faisalman/ua-parser-js/issues/536"
     },
     "scripts": {
-        "build": "npm-run-all build:webpack build:css",
+        "build": "npm-run-all build:webpack build:css prettier",
         "build:webpack": "NODE_ENV=production webpack --config webpack.config.js",
-        "build:css": "npm-run-all css-minify-plugins css-minify-view css-minify-edit",
+        "build:css": "npm-run-all css-compile-plugins css-minify-plugins css-compile-view css-minify-view css-compile-edit css-minify-edit prettier",
         "watch:webpack": "NODE_ENV=development webpack --config webpack.config.js --watch",
+        "watch:scss": "nodemon --watch eea --ext scss --exec \"yarn build:css\"",
         "start": "NODE_ENV=development webpack serve --config webpack.config.js",
-        "css-minify-plugins": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-jquery.min.css ./resources/plugins.css",
-        "css-minify-view": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-view.min.css ./resources/view.css",
-        "css-minify-edit": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-edit.min.css ./resources/edit.css"
+        "css-compile-plugins": "sass --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css resources/plugins.scss:eea/facetednavigation/browser/static/faceted-jquery.css",
+        "css-minify-plugins": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-jquery.min.css eea/facetednavigation/browser/static/faceted-jquery.css",
+        "css-compile-view": "sass --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css resources/view.scss:eea/facetednavigation/browser/static/faceted-view.css",
+        "css-minify-view": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-view.min.css eea/facetednavigation/browser/static/faceted-view.css",
+        "css-compile-edit": "sass --load-path=node_modules --style expanded --source-map --embed-sources --no-error-css resources/edit.scss:eea/facetednavigation/browser/static/faceted-edit.css",
+        "css-minify-edit": "cleancss --format breakWith=lf --source-map --source-map-inline-sources --output eea/facetednavigation/browser/static/faceted-edit.min.css eea/facetednavigation/browser/static/faceted-edit.css",
+        "lint": "./node_modules/eslint/bin/eslint.js --max-warnings=0 'eea/**/*.{js,jsx}'",
+        "lint:fix": "./node_modules/eslint/bin/eslint.js --fix 'eea/**/*.{js,jsx}'",
+        "prettier": "prettier eea -w"
     },
     "browserslist": {
         "production": [

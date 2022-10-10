@@ -16,10 +16,10 @@
 
         <div metal:use-macro="context/batch_macros/macros/navigation" />
 
-        <div class="eea-preview-items">
+        <div class="row eea-preview-items">
           <tal:entries repeat="brain batch">
-            <tal:entry tal:define="doc brain/getObject|nothing" tal:condition="python:doc is not None">
-              <tal:preview tal:condition="exists:doc/@@faceted-preview-item" tal:replace="structure doc/@@faceted-preview-item" />
+            <tal:entry tal:define="view python:context.restrictedTraverse('@@faceted-preview-brain')">
+              <tal:preview tal:replace="structure python:view(brain=brain)" />
             </tal:entry>
           </tal:entries>
           <span tal:condition="not: batch/sequence_length"

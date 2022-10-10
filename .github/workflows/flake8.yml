@@ -24,4 +24,4 @@ jobs:
 
       # run black
       - name: run flake8
-        run: flake8 --ignore=E203,W503,C901 eea/ setup.py
+        run: flake8 --ignore=E203,W503 eea/ setup.py

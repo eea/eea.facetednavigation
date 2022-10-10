@@ -24,9 +24,9 @@
 <form action="." method="get" class="faceted-range-widget-form"
   tal:on-error="structure python:error_view(error=error, cid=wid)">
   <div tal:attributes="id string:${wid}_start;">
-    <label tal:attributes="for string:$wid-start-input"
+    <label tal:attributes="for string:$wid-start-input" class="form-check-label"
       i18n:translate="" tal:content="python:view.translate(labelStart)">Start</label>
-    <input type="text" name="start" title="Start" tal:attributes="
+    <input type="text" name="start" title="Start" class="form-control" tal:attributes="
       id string:$wid-start-input;
       placeholder python:view.translate(placeholderStart);
       value default_start;
@@ -34,9 +34,9 @@
       " i18n:attributes="title" />
   </div>
   <div tal:attributes="id string:${wid}_end;">
-    <label tal:attributes="for string:$wid-end-input"
+    <label tal:attributes="for string:$wid-end-input" class="form-check-label"
       i18n:translate="" tal:content="python:view.translate(labelEnd)">End</label>
-    <input type="text" name="end" title="End" tal:attributes="
+    <input type="text" name="end" title="End"  class="form-control" tal:attributes="
       id string:$wid-end-input;
       placeholder python:view.translate(placeholderEnd);
       value default_end;

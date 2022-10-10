@@ -1,37 +1,35 @@
 """ Adapters
 """
-from zope.interface import implementer
 from eea.facetednavigation.interfaces import IWidgetFilterBrains
-import six
+from zope.interface import implementer
 
 
 @implementer(IWidgetFilterBrains)
 class WidgetFilterBrains(object):
-    """ Filter brains after query
-    """
+    """Filter brains after query"""
+
     def __init__(self, context):
         self.widget = context
 
     def __call__(self, brains, form):
-        """ Filter brains
-        """
+        """Filter brains"""
         wid = self.widget.data.getId()
-        index = self.widget.data.get('index', '')
+        index = self.widget.data.get("index", "")
 
         if self.widget.hidden:
             letter = self.widget.default
         else:
-            letter = form.get(wid, '')
+            letter = form.get(wid, "")
 
-        if isinstance(letter, six.binary_type):
-            letter = letter.decode('utf-8', 'replace')
+        if isinstance(letter, bytes):
+            letter = letter.decode("utf-8", "replace")
 
         for brain in brains:
             if not (index and letter):
                 yield brain
                 continue
 
-            if letter.lower() in [u'all', 'all']:
+            if letter.lower() in ["all", "all"]:
                 yield brain
                 continue
 
@@ -39,11 +37,11 @@ class WidgetFilterBrains(object):
             if xval is None:
                 continue
 
-            if not isinstance(xval, (six.binary_type, six.text_type)):
+            if not isinstance(xval, (bytes, str)):
                 continue
 
-            if isinstance(xval, six.binary_type):
-                xval = xval.decode('utf-8', 'replace')
+            if isinstance(xval, bytes):
+                xval = xval.decode("utf-8", "replace")
 
             if not xval.lower().startswith(letter.lower()):
                 continue

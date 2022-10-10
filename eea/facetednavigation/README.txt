@@ -8,8 +8,11 @@ and navigation within plone sites.
 
 Installation
 ============
-  * Go to admin > Site Setup > Add-ons
-  * Activate EEA Faceted Navigation
+  * Go to "admin > Site Setup > Add-ons"
+  * Activate "EEA Faceted Navigation"
+  * Go to "admin > Site Setup > Content Types"
+  * Select one content type and go to "Behaviors"
+  * Enable "Faceted navigable" behavior
 
 
 Extra
@@ -17,23 +20,9 @@ Extra
 You can extend faceted navigation functionality by installing the following
 addons:
 
-  - Customized vocabularies
-      - Products.ATVocabularyManager
-
-  * Multilingual/translation solution
-      - Products.LinguaPlone
-
   * Cache (memcache)
       - plone.memoize
       - eea.cache
-
-  * Faceted extensions
-      - eea.faceted.tool
-      - eea.faceted.inheritance
-
-  * Faceted themes
-      - eea.faceted.blue
-
 
 Documentation
 =============

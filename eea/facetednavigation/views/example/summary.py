@@ -2,8 +2,9 @@
 """
 from Products.Five.browser import BrowserView
 
+
 class SummaryView(BrowserView):
-    """ Example Faceted view for the results. You can skip the class attribute
+    """Example Faceted view for the results. You can skip the class attribute
     in the ZCML if you don't have custom logic for your view.
 
     The coolest thing of this is that you can re-filter the results by
@@ -12,9 +13,8 @@ class SummaryView(BrowserView):
     This is limited only by your imagination... and your python skills :)
     """
 
-    def truncate(self, text='', chars=100):
-        """ Truncate text by given number of characters
-        """
+    def truncate(self, text="", chars=100):
+        """Truncate text by given number of characters"""
         if len(text) <= chars:
             return text
-        return text[:chars] + '...'
+        return text[:chars] + "..."

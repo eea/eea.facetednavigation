@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<object name="default-widgets" meta_type="ATFolder">
+<object name="default-widgets" meta_type="Dexterity Item">
  <criteria>
   <criterion name="c0">
    <property name="widget">resultsperpage</property>
@@ -10,8 +10,8 @@
    <property name="custom_css"></property>
    <property name="start">0</property>
    <property name="end">20</property>
-   <property name="step">5</property>
-   <property name="default">5</property>
+   <property name="step">1</property>
+   <property name="default">12</property>
   </criterion>
   <criterion name="c1">
    <property name="widget">checkbox</property>

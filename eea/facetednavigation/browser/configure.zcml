@@ -2,7 +2,6 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:plone="http://namespaces.plone.org/plone"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="eea"
     >
 
@@ -105,13 +104,6 @@
       />
 
   <browser:page
-      name="faceted_history"
-      for="..interfaces.IFacetedNavigable"
-      template="template/history.pt"
-      permission="zope2.View"
-      />
-
-  <browser:page
       name="faceted_exportimport"
       for="..interfaces.IFacetedNavigable"
       class=".app.exportimport.FacetedExportImport"
@@ -133,13 +125,6 @@
       />
 
   <browser:page
-      name="faceted_sync_translations"
-      for="..interfaces.IFacetedNavigable"
-      class=".app.synchronize.FacetedSynchronizeTranslation"
-      permission="eea.faceted.configure"
-      />
-
-  <browser:page
       name="faceted.widget.error"
       for="..interfaces.IFacetedNavigable"
       class=".app.error.FacetedError"
@@ -155,13 +140,16 @@
       permission="zope2.View"
       />
 
-  <browser:resourceDirectory
-    name="facetednavigation"
-    directory="./static" />
-
   <!-- BBB -->
   <browser:resourceDirectory
-    name="faceted_images"
-    directory="./static" />
+      name="facetednavigation"
+      directory="./static"
+      />
+
+  <plone:static
+      directory="static"
+      name="facetednavigation"
+      type="plone"
+      />
 
 </configure>

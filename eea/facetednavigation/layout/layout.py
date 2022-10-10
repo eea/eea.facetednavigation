@@ -10,30 +10,30 @@ from eea.facetednavigation.config import ANNO_FACETED_LAYOUT
 
 @implementer(IFacetedLayout)
 class FacetedLayout(object):
-    """ Faceted Layout
-    """
+    """Faceted Layout"""
+
     def __init__(self, context):
         self.context = context
+
     #
     # Getters
     #
     @property
     def layout(self):
-        """ Current layout
-        """
+        """Current layout"""
         return IAnnotations(self.context).get(
-            ANNO_FACETED_LAYOUT, 'faceted-preview-items')
+            ANNO_FACETED_LAYOUT, "faceted-preview-items"
+        )
 
     @property
     def layouts(self):
-        """ Available layouts
-        """
+        """Available layouts"""
         layouts = self.default_layouts
         res = []
         for template_id, title in layouts:
             # TODO These templates don't work with FacetedNavigation.
             # Disabling them for now
-            if template_id in ['album_view', 'event_listing']:
+            if template_id in ["album_view", "event_listing"]:
                 continue
             if not self.get_macro(template_id):
                 continue
@@ -48,27 +48,25 @@ class FacetedLayout(object):
 
         return res
 
-    def get_macro(self, template_id=None, macro='content-core'):
-        """ Get macro from layout
-        """
+    def get_macro(self, template_id=None, macro="content-core"):
+        """Get macro from layout"""
         # Get default
         if not template_id:
             template_id = self.layout
 
-        request = getattr(self.context, 'REQUEST', None)
-
+        request = getattr(self.context, "REQUEST", None)
 
         template = queryMultiAdapter((self.context, request), name=template_id)
         if template:
             # Zope3 view
-            macros = getattr(template, 'macros', None)
+            macros = getattr(template, "macros", None)
             if not macros:
-                index = getattr(template, 'index', None)
-                macros = getattr(index, 'macros', None)
+                index = getattr(template, "index", None)
+                macros = getattr(index, "macros", None)
         else:
             # Zope2 skins template
             template = self.context.restrictedTraverse(template_id, None)
-            macros = getattr(template, 'macros', None)
+            macros = getattr(template, "macros", None)
 
         if not macros:
             return None
@@ -80,19 +78,18 @@ class FacetedLayout(object):
 
     @property
     def default_layouts(self):
-        """ Get container default layouts
-        """
+        """Get container default layouts"""
         return self.context.getAvailableLayouts()
+
     #
     # Setters
     #
     def update_layout(self, layout=None):
-        """ Save layout for context. Returns error if any.
-        """
+        """Save layout for context. Returns error if any."""
         if not layout:
-            return 'Empty layout'
+            return "Empty layout"
         if layout not in [x[0] for x in self.layouts]:
-            return 'Invalid layout id'
+            return "Invalid layout id"
 
         IAnnotations(self.context)[ANNO_FACETED_LAYOUT] = layout
-        return ''
+        return ""

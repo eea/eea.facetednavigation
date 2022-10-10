@@ -1,24 +1,21 @@
 """ Widget
 """
-import logging
-
 from datetime import datetime
 from DateTime import DateTime
-
-from collective.js.jqueryui.utils import get_datepicker_date_format
-from collective.js.jqueryui.utils import get_python_date_format
-from collective.js.jqueryui.viewlet import L10nDatepicker
-
+from eea.facetednavigation import _
 from eea.facetednavigation.widgets import ViewPageTemplateFile
-from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 from eea.facetednavigation.widgets.daterange.interfaces import DefaultSchemata
-from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.daterange.interfaces import DisplaySchemata
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation.widgets.daterange.interfaces import LayoutSchemata
+from eea.facetednavigation.widgets.daterange.utils import get_datepicker_date_format
+from eea.facetednavigation.widgets.daterange.utils import get_python_date_format
+from eea.facetednavigation.widgets.daterange.utils import LANGUAGES
+from eea.facetednavigation.widgets.widget import Widget as AbstractWidget
 
-import six
+import logging
 
-logger = logging.getLogger('eea.facetednavigation')
+
+logger = logging.getLogger("eea.facetednavigation")
 
 
 def formated_time(datestr):
@@ -26,11 +23,11 @@ def formated_time(datestr):
     Y-m-d as format."""
     try:
         if len(datestr) <= 4:
-            datestr = datetime.strptime(datestr, '%Y')
-        elif '-' in datestr:
-            datestr = datetime.strptime(datestr, '%Y-%m-%d')
-        elif '/' in datestr:
-            datestr = datetime.strptime(datestr, '%Y/%m/%d')
+            datestr = datetime.strptime(datestr, "%Y")
+        elif "-" in datestr:
+            datestr = datetime.strptime(datestr, "%Y-%m-%d")
+        elif "/" in datestr:
+            datestr = datetime.strptime(datestr, "%Y/%m/%d")
     except Exception as err:
         logger.warn(err)
     return DateTime(datestr)
@@ -39,75 +36,70 @@ def formated_time(datestr):
 def convert_to_padded_digits(start, end):
     """Be sure years are 0padded & 4 digits
     this to allow very old years to be entered up."""
-    start = start.replace('/', '-')
-    end = end.replace('/', '-')
-    bounds = {'start': start, 'end': end}
+    start = start.replace("/", "-")
+    end = end.replace("/", "-")
+    bounds = {"start": start, "end": end}
     for sbound in bounds:
         bound = bounds[sbound]
-        parts = bound.split('-')
+        parts = bound.split("-")
         if len(parts) == 3:
             year, month, day = parts
             ypadding = 4 - len(year)
             mpadding = 2 - len(month)
             dpadding = 2 - len(day)
-            bounds[sbound] = '%s-%s-%s' % (
-                '0' * ypadding + year,
-                '0' * mpadding + month,
-                '0' * dpadding + day,)
-    return bounds['start'], bounds['end']
+            bounds[sbound] = "%s-%s-%s" % (
+                "0" * ypadding + year,
+                "0" * mpadding + month,
+                "0" * dpadding + day,
+            )
+    return bounds["start"], bounds["end"]
 
 
-class Widget(AbstractWidget, L10nDatepicker):
-    """ Widget
-    """
-    widget_type = 'daterange'
-    widget_label = _('Date range')
+class Widget(AbstractWidget):
+    """Widget"""
+
+    widget_type = "daterange"
+    widget_label = _("Date range")
 
     groups = (DefaultSchemata, LayoutSchemata, DisplaySchemata)
-    index = ViewPageTemplateFile('widget.pt')
+    index = ViewPageTemplateFile("widget.pt")
 
     @property
     def default(self):
-        """ Return default
-        """
-        default = self.data.get('default', '')
+        """Return default"""
+        default = self.data.get("default", "")
         if not default:
-            return '', ''
+            return "", ""
 
-        default = default.split('=>')
+        default = default.split("=>")
         if len(default) != 2:
-            return '', ''
+            return "", ""
 
         start, end = default
         start = start.strip()
         end = end.strip()
         if not self.use_plone_date_format:
-            start = start.replace('/', '-')
-            end = end.replace('/', '-')
+            start = start.replace("/", "-")
+            end = end.replace("/", "-")
         try:
-            start = DateTime(datetime.strptime(start,
-                                               self.python_date_format))
+            start = DateTime(datetime.strptime(start, self.python_date_format))
             start = start.strftime(self.python_date_format)
         except Exception as err:
-            logger.exception('%s => Start date: %s', err, start)
-            start = ''
+            logger.exception("%s => Start date: %s", err, start)
+            start = ""
 
         try:
-            end = DateTime(datetime.strptime(end,
-                                             self.python_date_format))
+            end = DateTime(datetime.strptime(end, self.python_date_format))
             end = end.strftime(self.python_date_format)
         except Exception as err:
-            logger.exception('%s => End date: %s', err, end)
-            end = ''
+            logger.exception("%s => End date: %s", err, end)
+            end = ""
         return (start, end)
 
     def query(self, form):
-        """ Get value from form and return a catalog dict query
-        """
+        """Get value from form and return a catalog dict query"""
         query = {}
-        index = self.data.get('index', '')
-        if six.PY2:
-            index = index.encode('utf-8', 'replace')
+        index = self.data.get("index", "")
         if not index:
             return query
 
@@ -124,10 +116,8 @@ class Widget(AbstractWidget, L10nDatepicker):
 
         if self.use_plone_date_format:
             try:
-                start = DateTime(datetime.strptime(start,
-                                                   self.python_date_format))
-                end = DateTime(datetime.strptime(end,
-                                                 self.python_date_format))
+                start = DateTime(datetime.strptime(start, self.python_date_format))
+                end = DateTime(datetime.strptime(end, self.python_date_format))
             except Exception as err:
                 logger.exception(err)
                 return query
@@ -146,21 +136,18 @@ class Widget(AbstractWidget, L10nDatepicker):
         start = start.latestTime()
         end = end.latestTime()
 
-        query[index] = {
-            'query': (start, end),
-            'range': 'min:max'
-        }
+        query[index] = {"query": (start, end), "range": "min:max"}
         return query
 
     @property
     def cal_year_range(self):
         """Return the stored value of calYearRange."""
-        return self.data.get('calYearRange', u"c-10:c+10")
+        return self.data.get("calYearRange", "c-10:c+10")
 
     @property
     def use_plone_date_format(self):
         """Return the stored value of usePloneDateFormat."""
-        return self.data.get('usePloneDateFormat', False)
+        return self.data.get("usePloneDateFormat", False)
 
     @property
     def js_date_format(self):
@@ -181,4 +168,17 @@ class Widget(AbstractWidget, L10nDatepicker):
         """Return the language to use with JS code"""
         if self.use_plone_date_format:
             return self.jq_language()
+        return ""
+
+    def jq_language(self):
+        language = self.request.get("LANGUAGE", "")
+        if "-" in language:
+            parts = language.split("-")
+            language = "%s-%s" % (parts[0], parts[1].upper())
+            if language in LANGUAGES:
+                return language
+            else:
+                language = language.split("-")[0]
+        if language in LANGUAGES:
+            return language
         return ""

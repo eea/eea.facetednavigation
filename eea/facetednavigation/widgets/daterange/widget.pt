@@ -25,18 +25,18 @@
 <form action="." method="get" class="faceted-daterange-widget-form"
   tal:on-error="structure python:error_view(error=error, cid=wid)">
   <div tal:attributes="id string:${wid}_start;">
-    <label tal:attributes="for string:$wid-start-input"
+    <label class="form-check-label" tal:attributes="for string:$wid-start-input"
       i18n:translate="" tal:content="python:view.translate(labelStart)">Start date</label>
-    <input type="text" name="start" title="Start date" tal:attributes="
+    <input type="text" name="start" title="Start date" class="form-control" tal:attributes="
       id string:$wid-start-input;
       placeholder python:view.translate(placeholderStart);
       value default_start"
       i18n:attributes="title" />
   </div>
   <div tal:attributes="id string:${wid}_end;">
-    <label tal:attributes="for string:$wid-end-input"
+    <label class="form-check-label" tal:attributes="for string:$wid-end-input"
       i18n:translate="" tal:content="python:view.translate(labelEnd)">End date</label>
-    <input type="text" name="end" title="End date" tal:attributes="
+    <input type="text" name="end" title="End date" class="form-control" tal:attributes="
       id string:$wid-end-input;
       placeholder python:view.translate(placeholderEnd);
       value default_end"

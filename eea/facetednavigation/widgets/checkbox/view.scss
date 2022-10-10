@@ -1,0 +1,59 @@
+.faceted-checkboxes-widget {
+    .faceted-checkbox-item-disabled {
+        color: gray;
+    }
+
+    .faceted-zero-count-hidden {
+        .faceted-checkbox-item-disabled {
+            display: none !important;
+        }
+    }
+
+    .widget-fieldset {
+        ul {
+            margin: 0px;
+            list-style: none !important;
+
+            li {
+                input {
+                    clear: both;
+                    float: left;
+                }
+
+                label {
+                    font-weight: normal;
+                    padding-left: 0.5em;
+                }
+            }
+        }
+    }
+
+    .faceted-checkbox-more {
+        text-align: right;
+
+        a {
+            border-bottom: none;
+        }
+    }
+
+    .faceted-checkbox-less {
+        text-align: right;
+    }
+
+    .faceted-operator {
+        text-align: right;
+        margin-top: -20px;
+
+        label {
+            font-weight: normal;
+        }
+
+        a,
+        a:hover,
+        a:visited {
+            color: #007bb1;
+            border: none;
+            text-decoration: none;
+        }
+    }
+}

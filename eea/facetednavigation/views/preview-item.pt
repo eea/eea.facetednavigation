@@ -1,48 +1,10 @@
-<div class="photoAlbumEntry"
-  tal:define="portal_type context/portal_type|string:;
-              useViewTypes context/portal_properties/site_properties/typesUseViewActionInListings|python:[];
-              useView python:portal_type in useViewTypes;">
-  <a tal:define="
-      description context/Description|string:;
-      title context/pretty_title_or_id|string:;
-      desc_or_title python:description or title;
-      url context/absolute_url|string:#;
-      view_url python:(url and useView and url + '/view') or url;
-      is_namedimage python:getattr(getattr(context, 'image', None), 'getImageSize', None) is not None;
-      image_thumb exists:context/image_thumb;
-      image_tag python:getattr(context, 'tag', None)"
-     tal:attributes="href view_url;
-                     title description">
-
-<tal:block tal:condition="is_namedimage">
-    <span class="photoAlbumEntryWrapper">
-
-       <img style="border: none" tal:attributes="
-        title desc_or_title;
-        alt title;
-        src string:$url/@@images/image/thumb"/>
-    </span>
-
-    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
-    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
-
-</tal:block>
-
-<tal:block tal:condition="not:is_namedimage">
-    <span class="photoAlbumEntryWrapper" tal:condition="image_thumb">
-      <img style="border: none" tal:attributes="
-        title desc_or_title;
-        alt title;
-        src string:$url/image_thumb"/>
-    </span>
-
-    <span class="photoAlbumEntryWrapper" tal:condition="python:not image_thumb and image_tag">
-      <img tal:replace="structure python:image_tag(scale='thumb', title=description)" />
-    </span>
-
-    <span class="photoAlbumEntryTitle" tal:content="context/pretty_title_or_id|string:">Title</span>
-    <span class="photoAlbumEntryDescription" tal:content="description">Description</span>
-</tal:block>
-
-  </a>
+<div class="card col-lg-3 col-md-4 col-sm-6 eea-preview-item">
+  <div tal:define="scale python:view.thumb()" class="card-image d-flex justify-content-center align-items-center" style="height: 10rem;">
+    <img tal:replace="structure scale" />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title" tal:content="python:view.title()">Image title</h5>
+    <p class="card-text" tal:content="python:view.description()">Description</p>
+    <a class="card-link stretched-link" tal:attributes="href python:view.url(); title python:view.description()" i18n:translate="">Read more</a>
+  </div>
 </div>

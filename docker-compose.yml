@@ -2,37 +2,46 @@ version: "3"
 
 services:
 
-  plone4:
-    image: plone:4
-    ports:
-    - "8080:8080"
-    volumes:
-    - ./:/plone/instance/src/eea.facetednavigation
-    environment:
-      SITE: "Plone"
-      ADDONS: "eea.facetednavigation"
-      DEVELOP: "/plone/instance/src/eea.facetednavigation"
-
   plone5:
     image: plone/plone-backend:5
     ports:
-    - "8080"
+    - "8081:8080"
     volumes:
     - ./:/app/src/eea.facetednavigation
     environment:
+      SECURITY_POLICY_IMPLEMENTATION: "C"
+      VERBOSE_SECURITY: "off"
+      DEFAULT_ZPUBLISHER_ENCODING: "utf-8"
+      DEBUG_MODE: "off"
+      ZODB_CACHE_SIZE: "50000"
       SITE: "Plone"
       ADDONS: "eea.facetednavigation"
       PROFILES: "eea.facetednavigation:default"
       DEVELOP: "/app/src/eea.facetednavigation"
+    tty: true
+    stdin_open: true
+    command: cat
+    # docker-compose exec plone5 bash
+    # gosu plone /app/bin/runwsgi -v etc/zope.ini config_file=zope.conf
 
   plone6:
-    image: plone/plone-backend:6.0.0a6
+    image: plone/plone-backend:6.0.0b1
     ports:
-    - "8080"
+    - "8082:8080"
     volumes:
     - ./:/app/src/eea.facetednavigation
     environment:
+      SECURITY_POLICY_IMPLEMENTATION: "C"
+      VERBOSE_SECURITY: "off"
+      DEFAULT_ZPUBLISHER_ENCODING: "utf-8"
+      DEBUG_MODE: "off"
+      ZODB_CACHE_SIZE: "50000"
       SITE: "Plone"
       ADDONS: "eea.facetednavigation"
       PROFILES: "eea.facetednavigation:default"
       DEVELOP: "/app/src/eea.facetednavigation"
+    tty: true
+    stdin_open: true
+    command: cat
+    # docker-compose exec plone6 bash
+    # gosu plone /app/bin/runwsgi -v etc/zope.ini config_file=zope.conf

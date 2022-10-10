@@ -7,108 +7,107 @@ from eea.facetednavigation.widgets.interfaces import ISchema, FacetedSchemata
 from eea.facetednavigation.widgets.interfaces import LayoutSchemata
 from eea.facetednavigation.widgets.interfaces import CountableSchemata
 from eea.facetednavigation.widgets.interfaces import DefaultSchemata as DS
-from eea.facetednavigation import EEAMessageFactory as _
+from eea.facetednavigation import _
 
 
 class IMultiSelectSchema(ISchema):
-    """ Schema
-    """
+    """Schema"""
+
     default = schema.List(
-        title=_(u'Default value'),
-        description=_(u'Default items (one per line)'),
+        title=_("Default value"),
+        description=_("Default items (one per line)"),
         required=False,
         unique=True,
-        value_type=schema.TextLine(title=u'Item'),
+        value_type=schema.TextLine(title="Item"),
     )
 
     operator = schema.Choice(
-        title=_(u'Default operator'),
-        description=_(u'Search with AND/OR between elements'),
-        vocabulary=SimpleVocabulary([
-            SimpleTerm(u'or', u'or', u'OR'),
-            SimpleTerm(u'and', u'and', u'AND')
-        ]),
-        default=u'or'
+        title=_("Default operator"),
+        description=_("Search with AND/OR between elements"),
+        vocabulary=SimpleVocabulary(
+            [SimpleTerm("or", "or", "OR"), SimpleTerm("and", "and", "AND")]
+        ),
+        default="or",
     )
 
     operator_visible = schema.Bool(
-        title=_(u"Operator visible"),
-        description=_(u"Let the end-user choose to search with "
-                      u"AND or OR between elements"),
+        title=_("Operator visible"),
+        description=_(
+            "Let the end-user choose to search with " "AND or OR between elements"
+        ),
         required=False,
-        default=False
+        default=False,
     )
 
     multiple = schema.Bool(
-        title=_(u"Multiselect"),
-        description=_(u"Allow multiple selections"),
+        title=_("Multiselect"),
+        description=_("Allow multiple selections"),
         default=True,
-        required=False
+        required=False,
     )
 
     vocabulary = schema.Choice(
-        title=_(u"Vocabulary"),
-        description=_(u'Vocabulary to use to render widget items'),
-        vocabulary=u'eea.faceted.vocabularies.PortalVocabularies',
-        required=False
+        title=_("Vocabulary"),
+        description=_("Vocabulary to use to render widget items"),
+        vocabulary="eea.faceted.vocabularies.PortalVocabularies",
+        required=False,
     )
 
     ajax = schema.TextLine(
-        title=_(u'AJAX URL'),
+        title=_("AJAX URL"),
         description=_(
-            u"Provide an URL to be used to get and filter items "
-            u"asynchronously e.g.: /search. Your endpoint should "
-            u"filter items by 'q' param and return a JSON like "
-            u"e.g.: {'items': [...]}"
+            "Provide an URL to be used to get and filter items "
+            "asynchronously e.g.: /search. Your endpoint should "
+            "filter items by 'q' param and return a JSON like "
+            "e.g.: {'items': [...]}"
         ),
-        required=False
+        required=False,
     )
 
     catalog = schema.Choice(
-        title=_(u'Catalog'),
-        description=_(u"Get unique values from catalog "
-                      u"as an alternative for vocabulary"),
-        vocabulary=u'eea.faceted.vocabularies.UseCatalog',
-        required=False
+        title=_("Catalog"),
+        description=_(
+            "Get unique values from catalog " "as an alternative for vocabulary"
+        ),
+        vocabulary="eea.faceted.vocabularies.UseCatalog",
+        required=False,
     )
 
     closeonselect = schema.Bool(
-        title=_(u"Close on select"),
-        description=_(u"Close selection popup after each select"),
-        required=False
+        title=_("Close on select"),
+        description=_("Close selection popup after each select"),
+        required=False,
     )
 
     sortreversed = schema.Bool(
-        title=_(u"Reverse options"),
-        description=_(u"Sort options reversed"),
-        required=False
+        title=_("Reverse options"),
+        description=_("Sort options reversed"),
+        required=False,
     )
 
 
 class DefaultSchemata(DS):
-    """ Schemata default
-    """
+    """Schemata default"""
+
     fields = field.Fields(IMultiSelectSchema).select(
-        u'title',
-        u'index',
-        u'operator',
-        u'operator_visible',
-        u'multiple',
-        u'vocabulary',
-        u'catalog',
-        u'ajax',
-        u'default'
+        "title",
+        "index",
+        "operator",
+        "operator_visible",
+        "multiple",
+        "vocabulary",
+        "catalog",
+        "ajax",
+        "default",
     )
 
 
 class DisplaySchemata(FacetedSchemata):
-    """ Schemata display
-    """
-    label = u'display'
+    """Schemata display"""
+
+    label = "display"
     fields = field.Fields(IMultiSelectSchema).select(
-        u'sortreversed',
-        u'closeonselect',
-        u'placeholder'
+        "sortreversed", "closeonselect", "placeholder"
     )
 
 

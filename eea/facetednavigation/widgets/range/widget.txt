@@ -29,14 +29,12 @@ Set up
   >>> minval, inval, maxval = 2, 4, 6
   >>> cminval, cinval, cmaxval = 'aa', 'bb', 'cc'
 
-  >>> testfolder = sandbox.invokeFactory('Folder', 'testfolder')
-  >>> rangeable_doc = getattr(sandbox, testfolder)
-  >>> t2 = rangeable_doc.invokeFactory('Folder', 'testfolder2', title='range widget 1')
-  >>> t4 = rangeable_doc.invokeFactory('Folder', 'testfolder4', title='range widget 2')
-  >>> t6 = rangeable_doc.invokeFactory('Folder', 'testfolder6', title='range widget 4')
-  >>> t2 = rangeable_doc[t2]
-  >>> t4 = rangeable_doc[t4]
-  >>> t6 = rangeable_doc[t6]
+  >>> t2 = portal.invokeFactory('Document', 'testfolder2', title='range widget 1')
+  >>> t4 = portal.invokeFactory('Document', 'testfolder4', title='range widget 2')
+  >>> t6 = portal.invokeFactory('Document', 'testfolder6', title='range widget 4')
+  >>> t2 = portal[t2]
+  >>> t4 = portal[t4]
+  >>> t6 = portal[t6]
   >>> t2.rangen = minval
   >>> t4.rangen = inval
   >>> t6.rangen = maxval
