@@ -1,7 +1,7 @@
 Changelog
 =========
 
-16.0-dev0 - (unreleased)
+16.0 - (2022-10-10)
 ---------------------------
 * Feature: Plone 6 compatibility
   [avoinea refs #231]
