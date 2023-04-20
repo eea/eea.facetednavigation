@@ -1313,6 +1313,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+"Select2@https://github.com/select2/select2/archive/refs/tags/3.5.4.tar.gz":
+  version "3.5.4"
+  resolved "https://github.com/select2/select2/archive/refs/tags/3.5.4.tar.gz#9223ac79976a0d91a42f818573ead10ce39acd02"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -3709,11 +3713,6 @@ select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
   integrity sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==
-
-select2@3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/select2/-/select2-3.5.1.tgz#f2819489bbc65fd6d328be72bbe2b95dd7e87cfe"
-  integrity sha512-IFX3UFPpPyK1I1Kuw1R1x+upMyNAZbMlkFhiTnRCRR7ii0KU1brmJMLa3GZcrMWCHiQlm0eKqb6i4XO4pqOrGQ==
 
 selfsigned@^2.0.1:
   version "2.0.1"
