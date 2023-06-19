@@ -84,6 +84,25 @@ We recommend using [Visual Studio Code](https://code.visualstudio.com/) Editor
 
 See also: [Debugging Plone in Visual Studio Code](https://community.plone.org/t/our-pip-based-development-workflow-for-plone/14562#debugging-plone-in-visual-studio-code-11)
 
+## Note on Faceted Navigation Javascript events
+
+If you depend on events from Faceted Navigation within your code, make sure you use the correct "depends":
+
+    <records interface="Products.CMFPlone.interfaces.IBundleRegistry"
+             prefix="plone.bundles/your-pkg">
+        <value key="enabled">True</value>
+        <value key="jscompilation">++plone++your-pkg/build/your-pkg-remote.min.js</value>
+        <value key="load_defer">False</value>
+        <value key="load_async">False</value>
+        <value key="depends">faceted.jquery</value>
+    </records>
+
+Now you should be able to execute your code, for example, after the Faceted Navigation (with results - AJAX_QUERY_SUCCESS) has loaded.
+
+      $(window.Faceted.Events).bind(window.Faceted.Events.AJAX_QUERY_SUCCESS, function () {
+        // Your code
+      });
+
 ### Useful Visual Studio Code shortcuts
 
 **Note** Replace `Ctrl` with `Cmd` key on MacOS
