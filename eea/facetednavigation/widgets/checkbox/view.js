@@ -228,12 +228,11 @@ Faceted.CheckboxesWidget.prototype = {
     criteria_remove: function (value, element) {
         // Remove all
         if (!value) {
-            this.elements.attr("checked", false);
-            this.do_query();
+            this.element.each((_, e) => (e.checked = false));
         } else {
-            element.attr("checked", false);
-            this.do_query();
+            element.each((_, e) => (e.checked = false));
         }
+        this.do_query();
     },
 
     count: function (sortcountable) {
