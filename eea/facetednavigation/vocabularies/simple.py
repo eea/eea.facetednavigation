@@ -31,7 +31,6 @@ class JsTreeThemes(object):
     """Widget position in page"""
 
     def __call__(self, *args, **kwargs):
-
         items = (
             SimpleTerm("default", "default", _("Default")),
             SimpleTerm("classic", "classic", _("Classic")),

@@ -12,7 +12,6 @@ class WidgetPositions(object):
     """Widget position in page"""
 
     def __call__(self, *args, **kwargs):
-
         positions = (
             SimpleTerm("top", "top", _("Top")),
             SimpleTerm("left", "left", _("Left")),
