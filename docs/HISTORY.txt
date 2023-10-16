@@ -1,6 +1,13 @@
 Changelog
 =========
 
+16.1 - (2023-10-16)
+---------------------------
+* Bug fix: Fix Select2 dependency
+  [@Gomez - refs #249]
+* Bug fix: Fix criteria_remove on checkbox view
+  [@Nimo-19 - refs #248]
+
 16.0 - (2023-10-05)
 ---------------------------
 * Feature: Plone 6 compatibility
