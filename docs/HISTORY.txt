@@ -1,6 +1,11 @@
 Changelog
 =========
 
+16.2 - (2023-10-17)
+---------------------------
+* Re-release broken 16.1 version
+  [avoinea]
+
 16.1 - (2023-10-16)
 ---------------------------
 * Bug fix: Fix Select2 dependency
