@@ -72,8 +72,8 @@ Faceted.CriteriaWidget.prototype = {
                 });
             });
 
-            var count = jQuery("dd span", context.area).length;
-            context.toggle_button_count.text("(" + count + ")");
+            var count_detail = jQuery("dd span.title", context.area).length;
+            context.toggle_button_count.text("(" + count_detail + ")");
 
             if (!empty) {
                 context.widget.fadeIn("fast");
