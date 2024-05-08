@@ -211,6 +211,7 @@ Faceted.Form = {
 
     reset: function () {
         Faceted.Query = {};
+        Faceted.Form.form.find("input[type=checkbox]:checked").prop("checked", false);
     },
 
     do_query: function (wid, value) {
