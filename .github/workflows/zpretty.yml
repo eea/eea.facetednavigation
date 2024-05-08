@@ -20,7 +20,7 @@ jobs:
 
       # install zpretty
       - name: install zpretty
-        run: pip install zpretty
+        run: pip install -c constraints.txt zpretty
 
       # run zpretty
       - name: run zpretty

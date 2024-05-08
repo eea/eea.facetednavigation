@@ -1,0 +1,3 @@
+black == 23.9.1
+flake8 == 4.0.1
+zpretty == 3.1.0

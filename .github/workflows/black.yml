@@ -20,7 +20,7 @@ jobs:
 
       # install black
       - name: install black
-        run: pip install black
+        run: pip install -c constraints.txt black
 
       # run black
       - name: run black
